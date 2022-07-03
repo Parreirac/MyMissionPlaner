@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<cva:ContextValueAssociation xmlns:cva="http://docs.oasis-open.org/codelist/ns/ContextValueAssociation/1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="urn:fra:nc1:objet:groundentity" queryBinding="xslt2" xmlns:nc1groundentity="urn:fra:nc1:objet:groundentity">
+  <!-- NC1 V.9.0.0 -->
+  <ValueLists>
+    <ValueList xml:id="nc1objcom-ActivationStatusCode" uri="../Dictionnaires/ActivationStatusCode.gc" />
+    <ValueList xml:id="nc1objcom-IsFullCode" uri="../Dictionnaires/IsFullCode.gc" />
+    <ValueList xml:id="nc1sicsdicos-L117_5Code" uri="../Dictionnaires/L117_5Code.gc" />
+    <ValueList xml:id="nc1sicsdicos-L110_39Code" uri="../Dictionnaires/L110_39Code.gc" />
+    <ValueList xml:id="nc1sicsdicos-L125_1Code" uri="../Dictionnaires/L125_1Code.gc" />
+    <ValueList xml:id="nc1sicsdicos-L125_24Code" uri="../Dictionnaires/L125_24Code.gc" />
+  </ValueLists>
+  <Contexts>
+    <Context address="/nc1groundentity:NC1_GroundEntity/@activationStatus" values="nc1objcom-ActivationStatusCode" />
+    <Context address="/nc1groundentity:NC1_GroundEntity/@isFull" values="nc1objcom-IsFullCode" />
+    <Context address="/nc1groundentity:NC1_GroundEntity/location/quality" values="nc1sicsdicos-L117_5Code" />
+    <Context address="/nc1groundentity:NC1_GroundEntity/tacticalData/type" values="nc1sicsdicos-L110_39Code" />
+    <Context address="/nc1groundentity:NC1_GroundEntity/tacticalData/status" values="nc1sicsdicos-L125_1Code" />
+    <Context address="/nc1groundentity:NC1_GroundEntity/tacticalData/achievementStatus" values="nc1sicsdicos-L125_24Code" />
+  </Contexts>
+</cva:ContextValueAssociation>

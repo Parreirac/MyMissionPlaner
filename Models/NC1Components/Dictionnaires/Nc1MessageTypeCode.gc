@@ -1,0 +1,1192 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<gc:CodeList xmlns:nc1dico="urn:fra:nc1:dictionnaires" xmlns:gc="http://docs.oasis-open.org/codelist/ns/genericode/1.0/">
+  <Annotation>
+    <Description>
+      <nc1dico:description>Dictionnaire des types de messages NC1.</nc1dico:description>
+      <nc1dico:description xml:lang="en">Dictionary of the types of messages NC1.</nc1dico:description>
+    </Description>
+    <AppInfo>
+      <nc1dico:source>NC1</nc1dico:source>
+      <nc1dico:derogation></nc1dico:derogation>
+    </AppInfo>
+  </Annotation>
+  <Identification>
+    <ShortName>Nc1MessageTypeCode</ShortName>
+    <Version>9.0.0</Version>
+    <CanonicalUri>urn:fra:nc1:common:attribute:Nc1MessageTypeCode</CanonicalUri>
+    <CanonicalVersionUri>urn:fra:nc1:common:attribute:Nc1MessageTypeCode:9.0.0</CanonicalVersionUri>
+  </Identification>
+  <ColumnSet DatatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes">
+    <Column Id="code" Use="required">
+      <ShortName>Code</ShortName>
+      <Data Type="int" />
+    </Column>
+    <Column Id="short" Use="required">
+      <ShortName>Short</ShortName>
+      <Data Type="string" />
+    </Column>
+    <Column Id="long" Use="optional">
+      <ShortName>Long</ShortName>
+      <Data Type="string" />
+    </Column>
+    <Column Id="short-en" Use="optional">
+      <ShortName>Short anglais</ShortName>
+      <Data Type="string" />
+    </Column>
+    <Column Id="long-en" Use="optional">
+      <ShortName>Long anglais</ShortName>
+      <Data Type="string" />
+    </Column>
+    <Column Id="parent" Use="optional">
+      <ShortName>Parent</ShortName>
+      <Data Type="int" />
+    </Column>
+    <Column Id="codeSymbole" Use="optional">
+      <ShortName>Code Symbole</ShortName>
+      <Data Type="string" />
+    </Column>
+    <Column Id="codeHierarchique" Use="optional">
+      <ShortName>Code Hierarchique</ShortName>
+      <Data Type="string" />
+    </Column>
+    <Key Id="codeKey">
+      <ShortName>CodeKey</ShortName>
+      <ColumnRef Ref="code" />
+    </Key>
+  </ColumnSet>
+  <SimpleCodeList>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>0</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>NC1_AdmitExitRep</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>COMPTE RENDU DE PRISE EN CHARGE OU FIN DE PRISE EN CHARGE D’UN BLESSE</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>1</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>NC1_AmMoMalFunctRep</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>COMPTE RENDU INITIAL DE DYSFONCTIONNEMENT DE MUNITIONS</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>2</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>NC1_AnnulerTirInterdit</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>ANNULATION D'INTERDICTION DE TIR</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>3</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>NC1_Apercu</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>APERCU SUR UN ORDRE</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>4</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>NC1_Apercu3D</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>COMPTE RENDU DE PRISE EN COMPTE UN MESSAGE DU DOMAINE 3D</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>5</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>NC1_BARREP</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>COMPTE RENDU D’OBSTACLES AMIS</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>6</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>NC1_BarReq</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>DEMANDE D'ACTIVATION DE ZONE</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>7</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>NC1_BATRECEVACREQ</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>DEMANDE DE DEPANNAGE OU D’EVACUATION</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>8</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>NC1_BATRECEVACTASK</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>ORDRE DE DEPANNAGE OU D’EVACUATION</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>9</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>NC1_BDA</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>COMPTE RENDU DES DOMMAGES</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>10</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>NC1_BFT</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>COMPTE RENDU DE SUIVI DE POSITIONS AMIES</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>11</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>NC1_BOAP</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>ORDRE DU TRAIN PARACHUTISTE POUR UNE OPERATION AEROPORTEE</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>12</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>NC1_CallForFire</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>DEMANDE D’APPUI FEU</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>13</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>NC1_CBRN-1-BIO</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>COMPTE RENDU NRBC1 BIOLOGIQUE</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>14</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>NC1_CBRN-1-CHEM</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>COMPTE RENDU NRBC1 CHIMIQUE</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>15</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>NC1_CBRN-3-BIO</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>COMPTE RENDU NRBC 3 BIOLOGIQUE</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>16</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>NC1_CBRN-3-CHEM</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>COMPTE RENDU NRBC 3 CHIMIQUE</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>17</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>NC1_CBRN-4-BIO</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>COMPTE RENDU NRBC 4 BIOLOGIQUE</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>18</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>NC1_CBRN-4-CHEM</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>COMPTE RENDU NRBC 4 CHIMIQUE</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>19</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>NC1_CBRN-5-BIO</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>COMPTE RENDU NRBC 5 BIOLOGIQUE</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>20</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>NC1_CBRN-5-CHEM</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>COMPTE RENDU NRBC 5 CHIMIQUE</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>21</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>NC1_CBRN-CDR</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>COMPTE RENDU METEO NRBC</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>22</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>NC1_CBRN-DECONREP</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>COMPTE RENDU DE DECONTAMINATION NRBC</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>23</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>NC1_CBRN-DECONREQ</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>DEMANDE DE DECONTAMINATION NRBC</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>24</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>NC1_CBRN-RECONREP</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>COMPTE RENDU DE RECONNAISSANCE NRBC</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>25</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>NC1_CBRN-SITREP</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>COMPTE RENDU DE SITUATION NRBC</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>26</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>NC1_CCA-CARD</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>DEMANDE D’APPUI FEU HELICOPTERE</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>27</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>NC1_ConARep</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>COMPTE RENDU D’ARRIVEE DE CONVOI</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>28</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>NC1_ConDeRep</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>COMPTE RENDU DE DEPART D'UN CONVOI</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>29</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>NC1_ConOps</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>CONCEPTION DE MANOEUVRE OU PLAN SIMPLIFIE</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>30</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>NC1_CreationItsAts</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>DEMANDE DE CREATION D’ITINERAIRE OU D’AIRE TEMPORAIRE DE SAUVEGARDE</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>31</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>NC1_DeLivOrder</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>ORDRE DE LIVRAISON</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>32</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>NC1_DeLivRep</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>COMPTE RENDU DE LIVRAISON</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>33</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>NC1_DemaLOrd</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>ORDRE DE DEMANDE DE LIVRAISON</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>34</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>NC1_DEPLOYREP</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>COMPTE RENDU DE DEPLOIEMENT D’UNITES</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>35</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>NC1_ENGRECCEORD</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>ORDRE DE RECONNAISSANCE DU GENIE</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>36</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>NC1_ENGRECCEREP</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>COMPTE RENDU DE MISSION DE RECONNAISSANCE DU GENIE</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>37</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>NC1_ENSITREP</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>COMPTE RENDU DE SITUATION DES FORCES ENNEMIES</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>38</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>NC1_EOINCREP</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>COMPTE RENDU D’INCIDENT D’UNE MUNITION NON-EXPLOSEE</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>39</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>NC1_EVENTREP</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>COMPTE RENDU D’EVENEMENT OU D’INCIDENT</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>40</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>NC1_EWMSNSUM</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>SYNTHESE DES MISSIONS DE GUERRE ELECTRONIQUE</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>41</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>NC1_EWRTM</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>ORDRE OU COMPTE RENDU DE GUERRE ELECTRONIQUE</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>42</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>NC1_FinAlerteRaidEni</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>FIN D’ALERTE RAID ENNEMI</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>43</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>NC1_FireControl</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>DIRECTIVES DE TIR</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>44</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>NC1_FireReport</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>COMPTE RENDU D’OBJECTIF FEUX OU DE TIR</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>45</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>NC1_FrForMaintRep</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>COMPTE RENDU DE SITUATION MAINTENANCE</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>46</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>NC1_HELOPSUM</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>COMPTE RENDU D’ACTIVITES DES UNITES DOTEES D’HELICOPTERES</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>47</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>NC1_IAT</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>INTERROGATION AVANT TIR</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>48</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>NC1_IGen</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>INTERVENTION GENERALE</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>49</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>NC1_InitMedRep</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>COMPTE RENDU D’OUVERTURE D’UNE INSTALLATION MEDICALE</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>50</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>NC1_InitOdb</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>INITIALISATION DE L’ORDRE DE BATAILLE</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>51</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>NC1_INTREP</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>COMPTE RENDU DE RENSEIGNEMENT</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>52</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>NC1_INTREQ</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>DEMANDE DE RENSEIGNEMENT</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>53</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>NC1_INTSUM</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>SYNTHESE DE RENSEIGNEMENT</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>54</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>NC1_ListeEquipementsRessources</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>LISTE DES EQUIPEMENTS ET DES RESSOURCES</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>55</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>NC1_LOGASREQ</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>DEMANDE DE SECOURS LOGISITIQUE, DE SERVICE OU DE RESSOURCE</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>56</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>NC1_LOGASRESP</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>REPONSE A UN LOGASREQ</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>57</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>NC1_LOGSITLAND</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>COMPTE RENDU DE SITUATION LOGISTIQUE D’UNE FORMATION TERRESTRE</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>58</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>NC1_LOGUPDATE</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>COMPTE RENDU DE SITUATION LOGISTIQUE</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>59</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>NC1_MatDem</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>DEMANDE DE SOUTIEN LOGISTIQUE</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>60</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>NC1_MatDemResp</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>REPONSE A UNE DEMANDE DE SOUTIEN LOGISTIQUE</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>61</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>NC1_MatReceptRep</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>COMPTE RENDU DE RECEPTION MATERIEL</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>62</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>NC1_MEDEVAC-NINE-LINE</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>DEMANDE D’EVACUATION SANITAIRE</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>63</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>NC1_MedSitRep</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>COMPTE RENDU D’INSTALLATION MEDICALE</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>64</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>NC1_MessageLibre</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>MESSAGE LIBRE</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>65</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>NC1_MOVASSESREP</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>COMPTE RENDU DE SITUATION SUR LES CAPACITES DE TRANSIT</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>66</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>NC1_MovConProgRep</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>COMPTE RENDU DE PROGRESSION D'UN CONVOI</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>67</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>NC1_MovOrder</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>ORDRE DE MOUVEMENT</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>68</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>NC1_ObjectiveList</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>CATALOGUE DES OBJECTIFS FEUX</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>69</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>NC1_OBSEXORD</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>ORDRE D’EXECUTION D’OBSTACLES</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>70</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>NC1_OPORD</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>ORDRE D’OPERATION</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>71</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>NC1_OPORD-AIN</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>ANNEXE APPUI FEUX INDIRECTS</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>72</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>NC1_OPORD-ALAT</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>ANNEXE ALAT</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>73</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>NC1_OPORD-GE</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>ANNEXE GUERRE ELECTRONIQUE</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>74</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>NC1_OPORD-GEN</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>ANNEXE GENIE</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>75</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>NC1_OPORD-LOG</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>ANNEXE LOGISTIQUE</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>76</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>NC1_OPORD-MVT</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>ANNEXE MOUVEMENT</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>77</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>NC1_OPORD-OPSEC</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>ANNEXE OPERATIONS DE SECURITE</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>78</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>NC1_OPORD-RENS</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>ANNEXE RENSEIGNEMENT</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>79</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>NC1_OPORD-ROE</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>ANNEXE REGLES D’ENGAGEMENT</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>80</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>NC1_OPORD-SIC</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>ANNEXE SYSTEMES D’INFORMATION ET DE COMMANDEMENT</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>81</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>NC1_OWNSITREP</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>COMPTE RENDU DE SITUATION DES FORCES AMIES</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>82</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>NC1_PEMA</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>PLAN D’EMPLOI DES MOYENS D’ACQUISITION</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>83</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>NC1_PERSREP</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>COMPTE RENDU DE SITUATION DES EFFECTIFS</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>84</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>NC1_PlanDeVol</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>PLAN DE VOL</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>85</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>NC1_PropositionPlanObstacles</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>PROPOSITION DE PLAN D'OBSTACLES</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>86</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>NC1_PRR</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>PLAN DE RENSEIGNEMENT ET DE RECHERCHE</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>87</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>NC1_Request</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>DEMANDE</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>88</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>NC1_ROUTERECCEREP</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>COMPTE RENDU DE RECONNAISSANCE D'ITINERAIRE</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>89</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>NC1_RozRecceOrd</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>ORDRE DE RECONNAISSANCE DE ZONE</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>90</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>NC1_RozRecceRep</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>COMPTE RENDU DE RECONNAISSANCE DE ZONE</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>91</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>NC1_SitObst</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>COMPTE RENDU DE SITUATION DES OBSTACLES</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>92</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>NC1_SrfTransRep</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>REPONSE A UNE DEMANDE DE TRANSPORT DE SURFACE</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>93</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>NC1_SrfTransReq</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>DEMANDE DE TRANSPORT DE SURFACE</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>94</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>NC1_StAcmConduite</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>SHORT TIME ACM CONDUITE</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>95</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>NC1_STR</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>SITUATION TACTIQUE DE REFERENCE</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>96</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>NC1_SuppressionItsAts</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>DEMANDE DE SUPPRESSION D’ITINERAIRE OU D’AIRE TEMPORAIRE DE SAUVEGARDE</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>97</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>NC1_TactOAP</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>ORDRE TACTIQUE D'OPERATION AEROPORTEE</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>98</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>NC1_TechnOAP</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>ORDRE TECHNIQUE D'OPERATION AEROPORTEE</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>99</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>NC1_TirInterdit</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>INTERDICTION DE TIR</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>100</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>NC1_TrafUnOrder</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>ORDRE AUX UNITES DE CIRCULATION</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>101</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>NC1_TranspOrd</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>ORDRE DE TRANSPORT</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>102</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>NC1_TransportSitRep</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>COMPTE RENDU DE SITUATION DES MOYENS DE TRANSPORT</SimpleValue>
+      </Value>
+    </Row>
+  </SimpleCodeList>
+</gc:CodeList>

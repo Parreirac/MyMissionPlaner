@@ -1,0 +1,86 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<cva:ContextValueAssociation xmlns:cva="http://docs.oasis-open.org/codelist/ns/ContextValueAssociation/1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="urn:fra:nc1:message:admitexitrep" queryBinding="xslt2" xmlns:nc1admitexitrep="urn:fra:nc1:message:admitexitrep">
+  <!-- NC1 V.9.0.0 -->
+  <ValueLists>
+    <ValueList xml:id="nc1msgcom-ClassificationCode" uri="../Dictionnaires/ClassificationCode.gc" />
+    <ValueList xml:id="nc1msgcom-UrgencyLevelCode" uri="../Dictionnaires/UrgencyLevelCode.gc" />
+    <ValueList xml:id="nc1admitexitrep-AdmitOrExitCode" uri="../Dictionnaires/AdmitOrExitCode.gc" />
+    <ValueList xml:id="nc1objcom-ActivationStatusCode" uri="../Dictionnaires/ActivationStatusCode.gc" />
+    <ValueList xml:id="nc1objcom-IsFullCode" uri="../Dictionnaires/IsFullCode.gc" />
+    <ValueList xml:id="nc1facility-FacilityFrSpecificCode" uri="../Dictionnaires/FacilityFrSpecificCode.gc" />
+    <ValueList xml:id="nc1facility-MedicalFacilityModifierCode" uri="../Dictionnaires/MedicalFacilityModifierCode.gc" />
+    <ValueList xml:id="nc1sicsdicos-L135_1Code" uri="../Dictionnaires/L135_1Code.gc" />
+    <ValueList xml:id="nc1sicsdicos-L125_1Code" uri="../Dictionnaires/L125_1Code.gc" />
+    <ValueList xml:id="nc1sicsdicos-L125_23Code" uri="../Dictionnaires/L125_23Code.gc" />
+    <ValueList xml:id="nc1sicsdicos-L135_43Code" uri="../Dictionnaires/L135_43Code.gc" />
+    <ValueList xml:id="nc1sicsdicos-L110_33Code" uri="../Dictionnaires/L110_33Code.gc" />
+    <ValueList xml:id="nc1sicsdicos-L125_24Code" uri="../Dictionnaires/L125_24Code.gc" />
+    <ValueList xml:id="nc1sicsdicos-L135_32Code" uri="../Dictionnaires/L135_32Code.gc" />
+    <ValueList xml:id="nc1sicsdicos-L135_33Code" uri="../Dictionnaires/L135_33Code.gc" />
+    <ValueList xml:id="nc1sicsdicos-L112_23Code" uri="../Dictionnaires/L112_23Code.gc" />
+    <ValueList xml:id="nc1sicsdicos-L112_20Code" uri="../Dictionnaires/L112_20Code.gc" />
+    <ValueList xml:id="nc1sicsdicos-L112_8Code" uri="../Dictionnaires/L112_8Code.gc" />
+    <ValueList xml:id="nc1sicsdicos-L110_41Code" uri="../Dictionnaires/L110_41Code.gc" />
+    <ValueList xml:id="nc1sicsdicos-L135_49Code" uri="../Dictionnaires/L135_49Code.gc" />
+    <ValueList xml:id="nc1sicsdicos-L117_5Code" uri="../Dictionnaires/L117_5Code.gc" />
+    <ValueList xml:id="nc1sicsdicos-L112_6Code" uri="../Dictionnaires/L112_6Code.gc" />
+    <ValueList xml:id="nc1sicsdicos-L112_1Code" uri="../Dictionnaires/L112_1Code.gc" />
+    <ValueList xml:id="nc1sicsdicos-L104_1Code" uri="../Dictionnaires/L104_1Code.gc" />
+    <ValueList xml:id="nc1sicsdicos-L135_14Code" uri="../Dictionnaires/L135_14Code.gc" />
+    <ValueList xml:id="nc1sicsdicos-L135_15Code" uri="../Dictionnaires/L135_15Code.gc" />
+    <ValueList xml:id="nc1sicsdicos-L112_10Code" uri="../Dictionnaires/L112_10Code.gc" />
+    <ValueList xml:id="nc1sicsdicos-L112_12Code" uri="../Dictionnaires/L112_12Code.gc" />
+    <ValueList xml:id="nc1sicsdicos-L112_17Code" uri="../Dictionnaires/L112_17Code.gc" />
+    <ValueList xml:id="nc1sicsdicos-L112_15Code" uri="../Dictionnaires/L112_15Code.gc" />
+    <ValueList xml:id="nc1sicsdicos-L112_16Code" uri="../Dictionnaires/L112_16Code.gc" />
+    <ValueList xml:id="nc1sicsdicos-L112_13Code" uri="../Dictionnaires/L112_13Code.gc" />
+    <ValueList xml:id="nc1sicsdicos-L112_11Code" uri="../Dictionnaires/L112_11Code.gc" />
+    <ValueList xml:id="nc1sicsdicos-L112_3Code" uri="../Dictionnaires/L112_3Code.gc" />
+    <ValueList xml:id="nc1sicsdicos-L121_1Code" uri="../Dictionnaires/L121_1Code.gc" />
+    <ValueList xml:id="nc1medical-InjurySeverityCode" uri="../Dictionnaires/InjurySeverityCode.gc" />
+  </ValueLists>
+  <Contexts>
+    <Context address="/nc1admitexitrep:NC1_AdmitExitRep/@classification" values="nc1msgcom-ClassificationCode" />
+    <Context address="/nc1admitexitrep:NC1_AdmitExitRep/@urgencyLevel" values="nc1msgcom-UrgencyLevelCode" />
+    <Context address="/nc1admitexitrep:NC1_AdmitExitRep/admitExitReport/admitOrExit" values="nc1admitexitrep-AdmitOrExitCode" />
+    <Context address="/nc1admitexitrep:NC1_AdmitExitRep/admitExitReport/facility/@activationStatus" values="nc1objcom-ActivationStatusCode" />
+    <Context address="/nc1admitexitrep:NC1_AdmitExitRep/admitExitReport/facility/@isFull" values="nc1objcom-IsFullCode" />
+    <Context address="/nc1admitexitrep:NC1_AdmitExitRep/admitExitReport/facility/tacticalData/frSpecificSymbol" values="nc1facility-FacilityFrSpecificCode" />
+    <Context address="/nc1admitexitrep:NC1_AdmitExitRep/admitExitReport/facility/tacticalData/modifier" values="nc1facility-MedicalFacilityModifierCode" />
+    <Context address="/nc1admitexitrep:NC1_AdmitExitRep/admitExitReport/facility/tacticalData/distressIndicator" values="nc1sicsdicos-L135_1Code" />
+    <Context address="/nc1admitexitrep:NC1_AdmitExitRep/admitExitReport/facility/tacticalData/operationalStatusIndicator" values="nc1sicsdicos-L125_1Code" />
+    <Context address="/nc1admitexitrep:NC1_AdmitExitRep/admitExitReport/facility/tacticalData/securityStatus" values="nc1sicsdicos-L125_23Code" />
+    <Context address="/nc1admitexitrep:NC1_AdmitExitRep/admitExitReport/facility/tacticalData/minePresence" values="nc1sicsdicos-L135_43Code" />
+    <Context address="/nc1admitexitrep:NC1_AdmitExitRep/admitExitReport/facility/tacticalData/primaryConstructionMaterial" values="nc1sicsdicos-L110_33Code" />
+    <Context address="/nc1admitexitrep:NC1_AdmitExitRep/admitExitReport/facility/tacticalData/achievementStatus" values="nc1sicsdicos-L125_24Code" />
+    <Context address="/nc1admitexitrep:NC1_AdmitExitRep/admitExitReport/facility/tacticalData/soilPracticabilityDescription" values="nc1sicsdicos-L135_32Code" />
+    <Context address="/nc1admitexitrep:NC1_AdmitExitRep/admitExitReport/facility/tacticalData/instantSoilPracticability" values="nc1sicsdicos-L135_33Code" />
+    <Context address="/nc1admitexitrep:NC1_AdmitExitRep/admitExitReport/facility/medicalFacilityData/medicalMissionStatus" values="nc1sicsdicos-L112_23Code" />
+    <Context address="/nc1admitexitrep:NC1_AdmitExitRep/admitExitReport/facility/medicalFacilityData/personnel/medicalSpeciality" values="nc1sicsdicos-L112_20Code" />
+    <Context address="/nc1admitexitrep:NC1_AdmitExitRep/admitExitReport/facility/medicalFacilityData/deathCountPerGroupType/category" values="nc1sicsdicos-L112_8Code" />
+    <Context address="/nc1admitexitrep:NC1_AdmitExitRep/admitExitReport/facility/medicalFacilityData/occupiedBedCountPerGroup/category" values="nc1sicsdicos-L112_8Code" />
+    <Context address="/nc1admitexitrep:NC1_AdmitExitRep/admitExitReport/facility/bypassFacilityData/crossingMean/designType" values="nc1sicsdicos-L110_41Code" />
+    <Context address="/nc1admitexitrep:NC1_AdmitExitRep/admitExitReport/facility/bypassFacilityData/crossingMean/usage" values="nc1sicsdicos-L135_49Code" />
+    <Context address="/nc1admitexitrep:NC1_AdmitExitRep/admitExitReport/facility/location/quality" values="nc1sicsdicos-L117_5Code" />
+    <Context address="/nc1admitexitrep:NC1_AdmitExitRep/admitExitReport/patient/@activationStatus" values="nc1objcom-ActivationStatusCode" />
+    <Context address="/nc1admitexitrep:NC1_AdmitExitRep/admitExitReport/patient/@isFull" values="nc1objcom-IsFullCode" />
+    <Context address="/nc1admitexitrep:NC1_AdmitExitRep/admitExitReport/patient/tacticalData/attitude" values="nc1sicsdicos-L112_6Code" />
+    <Context address="/nc1admitexitrep:NC1_AdmitExitRep/admitExitReport/patient/tacticalData/individualCategory" values="nc1sicsdicos-L112_1Code" />
+    <Context address="/nc1admitexitrep:NC1_AdmitExitRep/admitExitReport/patient/tacticalData/operationalStatusIndicator" values="nc1sicsdicos-L125_1Code" />
+    <Context address="/nc1admitexitrep:NC1_AdmitExitRep/admitExitReport/patient/tacticalData/membersCount" values="nc1sicsdicos-L104_1Code" />
+    <Context address="/nc1admitexitrep:NC1_AdmitExitRep/admitExitReport/patient/tacticalData/reliability" values="nc1sicsdicos-L135_14Code" />
+    <Context address="/nc1admitexitrep:NC1_AdmitExitRep/admitExitReport/patient/tacticalData/credibility" values="nc1sicsdicos-L135_15Code" />
+    <Context address="/nc1admitexitrep:NC1_AdmitExitRep/admitExitReport/patient/generalData/rank" values="nc1sicsdicos-L112_10Code" />
+    <Context address="/nc1admitexitrep:NC1_AdmitExitRep/admitExitReport/patient/generalData/gender" values="nc1sicsdicos-L112_12Code" />
+    <Context address="/nc1admitexitrep:NC1_AdmitExitRep/admitExitReport/patient/generalData/religion" values="nc1sicsdicos-L112_17Code" />
+    <Context address="/nc1admitexitrep:NC1_AdmitExitRep/admitExitReport/patient/physicalCharacteristics/eyesColour" values="nc1sicsdicos-L112_15Code" />
+    <Context address="/nc1admitexitrep:NC1_AdmitExitRep/admitExitReport/patient/physicalCharacteristics/hairColour" values="nc1sicsdicos-L112_16Code" />
+    <Context address="/nc1admitexitrep:NC1_AdmitExitRep/admitExitReport/patient/physicalCharacteristics/bloodType" values="nc1sicsdicos-L112_13Code" />
+    <Context address="/nc1admitexitrep:NC1_AdmitExitRep/admitExitReport/patient/administrativeProperties/maritalStatus" values="nc1sicsdicos-L112_11Code" />
+    <Context address="/nc1admitexitrep:NC1_AdmitExitRep/admitExitReport/patient/administrativeProperties/category" values="nc1sicsdicos-L112_8Code" />
+    <Context address="/nc1admitexitrep:NC1_AdmitExitRep/admitExitReport/patient/administrativeProperties/militaryCategory" values="nc1sicsdicos-L112_3Code" />
+    <Context address="/nc1admitexitrep:NC1_AdmitExitRep/admitExitReport/patient/location/approximateSpeed" values="nc1sicsdicos-L121_1Code" />
+    <Context address="/nc1admitexitrep:NC1_AdmitExitRep/admitExitReport/patient/location/quality" values="nc1sicsdicos-L117_5Code" />
+    <Context address="/nc1admitexitrep:NC1_AdmitExitRep/admitExitReport/injuryDescription" values="nc1medical-InjurySeverityCode" />
+  </Contexts>
+</cva:ContextValueAssociation>

@@ -1,0 +1,164 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<gc:CodeList xmlns:nc1dico="urn:fra:nc1:dictionnaires" xmlns:gc="http://docs.oasis-open.org/codelist/ns/genericode/1.0/">
+  <Annotation>
+    <Description>
+      <nc1dico:description>DECRIT LE TYPE D'UN OBSTACLE OU D'UN OUVRAGE. REFERENCE LIST_E DU STANAG 2430.
+APP6B - FAMILLE 2.X.2.2.1</nc1dico:description>
+      <nc1dico:description xml:lang="en"></nc1dico:description>
+    </Description>
+    <AppInfo>
+      <nc1dico:source>SFTT 3.4.8</nc1dico:source>
+      <nc1dico:derogation>TYPE D'OBSTACLE/OUVRAGE</nc1dico:derogation>
+    </AppInfo>
+  </Annotation>
+  <Identification>
+    <ShortName>ObstacleFrSpecificCode</ShortName>
+    <Version>9.0.0</Version>
+    <CanonicalUri>urn:fra:nc1:objet:obstacle:ObstacleFrSpecificCode</CanonicalUri>
+    <CanonicalVersionUri>urn:fra:nc1:objet:obstacle:ObstacleFrSpecificCode:9.0.0</CanonicalVersionUri>
+  </Identification>
+  <ColumnSet DatatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes">
+    <Column Id="code" Use="required">
+      <ShortName>Code</ShortName>
+      <Data Type="int" />
+    </Column>
+    <Column Id="short" Use="required">
+      <ShortName>Short</ShortName>
+      <Data Type="string" />
+    </Column>
+    <Column Id="long" Use="optional">
+      <ShortName>Long</ShortName>
+      <Data Type="string" />
+    </Column>
+    <Column Id="short-en" Use="optional">
+      <ShortName>Short anglais</ShortName>
+      <Data Type="string" />
+    </Column>
+    <Column Id="long-en" Use="optional">
+      <ShortName>Long anglais</ShortName>
+      <Data Type="string" />
+    </Column>
+    <Column Id="parent" Use="optional">
+      <ShortName>Parent</ShortName>
+      <Data Type="int" />
+    </Column>
+    <Column Id="codeSymbole" Use="optional">
+      <ShortName>Code Symbole</ShortName>
+      <Data Type="string" />
+    </Column>
+    <Column Id="codeHierarchique" Use="optional">
+      <ShortName>Code Hierarchique</ShortName>
+      <Data Type="string" />
+    </Column>
+    <Key Id="codeKey">
+      <ShortName>CodeKey</ShortName>
+      <ColumnRef Ref="code" />
+    </Key>
+  </ColumnSet>
+  <SimpleCodeList>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>39</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>CH MINE AC</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>CHAMPS DE MINES ANTICHAR</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>AT MINEFIELD</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>ANTITANK (AT) MINEFIELD</SimpleValue>
+      </Value>
+      <Value ColumnRef="parent">
+        <SimpleValue>8</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeSymbole">
+        <SimpleValue>G.C.BOAIM-.....</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeHierarchique">
+        <SimpleValue>2.X.2.2.1.6.5</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>40</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>MINE DISPERSABLE</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>MINES DISPERSABLES</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>SCATT MINES</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>SCATTERABLE MINES</SimpleValue>
+      </Value>
+      <Value ColumnRef="parent">
+        <SimpleValue>8</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeSymbole">
+        <SimpleValue>G.C.BOAIM-.....</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeHierarchique">
+        <SimpleValue>2.X.2.2.1.6.6</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>41</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>MIAP - MDDAP</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>CHAMP DE MINES ANTIPERSONNEL VALORISE PAR DES MINES DISPERSABLES AVEC DISPOSITIF D'AUTODESTRUCTION PROGRAMMABLE</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>AP SCATT SD DTG</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>ANTIPERSONNEL (AP) MINEFIELD REINFORCED WITH SCATTERABLE WITH SELF-DESTRUCT DATE-TIME-GROUP</SimpleValue>
+      </Value>
+      <Value ColumnRef="parent">
+        <SimpleValue>8</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeSymbole">
+        <SimpleValue>G.C.BOAIM-.....</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeHierarchique">
+        <SimpleValue>2.X.2.2.1.6.7</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>42</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>CH MINE DDAP</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>CHAMP DE MINES DISPERSABLES AVEC DISPOSITIF D'AUTODESTRUCTION PROGRAMMABLE</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>SCATT SD DTG</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>SCATTERABLE MINEFIELD WITH SELF-DESTRUCT DATE-TIME-GROUP</SimpleValue>
+      </Value>
+      <Value ColumnRef="parent">
+        <SimpleValue>8</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeSymbole">
+        <SimpleValue>G.C.BOAIM-.....</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeHierarchique">
+        <SimpleValue>2.X.2.2.1.6.8</SimpleValue>
+      </Value>
+    </Row>
+  </SimpleCodeList>
+</gc:CodeList>

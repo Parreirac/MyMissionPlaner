@@ -1,0 +1,167 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema targetNamespace="urn:fra:nc1:objet:cbrnevent" xmlns:nc1ihm="urn:fra:nc1:IHM" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:nc1cbrnevent="urn:fra:nc1:objet:cbrnevent" xmlns:nc1common="urn:fra:nc1:common:attribute" xmlns:nc1cbrn="urn:fra:nc1:common:cbrn" xmlns:nc1objcom="urn:fra:nc1:common:object">
+  <!-- NC1 V.9.0.0 -->
+  <xs:import namespace="urn:fra:nc1:common:attribute" schemaLocation="../Commun/Common.xsd" />
+  <xs:import namespace="urn:fra:nc1:common:cbrn" schemaLocation="../Commun/Cbrn.xsd" />
+  <xs:import namespace="urn:fra:nc1:common:object" schemaLocation="../Commun/Object.xsd" />
+  <xs:element name="NC1_CbrnEvent" type="nc1cbrnevent:CbrnEventType">
+    <xs:annotation>
+      <xs:documentation>L’objet NC1_CbrnEvent décrit un événement/incident NRBC.</xs:documentation>
+      <xs:documentation xml:lang="en">The NC1_CbrnEvent object describes a CBRN event/incident.</xs:documentation>
+      <xs:appinfo>
+        <nc1:type xmlns:nc1="urn:fra:nc1">Objet</nc1:type>
+        <nc1ihm:Nom>Evénement NRBC</nc1ihm:Nom>
+        <nc1ihm:Nom xml:lang="en">CBRN event</nc1ihm:Nom>
+        <nc1:MessH xmlns:nc1="urn:fra:nc1">Message H6.2 CbrnEvent</nc1:MessH>
+        <nc1:MessADatP3 xmlns:nc1="urn:fra:nc1">CBRN 1, 3, 4, 5 CHEM et CBRN 1, 3, 4, 5 BIO </nc1:MessADatP3>
+        <nc1:LastNC1ModifyVersion xmlns:nc1="urn:fra:nc1">9.0.0</nc1:LastNC1ModifyVersion>
+      </xs:appinfo>
+    </xs:annotation>
+  </xs:element>
+  <xs:complexType name="CbrnEventType">
+    <xs:annotation>
+      <xs:documentation>L’objet NC1_CbrnEvent décrit un événement NRBC résultant d’une mesure NRBC planifiée ou inopinée ou d’une observation NRBC.</xs:documentation>
+      <xs:documentation xml:lang="en">The NC1_CbrnEvent object describes a CBRN event resulting from a planned or unexpected CBRN measurement, or a CBRN sighting.</xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="nc1objcom:LocalisedObjectType">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="tacticalData">
+            <xs:annotation>
+              <xs:documentation>Données tactiques de l'événement NRBC.</xs:documentation>
+              <xs:documentation xml:lang="en">CBRN event tactical data.</xs:documentation>
+              <xs:appinfo>
+                <nc1ihm:Nom>Données tactiques</nc1ihm:Nom>
+                <nc1ihm:Nom xml:lang="en">tactical datas</nc1ihm:Nom>
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element minOccurs="0" name="symbolCode" type="nc1common:SymbolCodeType">
+                  <xs:annotation>
+                    <xs:documentation>Code contenant les informations de symbologie, d'identité (AMI, ENI, etc.), de nationalité, d'état de planification.</xs:documentation>
+                    <xs:documentation xml:lang="en">Code specifying information about symbology, identity (Friend, enemy, …), nationality, planification status.</xs:documentation>
+                    <xs:appinfo>
+                      <nc1ihm:Nom>Code du symbole</nc1ihm:Nom>
+                      <nc1ihm:Nom xml:lang="en">Symbol code</nc1ihm:Nom>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:element>
+                <xs:element minOccurs="0" name="url" type="nc1common:MediumTextObjectType">
+                  <xs:annotation>
+                    <xs:documentation>Lien vers un fichier associé à l’objet.</xs:documentation>
+                    <xs:documentation xml:lang="en">Link to a file associated with the object.</xs:documentation>
+                    <xs:appinfo>
+                      <nc1ihm:Nom>Url</nc1ihm:Nom>
+                      <nc1ihm:Nom xml:lang="en">url</nc1ihm:Nom>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:element>
+                <xs:element minOccurs="0" name="comment" type="nc1common:LongTextObjectType">
+                  <xs:annotation>
+                    <xs:documentation>Commentaires en texte libre.</xs:documentation>
+                    <xs:documentation xml:lang="en">Free text comment.</xs:documentation>
+                    <xs:appinfo>
+                      <nc1ihm:Nom>Commentaire</nc1ihm:Nom>
+                      <nc1ihm:Nom xml:lang="en">comment</nc1ihm:Nom>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:element>
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+          <xs:element name="alfa" type="nc1cbrn:AlfaType">
+            <xs:annotation>
+              <xs:documentation>Numéro de l'événement NRBC.</xs:documentation>
+              <xs:documentation xml:lang="en">CBRN event number.</xs:documentation>
+              <xs:appinfo>
+                <nc1ihm:Nom>ALPHA</nc1ihm:Nom>
+                <nc1ihm:Nom xml:lang="en">ALPHA</nc1ihm:Nom>
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:element>
+          <xs:element name="delta" type="nc1cbrn:DeltaType">
+            <xs:annotation>
+              <xs:documentation>Horodatages de début et de fin de l'événement.</xs:documentation>
+              <xs:documentation xml:lang="en">Event start and end datetimes.</xs:documentation>
+              <xs:appinfo>
+                <nc1ihm:Nom>DELTA</nc1ihm:Nom>
+                <nc1ihm:Nom xml:lang="en">DELTA</nc1ihm:Nom>
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:element>
+          <xs:element name="foxtrot" type="nc1cbrn:FoxtrotType">
+            <xs:annotation>
+              <xs:documentation>Localisation de l'événement.</xs:documentation>
+              <xs:documentation xml:lang="en">Event location.</xs:documentation>
+              <xs:appinfo>
+                <nc1ihm:Nom>FOXTROT</nc1ihm:Nom>
+                <nc1ihm:Nom xml:lang="en">Location</nc1ihm:Nom>
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:element>
+          <xs:element name="golf" type="nc1cbrn:GolfType">
+            <xs:annotation>
+              <xs:documentation>Quantité et mode de diffusion de l'agent NRBC.</xs:documentation>
+              <xs:documentation xml:lang="en">CBRN agent quantity and release mode.</xs:documentation>
+              <xs:appinfo>
+                <nc1ihm:Nom>GOLF</nc1ihm:Nom>
+                <nc1ihm:Nom xml:lang="en">GOLF</nc1ihm:Nom>
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:element>
+          <xs:element name="india" type="nc1cbrn:IndiaType">
+            <xs:annotation>
+              <xs:documentation>Caractéristiques de la diffusion de l'agent NRBC.</xs:documentation>
+              <xs:documentation xml:lang="en">CBRN agent release characteristics.</xs:documentation>
+              <xs:appinfo>
+                <nc1ihm:Nom>INDIA</nc1ihm:Nom>
+                <nc1ihm:Nom xml:lang="en">INDIA</nc1ihm:Nom>
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:element>
+          <xs:element name="miker" type="nc1cbrn:MikerType">
+            <xs:annotation>
+              <xs:documentation>Description et état de l'événement.</xs:documentation>
+              <xs:documentation xml:lang="en">Event description and status.</xs:documentation>
+              <xs:appinfo>
+                <nc1ihm:Nom>MIKER</nc1ihm:Nom>
+                <nc1ihm:Nom xml:lang="en">MIKER</nc1ihm:Nom>
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:element>
+          <xs:element minOccurs="0" name="tango" type="nc1cbrn:TangoType">
+            <xs:annotation>
+              <xs:documentation>Description de la topographie du terrain et de la végétation.</xs:documentation>
+              <xs:documentation xml:lang="en">Description of the topography and vegetation.</xs:documentation>
+              <xs:appinfo>
+                <nc1ihm:Nom>TANGO</nc1ihm:Nom>
+                <nc1ihm:Nom xml:lang="en">TANGO</nc1ihm:Nom>
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:element>
+          <xs:element minOccurs="0" name="yankee" type="nc1cbrn:YankeeType">
+            <xs:annotation>
+              <xs:documentation>Direction et vitesse du vent.</xs:documentation>
+              <xs:documentation xml:lang="en">Wind direction and speed.</xs:documentation>
+              <xs:appinfo>
+                <nc1ihm:Nom>YANKEE</nc1ihm:Nom>
+                <nc1ihm:Nom xml:lang="en">YANKEE</nc1ihm:Nom>
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:element>
+          <xs:element minOccurs="0" name="zulu" type="nc1cbrn:ZuluType">
+            <xs:annotation>
+              <xs:documentation>Conditions météo mesurées.</xs:documentation>
+              <xs:documentation xml:lang="en">Measured meteorological conditions.</xs:documentation>
+              <xs:appinfo>
+                <nc1ihm:Nom>ZULU</nc1ihm:Nom>
+                <nc1ihm:Nom xml:lang="en">ZULU</nc1ihm:Nom>
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:element>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+</xs:schema>

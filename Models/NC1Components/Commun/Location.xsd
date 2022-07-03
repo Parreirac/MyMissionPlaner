@@ -1,0 +1,627 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema targetNamespace="urn:fra:nc1:common:location" xmlns:nc1ihm="urn:fra:nc1:IHM" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:nc1location="urn:fra:nc1:common:location" xmlns:nc1common="urn:fra:nc1:common:attribute">
+  <!-- NC1 V.9.0.0 -->
+  <xs:import namespace="urn:fra:nc1:common:attribute" schemaLocation="Common.xsd" />
+  <xs:simpleType name="AlignmentCode">
+    <xs:annotation>
+      <xs:appinfo>
+        <nc1dico:source xmlns:nc1dico="urn:fra:nc1:dictionnaires">NC1</nc1dico:source>
+      </xs:appinfo>
+      <xs:documentation></xs:documentation>
+      <xs:documentation xml:lang="en"></xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:integer" />
+  </xs:simpleType>
+  <xs:simpleType name="AltitudeType">
+    <xs:annotation>
+      <xs:documentation>Altitude (mètres).</xs:documentation>
+      <xs:documentation xml:lang="en">Altitude (meters).</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:int">
+      <xs:maxInclusive value="50000" />
+      <xs:minInclusive value="-450" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:complexType name="AorbitType">
+    <xs:annotation>
+      <xs:documentation>Hippodrome.</xs:documentation>
+      <xs:documentation xml:lang="en">Orbit.</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="firstPoint" type="nc1location:PointType">
+        <xs:annotation>
+          <xs:documentation>Premier point de l’âme de l’hippodrome.</xs:documentation>
+          <xs:documentation xml:lang="en">Orbit first point.</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Premier point</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">First point</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="secondPoint" type="nc1location:PointType">
+        <xs:annotation>
+          <xs:documentation>Second point de l’âme de l’hippodrome.</xs:documentation>
+          <xs:documentation xml:lang="en">Orbit second point.</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Second point</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">Second point</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="width" type="nc1common:Decimal0To999999Type">
+        <xs:annotation>
+          <xs:documentation>Largeur de l’hippodrome.</xs:documentation>
+          <xs:documentation xml:lang="en">Orbit width.</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Largeur</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">Width</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="alignment" type="nc1location:AlignmentCode">
+        <xs:annotation>
+          <xs:documentation>Alignement de l’hippodrome.</xs:documentation>
+          <xs:documentation xml:lang="en">Orbit alignment.</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Alignement</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">Alignment</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ArcbandType">
+    <xs:annotation>
+      <xs:documentation>Radarc ou segment d’anneau.</xs:documentation>
+      <xs:documentation xml:lang="en">Arcband.</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="center" type="nc1location:PointType">
+        <xs:annotation>
+          <xs:documentation>Foyer du radarc.</xs:documentation>
+          <xs:documentation xml:lang="en">Centre of the arcband.</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Centre</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">Centre</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="minRadius" type="nc1common:Decimal0To999999Type">
+        <xs:annotation>
+          <xs:documentation>Rayon minimal du radarc en mètres.</xs:documentation>
+          <xs:documentation xml:lang="en">Minimum radius of the arcband.</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Rayon minimal</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">Minimal radius</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="maxRadius" type="nc1common:Decimal0To999999Type">
+        <xs:annotation>
+          <xs:documentation>Rayon maximal du radarc en mètres.</xs:documentation>
+          <xs:documentation xml:lang="en">Maximum radius of the arcband.</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Rayon maximal</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">Maximal radius</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="startAngle" type="nc1common:AngleType">
+        <xs:annotation>
+          <xs:documentation>Angle de début du radarc.</xs:documentation>
+          <xs:documentation xml:lang="en">Start angle of the arcband.</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Angle de début</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">Start angle</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="endAngle" type="nc1common:AngleType">
+        <xs:annotation>
+          <xs:documentation>Angle de fin du radarc.</xs:documentation>
+          <xs:documentation xml:lang="en">End angle of the arcband.</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Angle de fin</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">End angle</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ArrowType">
+    <xs:annotation>
+      <xs:documentation>Flèche.</xs:documentation>
+      <xs:documentation xml:lang="en">Arrow.</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" minOccurs="2" name="point" type="nc1location:PointType">
+        <xs:annotation>
+          <xs:documentation>Point de l'âme de la flèche. Le premier point de la liste est le point de départ de la flèche, le dernier point de la liste est la pointe de la flèche.</xs:documentation>
+          <xs:documentation xml:lang="en">Point of the arrow shaft. The first point of the list is the tail, last point is the head.</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Point</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">Point</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="width" type="nc1common:Decimal0To999999Type">
+        <xs:annotation>
+          <xs:documentation>Largeur de la flèche (notée Wx dans le standard NVG).</xs:documentation>
+          <xs:documentation xml:lang="en">Width of the arrow body (named Wx in the NVG standard).</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Largeur</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">Width</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="CircleType">
+    <xs:annotation>
+      <xs:documentation>Cercle.</xs:documentation>
+      <xs:documentation xml:lang="en">Circle.</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="center" type="nc1location:PointType">
+        <xs:annotation>
+          <xs:documentation>Centre du cercle.</xs:documentation>
+          <xs:documentation xml:lang="en">Circle centre point.</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Centre</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">Centre</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="radius" type="nc1common:Decimal0To999999Type">
+        <xs:annotation>
+          <xs:documentation>Rayon du cercle.</xs:documentation>
+          <xs:documentation xml:lang="en">Radius of the circle.</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Rayon</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">Radius</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="CorridorType">
+    <xs:annotation>
+      <xs:documentation>Corridor.</xs:documentation>
+      <xs:documentation xml:lang="en">Corridor.</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" minOccurs="2" name="point" type="nc1location:PointType">
+        <xs:annotation>
+          <xs:documentation>Point de l'âme du corridor. Le premier point de la liste est le point de départ du corridor, le dernier point de la liste est le point d'arrivée du corridor.</xs:documentation>
+          <xs:documentation xml:lang="en">Point of the centreline of the corridor. The first point is the corridor's starting point, the last point is the arrival point.</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Point</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">Point</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="width" type="nc1common:Decimal0To999999Type">
+        <xs:annotation>
+          <xs:documentation>Demi-largeur du corridor (mètres).</xs:documentation>
+          <xs:documentation xml:lang="en">Half width of the corridor (meters).</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Largeur</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">Width</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="height" type="nc1common:Decimal0To999999Type">
+        <xs:annotation>
+          <xs:documentation>Demi-hauteur du corridor (mètres).</xs:documentation>
+          <xs:documentation xml:lang="en">Half-length of the corridor (meters).</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Hauteur</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">Height</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="EllipseType">
+    <xs:annotation>
+      <xs:documentation>Ellipse.</xs:documentation>
+      <xs:documentation xml:lang="en">Ellipse.</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="center" type="nc1location:PointType">
+        <xs:annotation>
+          <xs:documentation>Centre de l'ellipse.</xs:documentation>
+          <xs:documentation xml:lang="en">Ellipse centre point.</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Centre</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">Centre</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="minRadius" type="nc1common:Decimal0To999999Type">
+        <xs:annotation>
+          <xs:documentation>Demi petit axe de l'ellipse, ou rayon minimal de l'ellipse.</xs:documentation>
+          <xs:documentation xml:lang="en">Semi-minor axis, or minimal radius of the ellipse.</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Demi petit axe</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">Semi-minor axis</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="maxRadius" type="nc1common:Decimal0To999999Type">
+        <xs:annotation>
+          <xs:documentation>Demi grand axe de l'ellipse, ou rayon maximal de l'ellipse.</xs:documentation>
+          <xs:documentation xml:lang="en">Semi-major axis, or maximal radius of the ellipse.</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Demi grand axe</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">Semi-major axis</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="orientation" type="nc1common:AngleType">
+        <xs:annotation>
+          <xs:documentation>Rotation angulaire du grand axe de l'ellipse, par rapport au Nord géographique.</xs:documentation>
+          <xs:documentation xml:lang="en">Rotation angle of the semi-major axis from the geographical North.</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Rotation</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">Rotation</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ExtendedPointType">
+    <xs:annotation>
+      <xs:documentation>Point avec propriétés étendues.</xs:documentation>
+      <xs:documentation xml:lang="en">Point with extended properties.</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="x" type="nc1location:LongitudeType">
+        <xs:annotation>
+          <xs:documentation>Longitude du point.</xs:documentation>
+          <xs:documentation xml:lang="en">Longitude of the point.</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>x</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">x</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="y" type="nc1location:LatitudeType">
+        <xs:annotation>
+          <xs:documentation>Latitude du point.</xs:documentation>
+          <xs:documentation xml:lang="en">Latitude of the point.</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>y</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">y</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="z" type="nc1location:AltitudeType">
+        <xs:annotation>
+          <xs:documentation>Altitude WGS84 du point.</xs:documentation>
+          <xs:documentation xml:lang="en">WGS84 altitude of the point.</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>z</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">z</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="Qxy" type="nc1common:Int0To999Type">
+        <xs:annotation>
+          <xs:documentation>Indicateur de précision pour x et y : rayon (mètres).</xs:documentation>
+          <xs:documentation xml:lang="en">Precision indicator for x and y radius (meters).</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Qxy</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">Qxy</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="Qz" type="nc1common:Int0To999Type">
+        <xs:annotation>
+          <xs:documentation>Indicateur de précision pour z : rayon (mètres).</xs:documentation>
+          <xs:documentation xml:lang="en">Precision indicator z radius (meters).</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Qz</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">Qz</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="speed" type="nc1common:SpeedType">
+        <xs:annotation>
+          <xs:documentation>Vitesse au sol du point.</xs:documentation>
+          <xs:documentation xml:lang="en">Point ground speed.</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Vitesse</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">Speed</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="course" type="nc1common:AngleType">
+        <xs:annotation>
+          <xs:documentation>Direction du vecteur vitesse.</xs:documentation>
+          <xs:documentation xml:lang="en">Rotation angle of the speed vector from the geographical North.</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Direction</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">Direction</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="fireDirection" type="nc1common:AngleType">
+        <xs:annotation>
+          <xs:documentation>Orientation de l’armement principal.</xs:documentation>
+          <xs:documentation xml:lang="en">Orientation of the main weapon.</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Axe de visée principal</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">Main sight axis</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="observationDirection" type="nc1common:AngleType">
+        <xs:annotation>
+          <xs:documentation>Orientation du capteur d'observation.</xs:documentation>
+          <xs:documentation xml:lang="en">Orientation of the observation sensor.</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Axe d’observation</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">Observation Axis</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="rotation" type="nc1common:AngleType">
+        <xs:annotation>
+          <xs:documentation>Cap, ou orientation du châssis.</xs:documentation>
+          <xs:documentation xml:lang="en">Heading or chassis orientation.</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Cap</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">Heading</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:simpleType name="LatitudeType">
+    <xs:annotation>
+      <xs:documentation>Latitude sur l'ellipsoïde WGS84 (degrés décimaux). Une latitude positive correspond au Nord de l’équateur, une latitude négative correspond au Sud de l’équateur).</xs:documentation>
+      <xs:documentation xml:lang="en">Latitude on the WGS84 ellipsoid (decimal degrees). It is positive at North of the equator, negative at South of the equator.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:decimal">
+      <xs:maxInclusive value="90" />
+      <xs:minInclusive value="-90" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="LongitudeType">
+    <xs:annotation>
+      <xs:documentation>Longitude sur l'ellipsoïde WGS84 (degrés décimaux). Une longitude positive correspond à l’est du méridien de Greenwich, une longitude négative correspond à l’ouest du méridien de Greenwich).</xs:documentation>
+      <xs:documentation xml:lang="en">Longitude on the WGS84 ellipsoid (decimal degrees). It is positive at East of the Greenwich meridian, negative at West Greenwich meridian.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:decimal">
+      <xs:maxInclusive value="180" />
+      <xs:minInclusive value="-180" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:complexType name="MultipointType">
+    <xs:annotation>
+      <xs:documentation>Liste de points géométriques.</xs:documentation>
+      <xs:documentation xml:lang="en">List of geometric points.</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" minOccurs="2" name="point" type="nc1location:PointType">
+        <xs:annotation>
+          <xs:documentation>Point géométrique appartenant au multipoint.</xs:documentation>
+          <xs:documentation xml:lang="en">Geometric point, part of the multipoint.</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Point</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">Point</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="Point2DType">
+    <xs:annotation>
+      <xs:documentation>Point géométrique 2D : Longitude - Latitude.</xs:documentation>
+      <xs:documentation xml:lang="en">2D geographic point: Longitude - Latitude.</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="x" type="nc1location:LongitudeType">
+        <xs:annotation>
+          <xs:documentation>Longitude WGS84 du point (degrés décimaux).</xs:documentation>
+          <xs:documentation xml:lang="en">WGS 84 longitude of the point (decimal degrees).</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>x</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">x</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="y" type="nc1location:LatitudeType">
+        <xs:annotation>
+          <xs:documentation>Latitude WGS84 du point (degrés décimaux).</xs:documentation>
+          <xs:documentation xml:lang="en">WGS 84 latitude of the point (decimal degrees).</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>y</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">y</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="PointType">
+    <xs:annotation>
+      <xs:documentation>Point géométrique : Longitude - Latitude - Altitude.</xs:documentation>
+      <xs:documentation xml:lang="en">Geometric point expressed as a longitude and a latitude.</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="x" type="nc1location:LongitudeType">
+        <xs:annotation>
+          <xs:documentation>Longitude WGS84 du point (degrés décimaux).</xs:documentation>
+          <xs:documentation xml:lang="en">WGS 84 longitude of the point (decimal degrees).</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>x</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">x</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="y" type="nc1location:LatitudeType">
+        <xs:annotation>
+          <xs:documentation>Latitude WGS84 du point (degrés décimaux).</xs:documentation>
+          <xs:documentation xml:lang="en">WGS 84 latitude of the point (decimal degrees).</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>y</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">y</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="z" type="nc1location:AltitudeType">
+        <xs:annotation>
+          <xs:documentation>Altitude WGS84 du point (mètres).</xs:documentation>
+          <xs:documentation xml:lang="en">WGS84 altitude of the point (meters).</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>z</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">z</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="PolyarcType">
+    <xs:annotation>
+      <xs:documentation>Polygone associé à un arc de cercle.</xs:documentation>
+      <xs:documentation xml:lang="en">Polygon associated to a circular arc.</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="center" type="nc1location:PointType">
+        <xs:annotation>
+          <xs:documentation>Centre de l’arc de cercle.</xs:documentation>
+          <xs:documentation xml:lang="en">Circular arc centre.</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Centre</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">Centre</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="startAngle" type="nc1common:AngleType">
+        <xs:annotation>
+          <xs:documentation>Angle de début de l’arc de cercle.</xs:documentation>
+          <xs:documentation xml:lang="en">Circle arc start angle.</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Angle de début</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">Start angle</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="radius" type="nc1common:Decimal0To999999Type">
+        <xs:annotation>
+          <xs:documentation>Rayon de l’arc de cercle (mètres).</xs:documentation>
+          <xs:documentation xml:lang="en">Circle arc radius (meters).</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Rayon</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">Radius</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="endAngle" type="nc1common:AngleType">
+        <xs:annotation>
+          <xs:documentation>Angle de fin de l’arc de cercle.</xs:documentation>
+          <xs:documentation xml:lang="en">Circle arc end angle.</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Angle de fin</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">End angle</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element maxOccurs="unbounded" minOccurs="2" name="point" type="nc1location:PointType">
+        <xs:annotation>
+          <xs:documentation>Point du polygone.</xs:documentation>
+          <xs:documentation xml:lang="en">Polygon point.</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Point</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">Point</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="PolygonType">
+    <xs:annotation>
+      <xs:documentation>Polygone, ou ligne brisée fermée.</xs:documentation>
+      <xs:documentation xml:lang="en">Polygon, or closed polyline.</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" minOccurs="3" name="point" type="nc1location:PointType">
+        <xs:annotation>
+          <xs:documentation>Point appartenant au polygone. Le dernier point de la liste est relié au premier point de la liste.</xs:documentation>
+          <xs:documentation xml:lang="en">Point from the polygon. The last point of the list is connected to the first one.</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Point</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">Point</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="PolylineType">
+    <xs:annotation>
+      <xs:documentation>Ligne brisée orientée, sans largeur.</xs:documentation>
+      <xs:documentation xml:lang="en">Width less oriented polyline.</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" minOccurs="2" name="point" type="nc1location:PointType">
+        <xs:annotation>
+          <xs:documentation>Point appartenant à la ligne.</xs:documentation>
+          <xs:documentation xml:lang="en">Point of the line.</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Point</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">Point</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="RectangleType">
+    <xs:annotation>
+      <xs:documentation>Rectangle.</xs:documentation>
+      <xs:documentation xml:lang="en">Rectangle.</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="center" type="nc1location:PointType">
+        <xs:annotation>
+          <xs:documentation>Centre du rectangle.</xs:documentation>
+          <xs:documentation xml:lang="en">Centre of the rectangle.</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Centre</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">Centre</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="width" type="nc1common:Decimal0To999999Type">
+        <xs:annotation>
+          <xs:documentation>Largeur du rectangle (mètres).</xs:documentation>
+          <xs:documentation xml:lang="en">Width of the rectangle (meters).</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Largeur</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">Width</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="length" type="nc1common:Decimal0To999999Type">
+        <xs:annotation>
+          <xs:documentation>Longueur du rectangle (mètres).</xs:documentation>
+          <xs:documentation xml:lang="en">Length of the rectangle (meters).</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Longueur</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">Lenght</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="orientation" type="nc1common:AngleType">
+        <xs:annotation>
+          <xs:documentation>Rotation angulaire de l'axe (longueur) du rectangle, par rapport au Nord géographique.</xs:documentation>
+          <xs:documentation xml:lang="en">Rotation angle of the rectangle axis (length) from the geographical North.</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Orientation</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">Rotation angle</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

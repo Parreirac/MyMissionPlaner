@@ -1,0 +1,301 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<gc:CodeList xmlns:nc1dico="urn:fra:nc1:dictionnaires" xmlns:gc="http://docs.oasis-open.org/codelist/ns/genericode/1.0/">
+  <Annotation>
+    <Description>
+      <nc1dico:description></nc1dico:description>
+      <nc1dico:description xml:lang="en"></nc1dico:description>
+    </Description>
+    <AppInfo>
+      <nc1dico:source>STAT dictionnaire 204</nc1dico:source>
+      <nc1dico:derogation></nc1dico:derogation>
+    </AppInfo>
+  </Annotation>
+  <Identification>
+    <ShortName>InformationCategoryCode</ShortName>
+    <Version>9.0.0</Version>
+    <CanonicalUri>urn:fra:nc1:objet:intelrequirement:InformationCategoryCode</CanonicalUri>
+    <CanonicalVersionUri>urn:fra:nc1:objet:intelrequirement:InformationCategoryCode:9.0.0</CanonicalVersionUri>
+  </Identification>
+  <ColumnSet DatatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes">
+    <Column Id="code" Use="required">
+      <ShortName>Code</ShortName>
+      <Data Type="int" />
+    </Column>
+    <Column Id="short" Use="required">
+      <ShortName>Short</ShortName>
+      <Data Type="string" />
+    </Column>
+    <Column Id="long" Use="optional">
+      <ShortName>Long</ShortName>
+      <Data Type="string" />
+    </Column>
+    <Column Id="short-en" Use="optional">
+      <ShortName>Short anglais</ShortName>
+      <Data Type="string" />
+    </Column>
+    <Column Id="long-en" Use="optional">
+      <ShortName>Long anglais</ShortName>
+      <Data Type="string" />
+    </Column>
+    <Column Id="parent" Use="optional">
+      <ShortName>Parent</ShortName>
+      <Data Type="int" />
+    </Column>
+    <Column Id="codeSymbole" Use="optional">
+      <ShortName>Code Symbole</ShortName>
+      <Data Type="string" />
+    </Column>
+    <Column Id="codeHierarchique" Use="optional">
+      <ShortName>Code Hierarchique</ShortName>
+      <Data Type="string" />
+    </Column>
+    <Key Id="codeKey">
+      <ShortName>CodeKey</ShortName>
+      <ColumnRef Ref="code" />
+    </Key>
+  </ColumnSet>
+  <SimpleCodeList>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>0</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>AIRFIELD</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>AIRFIELD</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>1</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>BARRACKS</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>BARRACKS</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>2</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>BRIDGE</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>BRIDGES</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>3</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>CAMP</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>CAMPS</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>4</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>COASTRECCE</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>COASTAL STRIP</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>5</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>ELECPWR</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>ELECTRIC POWER INSTALLATIONS</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>6</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>ELECTRONIC</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>ELECTRONIC INSTALLATIONS</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>7</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>FERRY</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>FERRIES</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>8</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>HARBOUR</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>HARBOURS</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>9</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>HEADQTRS</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>HEADQUARTERS</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>10</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>INDUSTRY</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>INDUSTRIAL INSTALLATIONS</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>11</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>MILACTY</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>MILITARY ACTIVITY</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>12</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>MSLSYS</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>MISSILE SYSTEMS</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>13</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>PORT</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>PORTS</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>14</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>RAILFAC</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>RAIL FACILITIES</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>15</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>REPAIRFAC</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>REPAIR FACILITIES</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>16</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>RIVERXING</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>RIVER CROSSINGS</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>17</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>ROUTERECCE</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>ROUTE RECONNAISSANCE</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>18</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>SHIPPING</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>SHIPPING</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>19</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>STORAGEFAC</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>STORAGE FACILITIES</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>20</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>TERRECCE</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>TERRAIN RECONNAISSANCE</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>21</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>WATCONFAC</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>WATER CONTROL FACILITIES</SimpleValue>
+      </Value>
+    </Row>
+  </SimpleCodeList>
+</gc:CodeList>

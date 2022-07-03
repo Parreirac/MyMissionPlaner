@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema targetNamespace="urn:fra:nc1:message:initmedrep" xmlns:nc1ihm="urn:fra:nc1:IHM" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:nc1initmedrep="urn:fra:nc1:message:initmedrep" xmlns:nc1msgcom="urn:fra:nc1:common:message" xmlns:nc1facility="urn:fra:nc1:objet:facility">
+  <!-- NC1 V.9.0.0 -->
+  <xs:import namespace="urn:fra:nc1:common:message" schemaLocation="../Commun/Message.xsd" />
+  <xs:import namespace="urn:fra:nc1:objet:facility" schemaLocation="../Objet/NC1_Facility.xsd" />
+  <xs:element name="NC1_InitMedRep">
+    <xs:annotation>
+      <xs:documentation>Compte-rendu d’ouverture d’installation sanitaire.</xs:documentation>
+      <xs:documentation xml:lang="en">Minutes of sanitary installation opening.</xs:documentation>
+      <xs:appinfo>
+        <nc1:type xmlns:nc1="urn:fra:nc1">Message</nc1:type>
+        <nc1ihm:Nom>Compte rendu d’ouverture d’installation sanitaire</nc1ihm:Nom>
+        <nc1ihm:Nom xml:lang="en">Initial Medical Report</nc1ihm:Nom>
+        <nc1:MessH xmlns:nc1="urn:fra:nc1">N/A</nc1:MessH>
+        <nc1:MessADatP3 xmlns:nc1="urn:fra:nc1">N/A</nc1:MessADatP3>
+        <nc1:LastNC1ModifyVersion xmlns:nc1="urn:fra:nc1">9.0.0</nc1:LastNC1ModifyVersion>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:complexContent>
+        <xs:extension base="nc1msgcom:BaseMessageType">
+          <xs:sequence>
+            <xs:element name="medicalFacilityReport">
+              <xs:annotation>
+                <xs:documentation>Compte-rendu d’ouverture d’installation(s) médicale(s).</xs:documentation>
+                <xs:documentation xml:lang="en">Medical facility opening report.</xs:documentation>
+                <xs:appinfo>
+                  <nc1ihm:Nom>CR d’ouverture d’installation médicale</nc1ihm:Nom>
+                  <nc1ihm:Nom xml:lang="en">Medical facility opening report</nc1ihm:Nom>
+                </xs:appinfo>
+              </xs:annotation>
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element maxOccurs="unbounded" name="facility" type="nc1facility:FacilityType">
+                    <xs:annotation>
+                      <xs:documentation>Installation médicale dont la situation est l’objet du message.</xs:documentation>
+                      <xs:documentation xml:lang="en">Medical facility which situation is addressed by the message.</xs:documentation>
+                      <xs:appinfo>
+                        <nc1ihm:Nom>Installation médicale</nc1ihm:Nom>
+                        <nc1ihm:Nom xml:lang="en">Medical facility</nc1ihm:Nom>
+                      </xs:appinfo>
+                    </xs:annotation>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element minOccurs="0" name="comment" type="nc1msgcom:CommentSectionType">
+              <xs:annotation>
+                <xs:documentation>Commentaire en texte libre.</xs:documentation>
+                <xs:documentation xml:lang="en">free text comment.</xs:documentation>
+                <xs:appinfo>
+                  <nc1ihm:Nom>Commentaire</nc1ihm:Nom>
+                  <nc1ihm:Nom xml:lang="en">comment</nc1ihm:Nom>
+                </xs:appinfo>
+              </xs:annotation>
+            </xs:element>
+          </xs:sequence>
+        </xs:extension>
+      </xs:complexContent>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

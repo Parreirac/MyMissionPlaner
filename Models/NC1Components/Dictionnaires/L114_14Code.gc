@@ -1,0 +1,161 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<gc:CodeList xmlns:nc1dico="urn:fra:nc1:dictionnaires" xmlns:gc="http://docs.oasis-open.org/codelist/ns/genericode/1.0/">
+  <Annotation>
+    <Description>
+      <nc1dico:description>DECRIT LA PROBABILITE RELATIVE ASSOCIEE AU MODE D’ACTION DANS LE CAS D’UN MODE D’ACTION ENNEMI (ME)</nc1dico:description>
+      <nc1dico:description xml:lang="en">Described the relative probability associated with the mode of action in the case of an Enemy Mode of action (ME)</nc1dico:description>
+    </Description>
+    <AppInfo>
+      <nc1dico:source>SFTT 3.4.8</nc1dico:source>
+      <nc1dico:derogation>PROBABILITE DE MISSION</nc1dico:derogation>
+    </AppInfo>
+  </Annotation>
+  <Identification>
+    <ShortName>L114_14Code</ShortName>
+    <Version>9.0.0</Version>
+    <CanonicalUri>urn:fra:nc1:common:sicsdicos:L114_14Code</CanonicalUri>
+    <CanonicalVersionUri>urn:fra:nc1:common:sicsdicos:L114_14Code:9.0.0</CanonicalVersionUri>
+  </Identification>
+  <ColumnSet DatatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes">
+    <Column Id="code" Use="required">
+      <ShortName>Code</ShortName>
+      <Data Type="int" />
+    </Column>
+    <Column Id="short" Use="required">
+      <ShortName>Short</ShortName>
+      <Data Type="string" />
+    </Column>
+    <Column Id="long" Use="optional">
+      <ShortName>Long</ShortName>
+      <Data Type="string" />
+    </Column>
+    <Column Id="short-en" Use="optional">
+      <ShortName>Short anglais</ShortName>
+      <Data Type="string" />
+    </Column>
+    <Column Id="long-en" Use="optional">
+      <ShortName>Long anglais</ShortName>
+      <Data Type="string" />
+    </Column>
+    <Column Id="parent" Use="optional">
+      <ShortName>Parent</ShortName>
+      <Data Type="int" />
+    </Column>
+    <Column Id="codeSymbole" Use="optional">
+      <ShortName>Code Symbole</ShortName>
+      <Data Type="string" />
+    </Column>
+    <Column Id="codeHierarchique" Use="optional">
+      <ShortName>Code Hierarchique</ShortName>
+      <Data Type="string" />
+    </Column>
+    <Key Id="codeKey">
+      <ShortName>CodeKey</ShortName>
+      <ColumnRef Ref="code" />
+    </Key>
+  </ColumnSet>
+  <SimpleCodeList>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>0</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>EQUIVALENTE</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>PROBABILITE EQUIVALENTE</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>EQUAL</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>EQUAL PROBABILITY</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>1</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>HAUTE</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>PROBABILITE HAUTE</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>HIGHER</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>HIGHER PROBABILITY</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>2</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>BASSE</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>PROBABILITE BASSE</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>LOWER</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>LOWER PROBABILITY</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>3</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>INCONNU</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>INCONNU</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>NKN</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>NOT KNOWN</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>4</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>PAS AVIS CONTRE</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>PAS D'AVIS CONTRAIRE</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>NOS</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>NOT OTHERWISE SPECIFIED</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>5</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>NON SPECIFIE</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>NON SPECIFIE</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>NS</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>NOT SPECIFIED</SimpleValue>
+      </Value>
+    </Row>
+  </SimpleCodeList>
+</gc:CodeList>

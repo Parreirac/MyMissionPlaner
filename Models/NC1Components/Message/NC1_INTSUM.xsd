@@ -1,0 +1,186 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema targetNamespace="urn:fra:nc1:message:intsum" xmlns:nc1ihm="urn:fra:nc1:IHM" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:nc1intsum="urn:fra:nc1:message:intsum" xmlns:nc1common="urn:fra:nc1:common:attribute" xmlns:nc1msgcom="urn:fra:nc1:common:message">
+  <!-- NC1 V.9.0.0 -->
+  <xs:import namespace="urn:fra:nc1:common:attribute" schemaLocation="../Commun/Common.xsd" />
+  <xs:import namespace="urn:fra:nc1:common:message" schemaLocation="../Commun/Message.xsd" />
+  <xs:element name="NC1_INTSUM">
+    <xs:annotation>
+      <xs:documentation>Le message NC1_INTSUM est un message de synthèse de renseignement. Il est utilisé pour informer périodiquement sur les forces militaires, le contexte politico-économique, ou tout autre renseignement.</xs:documentation>
+      <xs:documentation xml:lang="en">The NC1_INTSUM message is a message of synthesis of piece of information. He(it) is used to inform periodically about armed forces, the politico-economic context, or any other piece of information.</xs:documentation>
+      <xs:appinfo>
+        <nc1:type xmlns:nc1="urn:fra:nc1">Message</nc1:type>
+        <nc1ihm:Nom>Synthèse de renseignement</nc1ihm:Nom>
+        <nc1ihm:Nom xml:lang="en">Intelligence summary</nc1ihm:Nom>
+        <nc1:MessH xmlns:nc1="urn:fra:nc1">N/A</nc1:MessH>
+        <nc1:MessADatP3 xmlns:nc1="urn:fra:nc1">INTSUM</nc1:MessADatP3>
+        <nc1:LastNC1ModifyVersion xmlns:nc1="urn:fra:nc1">9.0.0</nc1:LastNC1ModifyVersion>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:complexContent>
+        <xs:extension base="nc1msgcom:BaseMessageType">
+          <xs:sequence>
+            <xs:element minOccurs="0" name="intsumSummary">
+              <xs:annotation>
+                <xs:documentation>Résumé de la synthèse de renseignement.</xs:documentation>
+                <xs:documentation xml:lang="en">Overview of the intelligence summary.</xs:documentation>
+                <xs:appinfo>
+                  <nc1ihm:Nom>Résumé</nc1ihm:Nom>
+                  <nc1ihm:Nom xml:lang="en">Summary</nc1ihm:Nom>
+                </xs:appinfo>
+              </xs:annotation>
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element minOccurs="0" name="period" type="nc1common:PeriodType">
+                    <xs:annotation>
+                      <xs:documentation>Période de validité de la synthèse.</xs:documentation>
+                      <xs:documentation xml:lang="en">Validity period of the summary.</xs:documentation>
+                      <xs:appinfo>
+                        <nc1ihm:Nom>Période de validité</nc1ihm:Nom>
+                        <nc1ihm:Nom xml:lang="en">Validity period</nc1ihm:Nom>
+                      </xs:appinfo>
+                    </xs:annotation>
+                  </xs:element>
+                  <xs:element name="highlights" type="nc1common:WideTextType">
+                    <xs:annotation>
+                      <xs:documentation>Description en texte libre des points importants de la synthèse de renseignement.</xs:documentation>
+                      <xs:documentation xml:lang="en">General assessment as a free text of the intelligence summary.</xs:documentation>
+                      <xs:appinfo>
+                        <nc1ihm:Nom>Points importants</nc1ihm:Nom>
+                        <nc1ihm:Nom xml:lang="en">Important points</nc1ihm:Nom>
+                      </xs:appinfo>
+                    </xs:annotation>
+                  </xs:element>
+                  <xs:element minOccurs="0" name="generalAssessment" type="nc1common:WideTextType">
+                    <xs:annotation>
+                      <xs:documentation>Avis général en texte libre sur la synthèse de renseignement.</xs:documentation>
+                      <xs:documentation xml:lang="en">Free text description of the major points from the intelligence summary.</xs:documentation>
+                      <xs:appinfo>
+                        <nc1ihm:Nom>Avis général</nc1ihm:Nom>
+                        <nc1ihm:Nom xml:lang="en">Major points from the intelligence summary</nc1ihm:Nom>
+                      </xs:appinfo>
+                    </xs:annotation>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="intsumSituationReport">
+              <xs:annotation>
+                <xs:documentation>Compte-rendu de situation dans la zone de renseignement.</xs:documentation>
+                <xs:documentation xml:lang="en">Situation report in the intelligence area of interest.</xs:documentation>
+                <xs:appinfo>
+                  <nc1ihm:Nom>CR de situation</nc1ihm:Nom>
+                  <nc1ihm:Nom xml:lang="en">Situation report</nc1ihm:Nom>
+                </xs:appinfo>
+              </xs:annotation>
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element minOccurs="0" name="relatedArea" type="nc1msgcom:MixedAnyType">
+                    <xs:annotation>
+                      <xs:documentation>Zone de renseignement.</xs:documentation>
+                      <xs:documentation xml:lang="en">Area related to the intelligence summary.</xs:documentation>
+                      <xs:appinfo>
+                        <nc1ihm:Nom>Zone</nc1ihm:Nom>
+                        <nc1ihm:Nom xml:lang="en">area</nc1ihm:Nom>
+                      </xs:appinfo>
+                    </xs:annotation>
+                  </xs:element>
+                  <xs:element minOccurs="0" name="generalSituationDescription" type="nc1common:WideTextType">
+                    <xs:annotation>
+                      <xs:documentation>Description en texte libre de la situation générale dans la zone.</xs:documentation>
+                      <xs:documentation xml:lang="en">Free text description of area general situation.</xs:documentation>
+                      <xs:appinfo>
+                        <nc1ihm:Nom>Situation générale</nc1ihm:Nom>
+                        <nc1ihm:Nom xml:lang="en">General situation</nc1ihm:Nom>
+                      </xs:appinfo>
+                    </xs:annotation>
+                  </xs:element>
+                  <xs:element minOccurs="0" name="geographicalSituationDescription" type="nc1common:WideTextType">
+                    <xs:annotation>
+                      <xs:documentation>Description en texte libre de la situation géographique dans la zone.</xs:documentation>
+                      <xs:documentation xml:lang="en">Free text description of area geographical situation.</xs:documentation>
+                      <xs:appinfo>
+                        <nc1ihm:Nom>Situation géographique</nc1ihm:Nom>
+                        <nc1ihm:Nom xml:lang="en">geographic situation</nc1ihm:Nom>
+                      </xs:appinfo>
+                    </xs:annotation>
+                  </xs:element>
+                  <xs:element minOccurs="0" name="militarySituationDescription" type="nc1common:WideTextType">
+                    <xs:annotation>
+                      <xs:documentation>Description en texte libre de la situation militaire dans la zone.</xs:documentation>
+                      <xs:documentation xml:lang="en">Free text description of area military situation.</xs:documentation>
+                      <xs:appinfo>
+                        <nc1ihm:Nom>Situation militaire</nc1ihm:Nom>
+                        <nc1ihm:Nom xml:lang="en">Military situation</nc1ihm:Nom>
+                      </xs:appinfo>
+                    </xs:annotation>
+                  </xs:element>
+                  <xs:element minOccurs="0" name="landSituationDescription" type="nc1common:WideTextType">
+                    <xs:annotation>
+                      <xs:documentation>Description en texte libre de la situation Terre dans la zone.</xs:documentation>
+                      <xs:documentation xml:lang="en">Free text description of area land situation.</xs:documentation>
+                      <xs:appinfo>
+                        <nc1ihm:Nom>Situation Terre</nc1ihm:Nom>
+                        <nc1ihm:Nom xml:lang="en">Land situation</nc1ihm:Nom>
+                      </xs:appinfo>
+                    </xs:annotation>
+                  </xs:element>
+                  <xs:element minOccurs="0" name="maritimeSituationDescription" type="nc1common:WideTextType">
+                    <xs:annotation>
+                      <xs:documentation>Description en texte libre de la situation Mer dans la zone.</xs:documentation>
+                      <xs:documentation xml:lang="en">Free text description of area maritime situation.</xs:documentation>
+                      <xs:appinfo>
+                        <nc1ihm:Nom>Situation Mer</nc1ihm:Nom>
+                        <nc1ihm:Nom xml:lang="en">Maritime situation</nc1ihm:Nom>
+                      </xs:appinfo>
+                    </xs:annotation>
+                  </xs:element>
+                  <xs:element minOccurs="0" name="airSituationDescription" type="nc1common:WideTextType">
+                    <xs:annotation>
+                      <xs:documentation>Description en texte libre de la situation Air dans la zone.</xs:documentation>
+                      <xs:documentation xml:lang="en">Free text description of area air situation.</xs:documentation>
+                      <xs:appinfo>
+                        <nc1ihm:Nom>Situation Air</nc1ihm:Nom>
+                        <nc1ihm:Nom xml:lang="en">Air situation</nc1ihm:Nom>
+                      </xs:appinfo>
+                    </xs:annotation>
+                  </xs:element>
+                  <xs:element minOccurs="0" name="ciAndSecuritySituationDescription" type="nc1common:WideTextType">
+                    <xs:annotation>
+                      <xs:documentation>Description en texte libre de la situation de contre-ingérence et de sécurité dans la zone.</xs:documentation>
+                      <xs:documentation xml:lang="en">Free text description of the situation of counter-intelligence and security in the area.</xs:documentation>
+                      <xs:appinfo>
+                        <nc1ihm:Nom>Situation de contre-ingérence</nc1ihm:Nom>
+                        <nc1ihm:Nom xml:lang="en">Free text description of </nc1ihm:Nom>
+                      </xs:appinfo>
+                    </xs:annotation>
+                  </xs:element>
+                  <xs:element minOccurs="0" name="otherIntelDescription" type="nc1common:WideTextType">
+                    <xs:annotation>
+                      <xs:documentation>Autres informations.</xs:documentation>
+                      <xs:documentation xml:lang="en">Other information.</xs:documentation>
+                      <xs:appinfo>
+                        <nc1ihm:Nom>Autres informations</nc1ihm:Nom>
+                        <nc1ihm:Nom xml:lang="en">Other information</nc1ihm:Nom>
+                      </xs:appinfo>
+                    </xs:annotation>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element minOccurs="0" name="comment" type="nc1msgcom:CommentSectionType">
+              <xs:annotation>
+                <xs:documentation>Commentaire en texte libre.</xs:documentation>
+                <xs:documentation xml:lang="en">free text comment.</xs:documentation>
+                <xs:appinfo>
+                  <nc1ihm:Nom>Commentaire</nc1ihm:Nom>
+                  <nc1ihm:Nom xml:lang="en">comment</nc1ihm:Nom>
+                </xs:appinfo>
+              </xs:annotation>
+            </xs:element>
+          </xs:sequence>
+        </xs:extension>
+      </xs:complexContent>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

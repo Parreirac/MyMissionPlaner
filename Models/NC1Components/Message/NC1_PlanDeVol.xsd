@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema targetNamespace="urn:fra:nc1:message:plandevol" xmlns:nc1ihm="urn:fra:nc1:IHM" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:nc1plandevol="urn:fra:nc1:message:plandevol" xmlns:nc1msgcom="urn:fra:nc1:common:message" xmlns:nc13droute="urn:fra:nc1:objet:3droute">
+  <!-- NC1 V.9.0.0 -->
+  <xs:import namespace="urn:fra:nc1:common:message" schemaLocation="../Commun/Message.xsd" />
+  <xs:import namespace="urn:fra:nc1:objet:3droute" schemaLocation="../Objet/NC1_3DRoute.xsd" />
+  <xs:element name="NC1_PlanDeVol">
+    <xs:annotation>
+      <xs:documentation>Le message NC1_PlanDeVol est utilisé pour transmettre un plan de vol hélicoptère, incluant un ou des itinéraires 3D, ainsi que la description des patrouilles et/ou des missions associées à ces itinéraires.</xs:documentation>
+      <xs:documentation xml:lang="en">The NC1_PlanDeVol message is used to transmit a helicopter flight plan, including a 3D or routes, and the description of patrols and / or assignments associated with these routes.</xs:documentation>
+      <xs:appinfo>
+        <nc1:type xmlns:nc1="urn:fra:nc1">Message</nc1:type>
+        <nc1ihm:Nom>Plan de vol</nc1ihm:Nom>
+        <nc1ihm:Nom xml:lang="en">Flight plan</nc1ihm:Nom>
+        <nc1:MessH xmlns:nc1="urn:fra:nc1">N/A</nc1:MessH>
+        <nc1:MessADatP3 xmlns:nc1="urn:fra:nc1">N/A</nc1:MessADatP3>
+        <nc1:LastNC1ModifyVersion xmlns:nc1="urn:fra:nc1">9.0.0</nc1:LastNC1ModifyVersion>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:complexContent>
+        <xs:extension base="nc1msgcom:BaseMessageType">
+          <xs:sequence>
+            <xs:element name="flightPlan">
+              <xs:annotation>
+                <xs:documentation>Description des itinéraires 3D, ainsi que des patrouilles et des missions associées à ces itinéraires.</xs:documentation>
+                <xs:documentation xml:lang="en">Description of 3D routes, as well as patrols and missions associated to these routes.</xs:documentation>
+                <xs:appinfo>
+                  <nc1ihm:Nom>Plan de vol</nc1ihm:Nom>
+                  <nc1ihm:Nom xml:lang="en">Flight plan</nc1ihm:Nom>
+                </xs:appinfo>
+              </xs:annotation>
+              <xs:complexType mixed="true">
+                <xs:choice minOccurs="0" maxOccurs="unbounded">
+                  <xs:element maxOccurs="unbounded" name="_3DRoute" type="nc13droute:_3DRouteType">
+                    <xs:annotation>
+                      <xs:documentation>Itinéraire 3D composant le plan de vol.</xs:documentation>
+                      <xs:documentation xml:lang="en">3D route of the flight plan.</xs:documentation>
+                      <xs:appinfo>
+                        <nc1ihm:Nom>Itinéraire 3D</nc1ihm:Nom>
+                        <nc1ihm:Nom xml:lang="en">3D route</nc1ihm:Nom>
+                      </xs:appinfo>
+                    </xs:annotation>
+                  </xs:element>
+                </xs:choice>
+              </xs:complexType>
+            </xs:element>
+            <xs:element minOccurs="0" name="comment" type="nc1msgcom:CommentSectionType">
+              <xs:annotation>
+                <xs:documentation>Commentaire en texte libre.</xs:documentation>
+                <xs:documentation xml:lang="en">free text comment.</xs:documentation>
+                <xs:appinfo>
+                  <nc1ihm:Nom>Commentaire</nc1ihm:Nom>
+                  <nc1ihm:Nom xml:lang="en">comment</nc1ihm:Nom>
+                </xs:appinfo>
+              </xs:annotation>
+            </xs:element>
+          </xs:sequence>
+        </xs:extension>
+      </xs:complexContent>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

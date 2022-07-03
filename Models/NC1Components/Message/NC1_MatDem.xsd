@@ -1,0 +1,143 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema targetNamespace="urn:fra:nc1:message:matdem" xmlns:nc1ihm="urn:fra:nc1:IHM" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:nc1matdem="urn:fra:nc1:message:matdem" xmlns:nc1common="urn:fra:nc1:common:attribute" xmlns:nc1msgcom="urn:fra:nc1:common:message" xmlns:nc1tacpoint="urn:fra:nc1:objet:tacpoint">
+  <!-- NC1 V.9.0.0 -->
+  <xs:import namespace="urn:fra:nc1:common:attribute" schemaLocation="../Commun/Common.xsd" />
+  <xs:import namespace="urn:fra:nc1:common:message" schemaLocation="../Commun/Message.xsd" />
+  <xs:import namespace="urn:fra:nc1:objet:tacpoint" schemaLocation="../Objet/NC1_TacPoint.xsd" />
+  <xs:element name="NC1_MatDem">
+    <xs:annotation>
+      <xs:documentation>Le message NC1_MatDem est utilisé pour demander un équipement, des munitions ou tout produit hors recomplètement automatique.</xs:documentation>
+      <xs:documentation xml:lang="en">NC1_MatDem message is used to request replenishment of ammunition, equipment out of automatic reordering.</xs:documentation>
+      <xs:appinfo>
+        <nc1:type xmlns:nc1="urn:fra:nc1">Message</nc1:type>
+        <nc1ihm:Nom>Demande de ressource</nc1ihm:Nom>
+        <nc1ihm:Nom xml:lang="en">Material demand</nc1ihm:Nom>
+        <nc1:MessH xmlns:nc1="urn:fra:nc1">N/A</nc1:MessH>
+        <nc1:MessADatP3 xmlns:nc1="urn:fra:nc1">N/A</nc1:MessADatP3>
+        <nc1:LastNC1ModifyVersion xmlns:nc1="urn:fra:nc1">9.0.0</nc1:LastNC1ModifyVersion>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:complexContent>
+        <xs:extension base="nc1msgcom:BaseMessageType">
+          <xs:sequence>
+            <xs:element maxOccurs="unbounded" name="requestedItem">
+              <xs:annotation>
+                <xs:appinfo>
+                  <nc1ihm:Nom>Matériel demandé</nc1ihm:Nom>
+                  <nc1ihm:Nom xml:lang="en">Requested Item</nc1ihm:Nom>
+                </xs:appinfo>
+              </xs:annotation>
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="nicCode" type="nc1common:NicCodeType">
+                    <xs:annotation>
+                      <xs:documentation>Code NIC du matériel.</xs:documentation>
+                      <xs:documentation xml:lang="en">Material NIC code.</xs:documentation>
+                      <xs:appinfo>
+                        <nc1ihm:Nom>Code NIC</nc1ihm:Nom>
+                        <nc1ihm:Nom xml:lang="en">NIC code</nc1ihm:Nom>
+                      </xs:appinfo>
+                    </xs:annotation>
+                  </xs:element>
+                  <xs:element name="requiredQuantity" type="xs:integer">
+                    <xs:annotation>
+                      <xs:appinfo>
+                        <nc1ihm:Nom>Quantité demandée</nc1ihm:Nom>
+                        <nc1ihm:Nom xml:lang="en">Required Quantity</nc1ihm:Nom>
+                      </xs:appinfo>
+                    </xs:annotation>
+                  </xs:element>
+                  <xs:element minOccurs="0" name="stocksOnHand" type="xs:integer">
+                    <xs:annotation>
+                      <xs:appinfo>
+                        <nc1ihm:Nom>Stock disponible</nc1ihm:Nom>
+                        <nc1ihm:Nom xml:lang="en">Stock on Hand</nc1ihm:Nom>
+                      </xs:appinfo>
+                    </xs:annotation>
+                  </xs:element>
+                  <xs:element name="deliveryCriteria">
+                    <xs:annotation>
+                      <xs:appinfo>
+                        <nc1ihm:Nom>Mise à disposition</nc1ihm:Nom>
+                        <nc1ihm:Nom xml:lang="en">Delivery Criteria</nc1ihm:Nom>
+                      </xs:appinfo>
+                    </xs:annotation>
+                    <xs:complexType>
+                      <xs:sequence>
+                        <xs:element name="priorityCode" type="nc1matdem:CodedPriorityCode">
+                          <xs:annotation>
+                            <xs:appinfo>
+                              <nc1ihm:Nom>Code priorité</nc1ihm:Nom>
+                              <nc1ihm:Nom xml:lang="en">Priority Code</nc1ihm:Nom>
+                            </xs:appinfo>
+                          </xs:annotation>
+                        </xs:element>
+                        <xs:element name="latestTarget" type="xs:dateTime">
+                          <xs:annotation>
+                            <xs:appinfo>
+                              <nc1ihm:Nom>Horodatage limite de mise à disposition souhaitée</nc1ihm:Nom>
+                              <nc1ihm:Nom xml:lang="en">Latest delivery target date time</nc1ihm:Nom>
+                            </xs:appinfo>
+                          </xs:annotation>
+                        </xs:element>
+                        <xs:element name="methodOfDelivery" type="nc1matdem:DeliveryMethodCode">
+                          <xs:annotation>
+                            <xs:appinfo>
+                              <nc1ihm:Nom>Mode de mise à disposition souhaitée</nc1ihm:Nom>
+                              <nc1ihm:Nom xml:lang="en">Method of Delivery</nc1ihm:Nom>
+                            </xs:appinfo>
+                          </xs:annotation>
+                        </xs:element>
+                        <xs:element name="impactOfNonCompliance" type="nc1common:MediumTextType">
+                          <xs:annotation>
+                            <xs:appinfo>
+                              <nc1ihm:Nom>Conséquence de la non fourniture</nc1ihm:Nom>
+                              <nc1ihm:Nom xml:lang="en">Impact of non compliance</nc1ihm:Nom>
+                            </xs:appinfo>
+                          </xs:annotation>
+                        </xs:element>
+                        <xs:element minOccurs="0" name="location" type="nc1tacpoint:TacPointType">
+                          <xs:annotation>
+                            <xs:appinfo>
+                              <nc1ihm:Nom>Lieu de mise à disposition</nc1ihm:Nom>
+                              <nc1ihm:Nom xml:lang="en">Place of provision</nc1ihm:Nom>
+                            </xs:appinfo>
+                          </xs:annotation>
+                        </xs:element>
+                      </xs:sequence>
+                    </xs:complexType>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="comment" type="nc1msgcom:CommentSectionType">
+              <xs:annotation>
+                <xs:appinfo>
+                  <nc1ihm:Nom>Commentaire</nc1ihm:Nom>
+                  <nc1ihm:Nom xml:lang="en">comment</nc1ihm:Nom>
+                </xs:appinfo>
+              </xs:annotation>
+            </xs:element>
+          </xs:sequence>
+        </xs:extension>
+      </xs:complexContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:simpleType name="CodedPriorityCode">
+    <xs:annotation>
+      <xs:appinfo />
+      <xs:documentation></xs:documentation>
+      <xs:documentation xml:lang="en"></xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:integer" />
+  </xs:simpleType>
+  <xs:simpleType name="DeliveryMethodCode">
+    <xs:annotation>
+      <xs:appinfo />
+      <xs:documentation></xs:documentation>
+      <xs:documentation xml:lang="en"></xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:integer" />
+  </xs:simpleType>
+</xs:schema>

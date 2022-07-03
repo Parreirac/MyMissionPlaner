@@ -1,0 +1,95 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema targetNamespace="urn:fra:nc1:message:sitobst" xmlns:nc1ihm="urn:fra:nc1:IHM" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:nc1sitobst="urn:fra:nc1:message:sitobst" xmlns:nc1msgcom="urn:fra:nc1:common:message" xmlns:nc1facility="urn:fra:nc1:objet:facility" xmlns:nc1groundentity="urn:fra:nc1:objet:groundentity" xmlns:nc1obstacle="urn:fra:nc1:objet:obstacle" xmlns:nc1route="urn:fra:nc1:objet:route">
+  <!-- NC1 V.9.0.0 -->
+  <xs:import namespace="urn:fra:nc1:common:message" schemaLocation="../Commun/Message.xsd" />
+  <xs:import namespace="urn:fra:nc1:objet:facility" schemaLocation="../Objet/NC1_Facility.xsd" />
+  <xs:import namespace="urn:fra:nc1:objet:groundentity" schemaLocation="../Objet/NC1_GroundEntity.xsd" />
+  <xs:import namespace="urn:fra:nc1:objet:obstacle" schemaLocation="../Objet/NC1_Obstacle.xsd" />
+  <xs:import namespace="urn:fra:nc1:objet:route" schemaLocation="../Objet/NC1_Route.xsd" />
+  <xs:element name="NC1_SitObst">
+    <xs:annotation>
+      <xs:documentation>Le message NC1_SitObst permet aux unités génie de rendre compte de leur situation des obstacles en contre mobilité pour les obstacles amies et en appui à la mobilité pour les obstacles ennemis.</xs:documentation>
+      <xs:documentation xml:lang="en">The NC1_SitObst message allows the engineer units  to report their situation of the obstacles it against mobility for the obstacles friends and in support to the mobility for the enemy obstacles.</xs:documentation>
+      <xs:appinfo>
+        <nc1:type xmlns:nc1="urn:fra:nc1">Message</nc1:type>
+        <nc1ihm:Nom>Situation des obstacles</nc1ihm:Nom>
+        <nc1ihm:Nom xml:lang="en">Obstacle situation</nc1ihm:Nom>
+        <nc1:MessH xmlns:nc1="urn:fra:nc1">N/A</nc1:MessH>
+        <nc1:MessADatP3 xmlns:nc1="urn:fra:nc1">N/A</nc1:MessADatP3>
+        <nc1:LastNC1ModifyVersion xmlns:nc1="urn:fra:nc1">9.0.0</nc1:LastNC1ModifyVersion>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:complexContent>
+        <xs:extension base="nc1msgcom:BaseMessageType">
+          <xs:sequence>
+            <xs:element name="obstaclesAndWorks">
+              <xs:annotation>
+                <xs:documentation>Obstacles et ouvrages, amis et ennemis.</xs:documentation>
+                <xs:documentation xml:lang="en">Friendly and enemy obstacles and works.</xs:documentation>
+                <xs:appinfo>
+                  <nc1ihm:Nom>Obstacles et ouvrages</nc1ihm:Nom>
+                  <nc1ihm:Nom xml:lang="en">Obstacles and permanent structures</nc1ihm:Nom>
+                </xs:appinfo>
+              </xs:annotation>
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element maxOccurs="unbounded" minOccurs="0" name="obstacle" type="nc1obstacle:ObstacleType">
+                    <xs:annotation>
+                      <xs:documentation>Obstacle.</xs:documentation>
+                      <xs:documentation xml:lang="en">Obstacle.</xs:documentation>
+                      <xs:appinfo>
+                        <nc1ihm:Nom>Obstacle</nc1ihm:Nom>
+                        <nc1ihm:Nom xml:lang="en">Obstacle</nc1ihm:Nom>
+                      </xs:appinfo>
+                    </xs:annotation>
+                  </xs:element>
+                  <xs:element maxOccurs="unbounded" minOccurs="0" name="bypassRoute" type="nc1route:RouteType">
+                    <xs:annotation>
+                      <xs:documentation>Itinéraire de contournement d'un obstacle.</xs:documentation>
+                      <xs:documentation xml:lang="en">Obstacle bypass route.</xs:documentation>
+                      <xs:appinfo>
+                        <nc1ihm:Nom>Itinéraire de contournement</nc1ihm:Nom>
+                        <nc1ihm:Nom xml:lang="en">Route bypassing the obstacle</nc1ihm:Nom>
+                      </xs:appinfo>
+                    </xs:annotation>
+                  </xs:element>
+                  <xs:element maxOccurs="unbounded" minOccurs="0" name="facility" type="nc1facility:FacilityType">
+                    <xs:annotation>
+                      <xs:documentation>Installation.</xs:documentation>
+                      <xs:documentation xml:lang="en">Facility.</xs:documentation>
+                      <xs:appinfo>
+                        <nc1ihm:Nom>Installation</nc1ihm:Nom>
+                        <nc1ihm:Nom xml:lang="en">Facility</nc1ihm:Nom>
+                      </xs:appinfo>
+                    </xs:annotation>
+                  </xs:element>
+                  <xs:element maxOccurs="unbounded" minOccurs="0" name="groundEntity" type="nc1groundentity:GroundEntityType">
+                    <xs:annotation>
+                      <xs:documentation>Entité terrain.</xs:documentation>
+                      <xs:documentation xml:lang="en">Ground entity.</xs:documentation>
+                      <xs:appinfo>
+                        <nc1ihm:Nom>Entité terrain</nc1ihm:Nom>
+                        <nc1ihm:Nom xml:lang="en">Ground entity</nc1ihm:Nom>
+                      </xs:appinfo>
+                    </xs:annotation>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element minOccurs="0" name="comment" type="nc1msgcom:CommentSectionType">
+              <xs:annotation>
+                <xs:documentation>Commentaire en texte libre.</xs:documentation>
+                <xs:documentation xml:lang="en">free text comment.</xs:documentation>
+                <xs:appinfo>
+                  <nc1ihm:Nom>Commentaire</nc1ihm:Nom>
+                  <nc1ihm:Nom xml:lang="en">comment</nc1ihm:Nom>
+                </xs:appinfo>
+              </xs:annotation>
+            </xs:element>
+          </xs:sequence>
+        </xs:extension>
+      </xs:complexContent>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

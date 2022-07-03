@@ -1,0 +1,414 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<gc:CodeList xmlns:nc1dico="urn:fra:nc1:dictionnaires" xmlns:gc="http://docs.oasis-open.org/codelist/ns/genericode/1.0/">
+  <Annotation>
+    <Description>
+      <nc1dico:description>TYPE DE SURFACE TACTIQUE AU SENS APP 6A</nc1dico:description>
+      <nc1dico:description xml:lang="en">TYPE OF TACTICAL SURFACE APP 6A</nc1dico:description>
+    </Description>
+    <AppInfo>
+      <nc1dico:source>SFTT 3.4.8</nc1dico:source>
+      <nc1dico:derogation>TYPE SURFACE TACTIQUE</nc1dico:derogation>
+    </AppInfo>
+  </Annotation>
+  <Identification>
+    <ShortName>TacAreaFrSpecificCode</ShortName>
+    <Version>9.0.0</Version>
+    <CanonicalUri>urn:fra:nc1:objet:tacarea:TacAreaFrSpecificCode</CanonicalUri>
+    <CanonicalVersionUri>urn:fra:nc1:objet:tacarea:TacAreaFrSpecificCode:9.0.0</CanonicalVersionUri>
+  </Identification>
+  <ColumnSet DatatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes">
+    <Column Id="code" Use="required">
+      <ShortName>Code</ShortName>
+      <Data Type="int" />
+    </Column>
+    <Column Id="short" Use="required">
+      <ShortName>Short</ShortName>
+      <Data Type="string" />
+    </Column>
+    <Column Id="long" Use="optional">
+      <ShortName>Long</ShortName>
+      <Data Type="string" />
+    </Column>
+    <Column Id="short-en" Use="optional">
+      <ShortName>Short anglais</ShortName>
+      <Data Type="string" />
+    </Column>
+    <Column Id="long-en" Use="optional">
+      <ShortName>Long anglais</ShortName>
+      <Data Type="string" />
+    </Column>
+    <Column Id="parent" Use="optional">
+      <ShortName>Parent</ShortName>
+      <Data Type="int" />
+    </Column>
+    <Column Id="codeSymbole" Use="optional">
+      <ShortName>Code Symbole</ShortName>
+      <Data Type="string" />
+    </Column>
+    <Column Id="codeHierarchique" Use="optional">
+      <ShortName>Code Hierarchique</ShortName>
+      <Data Type="string" />
+    </Column>
+    <Key Id="codeKey">
+      <ShortName>CodeKey</ShortName>
+      <ColumnRef Ref="code" />
+    </Key>
+  </ColumnSet>
+  <SimpleCodeList>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>128</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>ZE</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>ZONE D’ENGAGEMENT</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>ENGAGEMT ZONE</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>ENGAGEMENT ZONE</SimpleValue>
+      </Value>
+      <Value ColumnRef="parent">
+        <SimpleValue>-9</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeSymbole">
+        <SimpleValue>G.C.FAS---.....</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeHierarchique">
+        <SimpleValue>2.X.2.3.3.1</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>129</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>#ABANDON</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>#ABANDON</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>#DISUSED</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>#DISUSED</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>130</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>ZIMP</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>ZONE D’IMPACT</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>CFZ</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>CRITICAL FRIENDLY ZONE</SimpleValue>
+      </Value>
+      <Value ColumnRef="parent">
+        <SimpleValue>-9</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeSymbole">
+        <SimpleValue>G.C.FA----.....</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeHierarchique">
+        <SimpleValue>2.X.2.3.3</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>131</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>ZINTERDIT</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>ZONE INTERDITE</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>CZ</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>CENSOR ZONE</SimpleValue>
+      </Value>
+      <Value ColumnRef="parent">
+        <SimpleValue>-9</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeSymbole">
+        <SimpleValue>G.C.FA----.....</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeHierarchique">
+        <SimpleValue>2.X.2.3.3</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>132</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>ZLOC</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>ZONE DE LOCALISATION</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>RADAR ATRZ</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>ACQUISITION TARGET REPORT ZONE</SimpleValue>
+      </Value>
+      <Value ColumnRef="parent">
+        <SimpleValue>-9</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeSymbole">
+        <SimpleValue>G.C.FA----.....</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeHierarchique">
+        <SimpleValue>2.X.2.3.3</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>133</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>ZNRAD</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>ZONE  DE NON-RADIATION</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>RADAR IZ</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>RADAR INHIBIT ZONE</SimpleValue>
+      </Value>
+      <Value ColumnRef="parent">
+        <SimpleValue>-9</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeSymbole">
+        <SimpleValue>G.C.FA----.....</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeHierarchique">
+        <SimpleValue>2.X.2.3.3</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>134</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>ZOBSERV</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>ZONE D’OBSERVATION</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>RADAR LZ</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>RADAR LOCATING ZONE</SimpleValue>
+      </Value>
+      <Value ColumnRef="parent">
+        <SimpleValue>-9</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeSymbole">
+        <SimpleValue>G.C.FA----.....</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeHierarchique">
+        <SimpleValue>2.X.2.3.3</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>135</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>ZDEP</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>ZONE DE DEPLOIEMENT</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>DEPLOY AREA</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>DEPLOYMENT AREA</SimpleValue>
+      </Value>
+      <Value ColumnRef="parent">
+        <SimpleValue>16</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeSymbole">
+        <SimpleValue>G.C.MGAUA-.....</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeHierarchique">
+        <SimpleValue>2.X.2.1.1.3.1</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>136</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>ZRDEP</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>ZONE DE RESTRICTION DE DEPLOIEMENT</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>DEPLOY RESTRICT</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>RESTRICTED DEPLOYMENT AREA</SimpleValue>
+      </Value>
+      <Value ColumnRef="parent">
+        <SimpleValue>16</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeSymbole">
+        <SimpleValue>G.C.MGASM-.....</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeHierarchique">
+        <SimpleValue>2.X.2.1.1.3.2.6</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>137</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>ZDEPLOI</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>ZONE DE DEPLOIEMENT OU DEPLACEMENT INTERDIT</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>ZDEPLOI</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>FORBIDDEN DEPLOYMENT/MOVEMENT ZONE</SimpleValue>
+      </Value>
+      <Value ColumnRef="parent">
+        <SimpleValue>-14</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeSymbole">
+        <SimpleValue>G.C.MSAN--.....</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeHierarchique">
+        <SimpleValue>2.X.2.1.6.3.2</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>138</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>ZINTERC</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>ZONE D’INTERCEPTION</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>ZINTERC</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>INTERCEPTION ZONE</SimpleValue>
+      </Value>
+      <Value ColumnRef="parent">
+        <SimpleValue>-14</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeSymbole">
+        <SimpleValue>G.C.MSAN--.....</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeHierarchique">
+        <SimpleValue>2.X.2.1.6.3.2</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>139</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>ZINTERCI</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>ZONE D’INTERCEPTION INTERDITE</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>ZINTERCI</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>FORBIDDEN INTERCEPTION ZONE</SimpleValue>
+      </Value>
+      <Value ColumnRef="parent">
+        <SimpleValue>-14</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeSymbole">
+        <SimpleValue>G.C.MSAN--.....</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeHierarchique">
+        <SimpleValue>2.X.2.1.6.3.2</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>140</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>ZRETOMB</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>ZONE DE RETOMBEE BOOSTER</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>BOOSTERZ</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>BOOSTER DROPOUT AREA</SimpleValue>
+      </Value>
+      <Value ColumnRef="parent">
+        <SimpleValue>-14</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeSymbole">
+        <SimpleValue>G.C.MSAN--.....</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeHierarchique">
+        <SimpleValue>2.X.2.1.6.3.2</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>141</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>ZRETOMBI</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>ZONE DE RETOMBEE BOOSTER INTERDITE</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>NOBOOSTERZ</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>FORBIDDEN BOOSTER DROPOUT AREA</SimpleValue>
+      </Value>
+      <Value ColumnRef="parent">
+        <SimpleValue>-14</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeSymbole">
+        <SimpleValue>G.C.MSAN--.....</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeHierarchique">
+        <SimpleValue>2.X.2.1.6.3.2</SimpleValue>
+      </Value>
+    </Row>
+  </SimpleCodeList>
+</gc:CodeList>

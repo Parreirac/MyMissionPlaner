@@ -1,0 +1,97 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<gc:CodeList xmlns:nc1dico="urn:fra:nc1:dictionnaires" xmlns:gc="http://docs.oasis-open.org/codelist/ns/genericode/1.0/">
+  <Annotation>
+    <Description>
+      <nc1dico:description>INDIQUE, EN COMPLEMENT D'UN CHAMP FORCE (L104/11) SI LA FORCE DECRITE FAIT REFERENCE A :
+- UN NOMBRE DE VEHICULE
+- UN NOMBRE DE PERSONNELS EMBARQUES
+- UN NOMBRE DE VEHICULES + PERSONNELS DEBARQUES
+- UN NOMBRE DE PERSONNELS DEBARQUES (NECESSITE L'ENVOI D'UN MESSAGE H2.7 EN COMPLEMENT)</nc1dico:description>
+      <nc1dico:description xml:lang="en">Specify, as a supplement to a field Force (L104/11) if the described strength makes reference in: - a Number of vehicle - a Number of embarked staffs - a Number of vehicles + landed staffs - a Number of landed staffs (Require the sending of a message H4.7 in complement)</nc1dico:description>
+    </Description>
+    <AppInfo>
+      <nc1dico:source>SFTT 3.4.8</nc1dico:source>
+      <nc1dico:derogation>EXTENSION FORCE</nc1dico:derogation>
+    </AppInfo>
+  </Annotation>
+  <Identification>
+    <ShortName>L104_14Code</ShortName>
+    <Version>9.0.0</Version>
+    <CanonicalUri>urn:fra:nc1:common:sicsdicos:L104_14Code</CanonicalUri>
+    <CanonicalVersionUri>urn:fra:nc1:common:sicsdicos:L104_14Code:9.0.0</CanonicalVersionUri>
+  </Identification>
+  <ColumnSet DatatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes">
+    <Column Id="code" Use="required">
+      <ShortName>Code</ShortName>
+      <Data Type="int" />
+    </Column>
+    <Column Id="short" Use="required">
+      <ShortName>Short</ShortName>
+      <Data Type="string" />
+    </Column>
+    <Column Id="long" Use="optional">
+      <ShortName>Long</ShortName>
+      <Data Type="string" />
+    </Column>
+    <Column Id="short-en" Use="optional">
+      <ShortName>Short anglais</ShortName>
+      <Data Type="string" />
+    </Column>
+    <Column Id="long-en" Use="optional">
+      <ShortName>Long anglais</ShortName>
+      <Data Type="string" />
+    </Column>
+    <Column Id="parent" Use="optional">
+      <ShortName>Parent</ShortName>
+      <Data Type="int" />
+    </Column>
+    <Column Id="codeSymbole" Use="optional">
+      <ShortName>Code Symbole</ShortName>
+      <Data Type="string" />
+    </Column>
+    <Column Id="codeHierarchique" Use="optional">
+      <ShortName>Code Hierarchique</ShortName>
+      <Data Type="string" />
+    </Column>
+    <Key Id="codeKey">
+      <ShortName>CodeKey</ShortName>
+      <ColumnRef Ref="code" />
+    </Key>
+  </ColumnSet>
+  <SimpleCodeList>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>0</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>VEHICULE</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>LE CHAMP FORCE FAIT REFERENCE A UN NOMBRE DE VEHICULE</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>VHL</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>THE FORCE FIELD REFERS TO A NUMBER OF VEHICLE</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>1</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>COMBAT DEBARQUE</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>LE CHAMP FORCE FAIT REFERENCE A UN NOMBRE DE PERSONNELS DEBARQUES</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>DEBCOMB</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>THE FORCE FIELD REFERS TO A NUMBER OF PERSONAL LANDED</SimpleValue>
+      </Value>
+    </Row>
+  </SimpleCodeList>
+</gc:CodeList>

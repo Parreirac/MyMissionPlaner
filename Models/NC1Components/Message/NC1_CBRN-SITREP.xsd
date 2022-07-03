@@ -1,0 +1,210 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema targetNamespace="urn:fra:nc1:message:cbrnsitrep" xmlns:nc1ihm="urn:fra:nc1:IHM" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:nc1cbrnsitrep="urn:fra:nc1:message:cbrnsitrep" xmlns:nc1common="urn:fra:nc1:common:attribute" xmlns:nc1msgcom="urn:fra:nc1:common:message">
+  <!-- NC1 V.9.0.0 -->
+  <xs:import namespace="urn:fra:nc1:common:attribute" schemaLocation="../Commun/Common.xsd" />
+  <xs:import namespace="urn:fra:nc1:common:message" schemaLocation="../Commun/Message.xsd" />
+  <xs:element name="NC1_CBRN-SITREP">
+    <xs:annotation>
+      <xs:documentation>Le message NC1_CBRN-SITREP est utilisé pour transmettre toute information sur la situation NRBC.</xs:documentation>
+      <xs:documentation xml:lang="en">The NC1_CBRN-SITREP message is used to provide any information related to the CBRN situation.</xs:documentation>
+      <xs:appinfo>
+        <nc1:type xmlns:nc1="urn:fra:nc1">Message</nc1:type>
+        <nc1ihm:Nom>Compte-rendu de situation NRBC</nc1ihm:Nom>
+        <nc1ihm:Nom xml:lang="en">Cbrn situation report</nc1ihm:Nom>
+        <nc1:MessH xmlns:nc1="urn:fra:nc1">N/A</nc1:MessH>
+        <nc1:MessADatP3 xmlns:nc1="urn:fra:nc1">CBRN_SITREP</nc1:MessADatP3>
+        <nc1:LastNC1ModifyVersion xmlns:nc1="urn:fra:nc1">9.0.0</nc1:LastNC1ModifyVersion>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:complexContent>
+        <xs:extension base="nc1msgcom:BaseMessageType">
+          <xs:sequence>
+            <xs:element name="cbrnInfo" type="nc1msgcom:MixedAnyType">
+              <xs:annotation>
+                <xs:documentation>Situation NRBC.</xs:documentation>
+                <xs:documentation xml:lang="en">CBRN situation.</xs:documentation>
+                <xs:appinfo>
+                  <nc1ihm:Nom>CBRN INFO</nc1ihm:Nom>
+                  <nc1ihm:Nom xml:lang="en">CBRN INFO</nc1ihm:Nom>
+                </xs:appinfo>
+              </xs:annotation>
+            </xs:element>
+            <xs:element minOccurs="0" name="_1_situation">
+              <xs:annotation>
+                <xs:documentation>Situation.</xs:documentation>
+                <xs:documentation xml:lang="en">Situation.</xs:documentation>
+                <xs:appinfo>
+                  <nc1ihm:Nom>1 - Situation</nc1ihm:Nom>
+                  <nc1ihm:Nom xml:lang="en">1 - Situation</nc1ihm:Nom>
+                </xs:appinfo>
+              </xs:annotation>
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element minOccurs="0" name="A_cbrn2To5Summary" type="nc1msgcom:MixedAnyType">
+                    <xs:annotation>
+                      <xs:documentation>Sommaire des messages NRBC 2 à 5 et des autres activités de soutien.</xs:documentation>
+                      <xs:documentation xml:lang="en">Summary of the CBRN 2-5 messages and other support activities.</xs:documentation>
+                      <xs:appinfo>
+                        <nc1ihm:Nom>A - Sommaire des messages NRBC</nc1ihm:Nom>
+                        <nc1ihm:Nom xml:lang="en">A - Summary of CBRN messages</nc1ihm:Nom>
+                      </xs:appinfo>
+                    </xs:annotation>
+                  </xs:element>
+                  <xs:element minOccurs="0" name="B_consequences" type="nc1msgcom:MixedAnyType">
+                    <xs:annotation>
+                      <xs:documentation>Conséquences des incidents NRBC : victimes, environnement et dommages.</xs:documentation>
+                      <xs:documentation xml:lang="en">Consequences of CBRN incidents: victims, environmental damage and.</xs:documentation>
+                      <xs:appinfo>
+                        <nc1ihm:Nom>B - Conséquences des incidents NRBC</nc1ihm:Nom>
+                        <nc1ihm:Nom xml:lang="en">B - Impact of CBRN incidents</nc1ihm:Nom>
+                      </xs:appinfo>
+                    </xs:annotation>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element minOccurs="0" name="_2_intelligence">
+              <xs:annotation>
+                <xs:documentation>Renseignement.</xs:documentation>
+                <xs:documentation xml:lang="en">Intelligence.</xs:documentation>
+                <xs:appinfo>
+                  <nc1ihm:Nom>2 - Renseignement</nc1ihm:Nom>
+                  <nc1ihm:Nom xml:lang="en">2 - Intelligence</nc1ihm:Nom>
+                </xs:appinfo>
+              </xs:annotation>
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element minOccurs="0" name="A_capacitiesAndIntents" type="nc1msgcom:MixedAnyType">
+                    <xs:annotation>
+                      <xs:documentation>Capacités et intentions NRBC ennemies.</xs:documentation>
+                      <xs:documentation xml:lang="en">Enemy CBRN capabilities and intentions.</xs:documentation>
+                      <xs:appinfo>
+                        <nc1ihm:Nom>A - Capacités et intentions</nc1ihm:Nom>
+                        <nc1ihm:Nom xml:lang="en">A - Capacity and intentions</nc1ihm:Nom>
+                      </xs:appinfo>
+                    </xs:annotation>
+                  </xs:element>
+                  <xs:element minOccurs="0" name="B_threatLevel" type="nc1msgcom:MixedAnyType">
+                    <xs:annotation>
+                      <xs:documentation>Niveau de menace de l'arme et du dispositif NRBC.</xs:documentation>
+                      <xs:documentation xml:lang="en">threat level of the weapon and the CBRN device.</xs:documentation>
+                      <xs:appinfo>
+                        <nc1ihm:Nom>B - Niveau de menace de l'arme NRBC</nc1ihm:Nom>
+                        <nc1ihm:Nom xml:lang="en">B - CBRN weapon threat level</nc1ihm:Nom>
+                      </xs:appinfo>
+                    </xs:annotation>
+                  </xs:element>
+                  <xs:element minOccurs="0" name="C_cbrnAgentThreatLevel" type="nc1msgcom:MixedAnyType">
+                    <xs:annotation>
+                      <xs:documentation>Niveau de menace de la matière toxique.</xs:documentation>
+                      <xs:documentation xml:lang="en">threat level of the toxic material.</xs:documentation>
+                      <xs:appinfo>
+                        <nc1ihm:Nom>C - Niveau de menace de la matière toxique</nc1ihm:Nom>
+                        <nc1ihm:Nom xml:lang="en">C - threat level of the toxic material</nc1ihm:Nom>
+                      </xs:appinfo>
+                    </xs:annotation>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element minOccurs="0" name="_3_operations">
+              <xs:annotation>
+                <xs:documentation>Opérations.</xs:documentation>
+                <xs:documentation xml:lang="en">operations.</xs:documentation>
+                <xs:appinfo>
+                  <nc1ihm:Nom>3 - Opérations</nc1ihm:Nom>
+                  <nc1ihm:Nom xml:lang="en">3 - Operations</nc1ihm:Nom>
+                </xs:appinfo>
+              </xs:annotation>
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element minOccurs="0" name="A_influenceOnOperations" type="nc1msgcom:MixedAnyType">
+                    <xs:annotation>
+                      <xs:documentation>Sommaire de l'influence sur les activités courantes et prévues.</xs:documentation>
+                      <xs:documentation xml:lang="en">Summary of the influence on current and planned activities.</xs:documentation>
+                      <xs:appinfo>
+                        <nc1ihm:Nom>A - Influence sur les activités</nc1ihm:Nom>
+                        <nc1ihm:Nom xml:lang="en">A - Influence on activities</nc1ihm:Nom>
+                      </xs:appinfo>
+                    </xs:annotation>
+                  </xs:element>
+                  <xs:element minOccurs="0" name="B_cbrnWearLevel" type="nc1msgcom:MixedAnyType">
+                    <xs:annotation>
+                      <xs:documentation>Niveau de tenue NRBC.</xs:documentation>
+                      <xs:documentation xml:lang="en">CBRN sustain level.</xs:documentation>
+                      <xs:appinfo>
+                        <nc1ihm:Nom>B - Niveau de tenue NRBC</nc1ihm:Nom>
+                        <nc1ihm:Nom xml:lang="en">B - CBRN holding level</nc1ihm:Nom>
+                      </xs:appinfo>
+                    </xs:annotation>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element minOccurs="0" name="_4_logistics" type="nc1msgcom:MixedAnyType">
+              <xs:annotation>
+                <xs:documentation>Logistique.</xs:documentation>
+                <xs:documentation xml:lang="en">Logistic support.</xs:documentation>
+                <xs:appinfo>
+                  <nc1ihm:Nom>4 - Logistique</nc1ihm:Nom>
+                  <nc1ihm:Nom xml:lang="en">4 - Logistics</nc1ihm:Nom>
+                </xs:appinfo>
+              </xs:annotation>
+            </xs:element>
+            <xs:element minOccurs="0" name="_5_communications" type="nc1msgcom:MixedAnyType">
+              <xs:annotation>
+                <xs:documentation>Communications.</xs:documentation>
+                <xs:documentation xml:lang="en">Communications.</xs:documentation>
+                <xs:appinfo>
+                  <nc1ihm:Nom>5 - Communications</nc1ihm:Nom>
+                  <nc1ihm:Nom xml:lang="en">5 - Communications</nc1ihm:Nom>
+                </xs:appinfo>
+              </xs:annotation>
+            </xs:element>
+            <xs:element minOccurs="0" name="_6_staff" type="nc1msgcom:MixedAnyType">
+              <xs:annotation>
+                <xs:documentation>Personnel.</xs:documentation>
+                <xs:documentation xml:lang="en">Personnel.</xs:documentation>
+                <xs:appinfo>
+                  <nc1ihm:Nom>6 - Personnel</nc1ihm:Nom>
+                  <nc1ihm:Nom xml:lang="en">6 - Personnel</nc1ihm:Nom>
+                </xs:appinfo>
+              </xs:annotation>
+            </xs:element>
+            <xs:element minOccurs="0" name="_7_cimic" type="nc1msgcom:MixedAnyType">
+              <xs:annotation>
+                <xs:documentation>Actions civilo-militaires.</xs:documentation>
+                <xs:documentation xml:lang="en">CIMIC actions.</xs:documentation>
+                <xs:appinfo>
+                  <nc1ihm:Nom>7 - Cimic</nc1ihm:Nom>
+                  <nc1ihm:Nom xml:lang="en">7 - Cimic</nc1ihm:Nom>
+                </xs:appinfo>
+              </xs:annotation>
+            </xs:element>
+            <xs:element minOccurs="0" name="_8_lawAndInternationalOrganizations" type="nc1msgcom:MixedAnyType">
+              <xs:annotation>
+                <xs:documentation>Juridique et organisations internationales.</xs:documentation>
+                <xs:documentation xml:lang="en">International Legal and Organizations.</xs:documentation>
+                <xs:appinfo>
+                  <nc1ihm:Nom>8 - Juridique et organisations internationales</nc1ihm:Nom>
+                  <nc1ihm:Nom xml:lang="en">8 - Legal and International Organizations</nc1ihm:Nom>
+                </xs:appinfo>
+              </xs:annotation>
+            </xs:element>
+            <xs:element minOccurs="0" name="_9_recommendations" type="nc1common:LongTextType">
+              <xs:annotation>
+                <xs:documentation>Recommandations.</xs:documentation>
+                <xs:documentation xml:lang="en">recommendations.</xs:documentation>
+                <xs:appinfo>
+                  <nc1ihm:Nom>9 - Recommandations</nc1ihm:Nom>
+                  <nc1ihm:Nom xml:lang="en">9 - Recommendations</nc1ihm:Nom>
+                </xs:appinfo>
+              </xs:annotation>
+            </xs:element>
+          </xs:sequence>
+        </xs:extension>
+      </xs:complexContent>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

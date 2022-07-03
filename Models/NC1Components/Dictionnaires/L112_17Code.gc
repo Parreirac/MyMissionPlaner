@@ -1,0 +1,196 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<gc:CodeList xmlns:nc1dico="urn:fra:nc1:dictionnaires" xmlns:gc="http://docs.oasis-open.org/codelist/ns/genericode/1.0/">
+  <Annotation>
+    <Description>
+      <nc1dico:description>INDIQUE UNE RELIGION
+REFERENCE DICO STAT 232</nc1dico:description>
+      <nc1dico:description xml:lang="en">Indicates a religion (STAT dictionary 232)</nc1dico:description>
+    </Description>
+    <AppInfo>
+      <nc1dico:source>SFTT 3.4.8</nc1dico:source>
+      <nc1dico:derogation>RELIGION</nc1dico:derogation>
+    </AppInfo>
+  </Annotation>
+  <Identification>
+    <ShortName>L112_17Code</ShortName>
+    <Version>9.0.0</Version>
+    <CanonicalUri>urn:fra:nc1:common:sicsdicos:L112_17Code</CanonicalUri>
+    <CanonicalVersionUri>urn:fra:nc1:common:sicsdicos:L112_17Code:9.0.0</CanonicalVersionUri>
+  </Identification>
+  <ColumnSet DatatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes">
+    <Column Id="code" Use="required">
+      <ShortName>Code</ShortName>
+      <Data Type="int" />
+    </Column>
+    <Column Id="short" Use="required">
+      <ShortName>Short</ShortName>
+      <Data Type="string" />
+    </Column>
+    <Column Id="long" Use="optional">
+      <ShortName>Long</ShortName>
+      <Data Type="string" />
+    </Column>
+    <Column Id="short-en" Use="optional">
+      <ShortName>Short anglais</ShortName>
+      <Data Type="string" />
+    </Column>
+    <Column Id="long-en" Use="optional">
+      <ShortName>Long anglais</ShortName>
+      <Data Type="string" />
+    </Column>
+    <Column Id="parent" Use="optional">
+      <ShortName>Parent</ShortName>
+      <Data Type="int" />
+    </Column>
+    <Column Id="codeSymbole" Use="optional">
+      <ShortName>Code Symbole</ShortName>
+      <Data Type="string" />
+    </Column>
+    <Column Id="codeHierarchique" Use="optional">
+      <ShortName>Code Hierarchique</ShortName>
+      <Data Type="string" />
+    </Column>
+    <Key Id="codeKey">
+      <ShortName>CodeKey</ShortName>
+      <ColumnRef Ref="code" />
+    </Key>
+  </ColumnSet>
+  <SimpleCodeList>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>0</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>-</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>NO STATEMENT</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>-</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>NO STATEMENT</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>1</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>CHRISTIANISME</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>CHRISTIANISME</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>CHRISTIAN</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>CHRISTIAN</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>2</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>ISLAM</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>ISLAM</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>ISLAM</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>ISLAM</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>3</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>HINDOUISME</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>HINDOUISME</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>HINDOUISM</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>HINDOUISM</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>4</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>BOUDHISME</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>BOUDHISME</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>BUDDHISM</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>BUDDHISM</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>5</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>JUDAISME</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>JUDAISME</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>JUDAISM</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>JUDAISM</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>6</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>AUTRES</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>AUTRES</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>OTHER</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>OTHER</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>7</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>ATHEE</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>ATHEE (NON CROYANT)</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>ATHEIST</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>ATHEIST</SimpleValue>
+      </Value>
+    </Row>
+  </SimpleCodeList>
+</gc:CodeList>

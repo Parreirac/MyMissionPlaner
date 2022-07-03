@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema targetNamespace="urn:fra:nc1:common:communication" xmlns:nc1ihm="urn:fra:nc1:IHM" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:nc1com="urn:fra:nc1:common:communication" xmlns:nc1common="urn:fra:nc1:common:attribute">
+  <!-- NC1 V.9.0.0 -->
+  <xs:import namespace="urn:fra:nc1:common:attribute" schemaLocation="Common.xsd" />
+  <xs:complexType name="ComDataType">
+    <xs:annotation>
+      <xs:documentation>Données de communication.</xs:documentation>
+      <xs:documentation xml:lang="en">Communication data.</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" name="pocName" type="nc1common:MediumTextObjectType">
+        <xs:annotation>
+          <xs:documentation>Nom/fonction du point de contact.</xs:documentation>
+          <xs:documentation xml:lang="en">Name of the point of contact.</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Nom/Fonction</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">name</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="comment" type="nc1common:LongTextObjectType">
+        <xs:annotation>
+          <xs:documentation>Commentaire en texte libre.</xs:documentation>
+          <xs:documentation xml:lang="en">free text comment.</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Commentaire</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">comment</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="extVersion" type="nc1common:ExtVersType">
+        <xs:annotation>
+          <xs:documentation>Extension pour versions suivantes compatibles.</xs:documentation>
+          <xs:documentation xml:lang="en">Extension for following compatible versions.</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Extension de version</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">version extension</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:simpleType name="ParticipantNumberType">
+    <xs:annotation>
+      <xs:documentation>Numéro de réseau (5 digits) suivi du numéro d’abonné (2 digits).</xs:documentation>
+      <xs:documentation xml:lang="en">Participant number, expressed as a 5 digits network number and a 2 digits subscriber number).</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:maxLength value="7" />
+      <xs:minLength value="7" />
+      <xs:pattern value="[0-9]*" />
+    </xs:restriction>
+  </xs:simpleType>
+</xs:schema>

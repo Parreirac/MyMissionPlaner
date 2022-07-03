@@ -1,0 +1,93 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<gc:CodeList xmlns:nc1dico="urn:fra:nc1:dictionnaires" xmlns:gc="http://docs.oasis-open.org/codelist/ns/genericode/1.0/">
+  <Annotation>
+    <Description>
+      <nc1dico:description>CE CHAMP PERMET D’INDIQUER LA QUALITE DES INFORMATIONS TRANSMISES SUR LA POSITION D'UNE ENTITE TACTIQUE. LA QUALITE  EST FONCTION DE SA SOURCE DE DETECTION. ELLE PEUT ETRE SOIT REELLE (LA POSITION EST CONNUE PRECISEMENT) SOIT ESTIMEE (ELLE EST APPROXIMATIVE ET NON DETERMINISTE). ELLE SE COMBINE A L'INFORMATION DE STATUS (PRESENT, PLANIFIE) POUR LA VALEUR PRESENT EN AJOUTANT UNE PRECISION SUR LA JUSTESSE DE L'INFORMATION DE POSITION.</nc1dico:description>
+      <nc1dico:description xml:lang="en">Allows to define a binary quality level: real location (measured by BFT) or estimated otherwise.</nc1dico:description>
+    </Description>
+    <AppInfo>
+      <nc1dico:source>SFTT 3.4.8</nc1dico:source>
+      <nc1dico:derogation>QUALITE (1 BIT)</nc1dico:derogation>
+    </AppInfo>
+  </Annotation>
+  <Identification>
+    <ShortName>L117_5Code</ShortName>
+    <Version>9.0.0</Version>
+    <CanonicalUri>urn:fra:nc1:common:sicsdicos:L117_5Code</CanonicalUri>
+    <CanonicalVersionUri>urn:fra:nc1:common:sicsdicos:L117_5Code:9.0.0</CanonicalVersionUri>
+  </Identification>
+  <ColumnSet DatatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes">
+    <Column Id="code" Use="required">
+      <ShortName>Code</ShortName>
+      <Data Type="int" />
+    </Column>
+    <Column Id="short" Use="required">
+      <ShortName>Short</ShortName>
+      <Data Type="string" />
+    </Column>
+    <Column Id="long" Use="optional">
+      <ShortName>Long</ShortName>
+      <Data Type="string" />
+    </Column>
+    <Column Id="short-en" Use="optional">
+      <ShortName>Short anglais</ShortName>
+      <Data Type="string" />
+    </Column>
+    <Column Id="long-en" Use="optional">
+      <ShortName>Long anglais</ShortName>
+      <Data Type="string" />
+    </Column>
+    <Column Id="parent" Use="optional">
+      <ShortName>Parent</ShortName>
+      <Data Type="int" />
+    </Column>
+    <Column Id="codeSymbole" Use="optional">
+      <ShortName>Code Symbole</ShortName>
+      <Data Type="string" />
+    </Column>
+    <Column Id="codeHierarchique" Use="optional">
+      <ShortName>Code Hierarchique</ShortName>
+      <Data Type="string" />
+    </Column>
+    <Key Id="codeKey">
+      <ShortName>CodeKey</ShortName>
+      <ColumnRef Ref="code" />
+    </Key>
+  </ColumnSet>
+  <SimpleCodeList>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>0</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>REEL</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>LA POSITION EST REELLE OU FOURNIE PAR UN DISPOSITIF DE LOCALISATION REPUTE FIABLE OU DE CONFIANCE (PAR EXEMPLE GPS P(Y) AVEC CLES CHARGEES)</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>REAL</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>THE POSITION IS REAL OR PROVIDED BY A RELIABLE OR TRUSTED LOCALIZATION DEVICE (EG GPS P(Y) WITH KEYS LOADED)</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>1</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>ESTIME</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>LA POSITION EST ESTIMEE OU FOURNIE PAR UN DISPOSITIF DE LOCALISATION NON FIABILISE (PAR EXEMPLE, GPS EN MODE CIVIL, NON CORRELE A UNE AUTRE SOURCE)</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>ESTIMATED</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>THE POSITION IS ESTIMATED OR PROVIDED BY AN UNRELIABLE LOCALIZATION DEVICE (FOR EXAMPLE, GPS IN CIVIL MODE, UNCORRELATED TO ANOTHER SOURCE)</SimpleValue>
+      </Value>
+    </Row>
+  </SimpleCodeList>
+</gc:CodeList>

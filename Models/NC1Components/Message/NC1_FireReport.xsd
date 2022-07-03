@@ -1,0 +1,128 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema targetNamespace="urn:fra:nc1:message:firereport" xmlns:nc1ihm="urn:fra:nc1:IHM" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:nc1firereport="urn:fra:nc1:message:firereport" xmlns:nc1common="urn:fra:nc1:common:attribute" xmlns:nc1msgcom="urn:fra:nc1:common:message" xmlns:nc1sicsdicos="urn:fra:nc1:common:sicsdicos" xmlns:nc1fire="urn:fra:nc1:objet:fire">
+  <!-- NC1 V.9.0.0 -->
+  <xs:import namespace="urn:fra:nc1:common:attribute" schemaLocation="../Commun/Common.xsd" />
+  <xs:import namespace="urn:fra:nc1:common:message" schemaLocation="../Commun/Message.xsd" />
+  <xs:import namespace="urn:fra:nc1:common:sicsdicos" schemaLocation="../Commun/SICS_Dictionaries.xsd" />
+  <xs:import namespace="urn:fra:nc1:objet:fire" schemaLocation="../Objet/NC1_Fire.xsd" />
+  <xs:element name="NC1_FireReport">
+    <xs:annotation>
+      <xs:documentation>Le message NC1_FireReport est utilisé pour rendre compte des moyens engagés ou de tir (premier coup parti, dernier coup parti, fin de tir).</xs:documentation>
+      <xs:documentation xml:lang="en">The NC1_FireReport message is used to report on the committed means or fire means (first shot, rounds complete, end of fire).</xs:documentation>
+      <xs:appinfo>
+        <nc1:type xmlns:nc1="urn:fra:nc1">Message</nc1:type>
+        <nc1ihm:Nom>Compte rendu des moyens engagés ou compte rendu de tir</nc1ihm:Nom>
+        <nc1ihm:Nom xml:lang="en">Artillery Target Intelligence / Artillery Target Report</nc1ihm:Nom>
+        <nc1:MessH xmlns:nc1="urn:fra:nc1">N/A</nc1:MessH>
+        <nc1:MessADatP3 xmlns:nc1="urn:fra:nc1">ATI.ATR</nc1:MessADatP3>
+        <nc1:LastNC1ModifyVersion xmlns:nc1="urn:fra:nc1">9.0.0</nc1:LastNC1ModifyVersion>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:complexContent>
+        <xs:extension base="nc1msgcom:BaseMessageType">
+          <xs:sequence>
+            <xs:element name="reportedFire">
+              <xs:annotation>
+                <xs:documentation>Compte rendu d’engagement des moyens ou d’avancement de tir.</xs:documentation>
+                <xs:documentation xml:lang="en">Engagement or progress report of the fire.</xs:documentation>
+                <xs:appinfo>
+                  <nc1ihm:Nom>Compte rendu</nc1ihm:Nom>
+                  <nc1ihm:Nom xml:lang="en">Report</nc1ihm:Nom>
+                </xs:appinfo>
+              </xs:annotation>
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="fire" type="nc1fire:FireType">
+                    <xs:annotation>
+                      <xs:documentation>Tir objet du compte rendu.</xs:documentation>
+                      <xs:documentation xml:lang="en">Fire addressed in the report.</xs:documentation>
+                      <xs:appinfo>
+                        <nc1ihm:Nom>Tir</nc1ihm:Nom>
+                        <nc1ihm:Nom xml:lang="en">Fire</nc1ihm:Nom>
+                      </xs:appinfo>
+                    </xs:annotation>
+                  </xs:element>
+                  <xs:element minOccurs="0" name="fireMissionCommandAccepted" type="nc1sicsdicos:L114_27Code">
+                    <xs:annotation>
+                      <xs:documentation>Indique si la demande/directive de tir en cours est acceptée ou refusée.</xs:documentation>
+                      <xs:documentation xml:lang="en">Specify if the fire mission command is accepted or denied.</xs:documentation>
+                      <xs:appinfo>
+                        <nc1ihm:Nom>Demande/Directive acceptée ou refusée</nc1ihm:Nom>
+                        <nc1ihm:Nom xml:lang="en">Fire mission command accepted or denied</nc1ihm:Nom>
+                      </xs:appinfo>
+                    </xs:annotation>
+                  </xs:element>
+                  <xs:element maxOccurs="unbounded" minOccurs="0" name="involvedUnit">
+                    <xs:annotation>
+                      <xs:documentation>Bilan des moyens engagés.</xs:documentation>
+                      <xs:documentation xml:lang="en">Total resources committed.</xs:documentation>
+                      <xs:appinfo>
+                        <nc1ihm:Nom>Moyens engagés</nc1ihm:Nom>
+                        <nc1ihm:Nom xml:lang="en">Resources commited</nc1ihm:Nom>
+                      </xs:appinfo>
+                    </xs:annotation>
+                    <xs:complexType>
+                      <xs:sequence>
+                        <xs:element name="involvedUnitId" type="nc1common:Nc1ObjectRefType">
+                          <xs:annotation>
+                            <xs:documentation>Identifiant unique d'une unité engagée.</xs:documentation>
+                            <xs:documentation xml:lang="en">NC1 ID of an involved unit.</xs:documentation>
+                            <xs:appinfo>
+                              <nc1ihm:Nom>Unité engagée</nc1ihm:Nom>
+                              <nc1ihm:Nom xml:lang="en">Involved unit</nc1ihm:Nom>
+                            </xs:appinfo>
+                          </xs:annotation>
+                        </xs:element>
+                        <xs:element minOccurs="0" name="artilleryPiecesCount" type="nc1common:Int0To99Type">
+                          <xs:annotation>
+                            <xs:documentation>Nombre de pièces engagées.</xs:documentation>
+                            <xs:documentation xml:lang="en">Number of artillery pieces.</xs:documentation>
+                            <xs:appinfo>
+                              <nc1ihm:Nom>Nombre de pièces</nc1ihm:Nom>
+                              <nc1ihm:Nom xml:lang="en">Number of artillery pieces</nc1ihm:Nom>
+                            </xs:appinfo>
+                          </xs:annotation>
+                        </xs:element>
+                        <xs:element maxOccurs="unbounded" minOccurs="0" name="firedAmmunition" type="nc1fire:AmmunitionType">
+                          <xs:annotation>
+                            <xs:documentation>Description d'une munition tirée.</xs:documentation>
+                            <xs:documentation xml:lang="en">Fired ammunition description.</xs:documentation>
+                            <xs:appinfo>
+                              <nc1ihm:Nom>Munition tirée</nc1ihm:Nom>
+                              <nc1ihm:Nom xml:lang="en">Fired ammunition</nc1ihm:Nom>
+                            </xs:appinfo>
+                          </xs:annotation>
+                        </xs:element>
+                      </xs:sequence>
+                    </xs:complexType>
+                  </xs:element>
+                  <xs:element maxOccurs="unbounded" minOccurs="0" name="firedAmmunitionSummary" type="nc1fire:AmmunitionType">
+                    <xs:annotation>
+                      <xs:documentation>Somme des munitions tirées, par type de munition.</xs:documentation>
+                      <xs:documentation xml:lang="en">Fired ammunition summary, per ammo type.</xs:documentation>
+                      <xs:appinfo>
+                        <nc1ihm:Nom>Synthèse des munitions tirées</nc1ihm:Nom>
+                        <nc1ihm:Nom xml:lang="en">Fired ammunition summary</nc1ihm:Nom>
+                      </xs:appinfo>
+                    </xs:annotation>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element minOccurs="0" name="comment" type="nc1msgcom:CommentSectionType">
+              <xs:annotation>
+                <xs:documentation>Commentaire en texte libre.</xs:documentation>
+                <xs:documentation xml:lang="en">free text comment.</xs:documentation>
+                <xs:appinfo>
+                  <nc1ihm:Nom>Commentaire</nc1ihm:Nom>
+                  <nc1ihm:Nom xml:lang="en">comment</nc1ihm:Nom>
+                </xs:appinfo>
+              </xs:annotation>
+            </xs:element>
+          </xs:sequence>
+        </xs:extension>
+      </xs:complexContent>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

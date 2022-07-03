@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<cva:ContextValueAssociation xmlns:cva="http://docs.oasis-open.org/codelist/ns/ContextValueAssociation/1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="urn:fra:nc1:objet:airtrack" queryBinding="xslt2" xmlns:nc1airtrack="urn:fra:nc1:objet:airtrack">
+  <!-- NC1 V.9.0.0 -->
+  <ValueLists>
+    <ValueList xml:id="nc1objcom-ActivationStatusCode" uri="../Dictionnaires/ActivationStatusCode.gc" />
+    <ValueList xml:id="nc1objcom-IsFullCode" uri="../Dictionnaires/IsFullCode.gc" />
+    <ValueList xml:id="nc1sicsdicos-L104_2Code" uri="../Dictionnaires/L104_2Code.gc" />
+    <ValueList xml:id="nc1sicsdicos-L125_1Code" uri="../Dictionnaires/L125_1Code.gc" />
+    <ValueList xml:id="nc1sicsdicos-L135_14Code" uri="../Dictionnaires/L135_14Code.gc" />
+    <ValueList xml:id="nc1sicsdicos-L135_15Code" uri="../Dictionnaires/L135_15Code.gc" />
+    <ValueList xml:id="nc1sicsdicos-L116_1Code" uri="../Dictionnaires/L116_1Code.gc" />
+    <ValueList xml:id="nc1sicsdicos-L116_2Code" uri="../Dictionnaires/L116_2Code.gc" />
+    <ValueList xml:id="nc1sicsdicos-L116_3Code" uri="../Dictionnaires/L116_3Code.gc" />
+    <ValueList xml:id="nc1sicsdicos-L170_4Code" uri="../Dictionnaires/L170_4Code.gc" />
+    <ValueList xml:id="nc1sicsdicos-L117_5Code" uri="../Dictionnaires/L117_5Code.gc" />
+  </ValueLists>
+  <Contexts>
+    <Context address="/nc1airtrack:NC1_AirTrack/@activationStatus" values="nc1objcom-ActivationStatusCode" />
+    <Context address="/nc1airtrack:NC1_AirTrack/@isFull" values="nc1objcom-IsFullCode" />
+    <Context address="/nc1airtrack:NC1_AirTrack/tacticalData/size" values="nc1sicsdicos-L104_2Code" />
+    <Context address="/nc1airtrack:NC1_AirTrack/tacticalData/operationalStatusIndicator" values="nc1sicsdicos-L125_1Code" />
+    <Context address="/nc1airtrack:NC1_AirTrack/tacticalData/reliability" values="nc1sicsdicos-L135_14Code" />
+    <Context address="/nc1airtrack:NC1_AirTrack/tacticalData/credibility" values="nc1sicsdicos-L135_15Code" />
+    <Context address="/nc1airtrack:NC1_AirTrack/specificData/activity" values="nc1sicsdicos-L116_1Code" />
+    <Context address="/nc1airtrack:NC1_AirTrack/specificData/generalType" values="nc1sicsdicos-L116_2Code" />
+    <Context address="/nc1airtrack:NC1_AirTrack/specificData/specificType" values="nc1sicsdicos-L116_3Code" />
+    <Context address="/nc1airtrack:NC1_AirTrack/specificData/iffMode" values="nc1sicsdicos-L170_4Code" />
+    <Context address="/nc1airtrack:NC1_AirTrack/location/quality" values="nc1sicsdicos-L117_5Code" />
+  </Contexts>
+</cva:ContextValueAssociation>

@@ -1,0 +1,937 @@
+
+D:\repos\MyMissionPlaner\Models\NC1Components>xsd /c .\Commun\2DCoordinationMean.xsd .\Commun\Cbrn.xsd .\Commun.\Common.xsd .\Commun.\Communication.xsd .\Commun\Ew.xsd .\Commun\Health.xsd .\Commun\Location.xsd .\Commun\Logistics.xsd .\Commun\Message.xsd .\Commun\Object.xsd .\Commun\Participant.xsd .\Commun\SICS_Dictionaries.xsd .\Commun\Track.xsd .\Commun/2DCoordinationMean.xsd  .\Objet/NC1_3DRoute.xsd /o:.\generated/Objet\ 
+Microsoft (R) Xml Schemas/DataTypes support utility
+[Microsoft (R) .NET Framework, Version 4.8.3928.0]
+Copyright (C) Microsoft Corporation. All rights reserved.
+êcriture du fichier '.\generated/Objet\NC1_3DRoute.cs'.
+
+Pour plus d'informations, entrez "xsd /?".
+
+D:\repos\MyMissionPlaner\Models\NC1Components>xsd /c .\Commun\2DCoordinationMean.xsd .\Commun\Cbrn.xsd .\Commun.\Common.xsd .\Commun.\Communication.xsd .\Commun\Ew.xsd .\Commun\Health.xsd .\Commun\Location.xsd .\Commun\Logistics.xsd .\Commun\Message.xsd .\Commun\Object.xsd .\Commun\Participant.xsd .\Commun\SICS_Dictionaries.xsd .\Commun\Track.xsd .\Commun/2DCoordinationMean.xsd  .\Objet/NC1_AcmWez.xsd /o:.\generated/Objet\ 
+Microsoft (R) Xml Schemas/DataTypes support utility
+[Microsoft (R) .NET Framework, Version 4.8.3928.0]
+Copyright (C) Microsoft Corporation. All rights reserved.
+êcriture du fichier '.\generated/Objet\NC1_AcmWez.cs'.
+
+Pour plus d'informations, entrez "xsd /?".
+
+D:\repos\MyMissionPlaner\Models\NC1Components>xsd /c .\Commun\2DCoordinationMean.xsd .\Commun\Cbrn.xsd .\Commun.\Common.xsd .\Commun.\Communication.xsd .\Commun\Ew.xsd .\Commun\Health.xsd .\Commun\Location.xsd .\Commun\Logistics.xsd .\Commun\Message.xsd .\Commun\Object.xsd .\Commun\Participant.xsd .\Commun\SICS_Dictionaries.xsd .\Commun\Track.xsd .\Commun/2DCoordinationMean.xsd  .\Objet/NC1_AirParticipant.xsd /o:.\generated/Objet\ 
+Microsoft (R) Xml Schemas/DataTypes support utility
+[Microsoft (R) .NET Framework, Version 4.8.3928.0]
+Copyright (C) Microsoft Corporation. All rights reserved.
+êcriture du fichier '.\generated/Objet\NC1_AirParticipant.cs'.
+
+Pour plus d'informations, entrez "xsd /?".
+
+D:\repos\MyMissionPlaner\Models\NC1Components>xsd /c .\Commun\2DCoordinationMean.xsd .\Commun\Cbrn.xsd .\Commun.\Common.xsd .\Commun.\Communication.xsd .\Commun\Ew.xsd .\Commun\Health.xsd .\Commun\Location.xsd .\Commun\Logistics.xsd .\Commun\Message.xsd .\Commun\Object.xsd .\Commun\Participant.xsd .\Commun\SICS_Dictionaries.xsd .\Commun\Track.xsd .\Commun/2DCoordinationMean.xsd  .\Objet/NC1_AirTrack.xsd /o:.\generated/Objet\ 
+Microsoft (R) Xml Schemas/DataTypes support utility
+[Microsoft (R) .NET Framework, Version 4.8.3928.0]
+Copyright (C) Microsoft Corporation. All rights reserved.
+êcriture du fichier '.\generated/Objet\NC1_AirTrack.cs'.
+
+Pour plus d'informations, entrez "xsd /?".
+
+D:\repos\MyMissionPlaner\Models\NC1Components>xsd /c .\Commun\2DCoordinationMean.xsd .\Commun\Cbrn.xsd .\Commun.\Common.xsd .\Commun.\Communication.xsd .\Commun\Ew.xsd .\Commun\Health.xsd .\Commun\Location.xsd .\Commun\Logistics.xsd .\Commun\Message.xsd .\Commun\Object.xsd .\Commun\Participant.xsd .\Commun\SICS_Dictionaries.xsd .\Commun\Track.xsd .\Commun/2DCoordinationMean.xsd  .\Objet/NC1_CbrnEvent.xsd /o:.\generated/Objet\ 
+Microsoft (R) Xml Schemas/DataTypes support utility
+[Microsoft (R) .NET Framework, Version 4.8.3928.0]
+Copyright (C) Microsoft Corporation. All rights reserved.
+êcriture du fichier '.\generated/Objet\NC1_CbrnEvent.cs'.
+
+Pour plus d'informations, entrez "xsd /?".
+
+D:\repos\MyMissionPlaner\Models\NC1Components>xsd /c .\Commun\2DCoordinationMean.xsd .\Commun\Cbrn.xsd .\Commun.\Common.xsd .\Commun.\Communication.xsd .\Commun\Ew.xsd .\Commun\Health.xsd .\Commun\Location.xsd .\Commun\Logistics.xsd .\Commun\Message.xsd .\Commun\Object.xsd .\Commun\Participant.xsd .\Commun\SICS_Dictionaries.xsd .\Commun\Track.xsd .\Commun/2DCoordinationMean.xsd  .\Objet/NC1_Convoy.xsd /o:.\generated/Objet\ 
+Microsoft (R) Xml Schemas/DataTypes support utility
+[Microsoft (R) .NET Framework, Version 4.8.3928.0]
+Copyright (C) Microsoft Corporation. All rights reserved.
+êcriture du fichier '.\generated/Objet\NC1_Convoy.cs'.
+
+Pour plus d'informations, entrez "xsd /?".
+
+D:\repos\MyMissionPlaner\Models\NC1Components>xsd /c .\Commun\2DCoordinationMean.xsd .\Commun\Cbrn.xsd .\Commun.\Common.xsd .\Commun.\Communication.xsd .\Commun\Ew.xsd .\Commun\Health.xsd .\Commun\Location.xsd .\Commun\Logistics.xsd .\Commun\Message.xsd .\Commun\Object.xsd .\Commun\Participant.xsd .\Commun\SICS_Dictionaries.xsd .\Commun\Track.xsd .\Commun/2DCoordinationMean.xsd  .\Objet/NC1_Event.xsd /o:.\generated/Objet\ 
+Microsoft (R) Xml Schemas/DataTypes support utility
+[Microsoft (R) .NET Framework, Version 4.8.3928.0]
+Copyright (C) Microsoft Corporation. All rights reserved.
+êcriture du fichier '.\generated/Objet\NC1_Event.cs'.
+
+Pour plus d'informations, entrez "xsd /?".
+
+D:\repos\MyMissionPlaner\Models\NC1Components>xsd /c .\Commun\2DCoordinationMean.xsd .\Commun\Cbrn.xsd .\Commun.\Common.xsd .\Commun.\Communication.xsd .\Commun\Ew.xsd .\Commun\Health.xsd .\Commun\Location.xsd .\Commun\Logistics.xsd .\Commun\Message.xsd .\Commun\Object.xsd .\Commun\Participant.xsd .\Commun\SICS_Dictionaries.xsd .\Commun\Track.xsd .\Commun/2DCoordinationMean.xsd  .\Objet/NC1_Facility.xsd /o:.\generated/Objet\ 
+Microsoft (R) Xml Schemas/DataTypes support utility
+[Microsoft (R) .NET Framework, Version 4.8.3928.0]
+Copyright (C) Microsoft Corporation. All rights reserved.
+êcriture du fichier '.\generated/Objet\NC1_Facility.cs'.
+
+Pour plus d'informations, entrez "xsd /?".
+
+D:\repos\MyMissionPlaner\Models\NC1Components>xsd /c .\Commun\2DCoordinationMean.xsd .\Commun\Cbrn.xsd .\Commun.\Common.xsd .\Commun.\Communication.xsd .\Commun\Ew.xsd .\Commun\Health.xsd .\Commun\Location.xsd .\Commun\Logistics.xsd .\Commun\Message.xsd .\Commun\Object.xsd .\Commun\Participant.xsd .\Commun\SICS_Dictionaries.xsd .\Commun\Track.xsd .\Commun/2DCoordinationMean.xsd  .\Objet/NC1_Fire.xsd /o:.\generated/Objet\ 
+Microsoft (R) Xml Schemas/DataTypes support utility
+[Microsoft (R) .NET Framework, Version 4.8.3928.0]
+Copyright (C) Microsoft Corporation. All rights reserved.
+êcriture du fichier '.\generated/Objet\NC1_Fire.cs'.
+
+Pour plus d'informations, entrez "xsd /?".
+
+D:\repos\MyMissionPlaner\Models\NC1Components>xsd /c .\Commun\2DCoordinationMean.xsd .\Commun\Cbrn.xsd .\Commun.\Common.xsd .\Commun.\Communication.xsd .\Commun\Ew.xsd .\Commun\Health.xsd .\Commun\Location.xsd .\Commun\Logistics.xsd .\Commun\Message.xsd .\Commun\Object.xsd .\Commun\Participant.xsd .\Commun\SICS_Dictionaries.xsd .\Commun\Track.xsd .\Commun/2DCoordinationMean.xsd  .\Objet/NC1_FireObjective.xsd /o:.\generated/Objet\ 
+Microsoft (R) Xml Schemas/DataTypes support utility
+[Microsoft (R) .NET Framework, Version 4.8.3928.0]
+Copyright (C) Microsoft Corporation. All rights reserved.
+êcriture du fichier '.\generated/Objet\NC1_FireObjective.cs'.
+
+Pour plus d'informations, entrez "xsd /?".
+
+D:\repos\MyMissionPlaner\Models\NC1Components>xsd /c .\Commun\2DCoordinationMean.xsd .\Commun\Cbrn.xsd .\Commun.\Common.xsd .\Commun.\Communication.xsd .\Commun\Ew.xsd .\Commun\Health.xsd .\Commun\Location.xsd .\Commun\Logistics.xsd .\Commun\Message.xsd .\Commun\Object.xsd .\Commun\Participant.xsd .\Commun\SICS_Dictionaries.xsd .\Commun\Track.xsd .\Commun/2DCoordinationMean.xsd  .\Objet/NC1_FreeShape.xsd /o:.\generated/Objet\ 
+Microsoft (R) Xml Schemas/DataTypes support utility
+[Microsoft (R) .NET Framework, Version 4.8.3928.0]
+Copyright (C) Microsoft Corporation. All rights reserved.
+êcriture du fichier '.\generated/Objet\NC1_FreeShape.cs'.
+
+Pour plus d'informations, entrez "xsd /?".
+
+D:\repos\MyMissionPlaner\Models\NC1Components>xsd /c .\Commun\2DCoordinationMean.xsd .\Commun\Cbrn.xsd .\Commun.\Common.xsd .\Commun.\Communication.xsd .\Commun\Ew.xsd .\Commun\Health.xsd .\Commun\Location.xsd .\Commun\Logistics.xsd .\Commun\Message.xsd .\Commun\Object.xsd .\Commun\Participant.xsd .\Commun\SICS_Dictionaries.xsd .\Commun\Track.xsd .\Commun/2DCoordinationMean.xsd  .\Objet/NC1_GroundEntity.xsd /o:.\generated/Objet\ 
+Microsoft (R) Xml Schemas/DataTypes support utility
+[Microsoft (R) .NET Framework, Version 4.8.3928.0]
+Copyright (C) Microsoft Corporation. All rights reserved.
+êcriture du fichier '.\generated/Objet\NC1_GroundEntity.cs'.
+
+Pour plus d'informations, entrez "xsd /?".
+
+D:\repos\MyMissionPlaner\Models\NC1Components>xsd /c .\Commun\2DCoordinationMean.xsd .\Commun\Cbrn.xsd .\Commun.\Common.xsd .\Commun.\Communication.xsd .\Commun\Ew.xsd .\Commun\Health.xsd .\Commun\Location.xsd .\Commun\Logistics.xsd .\Commun\Message.xsd .\Commun\Object.xsd .\Commun\Participant.xsd .\Commun\SICS_Dictionaries.xsd .\Commun\Track.xsd .\Commun/2DCoordinationMean.xsd  .\Objet/NC1_GroundParticipant.xsd /o:.\generated/Objet\ 
+Microsoft (R) Xml Schemas/DataTypes support utility
+[Microsoft (R) .NET Framework, Version 4.8.3928.0]
+Copyright (C) Microsoft Corporation. All rights reserved.
+êcriture du fichier '.\generated/Objet\NC1_GroundParticipant.cs'.
+
+Pour plus d'informations, entrez "xsd /?".
+
+D:\repos\MyMissionPlaner\Models\NC1Components>xsd /c .\Commun\2DCoordinationMean.xsd .\Commun\Cbrn.xsd .\Commun.\Common.xsd .\Commun.\Communication.xsd .\Commun\Ew.xsd .\Commun\Health.xsd .\Commun\Location.xsd .\Commun\Logistics.xsd .\Commun\Message.xsd .\Commun\Object.xsd .\Commun\Participant.xsd .\Commun\SICS_Dictionaries.xsd .\Commun\Track.xsd .\Commun/2DCoordinationMean.xsd  .\Objet/NC1_GroundTrack.xsd /o:.\generated/Objet\ 
+Microsoft (R) Xml Schemas/DataTypes support utility
+[Microsoft (R) .NET Framework, Version 4.8.3928.0]
+Copyright (C) Microsoft Corporation. All rights reserved.
+êcriture du fichier '.\generated/Objet\NC1_GroundTrack.cs'.
+
+Pour plus d'informations, entrez "xsd /?".
+
+D:\repos\MyMissionPlaner\Models\NC1Components>xsd /c .\Commun\2DCoordinationMean.xsd .\Commun\Cbrn.xsd .\Commun.\Common.xsd .\Commun.\Communication.xsd .\Commun\Ew.xsd .\Commun\Health.xsd .\Commun\Location.xsd .\Commun\Logistics.xsd .\Commun\Message.xsd .\Commun\Object.xsd .\Commun\Participant.xsd .\Commun\SICS_Dictionaries.xsd .\Commun\Track.xsd .\Commun/2DCoordinationMean.xsd  .\Objet/NC1_IffProcedure.xsd /o:.\generated/Objet\ 
+Microsoft (R) Xml Schemas/DataTypes support utility
+[Microsoft (R) .NET Framework, Version 4.8.3928.0]
+Copyright (C) Microsoft Corporation. All rights reserved.
+êcriture du fichier '.\generated/Objet\NC1_IffProcedure.cs'.
+
+Pour plus d'informations, entrez "xsd /?".
+
+D:\repos\MyMissionPlaner\Models\NC1Components>xsd /c .\Commun\2DCoordinationMean.xsd .\Commun\Cbrn.xsd .\Commun.\Common.xsd .\Commun.\Communication.xsd .\Commun\Ew.xsd .\Commun\Health.xsd .\Commun\Location.xsd .\Commun\Logistics.xsd .\Commun\Message.xsd .\Commun\Object.xsd .\Commun\Participant.xsd .\Commun\SICS_Dictionaries.xsd .\Commun\Track.xsd .\Commun/2DCoordinationMean.xsd  .\Objet/NC1_Individual.xsd /o:.\generated/Objet\ 
+Microsoft (R) Xml Schemas/DataTypes support utility
+[Microsoft (R) .NET Framework, Version 4.8.3928.0]
+Copyright (C) Microsoft Corporation. All rights reserved.
+êcriture du fichier '.\generated/Objet\NC1_Individual.cs'.
+
+Pour plus d'informations, entrez "xsd /?".
+
+D:\repos\MyMissionPlaner\Models\NC1Components>xsd /c .\Commun\2DCoordinationMean.xsd .\Commun\Cbrn.xsd .\Commun.\Common.xsd .\Commun.\Communication.xsd .\Commun\Ew.xsd .\Commun\Health.xsd .\Commun\Location.xsd .\Commun\Logistics.xsd .\Commun\Message.xsd .\Commun\Object.xsd .\Commun\Participant.xsd .\Commun\SICS_Dictionaries.xsd .\Commun\Track.xsd .\Commun/2DCoordinationMean.xsd  .\Objet/NC1_IntelRequirement.xsd /o:.\generated/Objet\ 
+Microsoft (R) Xml Schemas/DataTypes support utility
+[Microsoft (R) .NET Framework, Version 4.8.3928.0]
+Copyright (C) Microsoft Corporation. All rights reserved.
+êcriture du fichier '.\generated/Objet\NC1_IntelRequirement.cs'.
+
+Pour plus d'informations, entrez "xsd /?".
+
+D:\repos\MyMissionPlaner\Models\NC1Components>xsd /c .\Commun\2DCoordinationMean.xsd .\Commun\Cbrn.xsd .\Commun.\Common.xsd .\Commun.\Communication.xsd .\Commun\Ew.xsd .\Commun\Health.xsd .\Commun\Location.xsd .\Commun\Logistics.xsd .\Commun\Message.xsd .\Commun\Object.xsd .\Commun\Participant.xsd .\Commun\SICS_Dictionaries.xsd .\Commun\Track.xsd .\Commun/2DCoordinationMean.xsd  .\Objet/NC1_Meteo.xsd /o:.\generated/Objet\ 
+Microsoft (R) Xml Schemas/DataTypes support utility
+[Microsoft (R) .NET Framework, Version 4.8.3928.0]
+Copyright (C) Microsoft Corporation. All rights reserved.
+êcriture du fichier '.\generated/Objet\NC1_Meteo.cs'.
+
+Pour plus d'informations, entrez "xsd /?".
+
+D:\repos\MyMissionPlaner\Models\NC1Components>xsd /c .\Commun\2DCoordinationMean.xsd .\Commun\Cbrn.xsd .\Commun.\Common.xsd .\Commun.\Communication.xsd .\Commun\Ew.xsd .\Commun\Health.xsd .\Commun\Location.xsd .\Commun\Logistics.xsd .\Commun\Message.xsd .\Commun\Object.xsd .\Commun\Participant.xsd .\Commun\SICS_Dictionaries.xsd .\Commun\Track.xsd .\Commun/2DCoordinationMean.xsd  .\Objet/NC1_Mission.xsd /o:.\generated/Objet\ 
+Microsoft (R) Xml Schemas/DataTypes support utility
+[Microsoft (R) .NET Framework, Version 4.8.3928.0]
+Copyright (C) Microsoft Corporation. All rights reserved.
+êcriture du fichier '.\generated/Objet\NC1_Mission.cs'.
+
+Pour plus d'informations, entrez "xsd /?".
+
+D:\repos\MyMissionPlaner\Models\NC1Components>xsd /c .\Commun\2DCoordinationMean.xsd .\Commun\Cbrn.xsd .\Commun.\Common.xsd .\Commun.\Communication.xsd .\Commun\Ew.xsd .\Commun\Health.xsd .\Commun\Location.xsd .\Commun\Logistics.xsd .\Commun\Message.xsd .\Commun\Object.xsd .\Commun\Participant.xsd .\Commun\SICS_Dictionaries.xsd .\Commun\Track.xsd .\Commun/2DCoordinationMean.xsd  .\Objet/NC1_MissionASA.xsd /o:.\generated/Objet\ 
+Microsoft (R) Xml Schemas/DataTypes support utility
+[Microsoft (R) .NET Framework, Version 4.8.3928.0]
+Copyright (C) Microsoft Corporation. All rights reserved.
+Avertissement de validation de schÇmaˇ: Le type 'urn:fra:nc1:objet:acm:LevelsType' n'est pas dÇclarÇ. ligne 471, position 42.
+
+Avertissementˇ: le schÇma n'a pas pu àtre validÇ. Il est possible que la gÇnÇration de classe Çchoue ou produise des rÇsultats incorrects.
+
+
+Pour plus d'informations, entrez "xsd /?".
+
+D:\repos\MyMissionPlaner\Models\NC1Components>xsd /c .\Commun\2DCoordinationMean.xsd .\Commun\Cbrn.xsd .\Commun.\Common.xsd .\Commun.\Communication.xsd .\Commun\Ew.xsd .\Commun\Health.xsd .\Commun\Location.xsd .\Commun\Logistics.xsd .\Commun\Message.xsd .\Commun\Object.xsd .\Commun\Participant.xsd .\Commun\SICS_Dictionaries.xsd .\Commun\Track.xsd .\Commun/2DCoordinationMean.xsd  .\Objet/NC1_MissionASS.xsd /o:.\generated/Objet\ 
+Microsoft (R) Xml Schemas/DataTypes support utility
+[Microsoft (R) .NET Framework, Version 4.8.3928.0]
+Copyright (C) Microsoft Corporation. All rights reserved.
+êcriture du fichier '.\generated/Objet\NC1_MissionASS.cs'.
+
+Pour plus d'informations, entrez "xsd /?".
+
+D:\repos\MyMissionPlaner\Models\NC1Components>xsd /c .\Commun\2DCoordinationMean.xsd .\Commun\Cbrn.xsd .\Commun.\Common.xsd .\Commun.\Communication.xsd .\Commun\Ew.xsd .\Commun\Health.xsd .\Commun\Location.xsd .\Commun\Logistics.xsd .\Commun\Message.xsd .\Commun\Object.xsd .\Commun\Participant.xsd .\Commun\SICS_Dictionaries.xsd .\Commun\Track.xsd .\Commun/2DCoordinationMean.xsd  .\Objet/NC1_Obstacle.xsd /o:.\generated/Objet\ 
+Microsoft (R) Xml Schemas/DataTypes support utility
+[Microsoft (R) .NET Framework, Version 4.8.3928.0]
+Copyright (C) Microsoft Corporation. All rights reserved.
+êcriture du fichier '.\generated/Objet\NC1_Obstacle.cs'.
+
+Pour plus d'informations, entrez "xsd /?".
+
+D:\repos\MyMissionPlaner\Models\NC1Components>xsd /c .\Commun\2DCoordinationMean.xsd .\Commun\Cbrn.xsd .\Commun.\Common.xsd .\Commun.\Communication.xsd .\Commun\Ew.xsd .\Commun\Health.xsd .\Commun\Location.xsd .\Commun\Logistics.xsd .\Commun\Message.xsd .\Commun\Object.xsd .\Commun\Participant.xsd .\Commun\SICS_Dictionaries.xsd .\Commun\Track.xsd .\Commun/2DCoordinationMean.xsd  .\Objet/NC1_Organisation.xsd /o:.\generated/Objet\ 
+Microsoft (R) Xml Schemas/DataTypes support utility
+[Microsoft (R) .NET Framework, Version 4.8.3928.0]
+Copyright (C) Microsoft Corporation. All rights reserved.
+êcriture du fichier '.\generated/Objet\NC1_Organisation.cs'.
+
+Pour plus d'informations, entrez "xsd /?".
+
+D:\repos\MyMissionPlaner\Models\NC1Components>xsd /c .\Commun\2DCoordinationMean.xsd .\Commun\Cbrn.xsd .\Commun.\Common.xsd .\Commun.\Communication.xsd .\Commun\Ew.xsd .\Commun\Health.xsd .\Commun\Location.xsd .\Commun\Logistics.xsd .\Commun\Message.xsd .\Commun\Object.xsd .\Commun\Participant.xsd .\Commun\SICS_Dictionaries.xsd .\Commun\Track.xsd .\Commun/2DCoordinationMean.xsd  .\Objet/NC1_Reinforcement.xsd /o:.\generated/Objet\ 
+Microsoft (R) Xml Schemas/DataTypes support utility
+[Microsoft (R) .NET Framework, Version 4.8.3928.0]
+Copyright (C) Microsoft Corporation. All rights reserved.
+êcriture du fichier '.\generated/Objet\NC1_Reinforcement.cs'.
+
+Pour plus d'informations, entrez "xsd /?".
+
+D:\repos\MyMissionPlaner\Models\NC1Components>xsd /c .\Commun\2DCoordinationMean.xsd .\Commun\Cbrn.xsd .\Commun.\Common.xsd .\Commun.\Communication.xsd .\Commun\Ew.xsd .\Commun\Health.xsd .\Commun\Location.xsd .\Commun\Logistics.xsd .\Commun\Message.xsd .\Commun\Object.xsd .\Commun\Participant.xsd .\Commun\SICS_Dictionaries.xsd .\Commun\Track.xsd .\Commun/2DCoordinationMean.xsd  .\Objet/NC1_Roe.xsd /o:.\generated/Objet\ 
+Microsoft (R) Xml Schemas/DataTypes support utility
+[Microsoft (R) .NET Framework, Version 4.8.3928.0]
+Copyright (C) Microsoft Corporation. All rights reserved.
+êcriture du fichier '.\generated/Objet\NC1_Roe.cs'.
+
+Pour plus d'informations, entrez "xsd /?".
+
+D:\repos\MyMissionPlaner\Models\NC1Components>xsd /c .\Commun\2DCoordinationMean.xsd .\Commun\Cbrn.xsd .\Commun.\Common.xsd .\Commun.\Communication.xsd .\Commun\Ew.xsd .\Commun\Health.xsd .\Commun\Location.xsd .\Commun\Logistics.xsd .\Commun\Message.xsd .\Commun\Object.xsd .\Commun\Participant.xsd .\Commun\SICS_Dictionaries.xsd .\Commun\Track.xsd .\Commun/2DCoordinationMean.xsd  .\Objet/NC1_Route.xsd /o:.\generated/Objet\ 
+Microsoft (R) Xml Schemas/DataTypes support utility
+[Microsoft (R) .NET Framework, Version 4.8.3928.0]
+Copyright (C) Microsoft Corporation. All rights reserved.
+êcriture du fichier '.\generated/Objet\NC1_Route.cs'.
+
+Pour plus d'informations, entrez "xsd /?".
+
+D:\repos\MyMissionPlaner\Models\NC1Components>xsd /c .\Commun\2DCoordinationMean.xsd .\Commun\Cbrn.xsd .\Commun.\Common.xsd .\Commun.\Communication.xsd .\Commun\Ew.xsd .\Commun\Health.xsd .\Commun\Location.xsd .\Commun\Logistics.xsd .\Commun\Message.xsd .\Commun\Object.xsd .\Commun\Participant.xsd .\Commun\SICS_Dictionaries.xsd .\Commun\Track.xsd .\Commun/2DCoordinationMean.xsd  .\Objet/NC1_SeaParticipant.xsd /o:.\generated/Objet\ 
+Microsoft (R) Xml Schemas/DataTypes support utility
+[Microsoft (R) .NET Framework, Version 4.8.3928.0]
+Copyright (C) Microsoft Corporation. All rights reserved.
+êcriture du fichier '.\generated/Objet\NC1_SeaParticipant.cs'.
+
+Pour plus d'informations, entrez "xsd /?".
+
+D:\repos\MyMissionPlaner\Models\NC1Components>xsd /c .\Commun\2DCoordinationMean.xsd .\Commun\Cbrn.xsd .\Commun.\Common.xsd .\Commun.\Communication.xsd .\Commun\Ew.xsd .\Commun\Health.xsd .\Commun\Location.xsd .\Commun\Logistics.xsd .\Commun\Message.xsd .\Commun\Object.xsd .\Commun\Participant.xsd .\Commun\SICS_Dictionaries.xsd .\Commun\Track.xsd .\Commun/2DCoordinationMean.xsd  .\Objet/NC1_SeaTrack.xsd /o:.\generated/Objet\ 
+Microsoft (R) Xml Schemas/DataTypes support utility
+[Microsoft (R) .NET Framework, Version 4.8.3928.0]
+Copyright (C) Microsoft Corporation. All rights reserved.
+êcriture du fichier '.\generated/Objet\NC1_SeaTrack.cs'.
+
+Pour plus d'informations, entrez "xsd /?".
+
+D:\repos\MyMissionPlaner\Models\NC1Components>xsd /c .\Commun\2DCoordinationMean.xsd .\Commun\Cbrn.xsd .\Commun.\Common.xsd .\Commun.\Communication.xsd .\Commun\Ew.xsd .\Commun\Health.xsd .\Commun\Location.xsd .\Commun\Logistics.xsd .\Commun\Message.xsd .\Commun\Object.xsd .\Commun\Participant.xsd .\Commun\SICS_Dictionaries.xsd .\Commun\Track.xsd .\Commun/2DCoordinationMean.xsd  .\Objet/NC1_TacArea.xsd /o:.\generated/Objet\ 
+Microsoft (R) Xml Schemas/DataTypes support utility
+[Microsoft (R) .NET Framework, Version 4.8.3928.0]
+Copyright (C) Microsoft Corporation. All rights reserved.
+êcriture du fichier '.\generated/Objet\NC1_TacArea.cs'.
+
+Pour plus d'informations, entrez "xsd /?".
+
+D:\repos\MyMissionPlaner\Models\NC1Components>xsd /c .\Commun\2DCoordinationMean.xsd .\Commun\Cbrn.xsd .\Commun.\Common.xsd .\Commun.\Communication.xsd .\Commun\Ew.xsd .\Commun\Health.xsd .\Commun\Location.xsd .\Commun\Logistics.xsd .\Commun\Message.xsd .\Commun\Object.xsd .\Commun\Participant.xsd .\Commun\SICS_Dictionaries.xsd .\Commun\Track.xsd .\Commun/2DCoordinationMean.xsd  .\Objet/NC1_TacLine.xsd /o:.\generated/Objet\ 
+Microsoft (R) Xml Schemas/DataTypes support utility
+[Microsoft (R) .NET Framework, Version 4.8.3928.0]
+Copyright (C) Microsoft Corporation. All rights reserved.
+êcriture du fichier '.\generated/Objet\NC1_TacLine.cs'.
+
+Pour plus d'informations, entrez "xsd /?".
+
+D:\repos\MyMissionPlaner\Models\NC1Components>xsd /c .\Commun\2DCoordinationMean.xsd .\Commun\Cbrn.xsd .\Commun.\Common.xsd .\Commun.\Communication.xsd .\Commun\Ew.xsd .\Commun\Health.xsd .\Commun\Location.xsd .\Commun\Logistics.xsd .\Commun\Message.xsd .\Commun\Object.xsd .\Commun\Participant.xsd .\Commun\SICS_Dictionaries.xsd .\Commun\Track.xsd .\Commun/2DCoordinationMean.xsd  .\Objet/NC1_TacPoint.xsd /o:.\generated/Objet\ 
+Microsoft (R) Xml Schemas/DataTypes support utility
+[Microsoft (R) .NET Framework, Version 4.8.3928.0]
+Copyright (C) Microsoft Corporation. All rights reserved.
+êcriture du fichier '.\generated/Objet\NC1_TacPoint.cs'.
+
+Pour plus d'informations, entrez "xsd /?".
+
+D:\repos\MyMissionPlaner\Models\NC1Components>xsd /c .\Commun\2DCoordinationMean.xsd .\Commun\Cbrn.xsd .\Commun.\Common.xsd .\Commun.\Communication.xsd .\Commun\Ew.xsd .\Commun\Health.xsd .\Commun\Location.xsd .\Commun\Logistics.xsd .\Commun\Message.xsd .\Commun\Object.xsd .\Commun\Participant.xsd .\Commun\SICS_Dictionaries.xsd .\Commun\Track.xsd .\Commun/2DCoordinationMean.xsd  .\Objet/NC1_Unit.xsd /o:.\generated/Objet\ 
+Microsoft (R) Xml Schemas/DataTypes support utility
+[Microsoft (R) .NET Framework, Version 4.8.3928.0]
+Copyright (C) Microsoft Corporation. All rights reserved.
+êcriture du fichier '.\generated/Objet\NC1_Unit.cs'.
+
+Pour plus d'informations, entrez "xsd /?".
+
+D:\repos\MyMissionPlaner\Models\NC1Components>xsd.exe /c .\Commun\2DCoordinationMean.xsd .\Commun\Cbrn.xsd .\Commun.\Common.xsd .\Commun.\Communication.xsd .\Commun\Ew.xsd .\Commun\Health.xsd .\Commun\Location.xsd .\Commun\Logistics.xsd .\Commun\Message.xsd .\Commun\Object.xsd .\Commun\Participant.xsd .\Commun\SICS_Dictionaries.xsd .\Commun\Track.xsd .\Commun/2DCoordinationMean.xsd .\Objet/NC1_AcmWez.xsd  .\Objet/NC1_AirParticipant.xsd  .\Objet/NC1_AirTrack.xsd  .\Objet/NC1_CbrnEvent.xsd   .\Objet/NC1_Convoy.xsd   .\Objet/NC1_Event.xsd   .\Objet/NC1_Facility.xsd   .\Objet/NC1_Fire.xsd   .\Objet/NC1_FireObjective.xsd   .\Objet/NC1_FreeShape.xsd   .\Objet/NC1_GroundEntity.xsd   .\Objet/NC1_GroundParticipant.xsd   .\Objet/NC1_GroundTrack.xsd   .\Objet/NC1_IffProcedure.xsd   .\Objet/NC1_Individual.xsd   .\Objet/NC1_IntelRequirement.xsd   .\Objet/NC1_Meteo.xsd   .\Objet/NC1_Mission.xsd   .\Objet/NC1_MissionASA.xsd   .\Objet/NC1_MissionASS.xsd   .\Objet/NC1_Obstacle.xsd   .\Objet/NC1_Organisation.xsd   .\Objet/NC1_Reinforcement.xsd   .\Objet/NC1_Roe.xsd   .\Objet/NC1_Route.xsd   .\Objet/NC1_SeaParticipant.xsd   .\Objet/NC1_SeaTrack.xsd   .\Objet/NC1_TacArea.xsd   .\Objet/NC1_TacLine.xsd   .\Objet/NC1_TacPoint.xsd   .\Objet/NC1_Unit.xsd  .\Message/NC1_AdmitExitRep.xsd  /o:.\generated\Message/ 
+Microsoft (R) Xml Schemas/DataTypes support utility
+[Microsoft (R) .NET Framework, Version 4.8.3928.0]
+Copyright (C) Microsoft Corporation. All rights reserved.
+êcriture du fichier '.\generated\Message/NC1_AdmitExitRep.cs'.
+
+Pour plus d'informations, entrez "xsd /?".
+
+D:\repos\MyMissionPlaner\Models\NC1Components>xsd.exe /c .\Commun\2DCoordinationMean.xsd .\Commun\Cbrn.xsd .\Commun.\Common.xsd .\Commun.\Communication.xsd .\Commun\Ew.xsd .\Commun\Health.xsd .\Commun\Location.xsd .\Commun\Logistics.xsd .\Commun\Message.xsd .\Commun\Object.xsd .\Commun\Participant.xsd .\Commun\SICS_Dictionaries.xsd .\Commun\Track.xsd .\Commun/2DCoordinationMean.xsd .\Objet/NC1_AcmWez.xsd  .\Objet/NC1_AirParticipant.xsd  .\Objet/NC1_AirTrack.xsd  .\Objet/NC1_CbrnEvent.xsd   .\Objet/NC1_Convoy.xsd   .\Objet/NC1_Event.xsd   .\Objet/NC1_Facility.xsd   .\Objet/NC1_Fire.xsd   .\Objet/NC1_FireObjective.xsd   .\Objet/NC1_FreeShape.xsd   .\Objet/NC1_GroundEntity.xsd   .\Objet/NC1_GroundParticipant.xsd   .\Objet/NC1_GroundTrack.xsd   .\Objet/NC1_IffProcedure.xsd   .\Objet/NC1_Individual.xsd   .\Objet/NC1_IntelRequirement.xsd   .\Objet/NC1_Meteo.xsd   .\Objet/NC1_Mission.xsd   .\Objet/NC1_MissionASA.xsd   .\Objet/NC1_MissionASS.xsd   .\Objet/NC1_Obstacle.xsd   .\Objet/NC1_Organisation.xsd   .\Objet/NC1_Reinforcement.xsd   .\Objet/NC1_Roe.xsd   .\Objet/NC1_Route.xsd   .\Objet/NC1_SeaParticipant.xsd   .\Objet/NC1_SeaTrack.xsd   .\Objet/NC1_TacArea.xsd   .\Objet/NC1_TacLine.xsd   .\Objet/NC1_TacPoint.xsd   .\Objet/NC1_Unit.xsd  .\Message/NC1_AnnulerTirInterdit.xsd  /o:.\generated\Message/ 
+Microsoft (R) Xml Schemas/DataTypes support utility
+[Microsoft (R) .NET Framework, Version 4.8.3928.0]
+Copyright (C) Microsoft Corporation. All rights reserved.
+êcriture du fichier '.\generated\Message/NC1_AnnulerTirInterdit.cs'.
+
+Pour plus d'informations, entrez "xsd /?".
+
+D:\repos\MyMissionPlaner\Models\NC1Components>xsd.exe /c .\Commun\2DCoordinationMean.xsd .\Commun\Cbrn.xsd .\Commun.\Common.xsd .\Commun.\Communication.xsd .\Commun\Ew.xsd .\Commun\Health.xsd .\Commun\Location.xsd .\Commun\Logistics.xsd .\Commun\Message.xsd .\Commun\Object.xsd .\Commun\Participant.xsd .\Commun\SICS_Dictionaries.xsd .\Commun\Track.xsd .\Commun/2DCoordinationMean.xsd .\Objet/NC1_AcmWez.xsd  .\Objet/NC1_AirParticipant.xsd  .\Objet/NC1_AirTrack.xsd  .\Objet/NC1_CbrnEvent.xsd   .\Objet/NC1_Convoy.xsd   .\Objet/NC1_Event.xsd   .\Objet/NC1_Facility.xsd   .\Objet/NC1_Fire.xsd   .\Objet/NC1_FireObjective.xsd   .\Objet/NC1_FreeShape.xsd   .\Objet/NC1_GroundEntity.xsd   .\Objet/NC1_GroundParticipant.xsd   .\Objet/NC1_GroundTrack.xsd   .\Objet/NC1_IffProcedure.xsd   .\Objet/NC1_Individual.xsd   .\Objet/NC1_IntelRequirement.xsd   .\Objet/NC1_Meteo.xsd   .\Objet/NC1_Mission.xsd   .\Objet/NC1_MissionASA.xsd   .\Objet/NC1_MissionASS.xsd   .\Objet/NC1_Obstacle.xsd   .\Objet/NC1_Organisation.xsd   .\Objet/NC1_Reinforcement.xsd   .\Objet/NC1_Roe.xsd   .\Objet/NC1_Route.xsd   .\Objet/NC1_SeaParticipant.xsd   .\Objet/NC1_SeaTrack.xsd   .\Objet/NC1_TacArea.xsd   .\Objet/NC1_TacLine.xsd   .\Objet/NC1_TacPoint.xsd   .\Objet/NC1_Unit.xsd  .\Message/NC1_Apercu.xsd  /o:.\generated\Message/ 
+Microsoft (R) Xml Schemas/DataTypes support utility
+[Microsoft (R) .NET Framework, Version 4.8.3928.0]
+Copyright (C) Microsoft Corporation. All rights reserved.
+êcriture du fichier '.\generated\Message/NC1_Apercu.cs'.
+
+Pour plus d'informations, entrez "xsd /?".
+
+D:\repos\MyMissionPlaner\Models\NC1Components>xsd.exe /c .\Commun\2DCoordinationMean.xsd .\Commun\Cbrn.xsd .\Commun.\Common.xsd .\Commun.\Communication.xsd .\Commun\Ew.xsd .\Commun\Health.xsd .\Commun\Location.xsd .\Commun\Logistics.xsd .\Commun\Message.xsd .\Commun\Object.xsd .\Commun\Participant.xsd .\Commun\SICS_Dictionaries.xsd .\Commun\Track.xsd .\Commun/2DCoordinationMean.xsd .\Objet/NC1_AcmWez.xsd  .\Objet/NC1_AirParticipant.xsd  .\Objet/NC1_AirTrack.xsd  .\Objet/NC1_CbrnEvent.xsd   .\Objet/NC1_Convoy.xsd   .\Objet/NC1_Event.xsd   .\Objet/NC1_Facility.xsd   .\Objet/NC1_Fire.xsd   .\Objet/NC1_FireObjective.xsd   .\Objet/NC1_FreeShape.xsd   .\Objet/NC1_GroundEntity.xsd   .\Objet/NC1_GroundParticipant.xsd   .\Objet/NC1_GroundTrack.xsd   .\Objet/NC1_IffProcedure.xsd   .\Objet/NC1_Individual.xsd   .\Objet/NC1_IntelRequirement.xsd   .\Objet/NC1_Meteo.xsd   .\Objet/NC1_Mission.xsd   .\Objet/NC1_MissionASA.xsd   .\Objet/NC1_MissionASS.xsd   .\Objet/NC1_Obstacle.xsd   .\Objet/NC1_Organisation.xsd   .\Objet/NC1_Reinforcement.xsd   .\Objet/NC1_Roe.xsd   .\Objet/NC1_Route.xsd   .\Objet/NC1_SeaParticipant.xsd   .\Objet/NC1_SeaTrack.xsd   .\Objet/NC1_TacArea.xsd   .\Objet/NC1_TacLine.xsd   .\Objet/NC1_TacPoint.xsd   .\Objet/NC1_Unit.xsd  .\Message/NC1_Apercu3D.xsd  /o:.\generated\Message/ 
+Microsoft (R) Xml Schemas/DataTypes support utility
+[Microsoft (R) .NET Framework, Version 4.8.3928.0]
+Copyright (C) Microsoft Corporation. All rights reserved.
+êcriture du fichier '.\generated\Message/NC1_Apercu3D.cs'.
+
+Pour plus d'informations, entrez "xsd /?".
+
+D:\repos\MyMissionPlaner\Models\NC1Components>xsd.exe /c .\Commun\2DCoordinationMean.xsd .\Commun\Cbrn.xsd .\Commun.\Common.xsd .\Commun.\Communication.xsd .\Commun\Ew.xsd .\Commun\Health.xsd .\Commun\Location.xsd .\Commun\Logistics.xsd .\Commun\Message.xsd .\Commun\Object.xsd .\Commun\Participant.xsd .\Commun\SICS_Dictionaries.xsd .\Commun\Track.xsd .\Commun/2DCoordinationMean.xsd .\Objet/NC1_AcmWez.xsd  .\Objet/NC1_AirParticipant.xsd  .\Objet/NC1_AirTrack.xsd  .\Objet/NC1_CbrnEvent.xsd   .\Objet/NC1_Convoy.xsd   .\Objet/NC1_Event.xsd   .\Objet/NC1_Facility.xsd   .\Objet/NC1_Fire.xsd   .\Objet/NC1_FireObjective.xsd   .\Objet/NC1_FreeShape.xsd   .\Objet/NC1_GroundEntity.xsd   .\Objet/NC1_GroundParticipant.xsd   .\Objet/NC1_GroundTrack.xsd   .\Objet/NC1_IffProcedure.xsd   .\Objet/NC1_Individual.xsd   .\Objet/NC1_IntelRequirement.xsd   .\Objet/NC1_Meteo.xsd   .\Objet/NC1_Mission.xsd   .\Objet/NC1_MissionASA.xsd   .\Objet/NC1_MissionASS.xsd   .\Objet/NC1_Obstacle.xsd   .\Objet/NC1_Organisation.xsd   .\Objet/NC1_Reinforcement.xsd   .\Objet/NC1_Roe.xsd   .\Objet/NC1_Route.xsd   .\Objet/NC1_SeaParticipant.xsd   .\Objet/NC1_SeaTrack.xsd   .\Objet/NC1_TacArea.xsd   .\Objet/NC1_TacLine.xsd   .\Objet/NC1_TacPoint.xsd   .\Objet/NC1_Unit.xsd  .\Message/NC1_BARREP.xsd  /o:.\generated\Message/ 
+Microsoft (R) Xml Schemas/DataTypes support utility
+[Microsoft (R) .NET Framework, Version 4.8.3928.0]
+Copyright (C) Microsoft Corporation. All rights reserved.
+êcriture du fichier '.\generated\Message/NC1_BARREP.cs'.
+
+Pour plus d'informations, entrez "xsd /?".
+
+D:\repos\MyMissionPlaner\Models\NC1Components>xsd.exe /c .\Commun\2DCoordinationMean.xsd .\Commun\Cbrn.xsd .\Commun.\Common.xsd .\Commun.\Communication.xsd .\Commun\Ew.xsd .\Commun\Health.xsd .\Commun\Location.xsd .\Commun\Logistics.xsd .\Commun\Message.xsd .\Commun\Object.xsd .\Commun\Participant.xsd .\Commun\SICS_Dictionaries.xsd .\Commun\Track.xsd .\Commun/2DCoordinationMean.xsd .\Objet/NC1_AcmWez.xsd  .\Objet/NC1_AirParticipant.xsd  .\Objet/NC1_AirTrack.xsd  .\Objet/NC1_CbrnEvent.xsd   .\Objet/NC1_Convoy.xsd   .\Objet/NC1_Event.xsd   .\Objet/NC1_Facility.xsd   .\Objet/NC1_Fire.xsd   .\Objet/NC1_FireObjective.xsd   .\Objet/NC1_FreeShape.xsd   .\Objet/NC1_GroundEntity.xsd   .\Objet/NC1_GroundParticipant.xsd   .\Objet/NC1_GroundTrack.xsd   .\Objet/NC1_IffProcedure.xsd   .\Objet/NC1_Individual.xsd   .\Objet/NC1_IntelRequirement.xsd   .\Objet/NC1_Meteo.xsd   .\Objet/NC1_Mission.xsd   .\Objet/NC1_MissionASA.xsd   .\Objet/NC1_MissionASS.xsd   .\Objet/NC1_Obstacle.xsd   .\Objet/NC1_Organisation.xsd   .\Objet/NC1_Reinforcement.xsd   .\Objet/NC1_Roe.xsd   .\Objet/NC1_Route.xsd   .\Objet/NC1_SeaParticipant.xsd   .\Objet/NC1_SeaTrack.xsd   .\Objet/NC1_TacArea.xsd   .\Objet/NC1_TacLine.xsd   .\Objet/NC1_TacPoint.xsd   .\Objet/NC1_Unit.xsd  .\Message/NC1_BarReq.xsd  /o:.\generated\Message/ 
+Microsoft (R) Xml Schemas/DataTypes support utility
+[Microsoft (R) .NET Framework, Version 4.8.3928.0]
+Copyright (C) Microsoft Corporation. All rights reserved.
+êcriture du fichier '.\generated\Message/NC1_BarReq.cs'.
+
+Pour plus d'informations, entrez "xsd /?".
+
+D:\repos\MyMissionPlaner\Models\NC1Components>xsd.exe /c .\Commun\2DCoordinationMean.xsd .\Commun\Cbrn.xsd .\Commun.\Common.xsd .\Commun.\Communication.xsd .\Commun\Ew.xsd .\Commun\Health.xsd .\Commun\Location.xsd .\Commun\Logistics.xsd .\Commun\Message.xsd .\Commun\Object.xsd .\Commun\Participant.xsd .\Commun\SICS_Dictionaries.xsd .\Commun\Track.xsd .\Commun/2DCoordinationMean.xsd .\Objet/NC1_AcmWez.xsd  .\Objet/NC1_AirParticipant.xsd  .\Objet/NC1_AirTrack.xsd  .\Objet/NC1_CbrnEvent.xsd   .\Objet/NC1_Convoy.xsd   .\Objet/NC1_Event.xsd   .\Objet/NC1_Facility.xsd   .\Objet/NC1_Fire.xsd   .\Objet/NC1_FireObjective.xsd   .\Objet/NC1_FreeShape.xsd   .\Objet/NC1_GroundEntity.xsd   .\Objet/NC1_GroundParticipant.xsd   .\Objet/NC1_GroundTrack.xsd   .\Objet/NC1_IffProcedure.xsd   .\Objet/NC1_Individual.xsd   .\Objet/NC1_IntelRequirement.xsd   .\Objet/NC1_Meteo.xsd   .\Objet/NC1_Mission.xsd   .\Objet/NC1_MissionASA.xsd   .\Objet/NC1_MissionASS.xsd   .\Objet/NC1_Obstacle.xsd   .\Objet/NC1_Organisation.xsd   .\Objet/NC1_Reinforcement.xsd   .\Objet/NC1_Roe.xsd   .\Objet/NC1_Route.xsd   .\Objet/NC1_SeaParticipant.xsd   .\Objet/NC1_SeaTrack.xsd   .\Objet/NC1_TacArea.xsd   .\Objet/NC1_TacLine.xsd   .\Objet/NC1_TacPoint.xsd   .\Objet/NC1_Unit.xsd  .\Message/NC1_BATRECEVACREQ.xsd  /o:.\generated\Message/ 
+Microsoft (R) Xml Schemas/DataTypes support utility
+[Microsoft (R) .NET Framework, Version 4.8.3928.0]
+Copyright (C) Microsoft Corporation. All rights reserved.
+êcriture du fichier '.\generated\Message/NC1_BATRECEVACREQ.cs'.
+
+Pour plus d'informations, entrez "xsd /?".
+
+D:\repos\MyMissionPlaner\Models\NC1Components>xsd.exe /c .\Commun\2DCoordinationMean.xsd .\Commun\Cbrn.xsd .\Commun.\Common.xsd .\Commun.\Communication.xsd .\Commun\Ew.xsd .\Commun\Health.xsd .\Commun\Location.xsd .\Commun\Logistics.xsd .\Commun\Message.xsd .\Commun\Object.xsd .\Commun\Participant.xsd .\Commun\SICS_Dictionaries.xsd .\Commun\Track.xsd .\Commun/2DCoordinationMean.xsd .\Objet/NC1_AcmWez.xsd  .\Objet/NC1_AirParticipant.xsd  .\Objet/NC1_AirTrack.xsd  .\Objet/NC1_CbrnEvent.xsd   .\Objet/NC1_Convoy.xsd   .\Objet/NC1_Event.xsd   .\Objet/NC1_Facility.xsd   .\Objet/NC1_Fire.xsd   .\Objet/NC1_FireObjective.xsd   .\Objet/NC1_FreeShape.xsd   .\Objet/NC1_GroundEntity.xsd   .\Objet/NC1_GroundParticipant.xsd   .\Objet/NC1_GroundTrack.xsd   .\Objet/NC1_IffProcedure.xsd   .\Objet/NC1_Individual.xsd   .\Objet/NC1_IntelRequirement.xsd   .\Objet/NC1_Meteo.xsd   .\Objet/NC1_Mission.xsd   .\Objet/NC1_MissionASA.xsd   .\Objet/NC1_MissionASS.xsd   .\Objet/NC1_Obstacle.xsd   .\Objet/NC1_Organisation.xsd   .\Objet/NC1_Reinforcement.xsd   .\Objet/NC1_Roe.xsd   .\Objet/NC1_Route.xsd   .\Objet/NC1_SeaParticipant.xsd   .\Objet/NC1_SeaTrack.xsd   .\Objet/NC1_TacArea.xsd   .\Objet/NC1_TacLine.xsd   .\Objet/NC1_TacPoint.xsd   .\Objet/NC1_Unit.xsd  .\Message/NC1_BDA.xsd  /o:.\generated\Message/ 
+Microsoft (R) Xml Schemas/DataTypes support utility
+[Microsoft (R) .NET Framework, Version 4.8.3928.0]
+Copyright (C) Microsoft Corporation. All rights reserved.
+êcriture du fichier '.\generated\Message/NC1_BDA.cs'.
+
+Pour plus d'informations, entrez "xsd /?".
+
+D:\repos\MyMissionPlaner\Models\NC1Components>xsd.exe /c .\Commun\2DCoordinationMean.xsd .\Commun\Cbrn.xsd .\Commun.\Common.xsd .\Commun.\Communication.xsd .\Commun\Ew.xsd .\Commun\Health.xsd .\Commun\Location.xsd .\Commun\Logistics.xsd .\Commun\Message.xsd .\Commun\Object.xsd .\Commun\Participant.xsd .\Commun\SICS_Dictionaries.xsd .\Commun\Track.xsd .\Commun/2DCoordinationMean.xsd .\Objet/NC1_AcmWez.xsd  .\Objet/NC1_AirParticipant.xsd  .\Objet/NC1_AirTrack.xsd  .\Objet/NC1_CbrnEvent.xsd   .\Objet/NC1_Convoy.xsd   .\Objet/NC1_Event.xsd   .\Objet/NC1_Facility.xsd   .\Objet/NC1_Fire.xsd   .\Objet/NC1_FireObjective.xsd   .\Objet/NC1_FreeShape.xsd   .\Objet/NC1_GroundEntity.xsd   .\Objet/NC1_GroundParticipant.xsd   .\Objet/NC1_GroundTrack.xsd   .\Objet/NC1_IffProcedure.xsd   .\Objet/NC1_Individual.xsd   .\Objet/NC1_IntelRequirement.xsd   .\Objet/NC1_Meteo.xsd   .\Objet/NC1_Mission.xsd   .\Objet/NC1_MissionASA.xsd   .\Objet/NC1_MissionASS.xsd   .\Objet/NC1_Obstacle.xsd   .\Objet/NC1_Organisation.xsd   .\Objet/NC1_Reinforcement.xsd   .\Objet/NC1_Roe.xsd   .\Objet/NC1_Route.xsd   .\Objet/NC1_SeaParticipant.xsd   .\Objet/NC1_SeaTrack.xsd   .\Objet/NC1_TacArea.xsd   .\Objet/NC1_TacLine.xsd   .\Objet/NC1_TacPoint.xsd   .\Objet/NC1_Unit.xsd  .\Message/NC1_BFT.xsd  /o:.\generated\Message/ 
+Microsoft (R) Xml Schemas/DataTypes support utility
+[Microsoft (R) .NET Framework, Version 4.8.3928.0]
+Copyright (C) Microsoft Corporation. All rights reserved.
+êcriture du fichier '.\generated\Message/NC1_BFT.cs'.
+
+Pour plus d'informations, entrez "xsd /?".
+
+D:\repos\MyMissionPlaner\Models\NC1Components>xsd.exe /c .\Commun\2DCoordinationMean.xsd .\Commun\Cbrn.xsd .\Commun.\Common.xsd .\Commun.\Communication.xsd .\Commun\Ew.xsd .\Commun\Health.xsd .\Commun\Location.xsd .\Commun\Logistics.xsd .\Commun\Message.xsd .\Commun\Object.xsd .\Commun\Participant.xsd .\Commun\SICS_Dictionaries.xsd .\Commun\Track.xsd .\Commun/2DCoordinationMean.xsd .\Objet/NC1_AcmWez.xsd  .\Objet/NC1_AirParticipant.xsd  .\Objet/NC1_AirTrack.xsd  .\Objet/NC1_CbrnEvent.xsd   .\Objet/NC1_Convoy.xsd   .\Objet/NC1_Event.xsd   .\Objet/NC1_Facility.xsd   .\Objet/NC1_Fire.xsd   .\Objet/NC1_FireObjective.xsd   .\Objet/NC1_FreeShape.xsd   .\Objet/NC1_GroundEntity.xsd   .\Objet/NC1_GroundParticipant.xsd   .\Objet/NC1_GroundTrack.xsd   .\Objet/NC1_IffProcedure.xsd   .\Objet/NC1_Individual.xsd   .\Objet/NC1_IntelRequirement.xsd   .\Objet/NC1_Meteo.xsd   .\Objet/NC1_Mission.xsd   .\Objet/NC1_MissionASA.xsd   .\Objet/NC1_MissionASS.xsd   .\Objet/NC1_Obstacle.xsd   .\Objet/NC1_Organisation.xsd   .\Objet/NC1_Reinforcement.xsd   .\Objet/NC1_Roe.xsd   .\Objet/NC1_Route.xsd   .\Objet/NC1_SeaParticipant.xsd   .\Objet/NC1_SeaTrack.xsd   .\Objet/NC1_TacArea.xsd   .\Objet/NC1_TacLine.xsd   .\Objet/NC1_TacPoint.xsd   .\Objet/NC1_Unit.xsd  .\Message/NC1_BOAP.xsd  /o:.\generated\Message/ 
+Microsoft (R) Xml Schemas/DataTypes support utility
+[Microsoft (R) .NET Framework, Version 4.8.3928.0]
+Copyright (C) Microsoft Corporation. All rights reserved.
+Avertissement de validation de schÇmaˇ: Le type 'urn:fra:nc1:message:technoap:DropZoneMarkingType' n'est pas dÇclarÇ. ligne 289, position 20.
+Avertissement de validation de schÇmaˇ: Le type 'urn:fra:nc1:message:technoap:DropZoneType' n'est pas dÇclarÇ. ligne 265, position 20.
+Avertissement de validation de schÇmaˇ: Le type 'urn:fra:nc1:message:technoap:DropConditionsType' n'est pas dÇclarÇ. ligne 231, position 20.
+
+Avertissementˇ: le schÇma n'a pas pu àtre validÇ. Il est possible que la gÇnÇration de classe Çchoue ou produise des rÇsultats incorrects.
+
+
+Pour plus d'informations, entrez "xsd /?".
+
+D:\repos\MyMissionPlaner\Models\NC1Components>xsd.exe /c .\Commun\2DCoordinationMean.xsd .\Commun\Cbrn.xsd .\Commun.\Common.xsd .\Commun.\Communication.xsd .\Commun\Ew.xsd .\Commun\Health.xsd .\Commun\Location.xsd .\Commun\Logistics.xsd .\Commun\Message.xsd .\Commun\Object.xsd .\Commun\Participant.xsd .\Commun\SICS_Dictionaries.xsd .\Commun\Track.xsd .\Commun/2DCoordinationMean.xsd .\Objet/NC1_AcmWez.xsd  .\Objet/NC1_AirParticipant.xsd  .\Objet/NC1_AirTrack.xsd  .\Objet/NC1_CbrnEvent.xsd   .\Objet/NC1_Convoy.xsd   .\Objet/NC1_Event.xsd   .\Objet/NC1_Facility.xsd   .\Objet/NC1_Fire.xsd   .\Objet/NC1_FireObjective.xsd   .\Objet/NC1_FreeShape.xsd   .\Objet/NC1_GroundEntity.xsd   .\Objet/NC1_GroundParticipant.xsd   .\Objet/NC1_GroundTrack.xsd   .\Objet/NC1_IffProcedure.xsd   .\Objet/NC1_Individual.xsd   .\Objet/NC1_IntelRequirement.xsd   .\Objet/NC1_Meteo.xsd   .\Objet/NC1_Mission.xsd   .\Objet/NC1_MissionASA.xsd   .\Objet/NC1_MissionASS.xsd   .\Objet/NC1_Obstacle.xsd   .\Objet/NC1_Organisation.xsd   .\Objet/NC1_Reinforcement.xsd   .\Objet/NC1_Roe.xsd   .\Objet/NC1_Route.xsd   .\Objet/NC1_SeaParticipant.xsd   .\Objet/NC1_SeaTrack.xsd   .\Objet/NC1_TacArea.xsd   .\Objet/NC1_TacLine.xsd   .\Objet/NC1_TacPoint.xsd   .\Objet/NC1_Unit.xsd  .\Message/NC1_CallForFire.xsd  /o:.\generated\Message/ 
+Microsoft (R) Xml Schemas/DataTypes support utility
+[Microsoft (R) .NET Framework, Version 4.8.3928.0]
+Copyright (C) Microsoft Corporation. All rights reserved.
+êcriture du fichier '.\generated\Message/NC1_CallForFire.cs'.
+
+Pour plus d'informations, entrez "xsd /?".
+
+D:\repos\MyMissionPlaner\Models\NC1Components>xsd.exe /c .\Commun\2DCoordinationMean.xsd .\Commun\Cbrn.xsd .\Commun.\Common.xsd .\Commun.\Communication.xsd .\Commun\Ew.xsd .\Commun\Health.xsd .\Commun\Location.xsd .\Commun\Logistics.xsd .\Commun\Message.xsd .\Commun\Object.xsd .\Commun\Participant.xsd .\Commun\SICS_Dictionaries.xsd .\Commun\Track.xsd .\Commun/2DCoordinationMean.xsd .\Objet/NC1_AcmWez.xsd  .\Objet/NC1_AirParticipant.xsd  .\Objet/NC1_AirTrack.xsd  .\Objet/NC1_CbrnEvent.xsd   .\Objet/NC1_Convoy.xsd   .\Objet/NC1_Event.xsd   .\Objet/NC1_Facility.xsd   .\Objet/NC1_Fire.xsd   .\Objet/NC1_FireObjective.xsd   .\Objet/NC1_FreeShape.xsd   .\Objet/NC1_GroundEntity.xsd   .\Objet/NC1_GroundParticipant.xsd   .\Objet/NC1_GroundTrack.xsd   .\Objet/NC1_IffProcedure.xsd   .\Objet/NC1_Individual.xsd   .\Objet/NC1_IntelRequirement.xsd   .\Objet/NC1_Meteo.xsd   .\Objet/NC1_Mission.xsd   .\Objet/NC1_MissionASA.xsd   .\Objet/NC1_MissionASS.xsd   .\Objet/NC1_Obstacle.xsd   .\Objet/NC1_Organisation.xsd   .\Objet/NC1_Reinforcement.xsd   .\Objet/NC1_Roe.xsd   .\Objet/NC1_Route.xsd   .\Objet/NC1_SeaParticipant.xsd   .\Objet/NC1_SeaTrack.xsd   .\Objet/NC1_TacArea.xsd   .\Objet/NC1_TacLine.xsd   .\Objet/NC1_TacPoint.xsd   .\Objet/NC1_Unit.xsd  .\Message/NC1_CBRN-1-BIO.xsd  /o:.\generated\Message/ 
+Microsoft (R) Xml Schemas/DataTypes support utility
+[Microsoft (R) .NET Framework, Version 4.8.3928.0]
+Copyright (C) Microsoft Corporation. All rights reserved.
+êcriture du fichier '.\generated\Message/NC1_CBRN-1-BIO.cs'.
+
+Pour plus d'informations, entrez "xsd /?".
+
+D:\repos\MyMissionPlaner\Models\NC1Components>xsd.exe /c .\Commun\2DCoordinationMean.xsd .\Commun\Cbrn.xsd .\Commun.\Common.xsd .\Commun.\Communication.xsd .\Commun\Ew.xsd .\Commun\Health.xsd .\Commun\Location.xsd .\Commun\Logistics.xsd .\Commun\Message.xsd .\Commun\Object.xsd .\Commun\Participant.xsd .\Commun\SICS_Dictionaries.xsd .\Commun\Track.xsd .\Commun/2DCoordinationMean.xsd .\Objet/NC1_AcmWez.xsd  .\Objet/NC1_AirParticipant.xsd  .\Objet/NC1_AirTrack.xsd  .\Objet/NC1_CbrnEvent.xsd   .\Objet/NC1_Convoy.xsd   .\Objet/NC1_Event.xsd   .\Objet/NC1_Facility.xsd   .\Objet/NC1_Fire.xsd   .\Objet/NC1_FireObjective.xsd   .\Objet/NC1_FreeShape.xsd   .\Objet/NC1_GroundEntity.xsd   .\Objet/NC1_GroundParticipant.xsd   .\Objet/NC1_GroundTrack.xsd   .\Objet/NC1_IffProcedure.xsd   .\Objet/NC1_Individual.xsd   .\Objet/NC1_IntelRequirement.xsd   .\Objet/NC1_Meteo.xsd   .\Objet/NC1_Mission.xsd   .\Objet/NC1_MissionASA.xsd   .\Objet/NC1_MissionASS.xsd   .\Objet/NC1_Obstacle.xsd   .\Objet/NC1_Organisation.xsd   .\Objet/NC1_Reinforcement.xsd   .\Objet/NC1_Roe.xsd   .\Objet/NC1_Route.xsd   .\Objet/NC1_SeaParticipant.xsd   .\Objet/NC1_SeaTrack.xsd   .\Objet/NC1_TacArea.xsd   .\Objet/NC1_TacLine.xsd   .\Objet/NC1_TacPoint.xsd   .\Objet/NC1_Unit.xsd  .\Message/NC1_CBRN-3-BIO.xsd  /o:.\generated\Message/ 
+Microsoft (R) Xml Schemas/DataTypes support utility
+[Microsoft (R) .NET Framework, Version 4.8.3928.0]
+Copyright (C) Microsoft Corporation. All rights reserved.
+êcriture du fichier '.\generated\Message/NC1_CBRN-3-BIO.cs'.
+
+Pour plus d'informations, entrez "xsd /?".
+
+D:\repos\MyMissionPlaner\Models\NC1Components>xsd.exe /c .\Commun\2DCoordinationMean.xsd .\Commun\Cbrn.xsd .\Commun.\Common.xsd .\Commun.\Communication.xsd .\Commun\Ew.xsd .\Commun\Health.xsd .\Commun\Location.xsd .\Commun\Logistics.xsd .\Commun\Message.xsd .\Commun\Object.xsd .\Commun\Participant.xsd .\Commun\SICS_Dictionaries.xsd .\Commun\Track.xsd .\Commun/2DCoordinationMean.xsd .\Objet/NC1_AcmWez.xsd  .\Objet/NC1_AirParticipant.xsd  .\Objet/NC1_AirTrack.xsd  .\Objet/NC1_CbrnEvent.xsd   .\Objet/NC1_Convoy.xsd   .\Objet/NC1_Event.xsd   .\Objet/NC1_Facility.xsd   .\Objet/NC1_Fire.xsd   .\Objet/NC1_FireObjective.xsd   .\Objet/NC1_FreeShape.xsd   .\Objet/NC1_GroundEntity.xsd   .\Objet/NC1_GroundParticipant.xsd   .\Objet/NC1_GroundTrack.xsd   .\Objet/NC1_IffProcedure.xsd   .\Objet/NC1_Individual.xsd   .\Objet/NC1_IntelRequirement.xsd   .\Objet/NC1_Meteo.xsd   .\Objet/NC1_Mission.xsd   .\Objet/NC1_MissionASA.xsd   .\Objet/NC1_MissionASS.xsd   .\Objet/NC1_Obstacle.xsd   .\Objet/NC1_Organisation.xsd   .\Objet/NC1_Reinforcement.xsd   .\Objet/NC1_Roe.xsd   .\Objet/NC1_Route.xsd   .\Objet/NC1_SeaParticipant.xsd   .\Objet/NC1_SeaTrack.xsd   .\Objet/NC1_TacArea.xsd   .\Objet/NC1_TacLine.xsd   .\Objet/NC1_TacPoint.xsd   .\Objet/NC1_Unit.xsd  .\Message/NC1_CBRN-4-BIO.xsd  /o:.\generated\Message/ 
+Microsoft (R) Xml Schemas/DataTypes support utility
+[Microsoft (R) .NET Framework, Version 4.8.3928.0]
+Copyright (C) Microsoft Corporation. All rights reserved.
+êcriture du fichier '.\generated\Message/NC1_CBRN-4-BIO.cs'.
+
+Pour plus d'informations, entrez "xsd /?".
+
+D:\repos\MyMissionPlaner\Models\NC1Components>xsd.exe /c .\Commun\2DCoordinationMean.xsd .\Commun\Cbrn.xsd .\Commun.\Common.xsd .\Commun.\Communication.xsd .\Commun\Ew.xsd .\Commun\Health.xsd .\Commun\Location.xsd .\Commun\Logistics.xsd .\Commun\Message.xsd .\Commun\Object.xsd .\Commun\Participant.xsd .\Commun\SICS_Dictionaries.xsd .\Commun\Track.xsd .\Commun/2DCoordinationMean.xsd .\Objet/NC1_AcmWez.xsd  .\Objet/NC1_AirParticipant.xsd  .\Objet/NC1_AirTrack.xsd  .\Objet/NC1_CbrnEvent.xsd   .\Objet/NC1_Convoy.xsd   .\Objet/NC1_Event.xsd   .\Objet/NC1_Facility.xsd   .\Objet/NC1_Fire.xsd   .\Objet/NC1_FireObjective.xsd   .\Objet/NC1_FreeShape.xsd   .\Objet/NC1_GroundEntity.xsd   .\Objet/NC1_GroundParticipant.xsd   .\Objet/NC1_GroundTrack.xsd   .\Objet/NC1_IffProcedure.xsd   .\Objet/NC1_Individual.xsd   .\Objet/NC1_IntelRequirement.xsd   .\Objet/NC1_Meteo.xsd   .\Objet/NC1_Mission.xsd   .\Objet/NC1_MissionASA.xsd   .\Objet/NC1_MissionASS.xsd   .\Objet/NC1_Obstacle.xsd   .\Objet/NC1_Organisation.xsd   .\Objet/NC1_Reinforcement.xsd   .\Objet/NC1_Roe.xsd   .\Objet/NC1_Route.xsd   .\Objet/NC1_SeaParticipant.xsd   .\Objet/NC1_SeaTrack.xsd   .\Objet/NC1_TacArea.xsd   .\Objet/NC1_TacLine.xsd   .\Objet/NC1_TacPoint.xsd   .\Objet/NC1_Unit.xsd  .\Message/NC1_CBRN-5-BIO.xsd  /o:.\generated\Message/ 
+Microsoft (R) Xml Schemas/DataTypes support utility
+[Microsoft (R) .NET Framework, Version 4.8.3928.0]
+Copyright (C) Microsoft Corporation. All rights reserved.
+êcriture du fichier '.\generated\Message/NC1_CBRN-5-BIO.cs'.
+
+Pour plus d'informations, entrez "xsd /?".
+
+D:\repos\MyMissionPlaner\Models\NC1Components>xsd.exe /c .\Commun\2DCoordinationMean.xsd .\Commun\Cbrn.xsd .\Commun.\Common.xsd .\Commun.\Communication.xsd .\Commun\Ew.xsd .\Commun\Health.xsd .\Commun\Location.xsd .\Commun\Logistics.xsd .\Commun\Message.xsd .\Commun\Object.xsd .\Commun\Participant.xsd .\Commun\SICS_Dictionaries.xsd .\Commun\Track.xsd .\Commun/2DCoordinationMean.xsd .\Objet/NC1_AcmWez.xsd  .\Objet/NC1_AirParticipant.xsd  .\Objet/NC1_AirTrack.xsd  .\Objet/NC1_CbrnEvent.xsd   .\Objet/NC1_Convoy.xsd   .\Objet/NC1_Event.xsd   .\Objet/NC1_Facility.xsd   .\Objet/NC1_Fire.xsd   .\Objet/NC1_FireObjective.xsd   .\Objet/NC1_FreeShape.xsd   .\Objet/NC1_GroundEntity.xsd   .\Objet/NC1_GroundParticipant.xsd   .\Objet/NC1_GroundTrack.xsd   .\Objet/NC1_IffProcedure.xsd   .\Objet/NC1_Individual.xsd   .\Objet/NC1_IntelRequirement.xsd   .\Objet/NC1_Meteo.xsd   .\Objet/NC1_Mission.xsd   .\Objet/NC1_MissionASA.xsd   .\Objet/NC1_MissionASS.xsd   .\Objet/NC1_Obstacle.xsd   .\Objet/NC1_Organisation.xsd   .\Objet/NC1_Reinforcement.xsd   .\Objet/NC1_Roe.xsd   .\Objet/NC1_Route.xsd   .\Objet/NC1_SeaParticipant.xsd   .\Objet/NC1_SeaTrack.xsd   .\Objet/NC1_TacArea.xsd   .\Objet/NC1_TacLine.xsd   .\Objet/NC1_TacPoint.xsd   .\Objet/NC1_Unit.xsd  .\Message/NC1_CBRN-1-CHEM.xsd  /o:.\generated\Message/ 
+Microsoft (R) Xml Schemas/DataTypes support utility
+[Microsoft (R) .NET Framework, Version 4.8.3928.0]
+Copyright (C) Microsoft Corporation. All rights reserved.
+êcriture du fichier '.\generated\Message/NC1_CBRN-1-CHEM.cs'.
+
+Pour plus d'informations, entrez "xsd /?".
+
+D:\repos\MyMissionPlaner\Models\NC1Components>xsd.exe /c .\Commun\2DCoordinationMean.xsd .\Commun\Cbrn.xsd .\Commun.\Common.xsd .\Commun.\Communication.xsd .\Commun\Ew.xsd .\Commun\Health.xsd .\Commun\Location.xsd .\Commun\Logistics.xsd .\Commun\Message.xsd .\Commun\Object.xsd .\Commun\Participant.xsd .\Commun\SICS_Dictionaries.xsd .\Commun\Track.xsd .\Commun/2DCoordinationMean.xsd .\Objet/NC1_AcmWez.xsd  .\Objet/NC1_AirParticipant.xsd  .\Objet/NC1_AirTrack.xsd  .\Objet/NC1_CbrnEvent.xsd   .\Objet/NC1_Convoy.xsd   .\Objet/NC1_Event.xsd   .\Objet/NC1_Facility.xsd   .\Objet/NC1_Fire.xsd   .\Objet/NC1_FireObjective.xsd   .\Objet/NC1_FreeShape.xsd   .\Objet/NC1_GroundEntity.xsd   .\Objet/NC1_GroundParticipant.xsd   .\Objet/NC1_GroundTrack.xsd   .\Objet/NC1_IffProcedure.xsd   .\Objet/NC1_Individual.xsd   .\Objet/NC1_IntelRequirement.xsd   .\Objet/NC1_Meteo.xsd   .\Objet/NC1_Mission.xsd   .\Objet/NC1_MissionASA.xsd   .\Objet/NC1_MissionASS.xsd   .\Objet/NC1_Obstacle.xsd   .\Objet/NC1_Organisation.xsd   .\Objet/NC1_Reinforcement.xsd   .\Objet/NC1_Roe.xsd   .\Objet/NC1_Route.xsd   .\Objet/NC1_SeaParticipant.xsd   .\Objet/NC1_SeaTrack.xsd   .\Objet/NC1_TacArea.xsd   .\Objet/NC1_TacLine.xsd   .\Objet/NC1_TacPoint.xsd   .\Objet/NC1_Unit.xsd  .\Message/NC1_CBRN-3-CHEM.xsd  /o:.\generated\Message/ 
+Microsoft (R) Xml Schemas/DataTypes support utility
+[Microsoft (R) .NET Framework, Version 4.8.3928.0]
+Copyright (C) Microsoft Corporation. All rights reserved.
+êcriture du fichier '.\generated\Message/NC1_CBRN-3-CHEM.cs'.
+
+Pour plus d'informations, entrez "xsd /?".
+
+D:\repos\MyMissionPlaner\Models\NC1Components>xsd.exe /c .\Commun\2DCoordinationMean.xsd .\Commun\Cbrn.xsd .\Commun.\Common.xsd .\Commun.\Communication.xsd .\Commun\Ew.xsd .\Commun\Health.xsd .\Commun\Location.xsd .\Commun\Logistics.xsd .\Commun\Message.xsd .\Commun\Object.xsd .\Commun\Participant.xsd .\Commun\SICS_Dictionaries.xsd .\Commun\Track.xsd .\Commun/2DCoordinationMean.xsd .\Objet/NC1_AcmWez.xsd  .\Objet/NC1_AirParticipant.xsd  .\Objet/NC1_AirTrack.xsd  .\Objet/NC1_CbrnEvent.xsd   .\Objet/NC1_Convoy.xsd   .\Objet/NC1_Event.xsd   .\Objet/NC1_Facility.xsd   .\Objet/NC1_Fire.xsd   .\Objet/NC1_FireObjective.xsd   .\Objet/NC1_FreeShape.xsd   .\Objet/NC1_GroundEntity.xsd   .\Objet/NC1_GroundParticipant.xsd   .\Objet/NC1_GroundTrack.xsd   .\Objet/NC1_IffProcedure.xsd   .\Objet/NC1_Individual.xsd   .\Objet/NC1_IntelRequirement.xsd   .\Objet/NC1_Meteo.xsd   .\Objet/NC1_Mission.xsd   .\Objet/NC1_MissionASA.xsd   .\Objet/NC1_MissionASS.xsd   .\Objet/NC1_Obstacle.xsd   .\Objet/NC1_Organisation.xsd   .\Objet/NC1_Reinforcement.xsd   .\Objet/NC1_Roe.xsd   .\Objet/NC1_Route.xsd   .\Objet/NC1_SeaParticipant.xsd   .\Objet/NC1_SeaTrack.xsd   .\Objet/NC1_TacArea.xsd   .\Objet/NC1_TacLine.xsd   .\Objet/NC1_TacPoint.xsd   .\Objet/NC1_Unit.xsd  .\Message/NC1_CBRN-4-CHEM.xsd  /o:.\generated\Message/ 
+Microsoft (R) Xml Schemas/DataTypes support utility
+[Microsoft (R) .NET Framework, Version 4.8.3928.0]
+Copyright (C) Microsoft Corporation. All rights reserved.
+êcriture du fichier '.\generated\Message/NC1_CBRN-4-CHEM.cs'.
+
+Pour plus d'informations, entrez "xsd /?".
+
+D:\repos\MyMissionPlaner\Models\NC1Components>xsd.exe /c .\Commun\2DCoordinationMean.xsd .\Commun\Cbrn.xsd .\Commun.\Common.xsd .\Commun.\Communication.xsd .\Commun\Ew.xsd .\Commun\Health.xsd .\Commun\Location.xsd .\Commun\Logistics.xsd .\Commun\Message.xsd .\Commun\Object.xsd .\Commun\Participant.xsd .\Commun\SICS_Dictionaries.xsd .\Commun\Track.xsd .\Commun/2DCoordinationMean.xsd .\Objet/NC1_AcmWez.xsd  .\Objet/NC1_AirParticipant.xsd  .\Objet/NC1_AirTrack.xsd  .\Objet/NC1_CbrnEvent.xsd   .\Objet/NC1_Convoy.xsd   .\Objet/NC1_Event.xsd   .\Objet/NC1_Facility.xsd   .\Objet/NC1_Fire.xsd   .\Objet/NC1_FireObjective.xsd   .\Objet/NC1_FreeShape.xsd   .\Objet/NC1_GroundEntity.xsd   .\Objet/NC1_GroundParticipant.xsd   .\Objet/NC1_GroundTrack.xsd   .\Objet/NC1_IffProcedure.xsd   .\Objet/NC1_Individual.xsd   .\Objet/NC1_IntelRequirement.xsd   .\Objet/NC1_Meteo.xsd   .\Objet/NC1_Mission.xsd   .\Objet/NC1_MissionASA.xsd   .\Objet/NC1_MissionASS.xsd   .\Objet/NC1_Obstacle.xsd   .\Objet/NC1_Organisation.xsd   .\Objet/NC1_Reinforcement.xsd   .\Objet/NC1_Roe.xsd   .\Objet/NC1_Route.xsd   .\Objet/NC1_SeaParticipant.xsd   .\Objet/NC1_SeaTrack.xsd   .\Objet/NC1_TacArea.xsd   .\Objet/NC1_TacLine.xsd   .\Objet/NC1_TacPoint.xsd   .\Objet/NC1_Unit.xsd  .\Message/NC1_CBRN-5-CHEM.xsd  /o:.\generated\Message/ 
+Microsoft (R) Xml Schemas/DataTypes support utility
+[Microsoft (R) .NET Framework, Version 4.8.3928.0]
+Copyright (C) Microsoft Corporation. All rights reserved.
+êcriture du fichier '.\generated\Message/NC1_CBRN-5-CHEM.cs'.
+
+Pour plus d'informations, entrez "xsd /?".
+
+D:\repos\MyMissionPlaner\Models\NC1Components>xsd.exe /c .\Commun\2DCoordinationMean.xsd .\Commun\Cbrn.xsd .\Commun.\Common.xsd .\Commun.\Communication.xsd .\Commun\Ew.xsd .\Commun\Health.xsd .\Commun\Location.xsd .\Commun\Logistics.xsd .\Commun\Message.xsd .\Commun\Object.xsd .\Commun\Participant.xsd .\Commun\SICS_Dictionaries.xsd .\Commun\Track.xsd .\Commun/2DCoordinationMean.xsd .\Objet/NC1_AcmWez.xsd  .\Objet/NC1_AirParticipant.xsd  .\Objet/NC1_AirTrack.xsd  .\Objet/NC1_CbrnEvent.xsd   .\Objet/NC1_Convoy.xsd   .\Objet/NC1_Event.xsd   .\Objet/NC1_Facility.xsd   .\Objet/NC1_Fire.xsd   .\Objet/NC1_FireObjective.xsd   .\Objet/NC1_FreeShape.xsd   .\Objet/NC1_GroundEntity.xsd   .\Objet/NC1_GroundParticipant.xsd   .\Objet/NC1_GroundTrack.xsd   .\Objet/NC1_IffProcedure.xsd   .\Objet/NC1_Individual.xsd   .\Objet/NC1_IntelRequirement.xsd   .\Objet/NC1_Meteo.xsd   .\Objet/NC1_Mission.xsd   .\Objet/NC1_MissionASA.xsd   .\Objet/NC1_MissionASS.xsd   .\Objet/NC1_Obstacle.xsd   .\Objet/NC1_Organisation.xsd   .\Objet/NC1_Reinforcement.xsd   .\Objet/NC1_Roe.xsd   .\Objet/NC1_Route.xsd   .\Objet/NC1_SeaParticipant.xsd   .\Objet/NC1_SeaTrack.xsd   .\Objet/NC1_TacArea.xsd   .\Objet/NC1_TacLine.xsd   .\Objet/NC1_TacPoint.xsd   .\Objet/NC1_Unit.xsd  .\Message/NC1_CBRN-CDR.xsd  /o:.\generated\Message/ 
+Microsoft (R) Xml Schemas/DataTypes support utility
+[Microsoft (R) .NET Framework, Version 4.8.3928.0]
+Copyright (C) Microsoft Corporation. All rights reserved.
+êcriture du fichier '.\generated\Message/NC1_CBRN-CDR.cs'.
+
+Pour plus d'informations, entrez "xsd /?".
+
+D:\repos\MyMissionPlaner\Models\NC1Components>xsd.exe /c .\Commun\2DCoordinationMean.xsd .\Commun\Cbrn.xsd .\Commun.\Common.xsd .\Commun.\Communication.xsd .\Commun\Ew.xsd .\Commun\Health.xsd .\Commun\Location.xsd .\Commun\Logistics.xsd .\Commun\Message.xsd .\Commun\Object.xsd .\Commun\Participant.xsd .\Commun\SICS_Dictionaries.xsd .\Commun\Track.xsd .\Commun/2DCoordinationMean.xsd .\Objet/NC1_AcmWez.xsd  .\Objet/NC1_AirParticipant.xsd  .\Objet/NC1_AirTrack.xsd  .\Objet/NC1_CbrnEvent.xsd   .\Objet/NC1_Convoy.xsd   .\Objet/NC1_Event.xsd   .\Objet/NC1_Facility.xsd   .\Objet/NC1_Fire.xsd   .\Objet/NC1_FireObjective.xsd   .\Objet/NC1_FreeShape.xsd   .\Objet/NC1_GroundEntity.xsd   .\Objet/NC1_GroundParticipant.xsd   .\Objet/NC1_GroundTrack.xsd   .\Objet/NC1_IffProcedure.xsd   .\Objet/NC1_Individual.xsd   .\Objet/NC1_IntelRequirement.xsd   .\Objet/NC1_Meteo.xsd   .\Objet/NC1_Mission.xsd   .\Objet/NC1_MissionASA.xsd   .\Objet/NC1_MissionASS.xsd   .\Objet/NC1_Obstacle.xsd   .\Objet/NC1_Organisation.xsd   .\Objet/NC1_Reinforcement.xsd   .\Objet/NC1_Roe.xsd   .\Objet/NC1_Route.xsd   .\Objet/NC1_SeaParticipant.xsd   .\Objet/NC1_SeaTrack.xsd   .\Objet/NC1_TacArea.xsd   .\Objet/NC1_TacLine.xsd   .\Objet/NC1_TacPoint.xsd   .\Objet/NC1_Unit.xsd  .\Message/NC1_CBRN-SITREP.xsd  /o:.\generated\Message/ 
+Microsoft (R) Xml Schemas/DataTypes support utility
+[Microsoft (R) .NET Framework, Version 4.8.3928.0]
+Copyright (C) Microsoft Corporation. All rights reserved.
+êcriture du fichier '.\generated\Message/NC1_CBRN-SITREP.cs'.
+
+Pour plus d'informations, entrez "xsd /?".
+
+D:\repos\MyMissionPlaner\Models\NC1Components>xsd.exe /c .\Commun\2DCoordinationMean.xsd .\Commun\Cbrn.xsd .\Commun.\Common.xsd .\Commun.\Communication.xsd .\Commun\Ew.xsd .\Commun\Health.xsd .\Commun\Location.xsd .\Commun\Logistics.xsd .\Commun\Message.xsd .\Commun\Object.xsd .\Commun\Participant.xsd .\Commun\SICS_Dictionaries.xsd .\Commun\Track.xsd .\Commun/2DCoordinationMean.xsd .\Objet/NC1_AcmWez.xsd  .\Objet/NC1_AirParticipant.xsd  .\Objet/NC1_AirTrack.xsd  .\Objet/NC1_CbrnEvent.xsd   .\Objet/NC1_Convoy.xsd   .\Objet/NC1_Event.xsd   .\Objet/NC1_Facility.xsd   .\Objet/NC1_Fire.xsd   .\Objet/NC1_FireObjective.xsd   .\Objet/NC1_FreeShape.xsd   .\Objet/NC1_GroundEntity.xsd   .\Objet/NC1_GroundParticipant.xsd   .\Objet/NC1_GroundTrack.xsd   .\Objet/NC1_IffProcedure.xsd   .\Objet/NC1_Individual.xsd   .\Objet/NC1_IntelRequirement.xsd   .\Objet/NC1_Meteo.xsd   .\Objet/NC1_Mission.xsd   .\Objet/NC1_MissionASA.xsd   .\Objet/NC1_MissionASS.xsd   .\Objet/NC1_Obstacle.xsd   .\Objet/NC1_Organisation.xsd   .\Objet/NC1_Reinforcement.xsd   .\Objet/NC1_Roe.xsd   .\Objet/NC1_Route.xsd   .\Objet/NC1_SeaParticipant.xsd   .\Objet/NC1_SeaTrack.xsd   .\Objet/NC1_TacArea.xsd   .\Objet/NC1_TacLine.xsd   .\Objet/NC1_TacPoint.xsd   .\Objet/NC1_Unit.xsd  .\Message/NC1_CCA-CARD.xsd  /o:.\generated\Message/ 
+Microsoft (R) Xml Schemas/DataTypes support utility
+[Microsoft (R) .NET Framework, Version 4.8.3928.0]
+Copyright (C) Microsoft Corporation. All rights reserved.
+êcriture du fichier '.\generated\Message/NC1_CCA-CARD.cs'.
+
+Pour plus d'informations, entrez "xsd /?".
+
+D:\repos\MyMissionPlaner\Models\NC1Components>xsd.exe /c .\Commun\2DCoordinationMean.xsd .\Commun\Cbrn.xsd .\Commun.\Common.xsd .\Commun.\Communication.xsd .\Commun\Ew.xsd .\Commun\Health.xsd .\Commun\Location.xsd .\Commun\Logistics.xsd .\Commun\Message.xsd .\Commun\Object.xsd .\Commun\Participant.xsd .\Commun\SICS_Dictionaries.xsd .\Commun\Track.xsd .\Commun/2DCoordinationMean.xsd .\Objet/NC1_AcmWez.xsd  .\Objet/NC1_AirParticipant.xsd  .\Objet/NC1_AirTrack.xsd  .\Objet/NC1_CbrnEvent.xsd   .\Objet/NC1_Convoy.xsd   .\Objet/NC1_Event.xsd   .\Objet/NC1_Facility.xsd   .\Objet/NC1_Fire.xsd   .\Objet/NC1_FireObjective.xsd   .\Objet/NC1_FreeShape.xsd   .\Objet/NC1_GroundEntity.xsd   .\Objet/NC1_GroundParticipant.xsd   .\Objet/NC1_GroundTrack.xsd   .\Objet/NC1_IffProcedure.xsd   .\Objet/NC1_Individual.xsd   .\Objet/NC1_IntelRequirement.xsd   .\Objet/NC1_Meteo.xsd   .\Objet/NC1_Mission.xsd   .\Objet/NC1_MissionASA.xsd   .\Objet/NC1_MissionASS.xsd   .\Objet/NC1_Obstacle.xsd   .\Objet/NC1_Organisation.xsd   .\Objet/NC1_Reinforcement.xsd   .\Objet/NC1_Roe.xsd   .\Objet/NC1_Route.xsd   .\Objet/NC1_SeaParticipant.xsd   .\Objet/NC1_SeaTrack.xsd   .\Objet/NC1_TacArea.xsd   .\Objet/NC1_TacLine.xsd   .\Objet/NC1_TacPoint.xsd   .\Objet/NC1_Unit.xsd  .\Message/NC1_ConARep.xsd  /o:.\generated\Message/ 
+Microsoft (R) Xml Schemas/DataTypes support utility
+[Microsoft (R) .NET Framework, Version 4.8.3928.0]
+Copyright (C) Microsoft Corporation. All rights reserved.
+êcriture du fichier '.\generated\Message/NC1_ConARep.cs'.
+
+Pour plus d'informations, entrez "xsd /?".
+
+D:\repos\MyMissionPlaner\Models\NC1Components>xsd.exe /c .\Commun\2DCoordinationMean.xsd .\Commun\Cbrn.xsd .\Commun.\Common.xsd .\Commun.\Communication.xsd .\Commun\Ew.xsd .\Commun\Health.xsd .\Commun\Location.xsd .\Commun\Logistics.xsd .\Commun\Message.xsd .\Commun\Object.xsd .\Commun\Participant.xsd .\Commun\SICS_Dictionaries.xsd .\Commun\Track.xsd .\Commun/2DCoordinationMean.xsd .\Objet/NC1_AcmWez.xsd  .\Objet/NC1_AirParticipant.xsd  .\Objet/NC1_AirTrack.xsd  .\Objet/NC1_CbrnEvent.xsd   .\Objet/NC1_Convoy.xsd   .\Objet/NC1_Event.xsd   .\Objet/NC1_Facility.xsd   .\Objet/NC1_Fire.xsd   .\Objet/NC1_FireObjective.xsd   .\Objet/NC1_FreeShape.xsd   .\Objet/NC1_GroundEntity.xsd   .\Objet/NC1_GroundParticipant.xsd   .\Objet/NC1_GroundTrack.xsd   .\Objet/NC1_IffProcedure.xsd   .\Objet/NC1_Individual.xsd   .\Objet/NC1_IntelRequirement.xsd   .\Objet/NC1_Meteo.xsd   .\Objet/NC1_Mission.xsd   .\Objet/NC1_MissionASA.xsd   .\Objet/NC1_MissionASS.xsd   .\Objet/NC1_Obstacle.xsd   .\Objet/NC1_Organisation.xsd   .\Objet/NC1_Reinforcement.xsd   .\Objet/NC1_Roe.xsd   .\Objet/NC1_Route.xsd   .\Objet/NC1_SeaParticipant.xsd   .\Objet/NC1_SeaTrack.xsd   .\Objet/NC1_TacArea.xsd   .\Objet/NC1_TacLine.xsd   .\Objet/NC1_TacPoint.xsd   .\Objet/NC1_Unit.xsd  .\Message/NC1_ConOps.xsd  /o:.\generated\Message/ 
+Microsoft (R) Xml Schemas/DataTypes support utility
+[Microsoft (R) .NET Framework, Version 4.8.3928.0]
+Copyright (C) Microsoft Corporation. All rights reserved.
+Avertissement de validation de schÇmaˇ: Le type 'urn:fra:nc1:message:opord:TaskOrganisationMemberSimplifiedType' n'est pas dÇclarÇ. ligne 36, position 20.
+
+Avertissementˇ: le schÇma n'a pas pu àtre validÇ. Il est possible que la gÇnÇration de classe Çchoue ou produise des rÇsultats incorrects.
+
+
+Pour plus d'informations, entrez "xsd /?".
+
+D:\repos\MyMissionPlaner\Models\NC1Components>xsd.exe /c .\Commun\2DCoordinationMean.xsd .\Commun\Cbrn.xsd .\Commun.\Common.xsd .\Commun.\Communication.xsd .\Commun\Ew.xsd .\Commun\Health.xsd .\Commun\Location.xsd .\Commun\Logistics.xsd .\Commun\Message.xsd .\Commun\Object.xsd .\Commun\Participant.xsd .\Commun\SICS_Dictionaries.xsd .\Commun\Track.xsd .\Commun/2DCoordinationMean.xsd .\Objet/NC1_AcmWez.xsd  .\Objet/NC1_AirParticipant.xsd  .\Objet/NC1_AirTrack.xsd  .\Objet/NC1_CbrnEvent.xsd   .\Objet/NC1_Convoy.xsd   .\Objet/NC1_Event.xsd   .\Objet/NC1_Facility.xsd   .\Objet/NC1_Fire.xsd   .\Objet/NC1_FireObjective.xsd   .\Objet/NC1_FreeShape.xsd   .\Objet/NC1_GroundEntity.xsd   .\Objet/NC1_GroundParticipant.xsd   .\Objet/NC1_GroundTrack.xsd   .\Objet/NC1_IffProcedure.xsd   .\Objet/NC1_Individual.xsd   .\Objet/NC1_IntelRequirement.xsd   .\Objet/NC1_Meteo.xsd   .\Objet/NC1_Mission.xsd   .\Objet/NC1_MissionASA.xsd   .\Objet/NC1_MissionASS.xsd   .\Objet/NC1_Obstacle.xsd   .\Objet/NC1_Organisation.xsd   .\Objet/NC1_Reinforcement.xsd   .\Objet/NC1_Roe.xsd   .\Objet/NC1_Route.xsd   .\Objet/NC1_SeaParticipant.xsd   .\Objet/NC1_SeaTrack.xsd   .\Objet/NC1_TacArea.xsd   .\Objet/NC1_TacLine.xsd   .\Objet/NC1_TacPoint.xsd   .\Objet/NC1_Unit.xsd  .\Message/NC1_CreationItsAts.xsd  /o:.\generated\Message/ 
+Microsoft (R) Xml Schemas/DataTypes support utility
+[Microsoft (R) .NET Framework, Version 4.8.3928.0]
+Copyright (C) Microsoft Corporation. All rights reserved.
+êcriture du fichier '.\generated\Message/NC1_CreationItsAts.cs'.
+
+Pour plus d'informations, entrez "xsd /?".
+
+D:\repos\MyMissionPlaner\Models\NC1Components>xsd.exe /c .\Commun\2DCoordinationMean.xsd .\Commun\Cbrn.xsd .\Commun.\Common.xsd .\Commun.\Communication.xsd .\Commun\Ew.xsd .\Commun\Health.xsd .\Commun\Location.xsd .\Commun\Logistics.xsd .\Commun\Message.xsd .\Commun\Object.xsd .\Commun\Participant.xsd .\Commun\SICS_Dictionaries.xsd .\Commun\Track.xsd .\Commun/2DCoordinationMean.xsd .\Objet/NC1_AcmWez.xsd  .\Objet/NC1_AirParticipant.xsd  .\Objet/NC1_AirTrack.xsd  .\Objet/NC1_CbrnEvent.xsd   .\Objet/NC1_Convoy.xsd   .\Objet/NC1_Event.xsd   .\Objet/NC1_Facility.xsd   .\Objet/NC1_Fire.xsd   .\Objet/NC1_FireObjective.xsd   .\Objet/NC1_FreeShape.xsd   .\Objet/NC1_GroundEntity.xsd   .\Objet/NC1_GroundParticipant.xsd   .\Objet/NC1_GroundTrack.xsd   .\Objet/NC1_IffProcedure.xsd   .\Objet/NC1_Individual.xsd   .\Objet/NC1_IntelRequirement.xsd   .\Objet/NC1_Meteo.xsd   .\Objet/NC1_Mission.xsd   .\Objet/NC1_MissionASA.xsd   .\Objet/NC1_MissionASS.xsd   .\Objet/NC1_Obstacle.xsd   .\Objet/NC1_Organisation.xsd   .\Objet/NC1_Reinforcement.xsd   .\Objet/NC1_Roe.xsd   .\Objet/NC1_Route.xsd   .\Objet/NC1_SeaParticipant.xsd   .\Objet/NC1_SeaTrack.xsd   .\Objet/NC1_TacArea.xsd   .\Objet/NC1_TacLine.xsd   .\Objet/NC1_TacPoint.xsd   .\Objet/NC1_Unit.xsd  .\Message/NC1_DemaLOrd.xsd  /o:.\generated\Message/ 
+Microsoft (R) Xml Schemas/DataTypes support utility
+[Microsoft (R) .NET Framework, Version 4.8.3928.0]
+Copyright (C) Microsoft Corporation. All rights reserved.
+êcriture du fichier '.\generated\Message/NC1_DemaLOrd.cs'.
+
+Pour plus d'informations, entrez "xsd /?".
+
+D:\repos\MyMissionPlaner\Models\NC1Components>xsd.exe /c .\Commun\2DCoordinationMean.xsd .\Commun\Cbrn.xsd .\Commun.\Common.xsd .\Commun.\Communication.xsd .\Commun\Ew.xsd .\Commun\Health.xsd .\Commun\Location.xsd .\Commun\Logistics.xsd .\Commun\Message.xsd .\Commun\Object.xsd .\Commun\Participant.xsd .\Commun\SICS_Dictionaries.xsd .\Commun\Track.xsd .\Commun/2DCoordinationMean.xsd .\Objet/NC1_AcmWez.xsd  .\Objet/NC1_AirParticipant.xsd  .\Objet/NC1_AirTrack.xsd  .\Objet/NC1_CbrnEvent.xsd   .\Objet/NC1_Convoy.xsd   .\Objet/NC1_Event.xsd   .\Objet/NC1_Facility.xsd   .\Objet/NC1_Fire.xsd   .\Objet/NC1_FireObjective.xsd   .\Objet/NC1_FreeShape.xsd   .\Objet/NC1_GroundEntity.xsd   .\Objet/NC1_GroundParticipant.xsd   .\Objet/NC1_GroundTrack.xsd   .\Objet/NC1_IffProcedure.xsd   .\Objet/NC1_Individual.xsd   .\Objet/NC1_IntelRequirement.xsd   .\Objet/NC1_Meteo.xsd   .\Objet/NC1_Mission.xsd   .\Objet/NC1_MissionASA.xsd   .\Objet/NC1_MissionASS.xsd   .\Objet/NC1_Obstacle.xsd   .\Objet/NC1_Organisation.xsd   .\Objet/NC1_Reinforcement.xsd   .\Objet/NC1_Roe.xsd   .\Objet/NC1_Route.xsd   .\Objet/NC1_SeaParticipant.xsd   .\Objet/NC1_SeaTrack.xsd   .\Objet/NC1_TacArea.xsd   .\Objet/NC1_TacLine.xsd   .\Objet/NC1_TacPoint.xsd   .\Objet/NC1_Unit.xsd  .\Message/NC1_DEPLOYREP.xsd  /o:.\generated\Message/ 
+Microsoft (R) Xml Schemas/DataTypes support utility
+[Microsoft (R) .NET Framework, Version 4.8.3928.0]
+Copyright (C) Microsoft Corporation. All rights reserved.
+êcriture du fichier '.\generated\Message/NC1_DEPLOYREP.cs'.
+
+Pour plus d'informations, entrez "xsd /?".
+
+D:\repos\MyMissionPlaner\Models\NC1Components>xsd.exe /c .\Commun\2DCoordinationMean.xsd .\Commun\Cbrn.xsd .\Commun.\Common.xsd .\Commun.\Communication.xsd .\Commun\Ew.xsd .\Commun\Health.xsd .\Commun\Location.xsd .\Commun\Logistics.xsd .\Commun\Message.xsd .\Commun\Object.xsd .\Commun\Participant.xsd .\Commun\SICS_Dictionaries.xsd .\Commun\Track.xsd .\Commun/2DCoordinationMean.xsd .\Objet/NC1_AcmWez.xsd  .\Objet/NC1_AirParticipant.xsd  .\Objet/NC1_AirTrack.xsd  .\Objet/NC1_CbrnEvent.xsd   .\Objet/NC1_Convoy.xsd   .\Objet/NC1_Event.xsd   .\Objet/NC1_Facility.xsd   .\Objet/NC1_Fire.xsd   .\Objet/NC1_FireObjective.xsd   .\Objet/NC1_FreeShape.xsd   .\Objet/NC1_GroundEntity.xsd   .\Objet/NC1_GroundParticipant.xsd   .\Objet/NC1_GroundTrack.xsd   .\Objet/NC1_IffProcedure.xsd   .\Objet/NC1_Individual.xsd   .\Objet/NC1_IntelRequirement.xsd   .\Objet/NC1_Meteo.xsd   .\Objet/NC1_Mission.xsd   .\Objet/NC1_MissionASA.xsd   .\Objet/NC1_MissionASS.xsd   .\Objet/NC1_Obstacle.xsd   .\Objet/NC1_Organisation.xsd   .\Objet/NC1_Reinforcement.xsd   .\Objet/NC1_Roe.xsd   .\Objet/NC1_Route.xsd   .\Objet/NC1_SeaParticipant.xsd   .\Objet/NC1_SeaTrack.xsd   .\Objet/NC1_TacArea.xsd   .\Objet/NC1_TacLine.xsd   .\Objet/NC1_TacPoint.xsd   .\Objet/NC1_Unit.xsd  .\Message/NC1_ENGRECCEORD.xsd  /o:.\generated\Message/ 
+Microsoft (R) Xml Schemas/DataTypes support utility
+[Microsoft (R) .NET Framework, Version 4.8.3928.0]
+Copyright (C) Microsoft Corporation. All rights reserved.
+êcriture du fichier '.\generated\Message/NC1_ENGRECCEORD.cs'.
+
+Pour plus d'informations, entrez "xsd /?".
+
+D:\repos\MyMissionPlaner\Models\NC1Components>xsd.exe /c .\Commun\2DCoordinationMean.xsd .\Commun\Cbrn.xsd .\Commun.\Common.xsd .\Commun.\Communication.xsd .\Commun\Ew.xsd .\Commun\Health.xsd .\Commun\Location.xsd .\Commun\Logistics.xsd .\Commun\Message.xsd .\Commun\Object.xsd .\Commun\Participant.xsd .\Commun\SICS_Dictionaries.xsd .\Commun\Track.xsd .\Commun/2DCoordinationMean.xsd .\Objet/NC1_AcmWez.xsd  .\Objet/NC1_AirParticipant.xsd  .\Objet/NC1_AirTrack.xsd  .\Objet/NC1_CbrnEvent.xsd   .\Objet/NC1_Convoy.xsd   .\Objet/NC1_Event.xsd   .\Objet/NC1_Facility.xsd   .\Objet/NC1_Fire.xsd   .\Objet/NC1_FireObjective.xsd   .\Objet/NC1_FreeShape.xsd   .\Objet/NC1_GroundEntity.xsd   .\Objet/NC1_GroundParticipant.xsd   .\Objet/NC1_GroundTrack.xsd   .\Objet/NC1_IffProcedure.xsd   .\Objet/NC1_Individual.xsd   .\Objet/NC1_IntelRequirement.xsd   .\Objet/NC1_Meteo.xsd   .\Objet/NC1_Mission.xsd   .\Objet/NC1_MissionASA.xsd   .\Objet/NC1_MissionASS.xsd   .\Objet/NC1_Obstacle.xsd   .\Objet/NC1_Organisation.xsd   .\Objet/NC1_Reinforcement.xsd   .\Objet/NC1_Roe.xsd   .\Objet/NC1_Route.xsd   .\Objet/NC1_SeaParticipant.xsd   .\Objet/NC1_SeaTrack.xsd   .\Objet/NC1_TacArea.xsd   .\Objet/NC1_TacLine.xsd   .\Objet/NC1_TacPoint.xsd   .\Objet/NC1_Unit.xsd  .\Message/NC1_ENGRECCEREP.xsd  /o:.\generated\Message/ 
+Microsoft (R) Xml Schemas/DataTypes support utility
+[Microsoft (R) .NET Framework, Version 4.8.3928.0]
+Copyright (C) Microsoft Corporation. All rights reserved.
+Avertissement de validation de schÇmaˇ: Le type 'urn:fra:nc1:message:engrecceord:EngineerMissionTypeCode' n'est pas dÇclarÇ. ligne 83, position 20.
+
+Avertissementˇ: le schÇma n'a pas pu àtre validÇ. Il est possible que la gÇnÇration de classe Çchoue ou produise des rÇsultats incorrects.
+
+
+Pour plus d'informations, entrez "xsd /?".
+
+D:\repos\MyMissionPlaner\Models\NC1Components>xsd.exe /c .\Commun\2DCoordinationMean.xsd .\Commun\Cbrn.xsd .\Commun.\Common.xsd .\Commun.\Communication.xsd .\Commun\Ew.xsd .\Commun\Health.xsd .\Commun\Location.xsd .\Commun\Logistics.xsd .\Commun\Message.xsd .\Commun\Object.xsd .\Commun\Participant.xsd .\Commun\SICS_Dictionaries.xsd .\Commun\Track.xsd .\Commun/2DCoordinationMean.xsd .\Objet/NC1_AcmWez.xsd  .\Objet/NC1_AirParticipant.xsd  .\Objet/NC1_AirTrack.xsd  .\Objet/NC1_CbrnEvent.xsd   .\Objet/NC1_Convoy.xsd   .\Objet/NC1_Event.xsd   .\Objet/NC1_Facility.xsd   .\Objet/NC1_Fire.xsd   .\Objet/NC1_FireObjective.xsd   .\Objet/NC1_FreeShape.xsd   .\Objet/NC1_GroundEntity.xsd   .\Objet/NC1_GroundParticipant.xsd   .\Objet/NC1_GroundTrack.xsd   .\Objet/NC1_IffProcedure.xsd   .\Objet/NC1_Individual.xsd   .\Objet/NC1_IntelRequirement.xsd   .\Objet/NC1_Meteo.xsd   .\Objet/NC1_Mission.xsd   .\Objet/NC1_MissionASA.xsd   .\Objet/NC1_MissionASS.xsd   .\Objet/NC1_Obstacle.xsd   .\Objet/NC1_Organisation.xsd   .\Objet/NC1_Reinforcement.xsd   .\Objet/NC1_Roe.xsd   .\Objet/NC1_Route.xsd   .\Objet/NC1_SeaParticipant.xsd   .\Objet/NC1_SeaTrack.xsd   .\Objet/NC1_TacArea.xsd   .\Objet/NC1_TacLine.xsd   .\Objet/NC1_TacPoint.xsd   .\Objet/NC1_Unit.xsd  .\Message/NC1_ENSITREP.xsd  /o:.\generated\Message/ 
+Microsoft (R) Xml Schemas/DataTypes support utility
+[Microsoft (R) .NET Framework, Version 4.8.3928.0]
+Copyright (C) Microsoft Corporation. All rights reserved.
+êcriture du fichier '.\generated\Message/NC1_ENSITREP.cs'.
+
+Pour plus d'informations, entrez "xsd /?".
+
+D:\repos\MyMissionPlaner\Models\NC1Components>xsd.exe /c .\Commun\2DCoordinationMean.xsd .\Commun\Cbrn.xsd .\Commun.\Common.xsd .\Commun.\Communication.xsd .\Commun\Ew.xsd .\Commun\Health.xsd .\Commun\Location.xsd .\Commun\Logistics.xsd .\Commun\Message.xsd .\Commun\Object.xsd .\Commun\Participant.xsd .\Commun\SICS_Dictionaries.xsd .\Commun\Track.xsd .\Commun/2DCoordinationMean.xsd .\Objet/NC1_AcmWez.xsd  .\Objet/NC1_AirParticipant.xsd  .\Objet/NC1_AirTrack.xsd  .\Objet/NC1_CbrnEvent.xsd   .\Objet/NC1_Convoy.xsd   .\Objet/NC1_Event.xsd   .\Objet/NC1_Facility.xsd   .\Objet/NC1_Fire.xsd   .\Objet/NC1_FireObjective.xsd   .\Objet/NC1_FreeShape.xsd   .\Objet/NC1_GroundEntity.xsd   .\Objet/NC1_GroundParticipant.xsd   .\Objet/NC1_GroundTrack.xsd   .\Objet/NC1_IffProcedure.xsd   .\Objet/NC1_Individual.xsd   .\Objet/NC1_IntelRequirement.xsd   .\Objet/NC1_Meteo.xsd   .\Objet/NC1_Mission.xsd   .\Objet/NC1_MissionASA.xsd   .\Objet/NC1_MissionASS.xsd   .\Objet/NC1_Obstacle.xsd   .\Objet/NC1_Organisation.xsd   .\Objet/NC1_Reinforcement.xsd   .\Objet/NC1_Roe.xsd   .\Objet/NC1_Route.xsd   .\Objet/NC1_SeaParticipant.xsd   .\Objet/NC1_SeaTrack.xsd   .\Objet/NC1_TacArea.xsd   .\Objet/NC1_TacLine.xsd   .\Objet/NC1_TacPoint.xsd   .\Objet/NC1_Unit.xsd  .\Message/NC1_EOINCREP.xsd  /o:.\generated\Message/ 
+Microsoft (R) Xml Schemas/DataTypes support utility
+[Microsoft (R) .NET Framework, Version 4.8.3928.0]
+Copyright (C) Microsoft Corporation. All rights reserved.
+êcriture du fichier '.\generated\Message/NC1_EOINCREP.cs'.
+
+Pour plus d'informations, entrez "xsd /?".
+
+D:\repos\MyMissionPlaner\Models\NC1Components>xsd.exe /c .\Commun\2DCoordinationMean.xsd .\Commun\Cbrn.xsd .\Commun.\Common.xsd .\Commun.\Communication.xsd .\Commun\Ew.xsd .\Commun\Health.xsd .\Commun\Location.xsd .\Commun\Logistics.xsd .\Commun\Message.xsd .\Commun\Object.xsd .\Commun\Participant.xsd .\Commun\SICS_Dictionaries.xsd .\Commun\Track.xsd .\Commun/2DCoordinationMean.xsd .\Objet/NC1_AcmWez.xsd  .\Objet/NC1_AirParticipant.xsd  .\Objet/NC1_AirTrack.xsd  .\Objet/NC1_CbrnEvent.xsd   .\Objet/NC1_Convoy.xsd   .\Objet/NC1_Event.xsd   .\Objet/NC1_Facility.xsd   .\Objet/NC1_Fire.xsd   .\Objet/NC1_FireObjective.xsd   .\Objet/NC1_FreeShape.xsd   .\Objet/NC1_GroundEntity.xsd   .\Objet/NC1_GroundParticipant.xsd   .\Objet/NC1_GroundTrack.xsd   .\Objet/NC1_IffProcedure.xsd   .\Objet/NC1_Individual.xsd   .\Objet/NC1_IntelRequirement.xsd   .\Objet/NC1_Meteo.xsd   .\Objet/NC1_Mission.xsd   .\Objet/NC1_MissionASA.xsd   .\Objet/NC1_MissionASS.xsd   .\Objet/NC1_Obstacle.xsd   .\Objet/NC1_Organisation.xsd   .\Objet/NC1_Reinforcement.xsd   .\Objet/NC1_Roe.xsd   .\Objet/NC1_Route.xsd   .\Objet/NC1_SeaParticipant.xsd   .\Objet/NC1_SeaTrack.xsd   .\Objet/NC1_TacArea.xsd   .\Objet/NC1_TacLine.xsd   .\Objet/NC1_TacPoint.xsd   .\Objet/NC1_Unit.xsd  .\Message/NC1_EVENTREP.xsd  /o:.\generated\Message/ 
+Microsoft (R) Xml Schemas/DataTypes support utility
+[Microsoft (R) .NET Framework, Version 4.8.3928.0]
+Copyright (C) Microsoft Corporation. All rights reserved.
+êcriture du fichier '.\generated\Message/NC1_EVENTREP.cs'.
+
+Pour plus d'informations, entrez "xsd /?".
+
+D:\repos\MyMissionPlaner\Models\NC1Components>xsd.exe /c .\Commun\2DCoordinationMean.xsd .\Commun\Cbrn.xsd .\Commun.\Common.xsd .\Commun.\Communication.xsd .\Commun\Ew.xsd .\Commun\Health.xsd .\Commun\Location.xsd .\Commun\Logistics.xsd .\Commun\Message.xsd .\Commun\Object.xsd .\Commun\Participant.xsd .\Commun\SICS_Dictionaries.xsd .\Commun\Track.xsd .\Commun/2DCoordinationMean.xsd .\Objet/NC1_AcmWez.xsd  .\Objet/NC1_AirParticipant.xsd  .\Objet/NC1_AirTrack.xsd  .\Objet/NC1_CbrnEvent.xsd   .\Objet/NC1_Convoy.xsd   .\Objet/NC1_Event.xsd   .\Objet/NC1_Facility.xsd   .\Objet/NC1_Fire.xsd   .\Objet/NC1_FireObjective.xsd   .\Objet/NC1_FreeShape.xsd   .\Objet/NC1_GroundEntity.xsd   .\Objet/NC1_GroundParticipant.xsd   .\Objet/NC1_GroundTrack.xsd   .\Objet/NC1_IffProcedure.xsd   .\Objet/NC1_Individual.xsd   .\Objet/NC1_IntelRequirement.xsd   .\Objet/NC1_Meteo.xsd   .\Objet/NC1_Mission.xsd   .\Objet/NC1_MissionASA.xsd   .\Objet/NC1_MissionASS.xsd   .\Objet/NC1_Obstacle.xsd   .\Objet/NC1_Organisation.xsd   .\Objet/NC1_Reinforcement.xsd   .\Objet/NC1_Roe.xsd   .\Objet/NC1_Route.xsd   .\Objet/NC1_SeaParticipant.xsd   .\Objet/NC1_SeaTrack.xsd   .\Objet/NC1_TacArea.xsd   .\Objet/NC1_TacLine.xsd   .\Objet/NC1_TacPoint.xsd   .\Objet/NC1_Unit.xsd  .\Message/NC1_EWMSNSUM.xsd  /o:.\generated\Message/ 
+Microsoft (R) Xml Schemas/DataTypes support utility
+[Microsoft (R) .NET Framework, Version 4.8.3928.0]
+Copyright (C) Microsoft Corporation. All rights reserved.
+êcriture du fichier '.\generated\Message/NC1_EWMSNSUM.cs'.
+
+Pour plus d'informations, entrez "xsd /?".
+
+D:\repos\MyMissionPlaner\Models\NC1Components>xsd.exe /c .\Commun\2DCoordinationMean.xsd .\Commun\Cbrn.xsd .\Commun.\Common.xsd .\Commun.\Communication.xsd .\Commun\Ew.xsd .\Commun\Health.xsd .\Commun\Location.xsd .\Commun\Logistics.xsd .\Commun\Message.xsd .\Commun\Object.xsd .\Commun\Participant.xsd .\Commun\SICS_Dictionaries.xsd .\Commun\Track.xsd .\Commun/2DCoordinationMean.xsd .\Objet/NC1_AcmWez.xsd  .\Objet/NC1_AirParticipant.xsd  .\Objet/NC1_AirTrack.xsd  .\Objet/NC1_CbrnEvent.xsd   .\Objet/NC1_Convoy.xsd   .\Objet/NC1_Event.xsd   .\Objet/NC1_Facility.xsd   .\Objet/NC1_Fire.xsd   .\Objet/NC1_FireObjective.xsd   .\Objet/NC1_FreeShape.xsd   .\Objet/NC1_GroundEntity.xsd   .\Objet/NC1_GroundParticipant.xsd   .\Objet/NC1_GroundTrack.xsd   .\Objet/NC1_IffProcedure.xsd   .\Objet/NC1_Individual.xsd   .\Objet/NC1_IntelRequirement.xsd   .\Objet/NC1_Meteo.xsd   .\Objet/NC1_Mission.xsd   .\Objet/NC1_MissionASA.xsd   .\Objet/NC1_MissionASS.xsd   .\Objet/NC1_Obstacle.xsd   .\Objet/NC1_Organisation.xsd   .\Objet/NC1_Reinforcement.xsd   .\Objet/NC1_Roe.xsd   .\Objet/NC1_Route.xsd   .\Objet/NC1_SeaParticipant.xsd   .\Objet/NC1_SeaTrack.xsd   .\Objet/NC1_TacArea.xsd   .\Objet/NC1_TacLine.xsd   .\Objet/NC1_TacPoint.xsd   .\Objet/NC1_Unit.xsd  .\Message/NC1_EWRTM.xsd  /o:.\generated\Message/ 
+Microsoft (R) Xml Schemas/DataTypes support utility
+[Microsoft (R) .NET Framework, Version 4.8.3928.0]
+Copyright (C) Microsoft Corporation. All rights reserved.
+êcriture du fichier '.\generated\Message/NC1_EWRTM.cs'.
+
+Pour plus d'informations, entrez "xsd /?".
+
+D:\repos\MyMissionPlaner\Models\NC1Components>xsd.exe /c .\Commun\2DCoordinationMean.xsd .\Commun\Cbrn.xsd .\Commun.\Common.xsd .\Commun.\Communication.xsd .\Commun\Ew.xsd .\Commun\Health.xsd .\Commun\Location.xsd .\Commun\Logistics.xsd .\Commun\Message.xsd .\Commun\Object.xsd .\Commun\Participant.xsd .\Commun\SICS_Dictionaries.xsd .\Commun\Track.xsd .\Commun/2DCoordinationMean.xsd .\Objet/NC1_AcmWez.xsd  .\Objet/NC1_AirParticipant.xsd  .\Objet/NC1_AirTrack.xsd  .\Objet/NC1_CbrnEvent.xsd   .\Objet/NC1_Convoy.xsd   .\Objet/NC1_Event.xsd   .\Objet/NC1_Facility.xsd   .\Objet/NC1_Fire.xsd   .\Objet/NC1_FireObjective.xsd   .\Objet/NC1_FreeShape.xsd   .\Objet/NC1_GroundEntity.xsd   .\Objet/NC1_GroundParticipant.xsd   .\Objet/NC1_GroundTrack.xsd   .\Objet/NC1_IffProcedure.xsd   .\Objet/NC1_Individual.xsd   .\Objet/NC1_IntelRequirement.xsd   .\Objet/NC1_Meteo.xsd   .\Objet/NC1_Mission.xsd   .\Objet/NC1_MissionASA.xsd   .\Objet/NC1_MissionASS.xsd   .\Objet/NC1_Obstacle.xsd   .\Objet/NC1_Organisation.xsd   .\Objet/NC1_Reinforcement.xsd   .\Objet/NC1_Roe.xsd   .\Objet/NC1_Route.xsd   .\Objet/NC1_SeaParticipant.xsd   .\Objet/NC1_SeaTrack.xsd   .\Objet/NC1_TacArea.xsd   .\Objet/NC1_TacLine.xsd   .\Objet/NC1_TacPoint.xsd   .\Objet/NC1_Unit.xsd  .\Message/NC1_FinAlerteRaidEni.xsd  /o:.\generated\Message/ 
+Microsoft (R) Xml Schemas/DataTypes support utility
+[Microsoft (R) .NET Framework, Version 4.8.3928.0]
+Copyright (C) Microsoft Corporation. All rights reserved.
+êcriture du fichier '.\generated\Message/NC1_FinAlerteRaidEni.cs'.
+
+Pour plus d'informations, entrez "xsd /?".
+
+D:\repos\MyMissionPlaner\Models\NC1Components>xsd.exe /c .\Commun\2DCoordinationMean.xsd .\Commun\Cbrn.xsd .\Commun.\Common.xsd .\Commun.\Communication.xsd .\Commun\Ew.xsd .\Commun\Health.xsd .\Commun\Location.xsd .\Commun\Logistics.xsd .\Commun\Message.xsd .\Commun\Object.xsd .\Commun\Participant.xsd .\Commun\SICS_Dictionaries.xsd .\Commun\Track.xsd .\Commun/2DCoordinationMean.xsd .\Objet/NC1_AcmWez.xsd  .\Objet/NC1_AirParticipant.xsd  .\Objet/NC1_AirTrack.xsd  .\Objet/NC1_CbrnEvent.xsd   .\Objet/NC1_Convoy.xsd   .\Objet/NC1_Event.xsd   .\Objet/NC1_Facility.xsd   .\Objet/NC1_Fire.xsd   .\Objet/NC1_FireObjective.xsd   .\Objet/NC1_FreeShape.xsd   .\Objet/NC1_GroundEntity.xsd   .\Objet/NC1_GroundParticipant.xsd   .\Objet/NC1_GroundTrack.xsd   .\Objet/NC1_IffProcedure.xsd   .\Objet/NC1_Individual.xsd   .\Objet/NC1_IntelRequirement.xsd   .\Objet/NC1_Meteo.xsd   .\Objet/NC1_Mission.xsd   .\Objet/NC1_MissionASA.xsd   .\Objet/NC1_MissionASS.xsd   .\Objet/NC1_Obstacle.xsd   .\Objet/NC1_Organisation.xsd   .\Objet/NC1_Reinforcement.xsd   .\Objet/NC1_Roe.xsd   .\Objet/NC1_Route.xsd   .\Objet/NC1_SeaParticipant.xsd   .\Objet/NC1_SeaTrack.xsd   .\Objet/NC1_TacArea.xsd   .\Objet/NC1_TacLine.xsd   .\Objet/NC1_TacPoint.xsd   .\Objet/NC1_Unit.xsd  .\Message/NC1_FireControl.xsd  /o:.\generated\Message/ 
+Microsoft (R) Xml Schemas/DataTypes support utility
+[Microsoft (R) .NET Framework, Version 4.8.3928.0]
+Copyright (C) Microsoft Corporation. All rights reserved.
+êcriture du fichier '.\generated\Message/NC1_FireControl.cs'.
+
+Pour plus d'informations, entrez "xsd /?".
+
+D:\repos\MyMissionPlaner\Models\NC1Components>xsd.exe /c .\Commun\2DCoordinationMean.xsd .\Commun\Cbrn.xsd .\Commun.\Common.xsd .\Commun.\Communication.xsd .\Commun\Ew.xsd .\Commun\Health.xsd .\Commun\Location.xsd .\Commun\Logistics.xsd .\Commun\Message.xsd .\Commun\Object.xsd .\Commun\Participant.xsd .\Commun\SICS_Dictionaries.xsd .\Commun\Track.xsd .\Commun/2DCoordinationMean.xsd .\Objet/NC1_AcmWez.xsd  .\Objet/NC1_AirParticipant.xsd  .\Objet/NC1_AirTrack.xsd  .\Objet/NC1_CbrnEvent.xsd   .\Objet/NC1_Convoy.xsd   .\Objet/NC1_Event.xsd   .\Objet/NC1_Facility.xsd   .\Objet/NC1_Fire.xsd   .\Objet/NC1_FireObjective.xsd   .\Objet/NC1_FreeShape.xsd   .\Objet/NC1_GroundEntity.xsd   .\Objet/NC1_GroundParticipant.xsd   .\Objet/NC1_GroundTrack.xsd   .\Objet/NC1_IffProcedure.xsd   .\Objet/NC1_Individual.xsd   .\Objet/NC1_IntelRequirement.xsd   .\Objet/NC1_Meteo.xsd   .\Objet/NC1_Mission.xsd   .\Objet/NC1_MissionASA.xsd   .\Objet/NC1_MissionASS.xsd   .\Objet/NC1_Obstacle.xsd   .\Objet/NC1_Organisation.xsd   .\Objet/NC1_Reinforcement.xsd   .\Objet/NC1_Roe.xsd   .\Objet/NC1_Route.xsd   .\Objet/NC1_SeaParticipant.xsd   .\Objet/NC1_SeaTrack.xsd   .\Objet/NC1_TacArea.xsd   .\Objet/NC1_TacLine.xsd   .\Objet/NC1_TacPoint.xsd   .\Objet/NC1_Unit.xsd  .\Message/NC1_FireReport.xsd  /o:.\generated\Message/ 
+Microsoft (R) Xml Schemas/DataTypes support utility
+[Microsoft (R) .NET Framework, Version 4.8.3928.0]
+Copyright (C) Microsoft Corporation. All rights reserved.
+êcriture du fichier '.\generated\Message/NC1_FireReport.cs'.
+
+Pour plus d'informations, entrez "xsd /?".
+
+D:\repos\MyMissionPlaner\Models\NC1Components>xsd.exe /c .\Commun\2DCoordinationMean.xsd .\Commun\Cbrn.xsd .\Commun.\Common.xsd .\Commun.\Communication.xsd .\Commun\Ew.xsd .\Commun\Health.xsd .\Commun\Location.xsd .\Commun\Logistics.xsd .\Commun\Message.xsd .\Commun\Object.xsd .\Commun\Participant.xsd .\Commun\SICS_Dictionaries.xsd .\Commun\Track.xsd .\Commun/2DCoordinationMean.xsd .\Objet/NC1_AcmWez.xsd  .\Objet/NC1_AirParticipant.xsd  .\Objet/NC1_AirTrack.xsd  .\Objet/NC1_CbrnEvent.xsd   .\Objet/NC1_Convoy.xsd   .\Objet/NC1_Event.xsd   .\Objet/NC1_Facility.xsd   .\Objet/NC1_Fire.xsd   .\Objet/NC1_FireObjective.xsd   .\Objet/NC1_FreeShape.xsd   .\Objet/NC1_GroundEntity.xsd   .\Objet/NC1_GroundParticipant.xsd   .\Objet/NC1_GroundTrack.xsd   .\Objet/NC1_IffProcedure.xsd   .\Objet/NC1_Individual.xsd   .\Objet/NC1_IntelRequirement.xsd   .\Objet/NC1_Meteo.xsd   .\Objet/NC1_Mission.xsd   .\Objet/NC1_MissionASA.xsd   .\Objet/NC1_MissionASS.xsd   .\Objet/NC1_Obstacle.xsd   .\Objet/NC1_Organisation.xsd   .\Objet/NC1_Reinforcement.xsd   .\Objet/NC1_Roe.xsd   .\Objet/NC1_Route.xsd   .\Objet/NC1_SeaParticipant.xsd   .\Objet/NC1_SeaTrack.xsd   .\Objet/NC1_TacArea.xsd   .\Objet/NC1_TacLine.xsd   .\Objet/NC1_TacPoint.xsd   .\Objet/NC1_Unit.xsd  .\Message/NC1_HELOPSUM.xsd  /o:.\generated\Message/ 
+Microsoft (R) Xml Schemas/DataTypes support utility
+[Microsoft (R) .NET Framework, Version 4.8.3928.0]
+Copyright (C) Microsoft Corporation. All rights reserved.
+êcriture du fichier '.\generated\Message/NC1_HELOPSUM.cs'.
+
+Pour plus d'informations, entrez "xsd /?".
+
+D:\repos\MyMissionPlaner\Models\NC1Components>xsd.exe /c .\Commun\2DCoordinationMean.xsd .\Commun\Cbrn.xsd .\Commun.\Common.xsd .\Commun.\Communication.xsd .\Commun\Ew.xsd .\Commun\Health.xsd .\Commun\Location.xsd .\Commun\Logistics.xsd .\Commun\Message.xsd .\Commun\Object.xsd .\Commun\Participant.xsd .\Commun\SICS_Dictionaries.xsd .\Commun\Track.xsd .\Commun/2DCoordinationMean.xsd .\Objet/NC1_AcmWez.xsd  .\Objet/NC1_AirParticipant.xsd  .\Objet/NC1_AirTrack.xsd  .\Objet/NC1_CbrnEvent.xsd   .\Objet/NC1_Convoy.xsd   .\Objet/NC1_Event.xsd   .\Objet/NC1_Facility.xsd   .\Objet/NC1_Fire.xsd   .\Objet/NC1_FireObjective.xsd   .\Objet/NC1_FreeShape.xsd   .\Objet/NC1_GroundEntity.xsd   .\Objet/NC1_GroundParticipant.xsd   .\Objet/NC1_GroundTrack.xsd   .\Objet/NC1_IffProcedure.xsd   .\Objet/NC1_Individual.xsd   .\Objet/NC1_IntelRequirement.xsd   .\Objet/NC1_Meteo.xsd   .\Objet/NC1_Mission.xsd   .\Objet/NC1_MissionASA.xsd   .\Objet/NC1_MissionASS.xsd   .\Objet/NC1_Obstacle.xsd   .\Objet/NC1_Organisation.xsd   .\Objet/NC1_Reinforcement.xsd   .\Objet/NC1_Roe.xsd   .\Objet/NC1_Route.xsd   .\Objet/NC1_SeaParticipant.xsd   .\Objet/NC1_SeaTrack.xsd   .\Objet/NC1_TacArea.xsd   .\Objet/NC1_TacLine.xsd   .\Objet/NC1_TacPoint.xsd   .\Objet/NC1_Unit.xsd  .\Message/NC1_IGen.xsd  /o:.\generated\Message/ 
+Microsoft (R) Xml Schemas/DataTypes support utility
+[Microsoft (R) .NET Framework, Version 4.8.3928.0]
+Copyright (C) Microsoft Corporation. All rights reserved.
+êcriture du fichier '.\generated\Message/NC1_IGen.cs'.
+
+Pour plus d'informations, entrez "xsd /?".
+
+D:\repos\MyMissionPlaner\Models\NC1Components>xsd.exe /c .\Commun\2DCoordinationMean.xsd .\Commun\Cbrn.xsd .\Commun.\Common.xsd .\Commun.\Communication.xsd .\Commun\Ew.xsd .\Commun\Health.xsd .\Commun\Location.xsd .\Commun\Logistics.xsd .\Commun\Message.xsd .\Commun\Object.xsd .\Commun\Participant.xsd .\Commun\SICS_Dictionaries.xsd .\Commun\Track.xsd .\Commun/2DCoordinationMean.xsd .\Objet/NC1_AcmWez.xsd  .\Objet/NC1_AirParticipant.xsd  .\Objet/NC1_AirTrack.xsd  .\Objet/NC1_CbrnEvent.xsd   .\Objet/NC1_Convoy.xsd   .\Objet/NC1_Event.xsd   .\Objet/NC1_Facility.xsd   .\Objet/NC1_Fire.xsd   .\Objet/NC1_FireObjective.xsd   .\Objet/NC1_FreeShape.xsd   .\Objet/NC1_GroundEntity.xsd   .\Objet/NC1_GroundParticipant.xsd   .\Objet/NC1_GroundTrack.xsd   .\Objet/NC1_IffProcedure.xsd   .\Objet/NC1_Individual.xsd   .\Objet/NC1_IntelRequirement.xsd   .\Objet/NC1_Meteo.xsd   .\Objet/NC1_Mission.xsd   .\Objet/NC1_MissionASA.xsd   .\Objet/NC1_MissionASS.xsd   .\Objet/NC1_Obstacle.xsd   .\Objet/NC1_Organisation.xsd   .\Objet/NC1_Reinforcement.xsd   .\Objet/NC1_Roe.xsd   .\Objet/NC1_Route.xsd   .\Objet/NC1_SeaParticipant.xsd   .\Objet/NC1_SeaTrack.xsd   .\Objet/NC1_TacArea.xsd   .\Objet/NC1_TacLine.xsd   .\Objet/NC1_TacPoint.xsd   .\Objet/NC1_Unit.xsd  .\Message/NC1_InitMedRep.xsd  /o:.\generated\Message/ 
+Microsoft (R) Xml Schemas/DataTypes support utility
+[Microsoft (R) .NET Framework, Version 4.8.3928.0]
+Copyright (C) Microsoft Corporation. All rights reserved.
+êcriture du fichier '.\generated\Message/NC1_InitMedRep.cs'.
+
+Pour plus d'informations, entrez "xsd /?".
+
+D:\repos\MyMissionPlaner\Models\NC1Components>xsd.exe /c .\Commun\2DCoordinationMean.xsd .\Commun\Cbrn.xsd .\Commun.\Common.xsd .\Commun.\Communication.xsd .\Commun\Ew.xsd .\Commun\Health.xsd .\Commun\Location.xsd .\Commun\Logistics.xsd .\Commun\Message.xsd .\Commun\Object.xsd .\Commun\Participant.xsd .\Commun\SICS_Dictionaries.xsd .\Commun\Track.xsd .\Commun/2DCoordinationMean.xsd .\Objet/NC1_AcmWez.xsd  .\Objet/NC1_AirParticipant.xsd  .\Objet/NC1_AirTrack.xsd  .\Objet/NC1_CbrnEvent.xsd   .\Objet/NC1_Convoy.xsd   .\Objet/NC1_Event.xsd   .\Objet/NC1_Facility.xsd   .\Objet/NC1_Fire.xsd   .\Objet/NC1_FireObjective.xsd   .\Objet/NC1_FreeShape.xsd   .\Objet/NC1_GroundEntity.xsd   .\Objet/NC1_GroundParticipant.xsd   .\Objet/NC1_GroundTrack.xsd   .\Objet/NC1_IffProcedure.xsd   .\Objet/NC1_Individual.xsd   .\Objet/NC1_IntelRequirement.xsd   .\Objet/NC1_Meteo.xsd   .\Objet/NC1_Mission.xsd   .\Objet/NC1_MissionASA.xsd   .\Objet/NC1_MissionASS.xsd   .\Objet/NC1_Obstacle.xsd   .\Objet/NC1_Organisation.xsd   .\Objet/NC1_Reinforcement.xsd   .\Objet/NC1_Roe.xsd   .\Objet/NC1_Route.xsd   .\Objet/NC1_SeaParticipant.xsd   .\Objet/NC1_SeaTrack.xsd   .\Objet/NC1_TacArea.xsd   .\Objet/NC1_TacLine.xsd   .\Objet/NC1_TacPoint.xsd   .\Objet/NC1_Unit.xsd  .\Message/NC1_InitOdb.xsd  /o:.\generated\Message/ 
+Microsoft (R) Xml Schemas/DataTypes support utility
+[Microsoft (R) .NET Framework, Version 4.8.3928.0]
+Copyright (C) Microsoft Corporation. All rights reserved.
+êcriture du fichier '.\generated\Message/NC1_InitOdb.cs'.
+
+Pour plus d'informations, entrez "xsd /?".
+
+D:\repos\MyMissionPlaner\Models\NC1Components>xsd.exe /c .\Commun\2DCoordinationMean.xsd .\Commun\Cbrn.xsd .\Commun.\Common.xsd .\Commun.\Communication.xsd .\Commun\Ew.xsd .\Commun\Health.xsd .\Commun\Location.xsd .\Commun\Logistics.xsd .\Commun\Message.xsd .\Commun\Object.xsd .\Commun\Participant.xsd .\Commun\SICS_Dictionaries.xsd .\Commun\Track.xsd .\Commun/2DCoordinationMean.xsd .\Objet/NC1_AcmWez.xsd  .\Objet/NC1_AirParticipant.xsd  .\Objet/NC1_AirTrack.xsd  .\Objet/NC1_CbrnEvent.xsd   .\Objet/NC1_Convoy.xsd   .\Objet/NC1_Event.xsd   .\Objet/NC1_Facility.xsd   .\Objet/NC1_Fire.xsd   .\Objet/NC1_FireObjective.xsd   .\Objet/NC1_FreeShape.xsd   .\Objet/NC1_GroundEntity.xsd   .\Objet/NC1_GroundParticipant.xsd   .\Objet/NC1_GroundTrack.xsd   .\Objet/NC1_IffProcedure.xsd   .\Objet/NC1_Individual.xsd   .\Objet/NC1_IntelRequirement.xsd   .\Objet/NC1_Meteo.xsd   .\Objet/NC1_Mission.xsd   .\Objet/NC1_MissionASA.xsd   .\Objet/NC1_MissionASS.xsd   .\Objet/NC1_Obstacle.xsd   .\Objet/NC1_Organisation.xsd   .\Objet/NC1_Reinforcement.xsd   .\Objet/NC1_Roe.xsd   .\Objet/NC1_Route.xsd   .\Objet/NC1_SeaParticipant.xsd   .\Objet/NC1_SeaTrack.xsd   .\Objet/NC1_TacArea.xsd   .\Objet/NC1_TacLine.xsd   .\Objet/NC1_TacPoint.xsd   .\Objet/NC1_Unit.xsd  .\Message/NC1_INTREP.xsd  /o:.\generated\Message/ 
+Microsoft (R) Xml Schemas/DataTypes support utility
+[Microsoft (R) .NET Framework, Version 4.8.3928.0]
+Copyright (C) Microsoft Corporation. All rights reserved.
+êcriture du fichier '.\generated\Message/NC1_INTREP.cs'.
+
+Pour plus d'informations, entrez "xsd /?".
+
+D:\repos\MyMissionPlaner\Models\NC1Components>xsd.exe /c .\Commun\2DCoordinationMean.xsd .\Commun\Cbrn.xsd .\Commun.\Common.xsd .\Commun.\Communication.xsd .\Commun\Ew.xsd .\Commun\Health.xsd .\Commun\Location.xsd .\Commun\Logistics.xsd .\Commun\Message.xsd .\Commun\Object.xsd .\Commun\Participant.xsd .\Commun\SICS_Dictionaries.xsd .\Commun\Track.xsd .\Commun/2DCoordinationMean.xsd .\Objet/NC1_AcmWez.xsd  .\Objet/NC1_AirParticipant.xsd  .\Objet/NC1_AirTrack.xsd  .\Objet/NC1_CbrnEvent.xsd   .\Objet/NC1_Convoy.xsd   .\Objet/NC1_Event.xsd   .\Objet/NC1_Facility.xsd   .\Objet/NC1_Fire.xsd   .\Objet/NC1_FireObjective.xsd   .\Objet/NC1_FreeShape.xsd   .\Objet/NC1_GroundEntity.xsd   .\Objet/NC1_GroundParticipant.xsd   .\Objet/NC1_GroundTrack.xsd   .\Objet/NC1_IffProcedure.xsd   .\Objet/NC1_Individual.xsd   .\Objet/NC1_IntelRequirement.xsd   .\Objet/NC1_Meteo.xsd   .\Objet/NC1_Mission.xsd   .\Objet/NC1_MissionASA.xsd   .\Objet/NC1_MissionASS.xsd   .\Objet/NC1_Obstacle.xsd   .\Objet/NC1_Organisation.xsd   .\Objet/NC1_Reinforcement.xsd   .\Objet/NC1_Roe.xsd   .\Objet/NC1_Route.xsd   .\Objet/NC1_SeaParticipant.xsd   .\Objet/NC1_SeaTrack.xsd   .\Objet/NC1_TacArea.xsd   .\Objet/NC1_TacLine.xsd   .\Objet/NC1_TacPoint.xsd   .\Objet/NC1_Unit.xsd  .\Message/NC1_INTSUM.xsd  /o:.\generated\Message/ 
+Microsoft (R) Xml Schemas/DataTypes support utility
+[Microsoft (R) .NET Framework, Version 4.8.3928.0]
+Copyright (C) Microsoft Corporation. All rights reserved.
+êcriture du fichier '.\generated\Message/NC1_INTSUM.cs'.
+
+Pour plus d'informations, entrez "xsd /?".
+
+D:\repos\MyMissionPlaner\Models\NC1Components>xsd.exe /c .\Commun\2DCoordinationMean.xsd .\Commun\Cbrn.xsd .\Commun.\Common.xsd .\Commun.\Communication.xsd .\Commun\Ew.xsd .\Commun\Health.xsd .\Commun\Location.xsd .\Commun\Logistics.xsd .\Commun\Message.xsd .\Commun\Object.xsd .\Commun\Participant.xsd .\Commun\SICS_Dictionaries.xsd .\Commun\Track.xsd .\Commun/2DCoordinationMean.xsd .\Objet/NC1_AcmWez.xsd  .\Objet/NC1_AirParticipant.xsd  .\Objet/NC1_AirTrack.xsd  .\Objet/NC1_CbrnEvent.xsd   .\Objet/NC1_Convoy.xsd   .\Objet/NC1_Event.xsd   .\Objet/NC1_Facility.xsd   .\Objet/NC1_Fire.xsd   .\Objet/NC1_FireObjective.xsd   .\Objet/NC1_FreeShape.xsd   .\Objet/NC1_GroundEntity.xsd   .\Objet/NC1_GroundParticipant.xsd   .\Objet/NC1_GroundTrack.xsd   .\Objet/NC1_IffProcedure.xsd   .\Objet/NC1_Individual.xsd   .\Objet/NC1_IntelRequirement.xsd   .\Objet/NC1_Meteo.xsd   .\Objet/NC1_Mission.xsd   .\Objet/NC1_MissionASA.xsd   .\Objet/NC1_MissionASS.xsd   .\Objet/NC1_Obstacle.xsd   .\Objet/NC1_Organisation.xsd   .\Objet/NC1_Reinforcement.xsd   .\Objet/NC1_Roe.xsd   .\Objet/NC1_Route.xsd   .\Objet/NC1_SeaParticipant.xsd   .\Objet/NC1_SeaTrack.xsd   .\Objet/NC1_TacArea.xsd   .\Objet/NC1_TacLine.xsd   .\Objet/NC1_TacPoint.xsd   .\Objet/NC1_Unit.xsd  .\Message/NC1_ListeEquipementsRessources.xsd  /o:.\generated\Message/ 
+Microsoft (R) Xml Schemas/DataTypes support utility
+[Microsoft (R) .NET Framework, Version 4.8.3928.0]
+Copyright (C) Microsoft Corporation. All rights reserved.
+Avertissement de validation de schÇmaˇ: Le type 'urn:fra:nc1:message:initodb:NnoCodeType' n'est pas dÇclarÇ. ligne 460, position 20.
+Avertissement de validation de schÇmaˇ: Le type 'urn:fra:nc1:message:initodb:RicCodeType' n'est pas dÇclarÇ. ligne 470, position 20.
+Avertissement de validation de schÇmaˇ: Le type 'urn:fra:nc1:message:initodb:RessourceTypeCode' n'est pas dÇclarÇ. ligne 510, position 20.
+Avertissement de validation de schÇmaˇ: Le type 'urn:fra:nc1:message:initodb:UnitOfMeasurementCode' n'est pas dÇclarÇ. ligne 520, position 20.
+Avertissement de validation de schÇmaˇ: Le type 'urn:fra:nc1:message:initodb:SupplyClassCode' n'est pas dÇclarÇ. ligne 530, position 20.
+Avertissement de validation de schÇmaˇ: Le type 'urn:fra:nc1:message:initodb:NnoCodeType' n'est pas dÇclarÇ. ligne 86, position 20.
+Avertissement de validation de schÇmaˇ: Le type 'urn:fra:nc1:message:initodb:RicCodeType' n'est pas dÇclarÇ. ligne 96, position 20.
+Avertissement de validation de schÇmaˇ: Le type 'urn:fra:nc1:message:initodb:EquipmentCategoryCode' n'est pas dÇclarÇ. ligne 106, position 20.
+Avertissement de validation de schÇmaˇ: Le type 'urn:fra:nc1:message:initodb:FuelCategoryCode' n'est pas dÇclarÇ. ligne 146, position 20.
+Avertissement de validation de schÇmaˇ: Le type 'urn:fra:nc1:message:initodb:FuelThresholdCode' n'est pas dÇclarÇ. ligne 166, position 20.
+Avertissement de validation de schÇmaˇ: Le type 'urn:fra:nc1:message:initodb:SupplyClassCode' n'est pas dÇclarÇ. ligne 256, position 20.
+Avertissement de validation de schÇmaˇ: Le type 'urn:fra:nc1:message:initodb:RangeTypeCode' n'est pas dÇclarÇ. ligne 376, position 20.
+
+Avertissementˇ: le schÇma n'a pas pu àtre validÇ. Il est possible que la gÇnÇration de classe Çchoue ou produise des rÇsultats incorrects.
+
+
+Pour plus d'informations, entrez "xsd /?".
+
+D:\repos\MyMissionPlaner\Models\NC1Components>xsd.exe /c .\Commun\2DCoordinationMean.xsd .\Commun\Cbrn.xsd .\Commun.\Common.xsd .\Commun.\Communication.xsd .\Commun\Ew.xsd .\Commun\Health.xsd .\Commun\Location.xsd .\Commun\Logistics.xsd .\Commun\Message.xsd .\Commun\Object.xsd .\Commun\Participant.xsd .\Commun\SICS_Dictionaries.xsd .\Commun\Track.xsd .\Commun/2DCoordinationMean.xsd .\Objet/NC1_AcmWez.xsd  .\Objet/NC1_AirParticipant.xsd  .\Objet/NC1_AirTrack.xsd  .\Objet/NC1_CbrnEvent.xsd   .\Objet/NC1_Convoy.xsd   .\Objet/NC1_Event.xsd   .\Objet/NC1_Facility.xsd   .\Objet/NC1_Fire.xsd   .\Objet/NC1_FireObjective.xsd   .\Objet/NC1_FreeShape.xsd   .\Objet/NC1_GroundEntity.xsd   .\Objet/NC1_GroundParticipant.xsd   .\Objet/NC1_GroundTrack.xsd   .\Objet/NC1_IffProcedure.xsd   .\Objet/NC1_Individual.xsd   .\Objet/NC1_IntelRequirement.xsd   .\Objet/NC1_Meteo.xsd   .\Objet/NC1_Mission.xsd   .\Objet/NC1_MissionASA.xsd   .\Objet/NC1_MissionASS.xsd   .\Objet/NC1_Obstacle.xsd   .\Objet/NC1_Organisation.xsd   .\Objet/NC1_Reinforcement.xsd   .\Objet/NC1_Roe.xsd   .\Objet/NC1_Route.xsd   .\Objet/NC1_SeaParticipant.xsd   .\Objet/NC1_SeaTrack.xsd   .\Objet/NC1_TacArea.xsd   .\Objet/NC1_TacLine.xsd   .\Objet/NC1_TacPoint.xsd   .\Objet/NC1_Unit.xsd  .\Message/NC1_MatDem.xsd  /o:.\generated\Message/ 
+Microsoft (R) Xml Schemas/DataTypes support utility
+[Microsoft (R) .NET Framework, Version 4.8.3928.0]
+Copyright (C) Microsoft Corporation. All rights reserved.
+êcriture du fichier '.\generated\Message/NC1_MatDem.cs'.
+
+Pour plus d'informations, entrez "xsd /?".
+
+D:\repos\MyMissionPlaner\Models\NC1Components>xsd.exe /c .\Commun\2DCoordinationMean.xsd .\Commun\Cbrn.xsd .\Commun.\Common.xsd .\Commun.\Communication.xsd .\Commun\Ew.xsd .\Commun\Health.xsd .\Commun\Location.xsd .\Commun\Logistics.xsd .\Commun\Message.xsd .\Commun\Object.xsd .\Commun\Participant.xsd .\Commun\SICS_Dictionaries.xsd .\Commun\Track.xsd .\Commun/2DCoordinationMean.xsd .\Objet/NC1_AcmWez.xsd  .\Objet/NC1_AirParticipant.xsd  .\Objet/NC1_AirTrack.xsd  .\Objet/NC1_CbrnEvent.xsd   .\Objet/NC1_Convoy.xsd   .\Objet/NC1_Event.xsd   .\Objet/NC1_Facility.xsd   .\Objet/NC1_Fire.xsd   .\Objet/NC1_FireObjective.xsd   .\Objet/NC1_FreeShape.xsd   .\Objet/NC1_GroundEntity.xsd   .\Objet/NC1_GroundParticipant.xsd   .\Objet/NC1_GroundTrack.xsd   .\Objet/NC1_IffProcedure.xsd   .\Objet/NC1_Individual.xsd   .\Objet/NC1_IntelRequirement.xsd   .\Objet/NC1_Meteo.xsd   .\Objet/NC1_Mission.xsd   .\Objet/NC1_MissionASA.xsd   .\Objet/NC1_MissionASS.xsd   .\Objet/NC1_Obstacle.xsd   .\Objet/NC1_Organisation.xsd   .\Objet/NC1_Reinforcement.xsd   .\Objet/NC1_Roe.xsd   .\Objet/NC1_Route.xsd   .\Objet/NC1_SeaParticipant.xsd   .\Objet/NC1_SeaTrack.xsd   .\Objet/NC1_TacArea.xsd   .\Objet/NC1_TacLine.xsd   .\Objet/NC1_TacPoint.xsd   .\Objet/NC1_Unit.xsd  .\Message/NC1_MEDEVAC-NINE-LINE.xsd  /o:.\generated\Message/ 
+Microsoft (R) Xml Schemas/DataTypes support utility
+[Microsoft (R) .NET Framework, Version 4.8.3928.0]
+Copyright (C) Microsoft Corporation. All rights reserved.
+êcriture du fichier '.\generated\Message/NC1_MEDEVAC-NINE-LINE.cs'.
+
+Pour plus d'informations, entrez "xsd /?".
+
+D:\repos\MyMissionPlaner\Models\NC1Components>xsd.exe /c .\Commun\2DCoordinationMean.xsd .\Commun\Cbrn.xsd .\Commun.\Common.xsd .\Commun.\Communication.xsd .\Commun\Ew.xsd .\Commun\Health.xsd .\Commun\Location.xsd .\Commun\Logistics.xsd .\Commun\Message.xsd .\Commun\Object.xsd .\Commun\Participant.xsd .\Commun\SICS_Dictionaries.xsd .\Commun\Track.xsd .\Commun/2DCoordinationMean.xsd .\Objet/NC1_AcmWez.xsd  .\Objet/NC1_AirParticipant.xsd  .\Objet/NC1_AirTrack.xsd  .\Objet/NC1_CbrnEvent.xsd   .\Objet/NC1_Convoy.xsd   .\Objet/NC1_Event.xsd   .\Objet/NC1_Facility.xsd   .\Objet/NC1_Fire.xsd   .\Objet/NC1_FireObjective.xsd   .\Objet/NC1_FreeShape.xsd   .\Objet/NC1_GroundEntity.xsd   .\Objet/NC1_GroundParticipant.xsd   .\Objet/NC1_GroundTrack.xsd   .\Objet/NC1_IffProcedure.xsd   .\Objet/NC1_Individual.xsd   .\Objet/NC1_IntelRequirement.xsd   .\Objet/NC1_Meteo.xsd   .\Objet/NC1_Mission.xsd   .\Objet/NC1_MissionASA.xsd   .\Objet/NC1_MissionASS.xsd   .\Objet/NC1_Obstacle.xsd   .\Objet/NC1_Organisation.xsd   .\Objet/NC1_Reinforcement.xsd   .\Objet/NC1_Roe.xsd   .\Objet/NC1_Route.xsd   .\Objet/NC1_SeaParticipant.xsd   .\Objet/NC1_SeaTrack.xsd   .\Objet/NC1_TacArea.xsd   .\Objet/NC1_TacLine.xsd   .\Objet/NC1_TacPoint.xsd   .\Objet/NC1_Unit.xsd  .\Message/NC1_MedSitRep.xsd  /o:.\generated\Message/ 
+Microsoft (R) Xml Schemas/DataTypes support utility
+[Microsoft (R) .NET Framework, Version 4.8.3928.0]
+Copyright (C) Microsoft Corporation. All rights reserved.
+êcriture du fichier '.\generated\Message/NC1_MedSitRep.cs'.
+
+Pour plus d'informations, entrez "xsd /?".
+
+D:\repos\MyMissionPlaner\Models\NC1Components>xsd.exe /c .\Commun\2DCoordinationMean.xsd .\Commun\Cbrn.xsd .\Commun.\Common.xsd .\Commun.\Communication.xsd .\Commun\Ew.xsd .\Commun\Health.xsd .\Commun\Location.xsd .\Commun\Logistics.xsd .\Commun\Message.xsd .\Commun\Object.xsd .\Commun\Participant.xsd .\Commun\SICS_Dictionaries.xsd .\Commun\Track.xsd .\Commun/2DCoordinationMean.xsd .\Objet/NC1_AcmWez.xsd  .\Objet/NC1_AirParticipant.xsd  .\Objet/NC1_AirTrack.xsd  .\Objet/NC1_CbrnEvent.xsd   .\Objet/NC1_Convoy.xsd   .\Objet/NC1_Event.xsd   .\Objet/NC1_Facility.xsd   .\Objet/NC1_Fire.xsd   .\Objet/NC1_FireObjective.xsd   .\Objet/NC1_FreeShape.xsd   .\Objet/NC1_GroundEntity.xsd   .\Objet/NC1_GroundParticipant.xsd   .\Objet/NC1_GroundTrack.xsd   .\Objet/NC1_IffProcedure.xsd   .\Objet/NC1_Individual.xsd   .\Objet/NC1_IntelRequirement.xsd   .\Objet/NC1_Meteo.xsd   .\Objet/NC1_Mission.xsd   .\Objet/NC1_MissionASA.xsd   .\Objet/NC1_MissionASS.xsd   .\Objet/NC1_Obstacle.xsd   .\Objet/NC1_Organisation.xsd   .\Objet/NC1_Reinforcement.xsd   .\Objet/NC1_Roe.xsd   .\Objet/NC1_Route.xsd   .\Objet/NC1_SeaParticipant.xsd   .\Objet/NC1_SeaTrack.xsd   .\Objet/NC1_TacArea.xsd   .\Objet/NC1_TacLine.xsd   .\Objet/NC1_TacPoint.xsd   .\Objet/NC1_Unit.xsd  .\Message/NC1_MessageLibre.xsd  /o:.\generated\Message/ 
+Microsoft (R) Xml Schemas/DataTypes support utility
+[Microsoft (R) .NET Framework, Version 4.8.3928.0]
+Copyright (C) Microsoft Corporation. All rights reserved.
+êcriture du fichier '.\generated\Message/NC1_MessageLibre.cs'.
+
+Pour plus d'informations, entrez "xsd /?".
+
+D:\repos\MyMissionPlaner\Models\NC1Components>xsd.exe /c .\Commun\2DCoordinationMean.xsd .\Commun\Cbrn.xsd .\Commun.\Common.xsd .\Commun.\Communication.xsd .\Commun\Ew.xsd .\Commun\Health.xsd .\Commun\Location.xsd .\Commun\Logistics.xsd .\Commun\Message.xsd .\Commun\Object.xsd .\Commun\Participant.xsd .\Commun\SICS_Dictionaries.xsd .\Commun\Track.xsd .\Commun/2DCoordinationMean.xsd .\Objet/NC1_AcmWez.xsd  .\Objet/NC1_AirParticipant.xsd  .\Objet/NC1_AirTrack.xsd  .\Objet/NC1_CbrnEvent.xsd   .\Objet/NC1_Convoy.xsd   .\Objet/NC1_Event.xsd   .\Objet/NC1_Facility.xsd   .\Objet/NC1_Fire.xsd   .\Objet/NC1_FireObjective.xsd   .\Objet/NC1_FreeShape.xsd   .\Objet/NC1_GroundEntity.xsd   .\Objet/NC1_GroundParticipant.xsd   .\Objet/NC1_GroundTrack.xsd   .\Objet/NC1_IffProcedure.xsd   .\Objet/NC1_Individual.xsd   .\Objet/NC1_IntelRequirement.xsd   .\Objet/NC1_Meteo.xsd   .\Objet/NC1_Mission.xsd   .\Objet/NC1_MissionASA.xsd   .\Objet/NC1_MissionASS.xsd   .\Objet/NC1_Obstacle.xsd   .\Objet/NC1_Organisation.xsd   .\Objet/NC1_Reinforcement.xsd   .\Objet/NC1_Roe.xsd   .\Objet/NC1_Route.xsd   .\Objet/NC1_SeaParticipant.xsd   .\Objet/NC1_SeaTrack.xsd   .\Objet/NC1_TacArea.xsd   .\Objet/NC1_TacLine.xsd   .\Objet/NC1_TacPoint.xsd   .\Objet/NC1_Unit.xsd  .\Message/NC1_MovOrder.xsd  /o:.\generated\Message/ 
+Microsoft (R) Xml Schemas/DataTypes support utility
+[Microsoft (R) .NET Framework, Version 4.8.3928.0]
+Copyright (C) Microsoft Corporation. All rights reserved.
+êcriture du fichier '.\generated\Message/NC1_MovOrder.cs'.
+
+Pour plus d'informations, entrez "xsd /?".
+
+D:\repos\MyMissionPlaner\Models\NC1Components>xsd.exe /c .\Commun\2DCoordinationMean.xsd .\Commun\Cbrn.xsd .\Commun.\Common.xsd .\Commun.\Communication.xsd .\Commun\Ew.xsd .\Commun\Health.xsd .\Commun\Location.xsd .\Commun\Logistics.xsd .\Commun\Message.xsd .\Commun\Object.xsd .\Commun\Participant.xsd .\Commun\SICS_Dictionaries.xsd .\Commun\Track.xsd .\Commun/2DCoordinationMean.xsd .\Objet/NC1_AcmWez.xsd  .\Objet/NC1_AirParticipant.xsd  .\Objet/NC1_AirTrack.xsd  .\Objet/NC1_CbrnEvent.xsd   .\Objet/NC1_Convoy.xsd   .\Objet/NC1_Event.xsd   .\Objet/NC1_Facility.xsd   .\Objet/NC1_Fire.xsd   .\Objet/NC1_FireObjective.xsd   .\Objet/NC1_FreeShape.xsd   .\Objet/NC1_GroundEntity.xsd   .\Objet/NC1_GroundParticipant.xsd   .\Objet/NC1_GroundTrack.xsd   .\Objet/NC1_IffProcedure.xsd   .\Objet/NC1_Individual.xsd   .\Objet/NC1_IntelRequirement.xsd   .\Objet/NC1_Meteo.xsd   .\Objet/NC1_Mission.xsd   .\Objet/NC1_MissionASA.xsd   .\Objet/NC1_MissionASS.xsd   .\Objet/NC1_Obstacle.xsd   .\Objet/NC1_Organisation.xsd   .\Objet/NC1_Reinforcement.xsd   .\Objet/NC1_Roe.xsd   .\Objet/NC1_Route.xsd   .\Objet/NC1_SeaParticipant.xsd   .\Objet/NC1_SeaTrack.xsd   .\Objet/NC1_TacArea.xsd   .\Objet/NC1_TacLine.xsd   .\Objet/NC1_TacPoint.xsd   .\Objet/NC1_Unit.xsd  .\Message/NC1_ObjectiveList.xsd  /o:.\generated\Message/ 
+Microsoft (R) Xml Schemas/DataTypes support utility
+[Microsoft (R) .NET Framework, Version 4.8.3928.0]
+Copyright (C) Microsoft Corporation. All rights reserved.
+êcriture du fichier '.\generated\Message/NC1_ObjectiveList.cs'.
+
+Pour plus d'informations, entrez "xsd /?".
+
+D:\repos\MyMissionPlaner\Models\NC1Components>xsd.exe /c .\Commun\2DCoordinationMean.xsd .\Commun\Cbrn.xsd .\Commun.\Common.xsd .\Commun.\Communication.xsd .\Commun\Ew.xsd .\Commun\Health.xsd .\Commun\Location.xsd .\Commun\Logistics.xsd .\Commun\Message.xsd .\Commun\Object.xsd .\Commun\Participant.xsd .\Commun\SICS_Dictionaries.xsd .\Commun\Track.xsd .\Commun/2DCoordinationMean.xsd .\Objet/NC1_AcmWez.xsd  .\Objet/NC1_AirParticipant.xsd  .\Objet/NC1_AirTrack.xsd  .\Objet/NC1_CbrnEvent.xsd   .\Objet/NC1_Convoy.xsd   .\Objet/NC1_Event.xsd   .\Objet/NC1_Facility.xsd   .\Objet/NC1_Fire.xsd   .\Objet/NC1_FireObjective.xsd   .\Objet/NC1_FreeShape.xsd   .\Objet/NC1_GroundEntity.xsd   .\Objet/NC1_GroundParticipant.xsd   .\Objet/NC1_GroundTrack.xsd   .\Objet/NC1_IffProcedure.xsd   .\Objet/NC1_Individual.xsd   .\Objet/NC1_IntelRequirement.xsd   .\Objet/NC1_Meteo.xsd   .\Objet/NC1_Mission.xsd   .\Objet/NC1_MissionASA.xsd   .\Objet/NC1_MissionASS.xsd   .\Objet/NC1_Obstacle.xsd   .\Objet/NC1_Organisation.xsd   .\Objet/NC1_Reinforcement.xsd   .\Objet/NC1_Roe.xsd   .\Objet/NC1_Route.xsd   .\Objet/NC1_SeaParticipant.xsd   .\Objet/NC1_SeaTrack.xsd   .\Objet/NC1_TacArea.xsd   .\Objet/NC1_TacLine.xsd   .\Objet/NC1_TacPoint.xsd   .\Objet/NC1_Unit.xsd  .\Message/NC1_OBSEXORD.xsd  /o:.\generated\Message/ 
+Microsoft (R) Xml Schemas/DataTypes support utility
+[Microsoft (R) .NET Framework, Version 4.8.3928.0]
+Copyright (C) Microsoft Corporation. All rights reserved.
+êcriture du fichier '.\generated\Message/NC1_OBSEXORD.cs'.
+
+Pour plus d'informations, entrez "xsd /?".
+
+D:\repos\MyMissionPlaner\Models\NC1Components>xsd.exe /c .\Commun\2DCoordinationMean.xsd .\Commun\Cbrn.xsd .\Commun.\Common.xsd .\Commun.\Communication.xsd .\Commun\Ew.xsd .\Commun\Health.xsd .\Commun\Location.xsd .\Commun\Logistics.xsd .\Commun\Message.xsd .\Commun\Object.xsd .\Commun\Participant.xsd .\Commun\SICS_Dictionaries.xsd .\Commun\Track.xsd .\Commun/2DCoordinationMean.xsd .\Objet/NC1_AcmWez.xsd  .\Objet/NC1_AirParticipant.xsd  .\Objet/NC1_AirTrack.xsd  .\Objet/NC1_CbrnEvent.xsd   .\Objet/NC1_Convoy.xsd   .\Objet/NC1_Event.xsd   .\Objet/NC1_Facility.xsd   .\Objet/NC1_Fire.xsd   .\Objet/NC1_FireObjective.xsd   .\Objet/NC1_FreeShape.xsd   .\Objet/NC1_GroundEntity.xsd   .\Objet/NC1_GroundParticipant.xsd   .\Objet/NC1_GroundTrack.xsd   .\Objet/NC1_IffProcedure.xsd   .\Objet/NC1_Individual.xsd   .\Objet/NC1_IntelRequirement.xsd   .\Objet/NC1_Meteo.xsd   .\Objet/NC1_Mission.xsd   .\Objet/NC1_MissionASA.xsd   .\Objet/NC1_MissionASS.xsd   .\Objet/NC1_Obstacle.xsd   .\Objet/NC1_Organisation.xsd   .\Objet/NC1_Reinforcement.xsd   .\Objet/NC1_Roe.xsd   .\Objet/NC1_Route.xsd   .\Objet/NC1_SeaParticipant.xsd   .\Objet/NC1_SeaTrack.xsd   .\Objet/NC1_TacArea.xsd   .\Objet/NC1_TacLine.xsd   .\Objet/NC1_TacPoint.xsd   .\Objet/NC1_Unit.xsd  .\Message/NC1_OPORD.xsd  /o:.\generated\Message/ 
+Microsoft (R) Xml Schemas/DataTypes support utility
+[Microsoft (R) .NET Framework, Version 4.8.3928.0]
+Copyright (C) Microsoft Corporation. All rights reserved.
+êcriture du fichier '.\generated\Message/NC1_OPORD.cs'.
+
+Pour plus d'informations, entrez "xsd /?".
+
+D:\repos\MyMissionPlaner\Models\NC1Components>xsd.exe /c .\Commun\2DCoordinationMean.xsd .\Commun\Cbrn.xsd .\Commun.\Common.xsd .\Commun.\Communication.xsd .\Commun\Ew.xsd .\Commun\Health.xsd .\Commun\Location.xsd .\Commun\Logistics.xsd .\Commun\Message.xsd .\Commun\Object.xsd .\Commun\Participant.xsd .\Commun\SICS_Dictionaries.xsd .\Commun\Track.xsd .\Commun/2DCoordinationMean.xsd .\Objet/NC1_AcmWez.xsd  .\Objet/NC1_AirParticipant.xsd  .\Objet/NC1_AirTrack.xsd  .\Objet/NC1_CbrnEvent.xsd   .\Objet/NC1_Convoy.xsd   .\Objet/NC1_Event.xsd   .\Objet/NC1_Facility.xsd   .\Objet/NC1_Fire.xsd   .\Objet/NC1_FireObjective.xsd   .\Objet/NC1_FreeShape.xsd   .\Objet/NC1_GroundEntity.xsd   .\Objet/NC1_GroundParticipant.xsd   .\Objet/NC1_GroundTrack.xsd   .\Objet/NC1_IffProcedure.xsd   .\Objet/NC1_Individual.xsd   .\Objet/NC1_IntelRequirement.xsd   .\Objet/NC1_Meteo.xsd   .\Objet/NC1_Mission.xsd   .\Objet/NC1_MissionASA.xsd   .\Objet/NC1_MissionASS.xsd   .\Objet/NC1_Obstacle.xsd   .\Objet/NC1_Organisation.xsd   .\Objet/NC1_Reinforcement.xsd   .\Objet/NC1_Roe.xsd   .\Objet/NC1_Route.xsd   .\Objet/NC1_SeaParticipant.xsd   .\Objet/NC1_SeaTrack.xsd   .\Objet/NC1_TacArea.xsd   .\Objet/NC1_TacLine.xsd   .\Objet/NC1_TacPoint.xsd   .\Objet/NC1_Unit.xsd  .\Message/NC1_OPORD-AIN.xsd  /o:.\generated\Message/ 
+Microsoft (R) Xml Schemas/DataTypes support utility
+[Microsoft (R) .NET Framework, Version 4.8.3928.0]
+Copyright (C) Microsoft Corporation. All rights reserved.
+Avertissement de validation de schÇmaˇ: Le type 'urn:fra:nc1:message:opord:SignatureType' n'est pas dÇclarÇ. ligne 962, position 14.
+Avertissement de validation de schÇmaˇ: Le type 'urn:fra:nc1:message:opord:TaskOrganisationMemberSimplifiedType' n'est pas dÇclarÇ. ligne 37, position 20.
+
+Avertissementˇ: le schÇma n'a pas pu àtre validÇ. Il est possible que la gÇnÇration de classe Çchoue ou produise des rÇsultats incorrects.
+
+
+Pour plus d'informations, entrez "xsd /?".
+
+D:\repos\MyMissionPlaner\Models\NC1Components>xsd.exe /c .\Commun\2DCoordinationMean.xsd .\Commun\Cbrn.xsd .\Commun.\Common.xsd .\Commun.\Communication.xsd .\Commun\Ew.xsd .\Commun\Health.xsd .\Commun\Location.xsd .\Commun\Logistics.xsd .\Commun\Message.xsd .\Commun\Object.xsd .\Commun\Participant.xsd .\Commun\SICS_Dictionaries.xsd .\Commun\Track.xsd .\Commun/2DCoordinationMean.xsd .\Objet/NC1_AcmWez.xsd  .\Objet/NC1_AirParticipant.xsd  .\Objet/NC1_AirTrack.xsd  .\Objet/NC1_CbrnEvent.xsd   .\Objet/NC1_Convoy.xsd   .\Objet/NC1_Event.xsd   .\Objet/NC1_Facility.xsd   .\Objet/NC1_Fire.xsd   .\Objet/NC1_FireObjective.xsd   .\Objet/NC1_FreeShape.xsd   .\Objet/NC1_GroundEntity.xsd   .\Objet/NC1_GroundParticipant.xsd   .\Objet/NC1_GroundTrack.xsd   .\Objet/NC1_IffProcedure.xsd   .\Objet/NC1_Individual.xsd   .\Objet/NC1_IntelRequirement.xsd   .\Objet/NC1_Meteo.xsd   .\Objet/NC1_Mission.xsd   .\Objet/NC1_MissionASA.xsd   .\Objet/NC1_MissionASS.xsd   .\Objet/NC1_Obstacle.xsd   .\Objet/NC1_Organisation.xsd   .\Objet/NC1_Reinforcement.xsd   .\Objet/NC1_Roe.xsd   .\Objet/NC1_Route.xsd   .\Objet/NC1_SeaParticipant.xsd   .\Objet/NC1_SeaTrack.xsd   .\Objet/NC1_TacArea.xsd   .\Objet/NC1_TacLine.xsd   .\Objet/NC1_TacPoint.xsd   .\Objet/NC1_Unit.xsd  .\Message/NC1_OPORD-ALAT.xsd  /o:.\generated\Message/ 
+Microsoft (R) Xml Schemas/DataTypes support utility
+[Microsoft (R) .NET Framework, Version 4.8.3928.0]
+Copyright (C) Microsoft Corporation. All rights reserved.
+Avertissement de validation de schÇmaˇ: Le type 'urn:fra:nc1:message:opord:SignatureType' n'est pas dÇclarÇ. ligne 265, position 14.
+Avertissement de validation de schÇmaˇ: Le type 'urn:fra:nc1:message:opord:TaskOrganisationMemberSimplifiedType' n'est pas dÇclarÇ. ligne 36, position 20.
+
+Avertissementˇ: le schÇma n'a pas pu àtre validÇ. Il est possible que la gÇnÇration de classe Çchoue ou produise des rÇsultats incorrects.
+
+
+Pour plus d'informations, entrez "xsd /?".
+
+D:\repos\MyMissionPlaner\Models\NC1Components>xsd.exe /c .\Commun\2DCoordinationMean.xsd .\Commun\Cbrn.xsd .\Commun.\Common.xsd .\Commun.\Communication.xsd .\Commun\Ew.xsd .\Commun\Health.xsd .\Commun\Location.xsd .\Commun\Logistics.xsd .\Commun\Message.xsd .\Commun\Object.xsd .\Commun\Participant.xsd .\Commun\SICS_Dictionaries.xsd .\Commun\Track.xsd .\Commun/2DCoordinationMean.xsd .\Objet/NC1_AcmWez.xsd  .\Objet/NC1_AirParticipant.xsd  .\Objet/NC1_AirTrack.xsd  .\Objet/NC1_CbrnEvent.xsd   .\Objet/NC1_Convoy.xsd   .\Objet/NC1_Event.xsd   .\Objet/NC1_Facility.xsd   .\Objet/NC1_Fire.xsd   .\Objet/NC1_FireObjective.xsd   .\Objet/NC1_FreeShape.xsd   .\Objet/NC1_GroundEntity.xsd   .\Objet/NC1_GroundParticipant.xsd   .\Objet/NC1_GroundTrack.xsd   .\Objet/NC1_IffProcedure.xsd   .\Objet/NC1_Individual.xsd   .\Objet/NC1_IntelRequirement.xsd   .\Objet/NC1_Meteo.xsd   .\Objet/NC1_Mission.xsd   .\Objet/NC1_MissionASA.xsd   .\Objet/NC1_MissionASS.xsd   .\Objet/NC1_Obstacle.xsd   .\Objet/NC1_Organisation.xsd   .\Objet/NC1_Reinforcement.xsd   .\Objet/NC1_Roe.xsd   .\Objet/NC1_Route.xsd   .\Objet/NC1_SeaParticipant.xsd   .\Objet/NC1_SeaTrack.xsd   .\Objet/NC1_TacArea.xsd   .\Objet/NC1_TacLine.xsd   .\Objet/NC1_TacPoint.xsd   .\Objet/NC1_Unit.xsd  .\Message/NC1_OPORD-GE.xsd  /o:.\generated\Message/ 
+Microsoft (R) Xml Schemas/DataTypes support utility
+[Microsoft (R) .NET Framework, Version 4.8.3928.0]
+Copyright (C) Microsoft Corporation. All rights reserved.
+Avertissement de validation de schÇmaˇ: Le type 'urn:fra:nc1:message:opord:SignatureType' n'est pas dÇclarÇ. ligne 396, position 14.
+
+Avertissementˇ: le schÇma n'a pas pu àtre validÇ. Il est possible que la gÇnÇration de classe Çchoue ou produise des rÇsultats incorrects.
+
+
+Pour plus d'informations, entrez "xsd /?".
+
+D:\repos\MyMissionPlaner\Models\NC1Components>xsd.exe /c .\Commun\2DCoordinationMean.xsd .\Commun\Cbrn.xsd .\Commun.\Common.xsd .\Commun.\Communication.xsd .\Commun\Ew.xsd .\Commun\Health.xsd .\Commun\Location.xsd .\Commun\Logistics.xsd .\Commun\Message.xsd .\Commun\Object.xsd .\Commun\Participant.xsd .\Commun\SICS_Dictionaries.xsd .\Commun\Track.xsd .\Commun/2DCoordinationMean.xsd .\Objet/NC1_AcmWez.xsd  .\Objet/NC1_AirParticipant.xsd  .\Objet/NC1_AirTrack.xsd  .\Objet/NC1_CbrnEvent.xsd   .\Objet/NC1_Convoy.xsd   .\Objet/NC1_Event.xsd   .\Objet/NC1_Facility.xsd   .\Objet/NC1_Fire.xsd   .\Objet/NC1_FireObjective.xsd   .\Objet/NC1_FreeShape.xsd   .\Objet/NC1_GroundEntity.xsd   .\Objet/NC1_GroundParticipant.xsd   .\Objet/NC1_GroundTrack.xsd   .\Objet/NC1_IffProcedure.xsd   .\Objet/NC1_Individual.xsd   .\Objet/NC1_IntelRequirement.xsd   .\Objet/NC1_Meteo.xsd   .\Objet/NC1_Mission.xsd   .\Objet/NC1_MissionASA.xsd   .\Objet/NC1_MissionASS.xsd   .\Objet/NC1_Obstacle.xsd   .\Objet/NC1_Organisation.xsd   .\Objet/NC1_Reinforcement.xsd   .\Objet/NC1_Roe.xsd   .\Objet/NC1_Route.xsd   .\Objet/NC1_SeaParticipant.xsd   .\Objet/NC1_SeaTrack.xsd   .\Objet/NC1_TacArea.xsd   .\Objet/NC1_TacLine.xsd   .\Objet/NC1_TacPoint.xsd   .\Objet/NC1_Unit.xsd  .\Message/NC1_OPORD-GEN.xsd  /o:.\generated\Message/ 
+Microsoft (R) Xml Schemas/DataTypes support utility
+[Microsoft (R) .NET Framework, Version 4.8.3928.0]
+Copyright (C) Microsoft Corporation. All rights reserved.
+Avertissement de validation de schÇmaˇ: Le type 'urn:fra:nc1:message:opord:SignatureType' n'est pas dÇclarÇ. ligne 294, position 14.
+Avertissement de validation de schÇmaˇ: Le type 'urn:fra:nc1:message:opord:obstaclesAndWorksType' n'est pas dÇclarÇ. ligne 198, position 26.
+Avertissement de validation de schÇmaˇ: Le type 'urn:fra:nc1:message:opord:obstaclesAndWorksType' n'est pas dÇclarÇ. ligne 107, position 32.
+
+Avertissementˇ: le schÇma n'a pas pu àtre validÇ. Il est possible que la gÇnÇration de classe Çchoue ou produise des rÇsultats incorrects.
+
+
+Pour plus d'informations, entrez "xsd /?".
+
+D:\repos\MyMissionPlaner\Models\NC1Components>xsd.exe /c .\Commun\2DCoordinationMean.xsd .\Commun\Cbrn.xsd .\Commun.\Common.xsd .\Commun.\Communication.xsd .\Commun\Ew.xsd .\Commun\Health.xsd .\Commun\Location.xsd .\Commun\Logistics.xsd .\Commun\Message.xsd .\Commun\Object.xsd .\Commun\Participant.xsd .\Commun\SICS_Dictionaries.xsd .\Commun\Track.xsd .\Commun/2DCoordinationMean.xsd .\Objet/NC1_AcmWez.xsd  .\Objet/NC1_AirParticipant.xsd  .\Objet/NC1_AirTrack.xsd  .\Objet/NC1_CbrnEvent.xsd   .\Objet/NC1_Convoy.xsd   .\Objet/NC1_Event.xsd   .\Objet/NC1_Facility.xsd   .\Objet/NC1_Fire.xsd   .\Objet/NC1_FireObjective.xsd   .\Objet/NC1_FreeShape.xsd   .\Objet/NC1_GroundEntity.xsd   .\Objet/NC1_GroundParticipant.xsd   .\Objet/NC1_GroundTrack.xsd   .\Objet/NC1_IffProcedure.xsd   .\Objet/NC1_Individual.xsd   .\Objet/NC1_IntelRequirement.xsd   .\Objet/NC1_Meteo.xsd   .\Objet/NC1_Mission.xsd   .\Objet/NC1_MissionASA.xsd   .\Objet/NC1_MissionASS.xsd   .\Objet/NC1_Obstacle.xsd   .\Objet/NC1_Organisation.xsd   .\Objet/NC1_Reinforcement.xsd   .\Objet/NC1_Roe.xsd   .\Objet/NC1_Route.xsd   .\Objet/NC1_SeaParticipant.xsd   .\Objet/NC1_SeaTrack.xsd   .\Objet/NC1_TacArea.xsd   .\Objet/NC1_TacLine.xsd   .\Objet/NC1_TacPoint.xsd   .\Objet/NC1_Unit.xsd  .\Message/NC1_OPORD-LOG.xsd  /o:.\generated\Message/ 
+Microsoft (R) Xml Schemas/DataTypes support utility
+[Microsoft (R) .NET Framework, Version 4.8.3928.0]
+Copyright (C) Microsoft Corporation. All rights reserved.
+Avertissement de validation de schÇmaˇ: Le type 'urn:fra:nc1:message:opord:SignatureType' n'est pas dÇclarÇ. ligne 222, position 14.
+
+Avertissementˇ: le schÇma n'a pas pu àtre validÇ. Il est possible que la gÇnÇration de classe Çchoue ou produise des rÇsultats incorrects.
+
+
+Pour plus d'informations, entrez "xsd /?".
+
+D:\repos\MyMissionPlaner\Models\NC1Components>xsd.exe /c .\Commun\2DCoordinationMean.xsd .\Commun\Cbrn.xsd .\Commun.\Common.xsd .\Commun.\Communication.xsd .\Commun\Ew.xsd .\Commun\Health.xsd .\Commun\Location.xsd .\Commun\Logistics.xsd .\Commun\Message.xsd .\Commun\Object.xsd .\Commun\Participant.xsd .\Commun\SICS_Dictionaries.xsd .\Commun\Track.xsd .\Commun/2DCoordinationMean.xsd .\Objet/NC1_AcmWez.xsd  .\Objet/NC1_AirParticipant.xsd  .\Objet/NC1_AirTrack.xsd  .\Objet/NC1_CbrnEvent.xsd   .\Objet/NC1_Convoy.xsd   .\Objet/NC1_Event.xsd   .\Objet/NC1_Facility.xsd   .\Objet/NC1_Fire.xsd   .\Objet/NC1_FireObjective.xsd   .\Objet/NC1_FreeShape.xsd   .\Objet/NC1_GroundEntity.xsd   .\Objet/NC1_GroundParticipant.xsd   .\Objet/NC1_GroundTrack.xsd   .\Objet/NC1_IffProcedure.xsd   .\Objet/NC1_Individual.xsd   .\Objet/NC1_IntelRequirement.xsd   .\Objet/NC1_Meteo.xsd   .\Objet/NC1_Mission.xsd   .\Objet/NC1_MissionASA.xsd   .\Objet/NC1_MissionASS.xsd   .\Objet/NC1_Obstacle.xsd   .\Objet/NC1_Organisation.xsd   .\Objet/NC1_Reinforcement.xsd   .\Objet/NC1_Roe.xsd   .\Objet/NC1_Route.xsd   .\Objet/NC1_SeaParticipant.xsd   .\Objet/NC1_SeaTrack.xsd   .\Objet/NC1_TacArea.xsd   .\Objet/NC1_TacLine.xsd   .\Objet/NC1_TacPoint.xsd   .\Objet/NC1_Unit.xsd  .\Message/NC1_OPORD-MVT.xsd  /o:.\generated\Message/ 
+Microsoft (R) Xml Schemas/DataTypes support utility
+[Microsoft (R) .NET Framework, Version 4.8.3928.0]
+Copyright (C) Microsoft Corporation. All rights reserved.
+Avertissement de validation de schÇmaˇ: Le type 'urn:fra:nc1:message:opord:SignatureType' n'est pas dÇclarÇ. ligne 127, position 14.
+
+Avertissementˇ: le schÇma n'a pas pu àtre validÇ. Il est possible que la gÇnÇration de classe Çchoue ou produise des rÇsultats incorrects.
+
+
+Pour plus d'informations, entrez "xsd /?".
+
+D:\repos\MyMissionPlaner\Models\NC1Components>xsd.exe /c .\Commun\2DCoordinationMean.xsd .\Commun\Cbrn.xsd .\Commun.\Common.xsd .\Commun.\Communication.xsd .\Commun\Ew.xsd .\Commun\Health.xsd .\Commun\Location.xsd .\Commun\Logistics.xsd .\Commun\Message.xsd .\Commun\Object.xsd .\Commun\Participant.xsd .\Commun\SICS_Dictionaries.xsd .\Commun\Track.xsd .\Commun/2DCoordinationMean.xsd .\Objet/NC1_AcmWez.xsd  .\Objet/NC1_AirParticipant.xsd  .\Objet/NC1_AirTrack.xsd  .\Objet/NC1_CbrnEvent.xsd   .\Objet/NC1_Convoy.xsd   .\Objet/NC1_Event.xsd   .\Objet/NC1_Facility.xsd   .\Objet/NC1_Fire.xsd   .\Objet/NC1_FireObjective.xsd   .\Objet/NC1_FreeShape.xsd   .\Objet/NC1_GroundEntity.xsd   .\Objet/NC1_GroundParticipant.xsd   .\Objet/NC1_GroundTrack.xsd   .\Objet/NC1_IffProcedure.xsd   .\Objet/NC1_Individual.xsd   .\Objet/NC1_IntelRequirement.xsd   .\Objet/NC1_Meteo.xsd   .\Objet/NC1_Mission.xsd   .\Objet/NC1_MissionASA.xsd   .\Objet/NC1_MissionASS.xsd   .\Objet/NC1_Obstacle.xsd   .\Objet/NC1_Organisation.xsd   .\Objet/NC1_Reinforcement.xsd   .\Objet/NC1_Roe.xsd   .\Objet/NC1_Route.xsd   .\Objet/NC1_SeaParticipant.xsd   .\Objet/NC1_SeaTrack.xsd   .\Objet/NC1_TacArea.xsd   .\Objet/NC1_TacLine.xsd   .\Objet/NC1_TacPoint.xsd   .\Objet/NC1_Unit.xsd  .\Message/NC1_OPORD-OPSEC.xsd  /o:.\generated\Message/ 
+Microsoft (R) Xml Schemas/DataTypes support utility
+[Microsoft (R) .NET Framework, Version 4.8.3928.0]
+Copyright (C) Microsoft Corporation. All rights reserved.
+Avertissement de validation de schÇmaˇ: Le type 'urn:fra:nc1:message:opord:SignatureType' n'est pas dÇclarÇ. ligne 294, position 14.
+
+Avertissementˇ: le schÇma n'a pas pu àtre validÇ. Il est possible que la gÇnÇration de classe Çchoue ou produise des rÇsultats incorrects.
+
+
+Pour plus d'informations, entrez "xsd /?".
+
+D:\repos\MyMissionPlaner\Models\NC1Components>xsd.exe /c .\Commun\2DCoordinationMean.xsd .\Commun\Cbrn.xsd .\Commun.\Common.xsd .\Commun.\Communication.xsd .\Commun\Ew.xsd .\Commun\Health.xsd .\Commun\Location.xsd .\Commun\Logistics.xsd .\Commun\Message.xsd .\Commun\Object.xsd .\Commun\Participant.xsd .\Commun\SICS_Dictionaries.xsd .\Commun\Track.xsd .\Commun/2DCoordinationMean.xsd .\Objet/NC1_AcmWez.xsd  .\Objet/NC1_AirParticipant.xsd  .\Objet/NC1_AirTrack.xsd  .\Objet/NC1_CbrnEvent.xsd   .\Objet/NC1_Convoy.xsd   .\Objet/NC1_Event.xsd   .\Objet/NC1_Facility.xsd   .\Objet/NC1_Fire.xsd   .\Objet/NC1_FireObjective.xsd   .\Objet/NC1_FreeShape.xsd   .\Objet/NC1_GroundEntity.xsd   .\Objet/NC1_GroundParticipant.xsd   .\Objet/NC1_GroundTrack.xsd   .\Objet/NC1_IffProcedure.xsd   .\Objet/NC1_Individual.xsd   .\Objet/NC1_IntelRequirement.xsd   .\Objet/NC1_Meteo.xsd   .\Objet/NC1_Mission.xsd   .\Objet/NC1_MissionASA.xsd   .\Objet/NC1_MissionASS.xsd   .\Objet/NC1_Obstacle.xsd   .\Objet/NC1_Organisation.xsd   .\Objet/NC1_Reinforcement.xsd   .\Objet/NC1_Roe.xsd   .\Objet/NC1_Route.xsd   .\Objet/NC1_SeaParticipant.xsd   .\Objet/NC1_SeaTrack.xsd   .\Objet/NC1_TacArea.xsd   .\Objet/NC1_TacLine.xsd   .\Objet/NC1_TacPoint.xsd   .\Objet/NC1_Unit.xsd  .\Message/NC1_OPORD-RENS.xsd  /o:.\generated\Message/ 
+Microsoft (R) Xml Schemas/DataTypes support utility
+[Microsoft (R) .NET Framework, Version 4.8.3928.0]
+Copyright (C) Microsoft Corporation. All rights reserved.
+Avertissement de validation de schÇmaˇ: Le type 'urn:fra:nc1:message:opord:SignatureType' n'est pas dÇclarÇ. ligne 420, position 14.
+
+Avertissementˇ: le schÇma n'a pas pu àtre validÇ. Il est possible que la gÇnÇration de classe Çchoue ou produise des rÇsultats incorrects.
+
+
+Pour plus d'informations, entrez "xsd /?".
+
+D:\repos\MyMissionPlaner\Models\NC1Components>xsd.exe /c .\Commun\2DCoordinationMean.xsd .\Commun\Cbrn.xsd .\Commun.\Common.xsd .\Commun.\Communication.xsd .\Commun\Ew.xsd .\Commun\Health.xsd .\Commun\Location.xsd .\Commun\Logistics.xsd .\Commun\Message.xsd .\Commun\Object.xsd .\Commun\Participant.xsd .\Commun\SICS_Dictionaries.xsd .\Commun\Track.xsd .\Commun/2DCoordinationMean.xsd .\Objet/NC1_AcmWez.xsd  .\Objet/NC1_AirParticipant.xsd  .\Objet/NC1_AirTrack.xsd  .\Objet/NC1_CbrnEvent.xsd   .\Objet/NC1_Convoy.xsd   .\Objet/NC1_Event.xsd   .\Objet/NC1_Facility.xsd   .\Objet/NC1_Fire.xsd   .\Objet/NC1_FireObjective.xsd   .\Objet/NC1_FreeShape.xsd   .\Objet/NC1_GroundEntity.xsd   .\Objet/NC1_GroundParticipant.xsd   .\Objet/NC1_GroundTrack.xsd   .\Objet/NC1_IffProcedure.xsd   .\Objet/NC1_Individual.xsd   .\Objet/NC1_IntelRequirement.xsd   .\Objet/NC1_Meteo.xsd   .\Objet/NC1_Mission.xsd   .\Objet/NC1_MissionASA.xsd   .\Objet/NC1_MissionASS.xsd   .\Objet/NC1_Obstacle.xsd   .\Objet/NC1_Organisation.xsd   .\Objet/NC1_Reinforcement.xsd   .\Objet/NC1_Roe.xsd   .\Objet/NC1_Route.xsd   .\Objet/NC1_SeaParticipant.xsd   .\Objet/NC1_SeaTrack.xsd   .\Objet/NC1_TacArea.xsd   .\Objet/NC1_TacLine.xsd   .\Objet/NC1_TacPoint.xsd   .\Objet/NC1_Unit.xsd  .\Message/NC1_OPORD-ROE.xsd  /o:.\generated\Message/ 
+Microsoft (R) Xml Schemas/DataTypes support utility
+[Microsoft (R) .NET Framework, Version 4.8.3928.0]
+Copyright (C) Microsoft Corporation. All rights reserved.
+Avertissement de validation de schÇmaˇ: Le type 'urn:fra:nc1:message:opord:SignatureType' n'est pas dÇclarÇ. ligne 43, position 14.
+
+Avertissementˇ: le schÇma n'a pas pu àtre validÇ. Il est possible que la gÇnÇration de classe Çchoue ou produise des rÇsultats incorrects.
+
+
+Pour plus d'informations, entrez "xsd /?".
+
+D:\repos\MyMissionPlaner\Models\NC1Components>xsd.exe /c .\Commun\2DCoordinationMean.xsd .\Commun\Cbrn.xsd .\Commun.\Common.xsd .\Commun.\Communication.xsd .\Commun\Ew.xsd .\Commun\Health.xsd .\Commun\Location.xsd .\Commun\Logistics.xsd .\Commun\Message.xsd .\Commun\Object.xsd .\Commun\Participant.xsd .\Commun\SICS_Dictionaries.xsd .\Commun\Track.xsd .\Commun/2DCoordinationMean.xsd .\Objet/NC1_AcmWez.xsd  .\Objet/NC1_AirParticipant.xsd  .\Objet/NC1_AirTrack.xsd  .\Objet/NC1_CbrnEvent.xsd   .\Objet/NC1_Convoy.xsd   .\Objet/NC1_Event.xsd   .\Objet/NC1_Facility.xsd   .\Objet/NC1_Fire.xsd   .\Objet/NC1_FireObjective.xsd   .\Objet/NC1_FreeShape.xsd   .\Objet/NC1_GroundEntity.xsd   .\Objet/NC1_GroundParticipant.xsd   .\Objet/NC1_GroundTrack.xsd   .\Objet/NC1_IffProcedure.xsd   .\Objet/NC1_Individual.xsd   .\Objet/NC1_IntelRequirement.xsd   .\Objet/NC1_Meteo.xsd   .\Objet/NC1_Mission.xsd   .\Objet/NC1_MissionASA.xsd   .\Objet/NC1_MissionASS.xsd   .\Objet/NC1_Obstacle.xsd   .\Objet/NC1_Organisation.xsd   .\Objet/NC1_Reinforcement.xsd   .\Objet/NC1_Roe.xsd   .\Objet/NC1_Route.xsd   .\Objet/NC1_SeaParticipant.xsd   .\Objet/NC1_SeaTrack.xsd   .\Objet/NC1_TacArea.xsd   .\Objet/NC1_TacLine.xsd   .\Objet/NC1_TacPoint.xsd   .\Objet/NC1_Unit.xsd  .\Message/NC1_OPORD-SIC.xsd  /o:.\generated\Message/ 
+Microsoft (R) Xml Schemas/DataTypes support utility
+[Microsoft (R) .NET Framework, Version 4.8.3928.0]
+Copyright (C) Microsoft Corporation. All rights reserved.
+Avertissement de validation de schÇmaˇ: Le type 'urn:fra:nc1:message:opord:SignatureType' n'est pas dÇclarÇ. ligne 380, position 14.
+
+Avertissementˇ: le schÇma n'a pas pu àtre validÇ. Il est possible que la gÇnÇration de classe Çchoue ou produise des rÇsultats incorrects.
+
+
+Pour plus d'informations, entrez "xsd /?".
+
+D:\repos\MyMissionPlaner\Models\NC1Components>xsd.exe /c .\Commun\2DCoordinationMean.xsd .\Commun\Cbrn.xsd .\Commun.\Common.xsd .\Commun.\Communication.xsd .\Commun\Ew.xsd .\Commun\Health.xsd .\Commun\Location.xsd .\Commun\Logistics.xsd .\Commun\Message.xsd .\Commun\Object.xsd .\Commun\Participant.xsd .\Commun\SICS_Dictionaries.xsd .\Commun\Track.xsd .\Commun/2DCoordinationMean.xsd .\Objet/NC1_AcmWez.xsd  .\Objet/NC1_AirParticipant.xsd  .\Objet/NC1_AirTrack.xsd  .\Objet/NC1_CbrnEvent.xsd   .\Objet/NC1_Convoy.xsd   .\Objet/NC1_Event.xsd   .\Objet/NC1_Facility.xsd   .\Objet/NC1_Fire.xsd   .\Objet/NC1_FireObjective.xsd   .\Objet/NC1_FreeShape.xsd   .\Objet/NC1_GroundEntity.xsd   .\Objet/NC1_GroundParticipant.xsd   .\Objet/NC1_GroundTrack.xsd   .\Objet/NC1_IffProcedure.xsd   .\Objet/NC1_Individual.xsd   .\Objet/NC1_IntelRequirement.xsd   .\Objet/NC1_Meteo.xsd   .\Objet/NC1_Mission.xsd   .\Objet/NC1_MissionASA.xsd   .\Objet/NC1_MissionASS.xsd   .\Objet/NC1_Obstacle.xsd   .\Objet/NC1_Organisation.xsd   .\Objet/NC1_Reinforcement.xsd   .\Objet/NC1_Roe.xsd   .\Objet/NC1_Route.xsd   .\Objet/NC1_SeaParticipant.xsd   .\Objet/NC1_SeaTrack.xsd   .\Objet/NC1_TacArea.xsd   .\Objet/NC1_TacLine.xsd   .\Objet/NC1_TacPoint.xsd   .\Objet/NC1_Unit.xsd  .\Message/NC1_OWNSITREP.xsd  /o:.\generated\Message/ 
+Microsoft (R) Xml Schemas/DataTypes support utility
+[Microsoft (R) .NET Framework, Version 4.8.3928.0]
+Copyright (C) Microsoft Corporation. All rights reserved.
+êcriture du fichier '.\generated\Message/NC1_OWNSITREP.cs'.
+
+Pour plus d'informations, entrez "xsd /?".
+
+D:\repos\MyMissionPlaner\Models\NC1Components>xsd.exe /c .\Commun\2DCoordinationMean.xsd .\Commun\Cbrn.xsd .\Commun.\Common.xsd .\Commun.\Communication.xsd .\Commun\Ew.xsd .\Commun\Health.xsd .\Commun\Location.xsd .\Commun\Logistics.xsd .\Commun\Message.xsd .\Commun\Object.xsd .\Commun\Participant.xsd .\Commun\SICS_Dictionaries.xsd .\Commun\Track.xsd .\Commun/2DCoordinationMean.xsd .\Objet/NC1_AcmWez.xsd  .\Objet/NC1_AirParticipant.xsd  .\Objet/NC1_AirTrack.xsd  .\Objet/NC1_CbrnEvent.xsd   .\Objet/NC1_Convoy.xsd   .\Objet/NC1_Event.xsd   .\Objet/NC1_Facility.xsd   .\Objet/NC1_Fire.xsd   .\Objet/NC1_FireObjective.xsd   .\Objet/NC1_FreeShape.xsd   .\Objet/NC1_GroundEntity.xsd   .\Objet/NC1_GroundParticipant.xsd   .\Objet/NC1_GroundTrack.xsd   .\Objet/NC1_IffProcedure.xsd   .\Objet/NC1_Individual.xsd   .\Objet/NC1_IntelRequirement.xsd   .\Objet/NC1_Meteo.xsd   .\Objet/NC1_Mission.xsd   .\Objet/NC1_MissionASA.xsd   .\Objet/NC1_MissionASS.xsd   .\Objet/NC1_Obstacle.xsd   .\Objet/NC1_Organisation.xsd   .\Objet/NC1_Reinforcement.xsd   .\Objet/NC1_Roe.xsd   .\Objet/NC1_Route.xsd   .\Objet/NC1_SeaParticipant.xsd   .\Objet/NC1_SeaTrack.xsd   .\Objet/NC1_TacArea.xsd   .\Objet/NC1_TacLine.xsd   .\Objet/NC1_TacPoint.xsd   .\Objet/NC1_Unit.xsd  .\Message/NC1_PEMA.xsd  /o:.\generated\Message/ 
+Microsoft (R) Xml Schemas/DataTypes support utility
+[Microsoft (R) .NET Framework, Version 4.8.3928.0]
+Copyright (C) Microsoft Corporation. All rights reserved.
+êcriture du fichier '.\generated\Message/NC1_PEMA.cs'.
+
+Pour plus d'informations, entrez "xsd /?".
+
+D:\repos\MyMissionPlaner\Models\NC1Components>xsd.exe /c .\Commun\2DCoordinationMean.xsd .\Commun\Cbrn.xsd .\Commun.\Common.xsd .\Commun.\Communication.xsd .\Commun\Ew.xsd .\Commun\Health.xsd .\Commun\Location.xsd .\Commun\Logistics.xsd .\Commun\Message.xsd .\Commun\Object.xsd .\Commun\Participant.xsd .\Commun\SICS_Dictionaries.xsd .\Commun\Track.xsd .\Commun/2DCoordinationMean.xsd .\Objet/NC1_AcmWez.xsd  .\Objet/NC1_AirParticipant.xsd  .\Objet/NC1_AirTrack.xsd  .\Objet/NC1_CbrnEvent.xsd   .\Objet/NC1_Convoy.xsd   .\Objet/NC1_Event.xsd   .\Objet/NC1_Facility.xsd   .\Objet/NC1_Fire.xsd   .\Objet/NC1_FireObjective.xsd   .\Objet/NC1_FreeShape.xsd   .\Objet/NC1_GroundEntity.xsd   .\Objet/NC1_GroundParticipant.xsd   .\Objet/NC1_GroundTrack.xsd   .\Objet/NC1_IffProcedure.xsd   .\Objet/NC1_Individual.xsd   .\Objet/NC1_IntelRequirement.xsd   .\Objet/NC1_Meteo.xsd   .\Objet/NC1_Mission.xsd   .\Objet/NC1_MissionASA.xsd   .\Objet/NC1_MissionASS.xsd   .\Objet/NC1_Obstacle.xsd   .\Objet/NC1_Organisation.xsd   .\Objet/NC1_Reinforcement.xsd   .\Objet/NC1_Roe.xsd   .\Objet/NC1_Route.xsd   .\Objet/NC1_SeaParticipant.xsd   .\Objet/NC1_SeaTrack.xsd   .\Objet/NC1_TacArea.xsd   .\Objet/NC1_TacLine.xsd   .\Objet/NC1_TacPoint.xsd   .\Objet/NC1_Unit.xsd  .\Message/NC1_PlanDeVol.xsd  /o:.\generated\Message/ 
+Microsoft (R) Xml Schemas/DataTypes support utility
+[Microsoft (R) .NET Framework, Version 4.8.3928.0]
+Copyright (C) Microsoft Corporation. All rights reserved.
+Avertissement de validation de schÇmaˇ: Le type 'urn:fra:nc1:objet:3droute:_3DRouteType' n'est pas dÇclarÇ. ligne 34, position 20.
+
+Avertissementˇ: le schÇma n'a pas pu àtre validÇ. Il est possible que la gÇnÇration de classe Çchoue ou produise des rÇsultats incorrects.
+
+
+Pour plus d'informations, entrez "xsd /?".
+
+D:\repos\MyMissionPlaner\Models\NC1Components>xsd.exe /c .\Commun\2DCoordinationMean.xsd .\Commun\Cbrn.xsd .\Commun.\Common.xsd .\Commun.\Communication.xsd .\Commun\Ew.xsd .\Commun\Health.xsd .\Commun\Location.xsd .\Commun\Logistics.xsd .\Commun\Message.xsd .\Commun\Object.xsd .\Commun\Participant.xsd .\Commun\SICS_Dictionaries.xsd .\Commun\Track.xsd .\Commun/2DCoordinationMean.xsd .\Objet/NC1_AcmWez.xsd  .\Objet/NC1_AirParticipant.xsd  .\Objet/NC1_AirTrack.xsd  .\Objet/NC1_CbrnEvent.xsd   .\Objet/NC1_Convoy.xsd   .\Objet/NC1_Event.xsd   .\Objet/NC1_Facility.xsd   .\Objet/NC1_Fire.xsd   .\Objet/NC1_FireObjective.xsd   .\Objet/NC1_FreeShape.xsd   .\Objet/NC1_GroundEntity.xsd   .\Objet/NC1_GroundParticipant.xsd   .\Objet/NC1_GroundTrack.xsd   .\Objet/NC1_IffProcedure.xsd   .\Objet/NC1_Individual.xsd   .\Objet/NC1_IntelRequirement.xsd   .\Objet/NC1_Meteo.xsd   .\Objet/NC1_Mission.xsd   .\Objet/NC1_MissionASA.xsd   .\Objet/NC1_MissionASS.xsd   .\Objet/NC1_Obstacle.xsd   .\Objet/NC1_Organisation.xsd   .\Objet/NC1_Reinforcement.xsd   .\Objet/NC1_Roe.xsd   .\Objet/NC1_Route.xsd   .\Objet/NC1_SeaParticipant.xsd   .\Objet/NC1_SeaTrack.xsd   .\Objet/NC1_TacArea.xsd   .\Objet/NC1_TacLine.xsd   .\Objet/NC1_TacPoint.xsd   .\Objet/NC1_Unit.xsd  .\Message/NC1_PropositionPlanObstacles.xsd  /o:.\generated\Message/ 
+Microsoft (R) Xml Schemas/DataTypes support utility
+[Microsoft (R) .NET Framework, Version 4.8.3928.0]
+Copyright (C) Microsoft Corporation. All rights reserved.
+êcriture du fichier '.\generated\Message/NC1_PropositionPlanObstacles.cs'.
+
+Pour plus d'informations, entrez "xsd /?".
+
+D:\repos\MyMissionPlaner\Models\NC1Components>xsd.exe /c .\Commun\2DCoordinationMean.xsd .\Commun\Cbrn.xsd .\Commun.\Common.xsd .\Commun.\Communication.xsd .\Commun\Ew.xsd .\Commun\Health.xsd .\Commun\Location.xsd .\Commun\Logistics.xsd .\Commun\Message.xsd .\Commun\Object.xsd .\Commun\Participant.xsd .\Commun\SICS_Dictionaries.xsd .\Commun\Track.xsd .\Commun/2DCoordinationMean.xsd .\Objet/NC1_AcmWez.xsd  .\Objet/NC1_AirParticipant.xsd  .\Objet/NC1_AirTrack.xsd  .\Objet/NC1_CbrnEvent.xsd   .\Objet/NC1_Convoy.xsd   .\Objet/NC1_Event.xsd   .\Objet/NC1_Facility.xsd   .\Objet/NC1_Fire.xsd   .\Objet/NC1_FireObjective.xsd   .\Objet/NC1_FreeShape.xsd   .\Objet/NC1_GroundEntity.xsd   .\Objet/NC1_GroundParticipant.xsd   .\Objet/NC1_GroundTrack.xsd   .\Objet/NC1_IffProcedure.xsd   .\Objet/NC1_Individual.xsd   .\Objet/NC1_IntelRequirement.xsd   .\Objet/NC1_Meteo.xsd   .\Objet/NC1_Mission.xsd   .\Objet/NC1_MissionASA.xsd   .\Objet/NC1_MissionASS.xsd   .\Objet/NC1_Obstacle.xsd   .\Objet/NC1_Organisation.xsd   .\Objet/NC1_Reinforcement.xsd   .\Objet/NC1_Roe.xsd   .\Objet/NC1_Route.xsd   .\Objet/NC1_SeaParticipant.xsd   .\Objet/NC1_SeaTrack.xsd   .\Objet/NC1_TacArea.xsd   .\Objet/NC1_TacLine.xsd   .\Objet/NC1_TacPoint.xsd   .\Objet/NC1_Unit.xsd  .\Message/NC1_PRR.xsd  /o:.\generated\Message/ 
+Microsoft (R) Xml Schemas/DataTypes support utility
+[Microsoft (R) .NET Framework, Version 4.8.3928.0]
+Copyright (C) Microsoft Corporation. All rights reserved.
+êcriture du fichier '.\generated\Message/NC1_PRR.cs'.
+
+Pour plus d'informations, entrez "xsd /?".
+
+D:\repos\MyMissionPlaner\Models\NC1Components>xsd.exe /c .\Commun\2DCoordinationMean.xsd .\Commun\Cbrn.xsd .\Commun.\Common.xsd .\Commun.\Communication.xsd .\Commun\Ew.xsd .\Commun\Health.xsd .\Commun\Location.xsd .\Commun\Logistics.xsd .\Commun\Message.xsd .\Commun\Object.xsd .\Commun\Participant.xsd .\Commun\SICS_Dictionaries.xsd .\Commun\Track.xsd .\Commun/2DCoordinationMean.xsd .\Objet/NC1_AcmWez.xsd  .\Objet/NC1_AirParticipant.xsd  .\Objet/NC1_AirTrack.xsd  .\Objet/NC1_CbrnEvent.xsd   .\Objet/NC1_Convoy.xsd   .\Objet/NC1_Event.xsd   .\Objet/NC1_Facility.xsd   .\Objet/NC1_Fire.xsd   .\Objet/NC1_FireObjective.xsd   .\Objet/NC1_FreeShape.xsd   .\Objet/NC1_GroundEntity.xsd   .\Objet/NC1_GroundParticipant.xsd   .\Objet/NC1_GroundTrack.xsd   .\Objet/NC1_IffProcedure.xsd   .\Objet/NC1_Individual.xsd   .\Objet/NC1_IntelRequirement.xsd   .\Objet/NC1_Meteo.xsd   .\Objet/NC1_Mission.xsd   .\Objet/NC1_MissionASA.xsd   .\Objet/NC1_MissionASS.xsd   .\Objet/NC1_Obstacle.xsd   .\Objet/NC1_Organisation.xsd   .\Objet/NC1_Reinforcement.xsd   .\Objet/NC1_Roe.xsd   .\Objet/NC1_Route.xsd   .\Objet/NC1_SeaParticipant.xsd   .\Objet/NC1_SeaTrack.xsd   .\Objet/NC1_TacArea.xsd   .\Objet/NC1_TacLine.xsd   .\Objet/NC1_TacPoint.xsd   .\Objet/NC1_Unit.xsd  .\Message/NC1_Request.xsd  /o:.\generated\Message/ 
+Microsoft (R) Xml Schemas/DataTypes support utility
+[Microsoft (R) .NET Framework, Version 4.8.3928.0]
+Copyright (C) Microsoft Corporation. All rights reserved.
+êcriture du fichier '.\generated\Message/NC1_Request.cs'.
+
+Pour plus d'informations, entrez "xsd /?".
+
+D:\repos\MyMissionPlaner\Models\NC1Components>xsd.exe /c .\Commun\2DCoordinationMean.xsd .\Commun\Cbrn.xsd .\Commun.\Common.xsd .\Commun.\Communication.xsd .\Commun\Ew.xsd .\Commun\Health.xsd .\Commun\Location.xsd .\Commun\Logistics.xsd .\Commun\Message.xsd .\Commun\Object.xsd .\Commun\Participant.xsd .\Commun\SICS_Dictionaries.xsd .\Commun\Track.xsd .\Commun/2DCoordinationMean.xsd .\Objet/NC1_AcmWez.xsd  .\Objet/NC1_AirParticipant.xsd  .\Objet/NC1_AirTrack.xsd  .\Objet/NC1_CbrnEvent.xsd   .\Objet/NC1_Convoy.xsd   .\Objet/NC1_Event.xsd   .\Objet/NC1_Facility.xsd   .\Objet/NC1_Fire.xsd   .\Objet/NC1_FireObjective.xsd   .\Objet/NC1_FreeShape.xsd   .\Objet/NC1_GroundEntity.xsd   .\Objet/NC1_GroundParticipant.xsd   .\Objet/NC1_GroundTrack.xsd   .\Objet/NC1_IffProcedure.xsd   .\Objet/NC1_Individual.xsd   .\Objet/NC1_IntelRequirement.xsd   .\Objet/NC1_Meteo.xsd   .\Objet/NC1_Mission.xsd   .\Objet/NC1_MissionASA.xsd   .\Objet/NC1_MissionASS.xsd   .\Objet/NC1_Obstacle.xsd   .\Objet/NC1_Organisation.xsd   .\Objet/NC1_Reinforcement.xsd   .\Objet/NC1_Roe.xsd   .\Objet/NC1_Route.xsd   .\Objet/NC1_SeaParticipant.xsd   .\Objet/NC1_SeaTrack.xsd   .\Objet/NC1_TacArea.xsd   .\Objet/NC1_TacLine.xsd   .\Objet/NC1_TacPoint.xsd   .\Objet/NC1_Unit.xsd  .\Message/NC1_SitObst.xsd  /o:.\generated\Message/ 
+Microsoft (R) Xml Schemas/DataTypes support utility
+[Microsoft (R) .NET Framework, Version 4.8.3928.0]
+Copyright (C) Microsoft Corporation. All rights reserved.
+êcriture du fichier '.\generated\Message/NC1_SitObst.cs'.
+
+Pour plus d'informations, entrez "xsd /?".
+
+D:\repos\MyMissionPlaner\Models\NC1Components>xsd.exe /c .\Commun\2DCoordinationMean.xsd .\Commun\Cbrn.xsd .\Commun.\Common.xsd .\Commun.\Communication.xsd .\Commun\Ew.xsd .\Commun\Health.xsd .\Commun\Location.xsd .\Commun\Logistics.xsd .\Commun\Message.xsd .\Commun\Object.xsd .\Commun\Participant.xsd .\Commun\SICS_Dictionaries.xsd .\Commun\Track.xsd .\Commun/2DCoordinationMean.xsd .\Objet/NC1_AcmWez.xsd  .\Objet/NC1_AirParticipant.xsd  .\Objet/NC1_AirTrack.xsd  .\Objet/NC1_CbrnEvent.xsd   .\Objet/NC1_Convoy.xsd   .\Objet/NC1_Event.xsd   .\Objet/NC1_Facility.xsd   .\Objet/NC1_Fire.xsd   .\Objet/NC1_FireObjective.xsd   .\Objet/NC1_FreeShape.xsd   .\Objet/NC1_GroundEntity.xsd   .\Objet/NC1_GroundParticipant.xsd   .\Objet/NC1_GroundTrack.xsd   .\Objet/NC1_IffProcedure.xsd   .\Objet/NC1_Individual.xsd   .\Objet/NC1_IntelRequirement.xsd   .\Objet/NC1_Meteo.xsd   .\Objet/NC1_Mission.xsd   .\Objet/NC1_MissionASA.xsd   .\Objet/NC1_MissionASS.xsd   .\Objet/NC1_Obstacle.xsd   .\Objet/NC1_Organisation.xsd   .\Objet/NC1_Reinforcement.xsd   .\Objet/NC1_Roe.xsd   .\Objet/NC1_Route.xsd   .\Objet/NC1_SeaParticipant.xsd   .\Objet/NC1_SeaTrack.xsd   .\Objet/NC1_TacArea.xsd   .\Objet/NC1_TacLine.xsd   .\Objet/NC1_TacPoint.xsd   .\Objet/NC1_Unit.xsd  .\Message/NC1_StAcmConduite.xsd  /o:.\generated\Message/ 
+Microsoft (R) Xml Schemas/DataTypes support utility
+[Microsoft (R) .NET Framework, Version 4.8.3928.0]
+Copyright (C) Microsoft Corporation. All rights reserved.
+êcriture du fichier '.\generated\Message/NC1_StAcmConduite.cs'.
+
+Pour plus d'informations, entrez "xsd /?".
+
+D:\repos\MyMissionPlaner\Models\NC1Components>xsd.exe /c .\Commun\2DCoordinationMean.xsd .\Commun\Cbrn.xsd .\Commun.\Common.xsd .\Commun.\Communication.xsd .\Commun\Ew.xsd .\Commun\Health.xsd .\Commun\Location.xsd .\Commun\Logistics.xsd .\Commun\Message.xsd .\Commun\Object.xsd .\Commun\Participant.xsd .\Commun\SICS_Dictionaries.xsd .\Commun\Track.xsd .\Commun/2DCoordinationMean.xsd .\Objet/NC1_AcmWez.xsd  .\Objet/NC1_AirParticipant.xsd  .\Objet/NC1_AirTrack.xsd  .\Objet/NC1_CbrnEvent.xsd   .\Objet/NC1_Convoy.xsd   .\Objet/NC1_Event.xsd   .\Objet/NC1_Facility.xsd   .\Objet/NC1_Fire.xsd   .\Objet/NC1_FireObjective.xsd   .\Objet/NC1_FreeShape.xsd   .\Objet/NC1_GroundEntity.xsd   .\Objet/NC1_GroundParticipant.xsd   .\Objet/NC1_GroundTrack.xsd   .\Objet/NC1_IffProcedure.xsd   .\Objet/NC1_Individual.xsd   .\Objet/NC1_IntelRequirement.xsd   .\Objet/NC1_Meteo.xsd   .\Objet/NC1_Mission.xsd   .\Objet/NC1_MissionASA.xsd   .\Objet/NC1_MissionASS.xsd   .\Objet/NC1_Obstacle.xsd   .\Objet/NC1_Organisation.xsd   .\Objet/NC1_Reinforcement.xsd   .\Objet/NC1_Roe.xsd   .\Objet/NC1_Route.xsd   .\Objet/NC1_SeaParticipant.xsd   .\Objet/NC1_SeaTrack.xsd   .\Objet/NC1_TacArea.xsd   .\Objet/NC1_TacLine.xsd   .\Objet/NC1_TacPoint.xsd   .\Objet/NC1_Unit.xsd  .\Message/NC1_STR.xsd  /o:.\generated\Message/ 
+Microsoft (R) Xml Schemas/DataTypes support utility
+[Microsoft (R) .NET Framework, Version 4.8.3928.0]
+Copyright (C) Microsoft Corporation. All rights reserved.
+êcriture du fichier '.\generated\Message/NC1_STR.cs'.
+
+Pour plus d'informations, entrez "xsd /?".
+
+D:\repos\MyMissionPlaner\Models\NC1Components>xsd.exe /c .\Commun\2DCoordinationMean.xsd .\Commun\Cbrn.xsd .\Commun.\Common.xsd .\Commun.\Communication.xsd .\Commun\Ew.xsd .\Commun\Health.xsd .\Commun\Location.xsd .\Commun\Logistics.xsd .\Commun\Message.xsd .\Commun\Object.xsd .\Commun\Participant.xsd .\Commun\SICS_Dictionaries.xsd .\Commun\Track.xsd .\Commun/2DCoordinationMean.xsd .\Objet/NC1_AcmWez.xsd  .\Objet/NC1_AirParticipant.xsd  .\Objet/NC1_AirTrack.xsd  .\Objet/NC1_CbrnEvent.xsd   .\Objet/NC1_Convoy.xsd   .\Objet/NC1_Event.xsd   .\Objet/NC1_Facility.xsd   .\Objet/NC1_Fire.xsd   .\Objet/NC1_FireObjective.xsd   .\Objet/NC1_FreeShape.xsd   .\Objet/NC1_GroundEntity.xsd   .\Objet/NC1_GroundParticipant.xsd   .\Objet/NC1_GroundTrack.xsd   .\Objet/NC1_IffProcedure.xsd   .\Objet/NC1_Individual.xsd   .\Objet/NC1_IntelRequirement.xsd   .\Objet/NC1_Meteo.xsd   .\Objet/NC1_Mission.xsd   .\Objet/NC1_MissionASA.xsd   .\Objet/NC1_MissionASS.xsd   .\Objet/NC1_Obstacle.xsd   .\Objet/NC1_Organisation.xsd   .\Objet/NC1_Reinforcement.xsd   .\Objet/NC1_Roe.xsd   .\Objet/NC1_Route.xsd   .\Objet/NC1_SeaParticipant.xsd   .\Objet/NC1_SeaTrack.xsd   .\Objet/NC1_TacArea.xsd   .\Objet/NC1_TacLine.xsd   .\Objet/NC1_TacPoint.xsd   .\Objet/NC1_Unit.xsd  .\Message/NC1_SuppressionItsAts.xsd  /o:.\generated\Message/ 
+Microsoft (R) Xml Schemas/DataTypes support utility
+[Microsoft (R) .NET Framework, Version 4.8.3928.0]
+Copyright (C) Microsoft Corporation. All rights reserved.
+êcriture du fichier '.\generated\Message/NC1_SuppressionItsAts.cs'.
+
+Pour plus d'informations, entrez "xsd /?".
+
+D:\repos\MyMissionPlaner\Models\NC1Components>xsd.exe /c .\Commun\2DCoordinationMean.xsd .\Commun\Cbrn.xsd .\Commun.\Common.xsd .\Commun.\Communication.xsd .\Commun\Ew.xsd .\Commun\Health.xsd .\Commun\Location.xsd .\Commun\Logistics.xsd .\Commun\Message.xsd .\Commun\Object.xsd .\Commun\Participant.xsd .\Commun\SICS_Dictionaries.xsd .\Commun\Track.xsd .\Commun/2DCoordinationMean.xsd .\Objet/NC1_AcmWez.xsd  .\Objet/NC1_AirParticipant.xsd  .\Objet/NC1_AirTrack.xsd  .\Objet/NC1_CbrnEvent.xsd   .\Objet/NC1_Convoy.xsd   .\Objet/NC1_Event.xsd   .\Objet/NC1_Facility.xsd   .\Objet/NC1_Fire.xsd   .\Objet/NC1_FireObjective.xsd   .\Objet/NC1_FreeShape.xsd   .\Objet/NC1_GroundEntity.xsd   .\Objet/NC1_GroundParticipant.xsd   .\Objet/NC1_GroundTrack.xsd   .\Objet/NC1_IffProcedure.xsd   .\Objet/NC1_Individual.xsd   .\Objet/NC1_IntelRequirement.xsd   .\Objet/NC1_Meteo.xsd   .\Objet/NC1_Mission.xsd   .\Objet/NC1_MissionASA.xsd   .\Objet/NC1_MissionASS.xsd   .\Objet/NC1_Obstacle.xsd   .\Objet/NC1_Organisation.xsd   .\Objet/NC1_Reinforcement.xsd   .\Objet/NC1_Roe.xsd   .\Objet/NC1_Route.xsd   .\Objet/NC1_SeaParticipant.xsd   .\Objet/NC1_SeaTrack.xsd   .\Objet/NC1_TacArea.xsd   .\Objet/NC1_TacLine.xsd   .\Objet/NC1_TacPoint.xsd   .\Objet/NC1_Unit.xsd  .\Message/NC1_TactOAP.xsd  /o:.\generated\Message/ 
+Microsoft (R) Xml Schemas/DataTypes support utility
+[Microsoft (R) .NET Framework, Version 4.8.3928.0]
+Copyright (C) Microsoft Corporation. All rights reserved.
+êcriture du fichier '.\generated\Message/NC1_TactOAP.cs'.
+
+Pour plus d'informations, entrez "xsd /?".
+
+D:\repos\MyMissionPlaner\Models\NC1Components>xsd.exe /c .\Commun\2DCoordinationMean.xsd .\Commun\Cbrn.xsd .\Commun.\Common.xsd .\Commun.\Communication.xsd .\Commun\Ew.xsd .\Commun\Health.xsd .\Commun\Location.xsd .\Commun\Logistics.xsd .\Commun\Message.xsd .\Commun\Object.xsd .\Commun\Participant.xsd .\Commun\SICS_Dictionaries.xsd .\Commun\Track.xsd .\Commun/2DCoordinationMean.xsd .\Objet/NC1_AcmWez.xsd  .\Objet/NC1_AirParticipant.xsd  .\Objet/NC1_AirTrack.xsd  .\Objet/NC1_CbrnEvent.xsd   .\Objet/NC1_Convoy.xsd   .\Objet/NC1_Event.xsd   .\Objet/NC1_Facility.xsd   .\Objet/NC1_Fire.xsd   .\Objet/NC1_FireObjective.xsd   .\Objet/NC1_FreeShape.xsd   .\Objet/NC1_GroundEntity.xsd   .\Objet/NC1_GroundParticipant.xsd   .\Objet/NC1_GroundTrack.xsd   .\Objet/NC1_IffProcedure.xsd   .\Objet/NC1_Individual.xsd   .\Objet/NC1_IntelRequirement.xsd   .\Objet/NC1_Meteo.xsd   .\Objet/NC1_Mission.xsd   .\Objet/NC1_MissionASA.xsd   .\Objet/NC1_MissionASS.xsd   .\Objet/NC1_Obstacle.xsd   .\Objet/NC1_Organisation.xsd   .\Objet/NC1_Reinforcement.xsd   .\Objet/NC1_Roe.xsd   .\Objet/NC1_Route.xsd   .\Objet/NC1_SeaParticipant.xsd   .\Objet/NC1_SeaTrack.xsd   .\Objet/NC1_TacArea.xsd   .\Objet/NC1_TacLine.xsd   .\Objet/NC1_TacPoint.xsd   .\Objet/NC1_Unit.xsd  .\Message/NC1_TechnOAP.xsd  /o:.\generated\Message/ 
+Microsoft (R) Xml Schemas/DataTypes support utility
+[Microsoft (R) .NET Framework, Version 4.8.3928.0]
+Copyright (C) Microsoft Corporation. All rights reserved.
+êcriture du fichier '.\generated\Message/NC1_TechnOAP.cs'.
+
+Pour plus d'informations, entrez "xsd /?".
+
+D:\repos\MyMissionPlaner\Models\NC1Components>xsd.exe /c .\Commun\2DCoordinationMean.xsd .\Commun\Cbrn.xsd .\Commun.\Common.xsd .\Commun.\Communication.xsd .\Commun\Ew.xsd .\Commun\Health.xsd .\Commun\Location.xsd .\Commun\Logistics.xsd .\Commun\Message.xsd .\Commun\Object.xsd .\Commun\Participant.xsd .\Commun\SICS_Dictionaries.xsd .\Commun\Track.xsd .\Commun/2DCoordinationMean.xsd .\Objet/NC1_AcmWez.xsd  .\Objet/NC1_AirParticipant.xsd  .\Objet/NC1_AirTrack.xsd  .\Objet/NC1_CbrnEvent.xsd   .\Objet/NC1_Convoy.xsd   .\Objet/NC1_Event.xsd   .\Objet/NC1_Facility.xsd   .\Objet/NC1_Fire.xsd   .\Objet/NC1_FireObjective.xsd   .\Objet/NC1_FreeShape.xsd   .\Objet/NC1_GroundEntity.xsd   .\Objet/NC1_GroundParticipant.xsd   .\Objet/NC1_GroundTrack.xsd   .\Objet/NC1_IffProcedure.xsd   .\Objet/NC1_Individual.xsd   .\Objet/NC1_IntelRequirement.xsd   .\Objet/NC1_Meteo.xsd   .\Objet/NC1_Mission.xsd   .\Objet/NC1_MissionASA.xsd   .\Objet/NC1_MissionASS.xsd   .\Objet/NC1_Obstacle.xsd   .\Objet/NC1_Organisation.xsd   .\Objet/NC1_Reinforcement.xsd   .\Objet/NC1_Roe.xsd   .\Objet/NC1_Route.xsd   .\Objet/NC1_SeaParticipant.xsd   .\Objet/NC1_SeaTrack.xsd   .\Objet/NC1_TacArea.xsd   .\Objet/NC1_TacLine.xsd   .\Objet/NC1_TacPoint.xsd   .\Objet/NC1_Unit.xsd  .\Message/NC1_TirInterdit.xsd  /o:.\generated\Message/ 
+Microsoft (R) Xml Schemas/DataTypes support utility
+[Microsoft (R) .NET Framework, Version 4.8.3928.0]
+Copyright (C) Microsoft Corporation. All rights reserved.
+êcriture du fichier '.\generated\Message/NC1_TirInterdit.cs'.
+
+Pour plus d'informations, entrez "xsd /?".
+
+D:\repos\MyMissionPlaner\Models\NC1Components>xsd.exe /c .\Commun\2DCoordinationMean.xsd .\Commun\Cbrn.xsd .\Commun.\Common.xsd .\Commun.\Communication.xsd .\Commun\Ew.xsd .\Commun\Health.xsd .\Commun\Location.xsd .\Commun\Logistics.xsd .\Commun\Message.xsd .\Commun\Object.xsd .\Commun\Participant.xsd .\Commun\SICS_Dictionaries.xsd .\Commun\Track.xsd .\Commun/2DCoordinationMean.xsd .\Objet/NC1_AcmWez.xsd  .\Objet/NC1_AirParticipant.xsd  .\Objet/NC1_AirTrack.xsd  .\Objet/NC1_CbrnEvent.xsd   .\Objet/NC1_Convoy.xsd   .\Objet/NC1_Event.xsd   .\Objet/NC1_Facility.xsd   .\Objet/NC1_Fire.xsd   .\Objet/NC1_FireObjective.xsd   .\Objet/NC1_FreeShape.xsd   .\Objet/NC1_GroundEntity.xsd   .\Objet/NC1_GroundParticipant.xsd   .\Objet/NC1_GroundTrack.xsd   .\Objet/NC1_IffProcedure.xsd   .\Objet/NC1_Individual.xsd   .\Objet/NC1_IntelRequirement.xsd   .\Objet/NC1_Meteo.xsd   .\Objet/NC1_Mission.xsd   .\Objet/NC1_MissionASA.xsd   .\Objet/NC1_MissionASS.xsd   .\Objet/NC1_Obstacle.xsd   .\Objet/NC1_Organisation.xsd   .\Objet/NC1_Reinforcement.xsd   .\Objet/NC1_Roe.xsd   .\Objet/NC1_Route.xsd   .\Objet/NC1_SeaParticipant.xsd   .\Objet/NC1_SeaTrack.xsd   .\Objet/NC1_TacArea.xsd   .\Objet/NC1_TacLine.xsd   .\Objet/NC1_TacPoint.xsd   .\Objet/NC1_Unit.xsd  .\Message_Service/NC1_TechReqInfo.xsd  /o:.\generated\Message/Service/ 
+Microsoft (R) Xml Schemas/DataTypes support utility
+[Microsoft (R) .NET Framework, Version 4.8.3928.0]
+Copyright (C) Microsoft Corporation. All rights reserved.
+êcriture du fichier '.\generated\Message/Service/NC1_TechReqInfo.cs'.
+
+Pour plus d'informations, entrez "xsd /?".
+
+D:\repos\MyMissionPlaner\Models\NC1Components>xsd.exe /c .\Commun\2DCoordinationMean.xsd .\Commun\Cbrn.xsd .\Commun.\Common.xsd .\Commun.\Communication.xsd .\Commun\Ew.xsd .\Commun\Health.xsd .\Commun\Location.xsd .\Commun\Logistics.xsd .\Commun\Message.xsd .\Commun\Object.xsd .\Commun\Participant.xsd .\Commun\SICS_Dictionaries.xsd .\Commun\Track.xsd .\Commun/2DCoordinationMean.xsd .\Objet/NC1_AcmWez.xsd  .\Objet/NC1_AirParticipant.xsd  .\Objet/NC1_AirTrack.xsd  .\Objet/NC1_CbrnEvent.xsd   .\Objet/NC1_Convoy.xsd   .\Objet/NC1_Event.xsd   .\Objet/NC1_Facility.xsd   .\Objet/NC1_Fire.xsd   .\Objet/NC1_FireObjective.xsd   .\Objet/NC1_FreeShape.xsd   .\Objet/NC1_GroundEntity.xsd   .\Objet/NC1_GroundParticipant.xsd   .\Objet/NC1_GroundTrack.xsd   .\Objet/NC1_IffProcedure.xsd   .\Objet/NC1_Individual.xsd   .\Objet/NC1_IntelRequirement.xsd   .\Objet/NC1_Meteo.xsd   .\Objet/NC1_Mission.xsd   .\Objet/NC1_MissionASA.xsd   .\Objet/NC1_MissionASS.xsd   .\Objet/NC1_Obstacle.xsd   .\Objet/NC1_Organisation.xsd   .\Objet/NC1_Reinforcement.xsd   .\Objet/NC1_Roe.xsd   .\Objet/NC1_Route.xsd   .\Objet/NC1_SeaParticipant.xsd   .\Objet/NC1_SeaTrack.xsd   .\Objet/NC1_TacArea.xsd   .\Objet/NC1_TacLine.xsd   .\Objet/NC1_TacPoint.xsd   .\Objet/NC1_Unit.xsd  .\Message_Service/NC1_TechStcUpdate.xsd  /o:.\generated\Message/Service/ 
+Microsoft (R) Xml Schemas/DataTypes support utility
+[Microsoft (R) .NET Framework, Version 4.8.3928.0]
+Copyright (C) Microsoft Corporation. All rights reserved.
+êcriture du fichier '.\generated\Message/Service/NC1_TechStcUpdate.cs'.
+
+Pour plus d'informations, entrez "xsd /?".

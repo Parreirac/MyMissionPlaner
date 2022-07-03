@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<cva:ContextValueAssociation xmlns:cva="http://docs.oasis-open.org/codelist/ns/ContextValueAssociation/1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="urn:fra:nc1:objet:route" queryBinding="xslt2" xmlns:nc1route="urn:fra:nc1:objet:route">
+  <!-- NC1 V.9.0.0 -->
+  <ValueLists>
+    <ValueList xml:id="nc1objcom-ActivationStatusCode" uri="../Dictionnaires/ActivationStatusCode.gc" />
+    <ValueList xml:id="nc1objcom-IsFullCode" uri="../Dictionnaires/IsFullCode.gc" />
+    <ValueList xml:id="nc1logistics-MobilityCategoryCode" uri="../Dictionnaires/MobilityCategoryCode.gc" />
+    <ValueList xml:id="nc1route-ModeOfTransportationCode" uri="../Dictionnaires/ModeOfTransportationCode.gc" />
+    <ValueList xml:id="nc1sicsdicos-L135_32Code" uri="../Dictionnaires/L135_32Code.gc" />
+    <ValueList xml:id="nc1sicsdicos-L135_33Code" uri="../Dictionnaires/L135_33Code.gc" />
+  </ValueLists>
+  <Contexts>
+    <Context address="/nc1route:NC1_Route/@activationStatus" values="nc1objcom-ActivationStatusCode" />
+    <Context address="/nc1route:NC1_Route/@isFull" values="nc1objcom-IsFullCode" />
+    <Context address="/nc1route:NC1_Route/tacticalData/mobility" values="nc1logistics-MobilityCategoryCode" />
+    <Context address="/nc1route:NC1_Route/tacticalData/modeOfTransportation" values="nc1route-ModeOfTransportationCode" />
+    <Context address="/nc1route:NC1_Route/tacticalData/generalPracticability" values="nc1sicsdicos-L135_32Code" />
+    <Context address="/nc1route:NC1_Route/tacticalData/instantPracticability" values="nc1sicsdicos-L135_33Code" />
+  </Contexts>
+</cva:ContextValueAssociation>

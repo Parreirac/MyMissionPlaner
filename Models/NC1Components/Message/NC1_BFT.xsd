@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema targetNamespace="urn:fra:nc1:message:bft" xmlns:nc1ihm="urn:fra:nc1:IHM" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:nc1bft="urn:fra:nc1:message:bft" xmlns:nc1msgcom="urn:fra:nc1:common:message" xmlns:nc1airparticipant="urn:fra:nc1:objet:airparticipant" xmlns:nc1airtrack="urn:fra:nc1:objet:airtrack" xmlns:nc1groundparticipant="urn:fra:nc1:objet:groundparticipant" xmlns:nc1groundtrack="urn:fra:nc1:objet:groundtrack" xmlns:nc1participant="urn:fra:nc1:objet:participant" xmlns:nc1seaparticipant="urn:fra:nc1:objet:seaparticipant" xmlns:nc1seatrack="urn:fra:nc1:objet:seatrack" xmlns:nc1track="urn:fra:nc1:objet:track">
+  <!-- NC1 V.9.0.0 -->
+  <xs:import namespace="urn:fra:nc1:common:message" schemaLocation="../Commun/Message.xsd" />
+  <xs:import namespace="urn:fra:nc1:objet:airparticipant" schemaLocation="../Objet/NC1_AirParticipant.xsd" />
+  <xs:import namespace="urn:fra:nc1:objet:airtrack" schemaLocation="../Objet/NC1_AirTrack.xsd" />
+  <xs:import namespace="urn:fra:nc1:objet:groundparticipant" schemaLocation="../Objet/NC1_GroundParticipant.xsd" />
+  <xs:import namespace="urn:fra:nc1:objet:groundtrack" schemaLocation="../Objet/NC1_GroundTrack.xsd" />
+  <xs:import namespace="urn:fra:nc1:objet:participant" schemaLocation="../Commun/Participant.xsd" />
+  <xs:import namespace="urn:fra:nc1:objet:seaparticipant" schemaLocation="../Objet/NC1_SeaParticipant.xsd" />
+  <xs:import namespace="urn:fra:nc1:objet:seatrack" schemaLocation="../Objet/NC1_SeaTrack.xsd" />
+  <xs:import namespace="urn:fra:nc1:objet:track" schemaLocation="../Commun/Track.xsd" />
+  <xs:element name="NC1_BFT">
+    <xs:annotation>
+      <xs:documentation>Le message NC1_BFT permet d’envoyer les localisations géographiques de participants amis en temps réel en vue de partager les positions amies vraies des équipements ou individus (unités terminales et postes de commandement) pour notamment éviter les tirs fratricides.</xs:documentation>
+      <xs:documentation xml:lang="en">The NC1_BFT message allows to send the geographical locations of real time friendly participants to share the true friendly positions of equipments or individuals (terminal units and headquarters) to avoid in particular the fratricide shootings.</xs:documentation>
+      <xs:appinfo>
+        <nc1:type xmlns:nc1="urn:fra:nc1">Message</nc1:type>
+        <nc1ihm:Nom>Compte rendu de suivi des forces amies</nc1ihm:Nom>
+        <nc1ihm:Nom xml:lang="en">Blue force tracking</nc1ihm:Nom>
+        <nc1:MessH xmlns:nc1="urn:fra:nc1">H2.3, H2.2, H2.5 et H2.7</nc1:MessH>
+        <nc1:MessADatP3 xmlns:nc1="urn:fra:nc1">N/A</nc1:MessADatP3>
+        <nc1:LastNC1ModifyVersion xmlns:nc1="urn:fra:nc1">9.0.0</nc1:LastNC1ModifyVersion>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:complexContent>
+        <xs:extension base="nc1msgcom:BaseMessageType">
+          <xs:sequence>
+            <xs:element maxOccurs="unbounded" name="locations">
+              <xs:annotation>
+                <xs:documentation>Localisation des participants et des pistes.</xs:documentation>
+                <xs:documentation xml:lang="en">Location of the participants and tracks.</xs:documentation>
+                <xs:appinfo>
+                  <nc1ihm:Nom>Localisations</nc1ihm:Nom>
+                  <nc1ihm:Nom xml:lang="en">Locations</nc1ihm:Nom>
+                </xs:appinfo>
+              </xs:annotation>
+              <xs:complexType>
+                <xs:choice>
+                  <xs:element name="track" type="nc1track:TrackType">
+                    <xs:annotation>
+                      <xs:documentation>Localisation d’une piste aérienne, terrestre ou maritime.</xs:documentation>
+                      <xs:documentation xml:lang="en">Location of an air, maritime or ground track.</xs:documentation>
+                      <xs:appinfo>
+                        <nc1ihm:Nom>Piste localisée</nc1ihm:Nom>
+                        <nc1ihm:Nom xml:lang="en">Localized track</nc1ihm:Nom>
+                      </xs:appinfo>
+                    </xs:annotation>
+                  </xs:element>
+                  <xs:element name="participant" type="nc1participant:ParticipantType">
+                    <xs:annotation>
+                      <xs:documentation>Localisation d’un participant aérien, terrestre, ou maritime.</xs:documentation>
+                      <xs:documentation xml:lang="en">Location of an air, maritime or ground participant.</xs:documentation>
+                      <xs:appinfo>
+                        <nc1ihm:Nom>Participant localisé</nc1ihm:Nom>
+                        <nc1ihm:Nom xml:lang="en">Localized participant</nc1ihm:Nom>
+                      </xs:appinfo>
+                    </xs:annotation>
+                  </xs:element>
+                </xs:choice>
+              </xs:complexType>
+            </xs:element>
+            <xs:element minOccurs="0" name="comment" type="nc1msgcom:CommentSectionType">
+              <xs:annotation>
+                <xs:documentation>Commentaire en texte libre.</xs:documentation>
+                <xs:documentation xml:lang="en">free text comment.</xs:documentation>
+                <xs:appinfo>
+                  <nc1ihm:Nom>Commentaire</nc1ihm:Nom>
+                  <nc1ihm:Nom xml:lang="en">comment</nc1ihm:Nom>
+                </xs:appinfo>
+              </xs:annotation>
+            </xs:element>
+          </xs:sequence>
+        </xs:extension>
+      </xs:complexContent>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

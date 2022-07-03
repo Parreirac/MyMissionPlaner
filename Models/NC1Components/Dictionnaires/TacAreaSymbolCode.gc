@@ -1,0 +1,2737 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<gc:CodeList xmlns:nc1dico="urn:fra:nc1:dictionnaires" xmlns:gc="http://docs.oasis-open.org/codelist/ns/genericode/1.0/">
+  <Annotation>
+    <Description>
+      <nc1dico:description>TYPE DE SURFACE TACTIQUE AU SENS APP 6A</nc1dico:description>
+      <nc1dico:description xml:lang="en">TYPE OF TACTICAL SURFACE APP 6A</nc1dico:description>
+    </Description>
+    <AppInfo>
+      <nc1dico:source>SFTT 3.4.8</nc1dico:source>
+      <nc1dico:derogation>TYPE SURFACE TACTIQUE</nc1dico:derogation>
+    </AppInfo>
+  </Annotation>
+  <Identification>
+    <ShortName>TacAreaSymbolCode</ShortName>
+    <Version>9.0.0</Version>
+    <CanonicalUri>urn:fra:nc1:objet:tacarea:TacAreaSymbolCode</CanonicalUri>
+    <CanonicalVersionUri>urn:fra:nc1:objet:tacarea:TacAreaSymbolCode:9.0.0</CanonicalVersionUri>
+  </Identification>
+  <ColumnSet DatatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes">
+    <Column Id="code" Use="required">
+      <ShortName>Code</ShortName>
+      <Data Type="int" />
+    </Column>
+    <Column Id="short" Use="required">
+      <ShortName>Short</ShortName>
+      <Data Type="string" />
+    </Column>
+    <Column Id="long" Use="optional">
+      <ShortName>Long</ShortName>
+      <Data Type="string" />
+    </Column>
+    <Column Id="short-en" Use="optional">
+      <ShortName>Short anglais</ShortName>
+      <Data Type="string" />
+    </Column>
+    <Column Id="long-en" Use="optional">
+      <ShortName>Long anglais</ShortName>
+      <Data Type="string" />
+    </Column>
+    <Column Id="parent" Use="optional">
+      <ShortName>Parent</ShortName>
+      <Data Type="int" />
+    </Column>
+    <Column Id="codeSymbole" Use="optional">
+      <ShortName>Code Symbole</ShortName>
+      <Data Type="string" />
+    </Column>
+    <Column Id="codeHierarchique" Use="optional">
+      <ShortName>Code Hierarchique</ShortName>
+      <Data Type="string" />
+    </Column>
+    <Key Id="codeKey">
+      <ShortName>CodeKey</ShortName>
+      <ColumnRef Ref="code" />
+    </Key>
+  </ColumnSet>
+  <SimpleCodeList>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>-15</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>ZONE TAC GENIE</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>ZONE TACTIQUE DU GENIE</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>ENG AREA</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>ENGINEER TACTICAL AREA</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeHierarchique">
+        <SimpleValue>2.X.2.2.1</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>-14</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>Z SPECIALISE</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>ZONES SPECIALISEES</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>MSG AREA</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>SPECIAL MANOEUVRE AREA</SimpleValue>
+      </Value>
+      <Value ColumnRef="parent">
+        <SimpleValue>-8</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeSymbole">
+        <SimpleValue>G.C.MSA---.....</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeHierarchique">
+        <SimpleValue>2.X.2.1.6.3</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>-13</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>Z SPEC GENERAL</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>MANOEUVRES SPECIALISEES GENERALES</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>SPEMAGEN</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>SPECIAL MANOEUVRE GENERAL</SimpleValue>
+      </Value>
+      <Value ColumnRef="parent">
+        <SimpleValue>-8</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeSymbole">
+        <SimpleValue>G.C.MSG---.....</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeHierarchique">
+        <SimpleValue>2.X.2.1.6.1</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>-12</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>ZONE OFF TERRE</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>ZONE OFFENSIVE TERRESTRE</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>OFF AREA</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>OFFENCE AREA GRAPHIC</SimpleValue>
+      </Value>
+      <Value ColumnRef="parent">
+        <SimpleValue>-2</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeSymbole">
+        <SimpleValue>G.C.MOO---.....</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeHierarchique">
+        <SimpleValue>2.X.2.1.5.3</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>-11</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>Z C2</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>ZONE C2</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>C2 AREA</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>C2 AREA</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeSymbole">
+        <SimpleValue>G.C.OA----.....</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeHierarchique">
+        <SimpleValue>2.X.2.5.4</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>-10</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>Z LOG</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>ZONE LOG</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>LOG AREA</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>LOG AREA</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeSymbole">
+        <SimpleValue>G.C.SA----.....</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeHierarchique">
+        <SimpleValue>2.X.2.4.3</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>-9</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>Z APP FEU-FSA</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>ZONE D'APPUI FEU (FSA)</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>FSA</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>FIRE SUPPORT AREA</SimpleValue>
+      </Value>
+      <Value ColumnRef="parent">
+        <SimpleValue>-5</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeSymbole">
+        <SimpleValue>G.C.FAS---.....</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeHierarchique">
+        <SimpleValue>2.X.2.3.3.1</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>-8</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>GRAPH SPECIALISE</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>GRAPHIQUES DES MANOEUVRES SPECIALISEES</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>SPECIALG</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>SPECIAL MANOEUVRE GRAPHICS</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeSymbole">
+        <SimpleValue>G.C.MS----.....</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeHierarchique">
+        <SimpleValue>2.X.2.1.6</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>-7</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>DECEPTION</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>GRAPHIQUES DE DECEPTION</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>DECEPTION</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>DECEPTION GRAPHICS</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeSymbole">
+        <SimpleValue>G.C.MD----.....</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeHierarchique">
+        <SimpleValue>2.X.2.1.3</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>-6</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>GRP TGTS</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>GROUPE D'OBJECTIFS</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>GRP TGTS</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>GROUP OF TARGETS</SimpleValue>
+      </Value>
+      <Value ColumnRef="parent">
+        <SimpleValue>-5</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeHierarchique">
+        <SimpleValue>2.X.2.3.3.7</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>-5</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>FS</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>GRAPHIQUES APPUI-FEUX</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>FS</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>FIRE SUPPORT GRAPHICS</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeHierarchique">
+        <SimpleValue>2.X.2.3.3</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>-4</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>Z NRBC</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>GRAPHIQUES NUCLEAIRES, BIOLOGIQUES ET CHIMIQUES</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>NRBC</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>NUCLEAR, BIOLOGICAL AND CHEMICAL GRAPHICS</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeHierarchique">
+        <SimpleValue>2.X.2.2.4</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>-3</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>Z OBSTACLE</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>ZONE D'OBSTACLE</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>OBSTACLE ZONE</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>OBSTACLE ZONE</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeHierarchique">
+        <SimpleValue>2.X.2.2.1.8</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>-2</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>Z OFF AIR</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>ZONE OFFENSIVE AERIENNE</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>AIR OFF ZONE</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>AIR OFFENSIVE ZONE</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeHierarchique">
+        <SimpleValue>2.X.2.1.5.2</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>-1</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>GRAPH DEFENSIF</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>GRAPHIQUES DE MANOEUVRES DE DEFENSE</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>DEFGRAPH</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>DEFENCE MANOEUVRE GRAPHICS</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeHierarchique">
+        <SimpleValue>2.X.2.1.4</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>16</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>MANOEUVRE</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>ZONES DE MANOEUVRES</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>GEN AREA</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>AREAS GENERAL</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeSymbole">
+        <SimpleValue>G.C.MGA---.....</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeHierarchique">
+        <SimpleValue>2.X.2.1.1.3</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>17</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>DECOYMIN</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>ZONE DE MINES LEURRE</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>DECOYMIN</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>DECOY MINED AREA</SimpleValue>
+      </Value>
+      <Value ColumnRef="parent">
+        <SimpleValue>-7</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeSymbole">
+        <SimpleValue>G.C.MDM---.....</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeHierarchique">
+        <SimpleValue>2.X.2.1.3.4</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>18</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>DCOYFENC</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>ZONE DE MINES LEURRE, CLOTURE</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>DCOYFENC</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>DECOY MINED AREA, FENCED</SimpleValue>
+      </Value>
+      <Value ColumnRef="parent">
+        <SimpleValue>-7</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeSymbole">
+        <SimpleValue>G.C.MDY---.....</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeHierarchique">
+        <SimpleValue>2.X.2.1.3.5</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>19</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>DUMMYMIN</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>CHAMP DE MINES FACTICES</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>DUMMYMIN</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>DUMMY MINEFIELD</SimpleValue>
+      </Value>
+      <Value ColumnRef="parent">
+        <SimpleValue>-7</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeSymbole">
+        <SimpleValue>G.C.MDN---.....</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeHierarchique">
+        <SimpleValue>2.X.2.1.3.6</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>24</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>ZLO</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>ZONE LIBRE D'OBSTACLES</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>OBFARE</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>OBSTACLE FREE AREA</SimpleValue>
+      </Value>
+      <Value ColumnRef="parent">
+        <SimpleValue>-15</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeSymbole">
+        <SimpleValue>G.C.BOAF--.....</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeHierarchique">
+        <SimpleValue>2.X.2.2.1.9</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>25</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>SZ</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>ZONE DE SECURITE</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>SAFZ</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>MINIMUM SAFE DISTANCE ZONES</SimpleValue>
+      </Value>
+      <Value ColumnRef="parent">
+        <SimpleValue>-4</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeSymbole">
+        <SimpleValue>G.C.BWM---.....</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeHierarchique">
+        <SimpleValue>2.X.2.2.4.1</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>26</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>RAD AREA</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>ZONE RADIOACTIVE</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>RAD AREA</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>RADIOACTIVE AREA</SimpleValue>
+      </Value>
+      <Value ColumnRef="parent">
+        <SimpleValue>-4</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeSymbole">
+        <SimpleValue>G.C.BWA---.....</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeHierarchique">
+        <SimpleValue>2.X.2.2.4.7</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>27</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>BIO AREA</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>ZONE DE CONTAMINATION BACTEOROLOGIQUE</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>BIO AREA</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>BIOLOGICALLY CONTAMINATED AREA</SimpleValue>
+      </Value>
+      <Value ColumnRef="parent">
+        <SimpleValue>-4</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeSymbole">
+        <SimpleValue>G.C.BWC---.....</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeHierarchique">
+        <SimpleValue>2.X.2.2.4.8</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>28</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>CHEMAREA</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>ZONE DE CONTAMINATION CHIMIQUE</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>CHEMAREA</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>CHEMICALLY CONTAMINATED AREA</SimpleValue>
+      </Value>
+      <Value ColumnRef="parent">
+        <SimpleValue>-4</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeSymbole">
+        <SimpleValue>G.C.BWH---.....</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeHierarchique">
+        <SimpleValue>2.X.2.2.4.9</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>29</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>ZEF</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>ZONE D'EFFORT DE FEUX</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>ZOF</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>ZONE OF FIRE</SimpleValue>
+      </Value>
+      <Value ColumnRef="parent">
+        <SimpleValue>-9</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeSymbole">
+        <SimpleValue>G.C.FAS---.....</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeHierarchique">
+        <SimpleValue>2.X.2.3.3.1</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>30</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>Z BOMBARDEMENT</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>ZONE DE BOMBARDEMENT</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>BOMBAR</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>BOMB AREA</SimpleValue>
+      </Value>
+      <Value ColumnRef="parent">
+        <SimpleValue>-5</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeSymbole">
+        <SimpleValue>G.C.FAB---.....</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeHierarchique">
+        <SimpleValue>2.X.2.3.3.5</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>31</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>Z TIR LIBRE-FFA</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>ZONE DES TIRS LIBRES (FFA)</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>FFA</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>FREE FIRE AREA</SimpleValue>
+      </Value>
+      <Value ColumnRef="parent">
+        <SimpleValue>-5</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeSymbole">
+        <SimpleValue>G.C.FAI---.....</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeHierarchique">
+        <SimpleValue>2.X.2.3.3.6</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>33</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>Z TIR INTERD-NFA</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>ZONE DE TIR INTERDIT (NFA)</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>NFA</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>NO FIRE AREA</SimpleValue>
+      </Value>
+      <Value ColumnRef="parent">
+        <SimpleValue>-5</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeSymbole">
+        <SimpleValue>G.C.FAN---.....</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeHierarchique">
+        <SimpleValue>2.X.2.3.3.8</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>35</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>Z RET DETENU</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>ZONE DE RETENTION DE DETENUS</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>DETAINEE</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>DETAINEE HOLDING AREA</SimpleValue>
+      </Value>
+      <Value ColumnRef="parent">
+        <SimpleValue>-10</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeSymbole">
+        <SimpleValue>G.C.SAD---.....</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeHierarchique">
+        <SimpleValue>2.X.2.4.3.1</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>36</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>Z RET PRISONNIER</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>ZONE DE RETENTION DES PRISONNIERS DE GUERRE</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>EPW</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>ENEMY PRISONER OF WAR HOLDING AREA</SimpleValue>
+      </Value>
+      <Value ColumnRef="parent">
+        <SimpleValue>-10</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeSymbole">
+        <SimpleValue>G.C.SAP---.....</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeHierarchique">
+        <SimpleValue>2.X.2.4.3.2</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>37</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>FARP</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>PLOT DE RAVITAILLEMENT POUR L'ALAT (FARP)</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>FARP</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>FORWARD ARMING AND REFUELLING AREA</SimpleValue>
+      </Value>
+      <Value ColumnRef="parent">
+        <SimpleValue>-10</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeSymbole">
+        <SimpleValue>G.C.SAR---.....</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeHierarchique">
+        <SimpleValue>2.X.2.4.3.3</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>38</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>Z RET REFUGIE</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>ZONE DE RETENTION DES REFUGIES</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>REFUGEE</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>REFUGEE HOLDING AREA</SimpleValue>
+      </Value>
+      <Value ColumnRef="parent">
+        <SimpleValue>-10</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeSymbole">
+        <SimpleValue>G.C.SAH---.....</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeHierarchique">
+        <SimpleValue>2.X.2.4.3.4</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>41</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>AERODROME</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>AERODROME</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>ARFLDZ</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>AIRFIELD ZONE</SimpleValue>
+      </Value>
+      <Value ColumnRef="parent">
+        <SimpleValue>15</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeSymbole">
+        <SimpleValue>G.C.OAZ---.....</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeHierarchique">
+        <SimpleValue>2.X.2.5.4.1</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>42</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>Z TIR RESTR-RFA</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>ZONE DE TIR RESTREINT (RFA)</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>RFA</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>RESTRICTED FIRE AREA</SimpleValue>
+      </Value>
+      <Value ColumnRef="parent">
+        <SimpleValue>-5</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeSymbole">
+        <SimpleValue>G.C.FAD---.....</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeHierarchique">
+        <SimpleValue>2.X.2.3.4.10</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>43</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>Z RES ART</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>ZONE RESERVEE A L'ARTILLERIE (ARA)</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>ARA</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>ARTILLERY RESERVED AREA</SimpleValue>
+      </Value>
+      <Value ColumnRef="parent">
+        <SimpleValue>-9</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeSymbole">
+        <SimpleValue>G.C.FAP---.....</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeHierarchique">
+        <SimpleValue>2.X.2.3.3.11</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>47</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>ZONE DESTRUCTION</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>ZONE DE DESTRUCTION</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>EA</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>DEFENCE ENGAGEMENT AREA</SimpleValue>
+      </Value>
+      <Value ColumnRef="parent">
+        <SimpleValue>-1</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeSymbole">
+        <SimpleValue>G.C.MMAE--.....</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeHierarchique">
+        <SimpleValue>2.X.2.1.4.3.1</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>48</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>POSITION ASSAUT</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>POSITION D'ASSAUT</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>ASLTPO</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>ASSAULT POSITION</SimpleValue>
+      </Value>
+      <Value ColumnRef="parent">
+        <SimpleValue>-12</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeSymbole">
+        <SimpleValue>G.C.MOOA--.....</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeHierarchique">
+        <SimpleValue>2.X.2.1.5.3.1</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>50</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>ZONE ATK TIR</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>ZONE D'ATTAQUE DES TIRS</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>ATTFIR</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>ATTACK BY FIRE POSITION</SimpleValue>
+      </Value>
+      <Value ColumnRef="parent">
+        <SimpleValue>-12</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeSymbole">
+        <SimpleValue>G.C.MOOP--.....</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeHierarchique">
+        <SimpleValue>2.X.2.1.5.3.3</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>51</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>POS APPUI-FEU</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>POSITION D'APPUI-FEU</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>SPTPOS</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>SUPPORT BY FIRE POSITION</SimpleValue>
+      </Value>
+      <Value ColumnRef="parent">
+        <SimpleValue>-12</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeSymbole">
+        <SimpleValue>G.C.MOOS--.....</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeHierarchique">
+        <SimpleValue>2.X.2.1.5.3.4</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>52</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>ZONE OBJECTIF</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>ZONE D'OBJECTIF</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>OBJA</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>OBJECTIVE</SimpleValue>
+      </Value>
+      <Value ColumnRef="parent">
+        <SimpleValue>-12</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeSymbole">
+        <SimpleValue>G.C.MOOJ--.....</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeHierarchique">
+        <SimpleValue>2.X.2.1.5.3.5</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>53</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>Z PENETRATION</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>ZONE DE PENETRATION</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>PNTRBX</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>PENETRATION BOX</SimpleValue>
+      </Value>
+      <Value ColumnRef="parent">
+        <SimpleValue>-12</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeSymbole">
+        <SimpleValue>G.C.MOOX--.....</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeHierarchique">
+        <SimpleValue>2.X.2.1.5.3.6</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>54</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>Z OBJECTIF RAID</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>ZONE D'OBJECTIF D'UN RAID</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>RAIDAREA</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>RAID AREA</SimpleValue>
+      </Value>
+      <Value ColumnRef="parent">
+        <SimpleValue>-12</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeSymbole">
+        <SimpleValue>G.C.MOOR--.....</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeHierarchique">
+        <SimpleValue>2.X.2.1.5.3.7</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>57</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>Z OPERATIONS-AO</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>ZONE D'OPERATIONS TERRESTRE (AO)</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>AO</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>AREA OF OPERATIONS</SimpleValue>
+      </Value>
+      <Value ColumnRef="parent">
+        <SimpleValue>-14</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeSymbole">
+        <SimpleValue>G.C.MSAO--.....</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeHierarchique">
+        <SimpleValue>2.X.2.1.6.3.1</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>58</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>ZONE INTERET-ZI</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>ZONE D'INTERET (ZI)</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>NAI</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>NAMED AREA OF INTEREST</SimpleValue>
+      </Value>
+      <Value ColumnRef="parent">
+        <SimpleValue>-14</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeSymbole">
+        <SimpleValue>G.C.MSAN--.....</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeHierarchique">
+        <SimpleValue>2.X.2.1.6.3.2</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>59</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>TAI</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>AIRE D'INTERET D'OBJECTIFS (TAI)</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>TAI</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>TARGETED AREA OF INTEREST</SimpleValue>
+      </Value>
+      <Value ColumnRef="parent">
+        <SimpleValue>-14</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeSymbole">
+        <SimpleValue>G.C.MSAT--.....</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeHierarchique">
+        <SimpleValue>2.X.2.1.6.3.3</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>60</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>ZRO</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>ZONE REGLEMENTEE D'OBSTACLES</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>OBRARE</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>OBSTACLE-RESTRICTED AREA</SimpleValue>
+      </Value>
+      <Value ColumnRef="parent">
+        <SimpleValue>-15</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeSymbole">
+        <SimpleValue>G.C.BOAFR-.....</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeHierarchique">
+        <SimpleValue>2.X.2.2.1.9.1</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>61</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>TGT REG</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>GROUPE DE CIBLES UTILISANT UNE CIBLE REGULIERE</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>TGT REG</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>GROUP OF TARGETS USING REGULAR TARGETS</SimpleValue>
+      </Value>
+      <Value ColumnRef="parent">
+        <SimpleValue>-6</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeSymbole">
+        <SimpleValue>G.C.FAZT--.....</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeHierarchique">
+        <SimpleValue>2.X.2.3.3.7.1</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>62</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>TGT REC</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>GROUPE DE CIBLES UTILISANT UNE CIBLE RECTANGULAIRE</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>TGT REC</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>GROUP OF TARGETS USING RECTANGULAR TARGETS</SimpleValue>
+      </Value>
+      <Value ColumnRef="parent">
+        <SimpleValue>-6</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeSymbole">
+        <SimpleValue>G.C.FAZU--.....</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeHierarchique">
+        <SimpleValue>2.X.2.3.3.7.2</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>63</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>Z SOUTIEN BDE</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>ZONE DE SOUTIEN BRIGADE</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>BDE</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>BRIGADE</SimpleValue>
+      </Value>
+      <Value ColumnRef="parent">
+        <SimpleValue>-10</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeSymbole">
+        <SimpleValue>G.C.SATB--.....</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeHierarchique">
+        <SimpleValue>2.X.2.4.3.5.1</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>64</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>Z SOUTIEN DIV</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>ZONE DE SOUTIEN DIVISION</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>DIV</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>DIVISION</SimpleValue>
+      </Value>
+      <Value ColumnRef="parent">
+        <SimpleValue>-10</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeSymbole">
+        <SimpleValue>G.C.SATD--.....</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeHierarchique">
+        <SimpleValue>2.X.2.4.3.5.2</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>65</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>Z SOUTIEN RGT</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>ZONE DE SOUTIEN REGIMENTAIRE</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>RGT</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>REGIMENTAL</SimpleValue>
+      </Value>
+      <Value ColumnRef="parent">
+        <SimpleValue>-10</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeSymbole">
+        <SimpleValue>G.C.SATR--.....</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeHierarchique">
+        <SimpleValue>2.X.2.4.3.5.3</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>66</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>#ABANDON</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>#ABANDON</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>#DISUSED</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>#DISUSED</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>67</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>ZONE RASSEMBLT</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>ZONE DE RASSEMBLEMENT</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>ASYSPL</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>ASSEMBLY AREA</SimpleValue>
+      </Value>
+      <Value ColumnRef="parent">
+        <SimpleValue>16</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeSymbole">
+        <SimpleValue>G.C.MGAUB-.....</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeHierarchique">
+        <SimpleValue>2.X.2.1.1.3.1.2</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>68</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>ZONE SAUT-DZ</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>ZONE DE SAUT (DZ)</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>DZ</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>DROP ZONE</SimpleValue>
+      </Value>
+      <Value ColumnRef="parent">
+        <SimpleValue>16</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeSymbole">
+        <SimpleValue>G.C.MGASD-.....</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeHierarchique">
+        <SimpleValue>2.X.2.1.1.3.2.1</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>69</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>Z LPA BA/TBA-EZ</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>ZONE DE LARGAGE PAR AIR A BASSE OU TRES BASSE ALTITUDE (EZ)</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>EZ</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>EXTRACTION ZONE</SimpleValue>
+      </Value>
+      <Value ColumnRef="parent">
+        <SimpleValue>16</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeSymbole">
+        <SimpleValue>G.C.MGASE-.....</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeHierarchique">
+        <SimpleValue>2.X.2.1.1.3.2.2</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>70</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>Z MISE TERRE-LZ</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>ZONE DE MISE A TERRE (LZ)</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>LZ</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>LANDING ZONE</SimpleValue>
+      </Value>
+      <Value ColumnRef="parent">
+        <SimpleValue>16</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeSymbole">
+        <SimpleValue>G.C.MGASL-.....</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeHierarchique">
+        <SimpleValue>2.X.2.1.1.3.2.3</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>71</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>Z RECUP HM-PZ</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>ZONE DE RECUPERATION D'ENLEVEMENT PAR HELICOPTERE (PZ)</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>PZ</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>PICKUP ZONE</SimpleValue>
+      </Value>
+      <Value ColumnRef="parent">
+        <SimpleValue>16</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeSymbole">
+        <SimpleValue>G.C.MGASP-.....</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeHierarchique">
+        <SimpleValue>2.X.2.1.1.3.2.4</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>72</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>ZONE RECO</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>ZONE DE RECONNAISSANCE</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>RCNSAR</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>RECONNAISSANCE AREA</SimpleValue>
+      </Value>
+      <Value ColumnRef="parent">
+        <SimpleValue>16</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeSymbole">
+        <SimpleValue>G.C.MGASS-.....</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeHierarchique">
+        <SimpleValue>2.X.2.1.1.3.2.5</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>73</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>Z ACCES REGLEMTE</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>ZONE A ACCES REGLEMENTE</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>LIMARE</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>LIMITED ACCESS AREA</SimpleValue>
+      </Value>
+      <Value ColumnRef="parent">
+        <SimpleValue>16</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeSymbole">
+        <SimpleValue>G.C.MGASM-.....</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeHierarchique">
+        <SimpleValue>2.X.2.1.1.3.2.6</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>74</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>Z ENGAGEMENT-EA</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>ZONE D'ENGAGEMENT (ENGAGEMENT AREA)</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>EA</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>SPECIFIED ENGAGEMENT AREA</SimpleValue>
+      </Value>
+      <Value ColumnRef="parent">
+        <SimpleValue>16</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeSymbole">
+        <SimpleValue>G.C.MGASG-.....</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeHierarchique">
+        <SimpleValue>2.X.2.1.1.3.2.7</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>75</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>ZONE FORTIFIEE</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>ZONE FORTIFIEE</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>FORTAREA</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>FORTIFIED AREA</SimpleValue>
+      </Value>
+      <Value ColumnRef="parent">
+        <SimpleValue>16</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeSymbole">
+        <SimpleValue>G.C.MGASF-.....</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeHierarchique">
+        <SimpleValue>2.X.2.1.1.3.2.8</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>76</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>ZDA</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>ZONE DE DEPLOIEMENT D'ATTENTE</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>STAGA</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>STAGING AREA</SimpleValue>
+      </Value>
+      <Value ColumnRef="parent">
+        <SimpleValue>16</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeSymbole">
+        <SimpleValue>G.C.MGAST-.....</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeHierarchique">
+        <SimpleValue>2.X.2.1.1.3.2.9</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>77</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>BASE ASSAUT AMI</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>BASE D'ASSAUT AMIE</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>FRATKPO</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>FRIENDLY ATTACK POSITION</SimpleValue>
+      </Value>
+      <Value ColumnRef="parent">
+        <SimpleValue>-12</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeSymbole">
+        <SimpleValue>GFC.MOOTF-.....</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeHierarchique">
+        <SimpleValue>2.X.2.1.5.3.2.1</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>78</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>B ASS AMI OCCUPE</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>BASE D'ASSAUT AMIE OCCUPEE (SI L'UNITE DOIT S'ARRETER DANS LA ZONE)</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>FROCPDTO</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>FRIENDLY OCCUPIED (ONLY IF A UNIT MUST STOP IN THE ATTACK POSITION)</SimpleValue>
+      </Value>
+      <Value ColumnRef="parent">
+        <SimpleValue>-12</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeSymbole">
+        <SimpleValue>GFC.MOOTC-.....</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeHierarchique">
+        <SimpleValue>2.X.2.1.5.3.2.2</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>79</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>B ASS AMI PLANIF</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>BASE D'ASSAUT AMIE PLANIFIEE</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>FR PLNND</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>FRIENDLY PLANNED, PROPOSED OR ON ORDER</SimpleValue>
+      </Value>
+      <Value ColumnRef="parent">
+        <SimpleValue>-12</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeSymbole">
+        <SimpleValue>GFC.MOOTP-.....</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeHierarchique">
+        <SimpleValue>2.X.2.1.5.3.2.3</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>80</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>Z BOUCLAGE AMI</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>ZONE DE BOUCLAGE AMIE</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>FRENCRCL</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>ENCIRCLEMENT / FRIENDLY</SimpleValue>
+      </Value>
+      <Value ColumnRef="parent">
+        <SimpleValue>-13</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeSymbole">
+        <SimpleValue>GFC.MSGEF-.....</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeHierarchique">
+        <SimpleValue>2.X.2.1.6.1.1.1</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>81</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>Z BOUCLAGE ENI</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>ZONE DE BOUCLAGE ENNEMIE</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>ENYENCRC</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>ENCIRCLEMENT / ENEMY</SimpleValue>
+      </Value>
+      <Value ColumnRef="parent">
+        <SimpleValue>-13</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeSymbole">
+        <SimpleValue>GHC.MSGEY-.....</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeHierarchique">
+        <SimpleValue>2.X.2.1.6.1.1.2</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>82</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>Z MAN AMI</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>ZONE DE MANOEUVRE AMI REELLE</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>FR AREA</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>GENERAL AREA / FRIENDLY</SimpleValue>
+      </Value>
+      <Value ColumnRef="parent">
+        <SimpleValue>135</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeSymbole">
+        <SimpleValue>GFC.MGAUAF.....</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeHierarchique">
+        <SimpleValue>2.X.2.1.1.3.1.1.1</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>83</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>Z MAN AMI PLANIF</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>ZONE DE MANOEUVRE AMIE PLANIFIEE</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>FR ONORD</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>FRIENDLY PLANNED/ON ORDER</SimpleValue>
+      </Value>
+      <Value ColumnRef="parent">
+        <SimpleValue>135</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeSymbole">
+        <SimpleValue>GFC.MGAUAP.....</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeHierarchique">
+        <SimpleValue>2.X.2.1.1.3.1.1.2</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>84</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>Z MAN ENI CONF</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>ZONE DE MANOEUVRE ENNEMIE CONFIRMEE</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>ENY AREA CONF</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>ENEMY SUSPECTED/CONFIRMED</SimpleValue>
+      </Value>
+      <Value ColumnRef="parent">
+        <SimpleValue>135</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeSymbole">
+        <SimpleValue>GHC.MGAUAE.....</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeHierarchique">
+        <SimpleValue>2.X.2.1.1.3.1.1.3</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>85</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>Z MAN ENI ESTIME</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>ZONE DE MANOEUVRE ENNEMIE ESTIMEE</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>ENY TEMP</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>ENEMY SUSPECTED/TEMPLATED</SimpleValue>
+      </Value>
+      <Value ColumnRef="parent">
+        <SimpleValue>135</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeSymbole">
+        <SimpleValue>GHC.MGAUAS.....</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeHierarchique">
+        <SimpleValue>2.X.2.1.1.3.1.1.4</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>86</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>Z RASSBT OCCUPE</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>ZONE DE RASSEMBLEMENT OCCUPEE PAR UNE SEULE UNITE</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>OCCUPIED</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>OCCUPIED</SimpleValue>
+      </Value>
+      <Value ColumnRef="parent">
+        <SimpleValue>67</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeSymbole">
+        <SimpleValue>G.C.MGAUBO.....</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeHierarchique">
+        <SimpleValue>2.X.2.1.1.3.1.2.1</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>87</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>Z RASSBT MULTIOC</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>ZONE DE RASSEMBLEMENT OCCUPE PAR PLUSIEURS UNITES</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>UNITS++</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>OCCUPIED BY MULTIPLE UNITS</SimpleValue>
+      </Value>
+      <Value ColumnRef="parent">
+        <SimpleValue>67</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeSymbole">
+        <SimpleValue>G.C.MGAUBM.....</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeHierarchique">
+        <SimpleValue>2.X.2.1.1.3.1.2.2</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>88</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>Z RASSBT PROPOSE</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>ZONE DE RASSEMBLEMENT PROPOSEE</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>ON ORDER</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>ON ORDER</SimpleValue>
+      </Value>
+      <Value ColumnRef="parent">
+        <SimpleValue>67</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeSymbole">
+        <SimpleValue>G.C.MGAUBR.....</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeHierarchique">
+        <SimpleValue>2.X.2.1.1.3.1.2.3</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>89</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>AOAFF</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>AXES DE PROGRESSION POUR SIMULATION</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>AOAFF</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>AXIS OF ADVANCE FOR FEINT</SimpleValue>
+      </Value>
+      <Value ColumnRef="parent">
+        <SimpleValue>-7</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeSymbole">
+        <SimpleValue>G.C.MDA---.....</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeHierarchique">
+        <SimpleValue>2.X.2.1.3.2</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>90</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>POS CBT OCCUPE</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>POSITION DE COMBAT OCCUPEE (DE NIVEAU BATAILLON)</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>OCCUP</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>OCCUPIED (BATTALION SIZED UNIT)</SimpleValue>
+      </Value>
+      <Value ColumnRef="parent">
+        <SimpleValue>-1</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeSymbole">
+        <SimpleValue>G.C.MMPBO-.....</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeHierarchique">
+        <SimpleValue>2.X.2.1.4.1.2.1</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>91</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>POS CBT PREPARE</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>POSITION DE COMBAT PREPAREE AMENAGEE MAIS INOCCUPEE</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>PBNOCCUP</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>BATTLE POSITIONPREPARED "(P)" BUT NOT OCCUPIED</SimpleValue>
+      </Value>
+      <Value ColumnRef="parent">
+        <SimpleValue>-1</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeSymbole">
+        <SimpleValue>G.C.MMPBP-.....</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeHierarchique">
+        <SimpleValue>2.X.2.1.4.1.2.2</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>92</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>POS CBT PLANIFIE</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>POSITION DE COMBAT PLANIFIEE</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>PLANNED</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>PLANNED</SimpleValue>
+      </Value>
+      <Value ColumnRef="parent">
+        <SimpleValue>-1</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeSymbole">
+        <SimpleValue>G.C.MMPBL-.....</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeHierarchique">
+        <SimpleValue>2.X.2.1.4.1.2.3</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>93</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>PT APPUI AMI</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>POINT D'APPUI AMI</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>FRIENDLY</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>STRONG POINT (SP) FRIENDLY</SimpleValue>
+      </Value>
+      <Value ColumnRef="parent">
+        <SimpleValue>-1</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeSymbole">
+        <SimpleValue>GFC.MMPSF-.....</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeHierarchique">
+        <SimpleValue>2.X.2.1.4.1.3.1</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>94</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>PT APPUI ENICONF</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>POINT D'APPUI ENNEMI CONNU ET CONFIRME</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>ENY</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>STRONG POINT (SP) ENEMY KNOWN AND CONFIRMED</SimpleValue>
+      </Value>
+      <Value ColumnRef="parent">
+        <SimpleValue>-1</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeSymbole">
+        <SimpleValue>GHC.MMPSE-.....</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeHierarchique">
+        <SimpleValue>2.X.2.1.4.1.3.2</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>95</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>PDF</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>PRINCIPE DE DIRECTION DES FEUX</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>PDF</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>PRINCIPLE DIRECTION OF FIRE</SimpleValue>
+      </Value>
+      <Value ColumnRef="parent">
+        <SimpleValue>-1</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeSymbole">
+        <SimpleValue>G.C.MMDP--.....</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeHierarchique">
+        <SimpleValue>2.X.2.1.4.2.2</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>96</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>FRAVAXIS</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>AVIATION AMI (AXE D'AVANCE)</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>FRAVAXIS</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>FRIENDLY AVIATION (AXIS OF ADVANCE)</SimpleValue>
+      </Value>
+      <Value ColumnRef="parent">
+        <SimpleValue>-2</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeSymbole">
+        <SimpleValue>GFC.MOLAF-.....</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeHierarchique">
+        <SimpleValue>2.X.2.1.5.2.1.1</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>97</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>FRAIRBO</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>AERIEN AMI</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>FRAIRBO</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>FRIENDLY AIRBORNE</SimpleValue>
+      </Value>
+      <Value ColumnRef="parent">
+        <SimpleValue>-2</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeSymbole">
+        <SimpleValue>GFC.MOLAA-.....</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeHierarchique">
+        <SimpleValue>2.X.2.1.5.2.1.2</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>98</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>FAH</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>HELICOPTERE D'ATTAQUE AMI</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>FAH</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>FRIENDLY ATTACK HELICOPTER</SimpleValue>
+      </Value>
+      <Value ColumnRef="parent">
+        <SimpleValue>-2</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeSymbole">
+        <SimpleValue>GFC.MOLAH-.....</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeHierarchique">
+        <SimpleValue>2.X.2.1.5.2.1.3</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>99</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>FRGAOSA</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>AXE DE TERRAIN D'ATTAQUE DE SOUTIEN AMI</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>FRGAOSA</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>FRIENDLY GROUND AXIS OF SUPPORTING ATTACK</SimpleValue>
+      </Value>
+      <Value ColumnRef="parent">
+        <SimpleValue>-2</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeSymbole">
+        <SimpleValue>GFC.MOLAS-.....</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeHierarchique">
+        <SimpleValue>2.X.2.1.5.2.1.4</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>100</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>FRGAOMA</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>AXE DE TERRAIN D'ATTAQUE PRINCIPAL AMI</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>FRGAOMA</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>FRIENDLY GROUND AXIS OF MAIN ATTACK</SimpleValue>
+      </Value>
+      <Value ColumnRef="parent">
+        <SimpleValue>-2</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeSymbole">
+        <SimpleValue>GFC.MOLAM-.....</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeHierarchique">
+        <SimpleValue>2.X.2.1.5.2.1.5</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>101</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>FRGAORD</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>AXE DE TERRAIN D'ATTAQUE AMI SOUS ORDRE AVEC DATE ET HEURE</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>FRGAORD</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>FRIENDLY GROUND AXIS ON ORDER WITH DATE AND TIME (IF KNOWN) EFFECTIVE)</SimpleValue>
+      </Value>
+      <Value ColumnRef="parent">
+        <SimpleValue>-2</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeSymbole">
+        <SimpleValue>GFC.MOLAO-.....</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeHierarchique">
+        <SimpleValue>2.X.2.1.5.2.1.6</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>102</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>ENY CONF</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>ENNEMI CONFIRME</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>ENY CONF</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>ENEMY CONFIRMED</SimpleValue>
+      </Value>
+      <Value ColumnRef="parent">
+        <SimpleValue>-2</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeSymbole">
+        <SimpleValue>GHC.MOLAE-.....</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeHierarchique">
+        <SimpleValue>2.X.2.1.5.2.1.7</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>103</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>ENY TMPL</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>ENNEMI CIBLE</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>ENY TMPL</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>ENEMY TEMPLATED</SimpleValue>
+      </Value>
+      <Value ColumnRef="parent">
+        <SimpleValue>-2</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeSymbole">
+        <SimpleValue>GHC.MOLAT-.....</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeHierarchique">
+        <SimpleValue>2.X.2.1.5.2.1.8</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>113</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>LGINFT</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>LIGNE D'INFILTRATION</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>INFLIN</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>INFILTRATION LINE</SimpleValue>
+      </Value>
+      <Value ColumnRef="parent">
+        <SimpleValue>-2</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeSymbole">
+        <SimpleValue>G.C.MOLI--.....</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeHierarchique">
+        <SimpleValue>2.X.2.1.5.2.4</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>114</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>TETE PONT AERO</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>TETE DE PONT AEROPORTEE</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>AIRH</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>AIR HEAD</SimpleValue>
+      </Value>
+      <Value ColumnRef="parent">
+        <SimpleValue>-8</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeSymbole">
+        <SimpleValue>G.C.MSLA--.....</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeHierarchique">
+        <SimpleValue>2.X.2.1.6.2.1</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>115</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>TETE DE PONT</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>TETE DE PONT</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>BRDGH</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>BRIDGEHEAD</SimpleValue>
+      </Value>
+      <Value ColumnRef="parent">
+        <SimpleValue>-8</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeSymbole">
+        <SimpleValue>G.C.MSLB--.....</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeHierarchique">
+        <SimpleValue>2.X.2.1.6.2.2</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>116</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>Z SEC FRCHT</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>ZONE DE SECURITE DE FRANCHISSEMENT</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>HL</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>HOLDING LINE</SimpleValue>
+      </Value>
+      <Value ColumnRef="parent">
+        <SimpleValue>-8</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeSymbole">
+        <SimpleValue>G.C.MSLH--.....</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeHierarchique">
+        <SimpleValue>2.X.2.1.6.2.3</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>117</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>BARRAGE</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>BARRAGE</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>BLOCK</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>BLOCK</SimpleValue>
+      </Value>
+      <Value ColumnRef="parent">
+        <SimpleValue>-3</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeSymbole">
+        <SimpleValue>G.C.BOAEB-.....</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeHierarchique">
+        <SimpleValue>2.X.2.2.1.8.1</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>118</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>#ABANDON</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>#ABANDON</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>#DISUSED</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>#DISUSED</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeSymbole">
+        <SimpleValue>G.C.BOAEF-.....</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>119</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>MOUVMNT TOURNANT</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>MOUVEMENT TOURNANT</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>TURN</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>TURN</SimpleValue>
+      </Value>
+      <Value ColumnRef="parent">
+        <SimpleValue>-3</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeSymbole">
+        <SimpleValue>G.C.BOAET-.....</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeHierarchique">
+        <SimpleValue>2.X.2.2.1.8.3</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>120</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>PERTURBER</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>PERTURBER</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>DISRUPT</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>DISRUPT</SimpleValue>
+      </Value>
+      <Value ColumnRef="parent">
+        <SimpleValue>-3</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeSymbole">
+        <SimpleValue>G.C.BOAED-.....</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeHierarchique">
+        <SimpleValue>2.X.2.2.1.8.4</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>121</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>TIR FUM Z PLANIF</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>TIR FUMIGENE ZONAL PLANIFIE</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>PWDTS</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>PLANNED WITH DESIGNATED TIME SHOWN</SimpleValue>
+      </Value>
+      <Value ColumnRef="parent">
+        <SimpleValue>-5</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeSymbole">
+        <SimpleValue>G.C.FLKP--.....</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeHierarchique">
+        <SimpleValue>2.X.2.3.2.4.1</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>122</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>TIR FUM ZONAL</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>TIR FUMIGENE ZONAL EN PLACE</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>SMOKEAIP</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>SMOKE (ACTUALLY IN PLACE)</SimpleValue>
+      </Value>
+      <Value ColumnRef="parent">
+        <SimpleValue>-5</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeSymbole">
+        <SimpleValue>G.C.FLKS--.....</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeHierarchique">
+        <SimpleValue>2.X.2.3.2.4.2</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>123</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>#ABANDON</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>#ABANDON</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>#DISUSED</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>#DISUSED</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>124</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>OBJECTIF ZONAL</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>OBJECTIF ZONAL</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>ATRGT</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>AREA TARGET</SimpleValue>
+      </Value>
+      <Value ColumnRef="parent">
+        <SimpleValue>-5</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeSymbole">
+        <SimpleValue>G.C.FAT---.....</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeHierarchique">
+        <SimpleValue>2.X.2.3.3.3</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>125</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>MULTIPL REG TRGT</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>SERIE DE CIBLES UTILISANT DES CIBLES REGULIERES</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>MULTIPL REG TRGT</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>SERIES OF TARGETS USING REGULAR TARGETS</SimpleValue>
+      </Value>
+      <Value ColumnRef="parent">
+        <SimpleValue>-6</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeSymbole">
+        <SimpleValue>G.C.FARS--.....</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeHierarchique">
+        <SimpleValue>2.X.2.3.3.4.1</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>126</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>MULTIPL REC TRGT</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>SERIE DE CIBLES UTILISANT DES CIBLES RECTANGULAIRES</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>MULTIPL REC TRGT</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>SERIES OF TARGETS USING RECTANGULAR TARGETS</SimpleValue>
+      </Value>
+      <Value ColumnRef="parent">
+        <SimpleValue>-6</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeSymbole">
+        <SimpleValue>G.C.FARU--.....</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeHierarchique">
+        <SimpleValue>2.X.2.3.3.4.2</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>127</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>DUMMY</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>SIMULATION (LEURRE)</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>DUMMY</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>DUMMY (DECEPTION)(DECOY)</SimpleValue>
+      </Value>
+      <Value ColumnRef="parent">
+        <SimpleValue>-7</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeSymbole">
+        <SimpleValue>G.C.MDD---.....</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeHierarchique">
+        <SimpleValue>2.X.2.1.3.1</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>142</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>Z MAN ART</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>ZONE DE MANOEUVRE ARTILLERIE (AMA)</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>AMA</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>ARTILLERIE MANEUVRE AREA</SimpleValue>
+      </Value>
+      <Value ColumnRef="parent">
+        <SimpleValue>-9</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeSymbole">
+        <SimpleValue>G.C.FAP---.....</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeHierarchique">
+        <SimpleValue>2.X.2.3.3.11</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>143</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>Z CIBLES (TAREA)</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>ZONE DE CIBLES / RECEPTACLE</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>TAREA</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>TARGET AREA</SimpleValue>
+      </Value>
+      <Value ColumnRef="parent">
+        <SimpleValue>-9</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeSymbole">
+        <SimpleValue>G.C.FAS---.....</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeHierarchique">
+        <SimpleValue>2.X.2.3.3.1</SimpleValue>
+      </Value>
+    </Row>
+  </SimpleCodeList>
+</gc:CodeList>

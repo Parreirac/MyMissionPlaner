@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<cva:ContextValueAssociation xmlns:cva="http://docs.oasis-open.org/codelist/ns/ContextValueAssociation/1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="urn:fra:nc1:objet:fireobjective" queryBinding="xslt2" xmlns:nc1fireobjective="urn:fra:nc1:objet:fireobjective">
+  <!-- NC1 V.9.0.0 -->
+  <ValueLists>
+    <ValueList xml:id="nc1objcom-ActivationStatusCode" uri="../Dictionnaires/ActivationStatusCode.gc" />
+    <ValueList xml:id="nc1objcom-IsFullCode" uri="../Dictionnaires/IsFullCode.gc" />
+    <ValueList xml:id="nc1sicsdicos-L114_17Code" uri="../Dictionnaires/L114_17Code.gc" />
+    <ValueList xml:id="nc1sicsdicos-L114_19Code" uri="../Dictionnaires/L114_19Code.gc" />
+    <ValueList xml:id="nc1sicsdicos-L114_20Code" uri="../Dictionnaires/L114_20Code.gc" />
+    <ValueList xml:id="nc1sicsdicos-L114_22Code" uri="../Dictionnaires/L114_22Code.gc" />
+    <ValueList xml:id="nc1sicsdicos-L114_23Code" uri="../Dictionnaires/L114_23Code.gc" />
+  </ValueLists>
+  <Contexts>
+    <Context address="/nc1fireobjective:NC1_FireObjective/@activationStatus" values="nc1objcom-ActivationStatusCode" />
+    <Context address="/nc1fireobjective:NC1_FireObjective/@isFull" values="nc1objcom-IsFullCode" />
+    <Context address="/nc1fireobjective:NC1_FireObjective/tacticalData/priority" values="nc1sicsdicos-L114_17Code" />
+    <Context address="/nc1fireobjective:NC1_FireObjective/tacticalData/acquisitionSource" values="nc1sicsdicos-L114_19Code" />
+    <Context address="/nc1fireobjective:NC1_FireObjective/tacticalData/targetType" values="nc1sicsdicos-L114_20Code" />
+    <Context address="/nc1fireobjective:NC1_FireObjective/tacticalData/requiredEffect" values="nc1sicsdicos-L114_22Code" />
+    <Context address="/nc1fireobjective:NC1_FireObjective/tacticalData/attitude" values="nc1sicsdicos-L114_23Code" />
+  </Contexts>
+</cva:ContextValueAssociation>

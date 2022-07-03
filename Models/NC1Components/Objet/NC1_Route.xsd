@@ -1,0 +1,405 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema targetNamespace="urn:fra:nc1:objet:route" xmlns:nc1ihm="urn:fra:nc1:IHM" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:nc1route="urn:fra:nc1:objet:route" xmlns:nc1common="urn:fra:nc1:common:attribute" xmlns:nc1location="urn:fra:nc1:common:location" xmlns:nc1logistics="urn:fra:nc1:common:logistics" xmlns:nc1objcom="urn:fra:nc1:common:object" xmlns:nc1sicsdicos="urn:fra:nc1:common:sicsdicos">
+  <!-- NC1 V.9.0.0 -->
+  <xs:import namespace="urn:fra:nc1:common:attribute" schemaLocation="../Commun/Common.xsd" />
+  <xs:import namespace="urn:fra:nc1:common:location" schemaLocation="../Commun/Location.xsd" />
+  <xs:import namespace="urn:fra:nc1:common:logistics" schemaLocation="../Commun/Logistics.xsd" />
+  <xs:import namespace="urn:fra:nc1:common:object" schemaLocation="../Commun/Object.xsd" />
+  <xs:import namespace="urn:fra:nc1:common:sicsdicos" schemaLocation="../Commun/SICS_Dictionaries.xsd" />
+  <xs:element name="NC1_Route" type="nc1route:RouteType">
+    <xs:annotation>
+      <xs:documentation>L’objet NC1_Route est à la fois une voie de communication pour un besoin opérationnel et une succession de tronçons de routes ou de chemins utilisés pour se rendre d’un point de départ à un point d’arrivée.</xs:documentation>
+      <xs:documentation xml:lang="en">The object NC1_Route is at the same time a communication route for an operational need and a succession of sections of roads or ways used to go of a starting point to an arrival point.</xs:documentation>
+      <xs:appinfo>
+        <nc1:type xmlns:nc1="urn:fra:nc1">Objet</nc1:type>
+        <nc1ihm:Nom>Itinéraire</nc1ihm:Nom>
+        <nc1ihm:Nom xml:lang="en">Route</nc1ihm:Nom>
+        <nc1:MessH xmlns:nc1="urn:fra:nc1">Message H7.2 Route</nc1:MessH>
+        <nc1:MessADatP3 xmlns:nc1="urn:fra:nc1">MCHDETCR</nc1:MessADatP3>
+        <nc1:LastNC1ModifyVersion xmlns:nc1="urn:fra:nc1">9.0.0</nc1:LastNC1ModifyVersion>
+      </xs:appinfo>
+    </xs:annotation>
+  </xs:element>
+  <xs:simpleType name="ModeOfTransportationCode">
+    <xs:annotation>
+      <xs:appinfo>
+        <nc1dico:source xmlns:nc1dico="urn:fra:nc1:dictionnaires">STAT dictionnaire 250.</nc1dico:source>
+        <nc1ihm:description>Dictionnaire des moyens de transport.</nc1ihm:description>
+        <nc1ihm:description xml:lang="en">Modes of transportation dictionary.</nc1ihm:description>
+      </xs:appinfo>
+      <xs:documentation>Dictionnaire des moyens de transport.</xs:documentation>
+      <xs:documentation xml:lang="en">Modes of transportation dictionary.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:integer" />
+  </xs:simpleType>
+  <xs:complexType name="RoutePointType">
+    <xs:annotation>
+      <xs:documentation>Point d’un itinéraire.</xs:documentation>
+      <xs:documentation xml:lang="en">Route point.</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" name="symbolCode" type="nc1common:SymbolCodeType">
+        <xs:annotation>
+          <xs:documentation>Code contenant les informations de symbologie.</xs:documentation>
+          <xs:documentation xml:lang="en">Code specifying information about symbology.</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Code du symbole</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">Symbol code</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="location" type="nc1location:PointType">
+        <xs:annotation>
+          <xs:documentation>Localisation.</xs:documentation>
+          <xs:documentation xml:lang="en">Location.</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Localisation</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">Location</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="comment" type="nc1common:MediumTextObjectType">
+        <xs:annotation>
+          <xs:documentation>Annotation en texte libre.</xs:documentation>
+          <xs:documentation xml:lang="en">Free text observations.</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Commentaire</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">comment</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="RouteRestrictionsType">
+    <xs:annotation>
+      <xs:documentation>Restrictions associées à un itinéraire.</xs:documentation>
+      <xs:documentation xml:lang="en">Restrictions associated to a route.</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" name="maxSlope" type="nc1common:Int0To99Type">
+        <xs:annotation>
+          <xs:documentation>Pente maximale sur l’itinéraire (pourcentage).</xs:documentation>
+          <xs:documentation xml:lang="en">Maximum slope met in the route.</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Pente maximale</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">Maximum slope</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="minHorizontalCurveRadius" type="nc1common:Decimal0To999Type">
+        <xs:annotation>
+          <xs:documentation>Rayon minimal de virage sur l’itinéraire (mètres).</xs:documentation>
+          <xs:documentation xml:lang="en">Smallest horizontal curve radius met in the route (meters).</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Rayon minimal de virage</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">Smallest horizontal curve radius</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="minWidth" type="nc1common:Decimal0To99Type">
+        <xs:annotation>
+          <xs:documentation>Largeur minimale de l’itinéraire (mètres).</xs:documentation>
+          <xs:documentation xml:lang="en">Smallest width met in the route (meters).</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Largeur minimale</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">Smallest width met in the route</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="minHeight" type="nc1common:Decimal0To99Type">
+        <xs:annotation>
+          <xs:documentation>Hauteur minimale de l’itinéraire (mètres).</xs:documentation>
+          <xs:documentation xml:lang="en">Smallest height met in the route (meters).</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Hauteur minimale</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">Smallest height</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="militaryLoadClassification" type="nc1common:Int0To150Type">
+        <xs:annotation>
+          <xs:documentation>Classe de route (ex : « 50 »).</xs:documentation>
+          <xs:documentation xml:lang="en">"Military load classification of the route (e.g. ""50"")".</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Classe militaire</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">Military load classification</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="RouteSegmentType">
+    <xs:annotation>
+      <xs:documentation>Tronçon d’itinéraire.</xs:documentation>
+      <xs:documentation xml:lang="en">Section of a route.</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="number" type="nc1common:Int0To1000Type">
+        <xs:annotation>
+          <xs:documentation>Numéro d'ordre donné au tronçon.</xs:documentation>
+          <xs:documentation xml:lang="en">Route section assigned number.</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Numéro d'ordre</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">order number</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="name" type="nc1common:ShortTextObjectType">
+        <xs:annotation>
+          <xs:documentation>Nom donné au tronçon.</xs:documentation>
+          <xs:documentation xml:lang="en">Name assigned to a route section.</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Nom</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">name</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:choice>
+        <xs:element name="polyline" type="nc1location:PolylineType">
+          <xs:annotation>
+            <xs:documentation>Ligne brisée associée au tronçon.</xs:documentation>
+            <xs:documentation xml:lang="en">Line associated to the route section.</xs:documentation>
+            <xs:appinfo>
+              <nc1ihm:Nom>Polyligne</nc1ihm:Nom>
+              <nc1ihm:Nom xml:lang="en">Polyline</nc1ihm:Nom>
+            </xs:appinfo>
+          </xs:annotation>
+        </xs:element>
+        <xs:element name="groundEntityId" type="nc1common:Nc1ObjectRefType">
+          <xs:annotation>
+            <xs:documentation>Identifiant NC1 de l’entité terrain représentant le tronçon.</xs:documentation>
+            <xs:documentation xml:lang="en">NC1 ID of the ground entity representing the route section.</xs:documentation>
+            <xs:appinfo>
+              <nc1ihm:Nom>Entité terrain</nc1ihm:Nom>
+              <nc1ihm:Nom xml:lang="en">Ground entity</nc1ihm:Nom>
+            </xs:appinfo>
+          </xs:annotation>
+        </xs:element>
+        <xs:element name="vectorObject" type="nc1common:MediumTextObjectType">
+          <xs:annotation>
+            <xs:documentation>Référence à un objet cartographique vectoriel représentant le tronçon.</xs:documentation>
+            <xs:documentation xml:lang="en">Reference to a vector map object representing the route.</xs:documentation>
+            <xs:appinfo>
+              <nc1ihm:Nom>Objet vectoriel</nc1ihm:Nom>
+              <nc1ihm:Nom xml:lang="en">Vector object</nc1ihm:Nom>
+            </xs:appinfo>
+          </xs:annotation>
+        </xs:element>
+      </xs:choice>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="RouteType">
+    <xs:annotation>
+      <xs:documentation>La définition de l’objet NC1_Route est conforme à la doctrine. Il est à la fois une voie de communications pour un besoin opérationnel, et une succession de tronçons de routes ou de chemins, utilisés pour se rendre d’un point à un autre.</xs:documentation>
+      <xs:documentation xml:lang="en">The definition of the NC1_Route object complies with the doctrine. It is both a transportation link for an operational need, and a series of routes or roads sections used to go from a point to another point.</xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="nc1objcom:LocalisedObjectType">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="tacticalData">
+            <xs:annotation>
+              <xs:documentation>Données tactiques de l’itinéraire.</xs:documentation>
+              <xs:documentation xml:lang="en">Route tactical data.</xs:documentation>
+              <xs:appinfo>
+                <nc1ihm:Nom>Données tactiques</nc1ihm:Nom>
+                <nc1ihm:Nom xml:lang="en">tactical datas</nc1ihm:Nom>
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element minOccurs="0" name="name" type="nc1common:ShortTextObjectType">
+                  <xs:annotation>
+                    <xs:documentation>Nom de l’itinéraire affiché sur la cartographie.</xs:documentation>
+                    <xs:documentation xml:lang="en">Route displayed name.</xs:documentation>
+                    <xs:appinfo>
+                      <nc1ihm:Nom>Nom</nc1ihm:Nom>
+                      <nc1ihm:Nom xml:lang="en">name</nc1ihm:Nom>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:element>
+                <xs:element minOccurs="0" name="usage" type="nc1common:MediumTextObjectType">
+                  <xs:annotation>
+                    <xs:documentation>Usage associé à l’itinéraire (ex : « ROCADE »).</xs:documentation>
+                    <xs:documentation xml:lang="en">"Usage associated to the route (e.g. ""ROCADE"")".</xs:documentation>
+                    <xs:appinfo>
+                      <nc1ihm:Nom>Usage</nc1ihm:Nom>
+                      <nc1ihm:Nom xml:lang="en">Free text description of the type of usage assigned to an airspace area</nc1ihm:Nom>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:element>
+                <xs:element minOccurs="0" name="mobility" type="nc1logistics:MobilityCategoryCode">
+                  <xs:annotation>
+                    <xs:documentation>Mobilité de l’itinéraire.</xs:documentation>
+                    <xs:documentation xml:lang="en">Route mobility.</xs:documentation>
+                    <xs:appinfo>
+                      <nc1ihm:Nom>Mobilité</nc1ihm:Nom>
+                      <nc1ihm:Nom xml:lang="en">Mobility</nc1ihm:Nom>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:element>
+                <xs:element minOccurs="0" name="modeOfTransportation" type="nc1route:ModeOfTransportationCode">
+                  <xs:annotation>
+                    <xs:documentation>Moyen de transport prévu.</xs:documentation>
+                    <xs:documentation xml:lang="en">Mode of transportation.</xs:documentation>
+                    <xs:appinfo>
+                      <nc1ihm:Nom>Mode de transport</nc1ihm:Nom>
+                      <nc1ihm:Nom xml:lang="en">Mode of transportation</nc1ihm:Nom>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:element>
+                <xs:element minOccurs="0" name="sequentialPriorityOfMove" type="nc1common:MediumTextObjectType">
+                  <xs:annotation>
+                    <xs:documentation>Ordonnancement des priorités sur l’itinéraire (ex : « recce up front, followed by light infantry »).</xs:documentation>
+                    <xs:documentation xml:lang="en">"Scheduling priorities on the route (e.g. ""recce up front, Followed by light infantry"")".</xs:documentation>
+                    <xs:appinfo>
+                      <nc1ihm:Nom>Priorités</nc1ihm:Nom>
+                      <nc1ihm:Nom xml:lang="en">Priorities</nc1ihm:Nom>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:element>
+                <xs:element minOccurs="0" name="restrictions" type="nc1route:RouteRestrictionsType">
+                  <xs:annotation>
+                    <xs:documentation>Restrictions associées à l’itinéraire.</xs:documentation>
+                    <xs:documentation xml:lang="en">Restrictions defined for the route.</xs:documentation>
+                    <xs:appinfo>
+                      <nc1ihm:Nom>Restrictions</nc1ihm:Nom>
+                      <nc1ihm:Nom xml:lang="en">Restrictions</nc1ihm:Nom>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:element>
+                <xs:element maxOccurs="unbounded" minOccurs="0" name="activationPeriod" type="nc1common:PeriodType">
+                  <xs:annotation>
+                    <xs:documentation>Période d’activation de l’itinéraire.</xs:documentation>
+                    <xs:documentation xml:lang="en">Activation period of the route.</xs:documentation>
+                    <xs:appinfo>
+                      <nc1ihm:Nom>Période d’activation</nc1ihm:Nom>
+                      <nc1ihm:Nom xml:lang="en">Activation period</nc1ihm:Nom>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:element>
+                <xs:element minOccurs="0" name="generalPracticability" type="nc1sicsdicos:L135_32Code">
+                  <xs:annotation>
+                    <xs:documentation>Praticabilité générale de l’itinéraire.</xs:documentation>
+                    <xs:documentation xml:lang="en">Route general trafficability.</xs:documentation>
+                    <xs:appinfo>
+                      <nc1ihm:Nom>Praticabilité générale</nc1ihm:Nom>
+                      <nc1ihm:Nom xml:lang="en">General soil trafficability</nc1ihm:Nom>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:element>
+                <xs:element minOccurs="0" name="instantPracticability" type="nc1sicsdicos:L135_33Code">
+                  <xs:annotation>
+                    <xs:documentation>Praticabilité actuelle de l’itinéraire.</xs:documentation>
+                    <xs:documentation xml:lang="en">Route current trafficability.</xs:documentation>
+                    <xs:appinfo>
+                      <nc1ihm:Nom>Praticabilité actuelle</nc1ihm:Nom>
+                      <nc1ihm:Nom xml:lang="en">Current passability</nc1ihm:Nom>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:element>
+                <xs:element minOccurs="0" name="url" type="nc1common:MediumTextObjectType">
+                  <xs:annotation>
+                    <xs:documentation>Lien vers un fichier associé à l’objet.</xs:documentation>
+                    <xs:documentation xml:lang="en">Link to a file associated with the object.</xs:documentation>
+                    <xs:appinfo>
+                      <nc1ihm:Nom>Url</nc1ihm:Nom>
+                      <nc1ihm:Nom xml:lang="en">url</nc1ihm:Nom>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:element>
+                <xs:element minOccurs="0" name="comment" type="nc1common:LongTextObjectType">
+                  <xs:annotation>
+                    <xs:documentation>Commentaire en texte libre.</xs:documentation>
+                    <xs:documentation xml:lang="en">free text comment.</xs:documentation>
+                    <xs:appinfo>
+                      <nc1ihm:Nom>Commentaire</nc1ihm:Nom>
+                      <nc1ihm:Nom xml:lang="en">comment</nc1ihm:Nom>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:element>
+                <xs:element minOccurs="0" name="extVersion" type="nc1common:ExtVersType">
+                  <xs:annotation>
+                    <xs:documentation>Extension pour versions suivantes compatibles.</xs:documentation>
+                    <xs:documentation xml:lang="en">Extension for following compatible versions.</xs:documentation>
+                    <xs:appinfo>
+                      <nc1ihm:Nom>Extension de version</nc1ihm:Nom>
+                      <nc1ihm:Nom xml:lang="en">version extension</nc1ihm:Nom>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:element>
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+          <xs:element minOccurs="0" name="location">
+            <xs:annotation>
+              <xs:documentation>Localisation de l’itinéraire.</xs:documentation>
+              <xs:documentation xml:lang="en">Route location.</xs:documentation>
+              <xs:appinfo>
+                <nc1ihm:Nom>Localisation</nc1ihm:Nom>
+                <nc1ihm:Nom xml:lang="en">Location</nc1ihm:Nom>
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:complexType>
+              <xs:sequence>
+                <xs:choice>
+                  <xs:element name="startPoint" type="nc1route:RoutePointType">
+                    <xs:annotation>
+                      <xs:documentation>Point de départ de l’itinéraire.</xs:documentation>
+                      <xs:documentation xml:lang="en">Starting point of a route.</xs:documentation>
+                      <xs:appinfo>
+                        <nc1ihm:Nom>Point de départ</nc1ihm:Nom>
+                        <nc1ihm:Nom xml:lang="en">Start point</nc1ihm:Nom>
+                      </xs:appinfo>
+                    </xs:annotation>
+                  </xs:element>
+                  <xs:element name="startTacPointId" type="nc1common:Nc1ObjectRefType">
+                    <xs:annotation>
+                      <xs:documentation>Identifiant NC1 du point tactique représentant le départ de l’itinéraire.</xs:documentation>
+                      <xs:documentation xml:lang="en">NC1 ID of a tactical point starting a route.</xs:documentation>
+                      <xs:appinfo>
+                        <nc1ihm:Nom>Point tactique de départ</nc1ihm:Nom>
+                        <nc1ihm:Nom xml:lang="en">Start tactical point</nc1ihm:Nom>
+                      </xs:appinfo>
+                    </xs:annotation>
+                  </xs:element>
+                </xs:choice>
+                <xs:element maxOccurs="unbounded" minOccurs="0" name="segment" type="nc1route:RouteSegmentType">
+                  <xs:annotation>
+                    <xs:documentation>Tronçon d’itinéraire.</xs:documentation>
+                    <xs:documentation xml:lang="en">Section of a route.</xs:documentation>
+                    <xs:appinfo>
+                      <nc1ihm:Nom>Tronçon</nc1ihm:Nom>
+                      <nc1ihm:Nom xml:lang="en">Section</nc1ihm:Nom>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:element>
+                <xs:choice minOccurs="0">
+                  <xs:element minOccurs="0" name="endPoint" type="nc1route:RoutePointType">
+                    <xs:annotation>
+                      <xs:documentation>Point d’arrivée de l’itinéraire.</xs:documentation>
+                      <xs:documentation xml:lang="en">End point of a route.</xs:documentation>
+                      <xs:appinfo>
+                        <nc1ihm:Nom>Point d’arrivée</nc1ihm:Nom>
+                        <nc1ihm:Nom xml:lang="en">End point</nc1ihm:Nom>
+                      </xs:appinfo>
+                    </xs:annotation>
+                  </xs:element>
+                  <xs:element minOccurs="0" name="endTacPointId" type="nc1common:Nc1ObjectRefType">
+                    <xs:annotation>
+                      <xs:documentation>Identifiant NC1 du point tactique représentant l’arrivée de l’itinéraire.</xs:documentation>
+                      <xs:documentation xml:lang="en">NC1 ID of a tactical point ending a route.</xs:documentation>
+                      <xs:appinfo>
+                        <nc1ihm:Nom>Point tactique d'arrivée</nc1ihm:Nom>
+                        <nc1ihm:Nom xml:lang="en">End tactical point</nc1ihm:Nom>
+                      </xs:appinfo>
+                    </xs:annotation>
+                  </xs:element>
+                </xs:choice>
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+</xs:schema>

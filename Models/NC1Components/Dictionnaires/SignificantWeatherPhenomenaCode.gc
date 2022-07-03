@@ -1,0 +1,202 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<gc:CodeList xmlns:nc1dico="urn:fra:nc1:dictionnaires" xmlns:gc="http://docs.oasis-open.org/codelist/ns/genericode/1.0/">
+  <Annotation>
+    <Description>
+      <nc1dico:description>Phénomène météo significatif.</nc1dico:description>
+      <nc1dico:description xml:lang="en">Significant meteorological event.</nc1dico:description>
+    </Description>
+    <AppInfo>
+      <nc1dico:source>ADatP-3 BL14 1386/6</nc1dico:source>
+      <nc1dico:derogation></nc1dico:derogation>
+    </AppInfo>
+  </Annotation>
+  <Identification>
+    <ShortName>SignificantWeatherPhenomenaCode</ShortName>
+    <Version>9.0.0</Version>
+    <CanonicalUri>urn:fra:nc1:common:cbrn:SignificantWeatherPhenomenaCode</CanonicalUri>
+    <CanonicalVersionUri>urn:fra:nc1:common:cbrn:SignificantWeatherPhenomenaCode:9.0.0</CanonicalVersionUri>
+  </Identification>
+  <ColumnSet DatatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes">
+    <Column Id="code" Use="required">
+      <ShortName>Code</ShortName>
+      <Data Type="int" />
+    </Column>
+    <Column Id="short" Use="required">
+      <ShortName>Short</ShortName>
+      <Data Type="string" />
+    </Column>
+    <Column Id="long" Use="optional">
+      <ShortName>Long</ShortName>
+      <Data Type="string" />
+    </Column>
+    <Column Id="short-en" Use="optional">
+      <ShortName>Short anglais</ShortName>
+      <Data Type="string" />
+    </Column>
+    <Column Id="long-en" Use="optional">
+      <ShortName>Long anglais</ShortName>
+      <Data Type="string" />
+    </Column>
+    <Column Id="parent" Use="optional">
+      <ShortName>Parent</ShortName>
+      <Data Type="int" />
+    </Column>
+    <Column Id="codeSymbole" Use="optional">
+      <ShortName>Code Symbole</ShortName>
+      <Data Type="string" />
+    </Column>
+    <Column Id="codeHierarchique" Use="optional">
+      <ShortName>Code Hierarchique</ShortName>
+      <Data Type="string" />
+    </Column>
+    <Key Id="codeKey">
+      <ShortName>CodeKey</ShortName>
+      <ColumnRef Ref="code" />
+    </Key>
+  </ColumnSet>
+  <SimpleCodeList>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>0</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>0</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>NO SIGNIFICANT WEATHER PHENOMENA</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>1</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>1</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>SEA BREEZE</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>2</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>2</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>LAND BREEZE</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>3</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>3</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>DUST/SNOW/SAND</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>4</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>4</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>FOG/HAZE</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>5</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>5</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>DRIZZLE</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>6</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>6</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>RAIN</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>7</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>7</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>SNOW</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>8</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>8</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>SHOWERS</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>9</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>9</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>THUNDERSTORMS</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>10</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>A</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>TOP OF INVERSION LAYER LOWER THAN 800 METRES</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>11</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>B</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>TOP OF INVERSION LAYER LOWER THAN 400 METRES</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>12</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>C</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>TOP OF INVERSION LAYER LOWER THAN 200 METRES</SimpleValue>
+      </Value>
+    </Row>
+  </SimpleCodeList>
+</gc:CodeList>

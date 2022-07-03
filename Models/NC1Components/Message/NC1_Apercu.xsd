@@ -1,0 +1,106 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema targetNamespace="urn:fra:nc1:message:apercu" xmlns:nc1ihm="urn:fra:nc1:IHM" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:nc1apercu="urn:fra:nc1:message:apercu" xmlns:nc1common="urn:fra:nc1:common:attribute" xmlns:nc1msgcom="urn:fra:nc1:common:message">
+  <!-- NC1 V.9.0.0 -->
+  <xs:import namespace="urn:fra:nc1:common:attribute" schemaLocation="../Commun/Common.xsd" />
+  <xs:import namespace="urn:fra:nc1:common:message" schemaLocation="../Commun/Message.xsd" />
+  <xs:element name="NC1_Apercu">
+    <xs:annotation>
+      <xs:documentation>Le message NC1_Aperçu permet de transmettre la réaction de l'autorité destinataire signifiant qu’elle a bien reçu le message, l'a compris et est en mesure ou non d'en exécuter les prescriptions.</xs:documentation>
+      <xs:documentation xml:lang="en">The NC1_Aperçu message allows to transmit the reaction of the recipient authority meaning that it has received the message, understood it and is able or not to perform the requirements.</xs:documentation>
+      <xs:appinfo>
+        <nc1:type xmlns:nc1="urn:fra:nc1">Message</nc1:type>
+        <nc1ihm:Nom>Aperçu</nc1ihm:Nom>
+        <nc1ihm:Nom xml:lang="en">Acknowledgement</nc1ihm:Nom>
+        <nc1:MessH xmlns:nc1="urn:fra:nc1">N/A</nc1:MessH>
+        <nc1:MessADatP3 xmlns:nc1="urn:fra:nc1">N/A</nc1:MessADatP3>
+        <nc1:LastNC1ModifyVersion xmlns:nc1="urn:fra:nc1">9.0.0</nc1:LastNC1ModifyVersion>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:complexContent>
+        <xs:extension base="nc1msgcom:BaseMessageType">
+          <xs:sequence>
+            <xs:element name="willco" type="nc1apercu:WillcoCode">
+              <xs:annotation>
+                <xs:documentation>Prêt à exécuter l'ordre reçu.</xs:documentation>
+                <xs:documentation xml:lang="en">WILLCO.</xs:documentation>
+                <xs:appinfo>
+                  <nc1ihm:Nom>Prêt à exécuter</nc1ihm:Nom>
+                  <nc1ihm:Nom xml:lang="en">WILLCO</nc1ihm:Nom>
+                </xs:appinfo>
+              </xs:annotation>
+            </xs:element>
+            <xs:element minOccurs="0" name="cantco">
+              <xs:annotation>
+                <xs:documentation>Non prêt à exécuter l'ordre reçu.</xs:documentation>
+                <xs:documentation xml:lang="en">Can't comply (CANTCO).</xs:documentation>
+                <xs:appinfo>
+                  <nc1ihm:Nom>Non prêt à exécuter</nc1ihm:Nom>
+                  <nc1ihm:Nom xml:lang="en">Can't comply (CANTCO)</nc1ihm:Nom>
+                </xs:appinfo>
+              </xs:annotation>
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element minOccurs="0" name="delay" type="nc1common:Duration10YearsType">
+                    <xs:annotation>
+                      <xs:documentation>Délai avant d'être prêt à exécuter l'ordre reçu.</xs:documentation>
+                      <xs:documentation xml:lang="en">Time before being ready to execute the order received.</xs:documentation>
+                      <xs:appinfo>
+                        <nc1ihm:Nom>Délai avant prêt</nc1ihm:Nom>
+                        <nc1ihm:Nom xml:lang="en">Time to ready</nc1ihm:Nom>
+                      </xs:appinfo>
+                    </xs:annotation>
+                  </xs:element>
+                  <xs:element maxOccurs="2" minOccurs="0" name="reasonForCantco" type="nc1apercu:ReasonForCantcoCode">
+                    <xs:annotation>
+                      <xs:documentation>Raison du non aperçu immédiat.</xs:documentation>
+                      <xs:documentation xml:lang="en">Reason for no immediate overview.</xs:documentation>
+                      <xs:appinfo>
+                        <nc1ihm:Nom>Raison non prêt</nc1ihm:Nom>
+                        <nc1ihm:Nom xml:lang="en">Reason for CANTCO</nc1ihm:Nom>
+                      </xs:appinfo>
+                    </xs:annotation>
+                  </xs:element>
+                  <xs:element minOccurs="0" name="commentForCantco" type="nc1common:LongTextType">
+                    <xs:annotation>
+                      <xs:documentation>Description en texte libre du ou des raisons du non aperçu immédiat.</xs:documentation>
+                      <xs:documentation xml:lang="en">free-text description of the reasons for non immediate overview.</xs:documentation>
+                      <xs:appinfo>
+                        <nc1ihm:Nom>Commentaire non prêt</nc1ihm:Nom>
+                        <nc1ihm:Nom xml:lang="en">Comment not ready</nc1ihm:Nom>
+                      </xs:appinfo>
+                    </xs:annotation>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+          </xs:sequence>
+        </xs:extension>
+      </xs:complexContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:simpleType name="ReasonForCantcoCode">
+    <xs:annotation>
+      <xs:appinfo>
+        <nc1dico:source xmlns:nc1dico="urn:fra:nc1:dictionnaires">NC1</nc1dico:source>
+        <nc1ihm:description>Raison d'un non aperçu immédiat sur un ordre.</nc1ihm:description>
+        <nc1ihm:description xml:lang="en">Reason for a non-immediate overview of an order.</nc1ihm:description>
+      </xs:appinfo>
+      <xs:documentation>Raison d'un non aperçu immédiat sur un ordre.</xs:documentation>
+      <xs:documentation xml:lang="en">Reason for a non-immediate overview of an order.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:integer" />
+  </xs:simpleType>
+  <xs:simpleType name="WillcoCode">
+    <xs:annotation>
+      <xs:appinfo>
+        <nc1dico:source xmlns:nc1dico="urn:fra:nc1:dictionnaires">NC1</nc1dico:source>
+        <nc1ihm:description>Réponse OUI ou NON à une demande d'aperçu.</nc1ihm:description>
+        <nc1ihm:description xml:lang="en">YES or NO answer to an acknowledgement request.</nc1ihm:description>
+      </xs:appinfo>
+      <xs:documentation>Réponse OUI ou NON à une demande d'aperçu.</xs:documentation>
+      <xs:documentation xml:lang="en">YES or NO answer to an acknowledgement request.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:integer" />
+  </xs:simpleType>
+</xs:schema>

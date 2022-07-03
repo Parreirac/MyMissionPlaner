@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<cva:ContextValueAssociation xmlns:cva="http://docs.oasis-open.org/codelist/ns/ContextValueAssociation/1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="urn:fra:nc1:message:ler" queryBinding="xslt2" xmlns:nc1ler="urn:fra:nc1:message:ler">
+  <!-- NC1 V.9.0.0 -->
+  <ValueLists>
+    <ValueList xml:id="nc1msgcom-ClassificationCode" uri="../Dictionnaires/ClassificationCode.gc" />
+    <ValueList xml:id="nc1msgcom-UrgencyLevelCode" uri="../Dictionnaires/UrgencyLevelCode.gc" />
+    <ValueList xml:id="nc1initodb-EquipmentCategoryCode" uri="../Dictionnaires/EquipmentCategoryCode.gc" />
+    <ValueList xml:id="nc1initodb-FuelCategoryCode" uri="../Dictionnaires/FuelCategoryCode.gc" />
+    <ValueList xml:id="nc1initodb-FuelThresholdCode" uri="../Dictionnaires/FuelThresholdCode.gc" />
+    <ValueList xml:id="nc1initodb-SupplyClassCode" uri="../Dictionnaires/SupplyClassCode.gc" />
+    <ValueList xml:id="nc1logistics-MobilityCategoryCode" uri="../Dictionnaires/MobilityCategoryCode.gc" />
+    <ValueList xml:id="nc1initodb-RangeTypeCode" uri="../Dictionnaires/RangeTypeCode.gc" />
+    <ValueList xml:id="nc1initodb-RessourceTypeCode" uri="../Dictionnaires/RessourceTypeCode.gc" />
+    <ValueList xml:id="nc1initodb-UnitOfMeasurementCode" uri="../Dictionnaires/UnitOfMeasurementCode.gc" />
+  </ValueLists>
+  <Contexts>
+    <Context address="/nc1ler:NC1_ListeEquipementsRessources/@classification" values="nc1msgcom-ClassificationCode" />
+    <Context address="/nc1ler:NC1_ListeEquipementsRessources/@urgencyLevel" values="nc1msgcom-UrgencyLevelCode" />
+    <Context address="/nc1ler:NC1_ListeEquipementsRessources/equipments/category" values="nc1initodb-EquipmentCategoryCode" />
+    <Context address="/nc1ler:NC1_ListeEquipementsRessources/equipments/fuel" values="nc1initodb-FuelCategoryCode" />
+    <Context address="/nc1ler:NC1_ListeEquipementsRessources/equipments/fuelThreshold" values="nc1initodb-FuelThresholdCode" />
+    <Context address="/nc1ler:NC1_ListeEquipementsRessources/equipments/supplyClass" values="nc1initodb-SupplyClassCode" />
+    <Context address="/nc1ler:NC1_ListeEquipementsRessources/equipments/mobilityCategory" values="nc1logistics-MobilityCategoryCode" />
+    <Context address="/nc1ler:NC1_ListeEquipementsRessources/equipments/rangeType" values="nc1initodb-RangeTypeCode" />
+    <Context address="/nc1ler:NC1_ListeEquipementsRessources/resources/ressourceType" values="nc1initodb-RessourceTypeCode" />
+    <Context address="/nc1ler:NC1_ListeEquipementsRessources/resources/unitOfMeasurement" values="nc1initodb-UnitOfMeasurementCode" />
+    <Context address="/nc1ler:NC1_ListeEquipementsRessources/resources/supplyClass" values="nc1initodb-SupplyClassCode" />
+  </Contexts>
+</cva:ContextValueAssociation>

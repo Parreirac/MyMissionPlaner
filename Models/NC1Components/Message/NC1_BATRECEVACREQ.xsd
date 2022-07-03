@@ -1,0 +1,188 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema targetNamespace="urn:fra:nc1:message:batrecevacreq" xmlns:nc1ihm="urn:fra:nc1:IHM" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:nc1batrecevacreq="urn:fra:nc1:message:batrecevacreq" xmlns:nc1common="urn:fra:nc1:common:attribute" xmlns:nc1msgcom="urn:fra:nc1:common:message" xmlns:nc1airparticipant="urn:fra:nc1:objet:airparticipant" xmlns:nc1groundparticipant="urn:fra:nc1:objet:groundparticipant" xmlns:nc1participant="urn:fra:nc1:objet:participant" xmlns:nc1seaparticipant="urn:fra:nc1:objet:seaparticipant" xmlns:nc1tacpoint="urn:fra:nc1:objet:tacpoint" xmlns:nc1unit="urn:fra:nc1:objet:unit">
+  <!-- NC1 V.9.0.0 -->
+  <xs:import namespace="urn:fra:nc1:common:attribute" schemaLocation="../Commun/Common.xsd" />
+  <xs:import namespace="urn:fra:nc1:common:message" schemaLocation="../Commun/Message.xsd" />
+  <xs:import namespace="urn:fra:nc1:objet:airparticipant" schemaLocation="../Objet/NC1_AirParticipant.xsd" />
+  <xs:import namespace="urn:fra:nc1:objet:groundparticipant" schemaLocation="../Objet/NC1_GroundParticipant.xsd" />
+  <xs:import namespace="urn:fra:nc1:objet:participant" schemaLocation="../Commun/Participant.xsd" />
+  <xs:import namespace="urn:fra:nc1:objet:seaparticipant" schemaLocation="../Objet/NC1_SeaParticipant.xsd" />
+  <xs:import namespace="urn:fra:nc1:objet:tacpoint" schemaLocation="../Objet/NC1_TacPoint.xsd" />
+  <xs:import namespace="urn:fra:nc1:objet:unit" schemaLocation="../Objet/NC1_Unit.xsd" />
+  <xs:element name="NC1_BATRECEVACREQ">
+    <xs:annotation>
+      <xs:documentation>Le message NC1_BATRECEVACREQ est utilisé pour demander le dépannage ou l’évacuation d’un véhicule.</xs:documentation>
+      <xs:documentation xml:lang="en">NC1_BATRECEVACREQ message is used to request vehicle recovery.</xs:documentation>
+      <xs:appinfo>
+        <nc1:type xmlns:nc1="urn:fra:nc1">Message</nc1:type>
+        <nc1ihm:Nom>Demande de dépannage ou d'évacuation</nc1ihm:Nom>
+        <nc1ihm:Nom xml:lang="en">Battlefield recovery/evacuation request</nc1ihm:Nom>
+        <nc1:MessH xmlns:nc1="urn:fra:nc1">N/A</nc1:MessH>
+        <nc1:MessADatP3 xmlns:nc1="urn:fra:nc1">BATRECEVACREQ</nc1:MessADatP3>
+        <nc1:LastNC1ModifyVersion xmlns:nc1="urn:fra:nc1">9.0.0</nc1:LastNC1ModifyVersion>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:complexContent>
+        <xs:extension base="nc1msgcom:BaseMessageType">
+          <xs:sequence>
+            <xs:choice>
+              <xs:element name="receivingUnit" type="nc1unit:UnitType">
+                <xs:annotation>
+                  <xs:appinfo>
+                    <nc1ihm:Nom>Unité Bénéficiaire</nc1ihm:Nom>
+                    <nc1ihm:Nom xml:lang="en">Receiving Unit</nc1ihm:Nom>
+                  </xs:appinfo>
+                </xs:annotation>
+              </xs:element>
+              <xs:element name="receivingParticipant" type="nc1participant:ParticipantType">
+                <xs:annotation>
+                  <xs:appinfo>
+                    <nc1ihm:Nom>Participant bénéficiaire</nc1ihm:Nom>
+                    <nc1ihm:Nom xml:lang="en">Receiving Participant</nc1ihm:Nom>
+                  </xs:appinfo>
+                </xs:annotation>
+              </xs:element>
+            </xs:choice>
+            <xs:element maxOccurs="unbounded" name="equipment">
+              <xs:annotation>
+                <xs:appinfo>
+                  <nc1ihm:Nom>Equipement à dépanner</nc1ihm:Nom>
+                  <nc1ihm:Nom xml:lang="en">Equipment to be fixed</nc1ihm:Nom>
+                </xs:appinfo>
+              </xs:annotation>
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="nicCode" type="nc1common:NicCodeType">
+                    <xs:annotation>
+                      <xs:documentation>Code NIC du type de matériel.</xs:documentation>
+                      <xs:documentation xml:lang="en">Material Type NIC code.</xs:documentation>
+                      <xs:appinfo>
+                        <nc1ihm:Nom>Code NIC</nc1ihm:Nom>
+                        <nc1ihm:Nom xml:lang="en">NIC code</nc1ihm:Nom>
+                      </xs:appinfo>
+                    </xs:annotation>
+                  </xs:element>
+                  <xs:element name="registrationMark" type="nc1common:ShortTextType">
+                    <xs:annotation>
+                      <xs:appinfo>
+                        <nc1ihm:Nom>Immatriculation</nc1ihm:Nom>
+                        <nc1ihm:Nom xml:lang="en">Registration mark</nc1ihm:Nom>
+                      </xs:appinfo>
+                    </xs:annotation>
+                  </xs:element>
+                  <xs:element name="drivingTowingState" type="nc1batrecevacreq:DrivingTowingStateCode">
+                    <xs:annotation>
+                      <xs:appinfo>
+                        <nc1ihm:Nom>Mobilité</nc1ihm:Nom>
+                        <nc1ihm:Nom xml:lang="en">Mobility</nc1ihm:Nom>
+                      </xs:appinfo>
+                    </xs:annotation>
+                  </xs:element>
+                  <xs:element name="supportRequired" type="nc1batrecevacreq:SupportRequiredCode">
+                    <xs:annotation>
+                      <xs:appinfo>
+                        <nc1ihm:Nom>Soutien nécessaire</nc1ihm:Nom>
+                        <nc1ihm:Nom xml:lang="en">Support required</nc1ihm:Nom>
+                      </xs:appinfo>
+                    </xs:annotation>
+                  </xs:element>
+                  <xs:element name="crewAvailable" type="xs:boolean">
+                    <xs:annotation>
+                      <xs:appinfo>
+                        <nc1ihm:Nom>Equipage disponible</nc1ihm:Nom>
+                        <nc1ihm:Nom xml:lang="en">Available crew</nc1ihm:Nom>
+                      </xs:appinfo>
+                    </xs:annotation>
+                  </xs:element>
+                  <xs:element name="conditionCode" type="nc1batrecevacreq:ConditionCode">
+                    <xs:annotation>
+                      <xs:appinfo>
+                        <nc1ihm:Nom>Etat général</nc1ihm:Nom>
+                        <nc1ihm:Nom xml:lang="en">Condition code</nc1ihm:Nom>
+                      </xs:appinfo>
+                    </xs:annotation>
+                  </xs:element>
+                  <xs:choice>
+                    <xs:element name="destinationUnit" type="nc1unit:UnitType">
+                      <xs:annotation>
+                        <xs:appinfo>
+                          <nc1ihm:Nom>Unité de destination et point de contact</nc1ihm:Nom>
+                          <nc1ihm:Nom xml:lang="en">Destination Unit &amp; POC</nc1ihm:Nom>
+                        </xs:appinfo>
+                      </xs:annotation>
+                    </xs:element>
+                    <xs:element name="destinationParticipant" type="nc1participant:ParticipantType">
+                      <xs:annotation>
+                        <xs:appinfo>
+                          <nc1ihm:Nom>Participant de destination et point de contact</nc1ihm:Nom>
+                          <nc1ihm:Nom xml:lang="en">Destination Participant &amp; POC</nc1ihm:Nom>
+                        </xs:appinfo>
+                      </xs:annotation>
+                    </xs:element>
+                  </xs:choice>
+                  <xs:element minOccurs="0" name="comment" type="nc1msgcom:MixedAnyType">
+                    <xs:annotation>
+                      <xs:appinfo>
+                        <nc1ihm:Nom>Commentaire</nc1ihm:Nom>
+                        <nc1ihm:Nom xml:lang="en">comment</nc1ihm:Nom>
+                      </xs:appinfo>
+                    </xs:annotation>
+                  </xs:element>
+                  <xs:element minOccurs="0" name="appointmentIndicator" type="xs:boolean">
+                    <xs:annotation>
+                      <xs:appinfo>
+                        <nc1ihm:Nom>Balisage du rendez-vous</nc1ihm:Nom>
+                        <nc1ihm:Nom xml:lang="en">Appointment Indicator</nc1ihm:Nom>
+                      </xs:appinfo>
+                    </xs:annotation>
+                  </xs:element>
+                  <xs:element minOccurs="0" name="appointmentLocation" type="nc1tacpoint:TacPointType">
+                    <xs:annotation>
+                      <xs:appinfo>
+                        <nc1ihm:Nom>Point de rendez-vous</nc1ihm:Nom>
+                        <nc1ihm:Nom xml:lang="en">Appointment Location</nc1ihm:Nom>
+                      </xs:appinfo>
+                    </xs:annotation>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element minOccurs="0" name="comment" type="nc1msgcom:CommentSectionType">
+              <xs:annotation>
+                <xs:appinfo>
+                  <nc1ihm:Nom>Commentaire</nc1ihm:Nom>
+                  <nc1ihm:Nom xml:lang="en">comment</nc1ihm:Nom>
+                </xs:appinfo>
+              </xs:annotation>
+            </xs:element>
+          </xs:sequence>
+        </xs:extension>
+      </xs:complexContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:simpleType name="ConditionCode">
+    <xs:annotation>
+      <xs:appinfo />
+      <xs:documentation></xs:documentation>
+      <xs:documentation xml:lang="en"></xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:integer" />
+  </xs:simpleType>
+  <xs:simpleType name="DrivingTowingStateCode">
+    <xs:annotation>
+      <xs:appinfo />
+      <xs:documentation></xs:documentation>
+      <xs:documentation xml:lang="en"></xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:integer" />
+  </xs:simpleType>
+  <xs:simpleType name="SupportRequiredCode">
+    <xs:annotation>
+      <xs:appinfo />
+      <xs:documentation></xs:documentation>
+      <xs:documentation xml:lang="en"></xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:integer" />
+  </xs:simpleType>
+</xs:schema>

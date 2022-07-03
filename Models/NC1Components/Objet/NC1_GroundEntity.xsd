@@ -1,0 +1,247 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema targetNamespace="urn:fra:nc1:objet:groundentity" xmlns:nc1ihm="urn:fra:nc1:IHM" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:nc1groundentity="urn:fra:nc1:objet:groundentity" xmlns:nc1common="urn:fra:nc1:common:attribute" xmlns:nc1location="urn:fra:nc1:common:location" xmlns:nc1objcom="urn:fra:nc1:common:object" xmlns:nc1sicsdicos="urn:fra:nc1:common:sicsdicos">
+  <!-- NC1 V.9.0.0 -->
+  <xs:import namespace="urn:fra:nc1:common:attribute" schemaLocation="../Commun/Common.xsd" />
+  <xs:import namespace="urn:fra:nc1:common:location" schemaLocation="../Commun/Location.xsd" />
+  <xs:import namespace="urn:fra:nc1:common:object" schemaLocation="../Commun/Object.xsd" />
+  <xs:import namespace="urn:fra:nc1:common:sicsdicos" schemaLocation="../Commun/SICS_Dictionaries.xsd" />
+  <xs:element name="NC1_GroundEntity" type="nc1groundentity:GroundEntityType">
+    <xs:annotation>
+      <xs:documentation>L’objet description terrain permet de partager conjoncturellement entre les acteurs du théâtre des éléments topographiques du terrain non présents à l’initialisation des systèmes.</xs:documentation>
+      <xs:documentation xml:lang="en">The object description ground allows to share  between the actors of the theater of the topographic not present elements of the ground in the initialization of the systems.</xs:documentation>
+      <xs:appinfo>
+        <nc1:type xmlns:nc1="urn:fra:nc1">Objet</nc1:type>
+        <nc1ihm:Nom>Description terrain</nc1ihm:Nom>
+        <nc1ihm:Nom xml:lang="en">Ground entity</nc1ihm:Nom>
+        <nc1:MessH xmlns:nc1="urn:fra:nc1">Message H5.4 GroundEntity</nc1:MessH>
+        <nc1:MessADatP3 xmlns:nc1="urn:fra:nc1">N/A</nc1:MessADatP3>
+        <nc1:LastNC1ModifyVersion xmlns:nc1="urn:fra:nc1">9.0.0</nc1:LastNC1ModifyVersion>
+      </xs:appinfo>
+    </xs:annotation>
+  </xs:element>
+  <xs:complexType name="GroundEntityType">
+    <xs:annotation>
+      <xs:documentation>L’objet description terrain représente les éléments topographiques caractéristiques du terrain ayant une signification et un intérêt militaire fort (rivière, clairière, thalweg, lac…).</xs:documentation>
+      <xs:documentation xml:lang="en">The ground entity object represents topographical elements specific to a ground with a strong military interest (river, glade, thalweg, lake, …).</xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="nc1objcom:PhysicalObjectType">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="location">
+            <xs:annotation>
+              <xs:documentation>Localisation.</xs:documentation>
+              <xs:documentation xml:lang="en">Location.</xs:documentation>
+              <xs:appinfo>
+                <nc1ihm:Nom>Localisation</nc1ihm:Nom>
+                <nc1ihm:Nom xml:lang="en">Location</nc1ihm:Nom>
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element minOccurs="0" name="name" type="nc1common:Text1To30ObjectType">
+                  <xs:annotation>
+                    <xs:documentation>Nom de baptême donné par l'opérateur à la localisation. Par exemple un nom de ville ou de lieu.</xs:documentation>
+                    <xs:documentation xml:lang="en">Name assigned to the location, e.g. city or place name.</xs:documentation>
+                    <xs:appinfo>
+                      <nc1ihm:Nom>Nom</nc1ihm:Nom>
+                      <nc1ihm:Nom xml:lang="en">name</nc1ihm:Nom>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:element>
+                <xs:choice>
+                  <xs:element name="point" type="nc1location:PointType">
+                    <xs:annotation>
+                      <xs:documentation>Point localisé.</xs:documentation>
+                      <xs:documentation xml:lang="en">Geolocalized point.</xs:documentation>
+                      <xs:appinfo>
+                        <nc1ihm:Nom>Point</nc1ihm:Nom>
+                        <nc1ihm:Nom xml:lang="en">Point</nc1ihm:Nom>
+                      </xs:appinfo>
+                    </xs:annotation>
+                  </xs:element>
+                  <xs:element name="polyline" type="nc1location:PolylineType">
+                    <xs:annotation>
+                      <xs:documentation>Ligne brisée orientée, sans largeur.</xs:documentation>
+                      <xs:documentation xml:lang="en">Width less oriented polyline.</xs:documentation>
+                      <xs:appinfo>
+                        <nc1ihm:Nom>Polyligne</nc1ihm:Nom>
+                        <nc1ihm:Nom xml:lang="en">Polyline</nc1ihm:Nom>
+                      </xs:appinfo>
+                    </xs:annotation>
+                  </xs:element>
+                  <xs:element name="polygon" type="nc1location:PolygonType">
+                    <xs:annotation>
+                      <xs:documentation>Polygone, ou ligne brisée fermée.</xs:documentation>
+                      <xs:documentation xml:lang="en">Polygon, or closed polyline.</xs:documentation>
+                      <xs:appinfo>
+                        <nc1ihm:Nom>Polygone</nc1ihm:Nom>
+                        <nc1ihm:Nom xml:lang="en">Polygon</nc1ihm:Nom>
+                      </xs:appinfo>
+                    </xs:annotation>
+                  </xs:element>
+                  <xs:element name="circle" type="nc1location:CircleType">
+                    <xs:annotation>
+                      <xs:documentation>Cercle.</xs:documentation>
+                      <xs:documentation xml:lang="en">Circle.</xs:documentation>
+                      <xs:appinfo>
+                        <nc1ihm:Nom>Cercle</nc1ihm:Nom>
+                        <nc1ihm:Nom xml:lang="en">Circle</nc1ihm:Nom>
+                      </xs:appinfo>
+                    </xs:annotation>
+                  </xs:element>
+                  <xs:element name="ellipse" type="nc1location:EllipseType">
+                    <xs:annotation>
+                      <xs:documentation>Ellipse.</xs:documentation>
+                      <xs:documentation xml:lang="en">Ellipse.</xs:documentation>
+                      <xs:appinfo>
+                        <nc1ihm:Nom>Ellipse</nc1ihm:Nom>
+                        <nc1ihm:Nom xml:lang="en">Ellipse</nc1ihm:Nom>
+                      </xs:appinfo>
+                    </xs:annotation>
+                  </xs:element>
+                  <xs:element name="arcband" type="nc1location:ArcbandType">
+                    <xs:annotation>
+                      <xs:documentation>Radarc ou segment d’anneau.</xs:documentation>
+                      <xs:documentation xml:lang="en">Arcband.</xs:documentation>
+                      <xs:appinfo>
+                        <nc1ihm:Nom>Radarc</nc1ihm:Nom>
+                        <nc1ihm:Nom xml:lang="en">Arcband, or 4 points sector</nc1ihm:Nom>
+                      </xs:appinfo>
+                    </xs:annotation>
+                  </xs:element>
+                </xs:choice>
+                <xs:element minOccurs="0" name="quality" type="nc1sicsdicos:L117_5Code">
+                  <xs:annotation>
+                    <xs:documentation>Qualité de la mesure de la localisation.</xs:documentation>
+                    <xs:documentation xml:lang="en">Location measurement quality.</xs:documentation>
+                    <xs:appinfo>
+                      <nc1ihm:Nom>Qualité</nc1ihm:Nom>
+                      <nc1ihm:Nom xml:lang="en">Quality</nc1ihm:Nom>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:element>
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+          <xs:element minOccurs="0" name="tacticalData">
+            <xs:annotation>
+              <xs:documentation>Données tactiques de la description terrain.</xs:documentation>
+              <xs:documentation xml:lang="en">Ground entity tactical data.</xs:documentation>
+              <xs:appinfo>
+                <nc1ihm:Nom>Données tactiques</nc1ihm:Nom>
+                <nc1ihm:Nom xml:lang="en">tactical datas</nc1ihm:Nom>
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element minOccurs="0" name="name" type="nc1common:ShortTextObjectType">
+                  <xs:annotation>
+                    <xs:documentation>Nom de la description terrain affiché sur la cartographie.</xs:documentation>
+                    <xs:documentation xml:lang="en">Ground entity displayed name.</xs:documentation>
+                    <xs:appinfo>
+                      <nc1ihm:Nom>Nom</nc1ihm:Nom>
+                      <nc1ihm:Nom xml:lang="en">name</nc1ihm:Nom>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:element>
+                <xs:element minOccurs="0" name="type" type="nc1sicsdicos:L110_39Code">
+                  <xs:annotation>
+                    <xs:documentation>Type de la description terrain.</xs:documentation>
+                    <xs:documentation xml:lang="en">Type of ground entity.</xs:documentation>
+                    <xs:appinfo>
+                      <nc1ihm:Nom>Type</nc1ihm:Nom>
+                      <nc1ihm:Nom xml:lang="en">Type</nc1ihm:Nom>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:element>
+                <xs:element minOccurs="0" name="description" type="nc1common:LongTextObjectType">
+                  <xs:annotation>
+                    <xs:documentation>Description en texte libre des caractéristiques physiques du terrain :
+-Nature de la surface,
+-Nature de la végétation,
+-Autres caractéristiques.
+</xs:documentation>
+                    <xs:documentation xml:lang="en">Free text description.
+</xs:documentation>
+                    <xs:appinfo>
+                      <nc1ihm:Nom>Description</nc1ihm:Nom>
+                      <nc1ihm:Nom xml:lang="en">Description</nc1ihm:Nom>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:element>
+                <xs:element minOccurs="0" name="status" type="nc1sicsdicos:L125_1Code">
+                  <xs:annotation>
+                    <xs:documentation>Etat opérationnel de la description terrain.</xs:documentation>
+                    <xs:documentation xml:lang="en">Operational status of the ground entity.</xs:documentation>
+                    <xs:appinfo>
+                      <nc1ihm:Nom>Etat</nc1ihm:Nom>
+                      <nc1ihm:Nom xml:lang="en">Status</nc1ihm:Nom>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:element>
+                <xs:element minOccurs="0" name="dimensions" type="nc1common:DimensionType">
+                  <xs:annotation>
+                    <xs:documentation>Dimensions de la description terrain.</xs:documentation>
+                    <xs:documentation xml:lang="en">Dimensions of the ground entity.</xs:documentation>
+                    <xs:appinfo>
+                      <nc1ihm:Nom>Dimensions</nc1ihm:Nom>
+                      <nc1ihm:Nom xml:lang="en">Dimensions</nc1ihm:Nom>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:element>
+                <xs:element minOccurs="0" name="achievementStatus" type="nc1sicsdicos:L125_24Code">
+                  <xs:annotation>
+                    <xs:documentation>Etat d'avancement, dans le cas d'un ouvrage.</xs:documentation>
+                    <xs:documentation xml:lang="en">Progress in the case of a work.</xs:documentation>
+                    <xs:appinfo>
+                      <nc1ihm:Nom>Etat d'avancement</nc1ihm:Nom>
+                      <nc1ihm:Nom xml:lang="en">Achievement status</nc1ihm:Nom>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:element>
+                <xs:element maxOccurs="unbounded" minOccurs="0" name="validityPeriod" type="nc1common:PeriodType">
+                  <xs:annotation>
+                    <xs:documentation>Période de validité.</xs:documentation>
+                    <xs:appinfo>
+                      <nc1ihm:Nom>Période de validité</nc1ihm:Nom>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:element>
+                <xs:element minOccurs="0" name="url" type="nc1common:MediumTextObjectType">
+                  <xs:annotation>
+                    <xs:documentation>Lien vers un fichier associé à l’objet.</xs:documentation>
+                    <xs:documentation xml:lang="en">Link to a file associated with the object.</xs:documentation>
+                    <xs:appinfo>
+                      <nc1ihm:Nom>Url</nc1ihm:Nom>
+                      <nc1ihm:Nom xml:lang="en">url</nc1ihm:Nom>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:element>
+                <xs:element minOccurs="0" name="comment" type="nc1common:LongTextObjectType">
+                  <xs:annotation>
+                    <xs:documentation>Commentaire en texte libre.</xs:documentation>
+                    <xs:documentation xml:lang="en">free text comment.</xs:documentation>
+                    <xs:appinfo>
+                      <nc1ihm:Nom>Commentaire</nc1ihm:Nom>
+                      <nc1ihm:Nom xml:lang="en">comment</nc1ihm:Nom>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:element>
+                <xs:element minOccurs="0" name="extVersion" type="nc1common:ExtVersType">
+                  <xs:annotation>
+                    <xs:documentation>Extension pour versions suivantes compatibles.</xs:documentation>
+                    <xs:documentation xml:lang="en">Extension for following compatible versions.</xs:documentation>
+                    <xs:appinfo>
+                      <nc1ihm:Nom>Extension de version</nc1ihm:Nom>
+                      <nc1ihm:Nom xml:lang="en">version extension</nc1ihm:Nom>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:element>
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+</xs:schema>

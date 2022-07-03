@@ -1,0 +1,1548 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<gc:CodeList xmlns:nc1dico="urn:fra:nc1:dictionnaires" xmlns:gc="http://docs.oasis-open.org/codelist/ns/genericode/1.0/">
+  <Annotation>
+    <Description>
+      <nc1dico:description>DECRIT LES TYPES DE LIGNES AU SENS APP6 ET CLEF D'ENTREE DANS L'APP6.</nc1dico:description>
+      <nc1dico:description xml:lang="en">DESCRIBES THE TYPES OF LINES IN APP6 MEANING AND KEY FOR ENTRY IN APP6.</nc1dico:description>
+    </Description>
+    <AppInfo>
+      <nc1dico:source>SFTT 3.4.8</nc1dico:source>
+      <nc1dico:derogation>TYPE DE LIGNE</nc1dico:derogation>
+    </AppInfo>
+  </Annotation>
+  <Identification>
+    <ShortName>TacLineSymbolCode</ShortName>
+    <Version>9.0.0</Version>
+    <CanonicalUri>urn:fra:nc1:objet:tacline:TacLineSymbolCode</CanonicalUri>
+    <CanonicalVersionUri>urn:fra:nc1:objet:tacline:TacLineSymbolCode:9.0.0</CanonicalVersionUri>
+  </Identification>
+  <ColumnSet DatatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes">
+    <Column Id="code" Use="required">
+      <ShortName>Code</ShortName>
+      <Data Type="int" />
+    </Column>
+    <Column Id="short" Use="required">
+      <ShortName>Short</ShortName>
+      <Data Type="string" />
+    </Column>
+    <Column Id="long" Use="optional">
+      <ShortName>Long</ShortName>
+      <Data Type="string" />
+    </Column>
+    <Column Id="short-en" Use="optional">
+      <ShortName>Short anglais</ShortName>
+      <Data Type="string" />
+    </Column>
+    <Column Id="long-en" Use="optional">
+      <ShortName>Long anglais</ShortName>
+      <Data Type="string" />
+    </Column>
+    <Column Id="parent" Use="optional">
+      <ShortName>Parent</ShortName>
+      <Data Type="int" />
+    </Column>
+    <Column Id="codeSymbole" Use="optional">
+      <ShortName>Code Symbole</ShortName>
+      <Data Type="string" />
+    </Column>
+    <Column Id="codeHierarchique" Use="optional">
+      <ShortName>Code Hierarchique</ShortName>
+      <Data Type="string" />
+    </Column>
+    <Key Id="codeKey">
+      <ShortName>CodeKey</ShortName>
+      <ColumnRef Ref="code" />
+    </Key>
+  </ColumnSet>
+  <SimpleCodeList>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>-8</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>LIMIT</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>LIMITE GENERAL</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>BNDRY</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>GENERAL BOUNDARIES</SimpleValue>
+      </Value>
+      <Value ColumnRef="parent">
+        <SimpleValue>18</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeSymbole">
+        <SimpleValue>G.C.MGLBG-.....</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeHierarchique">
+        <SimpleValue>2.X.2.1.1.2.1.1</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>-7</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>DIRECTION ATK</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>DIRECTION D'ATTAQUE</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>DA</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>DIRECTION OF ATTACK</SimpleValue>
+      </Value>
+      <Value ColumnRef="parent">
+        <SimpleValue>-4</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeSymbole">
+        <SimpleValue>G.C.MOLD--.....</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeHierarchique">
+        <SimpleValue>2.X.2.1.5.2.2</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>-6</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>FEBA</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>LIGNE AVANT DE LA ZONE DES COMBATS</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>FEBA</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>FORWARD EDGE OF BATTLE AREA</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeSymbole">
+        <SimpleValue>G.C.MMDF--.....</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeHierarchique">
+        <SimpleValue>2.X.2.1.4.2.1</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>-5</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>LIMITE FZO</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>LIMITE DE FUSEAU</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>BDYOR</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>BOUNDARIES</SimpleValue>
+      </Value>
+      <Value ColumnRef="parent">
+        <SimpleValue>18</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeSymbole">
+        <SimpleValue>G.C.MGLB--.....</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeHierarchique">
+        <SimpleValue>2.X.2.1.1.2.1</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>-4</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>LIGNE OFF</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>LIGNE OFFENSIVE</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>OFFL</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>OFFENCE LINE GRAPHIC</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeSymbole">
+        <SimpleValue>G.C.MOL---.....</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeHierarchique">
+        <SimpleValue>2.X.2.1.5.2</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>-3</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>LIGNE C2</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>C2 LINE</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>C2 LINE</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>C2 LINE</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeSymbole">
+        <SimpleValue>G.C.OL----.....</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeHierarchique">
+        <SimpleValue>2.X.2.5.3</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>-2</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>LIGNE LOG</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>LIGNES DE LOGISTIQUE</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>LOG</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>LOGISTIC LINES</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeSymbole">
+        <SimpleValue>G.C.SL----.....</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeHierarchique">
+        <SimpleValue>2.X.2.4.2</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>-1</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>FSL</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>LIGNES A BATTRE PAR LES FEUX</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>FSL</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>FIRE SUPPORT LINES</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeSymbole">
+        <SimpleValue>G.C.FL----.....</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeHierarchique">
+        <SimpleValue>2.X.2.3.2</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>11</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>IFF ON</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>LIGNE IFF ON</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>IFF ON</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>IFF ON LINE</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeSymbole">
+        <SimpleValue>G.C.MALIN-.....</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeHierarchique">
+        <SimpleValue>2.X.2.1.2.2.6</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>12</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>IFF OFF</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>LIGNE IFF OFF</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>IFF OFF</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>IFF OFF LINE</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeSymbole">
+        <SimpleValue>G.C.MALIF-.....</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeHierarchique">
+        <SimpleValue>2.X.2.1.2.2.7</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>18</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>MANOEUVRE</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>LIGNES DE MANOEUVRE</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>GEN LINE</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>LINES GENERAL</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeSymbole">
+        <SimpleValue>G.C.MGL---.....</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeHierarchique">
+        <SimpleValue>2.X.2.1.1.2</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>21</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>DOAFF</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>DIRECTION DE L'ATTAQUE POUR SIMULATION</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>DOAFF</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>DIRECTION OF ATTACK FOR FEINT</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeSymbole">
+        <SimpleValue>G.C.MDF---.....</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeHierarchique">
+        <SimpleValue>2.X.2.1.3.3</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>26</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>#ABANDON</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>#ABANDON</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>#DISUSED</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>#DISUSED</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>27</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>FSCL</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>LIGNE DE COORDINATION DES APPUIS FEUX (FSCL)</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>FSCL</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>FIRE SUPPORT COORDINATION LINE</SimpleValue>
+      </Value>
+      <Value ColumnRef="parent">
+        <SimpleValue>-1</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeSymbole">
+        <SimpleValue>G.C.FLC---.....</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeHierarchique">
+        <SimpleValue>2.X.2.3.2.1</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>28</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>CFL</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>LIGNE D'APPUIS FEUX COORDONNES (CFL)</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>CFL</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>COORDINATION FIRE LINE</SimpleValue>
+      </Value>
+      <Value ColumnRef="parent">
+        <SimpleValue>-1</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeSymbole">
+        <SimpleValue>G.C.FLF---.....</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeHierarchique">
+        <SimpleValue>2.X.2.3.2.2</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>30</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>NFL</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>LIGNE DE SECURITE</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>NFL</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>NO FIRE LINE</SimpleValue>
+      </Value>
+      <Value ColumnRef="parent">
+        <SimpleValue>-1</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeSymbole">
+        <SimpleValue>G.C.FLN---.....</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeHierarchique">
+        <SimpleValue>2.X.2.3.2.5</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>31</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>RFL</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>LIGNE DES TIRS RESTREINTS</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>RFL</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>RESTRICTED FIRE LINE</SimpleValue>
+      </Value>
+      <Value ColumnRef="parent">
+        <SimpleValue>-1</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeSymbole">
+        <SimpleValue>G.C.FLR---.....</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeHierarchique">
+        <SimpleValue>2.X.2.3.2.6</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>32</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>LIGNE ECL REDUIT</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>LIGNE D'ECLAIRAGE REDUIT</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>LGHTLN</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>LIGHT LINE</SimpleValue>
+      </Value>
+      <Value ColumnRef="parent">
+        <SimpleValue>-3</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeSymbole">
+        <SimpleValue>G.C.OLN---.....</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeHierarchique">
+        <SimpleValue>2.X.2.5.3.1</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>33</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>LIGNE PHASE</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>LIGNE DE PHASE</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>PHLINE</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>PHASE LINE</SimpleValue>
+      </Value>
+      <Value ColumnRef="parent">
+        <SimpleValue>-3</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeSymbole">
+        <SimpleValue>G.C.OLP---.....</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeHierarchique">
+        <SimpleValue>2.X.2.5.3.2</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>35</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>FLOT</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>LIGNE AVANT DES TROUPES</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>FLOT</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>FORWARD LINE OF OWN TROOPS</SimpleValue>
+      </Value>
+      <Value ColumnRef="parent">
+        <SimpleValue>18</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeSymbole">
+        <SimpleValue>G.C.MGLF--.....</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeHierarchique">
+        <SimpleValue>2.X.2.1.1.2.2</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>36</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>LIGNE CONTACT</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>LIGNE DES CONTACTS</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>LOC</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>LINE OF CONTACT</SimpleValue>
+      </Value>
+      <Value ColumnRef="parent">
+        <SimpleValue>18</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeSymbole">
+        <SimpleValue>G.C.MGLL--.....</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeHierarchique">
+        <SimpleValue>2.X.2.1.1.2.3</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>37</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>LIMA</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>LIMITE DE BOND, DE PHASE, DE COORDINATION (LIMA)</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>LOBJINT</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>COORDINATION LINE</SimpleValue>
+      </Value>
+      <Value ColumnRef="parent">
+        <SimpleValue>18</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeSymbole">
+        <SimpleValue>G.C.MGLP--.....</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeHierarchique">
+        <SimpleValue>2.X.2.1.1.2.4</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>38</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>RELEVEMENT</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>RELEVEMENT</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>BERLIN</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>BEARING LINE</SimpleValue>
+      </Value>
+      <Value ColumnRef="parent">
+        <SimpleValue>18</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeSymbole">
+        <SimpleValue>G.C.MGLE--.....</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeHierarchique">
+        <SimpleValue>2.X.2.1.1.2.5</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>43</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>L. COORD FINALE</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>LIGNE DE COORDINATION FINALE</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>FNCOLN</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>FINAL COORDINATION LINE</SimpleValue>
+      </Value>
+      <Value ColumnRef="parent">
+        <SimpleValue>-4</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeSymbole">
+        <SimpleValue>G.C.MOLF--.....</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeHierarchique">
+        <SimpleValue>2.X.2.1.5.2.3</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>44</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>#ABANDON</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>#ABANDON</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>#DISUSED</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>#DISUSED</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>45</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>LOA</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>LIMITE DE PROGRESSION (LOA)</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>LIMADV</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>LIMIT OF ADVANCE</SimpleValue>
+      </Value>
+      <Value ColumnRef="parent">
+        <SimpleValue>-4</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeSymbole">
+        <SimpleValue>G.C.MOLL--.....</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeHierarchique">
+        <SimpleValue>2.X.2.1.5.2.5</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>46</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>LD</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>LIGNE DE DEBOUCHE (LD)</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>LOD</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>LINE OF DEPARTURE</SimpleValue>
+      </Value>
+      <Value ColumnRef="parent">
+        <SimpleValue>-4</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeSymbole">
+        <SimpleValue>G.C.MOLT--.....</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeHierarchique">
+        <SimpleValue>2.X.2.1.5.2.6</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>47</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>LD/LC</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>LIGNE DE DEBOUCHE/LIGNE DE CONTACT</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>LD/LC</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>LINE OF DEPARTURE/LINE OF CONTACT (LD/LC)</SimpleValue>
+      </Value>
+      <Value ColumnRef="parent">
+        <SimpleValue>-4</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeSymbole">
+        <SimpleValue>G.C.MOLC--.....</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeHierarchique">
+        <SimpleValue>2.X.2.1.5.2.7</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>48</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>PLD</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>LIGNE PROBABLE DE DEPLOIEMENT</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>PLD</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>PROBABLE LINE OF DEPLOYMENT</SimpleValue>
+      </Value>
+      <Value ColumnRef="parent">
+        <SimpleValue>-4</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeSymbole">
+        <SimpleValue>G.C.MOLP--.....</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeHierarchique">
+        <SimpleValue>2.X.2.1.5.2.8</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>52</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>LIGNE FRANCHT</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>LIGNE DE BASCULE DE COMMANDEMENT LORS D'UN FRANCHISSEMENT</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>RELL</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>RELEASE LINE</SimpleValue>
+      </Value>
+      <Value ColumnRef="parent">
+        <SimpleValue>25</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeSymbole">
+        <SimpleValue>G.C.MSLR--.....</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeHierarchique">
+        <SimpleValue>2.X.2.1.6.2.4</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>55</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>T.FUM LINEAIRE</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>TIR FUMIGENE LINEAIRE</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>LNSMTG</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>LINEAR SMOKE TARGET</SimpleValue>
+      </Value>
+      <Value ColumnRef="parent">
+        <SimpleValue>-1</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeSymbole">
+        <SimpleValue>G.C.FLKT--.....</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeHierarchique">
+        <SimpleValue>2.X.2.3.2.4.3</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>57</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>FZO LATERAL</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>LIMITE DE FUSEAU LATERAL</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>LATBNDRY</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>LATERAL BOUNDARY</SimpleValue>
+      </Value>
+      <Value ColumnRef="parent">
+        <SimpleValue>-5</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeSymbole">
+        <SimpleValue>G.C.MGLBL-.....</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeHierarchique">
+        <SimpleValue>2.X.2.1.1.2.1.2</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>58</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>FZO AVANT</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>LIMITE DE FUSEAU AVANT</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>FWDBNDRY</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>FORWARD BOUNDARY</SimpleValue>
+      </Value>
+      <Value ColumnRef="parent">
+        <SimpleValue>-5</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeSymbole">
+        <SimpleValue>G.C.MGLBF-.....</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeHierarchique">
+        <SimpleValue>2.X.2.1.1.2.1.3</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>59</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>FZO ARRIERE</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>LIMITE DE FUSEAU ARRIERE</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>REARBDRY</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>REAR BOUNDARY</SimpleValue>
+      </Value>
+      <Value ColumnRef="parent">
+        <SimpleValue>-5</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeSymbole">
+        <SimpleValue>G.C.MGLBR-.....</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeHierarchique">
+        <SimpleValue>2.X.2.1.1.2.1.4</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>60</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>RELVT ELECTRO</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>RELEVEMENT ELECTRONIQUE</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>ELCTRNIC</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>ELECTRONIC</SimpleValue>
+      </Value>
+      <Value ColumnRef="parent">
+        <SimpleValue>38</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeSymbole">
+        <SimpleValue>G.C.MGLEE-.....</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeHierarchique">
+        <SimpleValue>2.X.2.1.1.2.5.1</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>61</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>RELVT ACOUSTIC</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>RELEVEMENT ACOUSTIQUE</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>ACOUSTIC</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>ACOUSTIC</SimpleValue>
+      </Value>
+      <Value ColumnRef="parent">
+        <SimpleValue>38</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeSymbole">
+        <SimpleValue>G.C.MGLEA-.....</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeHierarchique">
+        <SimpleValue>2.X.2.1.1.2.5.2</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>62</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>RELVT TORPILLE</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>RELEVEMENT TORPILLE</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>TORPEDO</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>TORPEDO</SimpleValue>
+      </Value>
+      <Value ColumnRef="parent">
+        <SimpleValue>38</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeSymbole">
+        <SimpleValue>G.C.MGLET-.....</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeHierarchique">
+        <SimpleValue>2.X.2.1.1.2.5.3</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>63</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>INTERC° ELEC-OPT</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>RELEVEMENT D'INTERCEPTION ELECTRO-OPTICALE</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>EOINTCPT</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>ELECTRO-OPTICAL INTERCEPT</SimpleValue>
+      </Value>
+      <Value ColumnRef="parent">
+        <SimpleValue>38</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeSymbole">
+        <SimpleValue>G.C.MGLEO-.....</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeHierarchique">
+        <SimpleValue>2.X.2.1.1.2.5.4</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>64</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>FEBA REELLE</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>TRACE REEL DE LA LIGNE AVANT DE LA ZONE DES COMBATS</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>ATOTFEBA</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>ACTUAL TRACE OF THE FEBA</SimpleValue>
+      </Value>
+      <Value ColumnRef="parent">
+        <SimpleValue>-6</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeSymbole">
+        <SimpleValue>G.C.MMDFA-.....</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeHierarchique">
+        <SimpleValue>2.X.2.1.4.2.1.1</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>65</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>FEBA PROPOSEE</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>LIGNE AVANT DE LA ZONE DES COMBATS PROPOSE OU SUR ORDRE</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>PROP FEBA</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>PROPOSED OR ON ORDER TRACE OF THE FEBA</SimpleValue>
+      </Value>
+      <Value ColumnRef="parent">
+        <SimpleValue>-6</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeSymbole">
+        <SimpleValue>G.C.MMDFP-.....</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeHierarchique">
+        <SimpleValue>2.X.2.1.4.2.1.2</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>85</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>FZO ENI CONNU</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>FUSEAU ENNEMI CONNU</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>ENY KNWN</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>ENEMY KNOWN</SimpleValue>
+      </Value>
+      <Value ColumnRef="parent">
+        <SimpleValue>-8</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeSymbole">
+        <SimpleValue>GHC.MGLBGK.....</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeHierarchique">
+        <SimpleValue>2.X.2.1.1.2.1.1.3</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>86</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>FZO ENI ESTIME</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>FUSEAU ENNEMI SUSPECT OU CIBLE</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>ESOT</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>ENEMY SUSPECTED OR TEMPLATED</SimpleValue>
+      </Value>
+      <Value ColumnRef="parent">
+        <SimpleValue>-8</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeSymbole">
+        <SimpleValue>GHC.MGLBGS.....</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeHierarchique">
+        <SimpleValue>2.X.2.1.1.2.1.1.4</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>89</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>MSR</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>ROUTE PRINCIPALE LOGISTIQUE</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>MSR</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>MAIN SUPPLY ROUTE</SimpleValue>
+      </Value>
+      <Value ColumnRef="parent">
+        <SimpleValue>-2</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeSymbole">
+        <SimpleValue>G.C.SLRM--.....</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeHierarchique">
+        <SimpleValue>2.X.2.4.2.2.1</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>90</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>ASR</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>ROUTE SECONDAIRE LOGISTIQUE</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>ASR</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>ALTERNATE SUPPLY ROUTE</SimpleValue>
+      </Value>
+      <Value ColumnRef="parent">
+        <SimpleValue>-2</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeSymbole">
+        <SimpleValue>G.C.SLRA--.....</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeHierarchique">
+        <SimpleValue>2.X.2.4.2.2.2</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>91</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>AXE SIMPLE SENS</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>ROUTE A CIRCULATION A SENS UNIQUE</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>ONE-WAY TRAFFIC</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>ONE-WAY TRAFFIC</SimpleValue>
+      </Value>
+      <Value ColumnRef="parent">
+        <SimpleValue>-2</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeSymbole">
+        <SimpleValue>G.C.SLRO--.....</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeHierarchique">
+        <SimpleValue>2.X.2.4.2.2.3</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>92</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>AXE SENS ALTERNE</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>ROUTE A CIRCULATION ALTERNEE</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>ALT TRAFFIC</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>ALTERNATING TRAFFIC</SimpleValue>
+      </Value>
+      <Value ColumnRef="parent">
+        <SimpleValue>-2</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeSymbole">
+        <SimpleValue>G.C.SLRT--.....</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeHierarchique">
+        <SimpleValue>2.X.2.4.2.2.4</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>93</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>AXE DOUBLE SENS</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>ROUTE A CIRCULATION A DOUBLE SENS</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>TWOWAY TRAFFIC</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>TWO-WAY TRAFFIC</SimpleValue>
+      </Value>
+      <Value ColumnRef="parent">
+        <SimpleValue>-2</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeSymbole">
+        <SimpleValue>G.C.SLRW--.....</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeHierarchique">
+        <SimpleValue>2.X.2.4.2.2.5</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>94</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>TIR ART LINEAIRE</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>TIR D'ARTILLERIE LINEAIRE</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>LINTGT</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>LINEAR TARGET</SimpleValue>
+      </Value>
+      <Value ColumnRef="parent">
+        <SimpleValue>-1</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeSymbole">
+        <SimpleValue>G.C.FLT---.....</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeHierarchique">
+        <SimpleValue>2.X.2.3.2.3</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>95</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>T.ARRET LINEAIRE</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>TIR D'ARRET LINEAIRE</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>FNPRFR</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>FINAL PROTECTIVE FIRE</SimpleValue>
+      </Value>
+      <Value ColumnRef="parent">
+        <SimpleValue>-1</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeSymbole">
+        <SimpleValue>G.C.FLTP--.....</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeHierarchique">
+        <SimpleValue>2.X.2.3.2.3.1</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>97</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>FRAVDIR</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>AVIATION AMIE (DIRECTION ATTAQUE)</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>FRAVDIR</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>FRIENDLY AVIATION (ATTAK DIRECTION)</SimpleValue>
+      </Value>
+      <Value ColumnRef="parent">
+        <SimpleValue>-7</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeSymbole">
+        <SimpleValue>GFC.MOLDF-.....</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeHierarchique">
+        <SimpleValue>2.X.2.1.5.2.2.1</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>98</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>FR AVIAT</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>AVIATION AMIE</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>FR AVIAT</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>FRIENDLY AVIATION</SimpleValue>
+      </Value>
+      <Value ColumnRef="parent">
+        <SimpleValue>-7</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeSymbole">
+        <SimpleValue>GFC.MOLDY-.....</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeHierarchique">
+        <SimpleValue>2.X.2.1.5.2.2.2</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>99</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>EK/CA</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>AVIATION CONFIRMEE</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>EK/CA</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>CONFIRMED AVIATION</SimpleValue>
+      </Value>
+      <Value ColumnRef="parent">
+        <SimpleValue>-7</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeSymbole">
+        <SimpleValue>GHC.MOLDE-.....</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeHierarchique">
+        <SimpleValue>2.X.2.1.5.2.2.3</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>100</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>TEA</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>AVIATION ENNEMIE CIBLE</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>TEA</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>TEMPLATED ENEMY AVIATION</SimpleValue>
+      </Value>
+      <Value ColumnRef="parent">
+        <SimpleValue>-7</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeSymbole">
+        <SimpleValue>GHC.MOLDT-.....</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeHierarchique">
+        <SimpleValue>2.X.2.1.5.2.2.4</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>101</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>EC/KG</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>TERRAIN CONNU</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>EC/KG</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>KNOWN GROUND</SimpleValue>
+      </Value>
+      <Value ColumnRef="parent">
+        <SimpleValue>-7</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeSymbole">
+        <SimpleValue>GHC.MOLDG-.....</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeHierarchique">
+        <SimpleValue>2.X.2.1.5.2.2.5</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>102</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>TEG</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>TERRAIN CONNU CIBLE</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>TEG</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>TEMPLATED ENEMY GROUND</SimpleValue>
+      </Value>
+      <Value ColumnRef="parent">
+        <SimpleValue>-7</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeSymbole">
+        <SimpleValue>GHC.MOLDR-.....</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeHierarchique">
+        <SimpleValue>2.X.2.1.5.2.2.6</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>103</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>FDOSA</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>DIRECTION D'UN SOUTIEN ARME AMI</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>FDOSA</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>FRIENDLY DIRECTION OF SUPPORTING ATTACK</SimpleValue>
+      </Value>
+      <Value ColumnRef="parent">
+        <SimpleValue>-7</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeSymbole">
+        <SimpleValue>GFC.MOLDS-.....</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeHierarchique">
+        <SimpleValue>2.X.2.1.5.2.2.7</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>104</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>FDOMA</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>DIRECTION DE L'ATTAQUE PRINCIPALE AMI</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>FDOMA</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>FRIENDLY DIRECTION OF MAIN ATTACK</SimpleValue>
+      </Value>
+      <Value ColumnRef="parent">
+        <SimpleValue>-7</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeSymbole">
+        <SimpleValue>GFC.MOLDM-.....</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeHierarchique">
+        <SimpleValue>2.X.2.1.5.2.2.8</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>105</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>PF3O</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>VIOLATION LIGNE AMI PLANIFIE OU SUR ORDRE</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>PF3O</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>OFFENSE FRIENDLY PLANNED OR ON ORDER</SimpleValue>
+      </Value>
+      <Value ColumnRef="parent">
+        <SimpleValue>-7</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeSymbole">
+        <SimpleValue>GFC.MOLDO-.....</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeHierarchique">
+        <SimpleValue>2.X.2.1.5.2.2.9</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>106</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>FLET</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>LIGNE AVANT DES TROUPES ENNEMIES</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>FLET</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>FORWARD LINE OF ENNEMY TROOPS</SimpleValue>
+      </Value>
+      <Value ColumnRef="parent">
+        <SimpleValue>18</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeSymbole">
+        <SimpleValue>GHC.MGLF--.....</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeHierarchique">
+        <SimpleValue>2.X.2.1.1.2.2</SimpleValue>
+      </Value>
+    </Row>
+  </SimpleCodeList>
+</gc:CodeList>

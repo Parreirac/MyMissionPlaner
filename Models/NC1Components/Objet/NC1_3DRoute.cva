@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<cva:ContextValueAssociation xmlns:cva="http://docs.oasis-open.org/codelist/ns/ContextValueAssociation/1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="urn:fra:nc1:objet:3droute" queryBinding="xslt2" xmlns:nc13droute="urn:fra:nc1:objet:3droute">
+  <!-- NC1 V.9.0.0 -->
+  <ValueLists>
+    <ValueList xml:id="nc1objcom-ActivationStatusCode" uri="../Dictionnaires/ActivationStatusCode.gc" />
+    <ValueList xml:id="nc1objcom-IsFullCode" uri="../Dictionnaires/IsFullCode.gc" />
+    <ValueList xml:id="nc13droute-TimingInstructionsTypeCode" uri="../Dictionnaires/TimingInstructionsTypeCode.gc" />
+    <ValueList xml:id="nc1common-LevelReferenceCode" uri="../Dictionnaires/LevelReferenceCode.gc" />
+    <ValueList xml:id="nc13droute-TransitModeCode" uri="../Dictionnaires/TransitModeCode.gc" />
+  </ValueLists>
+  <Contexts>
+    <Context address="/nc13droute:NC1_3DRoute/@activationStatus" values="nc1objcom-ActivationStatusCode" />
+    <Context address="/nc13droute:NC1_3DRoute/@isFull" values="nc1objcom-IsFullCode" />
+    <Context address="/nc13droute:NC1_3DRoute/location/startPoint/timingInstructions/type" values="nc13droute-TimingInstructionsTypeCode" />
+    <Context address="/nc13droute:NC1_3DRoute/location/segment/endPoint/timingInstructions/type" values="nc13droute-TimingInstructionsTypeCode" />
+    <Context address="/nc13droute:NC1_3DRoute/location/segment/altitudeReference" values="nc1common-LevelReferenceCode" />
+    <Context address="/nc13droute:NC1_3DRoute/location/segment/transitMode" values="nc13droute-TransitModeCode" />
+  </Contexts>
+</cva:ContextValueAssociation>

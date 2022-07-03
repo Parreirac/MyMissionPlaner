@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<cva:ContextValueAssociation xmlns:cva="http://docs.oasis-open.org/codelist/ns/ContextValueAssociation/1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="urn:fra:nc1:objet:freeshape" queryBinding="xslt2" xmlns:nc1freeshape="urn:fra:nc1:objet:freeshape">
+  <!-- NC1 V.9.0.0 -->
+  <ValueLists>
+    <ValueList xml:id="nc1objcom-ActivationStatusCode" uri="../Dictionnaires/ActivationStatusCode.gc" />
+    <ValueList xml:id="nc1objcom-IsFullCode" uri="../Dictionnaires/IsFullCode.gc" />
+    <ValueList xml:id="nc1sicsdicos-L150_7Code" uri="../Dictionnaires/L150_7Code.gc" />
+    <ValueList xml:id="nc1sicsdicos-L150_2Code" uri="../Dictionnaires/L150_2Code.gc" />
+    <ValueList xml:id="nc1sicsdicos-L150_3Code" uri="../Dictionnaires/L150_3Code.gc" />
+    <ValueList xml:id="nc1sicsdicos-L150_5Code" uri="../Dictionnaires/L150_5Code.gc" />
+    <ValueList xml:id="nc1sicsdicos-L150_4Code" uri="../Dictionnaires/L150_4Code.gc" />
+    <ValueList xml:id="nc1sicsdicos-L150_6Code" uri="../Dictionnaires/L150_6Code.gc" />
+  </ValueLists>
+  <Contexts>
+    <Context address="/nc1freeshape:NC1_FreeShape/@activationStatus" values="nc1objcom-ActivationStatusCode" />
+    <Context address="/nc1freeshape:NC1_FreeShape/@isFull" values="nc1objcom-IsFullCode" />
+    <Context address="/nc1freeshape:NC1_FreeShape/tacticalData/style/point/type" values="nc1sicsdicos-L150_7Code" />
+    <Context address="/nc1freeshape:NC1_FreeShape/tacticalData/style/point/color" values="nc1sicsdicos-L150_2Code" />
+    <Context address="/nc1freeshape:NC1_FreeShape/tacticalData/style/line/type" values="nc1sicsdicos-L150_3Code" />
+    <Context address="/nc1freeshape:NC1_FreeShape/tacticalData/style/line/arrowType" values="nc1sicsdicos-L150_5Code" />
+    <Context address="/nc1freeshape:NC1_FreeShape/tacticalData/style/line/color" values="nc1sicsdicos-L150_2Code" />
+    <Context address="/nc1freeshape:NC1_FreeShape/tacticalData/style/line/thikness" values="nc1sicsdicos-L150_4Code" />
+    <Context address="/nc1freeshape:NC1_FreeShape/tacticalData/style/area/type" values="nc1sicsdicos-L150_6Code" />
+    <Context address="/nc1freeshape:NC1_FreeShape/tacticalData/style/area/outlineType" values="nc1sicsdicos-L150_3Code" />
+    <Context address="/nc1freeshape:NC1_FreeShape/tacticalData/style/area/outlineColor" values="nc1sicsdicos-L150_2Code" />
+    <Context address="/nc1freeshape:NC1_FreeShape/tacticalData/style/area/fillColor" values="nc1sicsdicos-L150_2Code" />
+  </Contexts>
+</cva:ContextValueAssociation>

@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema targetNamespace="urn:fra:nc1:service:reqinfo" xmlns:nc1ihm="urn:fra:nc1:IHM" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:nc1techreqinfo="urn:fra:nc1:service:reqinfo" xmlns:nc1common="urn:fra:nc1:common:attribute" xmlns:nc1msgcom="urn:fra:nc1:common:message">
+  <!-- NC1 V.9.0.0 -->
+  <xs:import namespace="urn:fra:nc1:common:attribute" schemaLocation="../Commun/Common.xsd" />
+  <xs:import namespace="urn:fra:nc1:common:message" schemaLocation="../Commun/Message.xsd" />
+  <xs:element name="NC1_TechReqInfo">
+    <xs:annotation>
+      <xs:documentation>Le message NC1_TechReqInfo est utilisé pour demander l'envoi un objet NC1.</xs:documentation>
+      <xs:documentation xml:lang="en">The NC1_TechReqInfo message is used to ask for the sending an object NC1.</xs:documentation>
+      <xs:appinfo>
+        <nc1:type xmlns:nc1="urn:fra:nc1">Message de service</nc1:type>
+        <nc1ihm:Nom>Demande d’envoi d’un objet NC1</nc1ihm:Nom>
+        <nc1ihm:Nom xml:lang="en">Required information</nc1ihm:Nom>
+        <nc1:MessH xmlns:nc1="urn:fra:nc1">N/A</nc1:MessH>
+        <nc1:MessADatP3 xmlns:nc1="urn:fra:nc1">N/A</nc1:MessADatP3>
+        <nc1:LastNC1ModifyVersion xmlns:nc1="urn:fra:nc1">9.0.0</nc1:LastNC1ModifyVersion>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:complexContent>
+        <xs:extension base="nc1msgcom:BaseMessageType">
+          <xs:attribute name="objectId" use="required" type="nc1common:Nc1ObjectIdType">
+            <xs:annotation>
+              <xs:documentation>Identifiant unique de l’objet NC1 à envoyer.</xs:documentation>
+              <xs:documentation xml:lang="en">NC1 identifier of the object to send.</xs:documentation>
+              <xs:appinfo>
+                <nc1ihm:Nom>Identifiant</nc1ihm:Nom>
+                <nc1ihm:Nom xml:lang="en">id</nc1ihm:Nom>
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:attribute>
+          <xs:attribute name="objectInstance" type="nc1common:ShortTextObjectType">
+            <xs:annotation>
+              <xs:documentation>Instance de l'objet NC1 à envoyer.</xs:documentation>
+              <xs:documentation xml:lang="en">NC1 context of the object to send.</xs:documentation>
+              <xs:appinfo>
+                <nc1ihm:Nom>Instance</nc1ihm:Nom>
+                <nc1ihm:Nom xml:lang="en">Context</nc1ihm:Nom>
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:attribute>
+        </xs:extension>
+      </xs:complexContent>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

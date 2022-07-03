@@ -1,0 +1,332 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<gc:CodeList xmlns:nc1dico="urn:fra:nc1:dictionnaires" xmlns:gc="http://docs.oasis-open.org/codelist/ns/genericode/1.0/">
+  <Annotation>
+    <Description>
+      <nc1dico:description>DESCRIPTION DU ROLE D'UN POSTE DE COMMANDEMENT (PC).
+DICO STAT 285</nc1dico:description>
+      <nc1dico:description xml:lang="en">Description of the role of a Command Post (CP). (STAT dictionary 285)</nc1dico:description>
+    </Description>
+    <AppInfo>
+      <nc1dico:source>SFTT 3.4.8</nc1dico:source>
+      <nc1dico:derogation>ROLE D'UN PC (POSTE DE COMMANDEMENT)</nc1dico:derogation>
+    </AppInfo>
+  </Annotation>
+  <Identification>
+    <ShortName>L110_30Code</ShortName>
+    <Version>9.0.0</Version>
+    <CanonicalUri>urn:fra:nc1:common:sicsdicos:L110_30Code</CanonicalUri>
+    <CanonicalVersionUri>urn:fra:nc1:common:sicsdicos:L110_30Code:9.0.0</CanonicalVersionUri>
+  </Identification>
+  <ColumnSet DatatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes">
+    <Column Id="code" Use="required">
+      <ShortName>Code</ShortName>
+      <Data Type="int" />
+    </Column>
+    <Column Id="short" Use="required">
+      <ShortName>Short</ShortName>
+      <Data Type="string" />
+    </Column>
+    <Column Id="long" Use="optional">
+      <ShortName>Long</ShortName>
+      <Data Type="string" />
+    </Column>
+    <Column Id="short-en" Use="optional">
+      <ShortName>Short anglais</ShortName>
+      <Data Type="string" />
+    </Column>
+    <Column Id="long-en" Use="optional">
+      <ShortName>Long anglais</ShortName>
+      <Data Type="string" />
+    </Column>
+    <Column Id="parent" Use="optional">
+      <ShortName>Parent</ShortName>
+      <Data Type="int" />
+    </Column>
+    <Column Id="codeSymbole" Use="optional">
+      <ShortName>Code Symbole</ShortName>
+      <Data Type="string" />
+    </Column>
+    <Column Id="codeHierarchique" Use="optional">
+      <ShortName>Code Hierarchique</ShortName>
+      <Data Type="string" />
+    </Column>
+    <Key Id="codeKey">
+      <ShortName>CodeKey</ShortName>
+      <ColumnRef Ref="code" />
+    </Key>
+  </ColumnSet>
+  <SimpleCodeList>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>0</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>-</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>NO STATEMENT</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>-</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>NO STATEMENT</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>1</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>NKN</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>INCONNU</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>NKN</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>NOT KNOWN</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>2</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>PC AVANCE</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>PC AVANCE</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>FCP</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>FORWARD COMMAND POST</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>3</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>QG AVANCE</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>QG AVANCE</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>FRWDHQ</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>FORWARD HEADQUARTERS</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>4</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>PC LOG</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>PC LOGISTIQUE</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>LOGCP</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>LOGISTIC COMMAND POST</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>5</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>PCP</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>PC PRINCIPAL</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>MAINCP</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>MAIN COMMAND POST</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>6</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>PC MOBILE</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>PC MOBILE</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>MOBLCP</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>MOBILE COMMAND POST</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>7</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>QG NATIONAL</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>QG NATIONAL</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>NATLHQ</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>NATIONAL HEADQUARTERS</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>8</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>PC ARRIERE</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>PC ARRIERE</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>REARCP</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>REAR COMMAND POST</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>9</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>PC HARPON</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>PC HARPON</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>HARPOON CP</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>DEPLOYMENT COMMAND POST</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>10</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>PC STATIQUE</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>PC STATIQUE</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>STATCP</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>STATIC COMMAND POST</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>11</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>PCMR</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>PC MOYENS RESERVES</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>ALTERN CP</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>STEP UP/ALTERNATE COMMAND POST</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>12</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>PC TAC</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>PC TACTIQUE</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>TACTCP</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>TACTICAL COMMAND POST</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>13</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>QG TAC</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>QG TACTIQUE</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>TACTHQ</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>TACTICAL HEADQUARTERS</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>14</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>QG RECHANGE</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>QG DE RECHANGE</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>AWHQ</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>ALTERNATE WAR HEADQUARTERS</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>15</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>ILLEGAL</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>ILLEGAL</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>ILLEGAL</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>ILLEGAL</SimpleValue>
+      </Value>
+    </Row>
+  </SimpleCodeList>
+</gc:CodeList>

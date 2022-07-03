@@ -1,0 +1,1028 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<gc:CodeList xmlns:nc1dico="urn:fra:nc1:dictionnaires" xmlns:gc="http://docs.oasis-open.org/codelist/ns/genericode/1.0/">
+  <Annotation>
+    <Description>
+      <nc1dico:description>DECRIT LA NATURE D'UN OBSTACLE OU D'UN OUVRAGE EN REFERENCE A LA LIST_E DU STANAG 2430 (AENGRP-02(B) ). LE BIGRAMME ENTRE EN LIGNE DE COMPTE DANS LE NOMMAGE D'UN OBSTACLE.</nc1dico:description>
+      <nc1dico:description xml:lang="en">describe obstacle type or facilitiy type refering the STANAG 2430 (AENGRP-02(B) ) list. Bigram is used for the obsactle naming..</nc1dico:description>
+    </Description>
+    <AppInfo>
+      <nc1dico:source>SFTT 3.4.8</nc1dico:source>
+      <nc1dico:derogation>NATURE D'OBSTACLE/OUVRAGE (LIST E)</nc1dico:derogation>
+    </AppInfo>
+  </Annotation>
+  <Identification>
+    <ShortName>L110_40Code</ShortName>
+    <Version>9.0.0</Version>
+    <CanonicalUri>urn:fra:nc1:common:sicsdicos:L110_40Code</CanonicalUri>
+    <CanonicalVersionUri>urn:fra:nc1:common:sicsdicos:L110_40Code:9.0.0</CanonicalVersionUri>
+  </Identification>
+  <ColumnSet DatatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes">
+    <Column Id="code" Use="required">
+      <ShortName>Code</ShortName>
+      <Data Type="int" />
+    </Column>
+    <Column Id="short" Use="required">
+      <ShortName>Short</ShortName>
+      <Data Type="string" />
+    </Column>
+    <Column Id="long" Use="optional">
+      <ShortName>Long</ShortName>
+      <Data Type="string" />
+    </Column>
+    <Column Id="short-en" Use="optional">
+      <ShortName>Short anglais</ShortName>
+      <Data Type="string" />
+    </Column>
+    <Column Id="long-en" Use="optional">
+      <ShortName>Long anglais</ShortName>
+      <Data Type="string" />
+    </Column>
+    <Column Id="parent" Use="optional">
+      <ShortName>Parent</ShortName>
+      <Data Type="int" />
+    </Column>
+    <Column Id="codeSymbole" Use="optional">
+      <ShortName>Code Symbole</ShortName>
+      <Data Type="string" />
+    </Column>
+    <Column Id="codeHierarchique" Use="optional">
+      <ShortName>Code Hierarchique</ShortName>
+      <Data Type="string" />
+    </Column>
+    <Key Id="codeKey">
+      <ShortName>CodeKey</ShortName>
+      <ColumnRef Ref="code" />
+    </Key>
+  </ColumnSet>
+  <SimpleCodeList>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>0</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>-</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>NO STATEMENT</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>-</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>NO STATEMENT</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>1</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>BE</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>SAC A TERRE</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>BE</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>BERM</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>2</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>MF</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>CHAMP DE MINES</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>MF</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>MINEFIELD</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>3</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>WO</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>OBSTACLE A BASE DE FIL DE FER BARBELE</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>WO</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>BARBED WIRE OBSTACLE</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>4</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>TD</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>FOSSE ANTICHAR</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>TD</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>ANTITANK DITCH</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>5</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>AB</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>ABATTIS</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>AB</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>ABATIS</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>6</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>BP</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>BARRIERE AVANT OBSTACLE</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>BP</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>BEAM POST OBSTACLE</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>7</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>FB</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>EBOULEMENT</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>FB</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>FALLING BLOCK OBSTACLE</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>8</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>BT</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>PIEGES</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>BT</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>BOOBY TRAPS</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>9</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>DT</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>DENTS DE DRAGON</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>DT</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>DRAGON TEETH</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>10</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>CR</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>ENTONNOIR</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>CR</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>ROAD CRATER</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>11</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>DM</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>DEMOLITION</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>DM</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>DEMOLITION</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>12</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>RI</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>COURS D'EAU NAVIGABLE</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>RI</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>WATERWAY</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>13</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>FL</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>INNONDATIONS</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>FL</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>FLOODING</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>14</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>LS</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>GLISSEMENT TERRAIN</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>LS</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>LANDSLIDE</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>15</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>UX</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>UXO</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>UX</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>UXO</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>16</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>DG</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>TROU SEC</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>DG</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>DRY GAP</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>17</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>OT</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>AUTRES (VOIR REMARQUES)</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>OT</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>OTHER (SEE REMARKS)</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>18</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>AN</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>ANTENNES</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>AN</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>ANTENNAS</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>19</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>AT</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>ANTI CHAR</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>AT</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>ANTI TANK</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>20</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>AP</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>ANTI-PERSONNEL</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>AP</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>ANTI-PERSONNEL</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>21</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>AF</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>TABLIER</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>AF</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>APRON FENCES</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>22</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>BD</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>DEMOLITION D'UN PONT</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>BD</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>BRIDGE DEMOLITION</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>23</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>SB</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>BALLON RELIE A UN CABLE</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>SB</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>CABLE STAYED BALLOONS</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>24</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>CH</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>CHIMIQUE</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>CH</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>CHEMICAL</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>25</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>CN</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>CONTAMINATION NUCLEAIRE</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>CN</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>CONTAMINATION NUCLEAR</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>26</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>CB</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>CONTAMINATION BIOLOGIQUE</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>CB</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>CONTAMINATION BIOLOGICAL</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>27</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>CC</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>CONTAMINATION CHIMIQUE</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>CC</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>CONTAMINATION CHEMICAL</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>28</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>RA</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>RAILS INCURVES</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>RA</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>CURVED RAILS</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>29</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>FE</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>BARRIERE</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>FE</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>FENCE</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>30</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>FD</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>DEMOLITION DE L'ACCES AU BAC</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>FD</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>FERRY ACCESS DEMOLITION</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>31</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>FN</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>FILETS FLOTTANTS</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>FN</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>FLOATING NETS</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>32</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>FO</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>OBJETS FLOTTANTS</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>FO</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>FLOATING OBJECTS</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>33</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>HT</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>CABLES A HAUTE TENSION</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>HT</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>HIGH TENSION CABLES</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>34</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>IG</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>TERRAINS INNONDES</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>IG</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>INUNDATED GROUNDS</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>35</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>KR</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>PIEUX</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>KR</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>KNIFE RESTS</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>36</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>MA</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>MAT</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>MA</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>MAST</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>37</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>MB</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>BARRIERE MULTI USAGE</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>MB</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>MULTI-PURPOSE BARRIER</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>38</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>PL</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>LIGNE ELECTRIQUE</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>PL</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>POWER LINE</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>39</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>RR</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>DEMOLITION D'UNE VOIE FERREE</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>RR</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>RAILROAD DEMOLITION</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>40</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>RD</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>DEMOLITION D'UNE ROUTE</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>RD</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>ROAD DEMOLITION</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>41</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>SM</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>FUMEE</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>SM</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>SMOKE</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>42</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>TL</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>LIGNE TELEPHONIQUE</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>TL</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>TELEPHONE LINE</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>43</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>TH</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>TETRAEDRE</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>TH</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>TETRAHEDRONS</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>44</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>TO</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>TOUR</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>TO</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>TOWER</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>45</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>TB</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>EXPLOITATION FORESTIERE</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>TB</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>TREE BLOWDOWN</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>46</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>TU</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>DEMOLITION D'UN TUNNEL</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>TU</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>TUNNEL DEMOLITION</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>47</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>VE</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>VEHICULE</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>VE</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>VEHICLE</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>48</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>DU</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>FACTICE</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>DU</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>DUMMY</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>49</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>ILLEGAL</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>ILLEGAL</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>ILLEGAL</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>ILLEGAL</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>50</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>ILLEGAL</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>ILLEGAL</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>ILLEGAL</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>ILLEGAL</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>51</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>ILLEGAL</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>ILLEGAL</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>ILLEGAL</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>ILLEGAL</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>52</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>ILLEGAL</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>ILLEGAL</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>ILLEGAL</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>ILLEGAL</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>53</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>ILLEGAL</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>ILLEGAL</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>ILLEGAL</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>ILLEGAL</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>54</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>ILLEGAL</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>ILLEGAL</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>ILLEGAL</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>ILLEGAL</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>55</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>ILLEGAL</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>ILLEGAL</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>ILLEGAL</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>ILLEGAL</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>56</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>ILLEGAL</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>ILLEGAL</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>ILLEGAL</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>ILLEGAL</SimpleValue>
+      </Value>
+    </Row>
+  </SimpleCodeList>
+</gc:CodeList>

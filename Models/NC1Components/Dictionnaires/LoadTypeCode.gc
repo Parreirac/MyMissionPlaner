@@ -1,0 +1,664 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<gc:CodeList xmlns:nc1dico="urn:fra:nc1:dictionnaires" xmlns:gc="http://docs.oasis-open.org/codelist/ns/genericode/1.0/">
+  <Annotation>
+    <Description>
+      <nc1dico:description>Type de chargement.</nc1dico:description>
+      <nc1dico:description xml:lang="en">Load type.</nc1dico:description>
+    </Description>
+    <AppInfo>
+      <nc1dico:source>ATLAS</nc1dico:source>
+      <nc1dico:derogation></nc1dico:derogation>
+    </AppInfo>
+  </Annotation>
+  <Identification>
+    <ShortName>LoadTypeCode</ShortName>
+    <Version>9.0.0</Version>
+    <CanonicalUri>urn:fra:nc1:objet:missionASS:LoadTypeCode</CanonicalUri>
+    <CanonicalVersionUri>urn:fra:nc1:objet:missionASS:LoadTypeCode:9.0.0</CanonicalVersionUri>
+  </Identification>
+  <ColumnSet DatatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes">
+    <Column Id="code" Use="required">
+      <ShortName>Code</ShortName>
+      <Data Type="int" />
+    </Column>
+    <Column Id="short" Use="required">
+      <ShortName>Short</ShortName>
+      <Data Type="string" />
+    </Column>
+    <Column Id="long" Use="optional">
+      <ShortName>Long</ShortName>
+      <Data Type="string" />
+    </Column>
+    <Column Id="short-en" Use="optional">
+      <ShortName>Short anglais</ShortName>
+      <Data Type="string" />
+    </Column>
+    <Column Id="long-en" Use="optional">
+      <ShortName>Long anglais</ShortName>
+      <Data Type="string" />
+    </Column>
+    <Column Id="parent" Use="optional">
+      <ShortName>Parent</ShortName>
+      <Data Type="int" />
+    </Column>
+    <Column Id="codeSymbole" Use="optional">
+      <ShortName>Code Symbole</ShortName>
+      <Data Type="string" />
+    </Column>
+    <Column Id="codeHierarchique" Use="optional">
+      <ShortName>Code Hierarchique</ShortName>
+      <Data Type="string" />
+    </Column>
+    <Key Id="codeKey">
+      <ShortName>CodeKey</ShortName>
+      <ColumnRef Ref="code" />
+    </Key>
+  </ColumnSet>
+  <SimpleCodeList>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>1</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>OE</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>Explosif</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>2</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>OFUM</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>Fumigène Ph</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>3</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>FUM HC</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>Fumigène HC</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>4</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>OECL</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>Eclairant</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>5</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>OX</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>Exercice</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>6</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>OGRE</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>Grenades</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>7</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>ANTI CHAR</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>Anti-char</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>8</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>CPH</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>Obus copper head</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>9</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>AML</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>Obus à mines AC DL</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>10</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>AMS</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>Obus à mines AC DC</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>11</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>APL</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>Obus à mines AP DL</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>12</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>APS</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>Obus à mines AP DC</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>13</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>JED</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>Roquettes à grenades AP/AC</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>14</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>JMT</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>Roquettes à mines</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>15</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>JTA</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>Roquettes TGW</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>16</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>JEE</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>Missile semi-balistique AM/AP</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>17</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>JEH</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>Roquette d'exercice à portée réduite US</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>18</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>JEM</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>Roquette d'exercice à portée réduite GE</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>19</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>JTB</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>Roquette à sous-munitions anti-char</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>20</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>JTC</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>Missile à sous-munitions anti-char intelligentes</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>21</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>JEL</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>Roquette à portée accrue</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>22</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>OGRE AP</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>Grenades antipersonnel</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>23</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>OECLIR</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>Eclairant IR</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>24</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>OSMC</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>Semonce</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>25</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>ROQE</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>Roquette Explosive</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>26</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>ROQX</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>Roquette Exercice</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>27</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>HDS</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>HDS</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>28</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>INT</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>Projectile inerte</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>29</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>JEG</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>JEG</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>30</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>JEJ</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>JEJ</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>31</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>JEK</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>Roquette d'exercice à portée réduite UK</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>32</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>JEN</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>JEN</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>33</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>JEP</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>JEP</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>34</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>JEQ</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>Indéfini (JEQ)</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>35</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>JER</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>Indéfini (JER)</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>36</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>JML</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>JML</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>37</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>JMU</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>Indéfini (JMU)</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>38</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>JNB</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>Indéfini (JNB)</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>39</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>JSA</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>JSA</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>40</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>JSB</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>JSB</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>41</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>JSL</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>JSL</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>42</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>JSR</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>JSR</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>43</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>JST</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>JST</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>44</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>JTD</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>JTD</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>45</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>JTE</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>JTE</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>46</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>JTF</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>JTF</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>47</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>JTG</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>JTG</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>48</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>JTH</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>JTH</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>49</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>JTK</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>JTK</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>50</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>JTL</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>Indéfini (JTL)</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>51</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>JTM</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>Indéfini (JTM)</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>52</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>JTW</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>JTW</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>53</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>MKR</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>MKR</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>54</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>RP</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>RP</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>55</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>SIR</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>Fumigène IR</SimpleValue>
+      </Value>
+    </Row>
+  </SimpleCodeList>
+</gc:CodeList>

@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<cva:ContextValueAssociation xmlns:cva="http://docs.oasis-open.org/codelist/ns/ContextValueAssociation/1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="urn:fra:nc1:message:annultirinterdit" queryBinding="xslt2" xmlns:nc1annultirinterdit="urn:fra:nc1:message:annultirinterdit">
+  <!-- NC1 V.9.0.0 -->
+  <ValueLists>
+    <ValueList xml:id="nc1msgcom-ClassificationCode" uri="../Dictionnaires/ClassificationCode.gc" />
+    <ValueList xml:id="nc1msgcom-UrgencyLevelCode" uri="../Dictionnaires/UrgencyLevelCode.gc" />
+    <ValueList xml:id="nc1common-LevelReferenceCode" uri="../Dictionnaires/LevelReferenceCode.gc" />
+    <ValueList xml:id="nc1location-AlignmentCode" uri="../Dictionnaires/AlignmentCode.gc" />
+  </ValueLists>
+  <Contexts>
+    <Context address="/nc1annultirinterdit:NC1_AnnulerTirInterdit/@classification" values="nc1msgcom-ClassificationCode" />
+    <Context address="/nc1annultirinterdit:NC1_AnnulerTirInterdit/@urgencyLevel" values="nc1msgcom-UrgencyLevelCode" />
+    <Context address="/nc1annultirinterdit:NC1_AnnulerTirInterdit/zone/volume/geometricalShape/airtrack/segment/minLevelReference" values="nc1common-LevelReferenceCode" />
+    <Context address="/nc1annultirinterdit:NC1_AnnulerTirInterdit/zone/volume/geometricalShape/airtrack/segment/maxLevelReference" values="nc1common-LevelReferenceCode" />
+    <Context address="/nc1annultirinterdit:NC1_AnnulerTirInterdit/zone/volume/geometricalShape/aorbit/alignment" values="nc1location-AlignmentCode" />
+    <Context address="/nc1annultirinterdit:NC1_AnnulerTirInterdit/zone/volume/levels/minLevelReference" values="nc1common-LevelReferenceCode" />
+    <Context address="/nc1annultirinterdit:NC1_AnnulerTirInterdit/zone/volume/levels/maxLevelReference" values="nc1common-LevelReferenceCode" />
+  </Contexts>
+</cva:ContextValueAssociation>

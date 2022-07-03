@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<cva:ContextValueAssociation xmlns:cva="http://docs.oasis-open.org/codelist/ns/ContextValueAssociation/1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="urn:fra:nc1:message:matdem" queryBinding="xslt2" xmlns:nc1matdem="urn:fra:nc1:message:matdem">
+  <!-- NC1 V.9.0.0 -->
+  <ValueLists>
+    <ValueList xml:id="nc1msgcom-ClassificationCode" uri="../Dictionnaires/ClassificationCode.gc" />
+    <ValueList xml:id="nc1msgcom-UrgencyLevelCode" uri="../Dictionnaires/UrgencyLevelCode.gc" />
+    <ValueList xml:id="nc1matdem-CodedPriorityCode" uri="../Dictionnaires/CodedPriorityCode.gc" />
+    <ValueList xml:id="nc1matdem-DeliveryMethodCode" uri="../Dictionnaires/DeliveryMethodCode.gc" />
+    <ValueList xml:id="nc1objcom-ActivationStatusCode" uri="../Dictionnaires/ActivationStatusCode.gc" />
+    <ValueList xml:id="nc1objcom-IsFullCode" uri="../Dictionnaires/IsFullCode.gc" />
+    <ValueList xml:id="nc1tacpoint-TacPointFrSpecificCode" uri="../Dictionnaires/TacPointFrSpecificCode.gc" />
+    <ValueList xml:id="nc1sicsdicos-L117_5Code" uri="../Dictionnaires/L117_5Code.gc" />
+  </ValueLists>
+  <Contexts>
+    <Context address="/nc1matdem:NC1_MatDem/@classification" values="nc1msgcom-ClassificationCode" />
+    <Context address="/nc1matdem:NC1_MatDem/@urgencyLevel" values="nc1msgcom-UrgencyLevelCode" />
+    <Context address="/nc1matdem:NC1_MatDem/requestedItem/deliveryCriteria/priorityCode" values="nc1matdem-CodedPriorityCode" />
+    <Context address="/nc1matdem:NC1_MatDem/requestedItem/deliveryCriteria/methodOfDelivery" values="nc1matdem-DeliveryMethodCode" />
+    <Context address="/nc1matdem:NC1_MatDem/requestedItem/deliveryCriteria/location/@activationStatus" values="nc1objcom-ActivationStatusCode" />
+    <Context address="/nc1matdem:NC1_MatDem/requestedItem/deliveryCriteria/location/@isFull" values="nc1objcom-IsFullCode" />
+    <Context address="/nc1matdem:NC1_MatDem/requestedItem/deliveryCriteria/location/tacticalData/frSpecificSymbol" values="nc1tacpoint-TacPointFrSpecificCode" />
+    <Context address="/nc1matdem:NC1_MatDem/requestedItem/deliveryCriteria/location/location/quality" values="nc1sicsdicos-L117_5Code" />
+  </Contexts>
+</cva:ContextValueAssociation>

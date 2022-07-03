@@ -1,0 +1,83 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema targetNamespace="urn:fra:nc1:message:stacmconduite" xmlns:nc1ihm="urn:fra:nc1:IHM" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:nc1stacmconduite="urn:fra:nc1:message:stacmconduite" xmlns:nc1msgcom="urn:fra:nc1:common:message" xmlns:nc1acm="urn:fra:nc1:objet:acm">
+  <!-- NC1 V.9.0.0 -->
+  <xs:import namespace="urn:fra:nc1:common:message" schemaLocation="../Commun/Message.xsd" />
+  <xs:import namespace="urn:fra:nc1:objet:acm" schemaLocation="../Objet/NC1_AcmWez.xsd" />
+  <xs:element name="NC1_StAcmConduite">
+    <xs:annotation>
+      <xs:documentation>Le message NC1_StAcmActiv est utilisé pour activer des mesures de coordination 3D (ACM), qui ont été demandées  précédemment dans le cadre d’une procédure « short time ».</xs:documentation>
+      <xs:documentation xml:lang="en">"The NC1_StAcmActiv message is used to activate 3D coordination measures (ACM), which have been requested earlier through a ""short time"" procedure".</xs:documentation>
+      <xs:appinfo>
+        <nc1:type xmlns:nc1="urn:fra:nc1">Message</nc1:type>
+        <nc1ihm:Nom>Short Time ACM conduite</nc1ihm:Nom>
+        <nc1ihm:Nom xml:lang="en">Conduct Short Time ACM</nc1ihm:Nom>
+        <nc1:MessH xmlns:nc1="urn:fra:nc1">N/A</nc1:MessH>
+        <nc1:MessADatP3 xmlns:nc1="urn:fra:nc1">ACO Change</nc1:MessADatP3>
+        <nc1:LastNC1ModifyVersion xmlns:nc1="urn:fra:nc1">9.0.0</nc1:LastNC1ModifyVersion>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:complexContent>
+        <xs:extension base="nc1msgcom:BaseMessageType">
+          <xs:sequence>
+            <xs:element maxOccurs="unbounded" name="typedACMs">
+              <xs:annotation>
+                <xs:documentation>ACM(s) typé(s).</xs:documentation>
+                <xs:documentation xml:lang="en">Activated ACM(s).</xs:documentation>
+                <xs:appinfo>
+                  <nc1ihm:Nom>ACMs typés</nc1ihm:Nom>
+                  <nc1ihm:Nom xml:lang="en">Activated ACMs</nc1ihm:Nom>
+                </xs:appinfo>
+              </xs:annotation>
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="acm" type="nc1acm:AcmWezType">
+                    <xs:annotation>
+                      <xs:documentation>ACM typé demandé.</xs:documentation>
+                      <xs:documentation xml:lang="en">Requested ACM.</xs:documentation>
+                      <xs:appinfo>
+                        <nc1ihm:Nom>ACM</nc1ihm:Nom>
+                        <nc1ihm:Nom xml:lang="en">ACM</nc1ihm:Nom>
+                      </xs:appinfo>
+                    </xs:annotation>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="type" type="nc1stacmconduite:ShortTimeAcmCode">
+              <xs:annotation>
+                <xs:documentation>Type d'ACM short time.</xs:documentation>
+                <xs:documentation xml:lang="en">Type Short time ACM.</xs:documentation>
+                <xs:appinfo>
+                  <nc1ihm:Nom>Type</nc1ihm:Nom>
+                  <nc1ihm:Nom xml:lang="en">Type</nc1ihm:Nom>
+                </xs:appinfo>
+              </xs:annotation>
+            </xs:element>
+            <xs:element minOccurs="0" name="comment" type="nc1msgcom:CommentSectionType">
+              <xs:annotation>
+                <xs:documentation>Commentaire en texte libre.</xs:documentation>
+                <xs:documentation xml:lang="en">free text comment.</xs:documentation>
+                <xs:appinfo>
+                  <nc1ihm:Nom>Commentaire</nc1ihm:Nom>
+                  <nc1ihm:Nom xml:lang="en">comment</nc1ihm:Nom>
+                </xs:appinfo>
+              </xs:annotation>
+            </xs:element>
+          </xs:sequence>
+        </xs:extension>
+      </xs:complexContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:simpleType name="ShortTimeAcmCode">
+    <xs:annotation>
+      <xs:appinfo>
+        <nc1ihm:description>Dictionnaire des types d'ACM</nc1ihm:description>
+        <nc1ihm:description xml:lang="en">Dictionnary of ACM types</nc1ihm:description>
+      </xs:appinfo>
+      <xs:documentation>Dictionnaire des types d'ACM</xs:documentation>
+      <xs:documentation xml:lang="en">Dictionnary of ACM types</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:integer" />
+  </xs:simpleType>
+</xs:schema>

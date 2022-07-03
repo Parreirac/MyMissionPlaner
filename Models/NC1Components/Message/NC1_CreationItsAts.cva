@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<cva:ContextValueAssociation xmlns:cva="http://docs.oasis-open.org/codelist/ns/ContextValueAssociation/1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="urn:fra:nc1:message:creationitsats" queryBinding="xslt2" xmlns:nc1creationitsats="urn:fra:nc1:message:creationitsats">
+  <!-- NC1 V.9.0.0 -->
+  <ValueLists>
+    <ValueList xml:id="nc1msgcom-ClassificationCode" uri="../Dictionnaires/ClassificationCode.gc" />
+    <ValueList xml:id="nc1msgcom-UrgencyLevelCode" uri="../Dictionnaires/UrgencyLevelCode.gc" />
+    <ValueList xml:id="nc1objcom-ActivationStatusCode" uri="../Dictionnaires/ActivationStatusCode.gc" />
+    <ValueList xml:id="nc1objcom-IsFullCode" uri="../Dictionnaires/IsFullCode.gc" />
+    <ValueList xml:id="nc1acm-AcmStatusCode" uri="../Dictionnaires/AcmStatusCode.gc" />
+    <ValueList xml:id="nc1acm-AcmTypeCode" uri="../Dictionnaires/AcmTypeCode.gc" />
+    <ValueList xml:id="nc1acm-AcmUsageTypeCode" uri="../Dictionnaires/AcmUsageTypeCode.gc" />
+    <ValueList xml:id="nc1sicsdicos-L111_14Code" uri="../Dictionnaires/L111_14Code.gc" />
+    <ValueList xml:id="nc1common-CycleFrequencyCode" uri="../Dictionnaires/CycleFrequencyCode.gc" />
+    <ValueList xml:id="nc1acm-ControlPointTypeCode" uri="../Dictionnaires/ControlPointTypeCode.gc" />
+    <ValueList xml:id="nc1common-LevelReferenceCode" uri="../Dictionnaires/LevelReferenceCode.gc" />
+    <ValueList xml:id="nc1location-AlignmentCode" uri="../Dictionnaires/AlignmentCode.gc" />
+  </ValueLists>
+  <Contexts>
+    <Context address="/nc1creationitsats:NC1_CreationItsAts/@classification" values="nc1msgcom-ClassificationCode" />
+    <Context address="/nc1creationitsats:NC1_CreationItsAts/@urgencyLevel" values="nc1msgcom-UrgencyLevelCode" />
+    <Context address="/nc1creationitsats:NC1_CreationItsAts/createdITSorATS/createdITSorATS/@activationStatus" values="nc1objcom-ActivationStatusCode" />
+    <Context address="/nc1creationitsats:NC1_CreationItsAts/createdITSorATS/createdITSorATS/@isFull" values="nc1objcom-IsFullCode" />
+    <Context address="/nc1creationitsats:NC1_CreationItsAts/createdITSorATS/createdITSorATS/tacticalData/status" values="nc1acm-AcmStatusCode" />
+    <Context address="/nc1creationitsats:NC1_CreationItsAts/createdITSorATS/createdITSorATS/tacticalData/type" values="nc1acm-AcmTypeCode" />
+    <Context address="/nc1creationitsats:NC1_CreationItsAts/createdITSorATS/createdITSorATS/tacticalData/usageType" values="nc1acm-AcmUsageTypeCode" />
+    <Context address="/nc1creationitsats:NC1_CreationItsAts/createdITSorATS/createdITSorATS/tacticalData/activationPeriod/endDatetime/qualifier" values="nc1sicsdicos-L111_14Code" />
+    <Context address="/nc1creationitsats:NC1_CreationItsAts/createdITSorATS/createdITSorATS/tacticalData/activationPeriod/cycleFrequency" values="nc1common-CycleFrequencyCode" />
+    <Context address="/nc1creationitsats:NC1_CreationItsAts/createdITSorATS/createdITSorATS/tacticalData/controlPoint/type" values="nc1acm-ControlPointTypeCode" />
+    <Context address="/nc1creationitsats:NC1_CreationItsAts/createdITSorATS/createdITSorATS/tacticalData/controlPoint/levels/minLevelReference" values="nc1common-LevelReferenceCode" />
+    <Context address="/nc1creationitsats:NC1_CreationItsAts/createdITSorATS/createdITSorATS/tacticalData/controlPoint/levels/maxLevelReference" values="nc1common-LevelReferenceCode" />
+    <Context address="/nc1creationitsats:NC1_CreationItsAts/createdITSorATS/createdITSorATS/location/airtrack/segment/minLevelReference" values="nc1common-LevelReferenceCode" />
+    <Context address="/nc1creationitsats:NC1_CreationItsAts/createdITSorATS/createdITSorATS/location/airtrack/segment/maxLevelReference" values="nc1common-LevelReferenceCode" />
+    <Context address="/nc1creationitsats:NC1_CreationItsAts/createdITSorATS/createdITSorATS/location/aorbit/alignment" values="nc1location-AlignmentCode" />
+    <Context address="/nc1creationitsats:NC1_CreationItsAts/createdITSorATS/createdITSorATS/location/levels/minLevelReference" values="nc1common-LevelReferenceCode" />
+    <Context address="/nc1creationitsats:NC1_CreationItsAts/createdITSorATS/createdITSorATS/location/levels/maxLevelReference" values="nc1common-LevelReferenceCode" />
+  </Contexts>
+</cva:ContextValueAssociation>

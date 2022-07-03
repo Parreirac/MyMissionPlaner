@@ -1,0 +1,331 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema targetNamespace="urn:fra:nc1:objet:intelrequirement" xmlns:nc1ihm="urn:fra:nc1:IHM" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:nc1intelreq="urn:fra:nc1:objet:intelrequirement" xmlns:nc1common="urn:fra:nc1:common:attribute" xmlns:nc1location="urn:fra:nc1:common:location" xmlns:nc1objcom="urn:fra:nc1:common:object">
+  <!-- NC1 V.9.0.0 -->
+  <xs:import namespace="urn:fra:nc1:common:attribute" schemaLocation="../Commun/Common.xsd" />
+  <xs:import namespace="urn:fra:nc1:common:location" schemaLocation="../Commun/Location.xsd" />
+  <xs:import namespace="urn:fra:nc1:common:object" schemaLocation="../Commun/Object.xsd" />
+  <xs:element name="NC1_IntelRequirement" type="nc1intelreq:IntelRequirementType">
+    <xs:annotation>
+      <xs:documentation>L’objet NC1_IntelRequirement est l’expression par le commandement des renseignements dont il a besoin pour l'exécution de sa mission.</xs:documentation>
+      <xs:documentation xml:lang="en">The object NC1_IntelRequirement is the expression by the command of the information which it needs for the execution of its mission.</xs:documentation>
+      <xs:appinfo>
+        <nc1:type xmlns:nc1="urn:fra:nc1">Objet</nc1:type>
+        <nc1ihm:Nom>Besoin en renseignement</nc1ihm:Nom>
+        <nc1ihm:Nom xml:lang="en">Intelligence Requirement</nc1ihm:Nom>
+        <nc1:MessH xmlns:nc1="urn:fra:nc1">N/A</nc1:MessH>
+        <nc1:MessADatP3 xmlns:nc1="urn:fra:nc1">N/A</nc1:MessADatP3>
+        <nc1:LastNC1ModifyVersion xmlns:nc1="urn:fra:nc1">9.0.0</nc1:LastNC1ModifyVersion>
+      </xs:appinfo>
+    </xs:annotation>
+  </xs:element>
+  <xs:complexType name="FactAndClueType">
+    <xs:annotation>
+      <xs:documentation>Fait ou indice à rechercher.</xs:documentation>
+      <xs:documentation xml:lang="en">Fact or clue to search for.</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="number" type="nc1common:Int0To999Type">
+        <xs:annotation>
+          <xs:documentation>Numéro du fait ou de l’indice à rechercher.</xs:documentation>
+          <xs:documentation xml:lang="en">Designator of the  fact or clue to search for.</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Numéro</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">Number</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="description" type="nc1common:LongTextObjectType">
+        <xs:annotation>
+          <xs:documentation>Description en texte libre du fait ou de l’indice à rechercher.</xs:documentation>
+          <xs:documentation xml:lang="en">Designator of the  fact or clue to search for.</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Description du fait</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">Description of the fact</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:simpleType name="InformationCategoryCode">
+    <xs:annotation>
+      <xs:appinfo>
+        <nc1dico:source xmlns:nc1dico="urn:fra:nc1:dictionnaires">STAT dictionnaire 204</nc1dico:source>
+      </xs:appinfo>
+      <xs:documentation></xs:documentation>
+      <xs:documentation xml:lang="en"></xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:integer" />
+  </xs:simpleType>
+  <xs:simpleType name="InformationPriorityCategoryCode">
+    <xs:annotation>
+      <xs:appinfo>
+        <nc1dico:source xmlns:nc1dico="urn:fra:nc1:dictionnaires">STAT dictionnaire 206</nc1dico:source>
+      </xs:appinfo>
+      <xs:documentation></xs:documentation>
+      <xs:documentation xml:lang="en"></xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:integer" />
+  </xs:simpleType>
+  <xs:complexType name="IntelRequirementType">
+    <xs:annotation>
+      <xs:documentation>L’objet NC1_IntelRequirement est l’expression par le commandement des renseignements dont il a besoin pour l'exécution de sa mission. Ces besoins sont pris en compte et satisfaits par la fonction renseignement. Ils font l'objet de demandes de renseignement ou sont satisfaits par des renseignements produits et validés par les bureaux de renseignement.</xs:documentation>
+      <xs:documentation xml:lang="en">The NC1_IntelRequirement object represents the need of intelligence expressed by the command to accomplish a mission. Needs are acknowledged and satisfied by the Intel function, resulting in subsequent requests or are satisfied through intelligence data provided and validated by the Intel cells.</xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="nc1objcom:LocalisedObjectType">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="tacticalData">
+            <xs:annotation>
+              <xs:documentation>Données tactiques du besoin en renseignement.</xs:documentation>
+              <xs:documentation xml:lang="en">Intelligence requirement tactical data.</xs:documentation>
+              <xs:appinfo>
+                <nc1ihm:Nom>Données tactiques</nc1ihm:Nom>
+                <nc1ihm:Nom xml:lang="en">tactical datas</nc1ihm:Nom>
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element minOccurs="0" name="name" type="nc1common:ShortTextObjectType">
+                  <xs:annotation>
+                    <xs:documentation>Libellé du besoin en renseignement.</xs:documentation>
+                    <xs:documentation xml:lang="en">Name of the INTEL requirement.</xs:documentation>
+                    <xs:appinfo>
+                      <nc1ihm:Nom>Nom</nc1ihm:Nom>
+                      <nc1ihm:Nom xml:lang="en">name</nc1ihm:Nom>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:element>
+                <xs:element minOccurs="0" name="number" type="nc1common:Int0To999Type">
+                  <xs:annotation>
+                    <xs:documentation>Numéro du besoin en renseignement.</xs:documentation>
+                    <xs:documentation xml:lang="en">Number of the INTEL requirement.</xs:documentation>
+                    <xs:appinfo>
+                      <nc1ihm:Nom>Numéro</nc1ihm:Nom>
+                      <nc1ihm:Nom xml:lang="en">Number</nc1ihm:Nom>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:element>
+                <xs:element minOccurs="0" name="priority" type="nc1intelreq:InformationPriorityCategoryCode">
+                  <xs:annotation>
+                    <xs:documentation>Priorité du besoin en renseignement (ex : « PIR »).</xs:documentation>
+                    <xs:documentation xml:lang="en">"Priority of the INTEL requirement (e.g. ""PIR"")".</xs:documentation>
+                    <xs:appinfo>
+                      <nc1ihm:Nom>Priorité</nc1ihm:Nom>
+                      <nc1ihm:Nom xml:lang="en">priority</nc1ihm:Nom>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:element>
+                <xs:element maxOccurs="unbounded" name="factAndClue" type="nc1intelreq:FactAndClueType">
+                  <xs:annotation>
+                    <xs:documentation>Fait ou indice à rechercher.</xs:documentation>
+                    <xs:documentation xml:lang="en">Fact or clue to search for.</xs:documentation>
+                    <xs:appinfo>
+                      <nc1ihm:Nom>Fait</nc1ihm:Nom>
+                      <nc1ihm:Nom xml:lang="en">Fact</nc1ihm:Nom>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:element>
+                <xs:element minOccurs="0" name="category" type="nc1intelreq:InformationCategoryCode">
+                  <xs:annotation>
+                    <xs:documentation>Catégorie du besoin en renseignement (ex : « MILACTY »).</xs:documentation>
+                    <xs:documentation xml:lang="en">"Category of the INTEL requirement (e.g. ""MILACTY"")".</xs:documentation>
+                    <xs:appinfo>
+                      <nc1ihm:Nom>Catégorie</nc1ihm:Nom>
+                      <nc1ihm:Nom xml:lang="en">Category</nc1ihm:Nom>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:element>
+                <xs:element minOccurs="0" name="isOfImmediateInterestIndicator" type="xs:boolean">
+                  <xs:annotation>
+                    <xs:documentation>Indique si le renseignement est d’intérêt immédiat.</xs:documentation>
+                    <xs:documentation xml:lang="en">is of immediate interest indicator.</xs:documentation>
+                    <xs:appinfo>
+                      <nc1ihm:Nom>Renseignement d’intérêt immédiat</nc1ihm:Nom>
+                      <nc1ihm:Nom xml:lang="en">Information of immediate interest</nc1ihm:Nom>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:element>
+                <xs:element minOccurs="0" name="isHVT" type="xs:boolean">
+                  <xs:annotation>
+                    <xs:documentation>Indique si le renseignement porte sur une High Value Target.</xs:documentation>
+                    <xs:documentation xml:lang="en">Specifies if the INTEL requirement involves a High Value Target (HVT).</xs:documentation>
+                    <xs:appinfo>
+                      <nc1ihm:Nom>Cible à haute valeur</nc1ihm:Nom>
+                      <nc1ihm:Nom xml:lang="en">High value target</nc1ihm:Nom>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:element>
+                <xs:element minOccurs="0" name="scopeOfInformation" type="nc1intelreq:ScopeOfInformationCode">
+                  <xs:annotation>
+                    <xs:documentation>Portée du renseignement.</xs:documentation>
+                    <xs:documentation xml:lang="en">Scope of information.</xs:documentation>
+                    <xs:appinfo>
+                      <nc1ihm:Nom>Portée du renseignement</nc1ihm:Nom>
+                      <nc1ihm:Nom xml:lang="en">Scope of information</nc1ihm:Nom>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:element>
+                <xs:element minOccurs="0" name="startAndEndDatetime" type="nc1common:PeriodType">
+                  <xs:annotation>
+                    <xs:documentation>Horodatages limites de fourniture du renseignement (au plus tôt, au plus tard).</xs:documentation>
+                    <xs:documentation xml:lang="en">INTEL supply timeframe (earliest, at the latest).</xs:documentation>
+                    <xs:appinfo>
+                      <nc1ihm:Nom>Horodatages</nc1ihm:Nom>
+                      <nc1ihm:Nom xml:lang="en">Time stamping</nc1ihm:Nom>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:element>
+                <xs:element minOccurs="0" name="url" type="nc1common:MediumTextObjectType">
+                  <xs:annotation>
+                    <xs:documentation>Lien vers un fichier associé à l’objet.</xs:documentation>
+                    <xs:documentation xml:lang="en">Link to a file associated with the object.</xs:documentation>
+                    <xs:appinfo>
+                      <nc1ihm:Nom>Url</nc1ihm:Nom>
+                      <nc1ihm:Nom xml:lang="en">url</nc1ihm:Nom>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:element>
+                <xs:element minOccurs="0" name="comment" type="nc1common:LongTextObjectType">
+                  <xs:annotation>
+                    <xs:documentation>Commentaire en texte libre.</xs:documentation>
+                    <xs:documentation xml:lang="en">free text comment.</xs:documentation>
+                    <xs:appinfo>
+                      <nc1ihm:Nom>Commentaire</nc1ihm:Nom>
+                      <nc1ihm:Nom xml:lang="en">comment</nc1ihm:Nom>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:element>
+                <xs:element minOccurs="0" name="extVersion" type="nc1common:ExtVersType">
+                  <xs:annotation>
+                    <xs:documentation>Extension pour versions suivantes compatibles.</xs:documentation>
+                    <xs:documentation xml:lang="en">Extension for following compatible versions.</xs:documentation>
+                    <xs:appinfo>
+                      <nc1ihm:Nom>Extension de version</nc1ihm:Nom>
+                      <nc1ihm:Nom xml:lang="en">version extension</nc1ihm:Nom>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:element>
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+          <xs:element minOccurs="0" name="location">
+            <xs:annotation>
+              <xs:documentation>Localisation.</xs:documentation>
+              <xs:documentation xml:lang="en">Location.</xs:documentation>
+              <xs:appinfo>
+                <nc1ihm:Nom>Localisation</nc1ihm:Nom>
+                <nc1ihm:Nom xml:lang="en">Location</nc1ihm:Nom>
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element minOccurs="0" name="name" type="nc1common:Text1To30ObjectType">
+                  <xs:annotation>
+                    <xs:documentation>Nom de baptême donné par l'opérateur à la localisation. Par exemple un nom de ville ou de lieu.</xs:documentation>
+                    <xs:documentation xml:lang="en">Name assigned to the location, e.g. city or place name.</xs:documentation>
+                    <xs:appinfo>
+                      <nc1ihm:Nom>Nom</nc1ihm:Nom>
+                      <nc1ihm:Nom xml:lang="en">name</nc1ihm:Nom>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:element>
+                <xs:choice>
+                  <xs:element name="point" type="nc1location:PointType">
+                    <xs:annotation>
+                      <xs:documentation>Point localisé.</xs:documentation>
+                      <xs:documentation xml:lang="en">Geolocalized point.</xs:documentation>
+                      <xs:appinfo>
+                        <nc1ihm:Nom>Point</nc1ihm:Nom>
+                        <nc1ihm:Nom xml:lang="en">Point</nc1ihm:Nom>
+                      </xs:appinfo>
+                    </xs:annotation>
+                  </xs:element>
+                  <xs:element name="polygon" type="nc1location:PolygonType">
+                    <xs:annotation>
+                      <xs:documentation>Polygone, ou ligne brisée fermée.</xs:documentation>
+                      <xs:documentation xml:lang="en">Polygon, or closed polyline.</xs:documentation>
+                      <xs:appinfo>
+                        <nc1ihm:Nom>Polygone</nc1ihm:Nom>
+                        <nc1ihm:Nom xml:lang="en">Polygon</nc1ihm:Nom>
+                      </xs:appinfo>
+                    </xs:annotation>
+                  </xs:element>
+                  <xs:element name="circle" type="nc1location:CircleType">
+                    <xs:annotation>
+                      <xs:documentation>Cercle.</xs:documentation>
+                      <xs:documentation xml:lang="en">Circle.</xs:documentation>
+                      <xs:appinfo>
+                        <nc1ihm:Nom>Cercle</nc1ihm:Nom>
+                        <nc1ihm:Nom xml:lang="en">Circle</nc1ihm:Nom>
+                      </xs:appinfo>
+                    </xs:annotation>
+                  </xs:element>
+                  <xs:element name="ellipse" type="nc1location:EllipseType">
+                    <xs:annotation>
+                      <xs:documentation>Ellipse.</xs:documentation>
+                      <xs:documentation xml:lang="en">Ellipse.</xs:documentation>
+                      <xs:appinfo>
+                        <nc1ihm:Nom>Ellipse</nc1ihm:Nom>
+                        <nc1ihm:Nom xml:lang="en">Ellipse</nc1ihm:Nom>
+                      </xs:appinfo>
+                    </xs:annotation>
+                  </xs:element>
+                  <xs:element name="tacPointId" type="nc1common:Nc1ObjectRefType">
+                    <xs:annotation>
+                      <xs:documentation>Identifiant unique NC1 d’un point tactique.</xs:documentation>
+                      <xs:documentation xml:lang="en">NC1 ID of a tactical point.</xs:documentation>
+                      <xs:appinfo>
+                        <nc1ihm:Nom>Point tactique</nc1ihm:Nom>
+                        <nc1ihm:Nom xml:lang="en">Tactical point</nc1ihm:Nom>
+                      </xs:appinfo>
+                    </xs:annotation>
+                  </xs:element>
+                  <xs:element name="arcband" type="nc1location:ArcbandType">
+                    <xs:annotation>
+                      <xs:documentation>Radarc ou segment d’anneau.</xs:documentation>
+                      <xs:documentation xml:lang="en">Arcband, or 4 points sector</xs:documentation>
+                      <xs:appinfo>
+                        <nc1ihm:Nom>Radarc</nc1ihm:Nom>
+                        <nc1ihm:Nom xml:lang="en">Arcband</nc1ihm:Nom>
+                      </xs:appinfo>
+                    </xs:annotation>
+                  </xs:element>
+                  <xs:element name="tacLineId" type="nc1common:Nc1ObjectRefType">
+                    <xs:annotation>
+                      <xs:documentation>Identifiant unique NC1 d’une ligne tactique.</xs:documentation>
+                      <xs:documentation xml:lang="en">Tactical line NC1 ID.</xs:documentation>
+                      <xs:appinfo>
+                        <nc1ihm:Nom>Ligne tactique</nc1ihm:Nom>
+                        <nc1ihm:Nom xml:lang="en">Tactical line</nc1ihm:Nom>
+                      </xs:appinfo>
+                    </xs:annotation>
+                  </xs:element>
+                  <xs:element name="tacAreaId" type="nc1common:Nc1ObjectRefType">
+                    <xs:annotation>
+                      <xs:documentation>Identifiant unique NC1 d’une surface tactique.</xs:documentation>
+                      <xs:documentation xml:lang="en">Tactical area NC1 ID.</xs:documentation>
+                      <xs:appinfo>
+                        <nc1ihm:Nom>Surface tactique</nc1ihm:Nom>
+                        <nc1ihm:Nom xml:lang="en">Tactical area</nc1ihm:Nom>
+                      </xs:appinfo>
+                    </xs:annotation>
+                  </xs:element>
+                </xs:choice>
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:simpleType name="ScopeOfInformationCode">
+    <xs:annotation>
+      <xs:appinfo>
+        <nc1dico:source xmlns:nc1dico="urn:fra:nc1:dictionnaires">STAT dictionnaire 354</nc1dico:source>
+      </xs:appinfo>
+      <xs:documentation></xs:documentation>
+      <xs:documentation xml:lang="en"></xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:integer" />
+  </xs:simpleType>
+</xs:schema>

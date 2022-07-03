@@ -1,0 +1,175 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema targetNamespace="urn:fra:nc1:message:admitexitrep" xmlns:nc1ihm="urn:fra:nc1:IHM" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:nc1admitexitrep="urn:fra:nc1:message:admitexitrep" xmlns:nc1common="urn:fra:nc1:common:attribute" xmlns:nc1medical="urn:fra:nc1:common:health" xmlns:nc1msgcom="urn:fra:nc1:common:message" xmlns:nc1facility="urn:fra:nc1:objet:facility" xmlns:nc1individual="urn:fra:nc1:objet:individual">
+  <!-- NC1 V.9.0.0 -->
+  <xs:import namespace="urn:fra:nc1:common:attribute" schemaLocation="../Commun/Common.xsd" />
+  <xs:import namespace="urn:fra:nc1:common:health" schemaLocation="../Commun/Health.xsd" />
+  <xs:import namespace="urn:fra:nc1:common:message" schemaLocation="../Commun/Message.xsd" />
+  <xs:import namespace="urn:fra:nc1:objet:facility" schemaLocation="../Objet/NC1_Facility.xsd" />
+  <xs:import namespace="urn:fra:nc1:objet:individual" schemaLocation="../Objet/NC1_Individual.xsd" />
+  <xs:element name="NC1_AdmitExitRep">
+    <xs:annotation>
+      <xs:documentation>Le message NC1_AdmitExitRep est utilisé pour transmettre les comptes rendus de prise en charge et de fin de prise en charge d’un patient dans une installation médicale.</xs:documentation>
+      <xs:documentation xml:lang="en">The NC1_AdmitExitRep message is used to transmit the reports of admission and exit of a patient in a medical facility.</xs:documentation>
+      <xs:appinfo>
+        <nc1:type xmlns:nc1="urn:fra:nc1">Message</nc1:type>
+        <nc1ihm:Nom>Avis d’admission ou de sortie d’un blessé ou d’un malade</nc1ihm:Nom>
+        <nc1ihm:Nom xml:lang="en">Admission and exit report of a patient</nc1ihm:Nom>
+        <nc1:MessH xmlns:nc1="urn:fra:nc1">N/A</nc1:MessH>
+        <nc1:MessADatP3 xmlns:nc1="urn:fra:nc1">N/A</nc1:MessADatP3>
+        <nc1:LastNC1ModifyVersion xmlns:nc1="urn:fra:nc1">9.0.0</nc1:LastNC1ModifyVersion>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:complexContent>
+        <xs:extension base="nc1msgcom:BaseMessageType">
+          <xs:sequence>
+            <xs:element maxOccurs="unbounded" name="admitExitReport">
+              <xs:annotation>
+                <xs:documentation>Compte-rendu d’admission ou de sortie d’un patient.</xs:documentation>
+                <xs:documentation xml:lang="en">Admission and exit report of a patient.</xs:documentation>
+                <xs:appinfo>
+                  <nc1ihm:Nom>CR d’admission ou de sortie</nc1ihm:Nom>
+                  <nc1ihm:Nom xml:lang="en">Admit/exit report</nc1ihm:Nom>
+                </xs:appinfo>
+              </xs:annotation>
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="admitOrExit" type="nc1admitexitrep:AdmitOrExitCode">
+                    <xs:annotation>
+                      <xs:documentation>Admission ou sortie du patient.</xs:documentation>
+                      <xs:documentation xml:lang="en">Specifies if the patient is admitted or exits from the facility.</xs:documentation>
+                      <xs:appinfo>
+                        <nc1ihm:Nom>Admission ou sortie</nc1ihm:Nom>
+                        <nc1ihm:Nom xml:lang="en">Admission or exit</nc1ihm:Nom>
+                      </xs:appinfo>
+                    </xs:annotation>
+                  </xs:element>
+                  <xs:element name="facility" type="nc1facility:FacilityType">
+                    <xs:annotation>
+                      <xs:documentation>Installation médicale.</xs:documentation>
+                      <xs:documentation xml:lang="en">Medical facility.</xs:documentation>
+                      <xs:appinfo>
+                        <nc1ihm:Nom>Installation médicale</nc1ihm:Nom>
+                        <nc1ihm:Nom xml:lang="en">Medical facility</nc1ihm:Nom>
+                      </xs:appinfo>
+                    </xs:annotation>
+                  </xs:element>
+                  <xs:element name="patient" type="nc1individual:IndividualType">
+                    <xs:annotation>
+                      <xs:documentation>Patient pris en charge ou en fin de prise en charge.</xs:documentation>
+                      <xs:documentation xml:lang="en">Specifies if care of the patient starts or ends .</xs:documentation>
+                      <xs:appinfo>
+                        <nc1ihm:Nom>Patient</nc1ihm:Nom>
+                        <nc1ihm:Nom xml:lang="en">Patient</nc1ihm:Nom>
+                      </xs:appinfo>
+                    </xs:annotation>
+                  </xs:element>
+                  <xs:element name="stayPeriod" type="nc1common:PeriodType">
+                    <xs:annotation>
+                      <xs:documentation>Période de séjour du patient dans l’installation.</xs:documentation>
+                      <xs:documentation xml:lang="en">Patient's length of stay in the facility.</xs:documentation>
+                      <xs:appinfo>
+                        <nc1ihm:Nom>Période de séjour</nc1ihm:Nom>
+                        <nc1ihm:Nom xml:lang="en">Length of stay</nc1ihm:Nom>
+                      </xs:appinfo>
+                    </xs:annotation>
+                  </xs:element>
+                  <xs:element minOccurs="0" name="injuryDescription" type="nc1medical:InjurySeverityCode">
+                    <xs:annotation>
+                      <xs:documentation>Nature de la blessure ou de la maladie.</xs:documentation>
+                      <xs:documentation xml:lang="en">Nature of the injury or sickness.</xs:documentation>
+                      <xs:appinfo>
+                        <nc1ihm:Nom>Nature de la blessure</nc1ihm:Nom>
+                        <nc1ihm:Nom xml:lang="en">Nature of the injury</nc1ihm:Nom>
+                      </xs:appinfo>
+                    </xs:annotation>
+                  </xs:element>
+                  <xs:element minOccurs="0" name="formerOrganisation" type="nc1admitexitrep:OrganisationOrUnitIdentificationType">
+                    <xs:annotation>
+                      <xs:documentation>Unité d’appartenance ou organisme sanitaire d’origine.</xs:documentation>
+                      <xs:documentation xml:lang="en">Former parent unit or sanitary agency.</xs:documentation>
+                      <xs:appinfo>
+                        <nc1ihm:Nom>Ancien organisme</nc1ihm:Nom>
+                        <nc1ihm:Nom xml:lang="en">Former organisation</nc1ihm:Nom>
+                      </xs:appinfo>
+                    </xs:annotation>
+                  </xs:element>
+                  <xs:element minOccurs="0" name="newOrganisation" type="nc1admitexitrep:OrganisationOrUnitIdentificationType">
+                    <xs:annotation>
+                      <xs:documentation>Unité d’appartenance ou organisme sanitaire de destination.</xs:documentation>
+                      <xs:documentation xml:lang="en">New parent unit or sanitary agency.</xs:documentation>
+                      <xs:appinfo>
+                        <nc1ihm:Nom>Nouvel organisme</nc1ihm:Nom>
+                        <nc1ihm:Nom xml:lang="en">New organisation</nc1ihm:Nom>
+                      </xs:appinfo>
+                    </xs:annotation>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element minOccurs="0" name="comment" type="nc1msgcom:CommentSectionType">
+              <xs:annotation>
+                <xs:documentation>Commentaire en texte libre.</xs:documentation>
+                <xs:documentation xml:lang="en">free text comment.</xs:documentation>
+                <xs:appinfo>
+                  <nc1ihm:Nom>Commentaire</nc1ihm:Nom>
+                  <nc1ihm:Nom xml:lang="en">comment</nc1ihm:Nom>
+                </xs:appinfo>
+              </xs:annotation>
+            </xs:element>
+          </xs:sequence>
+        </xs:extension>
+      </xs:complexContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:simpleType name="AdmitOrExitCode">
+    <xs:annotation>
+      <xs:appinfo>
+        <nc1dico:source xmlns:nc1dico="urn:fra:nc1:dictionnaires">NC1</nc1dico:source>
+      </xs:appinfo>
+      <xs:documentation></xs:documentation>
+      <xs:documentation xml:lang="en"></xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:integer" />
+  </xs:simpleType>
+  <xs:complexType name="OrganisationOrUnitIdentificationType">
+    <xs:annotation>
+      <xs:documentation>Organisme ou unité d’appartenance.</xs:documentation>
+      <xs:documentation xml:lang="en">Designator of unit or organisation.</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:choice>
+        <xs:element name="unitId" type="nc1common:Nc1ObjectRefType">
+          <xs:annotation>
+            <xs:documentation>Identifiant unique NC1  de l’unité  d’appartenance.</xs:documentation>
+            <xs:documentation xml:lang="en">NC1 ID of the unit.</xs:documentation>
+            <xs:appinfo>
+              <nc1ihm:Nom>Unité d'appartenance</nc1ihm:Nom>
+              <nc1ihm:Nom xml:lang="en">Parent unit</nc1ihm:Nom>
+            </xs:appinfo>
+          </xs:annotation>
+        </xs:element>
+        <xs:element name="organisationId" type="nc1common:Nc1ObjectRefType">
+          <xs:annotation>
+            <xs:documentation>Identifiant unique NC1 de l’organisme d’appartenance.</xs:documentation>
+            <xs:documentation xml:lang="en">NC1 ID of the organisation.</xs:documentation>
+            <xs:appinfo>
+              <nc1ihm:Nom>Organisme d'appartenance</nc1ihm:Nom>
+              <nc1ihm:Nom xml:lang="en">Parent organisation</nc1ihm:Nom>
+            </xs:appinfo>
+          </xs:annotation>
+        </xs:element>
+        <xs:element name="identification" type="nc1common:MediumTextType">
+          <xs:annotation>
+            <xs:documentation>Identification en texte libre de l’organisme ou de l’unité d’appartenance.</xs:documentation>
+            <xs:documentation xml:lang="en">Free text designator of the unit or organisation.</xs:documentation>
+            <xs:appinfo>
+              <nc1ihm:Nom>Identification en texte libre</nc1ihm:Nom>
+              <nc1ihm:Nom xml:lang="en">Free text identification</nc1ihm:Nom>
+            </xs:appinfo>
+          </xs:annotation>
+        </xs:element>
+      </xs:choice>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

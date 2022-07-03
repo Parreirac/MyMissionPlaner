@@ -1,0 +1,130 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema targetNamespace="urn:fra:nc1:common:logistics" xmlns:nc1ihm="urn:fra:nc1:IHM" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:nc1logistics="urn:fra:nc1:common:logistics" xmlns:nc1common="urn:fra:nc1:common:attribute" xmlns:nc1sicsdicos="urn:fra:nc1:common:sicsdicos">
+  <!-- NC1 V.9.0.0 -->
+  <xs:import namespace="urn:fra:nc1:common:attribute" schemaLocation="Common.xsd" />
+  <xs:import namespace="urn:fra:nc1:common:sicsdicos" schemaLocation="SICS_Dictionaries.xsd" />
+  <xs:complexType name="LogisticStatusType">
+    <xs:annotation>
+      <xs:documentation>Etat logistique.</xs:documentation>
+      <xs:documentation xml:lang="en">Logistic status.</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="nicCode" type="nc1common:NicCodeType">
+        <xs:annotation>
+          <xs:documentation>Code NIC du type de matériel ou consommable.</xs:documentation>
+          <xs:documentation xml:lang="en">NIC code of the equipment or consumable type.</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Code NIC</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">NIC code</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="count" type="nc1common:Int0To2147483647Type">
+        <xs:annotation>
+          <xs:documentation>Quantité.</xs:documentation>
+          <xs:documentation xml:lang="en">quantity.</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Quantité</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">quantity</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:simpleType name="MobilityCategoryCode">
+    <xs:annotation>
+      <xs:appinfo>
+        <nc1dico:source xmlns:nc1dico="urn:fra:nc1:dictionnaires">dictionnaire DBM</nc1dico:source>
+        <nc1ihm:description>Catégories de mobilité.</nc1ihm:description>
+        <nc1ihm:description xml:lang="en">Mobility categories.</nc1ihm:description>
+      </xs:appinfo>
+      <xs:documentation>Catégories de mobilité.</xs:documentation>
+      <xs:documentation xml:lang="en">Mobility categories.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:integer" />
+  </xs:simpleType>
+  <xs:complexType name="OperationalStatusType">
+    <xs:annotation>
+      <xs:documentation>Etat opérationnel.</xs:documentation>
+      <xs:documentation xml:lang="en">Operational status.</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" name="effectif" type="nc1sicsdicos:L125_17Code">
+        <xs:annotation>
+          <xs:documentation>Effectifs.</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Effectifs</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="personnelTiredness" type="nc1sicsdicos:L125_16Code">
+        <xs:annotation>
+          <xs:documentation>Etat de fatigue du personnel.</xs:documentation>
+          <xs:documentation xml:lang="en">State of weariness of the unit personnel.</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Etat de fatigue</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">State of weariness</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="equipment" type="nc1sicsdicos:L125_17Code">
+        <xs:annotation>
+          <xs:documentation>Etat matériel.</xs:documentation>
+          <xs:documentation xml:lang="en">Status of the equipment for unit.</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Matériel</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">Equipment</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="fuel" type="nc1sicsdicos:L125_17Code">
+        <xs:annotation>
+          <xs:documentation>Etat carburant.</xs:documentation>
+          <xs:documentation xml:lang="en">Status of fuel for unit.</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Carburant</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">Fuel</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="ammunitions" type="nc1sicsdicos:L125_17Code">
+        <xs:annotation>
+          <xs:documentation>Etat munitions.</xs:documentation>
+          <xs:documentation xml:lang="en">Status of ammunitions for unit.</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Munitions</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">Ammunition</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="StatusType">
+    <xs:annotation>
+      <xs:documentation>Etat opérationnel et logistique.</xs:documentation>
+      <xs:documentation xml:lang="en">Operational and logistic status.</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" name="operationalStatus" type="nc1logistics:OperationalStatusType">
+        <xs:annotation>
+          <xs:documentation>Etat opérationnel.</xs:documentation>
+          <xs:documentation xml:lang="en">Operational status.</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Etat opérationnel</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">Operational status</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="logisticStatus" type="nc1logistics:LogisticStatusType">
+        <xs:annotation>
+          <xs:documentation>Etat logistique.</xs:documentation>
+          <xs:documentation xml:lang="en">Logistic status.</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Etat logistique</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">Logistic status</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

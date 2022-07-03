@@ -1,0 +1,1249 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<gc:CodeList xmlns:nc1dico="urn:fra:nc1:dictionnaires" xmlns:gc="http://docs.oasis-open.org/codelist/ns/genericode/1.0/">
+  <Annotation>
+    <Description>
+      <nc1dico:description>INTITULE DE TYPE D'ACTION TACTIQUE POUR LE COMBAT.</nc1dico:description>
+      <nc1dico:description xml:lang="en">TACTICAL ACTION TYPE TITLE FOR COMBAT.</nc1dico:description>
+    </Description>
+    <AppInfo>
+      <nc1dico:source>SFTT 3.4.8</nc1dico:source>
+      <nc1dico:derogation>TYPE D'ACTION TACTIQUE</nc1dico:derogation>
+    </AppInfo>
+  </Annotation>
+  <Identification>
+    <ShortName>MissionFrSpecificCode</ShortName>
+    <Version>9.0.0</Version>
+    <CanonicalUri>urn:fra:nc1:objet:mission:MissionFrSpecificCode</CanonicalUri>
+    <CanonicalVersionUri>urn:fra:nc1:objet:mission:MissionFrSpecificCode:9.0.0</CanonicalVersionUri>
+  </Identification>
+  <ColumnSet DatatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes">
+    <Column Id="code" Use="required">
+      <ShortName>Code</ShortName>
+      <Data Type="int" />
+    </Column>
+    <Column Id="short" Use="required">
+      <ShortName>Short</ShortName>
+      <Data Type="string" />
+    </Column>
+    <Column Id="long" Use="optional">
+      <ShortName>Long</ShortName>
+      <Data Type="string" />
+    </Column>
+    <Column Id="short-en" Use="optional">
+      <ShortName>Short anglais</ShortName>
+      <Data Type="string" />
+    </Column>
+    <Column Id="long-en" Use="optional">
+      <ShortName>Long anglais</ShortName>
+      <Data Type="string" />
+    </Column>
+    <Column Id="parent" Use="optional">
+      <ShortName>Parent</ShortName>
+      <Data Type="int" />
+    </Column>
+    <Column Id="codeSymbole" Use="optional">
+      <ShortName>Code Symbole</ShortName>
+      <Data Type="string" />
+    </Column>
+    <Column Id="codeHierarchique" Use="optional">
+      <ShortName>Code Hierarchique</ShortName>
+      <Data Type="string" />
+    </Column>
+    <Key Id="codeKey">
+      <ShortName>CodeKey</ShortName>
+      <ColumnRef Ref="code" />
+    </Key>
+  </ColumnSet>
+  <SimpleCodeList>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>45</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>AIDER ENGT DEB</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>AIDER A L'ENGAGEMENT DEBARQUE</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeSymbole">
+        <SimpleValue>G.T.G-----.....</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeHierarchique">
+        <SimpleValue>2.X.1.1.24</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>46</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>APPUYER PAR FEU</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>APPUYER PAR LE FEU</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeSymbole">
+        <SimpleValue>G.T.G-----.....</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeHierarchique">
+        <SimpleValue>2.X.1.1.25</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>47</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>APPUYER PAR MVT</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>APPUYER PAR LE MOUVEMENT</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeSymbole">
+        <SimpleValue>G.T.G-----.....</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeHierarchique">
+        <SimpleValue>2.X.1.1.26</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>48</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>ATTAQUER</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>ATTAQUER</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeSymbole">
+        <SimpleValue>G.T.G-----.....</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeHierarchique">
+        <SimpleValue>2.X.1.1.27</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>49</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>BARRER</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>BARRER</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeSymbole">
+        <SimpleValue>G.T.G-----.....</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeHierarchique">
+        <SimpleValue>2.X.1.1.28</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>50</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>BOUCLER POINT</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>BOUCLER UN POINT</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeSymbole">
+        <SimpleValue>G.T.G-----.....</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeHierarchique">
+        <SimpleValue>2.X.1.1.29</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>51</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>BOUCLER SECTEUR</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>BOUCLER UN SECTEUR</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeSymbole">
+        <SimpleValue>G.T.G-----.....</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeHierarchique">
+        <SimpleValue>2.X.1.1.30</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>52</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>BOUCLER ZONE</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>BOUCLER UNE ZONE</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeSymbole">
+        <SimpleValue>G.T.G-----.....</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeHierarchique">
+        <SimpleValue>2.X.1.1.31</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>53</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>BRECHER</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>BRECHER</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeSymbole">
+        <SimpleValue>G.T.G-----.....</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeHierarchique">
+        <SimpleValue>2.X.1.1.32</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>54</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>CANALISER</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>CANALISER</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeSymbole">
+        <SimpleValue>G.T.G-----.....</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeHierarchique">
+        <SimpleValue>2.X.1.1.33</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>55</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>MENER CBT US</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>MENER UN COMBAT D'USURE</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeSymbole">
+        <SimpleValue>G.T.G-----.....</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeHierarchique">
+        <SimpleValue>2.X.1.1.34</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>56</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>PRENDRE PREC CTC</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>PRENDRE ET PRECISER LE CONTACT</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeSymbole">
+        <SimpleValue>G.T.G-----.....</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeHierarchique">
+        <SimpleValue>2.X.1.1.35</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>57</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>MAINT CTC</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>MAINTENIR LE CONTACT</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeSymbole">
+        <SimpleValue>G.T.G-----.....</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeHierarchique">
+        <SimpleValue>2.X.1.1.36</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>58</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>ROMPRE CONTACT</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>ROMPRE LE CONTACT</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeSymbole">
+        <SimpleValue>G.T.G-----.....</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeHierarchique">
+        <SimpleValue>2.X.1.1.37</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>59</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>C-ATTAQUER</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>CONTRE-ATTAQUER</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeSymbole">
+        <SimpleValue>G.T.G-----.....</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeHierarchique">
+        <SimpleValue>2.X.1.1.38</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>60</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>CONTROLER ZONE</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>CONTROLER UNE ZONE</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeSymbole">
+        <SimpleValue>G.T.G-----.....</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeHierarchique">
+        <SimpleValue>2.X.1.1.39</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>61</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>COUVRIR</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>COUVRIR</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeSymbole">
+        <SimpleValue>G.T.G-----.....</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeHierarchique">
+        <SimpleValue>2.X.1.1.40</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>62</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>DEFENDRE ZONE</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>DEFENDRE UNE ZONE</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeSymbole">
+        <SimpleValue>G.T.G-----.....</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeHierarchique">
+        <SimpleValue>2.X.1.1.41</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>63</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>DEFENDRE LIGNE</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>DEFENDRE UNE LIGNE</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeSymbole">
+        <SimpleValue>G.T.G-----.....</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeHierarchique">
+        <SimpleValue>2.X.1.1.42</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>64</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>DEFENDRE POINT</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>DEFENDRE UN POINT</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeSymbole">
+        <SimpleValue>G.T.G-----.....</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeHierarchique">
+        <SimpleValue>2.X.1.1.43</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>65</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>DETRUIRE</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>DETRUIRE</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeSymbole">
+        <SimpleValue>G.T.G-----.....</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeHierarchique">
+        <SimpleValue>2.X.1.1.44</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>66</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>DONNER  COUP-ARR</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>DONNER UN COUP D'ARRET</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeSymbole">
+        <SimpleValue>G.T.G-----.....</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeHierarchique">
+        <SimpleValue>2.X.1.1.45</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>67</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>ECLAIRER</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>ECLAIRER</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeSymbole">
+        <SimpleValue>G.T.G-----.....</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeHierarchique">
+        <SimpleValue>2.X.1.1.46</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>68</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>S'EMPARER DE</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>S'EMPARER DE</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeSymbole">
+        <SimpleValue>G.T.G-----.....</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeHierarchique">
+        <SimpleValue>2.X.1.1.47</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>69</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>ESCORTER</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>ESCORTER</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeSymbole">
+        <SimpleValue>G.T.G-----.....</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeHierarchique">
+        <SimpleValue>2.X.1.1.48</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>70</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>EXPLOITER</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>EXPLOITER</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeSymbole">
+        <SimpleValue>G.T.G-----.....</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeHierarchique">
+        <SimpleValue>2.X.1.1.49</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>71</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>FIXER</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>FIXER</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeSymbole">
+        <SimpleValue>G.T.G-----.....</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeHierarchique">
+        <SimpleValue>2.X.1.1.50</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>72</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>FLANC-GARDER</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>FLANC-GARDER</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeSymbole">
+        <SimpleValue>G.T.G-----.....</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeHierarchique">
+        <SimpleValue>2.X.1.1.51</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>73</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>FREINER</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>FREINER</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeSymbole">
+        <SimpleValue>G.T.G-----.....</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeHierarchique">
+        <SimpleValue>2.X.1.1.52</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>74</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>HARCELER</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>HARCELER</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeSymbole">
+        <SimpleValue>G.T.G-----.....</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeHierarchique">
+        <SimpleValue>2.X.1.1.53</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>75</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>INTERCEPTER</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>INTERCEPTER</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeSymbole">
+        <SimpleValue>G.T.G-----.....</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeHierarchique">
+        <SimpleValue>2.X.1.1.54</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>76</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>INTERDIRE</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>INTERDIRE</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeSymbole">
+        <SimpleValue>G.T.G-----.....</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeHierarchique">
+        <SimpleValue>2.X.1.1.55</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>77</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>S'INTERPOSER</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>S'INTERPOSER</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeSymbole">
+        <SimpleValue>G.T.G-----.....</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeHierarchique">
+        <SimpleValue>2.X.1.1.56</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>78</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>INTERVENIR</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>INTERVENIR</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeSymbole">
+        <SimpleValue>G.T.G-----.....</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeHierarchique">
+        <SimpleValue>2.X.1.1.57</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>79</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>OUVRIR ITIN.</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>OUVRIR UN ITINERAIRE</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeSymbole">
+        <SimpleValue>G.T.G-----.....</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeHierarchique">
+        <SimpleValue>2.X.1.1.58</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>80</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>MAINT ITIN. OUV.</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>MAINTENIR UN ITINERAIRE OUVERT</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeSymbole">
+        <SimpleValue>G.T.G-----.....</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeHierarchique">
+        <SimpleValue>2.X.1.1.59</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>81</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>JALONNER</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>JALONNER</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeSymbole">
+        <SimpleValue>G.T.G-----.....</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeHierarchique">
+        <SimpleValue>2.X.1.1.60</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>82</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>MARQUER</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>MARQUER</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeSymbole">
+        <SimpleValue>G.T.G-----.....</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeHierarchique">
+        <SimpleValue>2.X.1.1.61</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>83</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>NEUTRALISER</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>NEUTRALISER</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeSymbole">
+        <SimpleValue>G.T.G-----.....</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeHierarchique">
+        <SimpleValue>2.X.1.1.62</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>84</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>POURSUIVRE</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>POURSUIVRE</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeSymbole">
+        <SimpleValue>G.T.G-----.....</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeHierarchique">
+        <SimpleValue>2.X.1.1.63</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>85</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>MENER UN RAID</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>MENER UN RAID</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeSymbole">
+        <SimpleValue>G.T.G-----.....</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeHierarchique">
+        <SimpleValue>2.X.1.1.64</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>86</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>RATISSER</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>RATISSER</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeSymbole">
+        <SimpleValue>G.T.G-----.....</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeHierarchique">
+        <SimpleValue>2.X.1.1.65</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>87</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>RECONNAITRE</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>RECONNAITRE</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeSymbole">
+        <SimpleValue>G.T.G-----.....</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeHierarchique">
+        <SimpleValue>2.X.1.1.66</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>88</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>RECUEILLIR</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>RECUEILLIR</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeSymbole">
+        <SimpleValue>G.T.G-----.....</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeHierarchique">
+        <SimpleValue>2.X.1.1.67</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>89</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>RED RESISTANCE</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>REDUIRE UNE RESISTANCE</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeSymbole">
+        <SimpleValue>G.T.G-----.....</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeHierarchique">
+        <SimpleValue>2.X.1.1.68</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>90</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>RENSEIGNER</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>RENSEIGNER</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeSymbole">
+        <SimpleValue>G.T.G-----.....</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeHierarchique">
+        <SimpleValue>2.X.1.1.69</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>91</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>SOUTENIR</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>SOUTENIR</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeSymbole">
+        <SimpleValue>G.T.G-----.....</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeHierarchique">
+        <SimpleValue>2.X.1.1.70</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>92</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>SURVEILLER</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>SURVEILLER</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeSymbole">
+        <SimpleValue>G.T.G-----.....</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeHierarchique">
+        <SimpleValue>2.X.1.1.71</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>93</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>TENIR UN POINT</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>TENIR UN POINT</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeSymbole">
+        <SimpleValue>G.T.G-----.....</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeHierarchique">
+        <SimpleValue>2.X.1.1.72</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>94</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>TENIR UNE LIGNE</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>TENIR UNE LIGNE</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeSymbole">
+        <SimpleValue>G.T.G-----.....</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeHierarchique">
+        <SimpleValue>2.X.1.1.73</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>95</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>TENIR UNE ZONE</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>TENIR UNE ZONE</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeSymbole">
+        <SimpleValue>G.T.G-----.....</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeHierarchique">
+        <SimpleValue>2.X.1.1.74</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>96</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>ASSAUT</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>L'ASSAUT</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeSymbole">
+        <SimpleValue>G.T.G-----.....</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeHierarchique">
+        <SimpleValue>2.X.1.1.75</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>97</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>POSER ASSAUT</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>LE POSER D'ASSAUT</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeSymbole">
+        <SimpleValue>G.T.G-----.....</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeHierarchique">
+        <SimpleValue>2.X.1.1.76</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>98</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>CAPTURE</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>LA CAPTURE</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeSymbole">
+        <SimpleValue>G.T.G-----.....</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeHierarchique">
+        <SimpleValue>2.X.1.1.77</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>99</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>COUP DE MAIN</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>LE COUP DE MAIN</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeSymbole">
+        <SimpleValue>G.T.G-----.....</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeHierarchique">
+        <SimpleValue>2.X.1.1.78</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>100</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>EMBUSCADE</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>L'EMBUSCADE</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeSymbole">
+        <SimpleValue>G.T.G-----.....</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeHierarchique">
+        <SimpleValue>2.X.1.1.79</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>101</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>EXFILTRATION</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>L'EXFILTRATION</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeSymbole">
+        <SimpleValue>G.T.G-----.....</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeHierarchique">
+        <SimpleValue>2.X.1.1.80</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>102</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>GUIDAGE</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>LE GUIDAGE</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeSymbole">
+        <SimpleValue>G.T.G-----.....</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeHierarchique">
+        <SimpleValue>2.X.1.1.81</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>103</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>INFILTRATION</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>L'INFILTRATION</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeSymbole">
+        <SimpleValue>G.T.G-----.....</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeHierarchique">
+        <SimpleValue>2.X.1.1.82</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>104</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>PATROUILLE</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>LA PATROUILLE</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeSymbole">
+        <SimpleValue>G.T.G-----.....</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeHierarchique">
+        <SimpleValue>2.X.1.1.83</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>105</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>OP AEROPORTEE</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>L'OPERATION AEROPORTEE</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeSymbole">
+        <SimpleValue>G.T.G-----.....</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeHierarchique">
+        <SimpleValue>2.X.1.1.84</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>106</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>OP HELIPORTEE</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>L'OPERATION HELIPORTEE</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeSymbole">
+        <SimpleValue>G.T.G-----.....</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeHierarchique">
+        <SimpleValue>2.X.1.1.85</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>107</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>OP HELIP. ASS</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>L'OPERATION HELIPORTEE D'ASSAUT</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeSymbole">
+        <SimpleValue>G.T.G-----.....</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeHierarchique">
+        <SimpleValue>2.X.1.1.86</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>108</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>OP HELITRANSP</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>L'OPERATION D'HELITRANSPORT</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeSymbole">
+        <SimpleValue>G.T.G-----.....</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeHierarchique">
+        <SimpleValue>2.X.1.1.87</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>109</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>OP HELITRSP SAN</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>L'OPERATION D'HELITRANSPORT SANITAIRE</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeSymbole">
+        <SimpleValue>G.T.G-----.....</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeHierarchique">
+        <SimpleValue>2.X.1.1.88</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>110</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>RELEVE POSITION</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>LA RELEVE SUR POSITION</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeSymbole">
+        <SimpleValue>G.T.G-----.....</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeHierarchique">
+        <SimpleValue>2.X.1.1.89</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>111</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>DEMONSTR FORCE</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>LA DEMONSTRATION DE FORCE</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeSymbole">
+        <SimpleValue>G.T.G-----.....</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeHierarchique">
+        <SimpleValue>2.X.1.1.90</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>112</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>EXTRACTION</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>L'EXTRACTION</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeSymbole">
+        <SimpleValue>G.T.G-----.....</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeHierarchique">
+        <SimpleValue>2.X.1.1.91</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>113</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>EVAC MEDICALISEE</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>L'EVACUATION MEDICALISEE</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeSymbole">
+        <SimpleValue>G.T.G-----.....</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeHierarchique">
+        <SimpleValue>2.X.1.1.92</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>114</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>MARCH ENI</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>MARCHER A L'ENNEMI</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeSymbole">
+        <SimpleValue>G.T.G-----.....</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeHierarchique">
+        <SimpleValue>2.X.2.1.5.2.1.4</SimpleValue>
+      </Value>
+    </Row>
+  </SimpleCodeList>
+</gc:CodeList>

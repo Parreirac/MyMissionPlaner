@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<cva:ContextValueAssociation xmlns:cva="http://docs.oasis-open.org/codelist/ns/ContextValueAssociation/1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="urn:fra:nc1:objet:seaparticipant" queryBinding="xslt2" xmlns:nc1seaparticipant="urn:fra:nc1:objet:seaparticipant">
+  <!-- NC1 V.9.0.0 -->
+  <ValueLists>
+    <ValueList xml:id="nc1objcom-ActivationStatusCode" uri="../Dictionnaires/ActivationStatusCode.gc" />
+    <ValueList xml:id="nc1objcom-IsFullCode" uri="../Dictionnaires/IsFullCode.gc" />
+    <ValueList xml:id="nc1sicsdicos-L135_5Code" uri="../Dictionnaires/L135_5Code.gc" />
+    <ValueList xml:id="nc1sicsdicos-L104_16Code" uri="../Dictionnaires/L104_16Code.gc" />
+    <ValueList xml:id="nc1sicsdicos-L125_7Code" uri="../Dictionnaires/L125_7Code.gc" />
+    <ValueList xml:id="nc1sicsdicos-L140_1Code" uri="../Dictionnaires/L140_1Code.gc" />
+    <ValueList xml:id="nc1sicsdicos-L110_82Code" uri="../Dictionnaires/L110_82Code.gc" />
+    <ValueList xml:id="nc1sicsdicos-L135_11Code" uri="../Dictionnaires/L135_11Code.gc" />
+    <ValueList xml:id="nc1sicsdicos-L125_17Code" uri="../Dictionnaires/L125_17Code.gc" />
+    <ValueList xml:id="nc1sicsdicos-L125_16Code" uri="../Dictionnaires/L125_16Code.gc" />
+    <ValueList xml:id="nc1sicsdicos-L117_5Code" uri="../Dictionnaires/L117_5Code.gc" />
+  </ValueLists>
+  <Contexts>
+    <Context address="/nc1seaparticipant:NC1_SeaParticipant/@activationStatus" values="nc1objcom-ActivationStatusCode" />
+    <Context address="/nc1seaparticipant:NC1_SeaParticipant/@isFull" values="nc1objcom-IsFullCode" />
+    <Context address="/nc1seaparticipant:NC1_SeaParticipant/tacticalData/distressIndicator" values="nc1sicsdicos-L135_5Code" />
+    <Context address="/nc1seaparticipant:NC1_SeaParticipant/tacticalData/loadIndicator" values="nc1sicsdicos-L104_16Code" />
+    <Context address="/nc1seaparticipant:NC1_SeaParticipant/tacticalData/availability" values="nc1sicsdicos-L125_7Code" />
+    <Context address="/nc1seaparticipant:NC1_SeaParticipant/specificData/activity" values="nc1sicsdicos-L140_1Code" />
+    <Context address="/nc1seaparticipant:NC1_SeaParticipant/specificData/specificType" values="nc1sicsdicos-L110_82Code" />
+    <Context address="/nc1seaparticipant:NC1_SeaParticipant/specificData/laydown" values="nc1sicsdicos-L135_11Code" />
+    <Context address="/nc1seaparticipant:NC1_SeaParticipant/status/operationalStatus/effectif" values="nc1sicsdicos-L125_17Code" />
+    <Context address="/nc1seaparticipant:NC1_SeaParticipant/status/operationalStatus/personnelTiredness" values="nc1sicsdicos-L125_16Code" />
+    <Context address="/nc1seaparticipant:NC1_SeaParticipant/status/operationalStatus/equipment" values="nc1sicsdicos-L125_17Code" />
+    <Context address="/nc1seaparticipant:NC1_SeaParticipant/status/operationalStatus/fuel" values="nc1sicsdicos-L125_17Code" />
+    <Context address="/nc1seaparticipant:NC1_SeaParticipant/status/operationalStatus/ammunitions" values="nc1sicsdicos-L125_17Code" />
+    <Context address="/nc1seaparticipant:NC1_SeaParticipant/location/quality" values="nc1sicsdicos-L117_5Code" />
+  </Contexts>
+</cva:ContextValueAssociation>

@@ -1,0 +1,161 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<gc:CodeList xmlns:nc1dico="urn:fra:nc1:dictionnaires" xmlns:gc="http://docs.oasis-open.org/codelist/ns/genericode/1.0/">
+  <Annotation>
+    <Description>
+      <nc1dico:description>INDICATION DES CARACTERISTIQUES DE PRELEVEMENT/RENFORCEMENT D'UNE UNITE DANS UNE ARTICULATION TACTIQUE ORGANIQUE OU CONJONCTURELLE.</nc1dico:description>
+      <nc1dico:description xml:lang="en">Indication of the characteristics of attachments and detachments of a unity in a cyclical tactical joint.</nc1dico:description>
+    </Description>
+    <AppInfo>
+      <nc1dico:source>SFTT 3.4.8</nc1dico:source>
+      <nc1dico:derogation>TYPE DE SUBORDINATION</nc1dico:derogation>
+    </AppInfo>
+  </Annotation>
+  <Identification>
+    <ShortName>L135_16Code</ShortName>
+    <Version>9.0.0</Version>
+    <CanonicalUri>urn:fra:nc1:common:sicsdicos:L135_16Code</CanonicalUri>
+    <CanonicalVersionUri>urn:fra:nc1:common:sicsdicos:L135_16Code:9.0.0</CanonicalVersionUri>
+  </Identification>
+  <ColumnSet DatatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes">
+    <Column Id="code" Use="required">
+      <ShortName>Code</ShortName>
+      <Data Type="int" />
+    </Column>
+    <Column Id="short" Use="required">
+      <ShortName>Short</ShortName>
+      <Data Type="string" />
+    </Column>
+    <Column Id="long" Use="optional">
+      <ShortName>Long</ShortName>
+      <Data Type="string" />
+    </Column>
+    <Column Id="short-en" Use="optional">
+      <ShortName>Short anglais</ShortName>
+      <Data Type="string" />
+    </Column>
+    <Column Id="long-en" Use="optional">
+      <ShortName>Long anglais</ShortName>
+      <Data Type="string" />
+    </Column>
+    <Column Id="parent" Use="optional">
+      <ShortName>Parent</ShortName>
+      <Data Type="int" />
+    </Column>
+    <Column Id="codeSymbole" Use="optional">
+      <ShortName>Code Symbole</ShortName>
+      <Data Type="string" />
+    </Column>
+    <Column Id="codeHierarchique" Use="optional">
+      <ShortName>Code Hierarchique</ShortName>
+      <Data Type="string" />
+    </Column>
+    <Key Id="codeKey">
+      <ShortName>CodeKey</ShortName>
+      <ColumnRef Ref="code" />
+    </Key>
+  </ColumnSet>
+  <SimpleCodeList>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>0</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>COM</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>COMMANDEMENT</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>COM</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>COMMAND</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>1</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>OPCOM</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>COMMANDEMENT OPERATIONNEL</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>OPCOM</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>OPERATIONAL COMMAND</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>2</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>TACOM</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>COMMANDEMENT TACTIQUE</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>TACOM</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>TACTICAL COMMAND</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>3</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>OPCON</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>CONTROLE OPERATIONNEL</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>OPCON</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>OPERATIONAL CONTROL</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>4</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>TACON</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>CONTROLE TACTIQUE</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>TACON</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>TACTICAL CONTROL</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>5</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>RATORG</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>RATTACHEMENT ORGANIQUE</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>ORGCON</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>ORGANIC CONNECTION</SimpleValue>
+      </Value>
+    </Row>
+  </SimpleCodeList>
+</gc:CodeList>

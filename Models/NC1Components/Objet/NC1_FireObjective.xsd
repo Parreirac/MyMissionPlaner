@@ -1,0 +1,286 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema targetNamespace="urn:fra:nc1:objet:fireobjective" xmlns:nc1ihm="urn:fra:nc1:IHM" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:nc1fireobjective="urn:fra:nc1:objet:fireobjective" xmlns:nc1common="urn:fra:nc1:common:attribute" xmlns:nc1location="urn:fra:nc1:common:location" xmlns:nc1objcom="urn:fra:nc1:common:object" xmlns:nc1sicsdicos="urn:fra:nc1:common:sicsdicos">
+  <!-- NC1 V.9.0.0 -->
+  <xs:import namespace="urn:fra:nc1:common:attribute" schemaLocation="../Commun/Common.xsd" />
+  <xs:import namespace="urn:fra:nc1:common:location" schemaLocation="../Commun/Location.xsd" />
+  <xs:import namespace="urn:fra:nc1:common:object" schemaLocation="../Commun/Object.xsd" />
+  <xs:import namespace="urn:fra:nc1:common:sicsdicos" schemaLocation="../Commun/SICS_Dictionaries.xsd" />
+  <xs:element name="NC1_FireObjective" type="nc1fireobjective:FireObjectiveType">
+    <xs:annotation>
+      <xs:documentation>L’objet NC1_FireObjective désigne une cible de l’artillerie qui peut être : un point ou multipoint, une ligne, une zone : cercle ou rectangle. 
+</xs:documentation>
+      <xs:documentation xml:lang="en">The NC1_FireObjective object designates an artillery target, which can be: a point, multipoint, a line, an area: circle or rectangle. 
+</xs:documentation>
+      <xs:appinfo>
+        <nc1:type xmlns:nc1="urn:fra:nc1">Objet</nc1:type>
+        <nc1ihm:Nom>Objectif feux</nc1ihm:Nom>
+        <nc1ihm:Nom xml:lang="en">Fire objective</nc1ihm:Nom>
+        <nc1:MessH xmlns:nc1="urn:fra:nc1">Message H4.2 FireObj</nc1:MessH>
+        <nc1:MessADatP3 xmlns:nc1="urn:fra:nc1">N/A</nc1:MessADatP3>
+        <nc1:LastNC1ModifyVersion xmlns:nc1="urn:fra:nc1">9.0.0</nc1:LastNC1ModifyVersion>
+      </xs:appinfo>
+    </xs:annotation>
+  </xs:element>
+  <xs:complexType name="FireObjectiveType">
+    <xs:annotation>
+      <xs:documentation>L’objet NC1_FireObjective désigne une cible de l’artillerie.</xs:documentation>
+      <xs:documentation xml:lang="en">The NC1_FireObjective object corresponds to a target of artillery.</xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="nc1objcom:LocalisedObjectType">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="tacticalData">
+            <xs:annotation>
+              <xs:documentation>Données tactiques de l'objectif feux.</xs:documentation>
+              <xs:documentation xml:lang="en">Fire objective tactical data.</xs:documentation>
+              <xs:appinfo>
+                <nc1ihm:Nom>Données tactiques</nc1ihm:Nom>
+                <nc1ihm:Nom xml:lang="en">tactical datas</nc1ihm:Nom>
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element minOccurs="0" name="name" type="nc1common:ShortTextObjectType">
+                  <xs:annotation>
+                    <xs:documentation>Nom de l'objectif affiché sur la cartographie.</xs:documentation>
+                    <xs:documentation xml:lang="en">Target displayed name.</xs:documentation>
+                    <xs:appinfo>
+                      <nc1ihm:Nom>Nom</nc1ihm:Nom>
+                      <nc1ihm:Nom xml:lang="en">name</nc1ihm:Nom>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:element>
+                <xs:element minOccurs="0" name="tno" type="nc1common:TnoType">
+                  <xs:annotation>
+                    <xs:documentation>Numéro d’objectif (TNO).</xs:documentation>
+                    <xs:documentation xml:lang="en">TNO.</xs:documentation>
+                    <xs:appinfo>
+                      <nc1ihm:Nom>Numéro d’objectif</nc1ihm:Nom>
+                      <nc1ihm:Nom xml:lang="en">Target number</nc1ihm:Nom>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:element>
+                <xs:element minOccurs="0" name="priority" type="nc1sicsdicos:L114_17Code">
+                  <xs:annotation>
+                    <xs:documentation>Priorité de l’objectif.</xs:documentation>
+                    <xs:documentation xml:lang="en">Objective priority.</xs:documentation>
+                    <xs:appinfo>
+                      <nc1ihm:Nom>Priorité</nc1ihm:Nom>
+                      <nc1ihm:Nom xml:lang="en">priority</nc1ihm:Nom>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:element>
+                <xs:element minOccurs="0" name="infantryMortarFire" type="xs:boolean">
+                  <xs:annotation>
+                    <xs:documentation>Objectif feux traité par un mortier infanterie.</xs:documentation>
+                    <xs:documentation xml:lang="en">Fire objective handled by infantry mortar fire.</xs:documentation>
+                    <xs:appinfo>
+                      <nc1ihm:Nom>Traité par mortier INF</nc1ihm:Nom>
+                      <nc1ihm:Nom xml:lang="en">Handled by infantry mortar</nc1ihm:Nom>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:element>
+                <xs:element minOccurs="0" name="synchronizedFireId" type="nc1common:Nc1ObjectRefType">
+                  <xs:annotation>
+                    <xs:documentation>Identifiant unique NC1 d'un autre objectif avec lequel une synchronisation est souhaitée.</xs:documentation>
+                    <xs:documentation xml:lang="en">NC1 ID of another object with which synchronization is desired.</xs:documentation>
+                    <xs:appinfo>
+                      <nc1ihm:Nom>Synchronisation tir</nc1ihm:Nom>
+                      <nc1ihm:Nom xml:lang="en">Synchronized fire</nc1ihm:Nom>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:element>
+                <xs:element minOccurs="0" name="acquisitionSource" type="nc1sicsdicos:L114_19Code">
+                  <xs:annotation>
+                    <xs:documentation>Moyen d’acquisition de l’objectif feux.</xs:documentation>
+                    <xs:documentation xml:lang="en">Source of acquisition of the target.</xs:documentation>
+                    <xs:appinfo>
+                      <nc1ihm:Nom>Moyen d’acquisition</nc1ihm:Nom>
+                      <nc1ihm:Nom xml:lang="en">Source of acquisition</nc1ihm:Nom>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:element>
+                <xs:element minOccurs="0" name="targetType" type="nc1sicsdicos:L114_20Code">
+                  <xs:annotation>
+                    <xs:documentation>Type d'objectif.</xs:documentation>
+                    <xs:documentation xml:lang="en">Target type.</xs:documentation>
+                    <xs:appinfo>
+                      <nc1ihm:Nom>Type</nc1ihm:Nom>
+                      <nc1ihm:Nom xml:lang="en">Type</nc1ihm:Nom>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:element>
+                <xs:element minOccurs="0" name="requiredEffect" type="nc1sicsdicos:L114_22Code">
+                  <xs:annotation>
+                    <xs:documentation>Effet tactique à obtenir.</xs:documentation>
+                    <xs:documentation xml:lang="en">Tactical effect to be obtained.</xs:documentation>
+                    <xs:appinfo>
+                      <nc1ihm:Nom>Effet à obtenir</nc1ihm:Nom>
+                      <nc1ihm:Nom xml:lang="en">Effect to be obtained</nc1ihm:Nom>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:element>
+                <xs:element minOccurs="0" name="attitude" type="nc1sicsdicos:L114_23Code">
+                  <xs:annotation>
+                    <xs:documentation>Attitude de l’objectif (ex : « MVT »).</xs:documentation>
+                    <xs:documentation xml:lang="en">"Target attitude (e.g. ""MVT"")".</xs:documentation>
+                    <xs:appinfo>
+                      <nc1ihm:Nom>Attitude</nc1ihm:Nom>
+                      <nc1ihm:Nom xml:lang="en">Attitude</nc1ihm:Nom>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:element>
+                <xs:element minOccurs="0" name="targetId" type="nc1common:Nc1ObjectRefType">
+                  <xs:annotation>
+                    <xs:documentation>Identifiant unique NC1 de l’objet pris pour objectif feux.</xs:documentation>
+                    <xs:documentation xml:lang="en">NC1 ID of the object selected as a fire objective.</xs:documentation>
+                    <xs:appinfo>
+                      <nc1ihm:Nom>Id cible</nc1ihm:Nom>
+                      <nc1ihm:Nom xml:lang="en">Target id</nc1ihm:Nom>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:element>
+                <xs:element minOccurs="0" name="elementsCount" type="nc1common:Int0To999Type">
+                  <xs:annotation>
+                    <xs:documentation>Nombre d’éléments composant l’objectif feux.</xs:documentation>
+                    <xs:documentation xml:lang="en">Number of elements in the target.</xs:documentation>
+                    <xs:appinfo>
+                      <nc1ihm:Nom>Nombre d’éléments</nc1ihm:Nom>
+                      <nc1ihm:Nom xml:lang="en">Number of elements</nc1ihm:Nom>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:element>
+                <xs:element minOccurs="0" name="url" type="nc1common:MediumTextObjectType">
+                  <xs:annotation>
+                    <xs:documentation>Lien vers un fichier associé à l’objet.</xs:documentation>
+                    <xs:documentation xml:lang="en">Link to a file associated with the object.</xs:documentation>
+                    <xs:appinfo>
+                      <nc1ihm:Nom>Url</nc1ihm:Nom>
+                      <nc1ihm:Nom xml:lang="en">url</nc1ihm:Nom>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:element>
+                <xs:element minOccurs="0" name="comment" type="nc1common:LongTextObjectType">
+                  <xs:annotation>
+                    <xs:documentation>Commentaire en texte libre.</xs:documentation>
+                    <xs:documentation xml:lang="en">free text comment.</xs:documentation>
+                    <xs:appinfo>
+                      <nc1ihm:Nom>Commentaire</nc1ihm:Nom>
+                      <nc1ihm:Nom xml:lang="en">comment</nc1ihm:Nom>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:element>
+                <xs:element minOccurs="0" name="extVersion" type="nc1common:ExtVersType">
+                  <xs:annotation>
+                    <xs:documentation>Extension pour versions suivantes compatibles.</xs:documentation>
+                    <xs:documentation xml:lang="en">Extension for following compatible versions.</xs:documentation>
+                    <xs:appinfo>
+                      <nc1ihm:Nom>Extension de version</nc1ihm:Nom>
+                      <nc1ihm:Nom xml:lang="en">version extension</nc1ihm:Nom>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:element>
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+          <xs:element name="location">
+            <xs:annotation>
+              <xs:documentation>Localisation.</xs:documentation>
+              <xs:documentation xml:lang="en">Location.</xs:documentation>
+              <xs:appinfo>
+                <nc1ihm:Nom>Localisation</nc1ihm:Nom>
+                <nc1ihm:Nom xml:lang="en">Location</nc1ihm:Nom>
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element minOccurs="0" name="name" type="nc1common:Text1To30ObjectType">
+                  <xs:annotation>
+                    <xs:documentation>Nom de baptême donné par l'opérateur à la localisation. Par exemple un nom de ville ou de lieu.</xs:documentation>
+                    <xs:documentation xml:lang="en">Name assigned to the location, e.g. city or place name.</xs:documentation>
+                    <xs:appinfo>
+                      <nc1ihm:Nom>Nom</nc1ihm:Nom>
+                      <nc1ihm:Nom xml:lang="en">name</nc1ihm:Nom>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:element>
+                <xs:choice>
+                  <xs:element name="point" type="nc1location:PointType">
+                    <xs:annotation>
+                      <xs:documentation>Point localisé.</xs:documentation>
+                      <xs:documentation xml:lang="en">Geolocalized point.</xs:documentation>
+                      <xs:appinfo>
+                        <nc1ihm:Nom>Point</nc1ihm:Nom>
+                        <nc1ihm:Nom xml:lang="en">Point</nc1ihm:Nom>
+                      </xs:appinfo>
+                    </xs:annotation>
+                  </xs:element>
+                  <xs:element name="polyline" type="nc1location:PolylineType">
+                    <xs:annotation>
+                      <xs:documentation>Ligne brisée orientée, sans largeur.</xs:documentation>
+                      <xs:documentation xml:lang="en">Width less oriented polyline.</xs:documentation>
+                      <xs:appinfo>
+                        <nc1ihm:Nom>Polyligne</nc1ihm:Nom>
+                        <nc1ihm:Nom xml:lang="en">Polyline</nc1ihm:Nom>
+                      </xs:appinfo>
+                    </xs:annotation>
+                  </xs:element>
+                  <xs:element maxOccurs="4" name="pointsMultiples" type="nc1location:PointType">
+                    <xs:annotation>
+                      <xs:documentation>Liste de 4 points maximum.</xs:documentation>
+                      <xs:documentation xml:lang="en">List of points.</xs:documentation>
+                      <xs:appinfo>
+                        <nc1ihm:Nom>Points Multiples</nc1ihm:Nom>
+                        <nc1ihm:Nom xml:lang="en">Multipoint</nc1ihm:Nom>
+                      </xs:appinfo>
+                    </xs:annotation>
+                  </xs:element>
+                  <xs:element name="rectangle" type="nc1location:RectangleType">
+                    <xs:annotation>
+                      <xs:documentation>Rectangle.</xs:documentation>
+                      <xs:documentation xml:lang="en">Rectangle.</xs:documentation>
+                      <xs:appinfo>
+                        <nc1ihm:Nom>Rectangle</nc1ihm:Nom>
+                        <nc1ihm:Nom xml:lang="en">Rectangle</nc1ihm:Nom>
+                      </xs:appinfo>
+                    </xs:annotation>
+                  </xs:element>
+                  <xs:element name="circle" type="nc1location:CircleType">
+                    <xs:annotation>
+                      <xs:documentation>Cercle.</xs:documentation>
+                      <xs:documentation xml:lang="en">Circle.</xs:documentation>
+                      <xs:appinfo>
+                        <nc1ihm:Nom>Cercle</nc1ihm:Nom>
+                        <nc1ihm:Nom xml:lang="en">Circle</nc1ihm:Nom>
+                      </xs:appinfo>
+                    </xs:annotation>
+                  </xs:element>
+                </xs:choice>
+                <xs:element minOccurs="0" name="datetime" type="xs:dateTime">
+                  <xs:annotation>
+                    <xs:documentation>Horodatage du relevé de position sur le terrain. Par défaut, l'heure de saisie dans le système.</xs:documentation>
+                    <xs:documentation xml:lang="en">Field position report time. By default, time of the input in the system.</xs:documentation>
+                    <xs:appinfo>
+                      <nc1ihm:Nom>Horodatage</nc1ihm:Nom>
+                      <nc1ihm:Nom xml:lang="en">Timestamp</nc1ihm:Nom>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:element>
+                <xs:element minOccurs="0" name="accuracy" type="nc1common:Int0To999Type">
+                  <xs:annotation>
+                    <xs:documentation>Précision de la localisation de l’objectif (mètres).</xs:documentation>
+                    <xs:documentation xml:lang="en">Target location accuracy (meters).</xs:documentation>
+                    <xs:appinfo>
+                      <nc1ihm:Nom>Précision</nc1ihm:Nom>
+                      <nc1ihm:Nom xml:lang="en">Precision</nc1ihm:Nom>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:element>
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+</xs:schema>

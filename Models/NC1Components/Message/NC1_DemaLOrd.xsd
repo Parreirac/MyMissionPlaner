@@ -1,0 +1,235 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema targetNamespace="urn:fra:nc1:message:demalord" xmlns:nc1ihm="urn:fra:nc1:IHM" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:nc1demalord="urn:fra:nc1:message:demalord" xmlns:nc1common="urn:fra:nc1:common:attribute" xmlns:nc1location="urn:fra:nc1:common:location" xmlns:nc1logistics="urn:fra:nc1:common:logistics" xmlns:nc1msgcom="urn:fra:nc1:common:message" xmlns:nc1obstacle="urn:fra:nc1:objet:obstacle" xmlns:nc1tacpoint="urn:fra:nc1:objet:tacpoint" xmlns:nc1unit="urn:fra:nc1:objet:unit">
+  <!-- NC1 V.9.0.0 -->
+  <xs:import namespace="urn:fra:nc1:common:attribute" schemaLocation="../Commun/Common.xsd" />
+  <xs:import namespace="urn:fra:nc1:common:location" schemaLocation="../Commun/Location.xsd" />
+  <xs:import namespace="urn:fra:nc1:common:logistics" schemaLocation="../Commun/Logistics.xsd" />
+  <xs:import namespace="urn:fra:nc1:common:message" schemaLocation="../Commun/Message.xsd" />
+  <xs:import namespace="urn:fra:nc1:objet:obstacle" schemaLocation="../Objet/NC1_Obstacle.xsd" />
+  <xs:import namespace="urn:fra:nc1:objet:tacpoint" schemaLocation="../Objet/NC1_TacPoint.xsd" />
+  <xs:import namespace="urn:fra:nc1:objet:unit" schemaLocation="../Objet/NC1_Unit.xsd" />
+  <xs:element name="NC1_DemaLOrd">
+    <xs:annotation>
+      <xs:documentation>Le message NC1_DemaLOrd est utilisé par les unités du génie pour demander des moyens spécifiques dont elles ne disposent pas organiquement.</xs:documentation>
+      <xs:documentation xml:lang="en">The NC1_DemaLOrd message is used by the engineer units  to ask for specific ways which they have not organically.</xs:documentation>
+      <xs:appinfo>
+        <nc1:type xmlns:nc1="urn:fra:nc1">Message</nc1:type>
+        <nc1ihm:Nom>Demande d'assistance logistique</nc1ihm:Nom>
+        <nc1ihm:Nom xml:lang="en">Logistics assistance request</nc1ihm:Nom>
+        <nc1:MessH xmlns:nc1="urn:fra:nc1">N/A</nc1:MessH>
+        <nc1:MessADatP3 xmlns:nc1="urn:fra:nc1">LOGASREQ</nc1:MessADatP3>
+        <nc1:LastNC1ModifyVersion xmlns:nc1="urn:fra:nc1">9.0.0</nc1:LastNC1ModifyVersion>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:complexContent>
+        <xs:extension base="nc1msgcom:BaseMessageType">
+          <xs:sequence>
+            <xs:element name="POC" type="nc1unit:UnitType">
+              <xs:annotation>
+                <xs:documentation>Données de communication du point de contact.</xs:documentation>
+                <xs:documentation xml:lang="en">Communication data of the point of contact.</xs:documentation>
+                <xs:appinfo>
+                  <nc1ihm:Nom>Point de contact</nc1ihm:Nom>
+                  <nc1ihm:Nom xml:lang="en">Point of contact</nc1ihm:Nom>
+                </xs:appinfo>
+              </xs:annotation>
+            </xs:element>
+            <xs:element maxOccurs="unbounded" name="logisticAssistanceRequest">
+              <xs:annotation>
+                <xs:documentation>Demande d'assistance logistique.</xs:documentation>
+                <xs:documentation xml:lang="en">Logistics assistance request.</xs:documentation>
+                <xs:appinfo>
+                  <nc1ihm:Nom>Demande d'assistance logistique</nc1ihm:Nom>
+                  <nc1ihm:Nom xml:lang="en">Logistics assistance request</nc1ihm:Nom>
+                </xs:appinfo>
+              </xs:annotation>
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="requestedItem" type="nc1logistics:LogisticStatusType">
+                    <xs:annotation>
+                      <xs:documentation>Ressource logistique demandée.</xs:documentation>
+                      <xs:documentation xml:lang="en">Requested logistic resource.</xs:documentation>
+                      <xs:appinfo>
+                        <nc1ihm:Nom>Ressource logistique demandée</nc1ihm:Nom>
+                        <nc1ihm:Nom xml:lang="en">Requested logistic resource</nc1ihm:Nom>
+                      </xs:appinfo>
+                    </xs:annotation>
+                  </xs:element>
+                  <xs:element name="quantityOnHand" type="nc1common:Int0To2147483647Type">
+                    <xs:annotation>
+                      <xs:documentation>Quantité restante de la ressource logistique demandée (quantité prête à l'emploi).</xs:documentation>
+                      <xs:documentation xml:lang="en">Remaining quantity of the logistic resource (ready-to-use quantity).</xs:documentation>
+                      <xs:appinfo>
+                        <nc1ihm:Nom>Quantité restante</nc1ihm:Nom>
+                        <nc1ihm:Nom xml:lang="en">Remaining quantity</nc1ihm:Nom>
+                      </xs:appinfo>
+                    </xs:annotation>
+                  </xs:element>
+                  <xs:element minOccurs="0" name="requestingUnit" type="nc1unit:UnitType">
+                    <xs:annotation>
+                      <xs:documentation>Unité bénéficiaire.</xs:documentation>
+                      <xs:documentation xml:lang="en">beneficial unit.</xs:documentation>
+                      <xs:appinfo>
+                        <nc1ihm:Nom>Unité bénéficiaire</nc1ihm:Nom>
+                        <nc1ihm:Nom xml:lang="en">beneficial unit</nc1ihm:Nom>
+                      </xs:appinfo>
+                    </xs:annotation>
+                  </xs:element>
+                  <xs:element name="targetDatetime" type="xs:dateTime">
+                    <xs:annotation>
+                      <xs:documentation>Horodatage demandé de livraison de la ressource.</xs:documentation>
+                      <xs:documentation xml:lang="en">Time of requested delivery of the resource.</xs:documentation>
+                      <xs:appinfo>
+                        <nc1ihm:Nom>Horodatage de livraison</nc1ihm:Nom>
+                        <nc1ihm:Nom xml:lang="en">Delivery time</nc1ihm:Nom>
+                      </xs:appinfo>
+                    </xs:annotation>
+                  </xs:element>
+                  <xs:element minOccurs="0" name="transport">
+                    <xs:annotation>
+                      <xs:documentation>Modalités de transport et de livraison.</xs:documentation>
+                      <xs:documentation xml:lang="en">Transport and delivery conditions.</xs:documentation>
+                      <xs:appinfo>
+                        <nc1ihm:Nom>Transport et livraison</nc1ihm:Nom>
+                        <nc1ihm:Nom xml:lang="en">Transport and delivery</nc1ihm:Nom>
+                      </xs:appinfo>
+                    </xs:annotation>
+                    <xs:complexType>
+                      <xs:sequence>
+                        <xs:element name="stageOfConfirmation" type="nc1demalord:StageOfConfirmationCode">
+                          <xs:annotation>
+                            <xs:documentation>Etat de confirmation du point de livraison (ex : "PLAN").</xs:documentation>
+                            <xs:documentation xml:lang="en">Delivery point confirmation status (ex: "PLAN").</xs:documentation>
+                            <xs:appinfo>
+                              <nc1ihm:Nom>Etat de confirmation</nc1ihm:Nom>
+                              <nc1ihm:Nom xml:lang="en">Confirmation status</nc1ihm:Nom>
+                            </xs:appinfo>
+                          </xs:annotation>
+                        </xs:element>
+                        <xs:element name="type" type="nc1demalord:DebarkationLocationTypeCode">
+                          <xs:annotation>
+                            <xs:documentation>Type de livraison (ex : "APOD").</xs:documentation>
+                            <xs:documentation xml:lang="en">Type of delivery (ex: "APOD").</xs:documentation>
+                            <xs:appinfo>
+                              <nc1ihm:Nom>Type de livraison</nc1ihm:Nom>
+                              <nc1ihm:Nom xml:lang="en">Delivery type</nc1ihm:Nom>
+                            </xs:appinfo>
+                          </xs:annotation>
+                        </xs:element>
+                        <xs:element name="locationName" type="nc1common:Text1To30Type">
+                          <xs:annotation>
+                            <xs:documentation>Nom OACI de l'aéroport, ou nom du port ou du lieu de livraison.</xs:documentation>
+                            <xs:documentation xml:lang="en">Delivery place name (ICAO airport name, harbour, …).</xs:documentation>
+                            <xs:appinfo>
+                              <nc1ihm:Nom>Nom du point de livraison</nc1ihm:Nom>
+                              <nc1ihm:Nom xml:lang="en">Delivery point name</nc1ihm:Nom>
+                            </xs:appinfo>
+                          </xs:annotation>
+                        </xs:element>
+                        <xs:element name="point" type="nc1location:PointType">
+                          <xs:annotation>
+                            <xs:documentation>Point de livraison.</xs:documentation>
+                            <xs:documentation xml:lang="en">Delivery point.</xs:documentation>
+                            <xs:appinfo>
+                              <nc1ihm:Nom>Point géographique</nc1ihm:Nom>
+                              <nc1ihm:Nom xml:lang="en">Geographical point</nc1ihm:Nom>
+                            </xs:appinfo>
+                          </xs:annotation>
+                        </xs:element>
+                        <xs:element maxOccurs="unbounded" minOccurs="0" name="obstruction" type="nc1obstacle:ObstacleType">
+                          <xs:annotation>
+                            <xs:documentation>Obstacle pouvant impacter le transport de la ressource.</xs:documentation>
+                            <xs:documentation xml:lang="en">Obstacle that could impact the transportation of the resource.</xs:documentation>
+                            <xs:appinfo>
+                              <nc1ihm:Nom>Obstacle impactant le transport</nc1ihm:Nom>
+                              <nc1ihm:Nom xml:lang="en">Obstacle affecting transport</nc1ihm:Nom>
+                            </xs:appinfo>
+                          </xs:annotation>
+                        </xs:element>
+                        <xs:element maxOccurs="unbounded" minOccurs="0" name="refuelingPoint" type="nc1tacpoint:TacPointType">
+                          <xs:annotation>
+                            <xs:documentation>Point de ravitaillement utile au transport de la ressource.</xs:documentation>
+                            <xs:documentation xml:lang="en">Refueling point for resource shipping.</xs:documentation>
+                            <xs:appinfo>
+                              <nc1ihm:Nom>Point de ravitaillement</nc1ihm:Nom>
+                              <nc1ihm:Nom xml:lang="en">Fuelling point</nc1ihm:Nom>
+                            </xs:appinfo>
+                          </xs:annotation>
+                        </xs:element>
+                        <xs:element minOccurs="0" name="additionalServices" type="nc1common:MediumTextType">
+                          <xs:annotation>
+                            <xs:documentation>Description en texte libre des services additionnels demandés.</xs:documentation>
+                            <xs:documentation xml:lang="en">Free text description of the requested additional services.</xs:documentation>
+                            <xs:appinfo>
+                              <nc1ihm:Nom>Services additionnels demandés</nc1ihm:Nom>
+                              <nc1ihm:Nom xml:lang="en">Additional services requested</nc1ihm:Nom>
+                            </xs:appinfo>
+                          </xs:annotation>
+                        </xs:element>
+                        <xs:element name="nonSupplyImpact" type="nc1common:MediumTextType">
+                          <xs:annotation>
+                            <xs:documentation>Description en texte libre de l'impact d'un défaut de livraison.</xs:documentation>
+                            <xs:documentation xml:lang="en">Free-text description of the impact of a failure to deliver.</xs:documentation>
+                            <xs:appinfo>
+                              <nc1ihm:Nom>Impact d'un défaut de livraison</nc1ihm:Nom>
+                              <nc1ihm:Nom xml:lang="en">Impact of a non-supply</nc1ihm:Nom>
+                            </xs:appinfo>
+                          </xs:annotation>
+                        </xs:element>
+                        <xs:element name="reimbursement" type="nc1common:MediumTextType">
+                          <xs:annotation>
+                            <xs:documentation>Description en texte libre des modalités de remboursement.</xs:documentation>
+                            <xs:documentation xml:lang="en">Free text description of the reimbursement instructions.</xs:documentation>
+                            <xs:appinfo>
+                              <nc1ihm:Nom>Modalités de remboursement</nc1ihm:Nom>
+                              <nc1ihm:Nom xml:lang="en">Reimbursement conditions</nc1ihm:Nom>
+                            </xs:appinfo>
+                          </xs:annotation>
+                        </xs:element>
+                      </xs:sequence>
+                    </xs:complexType>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element minOccurs="0" name="comment" type="nc1msgcom:CommentSectionType">
+              <xs:annotation>
+                <xs:documentation>Commentaire en texte libre.</xs:documentation>
+                <xs:documentation xml:lang="en">free text comment.</xs:documentation>
+                <xs:appinfo>
+                  <nc1ihm:Nom>Commentaire</nc1ihm:Nom>
+                  <nc1ihm:Nom xml:lang="en">comment</nc1ihm:Nom>
+                </xs:appinfo>
+              </xs:annotation>
+            </xs:element>
+          </xs:sequence>
+        </xs:extension>
+      </xs:complexContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:simpleType name="DebarkationLocationTypeCode">
+    <xs:annotation>
+      <xs:appinfo>
+        <nc1dico:source xmlns:nc1dico="urn:fra:nc1:dictionnaires">AdatP-3 BL14 1085/1</nc1dico:source>
+        <nc1ihm:description>Type de point de livraison d'une ressource logistique.</nc1ihm:description>
+        <nc1ihm:description xml:lang="en">Type of delivery point of a logistic resource.</nc1ihm:description>
+      </xs:appinfo>
+      <xs:documentation>Type de point de livraison d'une ressource logistique.</xs:documentation>
+      <xs:documentation xml:lang="en">Type of delivery point of a logistic resource.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:integer" />
+  </xs:simpleType>
+  <xs:simpleType name="StageOfConfirmationCode">
+    <xs:annotation>
+      <xs:appinfo>
+        <nc1dico:source xmlns:nc1dico="urn:fra:nc1:dictionnaires">AdatP-3 BL14 1268/1</nc1dico:source>
+        <nc1ihm:description>Etat de confirmation.</nc1ihm:description>
+        <nc1ihm:description xml:lang="en">Confirmation status.</nc1ihm:description>
+      </xs:appinfo>
+      <xs:documentation>Etat de confirmation.</xs:documentation>
+      <xs:documentation xml:lang="en">Confirmation status.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:integer" />
+  </xs:simpleType>
+</xs:schema>

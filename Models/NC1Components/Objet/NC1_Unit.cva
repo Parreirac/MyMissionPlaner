@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<cva:ContextValueAssociation xmlns:cva="http://docs.oasis-open.org/codelist/ns/ContextValueAssociation/1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="urn:fra:nc1:objet:unit" queryBinding="xslt2" xmlns:nc1unit="urn:fra:nc1:objet:unit">
+  <!-- NC1 V.9.0.0 -->
+  <ValueLists>
+    <ValueList xml:id="nc1objcom-ActivationStatusCode" uri="../Dictionnaires/ActivationStatusCode.gc" />
+    <ValueList xml:id="nc1objcom-IsFullCode" uri="../Dictionnaires/IsFullCode.gc" />
+    <ValueList xml:id="nc1unit-UnitFrSpecificCode" uri="../Dictionnaires/UnitFrSpecificCode.gc" />
+    <ValueList xml:id="nc1sicsdicos-L125_1Code" uri="../Dictionnaires/L125_1Code.gc" />
+    <ValueList xml:id="nc1sicsdicos-L115_1Code" uri="../Dictionnaires/L115_1Code.gc" />
+    <ValueList xml:id="nc1sicsdicos-L135_30Code" uri="../Dictionnaires/L135_30Code.gc" />
+    <ValueList xml:id="nc1sicsdicos-L110_30Code" uri="../Dictionnaires/L110_30Code.gc" />
+    <ValueList xml:id="nc1sicsdicos-L135_1Code" uri="../Dictionnaires/L135_1Code.gc" />
+    <ValueList xml:id="nc1sicsdicos-L125_7Code" uri="../Dictionnaires/L125_7Code.gc" />
+    <ValueList xml:id="nc1sicsdicos-L107_1Code" uri="../Dictionnaires/L107_1Code.gc" />
+    <ValueList xml:id="nc1sicsdicos-L114_1Code" uri="../Dictionnaires/L114_1Code.gc" />
+    <ValueList xml:id="nc1sicsdicos-L135_16Code" uri="../Dictionnaires/L135_16Code.gc" />
+    <ValueList xml:id="nc1sicsdicos-L125_17Code" uri="../Dictionnaires/L125_17Code.gc" />
+    <ValueList xml:id="nc1sicsdicos-L125_16Code" uri="../Dictionnaires/L125_16Code.gc" />
+    <ValueList xml:id="nc1sicsdicos-L117_5Code" uri="../Dictionnaires/L117_5Code.gc" />
+    <ValueList xml:id="nc1sicsdicos-L114_10Code" uri="../Dictionnaires/L114_10Code.gc" />
+  </ValueLists>
+  <Contexts>
+    <Context address="/nc1unit:NC1_Unit/@activationStatus" values="nc1objcom-ActivationStatusCode" />
+    <Context address="/nc1unit:NC1_Unit/@isFull" values="nc1objcom-IsFullCode" />
+    <Context address="/nc1unit:NC1_Unit/tacticalData/frSpecificSymbol" values="nc1unit-UnitFrSpecificCode" />
+    <Context address="/nc1unit:NC1_Unit/tacticalData/operationalStatusIndicator" values="nc1sicsdicos-L125_1Code" />
+    <Context address="/nc1unit:NC1_Unit/tacticalData/activity" values="nc1sicsdicos-L115_1Code" />
+    <Context address="/nc1unit:NC1_Unit/tacticalData/isDismounted" values="nc1sicsdicos-L135_30Code" />
+    <Context address="/nc1unit:NC1_Unit/tacticalData/commandAndControlRole" values="nc1sicsdicos-L110_30Code" />
+    <Context address="/nc1unit:NC1_Unit/tacticalData/ticIndicator" values="nc1sicsdicos-L135_1Code" />
+    <Context address="/nc1unit:NC1_Unit/tacticalData/availability" values="nc1sicsdicos-L125_7Code" />
+    <Context address="/nc1unit:NC1_Unit/tacticalData/cbrnProtection" values="nc1sicsdicos-L107_1Code" />
+    <Context address="/nc1unit:NC1_Unit/tacticalData/weaponControlOrder" values="nc1sicsdicos-L114_1Code" />
+    <Context address="/nc1unit:NC1_Unit/tacticalData/subordination/subordinationType" values="nc1sicsdicos-L135_16Code" />
+    <Context address="/nc1unit:NC1_Unit/status/operationalStatus/effectif" values="nc1sicsdicos-L125_17Code" />
+    <Context address="/nc1unit:NC1_Unit/status/operationalStatus/personnelTiredness" values="nc1sicsdicos-L125_16Code" />
+    <Context address="/nc1unit:NC1_Unit/status/operationalStatus/equipment" values="nc1sicsdicos-L125_17Code" />
+    <Context address="/nc1unit:NC1_Unit/status/operationalStatus/fuel" values="nc1sicsdicos-L125_17Code" />
+    <Context address="/nc1unit:NC1_Unit/status/operationalStatus/ammunitions" values="nc1sicsdicos-L125_17Code" />
+    <Context address="/nc1unit:NC1_Unit/location/quality" values="nc1sicsdicos-L117_5Code" />
+    <Context address="/nc1unit:NC1_Unit/anticipatedStance/validityPeriod/tacticalTime" values="nc1sicsdicos-L114_10Code" />
+  </Contexts>
+</cva:ContextValueAssociation>

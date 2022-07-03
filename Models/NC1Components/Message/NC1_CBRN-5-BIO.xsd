@@ -1,0 +1,88 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema targetNamespace="urn:fra:nc1:message:cbrn5bio" xmlns:nc1ihm="urn:fra:nc1:IHM" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:nc1cbrn5bio="urn:fra:nc1:message:cbrn5bio" xmlns:nc1cbrn="urn:fra:nc1:common:cbrn" xmlns:nc1msgcom="urn:fra:nc1:common:message">
+  <!-- NC1 V.9.0.0 -->
+  <xs:import namespace="urn:fra:nc1:common:cbrn" schemaLocation="../Commun/Cbrn.xsd" />
+  <xs:import namespace="urn:fra:nc1:common:message" schemaLocation="../Commun/Message.xsd" />
+  <xs:element name="NC1_CBRN-5-BIO">
+    <xs:annotation>
+      <xs:documentation>Le message NC1_CBRN-5-BIO permet la transmission des zones effectives de contamination biologique.</xs:documentation>
+      <xs:documentation xml:lang="en">The NC1_CBRN-5-BIO message allows the transmission of the effective zones of biological contamination.</xs:documentation>
+      <xs:appinfo>
+        <nc1:type xmlns:nc1="urn:fra:nc1">Message</nc1:type>
+        <nc1ihm:Nom>Diffusion des zones de contamination biologique</nc1ihm:Nom>
+        <nc1ihm:Nom xml:lang="en">Cbrn 5 biological report</nc1ihm:Nom>
+        <nc1:MessH xmlns:nc1="urn:fra:nc1">N/A</nc1:MessH>
+        <nc1:MessADatP3 xmlns:nc1="urn:fra:nc1">CBRN_5_BIO</nc1:MessADatP3>
+        <nc1:LastNC1ModifyVersion xmlns:nc1="urn:fra:nc1">9.0.0</nc1:LastNC1ModifyVersion>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:complexContent>
+        <xs:extension base="nc1msgcom:BaseMessageType">
+          <xs:sequence>
+            <xs:element minOccurs="0" name="alfa" type="nc1cbrn:AlfaType">
+              <xs:annotation>
+                <xs:documentation>Numéro de l'événement NRBC.</xs:documentation>
+                <xs:documentation xml:lang="en">CBRN event number.</xs:documentation>
+                <xs:appinfo>
+                  <nc1ihm:Nom>ALFA</nc1ihm:Nom>
+                  <nc1ihm:Nom xml:lang="en">ALPHA</nc1ihm:Nom>
+                </xs:appinfo>
+              </xs:annotation>
+            </xs:element>
+            <xs:element minOccurs="0" name="delta" type="nc1cbrn:DeltaType">
+              <xs:annotation>
+                <xs:documentation>Horodatages de début et de fin de l'événement.</xs:documentation>
+                <xs:documentation xml:lang="en">Event start and end datetimes.</xs:documentation>
+                <xs:appinfo>
+                  <nc1ihm:Nom>DELTA</nc1ihm:Nom>
+                  <nc1ihm:Nom xml:lang="en">DELTA</nc1ihm:Nom>
+                </xs:appinfo>
+              </xs:annotation>
+            </xs:element>
+            <xs:element name="india" type="nc1cbrn:IndiaType">
+              <xs:annotation>
+                <xs:documentation>Caractéristiques de la diffusion de l'agent NRBC.</xs:documentation>
+                <xs:documentation xml:lang="en">CBRN agent release characteristics.</xs:documentation>
+                <xs:appinfo>
+                  <nc1ihm:Nom>INDIA</nc1ihm:Nom>
+                  <nc1ihm:Nom xml:lang="en">INDIA</nc1ihm:Nom>
+                </xs:appinfo>
+              </xs:annotation>
+            </xs:element>
+            <xs:element name="oscar" type="nc1cbrn:OscarType">
+              <xs:annotation>
+                <xs:documentation>Horodatage des lignes de contour estimées de l'événement.</xs:documentation>
+                <xs:documentation xml:lang="en">Datetime of the estimated area outlines of the event.</xs:documentation>
+                <xs:appinfo>
+                  <nc1ihm:Nom>OSCAR</nc1ihm:Nom>
+                  <nc1ihm:Nom xml:lang="en">OSCAR</nc1ihm:Nom>
+                </xs:appinfo>
+              </xs:annotation>
+            </xs:element>
+            <xs:element name="xraya" type="nc1cbrn:XrayaType">
+              <xs:annotation>
+                <xs:documentation>Contour effectif de la contamination NRBC.</xs:documentation>
+                <xs:documentation xml:lang="en">Current shape of the CBRN contamination.</xs:documentation>
+                <xs:appinfo>
+                  <nc1ihm:Nom>XRAYA</nc1ihm:Nom>
+                  <nc1ihm:Nom xml:lang="en">XRAYA</nc1ihm:Nom>
+                </xs:appinfo>
+              </xs:annotation>
+            </xs:element>
+            <xs:element minOccurs="0" name="crbnInfo" type="nc1msgcom:MixedAnyType">
+              <xs:annotation>
+                <xs:documentation>Informations supplémentaires.</xs:documentation>
+                <xs:documentation xml:lang="en">Additional information.</xs:documentation>
+                <xs:appinfo>
+                  <nc1ihm:Nom>CBRN INFO</nc1ihm:Nom>
+                  <nc1ihm:Nom xml:lang="en">CBRN INFO</nc1ihm:Nom>
+                </xs:appinfo>
+              </xs:annotation>
+            </xs:element>
+          </xs:sequence>
+        </xs:extension>
+      </xs:complexContent>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

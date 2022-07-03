@@ -1,0 +1,588 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema targetNamespace="urn:fra:nc1:message:ler" xmlns:nc1ihm="urn:fra:nc1:IHM" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:nc1ler="urn:fra:nc1:message:ler" xmlns:nc1common="urn:fra:nc1:common:attribute" xmlns:nc1logistics="urn:fra:nc1:common:logistics" xmlns:nc1msgcom="urn:fra:nc1:common:message" xmlns:nc1initodb="urn:fra:nc1:message:initodb">
+  <!-- NC1 V.9.0.0 -->
+  <xs:import namespace="urn:fra:nc1:common:attribute" schemaLocation="../Commun/Common.xsd" />
+  <xs:import namespace="urn:fra:nc1:common:logistics" schemaLocation="../Commun/Logistics.xsd" />
+  <xs:import namespace="urn:fra:nc1:common:message" schemaLocation="../Commun/Message.xsd" />
+  <xs:import namespace="urn:fra:nc1:message:initodb" schemaLocation="NC1_InitOdb.xsd" />
+  <xs:element name="NC1_ListeEquipementsRessources">
+    <xs:annotation>
+      <xs:documentation>Le message NC1_ListeEquipementsRessources est utilisé pour initialiser les SIOCs et l’OPL en transmettant la liste de données quasi-permanentes sur les équipements et les ressources.</xs:documentation>
+      <xs:documentation xml:lang="en">The NC1_ListeEquipementsRessources message is used to initialize the SIOCs and the OPL by passing on the list of quasi-permanent data on equipment and resources.</xs:documentation>
+      <xs:appinfo>
+        <nc1:type xmlns:nc1="urn:fra:nc1">Message</nc1:type>
+        <nc1ihm:Nom>Liste des équipements et des ressources</nc1ihm:Nom>
+        <nc1ihm:Nom xml:lang="en">Equipments and resources list</nc1ihm:Nom>
+        <nc1:MessH xmlns:nc1="urn:fra:nc1">N/A</nc1:MessH>
+        <nc1:MessADatP3 xmlns:nc1="urn:fra:nc1">N/A</nc1:MessADatP3>
+        <nc1:LastNC1ModifyVersion xmlns:nc1="urn:fra:nc1">9.0.0</nc1:LastNC1ModifyVersion>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:complexContent>
+        <xs:extension base="nc1msgcom:BaseMessageType">
+          <xs:sequence>
+            <xs:element maxOccurs="unbounded" minOccurs="0" name="equipments">
+              <xs:annotation>
+                <xs:documentation>Données sur les équipements.</xs:documentation>
+                <xs:documentation xml:lang="en">Information about equipments.</xs:documentation>
+                <xs:appinfo>
+                  <nc1ihm:Nom>Equipements</nc1ihm:Nom>
+                  <nc1ihm:Nom xml:lang="en">Equipments</nc1ihm:Nom>
+                </xs:appinfo>
+              </xs:annotation>
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="nicCode" type="nc1common:NicCodeType">
+                    <xs:annotation>
+                      <xs:documentation>Code NIC (National Item Code) de l'équipement.</xs:documentation>
+                      <xs:documentation xml:lang="en">NIC (National Item Code) of the equipment.</xs:documentation>
+                      <xs:appinfo>
+                        <nc1ihm:Nom>Code NIC</nc1ihm:Nom>
+                        <nc1ihm:Nom xml:lang="en">NIC code</nc1ihm:Nom>
+                      </xs:appinfo>
+                    </xs:annotation>
+                  </xs:element>
+                  <xs:element name="name" type="nc1common:Text1To50Type">
+                    <xs:annotation>
+                      <xs:documentation>Nom de l'équipement.</xs:documentation>
+                      <xs:documentation xml:lang="en">Equipment name.</xs:documentation>
+                      <xs:appinfo>
+                        <nc1ihm:Nom>Nom</nc1ihm:Nom>
+                        <nc1ihm:Nom xml:lang="en">name</nc1ihm:Nom>
+                      </xs:appinfo>
+                    </xs:annotation>
+                  </xs:element>
+                  <xs:element minOccurs="0" name="shortName" type="nc1common:ShortTextType">
+                    <xs:annotation>
+                      <xs:documentation>Nom court de l'équipement.</xs:documentation>
+                      <xs:documentation xml:lang="en">Equipment short name.</xs:documentation>
+                      <xs:appinfo>
+                        <nc1ihm:Nom>Nom court</nc1ihm:Nom>
+                        <nc1ihm:Nom xml:lang="en">Short name</nc1ihm:Nom>
+                      </xs:appinfo>
+                    </xs:annotation>
+                  </xs:element>
+                  <xs:element minOccurs="0" name="englishName" type="nc1common:Text1To50Type">
+                    <xs:annotation>
+                      <xs:documentation>Nom anglais de l'équipement.</xs:documentation>
+                      <xs:documentation xml:lang="en">Equipment name.</xs:documentation>
+                      <xs:appinfo>
+                        <nc1ihm:Nom>Nom anglais</nc1ihm:Nom>
+                        <nc1ihm:Nom xml:lang="en">English name</nc1ihm:Nom>
+                      </xs:appinfo>
+                    </xs:annotation>
+                  </xs:element>
+                  <xs:element minOccurs="0" name="shortEnglishName" type="nc1common:ShortTextType">
+                    <xs:annotation>
+                      <xs:documentation>Nom court anglais de l'équipement.</xs:documentation>
+                      <xs:documentation xml:lang="en">Equipment short name.</xs:documentation>
+                      <xs:appinfo>
+                        <nc1ihm:Nom>Nom court anglais</nc1ihm:Nom>
+                        <nc1ihm:Nom xml:lang="en">Equipment short name</nc1ihm:Nom>
+                      </xs:appinfo>
+                    </xs:annotation>
+                  </xs:element>
+                  <xs:element minOccurs="0" name="nnoCode" type="nc1initodb:NnoCodeType">
+                    <xs:annotation>
+                      <xs:documentation>Numéro de Nomenclature OTAN de l'équipement.</xs:documentation>
+                      <xs:documentation xml:lang="en">NNO code of the equipment.</xs:documentation>
+                      <xs:appinfo>
+                        <nc1ihm:Nom>Code NNO</nc1ihm:Nom>
+                        <nc1ihm:Nom xml:lang="en">NNO code</nc1ihm:Nom>
+                      </xs:appinfo>
+                    </xs:annotation>
+                  </xs:element>
+                  <xs:element minOccurs="0" name="ricCode" type="nc1initodb:RicCodeType">
+                    <xs:annotation>
+                      <xs:documentation>Code RIC (Reportable Item Code) de l'équipement.</xs:documentation>
+                      <xs:documentation xml:lang="en">RIC NATO code of the equipment.</xs:documentation>
+                      <xs:appinfo>
+                        <nc1ihm:Nom>Code RIC</nc1ihm:Nom>
+                        <nc1ihm:Nom xml:lang="en">RIC code</nc1ihm:Nom>
+                      </xs:appinfo>
+                    </xs:annotation>
+                  </xs:element>
+                  <xs:element minOccurs="0" name="category" type="nc1initodb:EquipmentCategoryCode">
+                    <xs:annotation>
+                      <xs:documentation>Catégorie de l'équipement.</xs:documentation>
+                      <xs:documentation xml:lang="en">"Type of chemical or biological event (e.g. ""BIOATT"")".</xs:documentation>
+                      <xs:appinfo>
+                        <nc1ihm:Nom>Catégorie</nc1ihm:Nom>
+                        <nc1ihm:Nom xml:lang="en">Category</nc1ihm:Nom>
+                      </xs:appinfo>
+                    </xs:annotation>
+                  </xs:element>
+                  <xs:element minOccurs="0" name="isDangerous" type="xs:boolean">
+                    <xs:annotation>
+                      <xs:documentation>Equipement dangereux.</xs:documentation>
+                      <xs:documentation xml:lang="en">Dangerous equipment.</xs:documentation>
+                      <xs:appinfo>
+                        <nc1ihm:Nom>Dangereux</nc1ihm:Nom>
+                        <nc1ihm:Nom xml:lang="en">Dangerous</nc1ihm:Nom>
+                      </xs:appinfo>
+                    </xs:annotation>
+                  </xs:element>
+                  <xs:element minOccurs="0" name="isStackable" type="xs:boolean">
+                    <xs:annotation>
+                      <xs:documentation>Equipement empilable.</xs:documentation>
+                      <xs:documentation xml:lang="en">Stackable equipment.</xs:documentation>
+                      <xs:appinfo>
+                        <nc1ihm:Nom>Empilable</nc1ihm:Nom>
+                        <nc1ihm:Nom xml:lang="en">Stackable</nc1ihm:Nom>
+                      </xs:appinfo>
+                    </xs:annotation>
+                  </xs:element>
+                  <xs:element minOccurs="0" name="type" type="nc1common:ShortTextType">
+                    <xs:annotation>
+                      <xs:documentation>Type de l'équipement.</xs:documentation>
+                      <xs:documentation xml:lang="en">Free text description of the type of airspace area.</xs:documentation>
+                      <xs:appinfo>
+                        <nc1ihm:Nom>Type d'équipement</nc1ihm:Nom>
+                        <nc1ihm:Nom xml:lang="en">Equipment type</nc1ihm:Nom>
+                      </xs:appinfo>
+                    </xs:annotation>
+                  </xs:element>
+                  <xs:element minOccurs="0" name="fuel" type="nc1initodb:FuelCategoryCode">
+                    <xs:annotation>
+                      <xs:documentation>Carburant principal utilisé par l'équipement.</xs:documentation>
+                      <xs:documentation xml:lang="en">Main fuel used by the equipment.</xs:documentation>
+                      <xs:appinfo>
+                        <nc1ihm:Nom>Carburant principal</nc1ihm:Nom>
+                        <nc1ihm:Nom xml:lang="en">Main fuel</nc1ihm:Nom>
+                      </xs:appinfo>
+                    </xs:annotation>
+                  </xs:element>
+                  <xs:element minOccurs="0" name="fuelConsumption" type="nc1common:Decimal0To9999999999999Digits3Type">
+                    <xs:annotation>
+                      <xs:documentation>Consommation en carburant de l'équipement (litres/100km).</xs:documentation>
+                      <xs:documentation xml:lang="en">Fuel consumption, in litres per 100 km.</xs:documentation>
+                      <xs:appinfo>
+                        <nc1ihm:Nom>Consommation carburant</nc1ihm:Nom>
+                        <nc1ihm:Nom xml:lang="en">Fuel consumption</nc1ihm:Nom>
+                      </xs:appinfo>
+                    </xs:annotation>
+                  </xs:element>
+                  <xs:element minOccurs="0" name="fuelThreshold" type="nc1initodb:FuelThresholdCode">
+                    <xs:annotation>
+                      <xs:documentation>Seuil de carburant minimal de l'équipement.</xs:documentation>
+                      <xs:documentation xml:lang="en">"Fuel threshold (e.g. ""1/4"")".</xs:documentation>
+                      <xs:appinfo>
+                        <nc1ihm:Nom>Seuil carburant</nc1ihm:Nom>
+                        <nc1ihm:Nom xml:lang="en">Fuel threshold</nc1ihm:Nom>
+                      </xs:appinfo>
+                    </xs:annotation>
+                  </xs:element>
+                  <xs:element minOccurs="0" name="emptyWeight" type="nc1common:Int0To2147483647Type">
+                    <xs:annotation>
+                      <xs:documentation>Poids à vide de l'équipement (kg).</xs:documentation>
+                      <xs:documentation xml:lang="en">Equipment empty weight (kg).</xs:documentation>
+                      <xs:appinfo>
+                        <nc1ihm:Nom>Poids à vide</nc1ihm:Nom>
+                        <nc1ihm:Nom xml:lang="en">Empty weight</nc1ihm:Nom>
+                      </xs:appinfo>
+                    </xs:annotation>
+                  </xs:element>
+                  <xs:element minOccurs="0" name="grossWeight" type="nc1common:Int0To2147483647Type">
+                    <xs:annotation>
+                      <xs:documentation>Poids Total en Charge de l'équipement (kg).</xs:documentation>
+                      <xs:documentation xml:lang="en">Equipment gross weight (kg).</xs:documentation>
+                      <xs:appinfo>
+                        <nc1ihm:Nom>PTC</nc1ihm:Nom>
+                        <nc1ihm:Nom xml:lang="en">PTC</nc1ihm:Nom>
+                      </xs:appinfo>
+                    </xs:annotation>
+                  </xs:element>
+                  <xs:element minOccurs="0" name="width" type="nc1common:Decimal0To99999999Digits3Type">
+                    <xs:annotation>
+                      <xs:documentation>Largeur maximale de l'équipement (mètres).</xs:documentation>
+                      <xs:documentation xml:lang="en">Maximum width of the equipment (meters).</xs:documentation>
+                      <xs:appinfo>
+                        <nc1ihm:Nom>Largeur</nc1ihm:Nom>
+                        <nc1ihm:Nom xml:lang="en">Width</nc1ihm:Nom>
+                      </xs:appinfo>
+                    </xs:annotation>
+                  </xs:element>
+                  <xs:element minOccurs="0" name="length" type="nc1common:Decimal0To99999999Digits3Type">
+                    <xs:annotation>
+                      <xs:documentation>Longueur maximale de l'équipement (mètres).</xs:documentation>
+                      <xs:documentation xml:lang="en">Maximum length of the equipment (meters).</xs:documentation>
+                      <xs:appinfo>
+                        <nc1ihm:Nom>Longueur</nc1ihm:Nom>
+                        <nc1ihm:Nom xml:lang="en">Lenght</nc1ihm:Nom>
+                      </xs:appinfo>
+                    </xs:annotation>
+                  </xs:element>
+                  <xs:element minOccurs="0" name="height" type="nc1common:Decimal0To99999999Digits3Type">
+                    <xs:annotation>
+                      <xs:documentation>Hauteur maximale de l'équipement (mètres).</xs:documentation>
+                      <xs:documentation xml:lang="en">Maximum height of the equipment (meters).</xs:documentation>
+                      <xs:appinfo>
+                        <nc1ihm:Nom>Hauteur</nc1ihm:Nom>
+                        <nc1ihm:Nom xml:lang="en">Height</nc1ihm:Nom>
+                      </xs:appinfo>
+                    </xs:annotation>
+                  </xs:element>
+                  <xs:element minOccurs="0" name="turningRadius" type="nc1common:Decimal0To99999999Digits3Type">
+                    <xs:annotation>
+                      <xs:documentation>Rayon de braquage maximal de l'équipement (mètres).</xs:documentation>
+                      <xs:documentation xml:lang="en">Maximum turning radius of the vehicle expressed in meters.</xs:documentation>
+                      <xs:appinfo>
+                        <nc1ihm:Nom>Rayon de braquage</nc1ihm:Nom>
+                        <nc1ihm:Nom xml:lang="en">Maximum turning radius of the vehicle</nc1ihm:Nom>
+                      </xs:appinfo>
+                    </xs:annotation>
+                  </xs:element>
+                  <xs:element minOccurs="0" name="axleLoad" type="nc1common:Decimal0To999999Type">
+                    <xs:annotation>
+                      <xs:documentation>Charge maximale par essieu du véhicule (tonnes).</xs:documentation>
+                      <xs:documentation xml:lang="en">Maximum axle of the vehicle (meters).</xs:documentation>
+                      <xs:appinfo>
+                        <nc1ihm:Nom>Charge par essieu</nc1ihm:Nom>
+                        <nc1ihm:Nom xml:lang="en">Axle load</nc1ihm:Nom>
+                      </xs:appinfo>
+                    </xs:annotation>
+                  </xs:element>
+                  <xs:element minOccurs="0" name="vehicleMilitaryClass" type="nc1common:Int0To999999Type">
+                    <xs:annotation>
+                      <xs:documentation>Classe de véhicule associée à l'équipement.</xs:documentation>
+                      <xs:documentation xml:lang="en">Vehicle military class associated to the equipment.</xs:documentation>
+                      <xs:appinfo>
+                        <nc1ihm:Nom>Classe de véhicule</nc1ihm:Nom>
+                        <nc1ihm:Nom xml:lang="en">Vehicle military class</nc1ihm:Nom>
+                      </xs:appinfo>
+                    </xs:annotation>
+                  </xs:element>
+                  <xs:element minOccurs="0" name="supplyClass" type="nc1initodb:SupplyClassCode">
+                    <xs:annotation>
+                      <xs:documentation>Classe de ravitaillement OTAN associée à l'équipement.</xs:documentation>
+                      <xs:documentation xml:lang="en">"NATO supply class (e.g. ""CLS3"")".</xs:documentation>
+                      <xs:appinfo>
+                        <nc1ihm:Nom>Classe de ravitaillement OTAN</nc1ihm:Nom>
+                        <nc1ihm:Nom xml:lang="en">NATO supply class</nc1ihm:Nom>
+                      </xs:appinfo>
+                    </xs:annotation>
+                  </xs:element>
+                  <xs:element minOccurs="0" name="mobilityCategory" type="nc1logistics:MobilityCategoryCode">
+                    <xs:annotation>
+                      <xs:documentation>Catégorie de mobilité associée à l'équipement.</xs:documentation>
+                      <xs:documentation xml:lang="en">Mobility category associated to the equipment.</xs:documentation>
+                      <xs:appinfo>
+                        <nc1ihm:Nom>Catégorie mobilité</nc1ihm:Nom>
+                        <nc1ihm:Nom xml:lang="en">Mobility category</nc1ihm:Nom>
+                      </xs:appinfo>
+                    </xs:annotation>
+                  </xs:element>
+                  <xs:element minOccurs="0" name="loadMilitaryClass" type="nc1common:ShortTextType">
+                    <xs:annotation>
+                      <xs:documentation>Classification des charges transportées par l'équipement.</xs:documentation>
+                      <xs:documentation xml:lang="en">Military class of the load carried by to the equipment.</xs:documentation>
+                      <xs:appinfo>
+                        <nc1ihm:Nom>Classe militaire</nc1ihm:Nom>
+                        <nc1ihm:Nom xml:lang="en">Military load classification</nc1ihm:Nom>
+                      </xs:appinfo>
+                    </xs:annotation>
+                  </xs:element>
+                  <xs:element minOccurs="0" name="transportationWidth" type="nc1common:Decimal0To99999999Type">
+                    <xs:annotation>
+                      <xs:documentation>Largeur de l'équipement pour le transport (mètres).</xs:documentation>
+                      <xs:documentation xml:lang="en">Width requested for transportation (meters).</xs:documentation>
+                      <xs:appinfo>
+                        <nc1ihm:Nom>Largeur transport</nc1ihm:Nom>
+                        <nc1ihm:Nom xml:lang="en">Transportation width</nc1ihm:Nom>
+                      </xs:appinfo>
+                    </xs:annotation>
+                  </xs:element>
+                  <xs:element minOccurs="0" name="transportationLength" type="nc1common:Decimal0To99999999Type">
+                    <xs:annotation>
+                      <xs:documentation>Longueur de l'équipement pour le transport (mètres).</xs:documentation>
+                      <xs:documentation xml:lang="en">Length requested for transportation (meters).</xs:documentation>
+                      <xs:appinfo>
+                        <nc1ihm:Nom>Longueur transport</nc1ihm:Nom>
+                        <nc1ihm:Nom xml:lang="en">Transportation length</nc1ihm:Nom>
+                      </xs:appinfo>
+                    </xs:annotation>
+                  </xs:element>
+                  <xs:element minOccurs="0" name="transportationHeight" type="nc1common:Decimal0To99999999Type">
+                    <xs:annotation>
+                      <xs:documentation>Hauteur de l'équipement pour le transport (mètres).</xs:documentation>
+                      <xs:documentation xml:lang="en">Height requested for transportation (meters).</xs:documentation>
+                      <xs:appinfo>
+                        <nc1ihm:Nom>Hauteur transport</nc1ihm:Nom>
+                        <nc1ihm:Nom xml:lang="en">Transportation height</nc1ihm:Nom>
+                      </xs:appinfo>
+                    </xs:annotation>
+                  </xs:element>
+                  <xs:element minOccurs="0" name="isAirTransportable" type="xs:boolean">
+                    <xs:annotation>
+                      <xs:documentation>Indique si l'équipement est transportable par air (1=Oui).</xs:documentation>
+                      <xs:documentation xml:lang="en">Specifies if the equipment is air transportable (1=Yes).</xs:documentation>
+                      <xs:appinfo>
+                        <nc1ihm:Nom>Transportable par air</nc1ihm:Nom>
+                        <nc1ihm:Nom xml:lang="en">Specifies if the equipment is air transportable</nc1ihm:Nom>
+                      </xs:appinfo>
+                    </xs:annotation>
+                  </xs:element>
+                  <xs:element minOccurs="0" name="isSeaTransportable" type="xs:boolean">
+                    <xs:annotation>
+                      <xs:documentation>Indique si l'équipement est transportable par mer (1=Oui).</xs:documentation>
+                      <xs:documentation xml:lang="en">Specifies if the equipment is sea transportable (1=Yes).</xs:documentation>
+                      <xs:appinfo>
+                        <nc1ihm:Nom>Transportable par mer</nc1ihm:Nom>
+                        <nc1ihm:Nom xml:lang="en">Specifies if the equipment is sea transportable</nc1ihm:Nom>
+                      </xs:appinfo>
+                    </xs:annotation>
+                  </xs:element>
+                  <xs:element minOccurs="0" name="isRailTransportable" type="xs:boolean">
+                    <xs:annotation>
+                      <xs:documentation>Indique si l'équipement est transportable par rail (1=Oui).</xs:documentation>
+                      <xs:documentation xml:lang="en">Specifies if the equipment is rail transportable (1=Yes).</xs:documentation>
+                      <xs:appinfo>
+                        <nc1ihm:Nom>Transportable par rail</nc1ihm:Nom>
+                        <nc1ihm:Nom xml:lang="en">Specifies if the equipment is rail transportable</nc1ihm:Nom>
+                      </xs:appinfo>
+                    </xs:annotation>
+                  </xs:element>
+                  <xs:element minOccurs="0" name="isRoadTransportable" type="xs:boolean">
+                    <xs:annotation>
+                      <xs:documentation>Indique si l'équipement est transportable par route (1=Oui).</xs:documentation>
+                      <xs:documentation xml:lang="en">Specifies if the equipment is road transportable (1=Yes).</xs:documentation>
+                      <xs:appinfo>
+                        <nc1ihm:Nom>Transportable par route</nc1ihm:Nom>
+                        <nc1ihm:Nom xml:lang="en">Specifies if the equipment is road transportable</nc1ihm:Nom>
+                      </xs:appinfo>
+                    </xs:annotation>
+                  </xs:element>
+                  <xs:element minOccurs="0" name="isWaterwayTransportable" type="xs:boolean">
+                    <xs:annotation>
+                      <xs:documentation>Indique si l'équipement est transportable par voie fluviale (1=Oui).</xs:documentation>
+                      <xs:documentation xml:lang="en">Specifies if the equipment is waterway transportable (1=Yes).</xs:documentation>
+                      <xs:appinfo>
+                        <nc1ihm:Nom>Transportable par voie fluviale</nc1ihm:Nom>
+                        <nc1ihm:Nom xml:lang="en">Specifies if the equipment is waterway transportable</nc1ihm:Nom>
+                      </xs:appinfo>
+                    </xs:annotation>
+                  </xs:element>
+                  <xs:element minOccurs="0" name="rangeMean" type="nc1common:ShortTextType">
+                    <xs:annotation>
+                      <xs:documentation>Moyen de portée de l'équipement.</xs:documentation>
+                      <xs:documentation xml:lang="en">Range mean of the equipment.</xs:documentation>
+                      <xs:appinfo>
+                        <nc1ihm:Nom>Moyen de portée</nc1ihm:Nom>
+                        <nc1ihm:Nom xml:lang="en">Range mean</nc1ihm:Nom>
+                      </xs:appinfo>
+                    </xs:annotation>
+                  </xs:element>
+                  <xs:element minOccurs="0" name="rangeType" type="nc1initodb:RangeTypeCode">
+                    <xs:annotation>
+                      <xs:documentation>Type de portée de l'équipement.</xs:documentation>
+                      <xs:documentation xml:lang="en">Range type of the equipment.</xs:documentation>
+                      <xs:appinfo>
+                        <nc1ihm:Nom>Type de portée</nc1ihm:Nom>
+                        <nc1ihm:Nom xml:lang="en">Range type</nc1ihm:Nom>
+                      </xs:appinfo>
+                    </xs:annotation>
+                  </xs:element>
+                  <xs:element minOccurs="0" name="range" type="nc1common:Decimal0To99999999Digits3Type">
+                    <xs:annotation>
+                      <xs:documentation>Distance de portée (mètres).</xs:documentation>
+                      <xs:documentation xml:lang="en">Range of the equipment (meters).</xs:documentation>
+                      <xs:appinfo>
+                        <nc1ihm:Nom>Portée</nc1ihm:Nom>
+                        <nc1ihm:Nom xml:lang="en">Range</nc1ihm:Nom>
+                      </xs:appinfo>
+                    </xs:annotation>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element maxOccurs="unbounded" minOccurs="0" name="resources">
+              <xs:annotation>
+                <xs:documentation>Données sur les ressources.</xs:documentation>
+                <xs:documentation xml:lang="en">Resources information.</xs:documentation>
+                <xs:appinfo>
+                  <nc1ihm:Nom>Ressources</nc1ihm:Nom>
+                  <nc1ihm:Nom xml:lang="en">Resources</nc1ihm:Nom>
+                </xs:appinfo>
+              </xs:annotation>
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="nicCode" type="nc1common:NicCodeType">
+                    <xs:annotation>
+                      <xs:documentation>Code NIC (National Item Code) de la ressource.</xs:documentation>
+                      <xs:documentation xml:lang="en">NIC (National Item Code) of the resource.</xs:documentation>
+                      <xs:appinfo>
+                        <nc1ihm:Nom>Code NIC</nc1ihm:Nom>
+                        <nc1ihm:Nom xml:lang="en">NIC code</nc1ihm:Nom>
+                      </xs:appinfo>
+                    </xs:annotation>
+                  </xs:element>
+                  <xs:element name="name" type="nc1common:Text1To50Type">
+                    <xs:annotation>
+                      <xs:documentation>Nom de la ressource.</xs:documentation>
+                      <xs:documentation xml:lang="en">Resource name.</xs:documentation>
+                      <xs:appinfo>
+                        <nc1ihm:Nom>Nom</nc1ihm:Nom>
+                        <nc1ihm:Nom xml:lang="en">name</nc1ihm:Nom>
+                      </xs:appinfo>
+                    </xs:annotation>
+                  </xs:element>
+                  <xs:element minOccurs="0" name="shortName" type="nc1common:ShortTextType">
+                    <xs:annotation>
+                      <xs:documentation>Nom court de l'équipement.</xs:documentation>
+                      <xs:documentation xml:lang="en">Equipment short name.</xs:documentation>
+                      <xs:appinfo>
+                        <nc1ihm:Nom>Nom court</nc1ihm:Nom>
+                        <nc1ihm:Nom xml:lang="en">Short name</nc1ihm:Nom>
+                      </xs:appinfo>
+                    </xs:annotation>
+                  </xs:element>
+                  <xs:element minOccurs="0" name="englishName" type="nc1common:Text1To50Type">
+                    <xs:annotation>
+                      <xs:documentation>Nom anglais de l'équipement.</xs:documentation>
+                      <xs:documentation xml:lang="en">Equipment name.</xs:documentation>
+                      <xs:appinfo>
+                        <nc1ihm:Nom>Nom anglais</nc1ihm:Nom>
+                        <nc1ihm:Nom xml:lang="en">English name</nc1ihm:Nom>
+                      </xs:appinfo>
+                    </xs:annotation>
+                  </xs:element>
+                  <xs:element minOccurs="0" name="shortEnglishName" type="nc1common:ShortTextType">
+                    <xs:annotation>
+                      <xs:documentation>Nom court anglais de l'équipement.</xs:documentation>
+                      <xs:documentation xml:lang="en">Equipment short name.</xs:documentation>
+                      <xs:appinfo>
+                        <nc1ihm:Nom>Nom court anglais</nc1ihm:Nom>
+                        <nc1ihm:Nom xml:lang="en">Equipment short name</nc1ihm:Nom>
+                      </xs:appinfo>
+                    </xs:annotation>
+                  </xs:element>
+                  <xs:element minOccurs="0" name="nnoCode" type="nc1initodb:NnoCodeType">
+                    <xs:annotation>
+                      <xs:documentation>Numéro de Nomenclature OTAN de la ressource.</xs:documentation>
+                      <xs:documentation xml:lang="en">NNO code of the equipment.</xs:documentation>
+                      <xs:appinfo>
+                        <nc1ihm:Nom>Code NNO</nc1ihm:Nom>
+                        <nc1ihm:Nom xml:lang="en">NNO code</nc1ihm:Nom>
+                      </xs:appinfo>
+                    </xs:annotation>
+                  </xs:element>
+                  <xs:element minOccurs="0" name="ricCode" type="nc1initodb:RicCodeType">
+                    <xs:annotation>
+                      <xs:documentation>Code RIC (Reportable Item Code) de la ressource.</xs:documentation>
+                      <xs:documentation xml:lang="en">RIC NATO code of the resource.</xs:documentation>
+                      <xs:appinfo>
+                        <nc1ihm:Nom>Code RIC</nc1ihm:Nom>
+                        <nc1ihm:Nom xml:lang="en">RIC code</nc1ihm:Nom>
+                      </xs:appinfo>
+                    </xs:annotation>
+                  </xs:element>
+                  <xs:element minOccurs="0" name="isDangerous" type="xs:boolean">
+                    <xs:annotation>
+                      <xs:documentation>Ressource dangereuse.</xs:documentation>
+                      <xs:documentation xml:lang="en">Dangerous resource.</xs:documentation>
+                      <xs:appinfo>
+                        <nc1ihm:Nom>Dangereuse</nc1ihm:Nom>
+                        <nc1ihm:Nom xml:lang="en">Dangerous</nc1ihm:Nom>
+                      </xs:appinfo>
+                    </xs:annotation>
+                  </xs:element>
+                  <xs:element minOccurs="0" name="isStackable" type="xs:boolean">
+                    <xs:annotation>
+                      <xs:documentation>Ressource empilable.</xs:documentation>
+                      <xs:documentation xml:lang="en">Stackable resource.</xs:documentation>
+                      <xs:appinfo>
+                        <nc1ihm:Nom>Empilable</nc1ihm:Nom>
+                        <nc1ihm:Nom xml:lang="en">Stackable</nc1ihm:Nom>
+                      </xs:appinfo>
+                    </xs:annotation>
+                  </xs:element>
+                  <xs:element minOccurs="0" name="pieceOfRessourceWeight" type="nc1common:Int0To2147483647Type">
+                    <xs:annotation>
+                      <xs:documentation>Poids unitaire d'une ressource (kg).</xs:documentation>
+                      <xs:documentation xml:lang="en">Weight of a single resource (kilograms).</xs:documentation>
+                      <xs:appinfo>
+                        <nc1ihm:Nom>Poids unitaire</nc1ihm:Nom>
+                        <nc1ihm:Nom xml:lang="en">Weight of a single resource</nc1ihm:Nom>
+                      </xs:appinfo>
+                    </xs:annotation>
+                  </xs:element>
+                  <xs:element name="ressourceType" type="nc1initodb:RessourceTypeCode">
+                    <xs:annotation>
+                      <xs:documentation>Type de ressource.</xs:documentation>
+                      <xs:documentation xml:lang="en">Resource type.</xs:documentation>
+                      <xs:appinfo>
+                        <nc1ihm:Nom>Type</nc1ihm:Nom>
+                        <nc1ihm:Nom xml:lang="en">Type</nc1ihm:Nom>
+                      </xs:appinfo>
+                    </xs:annotation>
+                  </xs:element>
+                  <xs:element minOccurs="0" name="unitOfMeasurement" type="nc1initodb:UnitOfMeasurementCode">
+                    <xs:annotation>
+                      <xs:documentation>Unité physique utilisée pour mesurer la quantité de ressource.</xs:documentation>
+                      <xs:documentation xml:lang="en">Physical unit used for measurement of the quantity of resources.</xs:documentation>
+                      <xs:appinfo>
+                        <nc1ihm:Nom>Unité de mesure</nc1ihm:Nom>
+                        <nc1ihm:Nom xml:lang="en">Unit of measurement</nc1ihm:Nom>
+                      </xs:appinfo>
+                    </xs:annotation>
+                  </xs:element>
+                  <xs:element minOccurs="0" name="supplyClass" type="nc1initodb:SupplyClassCode">
+                    <xs:annotation>
+                      <xs:documentation>Classe de ravitaillement OTAN associée à la ressource.</xs:documentation>
+                      <xs:documentation xml:lang="en">"NATO supply class (e.g. ""CLS3"")".</xs:documentation>
+                      <xs:appinfo>
+                        <nc1ihm:Nom>Classe de ravitaillement OTAN</nc1ihm:Nom>
+                        <nc1ihm:Nom xml:lang="en">NATO supply class</nc1ihm:Nom>
+                      </xs:appinfo>
+                    </xs:annotation>
+                  </xs:element>
+                  <xs:element minOccurs="0" name="packagingWidth" type="nc1common:Decimal0To99999999Digits3Type">
+                    <xs:annotation>
+                      <xs:documentation>Largeur de conditionnement de la ressource (mètres).</xs:documentation>
+                      <xs:documentation xml:lang="en">Resource packaging width (meters).</xs:documentation>
+                      <xs:appinfo>
+                        <nc1ihm:Nom>Largeur du conditionnement</nc1ihm:Nom>
+                        <nc1ihm:Nom xml:lang="en">Packaging width</nc1ihm:Nom>
+                      </xs:appinfo>
+                    </xs:annotation>
+                  </xs:element>
+                  <xs:element minOccurs="0" name="packagingLength" type="nc1common:Decimal0To99999999Digits3Type">
+                    <xs:annotation>
+                      <xs:documentation>Longueur de conditionnement de la ressource (mètres).</xs:documentation>
+                      <xs:documentation xml:lang="en">Resource packaging length (meters).</xs:documentation>
+                      <xs:appinfo>
+                        <nc1ihm:Nom>Longueur du conditionnement</nc1ihm:Nom>
+                        <nc1ihm:Nom xml:lang="en">Packaging length</nc1ihm:Nom>
+                      </xs:appinfo>
+                    </xs:annotation>
+                  </xs:element>
+                  <xs:element minOccurs="0" name="packagingHeight" type="nc1common:Decimal0To99999999Digits3Type">
+                    <xs:annotation>
+                      <xs:documentation>Hauteur de conditionnement de la ressource (mètres).</xs:documentation>
+                      <xs:documentation xml:lang="en">Resource packaging height (meters).</xs:documentation>
+                      <xs:appinfo>
+                        <nc1ihm:Nom>Hauteur du conditionnement</nc1ihm:Nom>
+                        <nc1ihm:Nom xml:lang="en">Packaging height</nc1ihm:Nom>
+                      </xs:appinfo>
+                    </xs:annotation>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element minOccurs="0" name="comment" type="nc1msgcom:CommentSectionType">
+              <xs:annotation>
+                <xs:documentation>Commentaire en texte libre.</xs:documentation>
+                <xs:documentation xml:lang="en">free text comment.</xs:documentation>
+                <xs:appinfo>
+                  <nc1ihm:Nom>Commentaire</nc1ihm:Nom>
+                  <nc1ihm:Nom xml:lang="en">comment</nc1ihm:Nom>
+                </xs:appinfo>
+              </xs:annotation>
+            </xs:element>
+          </xs:sequence>
+        </xs:extension>
+      </xs:complexContent>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

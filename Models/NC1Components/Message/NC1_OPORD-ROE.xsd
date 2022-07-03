@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema targetNamespace="urn:fra:nc1:message:opordroe" xmlns:nc1ihm="urn:fra:nc1:IHM" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:nc1opordroe="urn:fra:nc1:message:opordroe" xmlns:nc1msgcom="urn:fra:nc1:common:message" xmlns:nc1opord="urn:fra:nc1:message:opord">
+  <!-- NC1 V.9.0.0 -->
+  <xs:import namespace="urn:fra:nc1:common:message" schemaLocation="../Commun/Message.xsd" />
+  <xs:import namespace="urn:fra:nc1:message:opord" schemaLocation="NC1_OPORD.xsd" />
+  <xs:element name="NC1_OPORD-ROE">
+    <xs:annotation>
+      <xs:documentation>Le message NC1_OPORD-ROE sert à transmettre les règles d'engagement aux unités subordonnées.</xs:documentation>
+      <xs:documentation xml:lang="en">The NC1_OPORD-ROE message is used to transmit the rules of engagement to subordinate units.</xs:documentation>
+      <xs:appinfo>
+        <nc1:type xmlns:nc1="urn:fra:nc1">Message</nc1:type>
+        <nc1ihm:Nom>Annexe ROE</nc1ihm:Nom>
+        <nc1ihm:Nom xml:lang="en">Rules of Engagement annex</nc1ihm:Nom>
+        <nc1:MessH xmlns:nc1="urn:fra:nc1">N/A</nc1:MessH>
+        <nc1:MessADatP3 xmlns:nc1="urn:fra:nc1">N/A</nc1:MessADatP3>
+        <nc1:LastNC1ModifyVersion xmlns:nc1="urn:fra:nc1">9.0.0</nc1:LastNC1ModifyVersion>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:complexContent>
+        <xs:extension base="nc1msgcom:BaseMessageType">
+          <xs:sequence>
+            <xs:element name="roe" type="nc1msgcom:MixedAnyType">
+              <xs:annotation>
+                <xs:documentation>Règles d'engagement des unités subordonnées.</xs:documentation>
+                <xs:documentation xml:lang="en">Subordinated units rules of engagement.</xs:documentation>
+                <xs:appinfo>
+                  <nc1ihm:Nom>Règles d'engagement</nc1ihm:Nom>
+                  <nc1ihm:Nom xml:lang="en">Rules of engagement</nc1ihm:Nom>
+                </xs:appinfo>
+              </xs:annotation>
+            </xs:element>
+            <xs:element minOccurs="0" name="acknowledgement" type="xs:boolean">
+              <xs:annotation>
+                <xs:documentation>Demande d’aperçu.</xs:documentation>
+                <xs:documentation xml:lang="en">Acknowledgement request.</xs:documentation>
+                <xs:appinfo>
+                  <nc1ihm:Nom>Demande d’aperçu</nc1ihm:Nom>
+                  <nc1ihm:Nom xml:lang="en">Acknowledgement request</nc1ihm:Nom>
+                </xs:appinfo>
+              </xs:annotation>
+            </xs:element>
+            <xs:element minOccurs="0" name="signature" type="nc1opord:SignatureType">
+              <xs:annotation>
+                <xs:documentation>Attache de signature.</xs:documentation>
+                <xs:documentation xml:lang="en">Signature block.</xs:documentation>
+                <xs:appinfo>
+                  <nc1ihm:Nom>Signature</nc1ihm:Nom>
+                  <nc1ihm:Nom xml:lang="en">Signature</nc1ihm:Nom>
+                </xs:appinfo>
+              </xs:annotation>
+            </xs:element>
+          </xs:sequence>
+        </xs:extension>
+      </xs:complexContent>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

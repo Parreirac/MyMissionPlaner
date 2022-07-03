@@ -1,0 +1,93 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema targetNamespace="urn:fra:nc1:objet:2dcoordinationmean" xmlns:nc1ihm="urn:fra:nc1:IHM" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:nc12dcoord="urn:fra:nc1:objet:2dcoordinationmean" xmlns:nc1common="urn:fra:nc1:common:attribute" xmlns:nc1objcom="urn:fra:nc1:common:object">
+  <!-- NC1 V.9.0.0 -->
+  <xs:import namespace="urn:fra:nc1:common:attribute" schemaLocation="Common.xsd" />
+  <xs:import namespace="urn:fra:nc1:common:object" schemaLocation="Object.xsd" />
+  <xs:complexType name="_2DCoordinationMeanType" abstract="true">
+    <xs:annotation>
+      <xs:documentation>Mesure de coordination 2D.</xs:documentation>
+      <xs:documentation xml:lang="en">2D coordination mean.</xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="nc1objcom:LocalisedObjectType" />
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="TacticalDataType">
+    <xs:annotation>
+      <xs:documentation>Données tactiques d'une mesure de coordination 2D.</xs:documentation>
+      <xs:documentation xml:lang="en">2D coordination mean tactical data.</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" name="name" type="nc1common:ShortTextObjectType">
+        <xs:annotation>
+          <xs:documentation>Nom affiché sur la cartographie.</xs:documentation>
+          <xs:documentation xml:lang="en">Name displayed on map.</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Nom</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">name</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="symbolCode" type="nc1common:SymbolCodeType">
+        <xs:annotation>
+          <xs:documentation>Code contenant les informations de symbologie, d'identité (AMI, ENI, etc.), de nationalité, d'état de planification.</xs:documentation>
+          <xs:documentation xml:lang="en">Code specifying information about symbology, identity (Friend, enemy, …), nationality, planification status.</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Code du symbole</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">Symbol code</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="responsibleUnitId" type="nc1common:Nc1ObjectRefType">
+        <xs:annotation>
+          <xs:documentation>Identifiant de l’unité responsable.</xs:documentation>
+          <xs:documentation xml:lang="en">responsable unit id.</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Unité responsable</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">Responsible unit</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="tnL16" type="nc1common:Tnl16Type">
+        <xs:annotation>
+          <xs:documentation>Track Number L16.</xs:documentation>
+          <xs:documentation xml:lang="en">track number L16.</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Identifiant TNL16</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">TNL16 id</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="url" type="nc1common:MediumTextObjectType">
+        <xs:annotation>
+          <xs:documentation>Lien vers un fichier associé à l’objet.</xs:documentation>
+          <xs:documentation xml:lang="en">Link to a file associated with the object.</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Url</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">url</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="comment" type="nc1common:LongTextObjectType">
+        <xs:annotation>
+          <xs:documentation>Commentaire en texte libre.</xs:documentation>
+          <xs:documentation xml:lang="en">free text comment.</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Commentaire</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">comment</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="extVersion" type="nc1common:ExtVersType">
+        <xs:annotation>
+          <xs:documentation>Extension pour versions suivantes compatibles.</xs:documentation>
+          <xs:documentation xml:lang="en">Extension for following compatible versions.</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Extension de version</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">version extension</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

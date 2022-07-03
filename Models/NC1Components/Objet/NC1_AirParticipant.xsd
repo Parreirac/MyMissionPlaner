@@ -1,0 +1,129 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema targetNamespace="urn:fra:nc1:objet:airparticipant" xmlns:nc1ihm="urn:fra:nc1:IHM" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:nc1airparticipant="urn:fra:nc1:objet:airparticipant" xmlns:nc1common="urn:fra:nc1:common:attribute" xmlns:nc1com="urn:fra:nc1:common:communication" xmlns:nc1logistics="urn:fra:nc1:common:logistics" xmlns:nc1sicsdicos="urn:fra:nc1:common:sicsdicos" xmlns:nc1participant="urn:fra:nc1:objet:participant">
+  <!-- NC1 V.9.0.0 -->
+  <xs:import namespace="urn:fra:nc1:common:attribute" schemaLocation="../Commun/Common.xsd" />
+  <xs:import namespace="urn:fra:nc1:common:communication" schemaLocation="../Commun/Communication.xsd" />
+  <xs:import namespace="urn:fra:nc1:common:logistics" schemaLocation="../Commun/Logistics.xsd" />
+  <xs:import namespace="urn:fra:nc1:common:sicsdicos" schemaLocation="../Commun/SICS_Dictionaries.xsd" />
+  <xs:import namespace="urn:fra:nc1:objet:participant" schemaLocation="../Commun/Participant.xsd" />
+  <xs:element name="NC1_AirParticipant" type="nc1airparticipant:AirParticipantType">
+    <xs:annotation>
+      <xs:documentation>L’objet NC1_Participant aérien correspond à toute entité aérienne équipée d’un SIOC avec lequel elle peut créer et échanger des objets NC1.</xs:documentation>
+      <xs:documentation xml:lang="en">The NC1_AirParticipant object corresponds to any air entity equipped with a NC1-capable C2 system .</xs:documentation>
+      <xs:appinfo>
+        <nc1:type xmlns:nc1="urn:fra:nc1">Objet</nc1:type>
+        <nc1ihm:Nom>Participant aérien</nc1ihm:Nom>
+        <nc1ihm:Nom xml:lang="en">Air participant</nc1ihm:Nom>
+        <nc1:MessH xmlns:nc1="urn:fra:nc1">Message H2.2 Astatus </nc1:MessH>
+        <nc1:MessADatP3 xmlns:nc1="urn:fra:nc1">N/A</nc1:MessADatP3>
+        <nc1:LastNC1ModifyVersion xmlns:nc1="urn:fra:nc1">9.0.0</nc1:LastNC1ModifyVersion>
+      </xs:appinfo>
+    </xs:annotation>
+  </xs:element>
+  <xs:complexType name="AirParticipantType">
+    <xs:annotation>
+      <xs:documentation>L’objet NC1_Participant aérien correspond à toute entité aérienne équipée d’un SIOC avec lequel elle peut créer et échanger des objets NC1.</xs:documentation>
+      <xs:documentation xml:lang="en">The NC1_AirParticipant object corresponds to any air entity equipped with a NC1-capable C2 system .</xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="nc1participant:ParticipantType">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="tacticalData" type="nc1participant:TacticalDataType">
+            <xs:annotation>
+              <xs:documentation>Données tactiques.</xs:documentation>
+              <xs:documentation xml:lang="en">tactical datas.</xs:documentation>
+              <xs:appinfo>
+                <nc1ihm:Nom>Données tactiques</nc1ihm:Nom>
+                <nc1ihm:Nom xml:lang="en">tactical datas</nc1ihm:Nom>
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:element>
+          <xs:element minOccurs="0" name="specificData">
+            <xs:annotation>
+              <xs:documentation>Données spécifiques à un participant aérien.</xs:documentation>
+              <xs:documentation xml:lang="en">Air participant specific data.</xs:documentation>
+              <xs:appinfo>
+                <nc1ihm:Nom>Données spécifiques</nc1ihm:Nom>
+                <nc1ihm:Nom xml:lang="en">Specific data</nc1ihm:Nom>
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element minOccurs="0" name="autonomy" type="nc1common:Int0To255Type">
+                  <xs:annotation>
+                    <xs:documentation>Autonomie de carburant (minutes).</xs:documentation>
+                    <xs:documentation xml:lang="en">Fuel autonomy (minutes).</xs:documentation>
+                    <xs:appinfo>
+                      <nc1ihm:Nom>Autonomie</nc1ihm:Nom>
+                      <nc1ihm:Nom xml:lang="en">Autonomy</nc1ihm:Nom>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:element>
+                <xs:element minOccurs="0" name="activity" type="nc1sicsdicos:L116_1Code">
+                  <xs:annotation>
+                    <xs:documentation>Indicateur d’activité du participant aérien.</xs:documentation>
+                    <xs:documentation xml:lang="en">Air participant activity indicator.</xs:documentation>
+                    <xs:appinfo>
+                      <nc1ihm:Nom>Activité aérienne</nc1ihm:Nom>
+                      <nc1ihm:Nom xml:lang="en">Air activity</nc1ihm:Nom>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:element>
+                <xs:element minOccurs="0" name="specificType" type="nc1sicsdicos:L110_81Code">
+                  <xs:annotation>
+                    <xs:documentation>Type d'équipement spécifique de la piste aérienne.</xs:documentation>
+                    <xs:documentation xml:lang="en">Air track specific equipment type.</xs:documentation>
+                    <xs:appinfo>
+                      <nc1ihm:Nom>Type spécifique</nc1ihm:Nom>
+                      <nc1ihm:Nom xml:lang="en">Specific type</nc1ihm:Nom>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:element>
+                <xs:element minOccurs="0" name="size" type="nc1common:Int0To15Type">
+                  <xs:annotation>
+                    <xs:documentation>Nombre d’éléments composant le participant.</xs:documentation>
+                    <xs:documentation xml:lang="en">Number of elements constituting the participant.</xs:documentation>
+                    <xs:appinfo>
+                      <nc1ihm:Nom>Force</nc1ihm:Nom>
+                      <nc1ihm:Nom xml:lang="en">Force</nc1ihm:Nom>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:element>
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+          <xs:element minOccurs="0" name="comData" type="nc1com:ComDataType">
+            <xs:annotation>
+              <xs:documentation>Données de communication.</xs:documentation>
+              <xs:documentation xml:lang="en">Communication data.</xs:documentation>
+              <xs:appinfo>
+                <nc1ihm:Nom>Données de communication</nc1ihm:Nom>
+                <nc1ihm:Nom xml:lang="en">Communication data</nc1ihm:Nom>
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:element>
+          <xs:element minOccurs="0" name="status" type="nc1logistics:StatusType">
+            <xs:annotation>
+              <xs:documentation>Etat opérationnel et logistique.</xs:documentation>
+              <xs:documentation xml:lang="en">Operational and logistic status.</xs:documentation>
+              <xs:appinfo>
+                <nc1ihm:Nom>Etat</nc1ihm:Nom>
+                <nc1ihm:Nom xml:lang="en">Status</nc1ihm:Nom>
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:element>
+          <xs:element minOccurs="0" name="location" type="nc1participant:LocationType">
+            <xs:annotation>
+              <xs:documentation>Localisation.</xs:documentation>
+              <xs:documentation xml:lang="en">Location.</xs:documentation>
+              <xs:appinfo>
+                <nc1ihm:Nom>Localisation</nc1ihm:Nom>
+                <nc1ihm:Nom xml:lang="en">Location</nc1ihm:Nom>
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:element>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+</xs:schema>

@@ -1,0 +1,234 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema targetNamespace="urn:fra:nc1:objet:organisation" xmlns:nc1ihm="urn:fra:nc1:IHM" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:nc1organisation="urn:fra:nc1:objet:organisation" xmlns:nc1common="urn:fra:nc1:common:attribute" xmlns:nc1com="urn:fra:nc1:common:communication" xmlns:nc1location="urn:fra:nc1:common:location" xmlns:nc1logistics="urn:fra:nc1:common:logistics" xmlns:nc1objcom="urn:fra:nc1:common:object" xmlns:nc1sicsdicos="urn:fra:nc1:common:sicsdicos">
+  <!-- NC1 V.9.0.0 -->
+  <xs:import namespace="urn:fra:nc1:common:attribute" schemaLocation="../Commun/Common.xsd" />
+  <xs:import namespace="urn:fra:nc1:common:communication" schemaLocation="../Commun/Communication.xsd" />
+  <xs:import namespace="urn:fra:nc1:common:location" schemaLocation="../Commun/Location.xsd" />
+  <xs:import namespace="urn:fra:nc1:common:logistics" schemaLocation="../Commun/Logistics.xsd" />
+  <xs:import namespace="urn:fra:nc1:common:object" schemaLocation="../Commun/Object.xsd" />
+  <xs:import namespace="urn:fra:nc1:common:sicsdicos" schemaLocation="../Commun/SICS_Dictionaries.xsd" />
+  <xs:element name="NC1_Organisation" type="nc1organisation:OrganisationType">
+    <xs:annotation>
+      <xs:documentation>La notion d’organisation dans NC1 recoupe les notions d’évènement, d’installation et de groupe d’individus mais un objet NC1_Organisation est créé pour pouvoir couvrir tous les autres cas d’emploi.</xs:documentation>
+      <xs:documentation xml:lang="en">The notion of organization in NC1 recuts the notions of event, installation and group of individuals but an object NC1_Organisation is created to be able to cover all other cases of employment.</xs:documentation>
+      <xs:appinfo>
+        <nc1:type xmlns:nc1="urn:fra:nc1">Objet</nc1:type>
+        <nc1ihm:Nom>Organisation</nc1ihm:Nom>
+        <nc1ihm:Nom xml:lang="en">Organisation</nc1ihm:Nom>
+        <nc1:MessH xmlns:nc1="urn:fra:nc1">Message H5.6 Organisation</nc1:MessH>
+        <nc1:MessADatP3 xmlns:nc1="urn:fra:nc1">Segment « UNIT Details » dans le message ORBATLAND, ORGID, EORGID, ORGANIZATION TYPE (1311)</nc1:MessADatP3>
+        <nc1:LastNC1ModifyVersion xmlns:nc1="urn:fra:nc1">9.0.0</nc1:LastNC1ModifyVersion>
+      </xs:appinfo>
+    </xs:annotation>
+  </xs:element>
+  <xs:complexType name="OrganisationType">
+    <xs:annotation>
+      <xs:documentation>L’objet NC1_ORGANISATION correspond à la définition d’Organisme de l'EMP_60_641 : ensemble de moyens en personnels et matériels organisé en vue d’une fonction particulière.</xs:documentation>
+      <xs:documentation xml:lang="en">The NC1_ORGANISATION object corresponds to the  organisation defined in the TTA-106 standard : set of staff and equipment organised for a specific function .</xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="nc1objcom:AgentType">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="tacticalData">
+            <xs:annotation>
+              <xs:documentation>Données tactiques de l'organisation.</xs:documentation>
+              <xs:documentation xml:lang="en">Organisation tactical data.</xs:documentation>
+              <xs:appinfo>
+                <nc1ihm:Nom>Données tactiques</nc1ihm:Nom>
+                <nc1ihm:Nom xml:lang="en">tactical datas</nc1ihm:Nom>
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element minOccurs="0" name="name" type="nc1common:ShortTextObjectType">
+                  <xs:annotation>
+                    <xs:documentation>Nom de l’organisation affiché sur la cartographie.</xs:documentation>
+                    <xs:documentation xml:lang="en">Organisation displayed name.</xs:documentation>
+                    <xs:appinfo>
+                      <nc1ihm:Nom>Nom</nc1ihm:Nom>
+                      <nc1ihm:Nom xml:lang="en">name</nc1ihm:Nom>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:element>
+                <xs:element name="symbolCode" type="nc1common:SymbolCodeType">
+                  <xs:annotation>
+                    <xs:documentation>Code contenant les informations de symbologie, d'identité (AMI, ENI, etc.), de nationalité, d'état de planification.</xs:documentation>
+                    <xs:documentation xml:lang="en">Code specifying information about symbology, identity (Friend, enemy, …), nationality, planification status.</xs:documentation>
+                    <xs:appinfo>
+                      <nc1ihm:Nom>Code du symbole</nc1ihm:Nom>
+                      <nc1ihm:Nom xml:lang="en">Symbol code</nc1ihm:Nom>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:element>
+                <xs:element minOccurs="0" name="operationalStatusIndicator" type="nc1sicsdicos:L125_1Code">
+                  <xs:annotation>
+                    <xs:documentation>Indicateur d’état opérationnel.</xs:documentation>
+                    <xs:documentation xml:lang="en">Operational status indicator.</xs:documentation>
+                    <xs:appinfo>
+                      <nc1ihm:Nom>Indicateur opérationnel</nc1ihm:Nom>
+                      <nc1ihm:Nom xml:lang="en">Operational indicator</nc1ihm:Nom>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:element>
+                <xs:element minOccurs="0" name="activity" type="nc1sicsdicos:L115_1Code">
+                  <xs:annotation>
+                    <xs:documentation>Indicateur d’activité de l’organisation.</xs:documentation>
+                    <xs:documentation xml:lang="en">Organization activity indicator.</xs:documentation>
+                    <xs:appinfo>
+                      <nc1ihm:Nom>Activité</nc1ihm:Nom>
+                      <nc1ihm:Nom xml:lang="en">Activity</nc1ihm:Nom>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:element>
+                <xs:element maxOccurs="unbounded" minOccurs="0" name="logisticStatus" type="nc1logistics:LogisticStatusType">
+                  <xs:annotation>
+                    <xs:documentation>Etat logistique de l’organisation.</xs:documentation>
+                    <xs:documentation xml:lang="en">Logistic status of the organisation.</xs:documentation>
+                    <xs:appinfo>
+                      <nc1ihm:Nom>Etat logistique</nc1ihm:Nom>
+                      <nc1ihm:Nom xml:lang="en">Logistic status</nc1ihm:Nom>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:element>
+                <xs:element minOccurs="0" name="responsibleUnitId" type="nc1common:Nc1ObjectRefType">
+                  <xs:annotation>
+                    <xs:documentation>Identifiant unique NC1 de l'unité responsable de l’organisation.</xs:documentation>
+                    <xs:documentation xml:lang="en">NC1 ID of the responsible organizational unit.</xs:documentation>
+                    <xs:appinfo>
+                      <nc1ihm:Nom>Unité responsable</nc1ihm:Nom>
+                      <nc1ihm:Nom xml:lang="en">Responsible unit</nc1ihm:Nom>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:element>
+                <xs:choice minOccurs="0">
+                  <xs:element minOccurs="0" name="civilianOrganisationType" type="nc1sicsdicos:L110_31Code">
+                    <xs:annotation>
+                      <xs:documentation>Nature de l’Organisation, dans le cas d’une organisation civile (ex : « GANG »).</xs:documentation>
+                      <xs:documentation xml:lang="en">"Nature of the organization, when civilian (e.g. ""GANG"")".</xs:documentation>
+                      <xs:appinfo>
+                        <nc1ihm:Nom>Nature civile</nc1ihm:Nom>
+                        <nc1ihm:Nom xml:lang="en">Civilian nature</nc1ihm:Nom>
+                      </xs:appinfo>
+                    </xs:annotation>
+                  </xs:element>
+                  <xs:element minOccurs="0" name="militaryOrganisationType" type="nc1sicsdicos:L110_32Code">
+                    <xs:annotation>
+                      <xs:documentation>Nature de l’Organisation, dans le cas d’une organisation militaire (ex : « GUERLL »).</xs:documentation>
+                      <xs:documentation xml:lang="en">"Nature of the organization, when military (e.g. ""GUERLL"")".</xs:documentation>
+                      <xs:appinfo>
+                        <nc1ihm:Nom>Nature militaire</nc1ihm:Nom>
+                        <nc1ihm:Nom xml:lang="en">Military nature</nc1ihm:Nom>
+                      </xs:appinfo>
+                    </xs:annotation>
+                  </xs:element>
+                </xs:choice>
+                <xs:element minOccurs="0" name="url" type="nc1common:MediumTextObjectType">
+                  <xs:annotation>
+                    <xs:documentation>Lien vers un fichier associé à l’objet.</xs:documentation>
+                    <xs:documentation xml:lang="en">Link to a file associated with the object.</xs:documentation>
+                    <xs:appinfo>
+                      <nc1ihm:Nom>Url</nc1ihm:Nom>
+                      <nc1ihm:Nom xml:lang="en">url</nc1ihm:Nom>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:element>
+                <xs:element minOccurs="0" name="comment" type="nc1common:LongTextObjectType">
+                  <xs:annotation>
+                    <xs:documentation>Commentaire en texte libre.</xs:documentation>
+                    <xs:documentation xml:lang="en">free text comment.</xs:documentation>
+                    <xs:appinfo>
+                      <nc1ihm:Nom>Commentaire</nc1ihm:Nom>
+                      <nc1ihm:Nom xml:lang="en">comment</nc1ihm:Nom>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:element>
+                <xs:element minOccurs="0" name="extVersion" type="nc1common:ExtVersType">
+                  <xs:annotation>
+                    <xs:documentation>Extension pour versions suivantes compatibles.</xs:documentation>
+                    <xs:documentation xml:lang="en">Extension for following compatible versions.</xs:documentation>
+                    <xs:appinfo>
+                      <nc1ihm:Nom>Extension de version</nc1ihm:Nom>
+                      <nc1ihm:Nom xml:lang="en">version extension</nc1ihm:Nom>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:element>
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+          <xs:element minOccurs="0" name="comData" type="nc1com:ComDataType">
+            <xs:annotation>
+              <xs:documentation>Données de communication de l'organisation.</xs:documentation>
+              <xs:appinfo>
+                <nc1ihm:Nom>Données de communication</nc1ihm:Nom>
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:element>
+          <xs:element minOccurs="0" name="location">
+            <xs:annotation>
+              <xs:documentation>Localisation.</xs:documentation>
+              <xs:documentation xml:lang="en">Location.</xs:documentation>
+              <xs:appinfo>
+                <nc1ihm:Nom>Localisation</nc1ihm:Nom>
+                <nc1ihm:Nom xml:lang="en">Location</nc1ihm:Nom>
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element minOccurs="0" name="name" type="nc1common:Text1To30ObjectType">
+                  <xs:annotation>
+                    <xs:documentation>Nom de baptême donné par l'opérateur à la localisation. Par exemple un nom de ville ou de lieu.</xs:documentation>
+                    <xs:documentation xml:lang="en">Name assigned to the location, e.g. city or place name.</xs:documentation>
+                    <xs:appinfo>
+                      <nc1ihm:Nom>Nom</nc1ihm:Nom>
+                      <nc1ihm:Nom xml:lang="en">name</nc1ihm:Nom>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:element>
+                <xs:element name="point" type="nc1location:PointType">
+                  <xs:annotation>
+                    <xs:documentation>Point localisé.</xs:documentation>
+                    <xs:documentation xml:lang="en">Geolocalized point.</xs:documentation>
+                    <xs:appinfo>
+                      <nc1ihm:Nom>Point</nc1ihm:Nom>
+                      <nc1ihm:Nom xml:lang="en">Point</nc1ihm:Nom>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:element>
+                <xs:element minOccurs="0" name="datetime" type="xs:dateTime">
+                  <xs:annotation>
+                    <xs:documentation>Horodatage du relevé de position sur le terrain. Par défaut, l'heure de saisie dans le système.</xs:documentation>
+                    <xs:documentation xml:lang="en">Field position report time. By default, time of the input in the system.</xs:documentation>
+                    <xs:appinfo>
+                      <nc1ihm:Nom>Horodatage</nc1ihm:Nom>
+                      <nc1ihm:Nom xml:lang="en">Timestamp</nc1ihm:Nom>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:element>
+                <xs:element maxOccurs="unbounded" minOccurs="0" name="validityPeriod" type="nc1common:PeriodType">
+                  <xs:annotation>
+                    <xs:documentation>Période de validité.</xs:documentation>
+                    <xs:documentation xml:lang="en">Validity period.</xs:documentation>
+                    <xs:appinfo>
+                      <nc1ihm:Nom>Période de validité</nc1ihm:Nom>
+                      <nc1ihm:Nom xml:lang="en">Validity period</nc1ihm:Nom>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:element>
+                <xs:element minOccurs="0" name="quality" type="nc1sicsdicos:L117_5Code">
+                  <xs:annotation>
+                    <xs:documentation>Qualité de la mesure de la localisation.</xs:documentation>
+                    <xs:documentation xml:lang="en">Location measurement quality.</xs:documentation>
+                    <xs:appinfo>
+                      <nc1ihm:Nom>Qualité</nc1ihm:Nom>
+                      <nc1ihm:Nom xml:lang="en">Quality</nc1ihm:Nom>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:element>
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+</xs:schema>

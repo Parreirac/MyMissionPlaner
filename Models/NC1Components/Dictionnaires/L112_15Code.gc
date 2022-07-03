@@ -1,0 +1,195 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<gc:CodeList xmlns:nc1dico="urn:fra:nc1:dictionnaires" xmlns:gc="http://docs.oasis-open.org/codelist/ns/genericode/1.0/">
+  <Annotation>
+    <Description>
+      <nc1dico:description>INDIQUE UNE COULEUR POUR LES YEUX D'UN INDIVIDU.</nc1dico:description>
+      <nc1dico:description xml:lang="en">Specify a colour for the eyes of an individual.</nc1dico:description>
+    </Description>
+    <AppInfo>
+      <nc1dico:source>SFTT 3.4.8</nc1dico:source>
+      <nc1dico:derogation>COULEUR DES YEUX</nc1dico:derogation>
+    </AppInfo>
+  </Annotation>
+  <Identification>
+    <ShortName>L112_15Code</ShortName>
+    <Version>9.0.0</Version>
+    <CanonicalUri>urn:fra:nc1:common:sicsdicos:L112_15Code</CanonicalUri>
+    <CanonicalVersionUri>urn:fra:nc1:common:sicsdicos:L112_15Code:9.0.0</CanonicalVersionUri>
+  </Identification>
+  <ColumnSet DatatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes">
+    <Column Id="code" Use="required">
+      <ShortName>Code</ShortName>
+      <Data Type="int" />
+    </Column>
+    <Column Id="short" Use="required">
+      <ShortName>Short</ShortName>
+      <Data Type="string" />
+    </Column>
+    <Column Id="long" Use="optional">
+      <ShortName>Long</ShortName>
+      <Data Type="string" />
+    </Column>
+    <Column Id="short-en" Use="optional">
+      <ShortName>Short anglais</ShortName>
+      <Data Type="string" />
+    </Column>
+    <Column Id="long-en" Use="optional">
+      <ShortName>Long anglais</ShortName>
+      <Data Type="string" />
+    </Column>
+    <Column Id="parent" Use="optional">
+      <ShortName>Parent</ShortName>
+      <Data Type="int" />
+    </Column>
+    <Column Id="codeSymbole" Use="optional">
+      <ShortName>Code Symbole</ShortName>
+      <Data Type="string" />
+    </Column>
+    <Column Id="codeHierarchique" Use="optional">
+      <ShortName>Code Hierarchique</ShortName>
+      <Data Type="string" />
+    </Column>
+    <Key Id="codeKey">
+      <ShortName>CodeKey</ShortName>
+      <ColumnRef Ref="code" />
+    </Key>
+  </ColumnSet>
+  <SimpleCodeList>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>0</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>-</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>NO STATEMENT</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>-</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>NO STATEMENT</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>1</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>BLEU</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>BLEU</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>BLUE</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>BLUE</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>2</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>VERT</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>VERT</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>GREEN</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>GREEN</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>3</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>BRUN</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>BRUN</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>BROWN</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>BROWN</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>4</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>NOIR</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>NOIR</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>BLACK</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>BLACK</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>5</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>GRIS</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>GRIS</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>GREY</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>GREY</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>6</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>NOISE</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>NOISETTE</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>HAZEL</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>HAZEL</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>7</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>HETEROCHROMIA</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>HETEROCHROMIA</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>HETER</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>HETEROCHROMIA</SimpleValue>
+      </Value>
+    </Row>
+  </SimpleCodeList>
+</gc:CodeList>

@@ -1,0 +1,280 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<gc:CodeList xmlns:nc1dico="urn:fra:nc1:dictionnaires" xmlns:gc="http://docs.oasis-open.org/codelist/ns/genericode/1.0/">
+  <Annotation>
+    <Description>
+      <nc1dico:description>DESIGNE LA CATEGORIE METIER DE LA MISSION</nc1dico:description>
+      <nc1dico:description xml:lang="en">Indicate the category job by the mission</nc1dico:description>
+    </Description>
+    <AppInfo>
+      <nc1dico:source>SFTT 3.4.8</nc1dico:source>
+      <nc1dico:derogation>CATEGORIE DE MISSION</nc1dico:derogation>
+    </AppInfo>
+  </Annotation>
+  <Identification>
+    <ShortName>L114_9Code</ShortName>
+    <Version>9.0.0</Version>
+    <CanonicalUri>urn:fra:nc1:common:sicsdicos:L114_9Code</CanonicalUri>
+    <CanonicalVersionUri>urn:fra:nc1:common:sicsdicos:L114_9Code:9.0.0</CanonicalVersionUri>
+  </Identification>
+  <ColumnSet DatatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes">
+    <Column Id="code" Use="required">
+      <ShortName>Code</ShortName>
+      <Data Type="int" />
+    </Column>
+    <Column Id="short" Use="required">
+      <ShortName>Short</ShortName>
+      <Data Type="string" />
+    </Column>
+    <Column Id="long" Use="optional">
+      <ShortName>Long</ShortName>
+      <Data Type="string" />
+    </Column>
+    <Column Id="short-en" Use="optional">
+      <ShortName>Short anglais</ShortName>
+      <Data Type="string" />
+    </Column>
+    <Column Id="long-en" Use="optional">
+      <ShortName>Long anglais</ShortName>
+      <Data Type="string" />
+    </Column>
+    <Column Id="parent" Use="optional">
+      <ShortName>Parent</ShortName>
+      <Data Type="int" />
+    </Column>
+    <Column Id="codeSymbole" Use="optional">
+      <ShortName>Code Symbole</ShortName>
+      <Data Type="string" />
+    </Column>
+    <Column Id="codeHierarchique" Use="optional">
+      <ShortName>Code Hierarchique</ShortName>
+      <Data Type="string" />
+    </Column>
+    <Key Id="codeKey">
+      <ShortName>CodeKey</ShortName>
+      <ColumnRef Ref="code" />
+    </Key>
+  </ColumnSet>
+  <SimpleCodeList>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>0</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>NS</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>NON SPECIALISE</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>NS</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>NON SPECIALIZED</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>1</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>ART</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>APPUI FEUX ARTILLERIE</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>FIRES</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>LAND FIRES</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>2</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>AIR</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>AIR</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>AIR</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>AIR</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>3</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>DSA</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>DEFENSE SOL AIR</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>AIRDEF</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>AIR DEFENCE</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>4</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>ALAT</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>AVIATION LEGERE DE L'ARMEE DE TERRE</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>ARMYAV</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>ARMY AVIATION</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>5</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>GEN</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>GENIE</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>ENG</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>ENGINEER</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>6</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>CIRCU</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>CIRCULATION</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>ROAD</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>ROAD TRAFIC</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>7</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>GUERRE ELEC</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>GUERRE ELECTRONIQUE</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>EW</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>ELECTRONIC WARFARE</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>8</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>NRBC</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>NRBC</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>CBRN</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>CBRN</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>9</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>LOG</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>LOGISTIQUE</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>LOG</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>LOGISTIC SUPPORT</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>10</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>SIC</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>SYSTEMES D'INFORMATIONS ET DE COMMANDEMENT OPERATIONNELS</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>CIS</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>COMMAND, CONTROL AND INFORMATION SYSTEMS</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>11</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>CIBLAGE</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>CIBLAGE</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>TARG</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>TARGETING</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>12</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>AUTRES MOYENS</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>AUTRES MOYENS</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>OTHER</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>OTHER MEANS</SimpleValue>
+      </Value>
+    </Row>
+  </SimpleCodeList>
+</gc:CodeList>

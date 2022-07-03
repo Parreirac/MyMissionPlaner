@@ -1,0 +1,143 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema targetNamespace="urn:fra:nc1:service:stcupdate" xmlns:nc1ihm="urn:fra:nc1:IHM" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:nc1stcupdate="urn:fra:nc1:service:stcupdate" xmlns:nc1msgcom="urn:fra:nc1:common:message" xmlns:nc1objcom="urn:fra:nc1:common:object" xmlns:nc12dcoord="urn:fra:nc1:objet:2dcoordinationmean" xmlns:nc13droute="urn:fra:nc1:objet:3droute" xmlns:nc1acm="urn:fra:nc1:objet:acm" xmlns:nc1airparticipant="urn:fra:nc1:objet:airparticipant" xmlns:nc1airtrack="urn:fra:nc1:objet:airtrack" xmlns:nc1cbrnevent="urn:fra:nc1:objet:cbrnevent" xmlns:nc1convoy="urn:fra:nc1:objet:convoy" xmlns:nc1event="urn:fra:nc1:objet:event" xmlns:nc1facility="urn:fra:nc1:objet:facility" xmlns:nc1fire="urn:fra:nc1:objet:fire" xmlns:nc1fireobjective="urn:fra:nc1:objet:fireobjective" xmlns:nc1freeshape="urn:fra:nc1:objet:freeshape" xmlns:nc1groundentity="urn:fra:nc1:objet:groundentity" xmlns:nc1groundparticipant="urn:fra:nc1:objet:groundparticipant" xmlns:nc1groundtrack="urn:fra:nc1:objet:groundtrack" xmlns:nc1iffprocedure="urn:fra:nc1:objet:iffprocedure" xmlns:nc1individual="urn:fra:nc1:objet:individual" xmlns:nc1intelreq="urn:fra:nc1:objet:intelrequirement" xmlns:nc1meteo="urn:fra:nc1:objet:meteo" xmlns:nc1mission="urn:fra:nc1:objet:mission" xmlns:nc1missionASA="urn:fra:nc1:objet:missionASA" xmlns:nc1missionASS="urn:fra:nc1:objet:missionASS" xmlns:nc1obstacle="urn:fra:nc1:objet:obstacle" xmlns:nc1organisation="urn:fra:nc1:objet:organisation" xmlns:nc1participant="urn:fra:nc1:objet:participant" xmlns:nc1reinforcement="urn:fra:nc1:objet:reinforcement" xmlns:nc1roe="urn:fra:nc1:objet:roe" xmlns:nc1route="urn:fra:nc1:objet:route" xmlns:nc1seaparticipant="urn:fra:nc1:objet:seaparticipant" xmlns:nc1seatrack="urn:fra:nc1:objet:seatrack" xmlns:nc1tacarea="urn:fra:nc1:objet:tacarea" xmlns:nc1tacline="urn:fra:nc1:objet:tacline" xmlns:nc1tacpoint="urn:fra:nc1:objet:tacpoint" xmlns:nc1track="urn:fra:nc1:objet:track" xmlns:nc1unit="urn:fra:nc1:objet:unit">
+  <!-- NC1 V.9.0.0 -->
+  <xs:import namespace="urn:fra:nc1:common:message" schemaLocation="../Commun/Message.xsd" />
+  <xs:import namespace="urn:fra:nc1:common:object" schemaLocation="../Commun/Object.xsd" />
+  <xs:import namespace="urn:fra:nc1:objet:2dcoordinationmean" schemaLocation="../Commun/2DCoordinationMean.xsd" />
+  <xs:import namespace="urn:fra:nc1:objet:3droute" schemaLocation="../Objet/NC1_3DRoute.xsd" />
+  <xs:import namespace="urn:fra:nc1:objet:acm" schemaLocation="../Objet/NC1_AcmWez.xsd" />
+  <xs:import namespace="urn:fra:nc1:objet:airparticipant" schemaLocation="../Objet/NC1_AirParticipant.xsd" />
+  <xs:import namespace="urn:fra:nc1:objet:airtrack" schemaLocation="../Objet/NC1_AirTrack.xsd" />
+  <xs:import namespace="urn:fra:nc1:objet:cbrnevent" schemaLocation="../Objet/NC1_CbrnEvent.xsd" />
+  <xs:import namespace="urn:fra:nc1:objet:convoy" schemaLocation="../Objet/NC1_Convoy.xsd" />
+  <xs:import namespace="urn:fra:nc1:objet:event" schemaLocation="../Objet/NC1_Event.xsd" />
+  <xs:import namespace="urn:fra:nc1:objet:facility" schemaLocation="../Objet/NC1_Facility.xsd" />
+  <xs:import namespace="urn:fra:nc1:objet:fire" schemaLocation="../Objet/NC1_Fire.xsd" />
+  <xs:import namespace="urn:fra:nc1:objet:fireobjective" schemaLocation="../Objet/NC1_FireObjective.xsd" />
+  <xs:import namespace="urn:fra:nc1:objet:freeshape" schemaLocation="../Objet/NC1_FreeShape.xsd" />
+  <xs:import namespace="urn:fra:nc1:objet:groundentity" schemaLocation="../Objet/NC1_GroundEntity.xsd" />
+  <xs:import namespace="urn:fra:nc1:objet:groundparticipant" schemaLocation="../Objet/NC1_GroundParticipant.xsd" />
+  <xs:import namespace="urn:fra:nc1:objet:groundtrack" schemaLocation="../Objet/NC1_GroundTrack.xsd" />
+  <xs:import namespace="urn:fra:nc1:objet:iffprocedure" schemaLocation="../Objet/NC1_IffProcedure.xsd" />
+  <xs:import namespace="urn:fra:nc1:objet:individual" schemaLocation="../Objet/NC1_Individual.xsd" />
+  <xs:import namespace="urn:fra:nc1:objet:intelrequirement" schemaLocation="../Objet/NC1_IntelRequirement.xsd" />
+  <xs:import namespace="urn:fra:nc1:objet:meteo" schemaLocation="../Objet/NC1_Meteo.xsd" />
+  <xs:import namespace="urn:fra:nc1:objet:mission" schemaLocation="../Objet/NC1_Mission.xsd" />
+  <xs:import namespace="urn:fra:nc1:objet:missionASA" schemaLocation="../Objet/NC1_MissionASA.xsd" />
+  <xs:import namespace="urn:fra:nc1:objet:missionASS" schemaLocation="../Objet/NC1_MissionASS.xsd" />
+  <xs:import namespace="urn:fra:nc1:objet:obstacle" schemaLocation="../Objet/NC1_Obstacle.xsd" />
+  <xs:import namespace="urn:fra:nc1:objet:organisation" schemaLocation="../Objet/NC1_Organisation.xsd" />
+  <xs:import namespace="urn:fra:nc1:objet:participant" schemaLocation="../Commun/Participant.xsd" />
+  <xs:import namespace="urn:fra:nc1:objet:reinforcement" schemaLocation="../Objet/NC1_Reinforcement.xsd" />
+  <xs:import namespace="urn:fra:nc1:objet:roe" schemaLocation="../Objet/NC1_Roe.xsd" />
+  <xs:import namespace="urn:fra:nc1:objet:route" schemaLocation="../Objet/NC1_Route.xsd" />
+  <xs:import namespace="urn:fra:nc1:objet:seaparticipant" schemaLocation="../Objet/NC1_SeaParticipant.xsd" />
+  <xs:import namespace="urn:fra:nc1:objet:seatrack" schemaLocation="../Objet/NC1_SeaTrack.xsd" />
+  <xs:import namespace="urn:fra:nc1:objet:tacarea" schemaLocation="../Objet/NC1_TacArea.xsd" />
+  <xs:import namespace="urn:fra:nc1:objet:tacline" schemaLocation="../Objet/NC1_TacLine.xsd" />
+  <xs:import namespace="urn:fra:nc1:objet:tacpoint" schemaLocation="../Objet/NC1_TacPoint.xsd" />
+  <xs:import namespace="urn:fra:nc1:objet:track" schemaLocation="../Commun/Track.xsd" />
+  <xs:import namespace="urn:fra:nc1:objet:unit" schemaLocation="../Objet/NC1_Unit.xsd" />
+  <xs:element name="NC1_TechStcUpdate">
+    <xs:annotation>
+      <xs:documentation>Le message NC1_TechStcUpdate est utilisé pour mettre à jour la Situation Tactique Courante (STC). Il indique les objets NC1 à mettre à jour à retirer de la STC.</xs:documentation>
+      <xs:documentation xml:lang="en">The NC1_TechStcUpdate message is used to update the Current Tactical Situation ( STC). He indicates objects NC1 to be updated to remove from the STC.</xs:documentation>
+      <xs:appinfo>
+        <nc1:type xmlns:nc1="urn:fra:nc1">Message de service</nc1:type>
+        <nc1ihm:Nom>Mise à jour de la Situation Tactique Courante</nc1ihm:Nom>
+        <nc1ihm:Nom xml:lang="en">Update of the tactical situation</nc1ihm:Nom>
+        <nc1:MessH xmlns:nc1="urn:fra:nc1">N/A</nc1:MessH>
+        <nc1:MessADatP3 xmlns:nc1="urn:fra:nc1">N/A</nc1:MessADatP3>
+        <nc1:LastNC1ModifyVersion xmlns:nc1="urn:fra:nc1">9.0.0</nc1:LastNC1ModifyVersion>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:complexContent>
+        <xs:extension base="nc1msgcom:BaseMessageType">
+          <xs:sequence>
+            <xs:element name="isFull" type="xs:boolean">
+              <xs:annotation>
+                <xs:documentation>Indique si la situation tactique courante transmise par le message est complète (=1) ou partielle (=0).</xs:documentation>
+                <xs:documentation xml:lang="en">Specifies if the tactical situation transmitted by the message is comprehensive (=1) or partial (=0).</xs:documentation>
+                <xs:appinfo>
+                  <nc1ihm:Nom>Mode de mise à jour</nc1ihm:Nom>
+                  <nc1ihm:Nom xml:lang="en">Update mode</nc1ihm:Nom>
+                </xs:appinfo>
+              </xs:annotation>
+            </xs:element>
+            <xs:element minOccurs="0" name="updatedObjects">
+              <xs:annotation>
+                <xs:documentation>Objets mis à jour de la Situation Tactique Courante.</xs:documentation>
+                <xs:documentation xml:lang="en">Tactical situation updated objects.</xs:documentation>
+                <xs:appinfo>
+                  <nc1ihm:Nom>Objets mis à jour</nc1ihm:Nom>
+                  <nc1ihm:Nom xml:lang="en">Updated objects</nc1ihm:Nom>
+                </xs:appinfo>
+              </xs:annotation>
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element maxOccurs="unbounded" name="object" type="nc1objcom:BaseObjectType">
+                    <xs:annotation>
+                      <xs:documentation>Objet mis à jour de la Situation Tactique Courante.</xs:documentation>
+                      <xs:documentation xml:lang="en">Tactical situation updated object.</xs:documentation>
+                      <xs:appinfo>
+                        <nc1ihm:Nom>Objet mis à jour</nc1ihm:Nom>
+                        <nc1ihm:Nom xml:lang="en">Updated object</nc1ihm:Nom>
+                      </xs:appinfo>
+                    </xs:annotation>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element minOccurs="0" name="desactivatedObjects">
+              <xs:annotation>
+                <xs:documentation>Objets désactivés de la Situation Tactique Courante.</xs:documentation>
+                <xs:documentation xml:lang="en">Tactical situation deactivated objects.</xs:documentation>
+                <xs:appinfo>
+                  <nc1ihm:Nom>Objets désactivés</nc1ihm:Nom>
+                  <nc1ihm:Nom xml:lang="en">Deactivated objects</nc1ihm:Nom>
+                </xs:appinfo>
+              </xs:annotation>
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element maxOccurs="unbounded" name="object" type="nc1objcom:BaseObjectType">
+                    <xs:annotation>
+                      <xs:documentation>Objet désactivé de la Situation Tactique Courante.</xs:documentation>
+                      <xs:documentation xml:lang="en">Deactivated object from the tactical situation.</xs:documentation>
+                      <xs:appinfo>
+                        <nc1ihm:Nom>Objet désactivé</nc1ihm:Nom>
+                        <nc1ihm:Nom xml:lang="en">deactivated object</nc1ihm:Nom>
+                      </xs:appinfo>
+                    </xs:annotation>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element minOccurs="0" name="type" type="nc1stcupdate:InformationTypeCode">
+              <xs:annotation>
+                <xs:documentation>Type d'information.</xs:documentation>
+                <xs:documentation xml:lang="en">information type.</xs:documentation>
+                <xs:appinfo>
+                  <nc1ihm:Nom>Type</nc1ihm:Nom>
+                  <nc1ihm:Nom xml:lang="en">information type</nc1ihm:Nom>
+                </xs:appinfo>
+              </xs:annotation>
+            </xs:element>
+          </xs:sequence>
+        </xs:extension>
+      </xs:complexContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:simpleType name="InformationTypeCode">
+    <xs:annotation>
+      <xs:appinfo>
+        <nc1dico:source xmlns:nc1dico="urn:fra:nc1:dictionnaires">STAT</nc1dico:source>
+        <nc1ihm:description>Domaine du message.</nc1ihm:description>
+        <nc1ihm:description xml:lang="en">message domain.</nc1ihm:description>
+      </xs:appinfo>
+      <xs:documentation>Domaine du message.</xs:documentation>
+      <xs:documentation xml:lang="en">message domain.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:integer" />
+  </xs:simpleType>
+</xs:schema>

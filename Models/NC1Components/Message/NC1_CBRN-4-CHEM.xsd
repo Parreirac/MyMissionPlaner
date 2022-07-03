@@ -1,0 +1,138 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema targetNamespace="urn:fra:nc1:message:cbrn4chem" xmlns:nc1ihm="urn:fra:nc1:IHM" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:nc1cbrn4chem="urn:fra:nc1:message:cbrn4chem" xmlns:nc1cbrn="urn:fra:nc1:common:cbrn" xmlns:nc1msgcom="urn:fra:nc1:common:message">
+  <!-- NC1 V.9.0.0 -->
+  <xs:import namespace="urn:fra:nc1:common:cbrn" schemaLocation="../Commun/Cbrn.xsd" />
+  <xs:import namespace="urn:fra:nc1:common:message" schemaLocation="../Commun/Message.xsd" />
+  <xs:element name="NC1_CBRN-4-CHEM">
+    <xs:annotation>
+      <xs:documentation>Le message NC1_CBRN-4-CHEM permet de rendre compte du suivi chimique et des résultats des analyses menées.</xs:documentation>
+      <xs:documentation xml:lang="en">The NC1_CBRN-4-CHEM message allows to report the biological follow-up and the results of the led analyses.</xs:documentation>
+      <xs:appinfo>
+        <nc1:type xmlns:nc1="urn:fra:nc1">Message</nc1:type>
+        <nc1ihm:Nom>Compte-rendu de suivi chimique</nc1ihm:Nom>
+        <nc1ihm:Nom xml:lang="en">Cbrn 4 chemical report</nc1ihm:Nom>
+        <nc1:MessH xmlns:nc1="urn:fra:nc1">N/A</nc1:MessH>
+        <nc1:MessADatP3 xmlns:nc1="urn:fra:nc1">CBRN_4_CHEM</nc1:MessADatP3>
+        <nc1:LastNC1ModifyVersion xmlns:nc1="urn:fra:nc1">9.0.0</nc1:LastNC1ModifyVersion>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:complexContent>
+        <xs:extension base="nc1msgcom:BaseMessageType">
+          <xs:sequence>
+            <xs:element minOccurs="0" name="alfa" type="nc1cbrn:AlfaType">
+              <xs:annotation>
+                <xs:documentation>Numéro de l'événement NRBC.</xs:documentation>
+                <xs:documentation xml:lang="en">CBRN event number.</xs:documentation>
+                <xs:appinfo>
+                  <nc1ihm:Nom>ALFA</nc1ihm:Nom>
+                  <nc1ihm:Nom xml:lang="en">ALPHA</nc1ihm:Nom>
+                </xs:appinfo>
+              </xs:annotation>
+            </xs:element>
+            <xs:element name="india" type="nc1cbrn:IndiaType">
+              <xs:annotation>
+                <xs:documentation>Caractéristiques de la diffusion de l'agent NRBC.</xs:documentation>
+                <xs:documentation xml:lang="en">CBRN agent release characteristics.</xs:documentation>
+                <xs:appinfo>
+                  <nc1ihm:Nom>INDIA</nc1ihm:Nom>
+                  <nc1ihm:Nom xml:lang="en">INDIA</nc1ihm:Nom>
+                </xs:appinfo>
+              </xs:annotation>
+            </xs:element>
+            <xs:element minOccurs="0" name="indiac" type="nc1cbrn:IndiacType">
+              <xs:annotation>
+                <xs:documentation>Probabilités associées à la diffusion de l'agent chimique.</xs:documentation>
+                <xs:documentation xml:lang="en">Chemical agent release probability.</xs:documentation>
+                <xs:appinfo>
+                  <nc1ihm:Nom>INDIAC</nc1ihm:Nom>
+                  <nc1ihm:Nom xml:lang="en">INDIAC</nc1ihm:Nom>
+                </xs:appinfo>
+              </xs:annotation>
+            </xs:element>
+            <xs:element name="quebec" type="nc1cbrn:QuebecType">
+              <xs:annotation>
+                <xs:documentation>Localisation et caractérisation de la détection NRBC.</xs:documentation>
+                <xs:documentation xml:lang="en">Location and characterisation of the CBRN detection.</xs:documentation>
+                <xs:appinfo>
+                  <nc1ihm:Nom>QUEBEC</nc1ihm:Nom>
+                  <nc1ihm:Nom xml:lang="en">QUEBEC</nc1ihm:Nom>
+                </xs:appinfo>
+              </xs:annotation>
+            </xs:element>
+            <xs:element minOccurs="0" name="romeo" type="nc1cbrn:RomeoType">
+              <xs:annotation>
+                <xs:documentation>Niveau de contamination chimique.</xs:documentation>
+                <xs:documentation xml:lang="en">Chemical contamination level.</xs:documentation>
+                <xs:appinfo>
+                  <nc1ihm:Nom>ROMEO</nc1ihm:Nom>
+                  <nc1ihm:Nom xml:lang="en">ROMEO</nc1ihm:Nom>
+                </xs:appinfo>
+              </xs:annotation>
+            </xs:element>
+            <xs:element name="sierra" type="nc1cbrn:SierraType">
+              <xs:annotation>
+                <xs:documentation>Horodatage de lecture ou de détection initiale de la contamination.</xs:documentation>
+                <xs:documentation xml:lang="en">Timestamp of contamination reading or initial detection.</xs:documentation>
+                <xs:appinfo>
+                  <nc1ihm:Nom>SIERRA</nc1ihm:Nom>
+                  <nc1ihm:Nom xml:lang="en">SIERRA</nc1ihm:Nom>
+                </xs:appinfo>
+              </xs:annotation>
+            </xs:element>
+            <xs:element minOccurs="0" name="tango" type="nc1cbrn:TangoType">
+              <xs:annotation>
+                <xs:documentation>Description de la topographie du terrain et de la végétation.</xs:documentation>
+                <xs:documentation xml:lang="en">Description of the topography and vegetation.</xs:documentation>
+                <xs:appinfo>
+                  <nc1ihm:Nom>TANGO</nc1ihm:Nom>
+                  <nc1ihm:Nom xml:lang="en">TANGO</nc1ihm:Nom>
+                </xs:appinfo>
+              </xs:annotation>
+            </xs:element>
+            <xs:element minOccurs="0" name="whiskey" type="nc1cbrn:WhiskeyType">
+              <xs:annotation>
+                <xs:documentation>Informations capteur.</xs:documentation>
+                <xs:documentation xml:lang="en">Sensor information.</xs:documentation>
+                <xs:appinfo>
+                  <nc1ihm:Nom>WHISKEY</nc1ihm:Nom>
+                  <nc1ihm:Nom xml:lang="en">WHISKEY</nc1ihm:Nom>
+                </xs:appinfo>
+              </xs:annotation>
+            </xs:element>
+            <xs:element minOccurs="0" name="yankee" type="nc1cbrn:YankeeType">
+              <xs:annotation>
+                <xs:documentation>Direction et vitesse du vent.</xs:documentation>
+                <xs:documentation xml:lang="en">Wind direction and speed.</xs:documentation>
+                <xs:appinfo>
+                  <nc1ihm:Nom>YANKEE</nc1ihm:Nom>
+                  <nc1ihm:Nom xml:lang="en">YANKEE</nc1ihm:Nom>
+                </xs:appinfo>
+              </xs:annotation>
+            </xs:element>
+            <xs:element minOccurs="0" name="zulu" type="nc1cbrn:ZuluType">
+              <xs:annotation>
+                <xs:documentation>Conditions météo mesurées.</xs:documentation>
+                <xs:documentation xml:lang="en">Measured meteorological conditions.</xs:documentation>
+                <xs:appinfo>
+                  <nc1ihm:Nom>ZULU</nc1ihm:Nom>
+                  <nc1ihm:Nom xml:lang="en">ZULU</nc1ihm:Nom>
+                </xs:appinfo>
+              </xs:annotation>
+            </xs:element>
+            <xs:element minOccurs="0" name="crbnInfo" type="nc1msgcom:MixedAnyType">
+              <xs:annotation>
+                <xs:documentation>Informations supplémentaires.</xs:documentation>
+                <xs:documentation xml:lang="en">Additional information.</xs:documentation>
+                <xs:appinfo>
+                  <nc1ihm:Nom>CBRN INFO</nc1ihm:Nom>
+                  <nc1ihm:Nom xml:lang="en">CBRN INFO</nc1ihm:Nom>
+                </xs:appinfo>
+              </xs:annotation>
+            </xs:element>
+          </xs:sequence>
+        </xs:extension>
+      </xs:complexContent>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

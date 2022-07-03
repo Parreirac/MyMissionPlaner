@@ -1,0 +1,261 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema targetNamespace="urn:fra:nc1:objet:tacline" xmlns:nc1ihm="urn:fra:nc1:IHM" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:nc1tacline="urn:fra:nc1:objet:tacline" xmlns:nc1common="urn:fra:nc1:common:attribute" xmlns:nc1com="urn:fra:nc1:common:communication" xmlns:nc1location="urn:fra:nc1:common:location" xmlns:nc1sicsdicos="urn:fra:nc1:common:sicsdicos" xmlns:nc12dcoord="urn:fra:nc1:objet:2dcoordinationmean">
+  <!-- NC1 V.9.0.0 -->
+  <xs:import namespace="urn:fra:nc1:common:attribute" schemaLocation="../Commun/Common.xsd" />
+  <xs:import namespace="urn:fra:nc1:common:communication" schemaLocation="../Commun/Communication.xsd" />
+  <xs:import namespace="urn:fra:nc1:common:location" schemaLocation="../Commun/Location.xsd" />
+  <xs:import namespace="urn:fra:nc1:common:sicsdicos" schemaLocation="../Commun/SICS_Dictionaries.xsd" />
+  <xs:import namespace="urn:fra:nc1:objet:2dcoordinationmean" schemaLocation="../Commun/2DCoordinationMean.xsd" />
+  <xs:element name="NC1_TacLine" type="nc1tacline:TacLineType">
+    <xs:annotation>
+      <xs:documentation>L’objet NC1_TacLine décrit les lignes du champ de bataille sur lesquelles une signification tactique a été attribuée. Les limites entre unités sont comprises dans l’objet NC1_TacLine.</xs:documentation>
+      <xs:documentation xml:lang="en">The NC1_TacLine object describes battlefield lines with a tactical meaning. Limits between units are included in the NC1_TacLine object.</xs:documentation>
+      <xs:appinfo>
+        <nc1:type xmlns:nc1="urn:fra:nc1">Objet</nc1:type>
+        <nc1ihm:Nom>Ligne tactique</nc1ihm:Nom>
+        <nc1ihm:Nom xml:lang="en">Tactical line</nc1ihm:Nom>
+        <nc1:MessH xmlns:nc1="urn:fra:nc1">Message H6.0 TacLine</nc1:MessH>
+        <nc1:MessADatP3 xmlns:nc1="urn:fra:nc1">N/A</nc1:MessADatP3>
+        <nc1:LastNC1ModifyVersion xmlns:nc1="urn:fra:nc1">9.0.0</nc1:LastNC1ModifyVersion>
+      </xs:appinfo>
+    </xs:annotation>
+  </xs:element>
+  <xs:simpleType name="TacLineFrSpecificCode">
+    <xs:annotation>
+      <xs:appinfo />
+      <xs:documentation></xs:documentation>
+      <xs:documentation xml:lang="en"></xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:integer" />
+  </xs:simpleType>
+  <xs:simpleType name="TacLineSymbolCode">
+    <xs:annotation>
+      <xs:appinfo>
+        <nc1dico:source xmlns:nc1dico="urn:fra:nc1:dictionnaires">SFTT 3.4.8</nc1dico:source>
+        <nc1dico:derogation xmlns:nc1dico="urn:fra:nc1:dictionnaires">TYPE DE LIGNE</nc1dico:derogation>
+        <nc1ihm:description>DECRIT LES TYPES DE LIGNES AU SENS APP6 ET CLEF D'ENTREE DANS L'APP6.</nc1ihm:description>
+        <nc1ihm:description xml:lang="en">DESCRIBES THE TYPES OF LINES IN APP6 MEANING AND KEY FOR ENTRY IN APP6.</nc1ihm:description>
+      </xs:appinfo>
+      <xs:documentation>DECRIT LES TYPES DE LIGNES AU SENS APP6 ET CLEF D'ENTREE DANS L'APP6.</xs:documentation>
+      <xs:documentation xml:lang="en">DESCRIBES THE TYPES OF LINES IN APP6 MEANING AND KEY FOR ENTRY IN APP6.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:integer" />
+  </xs:simpleType>
+  <xs:complexType name="TacLineType">
+    <xs:annotation>
+      <xs:documentation>L’objet NC1_TacLine décrit les lignes du champ de bataille sur lesquels une signification tactique a été attribuée. Les limites entre unités sont comprises dans l’objet NC1_TacLine.</xs:documentation>
+      <xs:documentation xml:lang="en">The NC1_TacLine object describes battlefield lines with a tactical meaning. Limits between units are included in the NC1_TacLine object.</xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="nc12dcoord:_2DCoordinationMeanType">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="tacticalData">
+            <xs:annotation>
+              <xs:documentation>Données tactiques.</xs:documentation>
+              <xs:documentation xml:lang="en">tactical datas.</xs:documentation>
+              <xs:appinfo>
+                <nc1ihm:Nom>Données tactiques</nc1ihm:Nom>
+                <nc1ihm:Nom xml:lang="en">tactical datas</nc1ihm:Nom>
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element minOccurs="0" name="name" type="nc1common:ShortTextObjectType">
+                  <xs:annotation>
+                    <xs:documentation>Nom affiché sur la cartographie.</xs:documentation>
+                    <xs:documentation xml:lang="en">Name displayed on map.</xs:documentation>
+                    <xs:appinfo>
+                      <nc1ihm:Nom>Nom</nc1ihm:Nom>
+                      <nc1ihm:Nom xml:lang="en">name</nc1ihm:Nom>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:element>
+                <xs:element name="symbolCode" type="nc1common:SymbolCodeType">
+                  <xs:annotation>
+                    <xs:documentation>Code contenant les informations de symbologie, d'identité (AMI, ENI, etc.), de nationalité, d'état de planification.</xs:documentation>
+                    <xs:appinfo>
+                      <nc1ihm:Nom>Code du symbole</nc1ihm:Nom>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:element>
+                <xs:element minOccurs="0" name="frSpecificSymbol" type="nc1tacline:TacLineFrSpecificCode">
+                  <xs:annotation>
+                    <xs:documentation>Indicateur de spécificité française pour le code symbole et sa représentation graphique</xs:documentation>
+                    <xs:documentation xml:lang="en">French specificity indicator for the symbol code and its graphic representation</xs:documentation>
+                    <xs:appinfo>
+                      <nc1ihm:Nom>Spécialisation Fr du code symbole</nc1ihm:Nom>
+                      <nc1ihm:Nom xml:lang="en">Fr specific symbol</nc1ihm:Nom>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:element>
+                <xs:element minOccurs="0" name="responsibleUnitId" type="nc1common:Nc1ObjectRefType">
+                  <xs:annotation>
+                    <xs:documentation>Identifiant de l’unité responsable.</xs:documentation>
+                    <xs:documentation xml:lang="en">responsable unit id.</xs:documentation>
+                    <xs:appinfo>
+                      <nc1ihm:Nom>Unité responsable</nc1ihm:Nom>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:element>
+                <xs:element minOccurs="0" name="eirn" type="nc1common:EirnType">
+                  <xs:annotation>
+                    <xs:documentation>Identifiant EIRN utilisé par la messagerie VMF.</xs:documentation>
+                    <xs:documentation xml:lang="en">EIRN identifier used by VMF messaging.</xs:documentation>
+                    <xs:appinfo>
+                      <nc1ihm:Nom>Identifiant EIRN</nc1ihm:Nom>
+                      <nc1ihm:Nom xml:lang="en">eirn id</nc1ihm:Nom>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:element>
+                <xs:element minOccurs="0" name="tnL16" type="nc1common:Tnl16Type">
+                  <xs:annotation>
+                    <xs:documentation>Track Number L16.</xs:documentation>
+                    <xs:documentation xml:lang="en">track number L16.</xs:documentation>
+                    <xs:appinfo>
+                      <nc1ihm:Nom>Identifiant TNL16</nc1ihm:Nom>
+                      <nc1ihm:Nom xml:lang="en">TNL16 id</nc1ihm:Nom>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:element>
+                <xs:element minOccurs="0" name="url" type="nc1common:MediumTextObjectType">
+                  <xs:annotation>
+                    <xs:documentation>Lien vers un fichier associé à l’objet.</xs:documentation>
+                    <xs:documentation xml:lang="en">Link to a file associated with the object.</xs:documentation>
+                    <xs:appinfo>
+                      <nc1ihm:Nom>Url</nc1ihm:Nom>
+                      <nc1ihm:Nom xml:lang="en">url</nc1ihm:Nom>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:element>
+                <xs:element minOccurs="0" name="comment" type="nc1common:LongTextObjectType">
+                  <xs:annotation>
+                    <xs:documentation>Commentaire en texte libre.</xs:documentation>
+                    <xs:documentation xml:lang="en">free text comment.</xs:documentation>
+                    <xs:appinfo>
+                      <nc1ihm:Nom>Commentaire</nc1ihm:Nom>
+                      <nc1ihm:Nom xml:lang="en">comment</nc1ihm:Nom>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:element>
+                <xs:element minOccurs="0" name="extVersion" type="nc1common:ExtVersType">
+                  <xs:annotation>
+                    <xs:documentation>Extension pour versions suivantes compatibles.</xs:documentation>
+                    <xs:documentation xml:lang="en">Extension for following compatible versions.</xs:documentation>
+                    <xs:appinfo>
+                      <nc1ihm:Nom>Extension de version</nc1ihm:Nom>
+                      <nc1ihm:Nom xml:lang="en">version extension</nc1ihm:Nom>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:element>
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+          <xs:element minOccurs="0" name="specificData">
+            <xs:annotation>
+              <xs:documentation>Données spécifiques à une ligne tactique.</xs:documentation>
+              <xs:documentation xml:lang="en">Tactical line specific data.</xs:documentation>
+              <xs:appinfo>
+                <nc1ihm:Nom>Données spécifiques</nc1ihm:Nom>
+                <nc1ihm:Nom xml:lang="en">Specific data</nc1ihm:Nom>
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element minOccurs="0" name="leftUnitId" type="nc1common:Nc1ObjectRefType">
+                  <xs:annotation>
+                    <xs:documentation>Dans le cas d’une limite entre unités, identifiant de l’unité à gauche de la limite.</xs:documentation>
+                    <xs:documentation xml:lang="en">In the case of a limit between units, NC1 ID of the unit left to the limit.</xs:documentation>
+                    <xs:appinfo>
+                      <nc1ihm:Nom>Unité à gauche</nc1ihm:Nom>
+                      <nc1ihm:Nom xml:lang="en">Left unit</nc1ihm:Nom>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:element>
+                <xs:element minOccurs="0" name="rightUnitId" type="nc1common:Nc1ObjectRefType">
+                  <xs:annotation>
+                    <xs:documentation>Dans le cas d’une limite entre unités, identifiant de l’unité à droite de la limite.</xs:documentation>
+                    <xs:documentation xml:lang="en">In the case of a limit between units, NC1 ID of the unit right to the limit.</xs:documentation>
+                    <xs:appinfo>
+                      <nc1ihm:Nom>Unité à droite</nc1ihm:Nom>
+                      <nc1ihm:Nom xml:lang="en">Right unit</nc1ihm:Nom>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:element>
+                <xs:element minOccurs="0" name="crossingIndicator" type="nc1sicsdicos:L135_10Code">
+                  <xs:annotation>
+                    <xs:documentation>Indicateur de franchissement de la ligne tactique.</xs:documentation>
+                    <xs:documentation xml:lang="en">crossing indicator of the tactical line.</xs:documentation>
+                    <xs:appinfo>
+                      <nc1ihm:Nom>Franchissement</nc1ihm:Nom>
+                      <nc1ihm:Nom xml:lang="en">Reconnoitred bypass facility</nc1ihm:Nom>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:element>
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+          <xs:element minOccurs="0" name="comData" type="nc1com:ComDataType">
+            <xs:annotation>
+              <xs:documentation>Données de communication de la ligne tactique.</xs:documentation>
+              <xs:appinfo>
+                <nc1ihm:Nom>Données de communication</nc1ihm:Nom>
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:element>
+          <xs:element minOccurs="0" name="location">
+            <xs:annotation>
+              <xs:documentation>Localisation.</xs:documentation>
+              <xs:documentation xml:lang="en">Location.</xs:documentation>
+              <xs:appinfo>
+                <nc1ihm:Nom>Localisation</nc1ihm:Nom>
+                <nc1ihm:Nom xml:lang="en">Location</nc1ihm:Nom>
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element minOccurs="0" name="name" type="nc1common:Text1To30ObjectType">
+                  <xs:annotation>
+                    <xs:documentation>Nom de baptême donné par l'opérateur à la localisation. Par exemple un nom de ville ou de lieu.</xs:documentation>
+                    <xs:documentation xml:lang="en">Name assigned to the location, e.g. city or place name.</xs:documentation>
+                    <xs:appinfo>
+                      <nc1ihm:Nom>Nom</nc1ihm:Nom>
+                      <nc1ihm:Nom xml:lang="en">name</nc1ihm:Nom>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:element>
+                <xs:choice>
+                  <xs:element name="polyline" type="nc1location:PolylineType">
+                    <xs:annotation>
+                      <xs:documentation>Ligne brisée orientée, sans largeur.</xs:documentation>
+                      <xs:appinfo>
+                        <nc1ihm:Nom>Polyligne</nc1ihm:Nom>
+                      </xs:appinfo>
+                    </xs:annotation>
+                  </xs:element>
+                  <xs:element name="multipoint" type="nc1location:MultipointType">
+                    <xs:annotation>
+                      <xs:documentation>Liste de points.</xs:documentation>
+                      <xs:appinfo>
+                        <nc1ihm:Nom>Multipoint</nc1ihm:Nom>
+                      </xs:appinfo>
+                    </xs:annotation>
+                  </xs:element>
+                </xs:choice>
+                <xs:element maxOccurs="unbounded" minOccurs="0" name="validityPeriod" type="nc1common:PeriodType">
+                  <xs:annotation>
+                    <xs:documentation>Période de validité.</xs:documentation>
+                    <xs:documentation xml:lang="en">Validity period.</xs:documentation>
+                    <xs:appinfo>
+                      <nc1ihm:Nom>Période de validité</nc1ihm:Nom>
+                      <nc1ihm:Nom xml:lang="en">Validity period</nc1ihm:Nom>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:element>
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+</xs:schema>

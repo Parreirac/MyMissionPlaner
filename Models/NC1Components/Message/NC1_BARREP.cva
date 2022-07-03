@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<cva:ContextValueAssociation xmlns:cva="http://docs.oasis-open.org/codelist/ns/ContextValueAssociation/1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="urn:fra:nc1:message:barrep" queryBinding="xslt2" xmlns:nc1barrep="urn:fra:nc1:message:barrep">
+  <!-- NC1 V.9.0.0 -->
+  <ValueLists>
+    <ValueList xml:id="nc1msgcom-ClassificationCode" uri="../Dictionnaires/ClassificationCode.gc" />
+    <ValueList xml:id="nc1msgcom-UrgencyLevelCode" uri="../Dictionnaires/UrgencyLevelCode.gc" />
+    <ValueList xml:id="nc1objcom-ActivationStatusCode" uri="../Dictionnaires/ActivationStatusCode.gc" />
+    <ValueList xml:id="nc1objcom-IsFullCode" uri="../Dictionnaires/IsFullCode.gc" />
+    <ValueList xml:id="nc1obstacle-ObstacleFrSpecificCode" uri="../Dictionnaires/ObstacleFrSpecificCode.gc" />
+    <ValueList xml:id="nc1sicsdicos-L114_16Code" uri="../Dictionnaires/L114_16Code.gc" />
+    <ValueList xml:id="nc1sicsdicos-L135_43Code" uri="../Dictionnaires/L135_43Code.gc" />
+    <ValueList xml:id="nc1sicsdicos-L125_19Code" uri="../Dictionnaires/L125_19Code.gc" />
+    <ValueList xml:id="nc1sicsdicos-L135_14Code" uri="../Dictionnaires/L135_14Code.gc" />
+    <ValueList xml:id="nc1sicsdicos-L135_15Code" uri="../Dictionnaires/L135_15Code.gc" />
+    <ValueList xml:id="nc1sicsdicos-L110_40Code" uri="../Dictionnaires/L110_40Code.gc" />
+    <ValueList xml:id="nc1sicsdicos-L117_5Code" uri="../Dictionnaires/L117_5Code.gc" />
+  </ValueLists>
+  <Contexts>
+    <Context address="/nc1barrep:NC1_BARREP/@classification" values="nc1msgcom-ClassificationCode" />
+    <Context address="/nc1barrep:NC1_BARREP/@urgencyLevel" values="nc1msgcom-UrgencyLevelCode" />
+    <Context address="/nc1barrep:NC1_BARREP/friendlyObstacles/friendlyObstacle/@activationStatus" values="nc1objcom-ActivationStatusCode" />
+    <Context address="/nc1barrep:NC1_BARREP/friendlyObstacles/friendlyObstacle/@isFull" values="nc1objcom-IsFullCode" />
+    <Context address="/nc1barrep:NC1_BARREP/friendlyObstacles/friendlyObstacle/tacticalData/frSpecificSymbol" values="nc1obstacle-ObstacleFrSpecificCode" />
+    <Context address="/nc1barrep:NC1_BARREP/friendlyObstacles/friendlyObstacle/tacticalData/achievementStatus" values="nc1sicsdicos-L114_16Code" />
+    <Context address="/nc1barrep:NC1_BARREP/friendlyObstacles/friendlyObstacle/tacticalData/minePresence" values="nc1sicsdicos-L135_43Code" />
+    <Context address="/nc1barrep:NC1_BARREP/friendlyObstacles/friendlyObstacle/tacticalData/activationEndDatetimeQualifier" values="nc1sicsdicos-L125_19Code" />
+    <Context address="/nc1barrep:NC1_BARREP/friendlyObstacles/friendlyObstacle/tacticalData/reliability" values="nc1sicsdicos-L135_14Code" />
+    <Context address="/nc1barrep:NC1_BARREP/friendlyObstacles/friendlyObstacle/tacticalData/credibility" values="nc1sicsdicos-L135_15Code" />
+    <Context address="/nc1barrep:NC1_BARREP/friendlyObstacles/friendlyObstacle/tacticalData/nature" values="nc1sicsdicos-L110_40Code" />
+    <Context address="/nc1barrep:NC1_BARREP/friendlyObstacles/friendlyObstacle/location/quality" values="nc1sicsdicos-L117_5Code" />
+  </Contexts>
+</cva:ContextValueAssociation>

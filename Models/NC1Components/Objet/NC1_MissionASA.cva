@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<cva:ContextValueAssociation xmlns:cva="http://docs.oasis-open.org/codelist/ns/ContextValueAssociation/1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="urn:fra:nc1:objet:missionASA" queryBinding="xslt2" xmlns:nc1missionASA="urn:fra:nc1:objet:missionASA">
+  <!-- NC1 V.9.0.0 -->
+  <ValueLists>
+    <ValueList xml:id="nc1objcom-ActivationStatusCode" uri="../Dictionnaires/ActivationStatusCode.gc" />
+    <ValueList xml:id="nc1objcom-IsFullCode" uri="../Dictionnaires/IsFullCode.gc" />
+    <ValueList xml:id="nc1sicsdicos-L114_10Code" uri="../Dictionnaires/L114_10Code.gc" />
+    <ValueList xml:id="nc1missionASA-SurfaceToAirTypeCode" uri="../Dictionnaires/SurfaceToAirTypeCode.gc" />
+    <ValueList xml:id="nc1missionASA-PriorityCode" uri="../Dictionnaires/PriorityCode.gc" />
+    <ValueList xml:id="nc1missionASA-AircraftTypeCode" uri="../Dictionnaires/AircraftTypeCode.gc" />
+    <ValueList xml:id="nc1missionASA-WeaponCode" uri="../Dictionnaires/WeaponCode.gc" />
+    <ValueList xml:id="nc1missionASA-AircraftEquipmentCode" uri="../Dictionnaires/AircraftEquipmentCode.gc" />
+    <ValueList xml:id="nc1common-LevelReferenceCode" uri="../Dictionnaires/LevelReferenceCode.gc" />
+  </ValueLists>
+  <Contexts>
+    <Context address="/nc1missionASA:NC1_MissionASA/@activationStatus" values="nc1objcom-ActivationStatusCode" />
+    <Context address="/nc1missionASA:NC1_MissionASA/@isFull" values="nc1objcom-IsFullCode" />
+    <Context address="/nc1missionASA:NC1_MissionASA/tacticalData/tacticalPhase" values="nc1sicsdicos-L114_10Code" />
+    <Context address="/nc1missionASA:NC1_MissionASA/tacticalData/airDefenceUnitMission/airDefenceMission/weaponsSystem" values="nc1missionASA-SurfaceToAirTypeCode" />
+    <Context address="/nc1missionASA:NC1_MissionASA/tacticalData/airDefenceUnitMission/airDefenceMission/priorityThreat/priorityOfTheThreat" values="nc1missionASA-PriorityCode" />
+    <Context address="/nc1missionASA:NC1_MissionASA/tacticalData/airDefenceUnitMission/airDefenceMission/priorityThreat/aircraftType" values="nc1missionASA-AircraftTypeCode" />
+    <Context address="/nc1missionASA:NC1_MissionASA/tacticalData/airDefenceUnitMission/airDefenceMission/priorityThreat/equipmentAndWeapon/aircraftWeapon" values="nc1missionASA-WeaponCode" />
+    <Context address="/nc1missionASA:NC1_MissionASA/tacticalData/airDefenceUnitMission/airDefenceMission/priorityThreat/equipmentAndWeapon/aircraftEquipment" values="nc1missionASA-AircraftEquipmentCode" />
+    <Context address="/nc1missionASA:NC1_MissionASA/tacticalData/airDefenceUnitMission/airDefenceMission/specialDefence/unitToDefend/priority" values="nc1missionASA-PriorityCode" />
+    <Context address="/nc1missionASA:NC1_MissionASA/tacticalData/airDefenceUnitMission/airDefenceMission/specialDefence/unitToEscort/priority" values="nc1missionASA-PriorityCode" />
+    <Context address="/nc1missionASA:NC1_MissionASA/tacticalData/airDefenceUnitMission/airDefenceMission/specialDefence/elementToDefend/priority" values="nc1missionASA-PriorityCode" />
+    <Context address="/nc1missionASA:NC1_MissionASA/tacticalData/airDefenceUnitMission/airDefenceMission/surveillanceArea/surveillanceArea/verticalLevel/minLevelReference" values="nc1common-LevelReferenceCode" />
+    <Context address="/nc1missionASA:NC1_MissionASA/tacticalData/airDefenceUnitMission/airDefenceMission/surveillanceArea/surveillanceArea/verticalLevel/maxLevelReference" values="nc1common-LevelReferenceCode" />
+    <Context address="/nc1missionASA:NC1_MissionASA/tacticalData/airDefenceUnitMission/airDefenceMission/defenceArea/elementToDefend/priority" values="nc1missionASA-PriorityCode" />
+  </Contexts>
+</cva:ContextValueAssociation>

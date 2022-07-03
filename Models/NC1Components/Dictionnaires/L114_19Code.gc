@@ -1,0 +1,859 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<gc:CodeList xmlns:nc1dico="urn:fra:nc1:dictionnaires" xmlns:gc="http://docs.oasis-open.org/codelist/ns/genericode/1.0/">
+  <Annotation>
+    <Description>
+      <nc1dico:description>MOYEN D'ACQUISITION D'UN OBJECTIF DE TIR
+SOURCE : STAT DICTIONNAIRE 342</nc1dico:description>
+      <nc1dico:description xml:lang="en">Source : STAT dictionary 342</nc1dico:description>
+    </Description>
+    <AppInfo>
+      <nc1dico:source>SFTT 3.4.8</nc1dico:source>
+      <nc1dico:derogation>MOYEN D'ACQUISITION DE L'OBJECTIF FEUX</nc1dico:derogation>
+    </AppInfo>
+  </Annotation>
+  <Identification>
+    <ShortName>L114_19Code</ShortName>
+    <Version>9.0.0</Version>
+    <CanonicalUri>urn:fra:nc1:common:sicsdicos:L114_19Code</CanonicalUri>
+    <CanonicalVersionUri>urn:fra:nc1:common:sicsdicos:L114_19Code:9.0.0</CanonicalVersionUri>
+  </Identification>
+  <ColumnSet DatatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes">
+    <Column Id="code" Use="required">
+      <ShortName>Code</ShortName>
+      <Data Type="int" />
+    </Column>
+    <Column Id="short" Use="required">
+      <ShortName>Short</ShortName>
+      <Data Type="string" />
+    </Column>
+    <Column Id="long" Use="optional">
+      <ShortName>Long</ShortName>
+      <Data Type="string" />
+    </Column>
+    <Column Id="short-en" Use="optional">
+      <ShortName>Short anglais</ShortName>
+      <Data Type="string" />
+    </Column>
+    <Column Id="long-en" Use="optional">
+      <ShortName>Long anglais</ShortName>
+      <Data Type="string" />
+    </Column>
+    <Column Id="parent" Use="optional">
+      <ShortName>Parent</ShortName>
+      <Data Type="int" />
+    </Column>
+    <Column Id="codeSymbole" Use="optional">
+      <ShortName>Code Symbole</ShortName>
+      <Data Type="string" />
+    </Column>
+    <Column Id="codeHierarchique" Use="optional">
+      <ShortName>Code Hierarchique</ShortName>
+      <Data Type="string" />
+    </Column>
+    <Key Id="codeKey">
+      <ShortName>CodeKey</ShortName>
+      <ColumnRef Ref="code" />
+    </Key>
+  </ColumnSet>
+  <SimpleCodeList>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>0</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>-</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>NO STATEMENT</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>-</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>NO STATEMENT</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>1</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>CAPTURE DOC</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>CAPTURE/PRISE DE DOCUMENT</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>CAPDOC</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>CAPTURED DOCUMENT</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>2</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>CAPTURE MAT</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>CAPTURE/PRISE DE  MATERIEL</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>CAPMAT</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>CAPTURED MATERIAL</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>3</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>RECO SOL</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>RECONNAISSANCE AU SOL</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>GRDREC</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>GROUND RECONNAISSANCE</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>4</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>RENS HUMAIN</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>RENSEIGNEMENT D'ORIGINE HUMAINE</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>HUMINT</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>HUMAN INTELLIGENCE</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>5</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>RENS IMAGERIE</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>RENSEIGNEMENT D'ORIGINE IMAGERIE</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>IMINT</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>IMAGERY INTELLIGENCE</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>6</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>PROD RENS</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>PRODUCTION RENSEIGNEMENT</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>INTP</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>INTELLIGENCE PRODUCTS</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>7</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>RENS RADAR</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>RENSEIGNEMENT D'ORIGINE RELEVE DE SIGNATURE</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>MASINT</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>MEASUREMENT OF SIGNATURE INTELLIGENCE</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>8</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>DIVERS</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>DIVERS</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>MISC</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>MISCELLANEOUS</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>9</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>RENS CONV</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>RENSEIGNEMENT ISSU SOURCE CONVENTIONNELLE</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>OSINT</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>OPEN SOURCE INTELLIGENCE</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>10</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>SOURCE SENSIBLE</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>SOURCE SENSIBLE NON SPECIFIEE</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>UNSPEC</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>UNSPECIFIED SENSITIVE SOURCE</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>11</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>SOURCE DIVERS</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>SOURCES DIVERSES</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>VARI</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>VARIOUS SOURCES</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>12</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>RADAR SOL</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>RADAR DE SURVEILLANCE AU SOL</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>GSRA</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>RADAR, GROUND SURVEILLANCE</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>13</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>RECO AIR</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>RECONNAISSANCE AERIENNE</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>AIRREC</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>AIR RECONNAISSANCE</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>14</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>RADAR CON BAT</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>RADAR DE CONTRE BATTERIE</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>CBRR</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>RADAR, COUNTER BATTERY</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>15</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>RENS ECOUTE</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>RENSEIGNEMENT D'ORIGINE COMMUNICATIONS/DISCUSSION/ECOUTE</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>COMINT</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>COMMUNICATIONS INTELLIGENCE</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>16</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>CONTACT</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>CONTACT</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>CONTAC</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>CONTACT</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>17</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>OBS AVANCE</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>OBSERVATEUR DE L'AVANT</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>FO</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>FORWARD OBSERVER</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>18</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>EN VOL</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>EN VOL</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>INFLIT</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>INFLIGHT</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>19</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>RENS TRANS</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>RENSEIGNEMENT D'ORIGINE TRANSMISSION</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>SIGINT</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>SIGNAL INTELLIGENCE</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>20</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>#ABANDON</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>#ABANDON</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>#DISUSED</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>#DISUSED</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>21</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>#ABANDON</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>#ABANDON</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>#DISUSED</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>#DISUSED</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>22</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>#ABANDON</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>#ABANDON</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>#DISUSED</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>#DISUSED</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>23</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>#ABANDON</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>#ABANDON</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>#DISUSED</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>#DISUSED</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>24</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>#ABANDON</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>#ABANDON</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>#DISUSED</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>#DISUSED</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>25</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>#ABANDON</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>#ABANDON</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>#DISUSED</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>#DISUSED</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>26</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>#ABANDON</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>#ABANDON</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>#DISUSED</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>#DISUSED</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>27</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>#ABANDON</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>#ABANDON</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>#DISUSED</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>#DISUSED</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>28</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>#ABANDON</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>#ABANDON</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>#DISUSED</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>#DISUSED</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>29</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>#ABANDON</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>#ABANDON</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>#DISUSED</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>#DISUSED</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>30</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>#ABANDON</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>#ABANDON</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>#DISUSED</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>#DISUSED</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>31</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>#ABANDON</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>#ABANDON</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>#DISUSED</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>#DISUSED</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>32</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>#ABANDON</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>#ABANDON</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>#DISUSED</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>#DISUSED</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>33</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>#ABANDON</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>#ABANDON</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>#DISUSED</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>#DISUSED</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>34</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>#ABANDON</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>#ABANDON</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>#DISUSED</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>#DISUSED</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>35</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>#ABANDON</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>#ABANDON</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>#DISUSED</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>#DISUSED</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>36</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>PRISONNIER</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>PRISONNIER DE GUERRE</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>POW</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>PRISONER OF WAR</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>37</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>REFUGIE</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>REFUGIE</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>REFUGE</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>REFUGEE</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>38</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>OBS ART</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>OBSERVATION D'ARTILLERIE</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>ARTOBS</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>ARTILLERY OBSERVATION</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>39</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>TRANSFUGE</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>TRANSFUGE</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>DEFECT</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>DEFECTOR</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>40</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>OBS AV SS LASR</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>OBSERVATEUR AVANCE SANS TELEMETRE LASER</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>FOWOL</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>FORWARD OBSERVER WITHOUT LASER</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>41</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>OBS NON ARTIL</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>OBSERVATEUR HORS ARTILLERIE</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>OBSR</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>OBSERVER, NOT ARTILLERY</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>42</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>SATELLITE</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>SATELLITE</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>SAT</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>SATELLITE</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>43</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>RECO PROFOND</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>PATROUILLE DE RECONNAISSANCE DANS LA PROFONDEUR</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>LRRP</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>LONG RANGE RECONNAISSANCE PATROL</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>44</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>RECO</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>PATROUILLE DE RECONNAISSANCE</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>RECON</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>RECONNAISSANCE PATROL</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>45</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>RADAR AERO</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>RADAR AEROPORTE A SURVEILLANCE LATERALE</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>SLAR</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>SLAR/SIDE-LOOKING AIRBORNE RADAR</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>46</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>AERIENNE TAC</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>AERIENNE TACTIQUE</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>TACAIR</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>TACTICAL AIR</SimpleValue>
+      </Value>
+    </Row>
+  </SimpleCodeList>
+</gc:CodeList>

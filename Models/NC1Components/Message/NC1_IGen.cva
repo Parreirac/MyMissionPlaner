@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<cva:ContextValueAssociation xmlns:cva="http://docs.oasis-open.org/codelist/ns/ContextValueAssociation/1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="urn:fra:nc1:message:igen" queryBinding="xslt2" xmlns:nc1igen="urn:fra:nc1:message:igen">
+  <!-- NC1 V.9.0.0 -->
+  <ValueLists>
+    <ValueList xml:id="nc1msgcom-ClassificationCode" uri="../Dictionnaires/ClassificationCode.gc" />
+    <ValueList xml:id="nc1msgcom-UrgencyLevelCode" uri="../Dictionnaires/UrgencyLevelCode.gc" />
+    <ValueList xml:id="nc1igen-GeneralOrderStatusCode" uri="../Dictionnaires/GeneralOrderStatusCode.gc" />
+  </ValueLists>
+  <Contexts>
+    <Context address="/nc1igen:NC1_IGen/@classification" values="nc1msgcom-ClassificationCode" />
+    <Context address="/nc1igen:NC1_IGen/@urgencyLevel" values="nc1msgcom-UrgencyLevelCode" />
+    <Context address="/nc1igen:NC1_IGen/status" values="nc1igen-GeneralOrderStatusCode" />
+  </Contexts>
+</cva:ContextValueAssociation>

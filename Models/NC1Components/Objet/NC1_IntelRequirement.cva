@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<cva:ContextValueAssociation xmlns:cva="http://docs.oasis-open.org/codelist/ns/ContextValueAssociation/1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="urn:fra:nc1:objet:intelrequirement" queryBinding="xslt2" xmlns:nc1intelreq="urn:fra:nc1:objet:intelrequirement">
+  <!-- NC1 V.9.0.0 -->
+  <ValueLists>
+    <ValueList xml:id="nc1objcom-ActivationStatusCode" uri="../Dictionnaires/ActivationStatusCode.gc" />
+    <ValueList xml:id="nc1objcom-IsFullCode" uri="../Dictionnaires/IsFullCode.gc" />
+    <ValueList xml:id="nc1intelreq-InformationPriorityCategoryCode" uri="../Dictionnaires/InformationPriorityCategoryCode.gc" />
+    <ValueList xml:id="nc1intelreq-InformationCategoryCode" uri="../Dictionnaires/InformationCategoryCode.gc" />
+    <ValueList xml:id="nc1intelreq-ScopeOfInformationCode" uri="../Dictionnaires/ScopeOfInformationCode.gc" />
+  </ValueLists>
+  <Contexts>
+    <Context address="/nc1intelreq:NC1_IntelRequirement/@activationStatus" values="nc1objcom-ActivationStatusCode" />
+    <Context address="/nc1intelreq:NC1_IntelRequirement/@isFull" values="nc1objcom-IsFullCode" />
+    <Context address="/nc1intelreq:NC1_IntelRequirement/tacticalData/priority" values="nc1intelreq-InformationPriorityCategoryCode" />
+    <Context address="/nc1intelreq:NC1_IntelRequirement/tacticalData/category" values="nc1intelreq-InformationCategoryCode" />
+    <Context address="/nc1intelreq:NC1_IntelRequirement/tacticalData/scopeOfInformation" values="nc1intelreq-ScopeOfInformationCode" />
+  </Contexts>
+</cva:ContextValueAssociation>

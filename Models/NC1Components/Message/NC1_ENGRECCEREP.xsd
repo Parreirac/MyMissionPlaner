@@ -1,0 +1,215 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema targetNamespace="urn:fra:nc1:message:engreccerep" xmlns:nc1ihm="urn:fra:nc1:IHM" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:nc1engreccerep="urn:fra:nc1:message:engreccerep" xmlns:nc1common="urn:fra:nc1:common:attribute" xmlns:nc1msgcom="urn:fra:nc1:common:message" xmlns:nc1engrecceord="urn:fra:nc1:message:engrecceord" xmlns:nc1facility="urn:fra:nc1:objet:facility" xmlns:nc1groundentity="urn:fra:nc1:objet:groundentity" xmlns:nc1obstacle="urn:fra:nc1:objet:obstacle" xmlns:nc1route="urn:fra:nc1:objet:route">
+  <!-- NC1 V.9.0.0 -->
+  <xs:import namespace="urn:fra:nc1:common:attribute" schemaLocation="../Commun/Common.xsd" />
+  <xs:import namespace="urn:fra:nc1:common:message" schemaLocation="../Commun/Message.xsd" />
+  <xs:import namespace="urn:fra:nc1:message:engrecceord" schemaLocation="NC1_ENGRECCEORD.xsd" />
+  <xs:import namespace="urn:fra:nc1:objet:facility" schemaLocation="../Objet/NC1_Facility.xsd" />
+  <xs:import namespace="urn:fra:nc1:objet:groundentity" schemaLocation="../Objet/NC1_GroundEntity.xsd" />
+  <xs:import namespace="urn:fra:nc1:objet:obstacle" schemaLocation="../Objet/NC1_Obstacle.xsd" />
+  <xs:import namespace="urn:fra:nc1:objet:route" schemaLocation="../Objet/NC1_Route.xsd" />
+  <xs:element name="NC1_ENGRECCEREP">
+    <xs:annotation>
+      <xs:documentation>Le message NC1_ENGRECCEREP est utilisé rendre compte des missions de reconnaissance de mobilité, contre-mobilité et survivabilité du génie, et des tâches de soutien général du génie.</xs:documentation>
+      <xs:documentation xml:lang="en">The NC1_ENGRECCEREP message is used to report reconnaissance missions of mobility, against mobility and survivabilité of engineer units, and tasks of general support of engineers.</xs:documentation>
+      <xs:appinfo>
+        <nc1:type xmlns:nc1="urn:fra:nc1">Message</nc1:type>
+        <nc1ihm:Nom>Compte rendu de mission de reconnaissance du génie</nc1ihm:Nom>
+        <nc1ihm:Nom xml:lang="en">Engineer recce mission report</nc1ihm:Nom>
+        <nc1:MessH xmlns:nc1="urn:fra:nc1">N/A</nc1:MessH>
+        <nc1:MessADatP3 xmlns:nc1="urn:fra:nc1">ENGRECCEREP</nc1:MessADatP3>
+        <nc1:LastNC1ModifyVersion xmlns:nc1="urn:fra:nc1">9.0.0</nc1:LastNC1ModifyVersion>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:complexContent>
+        <xs:extension base="nc1msgcom:BaseMessageType">
+          <xs:sequence>
+            <xs:element minOccurs="0" name="recceCharacteristics">
+              <xs:annotation>
+                <xs:documentation>Caractéristiques de la reconnaissance effectuée.</xs:documentation>
+                <xs:documentation xml:lang="en">Characteristics of the reconnaissance.</xs:documentation>
+                <xs:appinfo>
+                  <nc1ihm:Nom>Caractéristiques de la reconnaissance</nc1ihm:Nom>
+                  <nc1ihm:Nom xml:lang="en">Characteristics of the reconnaissance</nc1ihm:Nom>
+                </xs:appinfo>
+              </xs:annotation>
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="aim" type="nc1common:MediumTextType">
+                    <xs:annotation>
+                      <xs:documentation>But de la reconnaissance.</xs:documentation>
+                      <xs:documentation xml:lang="en">Aim of the reconnaissance.</xs:documentation>
+                      <xs:appinfo>
+                        <nc1ihm:Nom>But</nc1ihm:Nom>
+                        <nc1ihm:Nom xml:lang="en">Aim</nc1ihm:Nom>
+                      </xs:appinfo>
+                    </xs:annotation>
+                  </xs:element>
+                  <xs:element name="endDatetime" type="xs:dateTime">
+                    <xs:annotation>
+                      <xs:documentation>Horodatage de fin de reconnaissance.</xs:documentation>
+                      <xs:documentation xml:lang="en">End of the reconnaissance timestamp.</xs:documentation>
+                      <xs:appinfo>
+                        <nc1ihm:Nom>Horodatage</nc1ihm:Nom>
+                        <nc1ihm:Nom xml:lang="en">Timestamp</nc1ihm:Nom>
+                      </xs:appinfo>
+                    </xs:annotation>
+                  </xs:element>
+                  <xs:element maxOccurs="unbounded" minOccurs="0" name="missionId" type="nc1common:Nc1ObjectRefType">
+                    <xs:annotation>
+                      <xs:documentation>Identifiant unique NC1 de la mission du génie.</xs:documentation>
+                      <xs:documentation xml:lang="en">NC1 ID of the engineer mission.</xs:documentation>
+                      <xs:appinfo>
+                        <nc1ihm:Nom>Identifiant de la mission</nc1ihm:Nom>
+                        <nc1ihm:Nom xml:lang="en">Mission ID</nc1ihm:Nom>
+                      </xs:appinfo>
+                    </xs:annotation>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element maxOccurs="unbounded" name="recceReport">
+              <xs:annotation>
+                <xs:documentation>Compte rendu de reconnaissance.</xs:documentation>
+                <xs:documentation xml:lang="en">Recce report.</xs:documentation>
+                <xs:appinfo>
+                  <nc1ihm:Nom>Compte rendu de reconnaissance</nc1ihm:Nom>
+                  <nc1ihm:Nom xml:lang="en">Recce report</nc1ihm:Nom>
+                </xs:appinfo>
+              </xs:annotation>
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="relatedEngineerMissionType" type="nc1engrecceord:EngineerMissionTypeCode">
+                    <xs:annotation>
+                      <xs:documentation>Type de mission de reconnaissance du génie.</xs:documentation>
+                      <xs:documentation xml:lang="en">engineer recce mission type.</xs:documentation>
+                      <xs:appinfo>
+                        <nc1ihm:Nom>Type de mission</nc1ihm:Nom>
+                        <nc1ihm:Nom xml:lang="en">Type of mission</nc1ihm:Nom>
+                      </xs:appinfo>
+                    </xs:annotation>
+                  </xs:element>
+                  <xs:element maxOccurs="unbounded" minOccurs="0" name="facility" type="nc1facility:FacilityType">
+                    <xs:annotation>
+                      <xs:documentation>Installation reconnue.</xs:documentation>
+                      <xs:documentation xml:lang="en">Reconnoitred facility.</xs:documentation>
+                      <xs:appinfo>
+                        <nc1ihm:Nom>Installation</nc1ihm:Nom>
+                        <nc1ihm:Nom xml:lang="en">Facility</nc1ihm:Nom>
+                      </xs:appinfo>
+                    </xs:annotation>
+                  </xs:element>
+                  <xs:element maxOccurs="unbounded" minOccurs="0" name="obstacle" type="nc1obstacle:ObstacleType">
+                    <xs:annotation>
+                      <xs:documentation>Obstacle reconnu.</xs:documentation>
+                      <xs:documentation xml:lang="en">Reconnoitred obstacle.</xs:documentation>
+                      <xs:appinfo>
+                        <nc1ihm:Nom>Obstacle</nc1ihm:Nom>
+                        <nc1ihm:Nom xml:lang="en">Obstacle</nc1ihm:Nom>
+                      </xs:appinfo>
+                    </xs:annotation>
+                  </xs:element>
+                  <xs:element maxOccurs="unbounded" minOccurs="0" name="route" type="nc1route:RouteType">
+                    <xs:annotation>
+                      <xs:documentation>Itinéraire reconnu.</xs:documentation>
+                      <xs:documentation xml:lang="en">Reconnoitred route.</xs:documentation>
+                      <xs:appinfo>
+                        <nc1ihm:Nom>Itinéraire</nc1ihm:Nom>
+                        <nc1ihm:Nom xml:lang="en">Route</nc1ihm:Nom>
+                      </xs:appinfo>
+                    </xs:annotation>
+                  </xs:element>
+                  <xs:element maxOccurs="unbounded" minOccurs="0" name="groundEntity" type="nc1groundentity:GroundEntityType">
+                    <xs:annotation>
+                      <xs:documentation>Entité terrain reconnue.</xs:documentation>
+                      <xs:documentation xml:lang="en">Reconnoitred ground entity.</xs:documentation>
+                      <xs:appinfo>
+                        <nc1ihm:Nom>Entité terrain</nc1ihm:Nom>
+                        <nc1ihm:Nom xml:lang="en">Ground entity</nc1ihm:Nom>
+                      </xs:appinfo>
+                    </xs:annotation>
+                  </xs:element>
+                  <xs:element minOccurs="0" name="comment" type="nc1common:MediumTextType">
+                    <xs:annotation>
+                      <xs:documentation>Commentaires en texte libre sur la reconnaissance.</xs:documentation>
+                      <xs:documentation xml:lang="en">Free text observations about performed reconnaissance.</xs:documentation>
+                      <xs:appinfo>
+                        <nc1ihm:Nom>Commentaire</nc1ihm:Nom>
+                        <nc1ihm:Nom xml:lang="en">comment</nc1ihm:Nom>
+                      </xs:appinfo>
+                    </xs:annotation>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element minOccurs="0" name="engineerNeeds">
+              <xs:annotation>
+                <xs:documentation>Besoins du génie.</xs:documentation>
+                <xs:documentation xml:lang="en">Engineer needs.</xs:documentation>
+                <xs:appinfo>
+                  <nc1ihm:Nom>Besoins du génie</nc1ihm:Nom>
+                  <nc1ihm:Nom xml:lang="en">Engineer needs</nc1ihm:Nom>
+                </xs:appinfo>
+              </xs:annotation>
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element minOccurs="0" name="personnelNeeds" type="nc1common:MediumTextType">
+                    <xs:annotation>
+                      <xs:documentation>Besoins du génie en personnel.</xs:documentation>
+                      <xs:documentation xml:lang="en">Personnel needs.</xs:documentation>
+                      <xs:appinfo>
+                        <nc1ihm:Nom>Besoin en personnel</nc1ihm:Nom>
+                        <nc1ihm:Nom xml:lang="en">Personnel needs</nc1ihm:Nom>
+                      </xs:appinfo>
+                    </xs:annotation>
+                  </xs:element>
+                  <xs:element minOccurs="0" name="equipmentNeeds" type="nc1common:MediumTextType">
+                    <xs:annotation>
+                      <xs:documentation>Besoins du génie en matériels.</xs:documentation>
+                      <xs:documentation xml:lang="en">Equipment needs.</xs:documentation>
+                      <xs:appinfo>
+                        <nc1ihm:Nom>Besoin en matériels</nc1ihm:Nom>
+                        <nc1ihm:Nom xml:lang="en">Equipment needs</nc1ihm:Nom>
+                      </xs:appinfo>
+                    </xs:annotation>
+                  </xs:element>
+                  <xs:element minOccurs="0" name="materialNeeds" type="nc1common:MediumTextType">
+                    <xs:annotation>
+                      <xs:documentation>Besoins du génie en matériaux.</xs:documentation>
+                      <xs:documentation xml:lang="en">Material needs.</xs:documentation>
+                      <xs:appinfo>
+                        <nc1ihm:Nom>Besoin en matériaux</nc1ihm:Nom>
+                        <nc1ihm:Nom xml:lang="en">Material needs</nc1ihm:Nom>
+                      </xs:appinfo>
+                    </xs:annotation>
+                  </xs:element>
+                  <xs:element minOccurs="0" name="reportingUnitCapabilities" type="nc1common:MediumTextType">
+                    <xs:annotation>
+                      <xs:documentation>Capacités de l’unité rendant compte à remplir sa mission.</xs:documentation>
+                      <xs:documentation xml:lang="en">Capacity of the reporting unit to fulfil its mission.</xs:documentation>
+                      <xs:appinfo>
+                        <nc1ihm:Nom>Capacités</nc1ihm:Nom>
+                        <nc1ihm:Nom xml:lang="en">Capacities</nc1ihm:Nom>
+                      </xs:appinfo>
+                    </xs:annotation>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element minOccurs="0" name="comment" type="nc1msgcom:CommentSectionType">
+              <xs:annotation>
+                <xs:documentation>Commentaire en texte libre.</xs:documentation>
+                <xs:documentation xml:lang="en">free text comment.</xs:documentation>
+                <xs:appinfo>
+                  <nc1ihm:Nom>Commentaire</nc1ihm:Nom>
+                  <nc1ihm:Nom xml:lang="en">comment</nc1ihm:Nom>
+                </xs:appinfo>
+              </xs:annotation>
+            </xs:element>
+          </xs:sequence>
+        </xs:extension>
+      </xs:complexContent>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

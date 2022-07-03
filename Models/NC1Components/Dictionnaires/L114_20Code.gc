@@ -1,0 +1,1280 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<gc:CodeList xmlns:nc1dico="urn:fra:nc1:dictionnaires" xmlns:gc="http://docs.oasis-open.org/codelist/ns/genericode/1.0/">
+  <Annotation>
+    <Description>
+      <nc1dico:description>TYPE D'OBJECTIF DE TIR
+SOURCE : STAT DICTIONNAIRE 52</nc1dico:description>
+      <nc1dico:description xml:lang="en">Artillery goal type (Source: (STAT dictionary 52)</nc1dico:description>
+    </Description>
+    <AppInfo>
+      <nc1dico:source>SFTT 3.4.8</nc1dico:source>
+      <nc1dico:derogation>TYPE D'OBJECTIF</nc1dico:derogation>
+    </AppInfo>
+  </Annotation>
+  <Identification>
+    <ShortName>L114_20Code</ShortName>
+    <Version>9.0.0</Version>
+    <CanonicalUri>urn:fra:nc1:common:sicsdicos:L114_20Code</CanonicalUri>
+    <CanonicalVersionUri>urn:fra:nc1:common:sicsdicos:L114_20Code:9.0.0</CanonicalVersionUri>
+  </Identification>
+  <ColumnSet DatatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes">
+    <Column Id="code" Use="required">
+      <ShortName>Code</ShortName>
+      <Data Type="int" />
+    </Column>
+    <Column Id="short" Use="required">
+      <ShortName>Short</ShortName>
+      <Data Type="string" />
+    </Column>
+    <Column Id="long" Use="optional">
+      <ShortName>Long</ShortName>
+      <Data Type="string" />
+    </Column>
+    <Column Id="short-en" Use="optional">
+      <ShortName>Short anglais</ShortName>
+      <Data Type="string" />
+    </Column>
+    <Column Id="long-en" Use="optional">
+      <ShortName>Long anglais</ShortName>
+      <Data Type="string" />
+    </Column>
+    <Column Id="parent" Use="optional">
+      <ShortName>Parent</ShortName>
+      <Data Type="int" />
+    </Column>
+    <Column Id="codeSymbole" Use="optional">
+      <ShortName>Code Symbole</ShortName>
+      <Data Type="string" />
+    </Column>
+    <Column Id="codeHierarchique" Use="optional">
+      <ShortName>Code Hierarchique</ShortName>
+      <Data Type="string" />
+    </Column>
+    <Key Id="codeKey">
+      <ShortName>CodeKey</ShortName>
+      <ColumnRef Ref="code" />
+    </Key>
+  </ColumnSet>
+  <SimpleCodeList>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>0</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>DSA</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>DEFENSE SOL-AIR - GENERAL</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>AD</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>AIR DEFENCE</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>1</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>BLINDE</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>BLINDES GENERAL</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>ARMR</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>ARMOURED</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>2</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>ART</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>ARTILLERIE - GENERAL</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>ARTY</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>ARTILLERY</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>3</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>OA</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>OBSERVATEUR ARTILLERIE - GENERAL</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>FOO</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>FORWARD OBSERVATION OFFICER</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>4</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>ROQ MISSILE</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>ROQUETTE/MISSILE - GENERAL</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>ROCKMIS</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>ROCKET MISSILE</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>5</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>BATIMENT</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>INSTALLATION/TERRAIN/BATIMENT - GENERAL</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>INTERBUI</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>INSTALLATION TERRAIN BUILDING</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>6</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>VHL</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>VEHICULE TERRESTRE- GENERAL</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>LANDVEHI</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>LAND VEHICLE</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>7</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>AVION</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>AERONEF GENERAL</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>AIRCRAFT</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>AIRCRAFT</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>8</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>HELICOPTERE</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>HELICOPTERE GENERAL</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>AVIATION</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>AVIATION</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>9</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>BATEAU</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>NAVIRE (BATEAU) GENERAL</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>SHIP</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>SHIP</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>10</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>MORTIER</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>MORTIER - GENERAL</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>MORTAR</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>MORTAR</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>11</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>ARMEMENT</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>ARMEMENT - GENERAL</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>ARMAMENT</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>ARMAMENT</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>12</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>PERS DECOUV</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>PERSONNEL A DECOUVERT</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>OUINOPST</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>OUT IN THE OPEN  STAFF</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>13</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>PERS ABRI</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>PERSONNEL ABRITE</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>SHELSTAF</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>SHELTERED STAFF</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>14</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>ZONE RASSEMB</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>ZONE DE RASSEMBLEMENT</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>AA</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>ASSEMBLY AREA</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>15</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>PC</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>PC - GENERAL</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>CP</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>COMMAND POST</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>16</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>EQUIPEMENT DIV</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>EQUIPEMENT DIVERS</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>EQUIP</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>EQUIPMENT</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>17</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>DSA LOURD</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>DEFENSE SOL-AIR - LOURD</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>HAIRDEF</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>HEAVY AIR DEFENSE</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>18</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>DSA LEGER</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>DEFENSE SOL-AIR - LEGER</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>LAIRDEF</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>LIGHT AIR DEFENSE</SimpleValue>
+      </Value>
+      <Value ColumnRef="parent">
+        <SimpleValue>0</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>19</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>DSA MOYEN</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>DEFENSE SOL-AIR - MOYEN</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>MAIRDEF</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>MEDIUM AIRDEFENSE</SimpleValue>
+      </Value>
+      <Value ColumnRef="parent">
+        <SimpleValue>0</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>20</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>DSA MISSILE</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>DEFENSE SOL-AIR - MISSILE</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>MIAIRDEF</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>MISSILE AIR DEFENSE</SimpleValue>
+      </Value>
+      <Value ColumnRef="parent">
+        <SimpleValue>0</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>21</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>DSA POSITION</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>DEFENSE SOL-AIR - POSITION</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>ADEFPOS</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>AIR DEFENSE  POSITION</SimpleValue>
+      </Value>
+      <Value ColumnRef="parent">
+        <SimpleValue>0</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>22</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>CHAR LG/MOYEN</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>CHARS - LEGERS/MOYENS</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>LILETANK</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>LIGHT MEDIUM TANK</SimpleValue>
+      </Value>
+      <Value ColumnRef="parent">
+        <SimpleValue>0</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>23</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>CHAR LOURD</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>CHARS - LOURDS</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>MBT</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>MAIN BATTLE TANK</SimpleValue>
+      </Value>
+      <Value ColumnRef="parent">
+        <SimpleValue>1</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>24</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>BLD TRANSPORT</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>BLINDES - TRANSPORT DE TROUPE</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>APC</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>ARMOURED PERSONNEL CARRIER</SimpleValue>
+      </Value>
+      <Value ColumnRef="parent">
+        <SimpleValue>1</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>25</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>BLD MOYEN</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>BLINDES - LEGER / MOYEN</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>LMTANK</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>LIGHT MEDIUM ARMOURED</SimpleValue>
+      </Value>
+      <Value ColumnRef="parent">
+        <SimpleValue>1</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>26</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>BLD LOURD</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>BLINDES - LOURD</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>HTANK</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>HEAVY TANK</SimpleValue>
+      </Value>
+      <Value ColumnRef="parent">
+        <SimpleValue>1</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>27</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>ART LEGER</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>ARTILLERIE - LEGER</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>LIARTY</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>LIGHT ARTILLERY</SimpleValue>
+      </Value>
+      <Value ColumnRef="parent">
+        <SimpleValue>1</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>28</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>ART MOYEN</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>ARTILLERIE - MOYEN</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>MEARTY</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>MEDIUM ARTILLERY</SimpleValue>
+      </Value>
+      <Value ColumnRef="parent">
+        <SimpleValue>2</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>29</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>ART LOURD</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>ARTILLERIE - LOURD</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>HEARTY</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>HEAVY ARTILLERY</SimpleValue>
+      </Value>
+      <Value ColumnRef="parent">
+        <SimpleValue>2</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>30</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>ART POSITION</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>ARTILLERIE - POSITION</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>ARTYPOS</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>ARTILLERY POSITION</SimpleValue>
+      </Value>
+      <Value ColumnRef="parent">
+        <SimpleValue>2</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>31</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>OBSERVATOIRE</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>OBSERVATEUR - OBSERVATOIRE</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>OBSPOST</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>OBSERVATION POST</SimpleValue>
+      </Value>
+      <Value ColumnRef="parent">
+        <SimpleValue>2</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>32</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>VHL OBSERVATION</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>OBSERVATEUR - VEHICULE D'OBSERVATION</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>FIST</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>FIRE SUPPORT TEAM VEHICLE</SimpleValue>
+      </Value>
+      <Value ColumnRef="parent">
+        <SimpleValue>3</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>33</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>LRM</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>ROQUETTE - LANCE-ROQUETTE MULTIPLE</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>MLRS</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>MULTIPLE LAUNCH ROCKET SYSTEM</SimpleValue>
+      </Value>
+      <Value ColumnRef="parent">
+        <SimpleValue>3</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>34</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>ROQ POSITION</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>ROQUETTE - POSITION</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>ROCKPOS</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>ROCKET POSITION</SimpleValue>
+      </Value>
+      <Value ColumnRef="parent">
+        <SimpleValue>4</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>35</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>INST PONT</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>INSTALLATION - PONT</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>BRIDGE</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>BRIDGE</SimpleValue>
+      </Value>
+      <Value ColumnRef="parent">
+        <SimpleValue>4</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>36</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>INST ROUTE</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>INSTALLATION - ROUTE</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>ROAD</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>ROAD</SimpleValue>
+      </Value>
+      <Value ColumnRef="parent">
+        <SimpleValue>5</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>37</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>INST VOIE FER</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>INSTALLATION - VOIE FERREE</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>RAILWAY</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>RAILWAY</SimpleValue>
+      </Value>
+      <Value ColumnRef="parent">
+        <SimpleValue>5</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>38</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>INST BUNKER</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>INSTALLATION - BUNKER</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>BUNKER</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>BUNKER</SimpleValue>
+      </Value>
+      <Value ColumnRef="parent">
+        <SimpleValue>5</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>39</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>INST CARREFOUR</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>INSTALLATION - CARREFOUR</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>CROSROAD</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>CROSSROADS</SimpleValue>
+      </Value>
+      <Value ColumnRef="parent">
+        <SimpleValue>5</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>40</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>INST PISTE ATT</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>INSTALLATION - PISTE D'ATTERRISSAGE</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>LATRACK</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>LANDING TRACK</SimpleValue>
+      </Value>
+      <Value ColumnRef="parent">
+        <SimpleValue>5</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>41</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>INST DEPOT</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>INSTALLATION - DEPOT</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>STORE</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>STORE</SimpleValue>
+      </Value>
+      <Value ColumnRef="parent">
+        <SimpleValue>5</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>42</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>TER DEFILE</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>TERRAIN - DEFILE</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>GORGE</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>GORGE</SimpleValue>
+      </Value>
+      <Value ColumnRef="parent">
+        <SimpleValue>5</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>43</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>TER COLLINE</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>TERRAIN - COLLINE</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>HILL</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>HILL</SimpleValue>
+      </Value>
+      <Value ColumnRef="parent">
+        <SimpleValue>5</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>44</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>BAT BETON</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>BATIMENT - BETON</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>CONBUILD</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>CONCRETE BUILDING</SimpleValue>
+      </Value>
+      <Value ColumnRef="parent">
+        <SimpleValue>5</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>45</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>BAT MACONNERIE</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>BATIMENT - MACONNERIE</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>MASONRY</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>MASONRY</SimpleValue>
+      </Value>
+      <Value ColumnRef="parent">
+        <SimpleValue>5</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>46</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>BAT METAL</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>BATIMENT - METAL</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>METBUILD</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>METAL BUILDING</SimpleValue>
+      </Value>
+      <Value ColumnRef="parent">
+        <SimpleValue>5</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>47</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>BAT SPECIFIQUE</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>BATIMENT - SPECIFIQUE</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>SPEBUILD</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>SPECIFIC BUILDING</SimpleValue>
+      </Value>
+      <Value ColumnRef="parent">
+        <SimpleValue>5</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>48</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>BAT BOIS</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>BATIMENT - BOIS</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>WOBUILD</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>WOOD BUILDING</SimpleValue>
+      </Value>
+      <Value ColumnRef="parent">
+        <SimpleValue>5</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>49</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>VHL LEGER</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>VEHICULE - LEGER</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>LIVHL</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>LIGHT VEHICLE</SimpleValue>
+      </Value>
+      <Value ColumnRef="parent">
+        <SimpleValue>5</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>50</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>VHL LOURD</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>VEHICULE - LOURD</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>HEVHL</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>HEAVY VEHICLE</SimpleValue>
+      </Value>
+      <Value ColumnRef="parent">
+        <SimpleValue>6</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>51</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>MORT LG/MOYEN</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>MORTIER - LEGER/MOYEN</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>LIMEMORT</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>LIGHT MEDIUM MORTAR</SimpleValue>
+      </Value>
+      <Value ColumnRef="parent">
+        <SimpleValue>6</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>52</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>MORTIER LOURD</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>MORTIER - LOURD</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>HMORTAR</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>HEAVY MORTAR</SimpleValue>
+      </Value>
+      <Value ColumnRef="parent">
+        <SimpleValue>10</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>53</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>MORTIER POSIT</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>MORTIER - POSITION</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>MORTPOS</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>MORTAR POSITION</SimpleValue>
+      </Value>
+      <Value ColumnRef="parent">
+        <SimpleValue>10</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>54</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>ANTICHAR</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>ARMEMENT - ANTICHAR</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>ANTAWEAP</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>ANTI TANK WEAPON</SimpleValue>
+      </Value>
+      <Value ColumnRef="parent">
+        <SimpleValue>10</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>55</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>MITRAIL LOURD</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>ARMEMENT - MITRAILLEUSE LOURDE</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>HMACGUN</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>HEAVY MACHINE GUN</SimpleValue>
+      </Value>
+      <Value ColumnRef="parent">
+        <SimpleValue>11</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>56</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>MITRAIL LEGER</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>ARMEMENT - MITRAILLEUSE LEGERE</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>LMACGUN</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>LIGHT MACHINE GUN</SimpleValue>
+      </Value>
+      <Value ColumnRef="parent">
+        <SimpleValue>11</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>57</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>CANON  SS RECUL</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>ARMEMENT - CANON SANS RECUL</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>RECOIGUN</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>RECOILLESS GUN</SimpleValue>
+      </Value>
+      <Value ColumnRef="parent">
+        <SimpleValue>11</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>58</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>PC BON</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>PC - BATAILLON</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>BNCP</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>BATTALION CP</SimpleValue>
+      </Value>
+      <Value ColumnRef="parent">
+        <SimpleValue>11</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>59</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>PC AVANCE</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>PC - AVANCE</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>TACCP</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>TACTICAL CP</SimpleValue>
+      </Value>
+      <Value ColumnRef="parent">
+        <SimpleValue>15</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>60</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>PC REGIMENT</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>PC - REGIMENT</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>REGCP</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>REGIMENT CP</SimpleValue>
+      </Value>
+      <Value ColumnRef="parent">
+        <SimpleValue>15</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>61</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>PC DIV BRI</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>PC - DIVISION/BRIGADE</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>DIVBRICP</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>DIVISION BRIGADE CP</SimpleValue>
+      </Value>
+      <Value ColumnRef="parent">
+        <SimpleValue>15</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>62</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>ILLEGAL</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>ILLEGAL</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>ILLEGAL</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>ILLEGAL</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>63</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>ILLEGAL</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>ILLEGAL</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>ILLEGAL</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>ILLEGAL</SimpleValue>
+      </Value>
+    </Row>
+  </SimpleCodeList>
+</gc:CodeList>

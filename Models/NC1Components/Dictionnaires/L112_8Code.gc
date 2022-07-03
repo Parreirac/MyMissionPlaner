@@ -1,0 +1,196 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<gc:CodeList xmlns:nc1dico="urn:fra:nc1:dictionnaires" xmlns:gc="http://docs.oasis-open.org/codelist/ns/genericode/1.0/">
+  <Annotation>
+    <Description>
+      <nc1dico:description>INDIQUE UN TYPE DE CATEGORIE GENERALE POUR LES (GROUPES) D'INDIVIDUS. 
+REFERENCE DICO STAT 71</nc1dico:description>
+      <nc1dico:description xml:lang="en">Indicates a type of general category for (groups) of individuals (STAT dictionary 71)</nc1dico:description>
+    </Description>
+    <AppInfo>
+      <nc1dico:source>SFTT 3.4.8</nc1dico:source>
+      <nc1dico:derogation>CATEGORIE GENERALE POUR LES (GROUPES) INDIVIDUS</nc1dico:derogation>
+    </AppInfo>
+  </Annotation>
+  <Identification>
+    <ShortName>L112_8Code</ShortName>
+    <Version>9.0.0</Version>
+    <CanonicalUri>urn:fra:nc1:common:sicsdicos:L112_8Code</CanonicalUri>
+    <CanonicalVersionUri>urn:fra:nc1:common:sicsdicos:L112_8Code:9.0.0</CanonicalVersionUri>
+  </Identification>
+  <ColumnSet DatatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes">
+    <Column Id="code" Use="required">
+      <ShortName>Code</ShortName>
+      <Data Type="int" />
+    </Column>
+    <Column Id="short" Use="required">
+      <ShortName>Short</ShortName>
+      <Data Type="string" />
+    </Column>
+    <Column Id="long" Use="optional">
+      <ShortName>Long</ShortName>
+      <Data Type="string" />
+    </Column>
+    <Column Id="short-en" Use="optional">
+      <ShortName>Short anglais</ShortName>
+      <Data Type="string" />
+    </Column>
+    <Column Id="long-en" Use="optional">
+      <ShortName>Long anglais</ShortName>
+      <Data Type="string" />
+    </Column>
+    <Column Id="parent" Use="optional">
+      <ShortName>Parent</ShortName>
+      <Data Type="int" />
+    </Column>
+    <Column Id="codeSymbole" Use="optional">
+      <ShortName>Code Symbole</ShortName>
+      <Data Type="string" />
+    </Column>
+    <Column Id="codeHierarchique" Use="optional">
+      <ShortName>Code Hierarchique</ShortName>
+      <Data Type="string" />
+    </Column>
+    <Key Id="codeKey">
+      <ShortName>CodeKey</ShortName>
+      <ColumnRef Ref="code" />
+    </Key>
+  </ColumnSet>
+  <SimpleCodeList>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>0</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>FOR AMI</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>FORCES AMIES</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>FR FOR</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>FRIENDLY FORCES</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>1</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>FRA OTAN</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>MILITAIRE FRANCAIS OTAN</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>FR NATO</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>FRENCH MILITARY NATO</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>2</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>FOR OTAN</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>MILITAIRE ETRANGER OTAN</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>STR NATO</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>STRANGER MILITARY NATO</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>3</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>NON  OTAN</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>MILITAIRE ETRANGER NON OTAN</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>NO NATO</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>STRANGER MILITARY NON NATO</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>4</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>CIV LOC</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>CIVILS LOCAUX</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>LOC CIV</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>LOCAL CIVILIANS</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>5</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>CIV OTAN</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>CIVIL OTAN</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>CIV NATO</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>CIVILIAN NATO</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>6</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>CIV ENF</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>ENFANTS CIVILS</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>CIV CHIL</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>CIVILIAN CHILDREN</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>7</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>FOR ENI</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>FORCES OPPOSEES</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>OPP FOR</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>OPPOSING FORCES</SimpleValue>
+      </Value>
+    </Row>
+  </SimpleCodeList>
+</gc:CodeList>

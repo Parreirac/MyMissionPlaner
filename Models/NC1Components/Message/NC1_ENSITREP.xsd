@@ -1,0 +1,160 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema targetNamespace="urn:fra:nc1:message:ensitrep" xmlns:nc1ihm="urn:fra:nc1:IHM" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:nc1ensitrep="urn:fra:nc1:message:ensitrep" xmlns:nc1common="urn:fra:nc1:common:attribute" xmlns:nc1msgcom="urn:fra:nc1:common:message" xmlns:nc12dcoord="urn:fra:nc1:objet:2dcoordinationmean" xmlns:nc1airtrack="urn:fra:nc1:objet:airtrack" xmlns:nc1groundtrack="urn:fra:nc1:objet:groundtrack" xmlns:nc1mission="urn:fra:nc1:objet:mission" xmlns:nc1seatrack="urn:fra:nc1:objet:seatrack" xmlns:nc1tacarea="urn:fra:nc1:objet:tacarea" xmlns:nc1tacline="urn:fra:nc1:objet:tacline" xmlns:nc1tacpoint="urn:fra:nc1:objet:tacpoint" xmlns:nc1track="urn:fra:nc1:objet:track" xmlns:nc1unit="urn:fra:nc1:objet:unit">
+  <!-- NC1 V.9.0.0 -->
+  <xs:import namespace="urn:fra:nc1:common:attribute" schemaLocation="../Commun/Common.xsd" />
+  <xs:import namespace="urn:fra:nc1:common:message" schemaLocation="../Commun/Message.xsd" />
+  <xs:import namespace="urn:fra:nc1:objet:2dcoordinationmean" schemaLocation="../Commun/2DCoordinationMean.xsd" />
+  <xs:import namespace="urn:fra:nc1:objet:airtrack" schemaLocation="../Objet/NC1_AirTrack.xsd" />
+  <xs:import namespace="urn:fra:nc1:objet:groundtrack" schemaLocation="../Objet/NC1_GroundTrack.xsd" />
+  <xs:import namespace="urn:fra:nc1:objet:mission" schemaLocation="../Objet/NC1_Mission.xsd" />
+  <xs:import namespace="urn:fra:nc1:objet:seatrack" schemaLocation="../Objet/NC1_SeaTrack.xsd" />
+  <xs:import namespace="urn:fra:nc1:objet:tacarea" schemaLocation="../Objet/NC1_TacArea.xsd" />
+  <xs:import namespace="urn:fra:nc1:objet:tacline" schemaLocation="../Objet/NC1_TacLine.xsd" />
+  <xs:import namespace="urn:fra:nc1:objet:tacpoint" schemaLocation="../Objet/NC1_TacPoint.xsd" />
+  <xs:import namespace="urn:fra:nc1:objet:track" schemaLocation="../Commun/Track.xsd" />
+  <xs:import namespace="urn:fra:nc1:objet:unit" schemaLocation="../Objet/NC1_Unit.xsd" />
+  <xs:element name="NC1_ENSITREP">
+    <xs:annotation>
+      <xs:documentation>Le message NC1_ENSITREP permet de rendre compte de la situation, du déploiement, de l’état opérationnel des unités ennemies et/ou de leur ordre de bataille, celui des unités subordonnées, et les unités amies affectées.</xs:documentation>
+      <xs:documentation xml:lang="en">The NC1_ENSITREP message helps to account for the situation, deployment, operational status of enemy units and / or their order of battle, the subordinate units, and affected friendly units.</xs:documentation>
+      <xs:appinfo>
+        <nc1:type xmlns:nc1="urn:fra:nc1">Message</nc1:type>
+        <nc1ihm:Nom>Compte rendu de situation des forces ennemies</nc1ihm:Nom>
+        <nc1ihm:Nom xml:lang="en">Enemy forces situation report</nc1ihm:Nom>
+        <nc1:MessH xmlns:nc1="urn:fra:nc1">N/A</nc1:MessH>
+        <nc1:MessADatP3 xmlns:nc1="urn:fra:nc1">ENSITREP</nc1:MessADatP3>
+        <nc1:LastNC1ModifyVersion xmlns:nc1="urn:fra:nc1">9.0.0</nc1:LastNC1ModifyVersion>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:complexContent>
+        <xs:extension base="nc1msgcom:BaseMessageType">
+          <xs:sequence>
+            <xs:element name="enemyForces">
+              <xs:annotation>
+                <xs:documentation>Compte rendu des unités et des missions ennemies.</xs:documentation>
+                <xs:documentation xml:lang="en">Enemy units and missions report.</xs:documentation>
+                <xs:appinfo>
+                  <nc1ihm:Nom>Compte rendu des unités et des missions</nc1ihm:Nom>
+                  <nc1ihm:Nom xml:lang="en">Units and missions report</nc1ihm:Nom>
+                </xs:appinfo>
+              </xs:annotation>
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element maxOccurs="unbounded" minOccurs="0" name="enemyUnit">
+                    <xs:annotation>
+                      <xs:documentation>Description d'une unité ennemie ainsi que des unités amies affectées.</xs:documentation>
+                      <xs:documentation xml:lang="en">Description of an enemy unit and assigned friendly units.</xs:documentation>
+                      <xs:appinfo>
+                        <nc1ihm:Nom>Unité ennemie</nc1ihm:Nom>
+                        <nc1ihm:Nom xml:lang="en">Enemy unit</nc1ihm:Nom>
+                      </xs:appinfo>
+                    </xs:annotation>
+                    <xs:complexType>
+                      <xs:sequence>
+                        <xs:element name="unit" type="nc1unit:UnitType">
+                          <xs:annotation>
+                            <xs:documentation>Unité ennemie.</xs:documentation>
+                            <xs:documentation xml:lang="en">Enemy unit.</xs:documentation>
+                            <xs:appinfo>
+                              <nc1ihm:Nom>Unité ennemie</nc1ihm:Nom>
+                              <nc1ihm:Nom xml:lang="en">Enemy unit</nc1ihm:Nom>
+                            </xs:appinfo>
+                          </xs:annotation>
+                        </xs:element>
+                        <xs:element maxOccurs="unbounded" minOccurs="0" name="affectedFriendlyUnit" type="nc1unit:UnitType">
+                          <xs:annotation>
+                            <xs:documentation>Unité amie affectée par l'unité ennemie.</xs:documentation>
+                            <xs:documentation xml:lang="en">Friendly unit affected by the enemy unit.</xs:documentation>
+                            <xs:appinfo>
+                              <nc1ihm:Nom>Unité amie affectée</nc1ihm:Nom>
+                              <nc1ihm:Nom xml:lang="en">Affected friendly unit</nc1ihm:Nom>
+                            </xs:appinfo>
+                          </xs:annotation>
+                        </xs:element>
+                      </xs:sequence>
+                    </xs:complexType>
+                  </xs:element>
+                  <xs:element maxOccurs="unbounded" minOccurs="0" name="track" type="nc1track:TrackType">
+                    <xs:annotation>
+                      <xs:documentation>Piste ennemie, aérienne, terrestre ou maritime.</xs:documentation>
+                      <xs:documentation xml:lang="en">Air, land or maritime enemy track.</xs:documentation>
+                      <xs:appinfo>
+                        <nc1ihm:Nom>Piste</nc1ihm:Nom>
+                        <nc1ihm:Nom xml:lang="en">track</nc1ihm:Nom>
+                      </xs:appinfo>
+                    </xs:annotation>
+                  </xs:element>
+                  <xs:element maxOccurs="unbounded" minOccurs="0" name="mission" type="nc1mission:MissionType">
+                    <xs:annotation>
+                      <xs:documentation>Mission ennemie.</xs:documentation>
+                      <xs:documentation xml:lang="en">Enemy mission.</xs:documentation>
+                      <xs:appinfo>
+                        <nc1ihm:Nom>Mission</nc1ihm:Nom>
+                        <nc1ihm:Nom xml:lang="en">Mission</nc1ihm:Nom>
+                      </xs:appinfo>
+                    </xs:annotation>
+                  </xs:element>
+                  <xs:element minOccurs="0" name="description" type="nc1common:LongTextType">
+                    <xs:annotation>
+                      <xs:documentation>Description en texte libre des unités et des missions ennemies.</xs:documentation>
+                      <xs:documentation xml:lang="en">Free text description of the enemy units and their missions.</xs:documentation>
+                      <xs:appinfo>
+                        <nc1ihm:Nom>Description</nc1ihm:Nom>
+                        <nc1ihm:Nom xml:lang="en">Description</nc1ihm:Nom>
+                      </xs:appinfo>
+                    </xs:annotation>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="controlAndCoordinationMeans">
+              <xs:annotation>
+                <xs:documentation>Mesures de coordination 2D ennemies.</xs:documentation>
+                <xs:documentation xml:lang="en">Enemy 2D coordination means.</xs:documentation>
+                <xs:appinfo>
+                  <nc1ihm:Nom>Mesures de coordination 2D</nc1ihm:Nom>
+                  <nc1ihm:Nom xml:lang="en">2D coordination means</nc1ihm:Nom>
+                </xs:appinfo>
+              </xs:annotation>
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element maxOccurs="unbounded" minOccurs="0" name="coordinationMean" type="nc12dcoord:_2DCoordinationMeanType">
+                    <xs:annotation>
+                      <xs:documentation>Point, ligne, ou surface tactique ennemie.</xs:documentation>
+                      <xs:documentation xml:lang="en">Enemy point, line or tactical area.</xs:documentation>
+                      <xs:appinfo>
+                        <nc1ihm:Nom>Mesure de coordination 2D</nc1ihm:Nom>
+                        <nc1ihm:Nom xml:lang="en">2D coordination mean</nc1ihm:Nom>
+                      </xs:appinfo>
+                    </xs:annotation>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="assessment" type="nc1common:WideTextType">
+              <xs:annotation>
+                <xs:documentation>Appréciation du commandement.</xs:documentation>
+                <xs:documentation xml:lang="en">Commander assessment.</xs:documentation>
+                <xs:appinfo>
+                  <nc1ihm:Nom>Appréciation</nc1ihm:Nom>
+                  <nc1ihm:Nom xml:lang="en">Assessment</nc1ihm:Nom>
+                </xs:appinfo>
+              </xs:annotation>
+            </xs:element>
+            <xs:element minOccurs="0" name="comment" type="nc1common:WideTextType">
+              <xs:annotation>
+                <xs:documentation>Commentaire en texte libre.</xs:documentation>
+                <xs:documentation xml:lang="en">free text comment.</xs:documentation>
+                <xs:appinfo>
+                  <nc1ihm:Nom>Commentaire</nc1ihm:Nom>
+                  <nc1ihm:Nom xml:lang="en">comment</nc1ihm:Nom>
+                </xs:appinfo>
+              </xs:annotation>
+            </xs:element>
+          </xs:sequence>
+        </xs:extension>
+      </xs:complexContent>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

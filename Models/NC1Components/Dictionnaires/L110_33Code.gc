@@ -1,0 +1,366 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<gc:CodeList xmlns:nc1dico="urn:fra:nc1:dictionnaires" xmlns:gc="http://docs.oasis-open.org/codelist/ns/genericode/1.0/">
+  <Annotation>
+    <Description>
+      <nc1dico:description>DESIGNE LE MATERIAU PRINCIPAL D'UNE CONSTRUCTION POUR UNE INSTALLATION, UN OUVRAGE…
+DICO STAT 148</nc1dico:description>
+      <nc1dico:description xml:lang="en">Means the principal material of construction for installation, a work ... (STAT dictionary 148)</nc1dico:description>
+    </Description>
+    <AppInfo>
+      <nc1dico:source>SFTT 3.4.8</nc1dico:source>
+      <nc1dico:derogation>MATERIAU PRINCIPAL DE CONSTRUCTION</nc1dico:derogation>
+    </AppInfo>
+  </Annotation>
+  <Identification>
+    <ShortName>L110_33Code</ShortName>
+    <Version>9.0.0</Version>
+    <CanonicalUri>urn:fra:nc1:common:sicsdicos:L110_33Code</CanonicalUri>
+    <CanonicalVersionUri>urn:fra:nc1:common:sicsdicos:L110_33Code:9.0.0</CanonicalVersionUri>
+  </Identification>
+  <ColumnSet DatatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes">
+    <Column Id="code" Use="required">
+      <ShortName>Code</ShortName>
+      <Data Type="int" />
+    </Column>
+    <Column Id="short" Use="required">
+      <ShortName>Short</ShortName>
+      <Data Type="string" />
+    </Column>
+    <Column Id="long" Use="optional">
+      <ShortName>Long</ShortName>
+      <Data Type="string" />
+    </Column>
+    <Column Id="short-en" Use="optional">
+      <ShortName>Short anglais</ShortName>
+      <Data Type="string" />
+    </Column>
+    <Column Id="long-en" Use="optional">
+      <ShortName>Long anglais</ShortName>
+      <Data Type="string" />
+    </Column>
+    <Column Id="parent" Use="optional">
+      <ShortName>Parent</ShortName>
+      <Data Type="int" />
+    </Column>
+    <Column Id="codeSymbole" Use="optional">
+      <ShortName>Code Symbole</ShortName>
+      <Data Type="string" />
+    </Column>
+    <Column Id="codeHierarchique" Use="optional">
+      <ShortName>Code Hierarchique</ShortName>
+      <Data Type="string" />
+    </Column>
+    <Key Id="codeKey">
+      <ShortName>CodeKey</ShortName>
+      <ColumnRef Ref="code" />
+    </Key>
+  </ColumnSet>
+  <SimpleCodeList>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>0</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>-</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>NO STATEMENT</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>-</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>NO STATEMENT</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>1</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>INCONNU</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>INCONNU</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>NKN</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>NOT KNOWN</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>2</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>ASPHLT</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>ASPHALTE</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>ASPHLT</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>ASPHALT</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>3</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>BRIQUE</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>BRIQUE / MACONNERIE</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>BRKMSN</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>BRICK/MASONRY</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>4</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>PAVE</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>PAVE</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>CBLSTN</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>COBBLESTONE</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>5</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>BETON</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>BETON</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>CNCRTE</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>CONCRETE</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>6</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>TERRE</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>TERRE</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>EARTH</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>EARTH</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>7</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>GRAVIER</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>GRAVIER</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>GRAVEL</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>GRAVEL</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>8</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>METAL</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>METAL</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>METAL</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>METAL</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>9</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>AUTRE</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>AUTRE</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>OTHER</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>OTHER</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>10</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>GALETS</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>GALETS</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>PEBBLE</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>PEBBLE</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>11</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>BTARME</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>BETON ARME PRECONTRAINT</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>PRSTCN</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>PRESTRESSED CONCRETE</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>12</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>REINCN</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>BETON ARME RENFORCE</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>REINCN</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>REINFORCED CONCRETE</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>13</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>ROCHER</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>ROCHER</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>ROCK</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>ROCK</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>14</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>SABLE</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>SABLE</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>SAND</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>SAND</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>15</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>LIMON</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>LIMON</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>SILT</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>SILT</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>16</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>NEIGE</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>NEIGE - NEIGE / GLACE</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>SNOW</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>SNOW/ICE</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>17</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>BOIS</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>BOIS</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>WOOD</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>WOOD/TIMBER</SimpleValue>
+      </Value>
+    </Row>
+  </SimpleCodeList>
+</gc:CodeList>

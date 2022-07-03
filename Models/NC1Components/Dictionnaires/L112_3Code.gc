@@ -1,0 +1,941 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<gc:CodeList xmlns:nc1dico="urn:fra:nc1:dictionnaires" xmlns:gc="http://docs.oasis-open.org/codelist/ns/genericode/1.0/">
+  <Annotation>
+    <Description>
+      <nc1dico:description>INDIQUE UNE CATEGORIE GENERALE ET UNE SOUS-CATEGORIE DE FONCTION MILITAIRE POUR UN INDIVIDU.REFERENCE DICO STAT 172 ET 306</nc1dico:description>
+      <nc1dico:description xml:lang="en">Indicates a general category and a military function subcategory for an individual (STAT dictionaries 172 and 306)</nc1dico:description>
+    </Description>
+    <AppInfo>
+      <nc1dico:source>SFTT 3.4.8</nc1dico:source>
+      <nc1dico:derogation>CATEGORIE GENERALE ET SOUS-CATEGORIE DE FONCTION MILITAIRE</nc1dico:derogation>
+    </AppInfo>
+  </Annotation>
+  <Identification>
+    <ShortName>L112_3Code</ShortName>
+    <Version>9.0.0</Version>
+    <CanonicalUri>urn:fra:nc1:common:sicsdicos:L112_3Code</CanonicalUri>
+    <CanonicalVersionUri>urn:fra:nc1:common:sicsdicos:L112_3Code:9.0.0</CanonicalVersionUri>
+  </Identification>
+  <ColumnSet DatatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes">
+    <Column Id="code" Use="required">
+      <ShortName>Code</ShortName>
+      <Data Type="int" />
+    </Column>
+    <Column Id="short" Use="required">
+      <ShortName>Short</ShortName>
+      <Data Type="string" />
+    </Column>
+    <Column Id="long" Use="optional">
+      <ShortName>Long</ShortName>
+      <Data Type="string" />
+    </Column>
+    <Column Id="short-en" Use="optional">
+      <ShortName>Short anglais</ShortName>
+      <Data Type="string" />
+    </Column>
+    <Column Id="long-en" Use="optional">
+      <ShortName>Long anglais</ShortName>
+      <Data Type="string" />
+    </Column>
+    <Column Id="parent" Use="optional">
+      <ShortName>Parent</ShortName>
+      <Data Type="int" />
+    </Column>
+    <Column Id="codeSymbole" Use="optional">
+      <ShortName>Code Symbole</ShortName>
+      <Data Type="string" />
+    </Column>
+    <Column Id="codeHierarchique" Use="optional">
+      <ShortName>Code Hierarchique</ShortName>
+      <Data Type="string" />
+    </Column>
+    <Key Id="codeKey">
+      <ShortName>CodeKey</ShortName>
+      <ColumnRef Ref="code" />
+    </Key>
+  </ColumnSet>
+  <SimpleCodeList>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>0</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>-</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>NO STATEMENT</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>-</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>NO STATEMENT</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>1</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>LOG</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>LOGISTIQUE</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>LOG</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>LOGISTICS</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>2</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>MED</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>PERSONNEL MEDICAL</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>MED</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>MEDICAL PERSONNEL</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>3</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>OPS</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>OPERATIONS</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>OPS</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>OPERATIONS</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>4</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>SUP</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>SUPPORT (NON MEDICAUX)</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>SUP</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>SUPPORT (NON-MEDICAL)</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>5</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>AIRLSN</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>OFFICIER DE LIAISON AERIEN</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>AIRLSN</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>AIR LIAISON OFFICER</SimpleValue>
+      </Value>
+      <Value ColumnRef="parent">
+        <SimpleValue>3</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>6</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>APAUTH</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>AUTORITE APPROBATRICE</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>APAUTH</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>APPROVING AUTHORITY</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>7</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>ARBNMC</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>COMMANDANT DE TROUPE AEROPORTE</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>ARBNMC</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>AIRBORNE MISSION COMMANDER</SimpleValue>
+      </Value>
+      <Value ColumnRef="parent">
+        <SimpleValue>6</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>8</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>CARTO</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>CARTOGRAPHE</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>CARTO</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>CARTOGRAPHER</SimpleValue>
+      </Value>
+      <Value ColumnRef="parent">
+        <SimpleValue>1</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>9</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>FAC</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>CONTROLEUR AERIEN AVANCE</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>FAC</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>FORWARD AIR CONTROLLER</SimpleValue>
+      </Value>
+      <Value ColumnRef="parent">
+        <SimpleValue>3</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>10</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>FACAIR</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>CONTROLE AERIEN AVANCE</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>FACAIR</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>FORWARD AIR CONTROLLER, AIRBORNE</SimpleValue>
+      </Value>
+      <Value ColumnRef="parent">
+        <SimpleValue>3</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>11</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>FOOAOP</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>OFFICIER DE POSTE D'OBSERVATION AVANCE</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>FOOAOP</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>FORWARD OBSERVATION OFFICER/AIR OBSERVATION POST</SimpleValue>
+      </Value>
+      <Value ColumnRef="parent">
+        <SimpleValue>3</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>12</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>GMCDR</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>COMMANDANT DES MANEOUVRES AU SOL</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>GMCDR</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>GROUND MANOEUVRE COMMANDER</SimpleValue>
+      </Value>
+      <Value ColumnRef="parent">
+        <SimpleValue>1</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>13</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>GUNNER</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>ARTILLEUR</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>GUNNER</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>GUNNER</SimpleValue>
+      </Value>
+      <Value ColumnRef="parent">
+        <SimpleValue>3</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>14</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>INMPHY</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>MEDECINE INTERNE</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>INMPHY</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>INTERNAL MEDICINE PHYSICIAN</SimpleValue>
+      </Value>
+      <Value ColumnRef="parent">
+        <SimpleValue>2</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>15</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>INTOFF</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>OFFICIER DU RENSEIGNEMENT</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>INTOFF</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>INTELLIGENCE OFFICER</SimpleValue>
+      </Value>
+      <Value ColumnRef="parent">
+        <SimpleValue>3</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>16</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>LIAISN</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>OFFICIER DE LIAISON</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>LIAISN</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>LIAISON OFFICER</SimpleValue>
+      </Value>
+      <Value ColumnRef="parent">
+        <SimpleValue>3</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>17</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>MANTCH</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>TECHNICIEN DE MAINTENANCE</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>MANTCH</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>MAINTENANCE TECHNICIAN</SimpleValue>
+      </Value>
+      <Value ColumnRef="parent">
+        <SimpleValue>1</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>18</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>MCKNET</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>CONTROLLEUR MICKEY NET</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>MCKNET</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>MICKEY NET CONTROLLER</SimpleValue>
+      </Value>
+      <Value ColumnRef="parent">
+        <SimpleValue>3</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>19</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>OPSOFF</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>OFFICIER DES OPERATIONS</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>OPSOFF</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>OPERATIONS OFFICER</SimpleValue>
+      </Value>
+      <Value ColumnRef="parent">
+        <SimpleValue>3</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>20</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>POC</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>POINT DE CONTACT</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>POC</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>POINT OF CONTACT</SimpleValue>
+      </Value>
+      <Value ColumnRef="parent">
+        <SimpleValue>3</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>21</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>TAC</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>CONTROLEUR AERIEN TACTIQUE</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>TAC</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>TACTICAL AIR CONTROLLER</SimpleValue>
+      </Value>
+      <Value ColumnRef="parent">
+        <SimpleValue>3</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>22</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>TERA</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>ANALYSTE TERRAIN</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>TERA</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>TERRAIN ANALYST</SimpleValue>
+      </Value>
+      <Value ColumnRef="parent">
+        <SimpleValue>1</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>23</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>TOPO</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>TOPOGRAPHE</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>TOPO</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>TOPOGRAPHER</SimpleValue>
+      </Value>
+      <Value ColumnRef="parent">
+        <SimpleValue>1</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>24</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>AHLCDR</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>COMMANDANT D'HELICOPTERE D'ATTAQUE</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>AHLCDR</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>ATTACK HELICOPTER COMMANDER</SimpleValue>
+      </Value>
+      <Value ColumnRef="parent">
+        <SimpleValue>6</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>25</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>OTHPHY</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>AUTRE MEDECIN</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>OTHPHY</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>OTHER PHYSICIAN</SimpleValue>
+      </Value>
+      <Value ColumnRef="parent">
+        <SimpleValue>2</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>26</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>PRCPHY</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>SOINS PRIMAIRES</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>PRCPHY</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>PRIMARY CARE PHYSICIAN</SimpleValue>
+      </Value>
+      <Value ColumnRef="parent">
+        <SimpleValue>2</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>27</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>PSYPHY</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>MEDECIN PSYCHOLOGUE</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>PSYPHY</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>PSYCHOLOGY PHYSICIAN</SimpleValue>
+      </Value>
+      <Value ColumnRef="parent">
+        <SimpleValue>2</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>28</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>PTHPHY</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>MEDECIN PATHOLOGISTE</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>PTHPHY</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>PATHOLOGY PHYSICIAN</SimpleValue>
+      </Value>
+      <Value ColumnRef="parent">
+        <SimpleValue>2</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>29</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>RADPHY</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>MEDECIN RADIOLOGUE</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>RADPHY</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>RADIOLOGY PHYSICIAN</SimpleValue>
+      </Value>
+      <Value ColumnRef="parent">
+        <SimpleValue>2</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>30</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>SURPHY</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>MEDECIN CHIRURGIEN</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>SURPHY</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>SURGICAL PHYSICIAN</SimpleValue>
+      </Value>
+      <Value ColumnRef="parent">
+        <SimpleValue>2</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>31</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>TACAIR</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>TACAIR</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>TACAIR</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>TACAIR</SimpleValue>
+      </Value>
+      <Value ColumnRef="parent">
+        <SimpleValue>3</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>32</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>AJAATC</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>CONTROLLEUR JAAT ALTERNATIF</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>AJAATC</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>ALTERNATIVE JAAT CONTROLLER</SimpleValue>
+      </Value>
+      <Value ColumnRef="parent">
+        <SimpleValue>3</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>33</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>ASCAIR</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>COORDINATEUR DE SUPPORT AERIEN</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>ASCAIR</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>ASSAULT SUPPORT COORDINATOR, AIRBORNE</SimpleValue>
+      </Value>
+      <Value ColumnRef="parent">
+        <SimpleValue>3</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>34</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>AUTCDR</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>COMMANDANT AUTORISE</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>AUTCDR</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>AUTHORISED COMMANDER</SimpleValue>
+      </Value>
+      <Value ColumnRef="parent">
+        <SimpleValue>6</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>35</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>GYNPHY</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>MEDECIN GYNECOLOGIQUE</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>GYNPHY</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>GYNAECOLOGY PHYSICIAN</SimpleValue>
+      </Value>
+      <Value ColumnRef="parent">
+        <SimpleValue>2</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>36</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>ORL</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>ORL</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>HDNPHY</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>HEAD/NECK PHYSICIAN</SimpleValue>
+      </Value>
+      <Value ColumnRef="parent">
+        <SimpleValue>2</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>37</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>JAATC</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>CONTROLLEUR JAAT</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>JAATC</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>JAAT CONTROLLER</SimpleValue>
+      </Value>
+      <Value ColumnRef="parent">
+        <SimpleValue>2</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>38</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>ORTPHY</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>MEDECIN ORTHOPEDISTE</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>ORTPHY</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>ORTHOPAEDICS PHYSICIAN</SimpleValue>
+      </Value>
+      <Value ColumnRef="parent">
+        <SimpleValue>2</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>39</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>RFLEMN</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>FUSILIER</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>RFLEMN</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>RIFLEMAN</SimpleValue>
+      </Value>
+      <Value ColumnRef="parent">
+        <SimpleValue>3</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>40</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>SAPPER</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>SAPPEUR</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>SAPPER</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>SAPPER</SimpleValue>
+      </Value>
+      <Value ColumnRef="parent">
+        <SimpleValue>3</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>41</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>SCOUT</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>SCOUT</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>SCOUT</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>SCOUT</SimpleValue>
+      </Value>
+      <Value ColumnRef="parent">
+        <SimpleValue>3</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>42</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>SNIPER</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>SNIPER</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>SNIPER</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>SNIPER</SimpleValue>
+      </Value>
+      <Value ColumnRef="parent">
+        <SimpleValue>3</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>43</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>ANSPHY</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>MEDECIN ANESTHESISTE</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>ANSPHY</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>ANAESTHETICS PHYSICIAN</SimpleValue>
+      </Value>
+      <Value ColumnRef="parent">
+        <SimpleValue>2</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>44</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>DNTPHY</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>MEDECIN DENTAIRE</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>DNTPHY</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>DENTISTRY PHYSICIAN</SimpleValue>
+      </Value>
+      <Value ColumnRef="parent">
+        <SimpleValue>2</SimpleValue>
+      </Value>
+    </Row>
+  </SimpleCodeList>
+</gc:CodeList>

@@ -1,0 +1,332 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<gc:CodeList xmlns:nc1dico="urn:fra:nc1:dictionnaires" xmlns:gc="http://docs.oasis-open.org/codelist/ns/genericode/1.0/">
+  <Annotation>
+    <Description>
+      <nc1dico:description>DESCRIPTION DE L'ETAT D'AVANCEMENT D'UNE TACHE.
+REFERENCE DICO STAT 25.</nc1dico:description>
+      <nc1dico:description xml:lang="en">Description of the progress of a task. | Reference dictionnary STAT25.</nc1dico:description>
+    </Description>
+    <AppInfo>
+      <nc1dico:source>SFTT 3.4.8</nc1dico:source>
+      <nc1dico:derogation>COMPTE RENDU ACTION TACTIQUE</nc1dico:derogation>
+    </AppInfo>
+  </Annotation>
+  <Identification>
+    <ShortName>L125_18Code</ShortName>
+    <Version>9.0.0</Version>
+    <CanonicalUri>urn:fra:nc1:common:sicsdicos:L125_18Code</CanonicalUri>
+    <CanonicalVersionUri>urn:fra:nc1:common:sicsdicos:L125_18Code:9.0.0</CanonicalVersionUri>
+  </Identification>
+  <ColumnSet DatatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes">
+    <Column Id="code" Use="required">
+      <ShortName>Code</ShortName>
+      <Data Type="int" />
+    </Column>
+    <Column Id="short" Use="required">
+      <ShortName>Short</ShortName>
+      <Data Type="string" />
+    </Column>
+    <Column Id="long" Use="optional">
+      <ShortName>Long</ShortName>
+      <Data Type="string" />
+    </Column>
+    <Column Id="short-en" Use="optional">
+      <ShortName>Short anglais</ShortName>
+      <Data Type="string" />
+    </Column>
+    <Column Id="long-en" Use="optional">
+      <ShortName>Long anglais</ShortName>
+      <Data Type="string" />
+    </Column>
+    <Column Id="parent" Use="optional">
+      <ShortName>Parent</ShortName>
+      <Data Type="int" />
+    </Column>
+    <Column Id="codeSymbole" Use="optional">
+      <ShortName>Code Symbole</ShortName>
+      <Data Type="string" />
+    </Column>
+    <Column Id="codeHierarchique" Use="optional">
+      <ShortName>Code Hierarchique</ShortName>
+      <Data Type="string" />
+    </Column>
+    <Key Id="codeKey">
+      <ShortName>CodeKey</ShortName>
+      <ColumnRef Ref="code" />
+    </Key>
+  </ColumnSet>
+  <SimpleCodeList>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>0</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>-</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>NO STATEMENT</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>-</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>NO STATEMENT</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>1</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>ERREUR DECODAGE</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>ERREUR DE DECODAGE</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>CANTPROERR</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>CANNOT PROCESS / DECODING ERROR</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>2</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>REF MANQUANTE</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>REFERENCE MANQUANTE</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>CANTPROMIS</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>CANNOT PROCESS / MISSING REFERENCE</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>3</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>PAS FAISABLE</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>PAS FAISABLE</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>CANTCO</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>CANNOT COMPLY</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>4</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>APERCU</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>APERCU</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>WILCO</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>WILL COMPLY</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>5</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>DIFFERE</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>DIFFERE</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>DELAY</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>DELAYED</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>6</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>DEBUT</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>TACHE COMMENCEE (DEBUT)</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>TASKSTART</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>TASK STARTED</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>7</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>EN COURS</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>EN COURS</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>IPR</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>IN PROGRESS</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>8</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>EN ATTENTE</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>EN ATTENTE</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>PENDING</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>PENDING</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>9</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>FIN</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>COMPLET (FIN)</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>COM</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>COMPLETE</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>10</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>TRAVAIL OK A 25%</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>TRAVAIL COMPLETE A 25%</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>0,25</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>WORK 25% COMPLETE</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>11</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>TRAVAIL OK A 50%</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>TRAVAIL COMPLETE A 50%</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>0,5</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>WORK 50% COMPLETE</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>12</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>TRAVAIL OK A 75%</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>TRAVAIL COMPLETE A 75%</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>0,75</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>WORK 75% COMPLETE</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>13</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>ABANDONNE</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>ABANDONNE</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>ABD</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>ABORTED</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>14</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>ANNULE</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>ANNULE</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>CANCLD</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>CANCELLED</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>15</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>ILLEGAL</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>ILLEGAL</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>ILLEGAL</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>ILLEGAL</SimpleValue>
+      </Value>
+    </Row>
+  </SimpleCodeList>
+</gc:CodeList>

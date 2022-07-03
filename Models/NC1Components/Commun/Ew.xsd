@@ -1,0 +1,780 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema targetNamespace="urn:fra:nc1:common:ew" xmlns:nc1ihm="urn:fra:nc1:IHM" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:nc1ew="urn:fra:nc1:common:ew" xmlns:nc1common="urn:fra:nc1:common:attribute" xmlns:nc1location="urn:fra:nc1:common:location" xmlns:nc1msgcom="urn:fra:nc1:common:message" xmlns:nc1sicsdicos="urn:fra:nc1:common:sicsdicos">
+  <!-- NC1 V.9.0.0 -->
+  <xs:import namespace="urn:fra:nc1:common:attribute" schemaLocation="Common.xsd" />
+  <xs:import namespace="urn:fra:nc1:common:location" schemaLocation="Location.xsd" />
+  <xs:import namespace="urn:fra:nc1:common:message" schemaLocation="Message.xsd" />
+  <xs:import namespace="urn:fra:nc1:common:sicsdicos" schemaLocation="SICS_Dictionaries.xsd" />
+  <xs:complexType name="_5ecmactType">
+    <xs:annotation>
+      <xs:documentation>Données caractérisant une activité de contre-mesures électroniques.</xs:documentation>
+      <xs:documentation xml:lang="en">ECM activity data.</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="onDatetime" type="xs:dateTime">
+        <xs:annotation>
+          <xs:documentation>Date de début de l'activité.</xs:documentation>
+          <xs:documentation xml:lang="en">Activity start datetime.</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Date de début</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">Start date</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="offDatetime" type="xs:dateTime">
+        <xs:annotation>
+          <xs:documentation>Date de fin de l'activité.</xs:documentation>
+          <xs:documentation xml:lang="en">Activity end datetime.</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Date de fin</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">End date</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="missionPriority" type="nc1ew:MissionPriorityCode">
+        <xs:annotation>
+          <xs:documentation>Priorité associée à l'activité.</xs:documentation>
+          <xs:documentation xml:lang="en">Activity priority.</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Priorité</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">priority</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="type" type="nc1ew:EcmTypeCode">
+        <xs:annotation>
+          <xs:documentation>Type de contre-mesures électroniques.</xs:documentation>
+          <xs:documentation xml:lang="en">ECM type.</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Type</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">Type</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="technique" type="nc1ew:EcmTechniqueCode">
+        <xs:annotation>
+          <xs:documentation>Technique de contre-mesures électroniques mise en œuvre.</xs:documentation>
+          <xs:documentation xml:lang="en">ECM technique employed.</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Technique</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">Technique</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="_5esmactType">
+    <xs:annotation>
+      <xs:documentation>Données caractérisant une activité d'appui de guerre électronique.</xs:documentation>
+      <xs:documentation xml:lang="en">EW mission data.</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="onDatetime" type="xs:dateTime">
+        <xs:annotation>
+          <xs:documentation>Date de début de l'activité.</xs:documentation>
+          <xs:documentation xml:lang="en">Activity start datetime.</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Date de début</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">Start date</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="offDatetime" type="xs:dateTime">
+        <xs:annotation>
+          <xs:documentation>Date de fin de l'activité.</xs:documentation>
+          <xs:documentation xml:lang="en">Activity end datetime.</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Date de fin</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">End date</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="informationCategory" type="nc1common:Text2To2AType">
+        <xs:annotation>
+          <xs:documentation>Catégorie des éléments essentiels d'information.</xs:documentation>
+          <xs:documentation xml:lang="en">Information major points category.</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Catégorie</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">Category</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="missionPriority" type="nc1ew:MissionPriorityCode">
+        <xs:annotation>
+          <xs:documentation>Priorité associée à l'activité.</xs:documentation>
+          <xs:documentation xml:lang="en">Activity priority.</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Priorité</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">priority</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="_5etgfreqType">
+    <xs:annotation>
+      <xs:documentation>Caractéristiques des fréquences d'une cible de guerre électronique.</xs:documentation>
+      <xs:documentation xml:lang="en">EW target frequencies characteristics.</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" name="primaryRadioFrequency" type="nc1common:Decimal0To1000000Type">
+        <xs:annotation>
+          <xs:documentation>Fréquence radio primaire (kHz).</xs:documentation>
+          <xs:documentation xml:lang="en">Primary radio frequency (kHz).</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Fréquence primaire</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">Primary frequency</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="secondaryRadioFrequency" type="nc1common:Decimal0To1000000Type">
+        <xs:annotation>
+          <xs:documentation>Fréquence radio secondaire (kHz).</xs:documentation>
+          <xs:documentation xml:lang="en">Secondary radio frequency (kHz).</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Fréquence secondaire</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">Secondary radio</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="lowerRadioFrequencyLimit" type="nc1common:Decimal0To1000000Type">
+        <xs:annotation>
+          <xs:documentation>Limite basse de fréquence radio (kHz).</xs:documentation>
+          <xs:documentation xml:lang="en">Lower radio frequency limit (kHz).</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Limite basse</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">Lower limit</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="upperRadioFrequencyLimit" type="nc1common:Decimal0To1000000Type">
+        <xs:annotation>
+          <xs:documentation>Limite haute de fréquence radio (kHz).</xs:documentation>
+          <xs:documentation xml:lang="en">Upper radio frequency limit (kHz).</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Limite haute</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">Upper limit</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:choice minOccurs="0">
+        <xs:element minOccurs="0" name="pulseRepetitionFrequency" type="nc1common:Decimal0To1000000Type">
+          <xs:annotation>
+            <xs:documentation>Fréquence de répétition des émissions (Hz).</xs:documentation>
+            <xs:documentation xml:lang="en">Emissions pulse repetition frequency (Hz).</xs:documentation>
+            <xs:appinfo>
+              <nc1ihm:Nom>Fréquence de répétition</nc1ihm:Nom>
+              <nc1ihm:Nom xml:lang="en">Pulse repetition frequency (Hz)</nc1ihm:Nom>
+            </xs:appinfo>
+          </xs:annotation>
+        </xs:element>
+        <xs:element minOccurs="0" name="pulseRepetitionInterval" type="nc1common:Decimal0To99999999999Type">
+          <xs:annotation>
+            <xs:documentation>Intervalle de répétition des émissions (microsecondes).</xs:documentation>
+            <xs:documentation xml:lang="en">emission repetition interval (microseconds).</xs:documentation>
+            <xs:appinfo>
+              <nc1ihm:Nom>Intervalle de répétition</nc1ihm:Nom>
+              <nc1ihm:Nom xml:lang="en">Pulse repetition interval</nc1ihm:Nom>
+            </xs:appinfo>
+          </xs:annotation>
+        </xs:element>
+      </xs:choice>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="_5etginfoType">
+    <xs:annotation>
+      <xs:documentation>Données caractérisant une station radio émettrice.</xs:documentation>
+      <xs:documentation xml:lang="en">Transmitting radio station data.</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="emitterSpotNumber" type="nc1ew:NedbNumberType">
+        <xs:annotation>
+          <xs:documentation>Numéro dans la base OTAN des émetteurs (NEDB).</xs:documentation>
+          <xs:documentation xml:lang="en">NEDB number.</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Numéro émetteur</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">Emitter spot number</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="transmitRadioFrequency" type="nc1common:Decimal0To1000000Type">
+        <xs:annotation>
+          <xs:documentation>Fréquence radio de l'émetteur (kHz).</xs:documentation>
+          <xs:documentation xml:lang="en">Transmit radio frequency (kHz).</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Fréquence d'émission</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">Transmission radio frequency</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="radioFrequencyBandwidth" type="nc1common:Decimal0To1000000Type">
+        <xs:annotation>
+          <xs:documentation>Bande de fréquence d'émission (kHz).</xs:documentation>
+          <xs:documentation xml:lang="en">Radio frequency bandwidth (kHz).</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Bande d'émission</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">Radio frequency bandwidth</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="signalType" type="nc1ew:SignalTypeCode">
+        <xs:annotation>
+          <xs:documentation>Type de signal d'émission.</xs:documentation>
+          <xs:documentation xml:lang="en">Emitting signal type.</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Type de signal</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">Signal type</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="radioRadarFunction" type="nc1ew:RadioRadarFunctionCode">
+        <xs:annotation>
+          <xs:documentation>Fonction de la station radio ou radar.</xs:documentation>
+          <xs:documentation xml:lang="en">Radio or radar station function.</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Fonction</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">function</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="_5eweqstsType">
+    <xs:annotation>
+      <xs:documentation>Etat d'un équipement ou d'un système de guerre électronique.</xs:documentation>
+      <xs:documentation xml:lang="en">EW equipment or system status.</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="ewSystemType" type="nc1common:Text1To18ABNSType">
+        <xs:annotation>
+          <xs:documentation>Type de l'équipement ou du système de guerre électronique.</xs:documentation>
+          <xs:documentation xml:lang="en">EW equipment or system type.</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Type</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">Type</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="operationalCount" type="nc1common:Int0To9999Type">
+        <xs:annotation>
+          <xs:documentation>Nombre d'équipements opérationnels de ce type.</xs:documentation>
+          <xs:documentation xml:lang="en">Number of operational equipments per type.</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Nombre opérationnels</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">Number of operational items</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="nonOperationalCount" type="nc1common:Int0To9999Type">
+        <xs:annotation>
+          <xs:documentation>Nombre d'équipements non opérationnels de ce type.</xs:documentation>
+          <xs:documentation xml:lang="en">Number of non-operational equipments per type.</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Nombre non opérationnels</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">Number of non operational items</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="destroyedCount" type="nc1common:Int0To9999Type">
+        <xs:annotation>
+          <xs:documentation>Nombre d'équipements détruits de ce type.</xs:documentation>
+          <xs:documentation xml:lang="en">Number of destroyed equipments of this type.</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Nombre détruits</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">Number of destroyed items</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="_8ChaffType">
+    <xs:annotation>
+      <xs:documentation>Données caractérisant une mission chaff.</xs:documentation>
+      <xs:documentation xml:lang="en">Chaff mission data.</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="referenceNumber" type="nc1common:Text1To6ABNSType">
+        <xs:annotation>
+          <xs:documentation>Numéro de référence associé à la mission.</xs:documentation>
+          <xs:documentation xml:lang="en">Mission reference number.</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Numéro mission</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">Mission number</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="chaffType" type="nc1ew:ChaffTypeType">
+        <xs:annotation>
+          <xs:documentation>Type de chaff à utiliser.</xs:documentation>
+          <xs:documentation xml:lang="en">Chaff type.</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Type</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">Type</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="lowerRadioFrequency" type="nc1common:Decimal0To1000000Type">
+        <xs:annotation>
+          <xs:documentation>Limite basse de la plage de fréquences à brouiller (kHz).</xs:documentation>
+          <xs:documentation xml:lang="en">Lower limit of radiofrequency range to jam (kHz).</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Limite basse</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">Lower limit</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="upperFrequencyLimit" type="nc1common:Decimal0To1000000Type">
+        <xs:annotation>
+          <xs:documentation>Limite haute de la plage de fréquences à brouiller (kHz).</xs:documentation>
+          <xs:documentation xml:lang="en">Upper limit of radiofrequency range to jam (kHz).</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Limite haute</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">Upper limit</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="boundaryLowerLimit" type="nc1ew:FlightLevelType">
+        <xs:annotation>
+          <xs:documentation>Niveau de vol minimal.</xs:documentation>
+          <xs:documentation xml:lang="en">Min flight level.</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Niveau de vol minimal</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">Min flight level</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="boundaryUpperLimit" type="nc1ew:FlightLevelType">
+        <xs:annotation>
+          <xs:documentation>Niveau de vol maximal.</xs:documentation>
+          <xs:documentation xml:lang="en">Max flight level.</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Niveau de vol maximal</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">Max flight level</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="mechanicalJammingTechnique" type="nc1ew:MechanicalJammingTechniqueCode">
+        <xs:annotation>
+          <xs:documentation>Technique de brouillage mécanique.</xs:documentation>
+          <xs:documentation xml:lang="en">Mechanical jamming technique.</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Technique de brouillage</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">Jamming technique</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="_8timelocType">
+    <xs:annotation>
+      <xs:documentation>Horodatage et localisation d'une mission de guerre électronique.</xs:documentation>
+      <xs:documentation xml:lang="en">Datetime and location of a EW mission.</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="referenceNumber" type="nc1common:Text1To6ABNSType">
+        <xs:annotation>
+          <xs:documentation>Numéro de référence associé à la mission.</xs:documentation>
+          <xs:documentation xml:lang="en">Mission reference number.</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Numéro mission</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">Mission number</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="country" type="nc1sicsdicos:L105_2Code">
+        <xs:annotation>
+          <xs:documentation>Pays concerné.</xs:documentation>
+          <xs:documentation xml:lang="en">Concerned country.</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Pays</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">Country</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="onDatetime" type="xs:dateTime">
+        <xs:annotation>
+          <xs:documentation>Date de début de la mission.</xs:documentation>
+          <xs:documentation xml:lang="en">Mission start date time.</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Date de début</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">Start date</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="offDatetime" type="xs:dateTime">
+        <xs:annotation>
+          <xs:documentation>Date de fin de la mission.</xs:documentation>
+          <xs:documentation xml:lang="en">Mission end date time.</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Date de fin</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">End date</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="location" type="nc1location:PointType">
+        <xs:annotation>
+          <xs:documentation>Localisation du point de départ de la mission.</xs:documentation>
+          <xs:documentation xml:lang="en">Mission start point location.</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Localisation</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">Location</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="locationName" type="nc1common:ShortTextType">
+        <xs:annotation>
+          <xs:documentation>Nom donné à la localisation. Par exemple un nom de ville ou de lieu.</xs:documentation>
+          <xs:documentation xml:lang="en">Name assigned to the location, e.g. city or place name.</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Toponyme</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">Toponym</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:simpleType name="ChaffTypeType">
+    <xs:annotation>
+      <xs:documentation>Type de chaff à utiliser dans le cadre d'une mission de brouillage par chaff (guerre électronique).</xs:documentation>
+      <xs:documentation xml:lang="en">Type of chaff to use for a chaff jamming mission (EW).</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:pattern value="[A-Z0-9]{1,6}" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="EcmTechniqueCode">
+    <xs:annotation>
+      <xs:appinfo>
+        <nc1dico:source xmlns:nc1dico="urn:fra:nc1:dictionnaires">ADatP-3 BL14 1643/1</nc1dico:source>
+        <nc1ihm:description>Technique de contre-mesures électroniques.</nc1ihm:description>
+        <nc1ihm:description xml:lang="en">ECM technique.</nc1ihm:description>
+      </xs:appinfo>
+      <xs:documentation>Technique de contre-mesures électroniques.</xs:documentation>
+      <xs:documentation xml:lang="en">ECM technique.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:integer" />
+  </xs:simpleType>
+  <xs:complexType name="EcmtgtType">
+    <xs:annotation>
+      <xs:documentation>Données caractérisant une cible de contre-mesures électroniques.</xs:documentation>
+      <xs:documentation xml:lang="en">ECM mission target data.</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="requestNumber" type="nc1common:Text1To8ABNSType">
+        <xs:annotation>
+          <xs:documentation>Numéro de la demande.</xs:documentation>
+          <xs:documentation xml:lang="en">Request number.</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Numéro demande</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">Request number</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="country" type="nc1sicsdicos:L105_2Code">
+        <xs:annotation>
+          <xs:documentation>Pays où est située la cible.</xs:documentation>
+          <xs:documentation xml:lang="en">Country where the target is located.</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Pays</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">Country</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="location" type="nc1location:PointType">
+        <xs:annotation>
+          <xs:documentation>Localisation de la cible.</xs:documentation>
+          <xs:documentation xml:lang="en">Target location.</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Localisation</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">Location</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="locationName" type="nc1common:ShortTextType">
+        <xs:annotation>
+          <xs:documentation>Nom donné à la localisation. Par exemple un nom de ville ou de lieu.</xs:documentation>
+          <xs:documentation xml:lang="en">Name assigned to the location, e.g. city or place name.</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Toponyme</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">Toponym</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="callSign" type="nc1common:Text1To16ABNSType">
+        <xs:annotation>
+          <xs:documentation>Identifiant donné à la cible.</xs:documentation>
+          <xs:documentation xml:lang="en">Target assigned ID.</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Identifiant</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">id</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="enemyUnitDesignator" type="nc1common:Text1To18ABNSType">
+        <xs:annotation>
+          <xs:documentation>Identifiant littéral donné à l'unité ennemie.</xs:documentation>
+          <xs:documentation xml:lang="en">literal ID assigned to the enemy unit.</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Identifiant unité ennemie</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">Enemy unit id</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:simpleType name="EcmTypeCode">
+    <xs:annotation>
+      <xs:appinfo>
+        <nc1dico:source xmlns:nc1dico="urn:fra:nc1:dictionnaires">ADatP-3 BL14 1508/1</nc1dico:source>
+        <nc1ihm:description>Type de contre-mesures électroniques.</nc1ihm:description>
+        <nc1ihm:description xml:lang="en">ECM type.</nc1ihm:description>
+      </xs:appinfo>
+      <xs:documentation>Type de contre-mesures électroniques.</xs:documentation>
+      <xs:documentation xml:lang="en">ECM type.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:integer" />
+  </xs:simpleType>
+  <xs:simpleType name="EmitterCategoryType">
+    <xs:annotation>
+      <xs:documentation>Catégorie d'émetteur dans la base OTAN des émetteurs (NEDB).
+</xs:documentation>
+      <xs:documentation xml:lang="en">NEDB emitter category.
+</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:pattern value="[0-1][0-7]" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:complexType name="EsmtgtType">
+    <xs:annotation>
+      <xs:documentation>Données caractérisant une cible de l'appui de guerre électronique.</xs:documentation>
+      <xs:documentation xml:lang="en">EW mission target data.</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="requestNumber" type="nc1common:Text1To8ABNSType">
+        <xs:annotation>
+          <xs:documentation>Numéro de la demande.</xs:documentation>
+          <xs:documentation xml:lang="en">Request number.</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Numéro demande</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">Request number</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="country" type="nc1sicsdicos:L105_2Code">
+        <xs:annotation>
+          <xs:documentation>Pays où est située la cible.</xs:documentation>
+          <xs:documentation xml:lang="en">Country where the target is located.</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Pays</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">Country</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="location" type="nc1location:PointType">
+        <xs:annotation>
+          <xs:documentation>Localisation de la cible.</xs:documentation>
+          <xs:documentation xml:lang="en">Target location.</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Localisation</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">Location</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="locationName" type="nc1common:ShortTextType">
+        <xs:annotation>
+          <xs:documentation>Nom donné à la localisation. Par exemple un nom de ville ou de lieu.</xs:documentation>
+          <xs:documentation xml:lang="en">Name assigned to the location, e.g. city or place name.</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Toponyme</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">Toponym</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="callSign" type="nc1common:Text1To16ABNSType">
+        <xs:annotation>
+          <xs:documentation>Identifiant donné à la cible.</xs:documentation>
+          <xs:documentation xml:lang="en">Target assigned ID.</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Identifiant</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">id</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="enemyUnitDesignator" type="nc1common:Text1To18ABNSType">
+        <xs:annotation>
+          <xs:documentation>Identifiant littéral donné à l'unité ennemie.</xs:documentation>
+          <xs:documentation xml:lang="en">literal ID assigned to the enemy unit.</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Identifiant unité ennemie</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">Enemy unit id</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="EwmissType">
+    <xs:annotation>
+      <xs:documentation>Données caractérisant une mission de guerre électronique.</xs:documentation>
+      <xs:documentation xml:lang="en">EW mission data.</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="requestNumber" type="nc1common:Text1To8ABNSType">
+        <xs:annotation>
+          <xs:documentation>Numéro de la demande.</xs:documentation>
+          <xs:documentation xml:lang="en">Request number.</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Numéro demande</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">Request number</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="country" type="nc1sicsdicos:L105_2Code">
+        <xs:annotation>
+          <xs:documentation>Pays où est située la mission.</xs:documentation>
+          <xs:documentation xml:lang="en">Country where the mission is located.</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Pays</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">Country</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="location" type="nc1location:PointType">
+        <xs:annotation>
+          <xs:documentation>Localisation de l'émetteur.</xs:documentation>
+          <xs:documentation xml:lang="en">Emitter location.</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Localisation</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">Location</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="locationName" type="nc1common:ShortTextType">
+        <xs:annotation>
+          <xs:documentation>Nom donné à la localisation. Par exemple un nom de ville ou de lieu.</xs:documentation>
+          <xs:documentation xml:lang="en">Name assigned to the location, e.g. city or place name.</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Toponyme</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">Toponym</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="callSign" type="nc1common:Text1To16ABNSType">
+        <xs:annotation>
+          <xs:documentation>Identifiant donné à la cible.</xs:documentation>
+          <xs:documentation xml:lang="en">Target assigned ID.</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Identifiant</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">id</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="enemyUnitDesignator" type="nc1common:Text1To18ABNSType">
+        <xs:annotation>
+          <xs:documentation>Identifiant littéral donné à l'unité ennemie.</xs:documentation>
+          <xs:documentation xml:lang="en">literal ID assigned to the enemy unit.</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Identifiant unité ennemie</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">Enemy unit id</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:simpleType name="FlightLevelType">
+    <xs:annotation>
+      <xs:documentation>Niveau de vol (centaines de pieds).</xs:documentation>
+      <xs:documentation xml:lang="en">Flight level (100ft).</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:pattern value="FL[0-9]{3}" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="MechanicalJammingTechniqueCode">
+    <xs:annotation>
+      <xs:appinfo>
+        <nc1dico:source xmlns:nc1dico="urn:fra:nc1:dictionnaires">ADatP-3 BL14 1643/2</nc1dico:source>
+        <nc1ihm:description>Technique de brouillage mécanique.</nc1ihm:description>
+        <nc1ihm:description xml:lang="en">Mechanical jamming technique.</nc1ihm:description>
+      </xs:appinfo>
+      <xs:documentation>Technique de brouillage mécanique.</xs:documentation>
+      <xs:documentation xml:lang="en">Mechanical jamming technique.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:integer" />
+  </xs:simpleType>
+  <xs:simpleType name="MissionPriorityCode">
+    <xs:annotation>
+      <xs:appinfo>
+        <nc1dico:source xmlns:nc1dico="urn:fra:nc1:dictionnaires">ADatP-3 1076/2</nc1dico:source>
+        <nc1ihm:description>Priorité associée à une activité de contre-mesures électroniques.</nc1ihm:description>
+        <nc1ihm:description xml:lang="en">ECM activity priority.</nc1ihm:description>
+      </xs:appinfo>
+      <xs:documentation>Priorité associée à une activité de contre-mesures électroniques.</xs:documentation>
+      <xs:documentation xml:lang="en">ECM activity priority.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:integer" />
+  </xs:simpleType>
+  <xs:complexType name="NedbNumberType">
+    <xs:annotation>
+      <xs:documentation>Numéro dans la base OTAN des émetteurs (NEDB).</xs:documentation>
+      <xs:documentation xml:lang="en">NEDB number.</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="emitterIdentityCategory" type="nc1ew:EmitterCategoryType">
+        <xs:annotation>
+          <xs:documentation>Catégorie d'émetteur.</xs:documentation>
+          <xs:documentation xml:lang="en">Emitter category.</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Catégorie</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">Category</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="spotAllocationNumber" type="nc1ew:SpotAllocationNumberType">
+        <xs:annotation>
+          <xs:documentation>Numéro de la station émettrice.</xs:documentation>
+          <xs:documentation xml:lang="en">Emitting station number.</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Numéro</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">Number</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:simpleType name="RadioRadarFunctionCode">
+    <xs:annotation>
+      <xs:appinfo>
+        <nc1dico:source xmlns:nc1dico="urn:fra:nc1:dictionnaires">ADatP-3 BL14 1471/1</nc1dico:source>
+        <nc1ihm:description>Fonction d'une station radio ou radar.</nc1ihm:description>
+        <nc1ihm:description xml:lang="en">Function of a radio station or a radar tracking station.</nc1ihm:description>
+      </xs:appinfo>
+      <xs:documentation>Fonction d'une station radio ou radar.</xs:documentation>
+      <xs:documentation xml:lang="en">Function of a radio station or a radar tracking station.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:integer" />
+  </xs:simpleType>
+  <xs:simpleType name="SignalTypeCode">
+    <xs:annotation>
+      <xs:appinfo>
+        <nc1dico:source xmlns:nc1dico="urn:fra:nc1:dictionnaires">ADatP-3 BL14 1181/7</nc1dico:source>
+        <nc1ihm:description>Type de signal d'émission radio.</nc1ihm:description>
+        <nc1ihm:description xml:lang="en">Radio emission signal type.</nc1ihm:description>
+      </xs:appinfo>
+      <xs:documentation>Type de signal d'émission radio.</xs:documentation>
+      <xs:documentation xml:lang="en">Radio emission signal type.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:integer" />
+  </xs:simpleType>
+  <xs:simpleType name="SpotAllocationNumberType">
+    <xs:annotation>
+      <xs:documentation>Numéro de la station émettrice dans la base OTAN des émetteurs (NEDB).
+</xs:documentation>
+      <xs:documentation xml:lang="en">Emitting station NEDB number.
+</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:pattern value="[0-7]{3}" />
+    </xs:restriction>
+  </xs:simpleType>
+</xs:schema>

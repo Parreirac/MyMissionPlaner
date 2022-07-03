@@ -1,0 +1,1454 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema targetNamespace="urn:fra:nc1:common:sicsdicos" xmlns:nc1ihm="urn:fra:nc1:IHM" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:nc1sicsdicos="urn:fra:nc1:common:sicsdicos">
+  <!-- NC1 V.9.0.0 -->
+  <xs:simpleType name="L104_14Code">
+    <xs:annotation>
+      <xs:appinfo>
+        <nc1dico:source xmlns:nc1dico="urn:fra:nc1:dictionnaires">SFTT 3.4.8</nc1dico:source>
+        <nc1dico:derogation xmlns:nc1dico="urn:fra:nc1:dictionnaires">EXTENSION FORCE</nc1dico:derogation>
+        <nc1ihm:description>INDIQUE, EN COMPLEMENT D'UN CHAMP FORCE (L104/11) SI LA FORCE DECRITE FAIT REFERENCE A :
+- UN NOMBRE DE VEHICULE
+- UN NOMBRE DE PERSONNELS EMBARQUES
+- UN NOMBRE DE VEHICULES + PERSONNELS DEBARQUES
+- UN NOMBRE DE PERSONNELS DEBARQUES (NECESSITE L'ENVOI D'UN MESSAGE H2.7 EN COMPLEMENT)</nc1ihm:description>
+        <nc1ihm:description xml:lang="en">Specify, as a supplement to a field Force (L104/11) if the described strength makes reference in: - a Number of vehicle - a Number of embarked staffs - a Number of vehicles + landed staffs - a Number of landed staffs (Require the sending of a message H4.7 in complement)</nc1ihm:description>
+      </xs:appinfo>
+      <xs:documentation>INDIQUE, EN COMPLEMENT D'UN CHAMP FORCE (L104/11) SI LA FORCE DECRITE FAIT REFERENCE A :
+- UN NOMBRE DE VEHICULE
+- UN NOMBRE DE PERSONNELS EMBARQUES
+- UN NOMBRE DE VEHICULES + PERSONNELS DEBARQUES
+- UN NOMBRE DE PERSONNELS DEBARQUES (NECESSITE L'ENVOI D'UN MESSAGE H2.7 EN COMPLEMENT)</xs:documentation>
+      <xs:documentation xml:lang="en">Specify, as a supplement to a field Force (L104/11) if the described strength makes reference in: - a Number of vehicle - a Number of embarked staffs - a Number of vehicles + landed staffs - a Number of landed staffs (Require the sending of a message H4.7 in complement)</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:integer" />
+  </xs:simpleType>
+  <xs:simpleType name="L104_16Code">
+    <xs:annotation>
+      <xs:appinfo>
+        <nc1dico:source xmlns:nc1dico="urn:fra:nc1:dictionnaires">SFTT 3.4.8</nc1dico:source>
+        <nc1dico:derogation xmlns:nc1dico="urn:fra:nc1:dictionnaires">INDICATEUR DE CHARGE A BORD</nc1dico:derogation>
+        <nc1ihm:description>INDIQUE LE NOMBRE DE PERSONNEL (HORS EQUIPAGE) A BORD D'UN VEHICULE, AERONEF OU BATEAU, MAIS EGALEMENT, S'IL EST EN MODE TRANSPORT DE FRET, LE FAIT QU'IL SOIT CHARGE OU NON ET, ENFIN, SI LE VEHICULE N'EST NI EN MODE TRANSPORT PERSONNEL NI DE FRET, S'IL EST EN MODE RENSEIGNEMENT (CAS DES DRONES OU D'UNE GAZELLE VIVIANE PAR EXEMPLE).</nc1ihm:description>
+        <nc1ihm:description xml:lang="en">Specify the number of staff on board (except crew) in a vehicle, an aircraft or a boat but also, if it is in mode transport of freight, the fact that it is loaded or not and, finally, if the vehicle is or in mode personal transport or of freight, if it is in mode piece of information (case of drones or gazelle Viviane for example)</nc1ihm:description>
+      </xs:appinfo>
+      <xs:documentation>INDIQUE LE NOMBRE DE PERSONNEL (HORS EQUIPAGE) A BORD D'UN VEHICULE, AERONEF OU BATEAU, MAIS EGALEMENT, S'IL EST EN MODE TRANSPORT DE FRET, LE FAIT QU'IL SOIT CHARGE OU NON ET, ENFIN, SI LE VEHICULE N'EST NI EN MODE TRANSPORT PERSONNEL NI DE FRET, S'IL EST EN MODE RENSEIGNEMENT (CAS DES DRONES OU D'UNE GAZELLE VIVIANE PAR EXEMPLE).</xs:documentation>
+      <xs:documentation xml:lang="en">Specify the number of staff on board (except crew) in a vehicle, an aircraft or a boat but also, if it is in mode transport of freight, the fact that it is loaded or not and, finally, if the vehicle is or in mode personal transport or of freight, if it is in mode piece of information (case of drones or gazelle Viviane for example)</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:integer" />
+  </xs:simpleType>
+  <xs:simpleType name="L104_1Code">
+    <xs:annotation>
+      <xs:appinfo>
+        <nc1dico:source xmlns:nc1dico="urn:fra:nc1:dictionnaires">SFTT 3.4.8</nc1dico:source>
+        <nc1dico:derogation xmlns:nc1dico="urn:fra:nc1:dictionnaires">VOLUME APPROXIMATIF</nc1dico:derogation>
+        <nc1ihm:description>INDIQUE UN VOLUME (UNE QUANTITE AU SENS NATURE - VOLUME -ATTITUDE) POUR DIFFERENTES APPLICATIONS (EX: VOLUME D'UN GROUPE D'INDIVIDUS)</nc1ihm:description>
+        <nc1ihm:description xml:lang="en">Indicate a volume (a quantity in the kind - Volume - attitude) for various applications (Ex: volume of a group of individuals)</nc1ihm:description>
+      </xs:appinfo>
+      <xs:documentation>INDIQUE UN VOLUME (UNE QUANTITE AU SENS NATURE - VOLUME -ATTITUDE) POUR DIFFERENTES APPLICATIONS (EX: VOLUME D'UN GROUPE D'INDIVIDUS)</xs:documentation>
+      <xs:documentation xml:lang="en">Indicate a volume (a quantity in the kind - Volume - attitude) for various applications (Ex: volume of a group of individuals)</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:integer" />
+  </xs:simpleType>
+  <xs:simpleType name="L104_2Code">
+    <xs:annotation>
+      <xs:appinfo>
+        <nc1dico:source xmlns:nc1dico="urn:fra:nc1:dictionnaires">SFTT 3.4.8</nc1dico:source>
+        <nc1dico:derogation xmlns:nc1dico="urn:fra:nc1:dictionnaires">FORCE PARTICIPANTS AIR/MER OU PISTE TERRE/AIR/MER</nc1dico:derogation>
+        <nc1ihm:description>INDIQUE UN VOLUME DE PIONS (NUMERISES OU NON) ACCOMPAGNANT LA PISTE OU LE NOMBRE DE SUBORDONNES REELS DE VEHICULES ET/OU PERSONNELS EMBARQUES  OU DEBARQUES) DE PARTICIPANT AIR/MER ET PREND EN COMPTE LE PARTICIPANT REPORTANT. EN L'ABSENCE DE SUBORDONNE LA VALEUR INDIQUE EST 1</nc1ihm:description>
+        <nc1ihm:description xml:lang="en">Strength of a track or a participant air or a sea</nc1ihm:description>
+      </xs:appinfo>
+      <xs:documentation>INDIQUE UN VOLUME DE PIONS (NUMERISES OU NON) ACCOMPAGNANT LA PISTE OU LE NOMBRE DE SUBORDONNES REELS DE VEHICULES ET/OU PERSONNELS EMBARQUES  OU DEBARQUES) DE PARTICIPANT AIR/MER ET PREND EN COMPTE LE PARTICIPANT REPORTANT. EN L'ABSENCE DE SUBORDONNE LA VALEUR INDIQUE EST 1</xs:documentation>
+      <xs:documentation xml:lang="en">Strength of a track or a participant air or a sea</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:integer" />
+  </xs:simpleType>
+  <xs:simpleType name="L105_2Code">
+    <xs:annotation>
+      <xs:appinfo>
+        <nc1dico:source xmlns:nc1dico="urn:fra:nc1:dictionnaires">SFTT 3.4.8</nc1dico:source>
+        <nc1dico:derogation xmlns:nc1dico="urn:fra:nc1:dictionnaires">NATIONALITE</nc1dico:derogation>
+        <nc1ihm:description>DECRIT LA NATIONALITE D'UN OBJET.
+CORRESPOND AU CHAMP NATIONALITE DU SYMBOLCODEID APP6 (CARACTERES 13 ET 14). LE FORMAT DU CODE SYMBOLE EST DEFINI DANS L’ANNEXE B DE LA NORME APP-6(B) . LE CODE COMPLET EST SUR 15 CARACTERES.
+FUSION DES LISTES NATIONS DANS STANAG 5516_ED6 P. 6390 A 6397 (COMPATIBLE APP6C TABLE A-8)
+CODES PAYS = SOIT REFERENCE FIPS 10-4, SOIT ISO 316653 ALPHA 2</nc1ihm:description>
+        <nc1ihm:description xml:lang="en">Described the nationality of an object. NATIONALITY of SymbolCodeID APP6 (bits 13 and 14) corresponds to the field. The format of the code symbol is defined in the appendix B of the standard APP-6 ( B ). The complete code is on 15 bits. Fusion of lists nations in STANAG 5516_Ed6 p. 6390 - 6397 (compatible APP6C Banks A-8)</nc1ihm:description>
+      </xs:appinfo>
+      <xs:documentation>DECRIT LA NATIONALITE D'UN OBJET.
+CORRESPOND AU CHAMP NATIONALITE DU SYMBOLCODEID APP6 (CARACTERES 13 ET 14). LE FORMAT DU CODE SYMBOLE EST DEFINI DANS L’ANNEXE B DE LA NORME APP-6(B) . LE CODE COMPLET EST SUR 15 CARACTERES.
+FUSION DES LISTES NATIONS DANS STANAG 5516_ED6 P. 6390 A 6397 (COMPATIBLE APP6C TABLE A-8)
+CODES PAYS = SOIT REFERENCE FIPS 10-4, SOIT ISO 316653 ALPHA 2</xs:documentation>
+      <xs:documentation xml:lang="en">Described the nationality of an object. NATIONALITY of SymbolCodeID APP6 (bits 13 and 14) corresponds to the field. The format of the code symbol is defined in the appendix B of the standard APP-6 ( B ). The complete code is on 15 bits. Fusion of lists nations in STANAG 5516_Ed6 p. 6390 - 6397 (compatible APP6C Banks A-8)</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:integer" />
+  </xs:simpleType>
+  <xs:simpleType name="L105_4Code">
+    <xs:annotation>
+      <xs:appinfo>
+        <nc1dico:source xmlns:nc1dico="urn:fra:nc1:dictionnaires">SFTT 3.4.8</nc1dico:source>
+        <nc1dico:derogation xmlns:nc1dico="urn:fra:nc1:dictionnaires">STATUS</nc1dico:derogation>
+        <nc1ihm:description>CORRESPOND AU STATUS DU SYMBOLCODEID APP6B ( (ANTICIPED-PLANNED/PRESENT) POUR DEFINIR LA LOCALISATION D'UNE UNITE, SOIT PLANIFIE, SOIT PRESENTE.
+CORRESPOND AU CHAMP STATUS DU SYMBOLCODEID APP6 (CARACTERE 4). LE FORMAT DU CODE SYMBOLE EST DEFINI DANS L’ANNEXE B DE LA NORME APP-6(B) . LE CODE COMPLET EST SUR 15 CARACTERES.</nc1ihm:description>
+        <nc1ihm:description xml:lang="en">Corresponds to the the symbol code's status to define the unit's location. | Corresponds to the symbol code's field status from APP6. The format is defined in APP-6(B) Appendix B. The complete code is  15 charaters long..</nc1ihm:description>
+      </xs:appinfo>
+      <xs:documentation>CORRESPOND AU STATUS DU SYMBOLCODEID APP6B ( (ANTICIPED-PLANNED/PRESENT) POUR DEFINIR LA LOCALISATION D'UNE UNITE, SOIT PLANIFIE, SOIT PRESENTE.
+CORRESPOND AU CHAMP STATUS DU SYMBOLCODEID APP6 (CARACTERE 4). LE FORMAT DU CODE SYMBOLE EST DEFINI DANS L’ANNEXE B DE LA NORME APP-6(B) . LE CODE COMPLET EST SUR 15 CARACTERES.</xs:documentation>
+      <xs:documentation xml:lang="en">Corresponds to the the symbol code's status to define the unit's location. | Corresponds to the symbol code's field status from APP6. The format is defined in APP-6(B) Appendix B. The complete code is  15 charaters long..</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:integer" />
+  </xs:simpleType>
+  <xs:simpleType name="L107_1Code">
+    <xs:annotation>
+      <xs:appinfo>
+        <nc1dico:source xmlns:nc1dico="urn:fra:nc1:dictionnaires">SFTT 3.4.8</nc1dico:source>
+        <nc1dico:derogation xmlns:nc1dico="urn:fra:nc1:dictionnaires">NIVEAU PROTECTION NRBC</nc1dico:derogation>
+        <nc1ihm:description>DESCRIPTION DE L'ETAT DE DISPONIBILITE D'UNE UNITE POUR ETRE OPERATIONNELLE
+DICO STAT 284
+REFERENCE : NDS 503994/CFT/DIV.ACE/BGEN-NRBC DU 05/03/2013</nc1ihm:description>
+        <nc1ihm:description xml:lang="en">Description of the state of readiness of a unit to be operational (STAT dictionary 284) Reference: 503 994 NDS / CFT / DIV.ACE / BGEN of CBRN-05/03/2013</nc1ihm:description>
+      </xs:appinfo>
+      <xs:documentation>DESCRIPTION DE L'ETAT DE DISPONIBILITE D'UNE UNITE POUR ETRE OPERATIONNELLE
+DICO STAT 284
+REFERENCE : NDS 503994/CFT/DIV.ACE/BGEN-NRBC DU 05/03/2013</xs:documentation>
+      <xs:documentation xml:lang="en">Description of the state of readiness of a unit to be operational (STAT dictionary 284) Reference: 503 994 NDS / CFT / DIV.ACE / BGEN of CBRN-05/03/2013</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:integer" />
+  </xs:simpleType>
+  <xs:simpleType name="L110_30Code">
+    <xs:annotation>
+      <xs:appinfo>
+        <nc1dico:source xmlns:nc1dico="urn:fra:nc1:dictionnaires">SFTT 3.4.8</nc1dico:source>
+        <nc1dico:derogation xmlns:nc1dico="urn:fra:nc1:dictionnaires">ROLE D'UN PC (POSTE DE COMMANDEMENT)</nc1dico:derogation>
+        <nc1ihm:description>DESCRIPTION DU ROLE D'UN POSTE DE COMMANDEMENT (PC).
+DICO STAT 285</nc1ihm:description>
+        <nc1ihm:description xml:lang="en">Description of the role of a Command Post (CP). (STAT dictionary 285)</nc1ihm:description>
+      </xs:appinfo>
+      <xs:documentation>DESCRIPTION DU ROLE D'UN POSTE DE COMMANDEMENT (PC).
+DICO STAT 285</xs:documentation>
+      <xs:documentation xml:lang="en">Description of the role of a Command Post (CP). (STAT dictionary 285)</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:integer" />
+  </xs:simpleType>
+  <xs:simpleType name="L110_31Code">
+    <xs:annotation>
+      <xs:appinfo>
+        <nc1dico:source xmlns:nc1dico="urn:fra:nc1:dictionnaires">SFTT 3.4.8</nc1dico:source>
+        <nc1dico:derogation xmlns:nc1dico="urn:fra:nc1:dictionnaires">CATEGORIE D'ORGANISATION CIVILE</nc1dico:derogation>
+        <nc1ihm:description>DESCRIPTION D'UNE CATEGORIE POUR UNE ORGANISATION CIVILE
+DICO STAT 186</nc1ihm:description>
+        <nc1ihm:description xml:lang="en">Description of a category for a civil organization (STAT dictionary 186)</nc1ihm:description>
+      </xs:appinfo>
+      <xs:documentation>DESCRIPTION D'UNE CATEGORIE POUR UNE ORGANISATION CIVILE
+DICO STAT 186</xs:documentation>
+      <xs:documentation xml:lang="en">Description of a category for a civil organization (STAT dictionary 186)</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:integer" />
+  </xs:simpleType>
+  <xs:simpleType name="L110_32Code">
+    <xs:annotation>
+      <xs:appinfo>
+        <nc1dico:source xmlns:nc1dico="urn:fra:nc1:dictionnaires">SFTT 3.4.8</nc1dico:source>
+        <nc1dico:derogation xmlns:nc1dico="urn:fra:nc1:dictionnaires">CATEGORIE D'ORGANISATION MILITAIRE</nc1dico:derogation>
+        <nc1ihm:description>DESCRIPTION D'UNE CATEGORIE POUR UNE ORGANISATION MILITAIRE
+DICO STAT 242</nc1ihm:description>
+        <nc1ihm:description xml:lang="en">Description of a category for a military organization (STAT dictionary 242)</nc1ihm:description>
+      </xs:appinfo>
+      <xs:documentation>DESCRIPTION D'UNE CATEGORIE POUR UNE ORGANISATION MILITAIRE
+DICO STAT 242</xs:documentation>
+      <xs:documentation xml:lang="en">Description of a category for a military organization (STAT dictionary 242)</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:integer" />
+  </xs:simpleType>
+  <xs:simpleType name="L110_33Code">
+    <xs:annotation>
+      <xs:appinfo>
+        <nc1dico:source xmlns:nc1dico="urn:fra:nc1:dictionnaires">SFTT 3.4.8</nc1dico:source>
+        <nc1dico:derogation xmlns:nc1dico="urn:fra:nc1:dictionnaires">MATERIAU PRINCIPAL DE CONSTRUCTION</nc1dico:derogation>
+        <nc1ihm:description>DESIGNE LE MATERIAU PRINCIPAL D'UNE CONSTRUCTION POUR UNE INSTALLATION, UN OUVRAGE…
+DICO STAT 148</nc1ihm:description>
+        <nc1ihm:description xml:lang="en">Means the principal material of construction for installation, a work ... (STAT dictionary 148)</nc1ihm:description>
+      </xs:appinfo>
+      <xs:documentation>DESIGNE LE MATERIAU PRINCIPAL D'UNE CONSTRUCTION POUR UNE INSTALLATION, UN OUVRAGE…
+DICO STAT 148</xs:documentation>
+      <xs:documentation xml:lang="en">Means the principal material of construction for installation, a work ... (STAT dictionary 148)</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:integer" />
+  </xs:simpleType>
+  <xs:simpleType name="L110_39Code">
+    <xs:annotation>
+      <xs:appinfo>
+        <nc1dico:source xmlns:nc1dico="urn:fra:nc1:dictionnaires">SFTT 3.4.8</nc1dico:source>
+        <nc1dico:derogation xmlns:nc1dico="urn:fra:nc1:dictionnaires">TYPE DE DESCRIPTION TERRAIN</nc1dico:derogation>
+        <nc1ihm:description>DECRIT LE TYPE D'UNE DESCRIPTION TERRAIN QUI REPRESENTE LES ELEMENTS TOPOGRAPHIQUES CARACTERISTIQUES DU TERRAIN AYANT UNE SIGNIFICATION ET UN INTERET MILITAIRE FORT  (REFERENCE GEOSPATIAL SYMBOLS FOR DIGITAL DISPLAYS (GEOSYM) -  SPECIFICATION « MIL-PRF-89045 »)</nc1ihm:description>
+        <nc1ihm:description xml:lang="en">"Described the type of a description ground which represents one characteristic topographic element of the ground having a meaning and a strong military interest (Reference GEOSPATIAL DIGITAL SYMBOLS FOR DISPLAYS (GeoSym) - specification ""MIL-PRF-89045"")"</nc1ihm:description>
+      </xs:appinfo>
+      <xs:documentation>DECRIT LE TYPE D'UNE DESCRIPTION TERRAIN QUI REPRESENTE LES ELEMENTS TOPOGRAPHIQUES CARACTERISTIQUES DU TERRAIN AYANT UNE SIGNIFICATION ET UN INTERET MILITAIRE FORT  (REFERENCE GEOSPATIAL SYMBOLS FOR DIGITAL DISPLAYS (GEOSYM) -  SPECIFICATION « MIL-PRF-89045 »)</xs:documentation>
+      <xs:documentation xml:lang="en">"Described the type of a description ground which represents one characteristic topographic element of the ground having a meaning and a strong military interest (Reference GEOSPATIAL DIGITAL SYMBOLS FOR DISPLAYS (GeoSym) - specification ""MIL-PRF-89045"")"</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:integer" />
+  </xs:simpleType>
+  <xs:simpleType name="L110_40Code">
+    <xs:annotation>
+      <xs:appinfo>
+        <nc1dico:source xmlns:nc1dico="urn:fra:nc1:dictionnaires">SFTT 3.4.8</nc1dico:source>
+        <nc1dico:derogation xmlns:nc1dico="urn:fra:nc1:dictionnaires">NATURE D'OBSTACLE/OUVRAGE (LIST E)</nc1dico:derogation>
+        <nc1ihm:description>DECRIT LA NATURE D'UN OBSTACLE OU D'UN OUVRAGE EN REFERENCE A LA LIST_E DU STANAG 2430 (AENGRP-02(B) ). LE BIGRAMME ENTRE EN LIGNE DE COMPTE DANS LE NOMMAGE D'UN OBSTACLE.</nc1ihm:description>
+        <nc1ihm:description xml:lang="en">describe obstacle type or facilitiy type refering the STANAG 2430 (AENGRP-02(B) ) list. Bigram is used for the obsactle naming..</nc1ihm:description>
+      </xs:appinfo>
+      <xs:documentation>DECRIT LA NATURE D'UN OBSTACLE OU D'UN OUVRAGE EN REFERENCE A LA LIST_E DU STANAG 2430 (AENGRP-02(B) ). LE BIGRAMME ENTRE EN LIGNE DE COMPTE DANS LE NOMMAGE D'UN OBSTACLE.</xs:documentation>
+      <xs:documentation xml:lang="en">describe obstacle type or facilitiy type refering the STANAG 2430 (AENGRP-02(B) ) list. Bigram is used for the obsactle naming..</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:integer" />
+  </xs:simpleType>
+  <xs:simpleType name="L110_41Code">
+    <xs:annotation>
+      <xs:appinfo>
+        <nc1dico:source xmlns:nc1dico="urn:fra:nc1:dictionnaires">SFTT 3.4.8</nc1dico:source>
+        <nc1dico:derogation xmlns:nc1dico="urn:fra:nc1:dictionnaires">TYPE DU MOYEN DE FRANCHISSEMENT</nc1dico:derogation>
+        <nc1ihm:description>INDIQUE LE MOYEN UTILISE POUR FRANCHIR
+REF STAT 63</nc1ihm:description>
+        <nc1ihm:description xml:lang="en">Specify the means used to cross</nc1ihm:description>
+      </xs:appinfo>
+      <xs:documentation>INDIQUE LE MOYEN UTILISE POUR FRANCHIR
+REF STAT 63</xs:documentation>
+      <xs:documentation xml:lang="en">Specify the means used to cross</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:integer" />
+  </xs:simpleType>
+  <xs:simpleType name="L110_81Code">
+    <xs:annotation>
+      <xs:appinfo>
+        <nc1dico:source xmlns:nc1dico="urn:fra:nc1:dictionnaires">SFTT 3.4.8</nc1dico:source>
+        <nc1dico:derogation xmlns:nc1dico="urn:fra:nc1:dictionnaires">TYPE D'EQUIPEMENT AIR</nc1dico:derogation>
+        <nc1ihm:description>DECRIT LE TYPE D'EQUIPEMENT POUR UN PARTICIPANT AERIEN, ATTENTION CE DICTIONNAIRE EST FORTEMENT LIE AU DICTIONNAIRE L116/3</nc1ihm:description>
+        <nc1ihm:description xml:lang="en">Described the type of equipment for a participant ground, air or maritime, ATTENTION this dictionary is strongly bound to dictionaries L115 / 3 L116 L140</nc1ihm:description>
+      </xs:appinfo>
+      <xs:documentation>DECRIT LE TYPE D'EQUIPEMENT POUR UN PARTICIPANT AERIEN, ATTENTION CE DICTIONNAIRE EST FORTEMENT LIE AU DICTIONNAIRE L116/3</xs:documentation>
+      <xs:documentation xml:lang="en">Described the type of equipment for a participant ground, air or maritime, ATTENTION this dictionary is strongly bound to dictionaries L115 / 3 L116 L140</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:integer" />
+  </xs:simpleType>
+  <xs:simpleType name="L110_82Code">
+    <xs:annotation>
+      <xs:appinfo>
+        <nc1dico:source xmlns:nc1dico="urn:fra:nc1:dictionnaires">SFTT 3.4.8</nc1dico:source>
+        <nc1dico:derogation xmlns:nc1dico="urn:fra:nc1:dictionnaires">TYPE D'EQUIPEMENT MER</nc1dico:derogation>
+        <nc1ihm:description>DECRIT LE TYPE D'EQUIPEMENT POUR UN PARTICIPANT MARITIME, ATTENTION CE DICTIONNAIRE EST FORTEMENT LIE AU DICTIONNAIRE L140/3</nc1ihm:description>
+        <nc1ihm:description xml:lang="en">Described the type of equipment for a participant ground, air or maritime, ATTENTION this dictionary is strongly bound to dictionaries L115 / 3 L116 L140</nc1ihm:description>
+      </xs:appinfo>
+      <xs:documentation>DECRIT LE TYPE D'EQUIPEMENT POUR UN PARTICIPANT MARITIME, ATTENTION CE DICTIONNAIRE EST FORTEMENT LIE AU DICTIONNAIRE L140/3</xs:documentation>
+      <xs:documentation xml:lang="en">Described the type of equipment for a participant ground, air or maritime, ATTENTION this dictionary is strongly bound to dictionaries L115 / 3 L116 L140</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:integer" />
+  </xs:simpleType>
+  <xs:simpleType name="L110_83Code">
+    <xs:annotation>
+      <xs:appinfo>
+        <nc1dico:source xmlns:nc1dico="urn:fra:nc1:dictionnaires">SFTT 3.4.8</nc1dico:source>
+        <nc1dico:derogation xmlns:nc1dico="urn:fra:nc1:dictionnaires">TYPE D'EQUIPEMENT TERRE</nc1dico:derogation>
+        <nc1ihm:description>DECRIT LE TYPE D'EQUIPEMENT POUR UN PARTICIPANT TERRESTRE, ATTENTION CE DICTIONNAIRE EST FORTEMENT LIE AU DICTIONNAIRE L115/3</nc1ihm:description>
+        <nc1ihm:description xml:lang="en">Described the type of equipment for a participant ground, air or maritime, ATTENTION this dictionary is strongly bound to dictionaries L115 / 3 L116 L140</nc1ihm:description>
+      </xs:appinfo>
+      <xs:documentation>DECRIT LE TYPE D'EQUIPEMENT POUR UN PARTICIPANT TERRESTRE, ATTENTION CE DICTIONNAIRE EST FORTEMENT LIE AU DICTIONNAIRE L115/3</xs:documentation>
+      <xs:documentation xml:lang="en">Described the type of equipment for a participant ground, air or maritime, ATTENTION this dictionary is strongly bound to dictionaries L115 / 3 L116 L140</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:integer" />
+  </xs:simpleType>
+  <xs:simpleType name="L111_14Code">
+    <xs:annotation>
+      <xs:appinfo>
+        <nc1dico:source xmlns:nc1dico="urn:fra:nc1:dictionnaires">SFTT 3.4.8</nc1dico:source>
+        <nc1dico:derogation xmlns:nc1dico="urn:fra:nc1:dictionnaires">QUALIFIANT HORAIRE</nc1dico:derogation>
+        <nc1ihm:description>PERMET DE SPECIFIER UN QUALIFIANT HORAIRE EN COMPLEMENT D'UN GDH.
+REFERENCE DICO STAT 378 (REF ADATP-3 BL 11 1220/008).</nc1ihm:description>
+        <nc1ihm:description xml:lang="en">enable to specify a schedule qualifier in addition of a GDH.</nc1ihm:description>
+      </xs:appinfo>
+      <xs:documentation>PERMET DE SPECIFIER UN QUALIFIANT HORAIRE EN COMPLEMENT D'UN GDH.
+REFERENCE DICO STAT 378 (REF ADATP-3 BL 11 1220/008).</xs:documentation>
+      <xs:documentation xml:lang="en">enable to specify a schedule qualifier in addition of a GDH.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:integer" />
+  </xs:simpleType>
+  <xs:simpleType name="L112_10Code">
+    <xs:annotation>
+      <xs:appinfo>
+        <nc1dico:source xmlns:nc1dico="urn:fra:nc1:dictionnaires">SFTT 3.4.8</nc1dico:source>
+        <nc1dico:derogation xmlns:nc1dico="urn:fra:nc1:dictionnaires">GRADE</nc1dico:derogation>
+        <nc1ihm:description>INDIQUE LE GRADE D'UN INDIVIDUS MILITAIRE. REFERENCE DICO STAT 305.</nc1ihm:description>
+        <nc1ihm:description xml:lang="en">Indicates the rank of a military individuals (STAT dictionary 305).</nc1ihm:description>
+      </xs:appinfo>
+      <xs:documentation>INDIQUE LE GRADE D'UN INDIVIDUS MILITAIRE. REFERENCE DICO STAT 305.</xs:documentation>
+      <xs:documentation xml:lang="en">Indicates the rank of a military individuals (STAT dictionary 305).</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:integer" />
+  </xs:simpleType>
+  <xs:simpleType name="L112_11Code">
+    <xs:annotation>
+      <xs:appinfo>
+        <nc1dico:source xmlns:nc1dico="urn:fra:nc1:dictionnaires">SFTT 3.4.8</nc1dico:source>
+        <nc1dico:derogation xmlns:nc1dico="urn:fra:nc1:dictionnaires">SITUATION MARITALE</nc1dico:derogation>
+        <nc1ihm:description>INDIQUE UNE  SITUATION MARITALE POUR UN INDIVIDU.REFERENCE DICO OTM.</nc1ihm:description>
+        <nc1ihm:description xml:lang="en">Specify a marital situation for an individual.</nc1ihm:description>
+      </xs:appinfo>
+      <xs:documentation>INDIQUE UNE  SITUATION MARITALE POUR UN INDIVIDU.REFERENCE DICO OTM.</xs:documentation>
+      <xs:documentation xml:lang="en">Specify a marital situation for an individual.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:integer" />
+  </xs:simpleType>
+  <xs:simpleType name="L112_12Code">
+    <xs:annotation>
+      <xs:appinfo>
+        <nc1dico:source xmlns:nc1dico="urn:fra:nc1:dictionnaires">SFTT 3.4.8</nc1dico:source>
+        <nc1dico:derogation xmlns:nc1dico="urn:fra:nc1:dictionnaires">GENRE</nc1dico:derogation>
+        <nc1ihm:description>INDIQUE LE SEXE POUR UN INDIVIDU.REFERENCE DICO STAT 303.</nc1ihm:description>
+        <nc1ihm:description xml:lang="en">Indicates gender for an individual (STAT dictionary 303).</nc1ihm:description>
+      </xs:appinfo>
+      <xs:documentation>INDIQUE LE SEXE POUR UN INDIVIDU.REFERENCE DICO STAT 303.</xs:documentation>
+      <xs:documentation xml:lang="en">Indicates gender for an individual (STAT dictionary 303).</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:integer" />
+  </xs:simpleType>
+  <xs:simpleType name="L112_13Code">
+    <xs:annotation>
+      <xs:appinfo>
+        <nc1dico:source xmlns:nc1dico="urn:fra:nc1:dictionnaires">SFTT 3.4.8</nc1dico:source>
+        <nc1dico:derogation xmlns:nc1dico="urn:fra:nc1:dictionnaires">GROUPE SANGUIN</nc1dico:derogation>
+        <nc1ihm:description>INDIQUE LE GROUPE SANGUIN POUR UN INDIVIDU
+REFERENCE DICO STAT 302.</nc1ihm:description>
+        <nc1ihm:description xml:lang="en">Indicates the blood type for an individual (STAT dictionary 302).</nc1ihm:description>
+      </xs:appinfo>
+      <xs:documentation>INDIQUE LE GROUPE SANGUIN POUR UN INDIVIDU
+REFERENCE DICO STAT 302.</xs:documentation>
+      <xs:documentation xml:lang="en">Indicates the blood type for an individual (STAT dictionary 302).</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:integer" />
+  </xs:simpleType>
+  <xs:simpleType name="L112_15Code">
+    <xs:annotation>
+      <xs:appinfo>
+        <nc1dico:source xmlns:nc1dico="urn:fra:nc1:dictionnaires">SFTT 3.4.8</nc1dico:source>
+        <nc1dico:derogation xmlns:nc1dico="urn:fra:nc1:dictionnaires">COULEUR DES YEUX</nc1dico:derogation>
+        <nc1ihm:description>INDIQUE UNE COULEUR POUR LES YEUX D'UN INDIVIDU.</nc1ihm:description>
+        <nc1ihm:description xml:lang="en">Specify a colour for the eyes of an individual.</nc1ihm:description>
+      </xs:appinfo>
+      <xs:documentation>INDIQUE UNE COULEUR POUR LES YEUX D'UN INDIVIDU.</xs:documentation>
+      <xs:documentation xml:lang="en">Specify a colour for the eyes of an individual.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:integer" />
+  </xs:simpleType>
+  <xs:simpleType name="L112_16Code">
+    <xs:annotation>
+      <xs:appinfo>
+        <nc1dico:source xmlns:nc1dico="urn:fra:nc1:dictionnaires">SFTT 3.4.8</nc1dico:source>
+        <nc1dico:derogation xmlns:nc1dico="urn:fra:nc1:dictionnaires">COULEUR DE CHEVEUX</nc1dico:derogation>
+        <nc1ihm:description>INDIQUE UNE COULEUR DE CHEVEUX POUR UN INDIVIDU.</nc1ihm:description>
+        <nc1ihm:description xml:lang="en">Specify a hair colour for an individual.</nc1ihm:description>
+      </xs:appinfo>
+      <xs:documentation>INDIQUE UNE COULEUR DE CHEVEUX POUR UN INDIVIDU.</xs:documentation>
+      <xs:documentation xml:lang="en">Specify a hair colour for an individual.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:integer" />
+  </xs:simpleType>
+  <xs:simpleType name="L112_17Code">
+    <xs:annotation>
+      <xs:appinfo>
+        <nc1dico:source xmlns:nc1dico="urn:fra:nc1:dictionnaires">SFTT 3.4.8</nc1dico:source>
+        <nc1dico:derogation xmlns:nc1dico="urn:fra:nc1:dictionnaires">RELIGION</nc1dico:derogation>
+        <nc1ihm:description>INDIQUE UNE RELIGION
+REFERENCE DICO STAT 232</nc1ihm:description>
+        <nc1ihm:description xml:lang="en">Indicates a religion (STAT dictionary 232)</nc1ihm:description>
+      </xs:appinfo>
+      <xs:documentation>INDIQUE UNE RELIGION
+REFERENCE DICO STAT 232</xs:documentation>
+      <xs:documentation xml:lang="en">Indicates a religion (STAT dictionary 232)</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:integer" />
+  </xs:simpleType>
+  <xs:simpleType name="L112_1Code">
+    <xs:annotation>
+      <xs:appinfo>
+        <nc1dico:source xmlns:nc1dico="urn:fra:nc1:dictionnaires">SFTT 3.4.8</nc1dico:source>
+        <nc1dico:derogation xmlns:nc1dico="urn:fra:nc1:dictionnaires">CATEGORIE POUR LES INDIVIDUS</nc1dico:derogation>
+        <nc1ihm:description>INDIQUE UN TYPE DE CATEGORIE POUR LES INDIVIDUS. REFERENCE DICO STAT 304, 306 ET 186</nc1ihm:description>
+        <nc1ihm:description xml:lang="en">Indicates a type of category for individuals (STAT dictionaries 304, 306 and 186)</nc1ihm:description>
+      </xs:appinfo>
+      <xs:documentation>INDIQUE UN TYPE DE CATEGORIE POUR LES INDIVIDUS. REFERENCE DICO STAT 304, 306 ET 186</xs:documentation>
+      <xs:documentation xml:lang="en">Indicates a type of category for individuals (STAT dictionaries 304, 306 and 186)</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:integer" />
+  </xs:simpleType>
+  <xs:simpleType name="L112_20Code">
+    <xs:annotation>
+      <xs:appinfo>
+        <nc1dico:source xmlns:nc1dico="urn:fra:nc1:dictionnaires">SFTT 3.4.8</nc1dico:source>
+        <nc1dico:derogation xmlns:nc1dico="urn:fra:nc1:dictionnaires">SPECIALITE MEDICALE</nc1dico:derogation>
+        <nc1ihm:description>INDIQUE LA SPECIALITE MEDICALE D'UN PRATICIEN
+REFERENCE DICO STAT 233</nc1ihm:description>
+        <nc1ihm:description xml:lang="en">Specify the area of medical specialization of one patrician</nc1ihm:description>
+      </xs:appinfo>
+      <xs:documentation>INDIQUE LA SPECIALITE MEDICALE D'UN PRATICIEN
+REFERENCE DICO STAT 233</xs:documentation>
+      <xs:documentation xml:lang="en">Specify the area of medical specialization of one patrician</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:integer" />
+  </xs:simpleType>
+  <xs:simpleType name="L112_23Code">
+    <xs:annotation>
+      <xs:appinfo>
+        <nc1dico:source xmlns:nc1dico="urn:fra:nc1:dictionnaires">SFTT 3.4.8</nc1dico:source>
+        <nc1dico:derogation xmlns:nc1dico="urn:fra:nc1:dictionnaires">ETAT DE LA MISSION DE SANTE</nc1dico:derogation>
+        <nc1ihm:description>INDIQUE UNE CAPACITE A ASSURER LA MISSION MEDICALE 
+REFERENCE DICO STAT 232</nc1ihm:description>
+        <nc1ihm:description xml:lang="en">Shows an ability to fulfil the medical mission (STAT dictionary 232)</nc1ihm:description>
+      </xs:appinfo>
+      <xs:documentation>INDIQUE UNE CAPACITE A ASSURER LA MISSION MEDICALE 
+REFERENCE DICO STAT 232</xs:documentation>
+      <xs:documentation xml:lang="en">Shows an ability to fulfil the medical mission (STAT dictionary 232)</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:integer" />
+  </xs:simpleType>
+  <xs:simpleType name="L112_3Code">
+    <xs:annotation>
+      <xs:appinfo>
+        <nc1dico:source xmlns:nc1dico="urn:fra:nc1:dictionnaires">SFTT 3.4.8</nc1dico:source>
+        <nc1dico:derogation xmlns:nc1dico="urn:fra:nc1:dictionnaires">CATEGORIE GENERALE ET SOUS-CATEGORIE DE FONCTION MILITAIRE</nc1dico:derogation>
+        <nc1ihm:description>INDIQUE UNE CATEGORIE GENERALE ET UNE SOUS-CATEGORIE DE FONCTION MILITAIRE POUR UN INDIVIDU.REFERENCE DICO STAT 172 ET 306</nc1ihm:description>
+        <nc1ihm:description xml:lang="en">Indicates a general category and a military function subcategory for an individual (STAT dictionaries 172 and 306)</nc1ihm:description>
+      </xs:appinfo>
+      <xs:documentation>INDIQUE UNE CATEGORIE GENERALE ET UNE SOUS-CATEGORIE DE FONCTION MILITAIRE POUR UN INDIVIDU.REFERENCE DICO STAT 172 ET 306</xs:documentation>
+      <xs:documentation xml:lang="en">Indicates a general category and a military function subcategory for an individual (STAT dictionaries 172 and 306)</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:integer" />
+  </xs:simpleType>
+  <xs:simpleType name="L112_6Code">
+    <xs:annotation>
+      <xs:appinfo>
+        <nc1dico:source xmlns:nc1dico="urn:fra:nc1:dictionnaires">SFTT 3.4.8</nc1dico:source>
+        <nc1dico:derogation xmlns:nc1dico="urn:fra:nc1:dictionnaires">ATTITUDE INDIVIDU</nc1dico:derogation>
+        <nc1ihm:description>INDIQUE LL'ATTITUDE D'UN INDIVIDU, NOTAMMENT DANS LE CADRE D'UNE OBSERVATION
+(REPRESENTE L'EQUIVALENT DE L'ATTRIBUT ACTIVITE DES AUTRES PISTES)</nc1ihm:description>
+        <nc1ihm:description xml:lang="en">Indicates the behaviour of an individual, particularly in the context of an observation (is equivalent to the attribute ACTIVITY of the other tracks)</nc1ihm:description>
+      </xs:appinfo>
+      <xs:documentation>INDIQUE LL'ATTITUDE D'UN INDIVIDU, NOTAMMENT DANS LE CADRE D'UNE OBSERVATION
+(REPRESENTE L'EQUIVALENT DE L'ATTRIBUT ACTIVITE DES AUTRES PISTES)</xs:documentation>
+      <xs:documentation xml:lang="en">Indicates the behaviour of an individual, particularly in the context of an observation (is equivalent to the attribute ACTIVITY of the other tracks)</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:integer" />
+  </xs:simpleType>
+  <xs:simpleType name="L112_8Code">
+    <xs:annotation>
+      <xs:appinfo>
+        <nc1dico:source xmlns:nc1dico="urn:fra:nc1:dictionnaires">SFTT 3.4.8</nc1dico:source>
+        <nc1dico:derogation xmlns:nc1dico="urn:fra:nc1:dictionnaires">CATEGORIE GENERALE POUR LES (GROUPES) INDIVIDUS</nc1dico:derogation>
+        <nc1ihm:description>INDIQUE UN TYPE DE CATEGORIE GENERALE POUR LES (GROUPES) D'INDIVIDUS. 
+REFERENCE DICO STAT 71</nc1ihm:description>
+        <nc1ihm:description xml:lang="en">Indicates a type of general category for (groups) of individuals (STAT dictionary 71)</nc1ihm:description>
+      </xs:appinfo>
+      <xs:documentation>INDIQUE UN TYPE DE CATEGORIE GENERALE POUR LES (GROUPES) D'INDIVIDUS. 
+REFERENCE DICO STAT 71</xs:documentation>
+      <xs:documentation xml:lang="en">Indicates a type of general category for (groups) of individuals (STAT dictionary 71)</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:integer" />
+  </xs:simpleType>
+  <xs:simpleType name="L114_10Code">
+    <xs:annotation>
+      <xs:appinfo>
+        <nc1dico:source xmlns:nc1dico="urn:fra:nc1:dictionnaires">SFTT 3.4.8</nc1dico:source>
+        <nc1dico:derogation xmlns:nc1dico="urn:fra:nc1:dictionnaires">TEMPS DE PHASE D'UN OPORD</nc1dico:derogation>
+        <nc1ihm:description>DESIGNE LE TEMPS DANS LEQUEL S’INSCRIT LLA MISSION; CORRESPONDANT A UN TEMPS DE L’OPORD</nc1ihm:description>
+      </xs:appinfo>
+      <xs:documentation>DESIGNE LE TEMPS DANS LEQUEL S’INSCRIT LLA MISSION; CORRESPONDANT A UN TEMPS DE L’OPORD</xs:documentation>
+      <xs:documentation xml:lang="en"></xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:integer" />
+  </xs:simpleType>
+  <xs:simpleType name="L114_11Code">
+    <xs:annotation>
+      <xs:appinfo>
+        <nc1dico:source xmlns:nc1dico="urn:fra:nc1:dictionnaires">SFTT 3.4.8</nc1dico:source>
+        <nc1dico:derogation xmlns:nc1dico="urn:fra:nc1:dictionnaires">EFFET A OBTENIR POUR UNE MISSION</nc1dico:derogation>
+        <nc1ihm:description>DESIGNE LE TYPE D’EFFET A OBTENIR DANS LE CADRE D 'UNE MISSION</nc1ihm:description>
+        <nc1ihm:description xml:lang="en">Indicate(Appoint) the type(chap) of effect to be obtained within the framework of ' a mission</nc1ihm:description>
+      </xs:appinfo>
+      <xs:documentation>DESIGNE LE TYPE D’EFFET A OBTENIR DANS LE CADRE D 'UNE MISSION</xs:documentation>
+      <xs:documentation xml:lang="en">Indicate(Appoint) the type(chap) of effect to be obtained within the framework of ' a mission</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:integer" />
+  </xs:simpleType>
+  <xs:simpleType name="L114_12Code">
+    <xs:annotation>
+      <xs:appinfo>
+        <nc1dico:source xmlns:nc1dico="urn:fra:nc1:dictionnaires">SFTT 3.4.8</nc1dico:source>
+        <nc1dico:derogation xmlns:nc1dico="urn:fra:nc1:dictionnaires">GRAVITE RECHERCHEE SUR L'EFFET A OBTENIR POUR UNE MISSION</nc1dico:derogation>
+        <nc1ihm:description>DECRIT LE NIVEAU DE GRAVITE DE L’EFFET A OBTENIR DANS LE CADRE D'UNE MISSION</nc1ihm:description>
+        <nc1ihm:description xml:lang="en">Described the level of gravity of the effect to be obtained within the framework of a mission</nc1ihm:description>
+      </xs:appinfo>
+      <xs:documentation>DECRIT LE NIVEAU DE GRAVITE DE L’EFFET A OBTENIR DANS LE CADRE D'UNE MISSION</xs:documentation>
+      <xs:documentation xml:lang="en">Described the level of gravity of the effect to be obtained within the framework of a mission</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:integer" />
+  </xs:simpleType>
+  <xs:simpleType name="L114_13Code">
+    <xs:annotation>
+      <xs:appinfo>
+        <nc1dico:source xmlns:nc1dico="urn:fra:nc1:dictionnaires">SFTT 3.4.8</nc1dico:source>
+        <nc1dico:derogation xmlns:nc1dico="urn:fra:nc1:dictionnaires">PRIORITE DE MISSION</nc1dico:derogation>
+        <nc1ihm:description>DECRIT LA PRIORITE DONNEE A UNE MISSION
+DICO STAT21</nc1ihm:description>
+        <nc1ihm:description xml:lang="en">Described the priority given to a mission</nc1ihm:description>
+      </xs:appinfo>
+      <xs:documentation>DECRIT LA PRIORITE DONNEE A UNE MISSION
+DICO STAT21</xs:documentation>
+      <xs:documentation xml:lang="en">Described the priority given to a mission</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:integer" />
+  </xs:simpleType>
+  <xs:simpleType name="L114_14Code">
+    <xs:annotation>
+      <xs:appinfo>
+        <nc1dico:source xmlns:nc1dico="urn:fra:nc1:dictionnaires">SFTT 3.4.8</nc1dico:source>
+        <nc1dico:derogation xmlns:nc1dico="urn:fra:nc1:dictionnaires">PROBABILITE DE MISSION</nc1dico:derogation>
+        <nc1ihm:description>DECRIT LA PROBABILITE RELATIVE ASSOCIEE AU MODE D’ACTION DANS LE CAS D’UN MODE D’ACTION ENNEMI (ME)</nc1ihm:description>
+        <nc1ihm:description xml:lang="en">Described the relative probability associated with the mode of action in the case of an Enemy Mode of action (ME)</nc1ihm:description>
+      </xs:appinfo>
+      <xs:documentation>DECRIT LA PROBABILITE RELATIVE ASSOCIEE AU MODE D’ACTION DANS LE CAS D’UN MODE D’ACTION ENNEMI (ME)</xs:documentation>
+      <xs:documentation xml:lang="en">Described the relative probability associated with the mode of action in the case of an Enemy Mode of action (ME)</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:integer" />
+  </xs:simpleType>
+  <xs:simpleType name="L114_16Code">
+    <xs:annotation>
+      <xs:appinfo>
+        <nc1dico:source xmlns:nc1dico="urn:fra:nc1:dictionnaires">SFTT 3.4.8</nc1dico:source>
+        <nc1dico:derogation xmlns:nc1dico="urn:fra:nc1:dictionnaires">ETAT D'ACHEVEMENT</nc1dico:derogation>
+        <nc1ihm:description>PERMET DE QUALIFIER UN OBSTACLE. REFERENCE LIST_AC DU STANAG 2430.
+DICO STAT 118</nc1ihm:description>
+        <nc1ihm:description xml:lang="en">Used to describe an obstacle. LIST_AC reference STANAG 2430. (STAT dictionary 118)</nc1ihm:description>
+      </xs:appinfo>
+      <xs:documentation>PERMET DE QUALIFIER UN OBSTACLE. REFERENCE LIST_AC DU STANAG 2430.
+DICO STAT 118</xs:documentation>
+      <xs:documentation xml:lang="en">Used to describe an obstacle. LIST_AC reference STANAG 2430. (STAT dictionary 118)</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:integer" />
+  </xs:simpleType>
+  <xs:simpleType name="L114_17Code">
+    <xs:annotation>
+      <xs:appinfo>
+        <nc1dico:source xmlns:nc1dico="urn:fra:nc1:dictionnaires">SFTT 3.4.8</nc1dico:source>
+        <nc1dico:derogation xmlns:nc1dico="urn:fra:nc1:dictionnaires">PRIORITE OBJECTIF FEUX</nc1dico:derogation>
+        <nc1ihm:description>CLASSIFICATION DES PRIORITES DES OBJECTIFS DE TIR. SOURCE : ART 213 VERSION 2003</nc1ihm:description>
+        <nc1ihm:description xml:lang="en">Classification of the priorities of the objectives of shooting</nc1ihm:description>
+      </xs:appinfo>
+      <xs:documentation>CLASSIFICATION DES PRIORITES DES OBJECTIFS DE TIR. SOURCE : ART 213 VERSION 2003</xs:documentation>
+      <xs:documentation xml:lang="en">Classification of the priorities of the objectives of shooting</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:integer" />
+  </xs:simpleType>
+  <xs:simpleType name="L114_19Code">
+    <xs:annotation>
+      <xs:appinfo>
+        <nc1dico:source xmlns:nc1dico="urn:fra:nc1:dictionnaires">SFTT 3.4.8</nc1dico:source>
+        <nc1dico:derogation xmlns:nc1dico="urn:fra:nc1:dictionnaires">MOYEN D'ACQUISITION DE L'OBJECTIF FEUX</nc1dico:derogation>
+        <nc1ihm:description>MOYEN D'ACQUISITION D'UN OBJECTIF DE TIR
+SOURCE : STAT DICTIONNAIRE 342</nc1ihm:description>
+        <nc1ihm:description xml:lang="en">Source : STAT dictionary 342</nc1ihm:description>
+      </xs:appinfo>
+      <xs:documentation>MOYEN D'ACQUISITION D'UN OBJECTIF DE TIR
+SOURCE : STAT DICTIONNAIRE 342</xs:documentation>
+      <xs:documentation xml:lang="en">Source : STAT dictionary 342</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:integer" />
+  </xs:simpleType>
+  <xs:simpleType name="L114_1Code">
+    <xs:annotation>
+      <xs:appinfo>
+        <nc1dico:source xmlns:nc1dico="urn:fra:nc1:dictionnaires">SFTT 3.4.8</nc1dico:source>
+        <nc1dico:derogation xmlns:nc1dico="urn:fra:nc1:dictionnaires">CONSIGNES DE TIR (WCS AERIEN)</nc1dico:derogation>
+        <nc1ihm:description>DESCRIPTION DE L'ETAT DES CONSIGNES DE TIR EN VIGUEUR
+DICO STAT 287
+DESIGNEES DANS LE CADRE DE LA MESSAGERIE H SOUS L’APPELLATION WCS (WEAPON CONTROL STATUS).
+UTILISE POUR  ORDONNER L’APPLICATION D’UN WCS OU POUR RENDRE COMPTE DU WCS COURANT D’UNE UNITE.</nc1ihm:description>
+        <nc1ihm:description xml:lang="en">Description of the state of the instructions(deposits) of current shooting(firing) (dictionary STAT 287) Indicated(Appointed) within the framework of the messaging H under the naming WCS (Weapon Control Status). Used to order the application of a WCS or to report the common(current) WCS of a unity(unit).</nc1ihm:description>
+      </xs:appinfo>
+      <xs:documentation>DESCRIPTION DE L'ETAT DES CONSIGNES DE TIR EN VIGUEUR
+DICO STAT 287
+DESIGNEES DANS LE CADRE DE LA MESSAGERIE H SOUS L’APPELLATION WCS (WEAPON CONTROL STATUS).
+UTILISE POUR  ORDONNER L’APPLICATION D’UN WCS OU POUR RENDRE COMPTE DU WCS COURANT D’UNE UNITE.</xs:documentation>
+      <xs:documentation xml:lang="en">Description of the state of the instructions(deposits) of current shooting(firing) (dictionary STAT 287) Indicated(Appointed) within the framework of the messaging H under the naming WCS (Weapon Control Status). Used to order the application of a WCS or to report the common(current) WCS of a unity(unit).</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:integer" />
+  </xs:simpleType>
+  <xs:simpleType name="L114_20Code">
+    <xs:annotation>
+      <xs:appinfo>
+        <nc1dico:source xmlns:nc1dico="urn:fra:nc1:dictionnaires">SFTT 3.4.8</nc1dico:source>
+        <nc1dico:derogation xmlns:nc1dico="urn:fra:nc1:dictionnaires">TYPE D'OBJECTIF</nc1dico:derogation>
+        <nc1ihm:description>TYPE D'OBJECTIF DE TIR
+SOURCE : STAT DICTIONNAIRE 52</nc1ihm:description>
+        <nc1ihm:description xml:lang="en">Artillery goal type (Source: (STAT dictionary 52)</nc1ihm:description>
+      </xs:appinfo>
+      <xs:documentation>TYPE D'OBJECTIF DE TIR
+SOURCE : STAT DICTIONNAIRE 52</xs:documentation>
+      <xs:documentation xml:lang="en">Artillery goal type (Source: (STAT dictionary 52)</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:integer" />
+  </xs:simpleType>
+  <xs:simpleType name="L114_22Code">
+    <xs:annotation>
+      <xs:appinfo>
+        <nc1dico:source xmlns:nc1dico="urn:fra:nc1:dictionnaires">SFTT 3.4.8</nc1dico:source>
+        <nc1dico:derogation xmlns:nc1dico="urn:fra:nc1:dictionnaires">EFFET A OBTENIR SUR L'OBJECTIF</nc1dico:derogation>
+        <nc1ihm:description>TYPE D'EFFET TACTIQUE A OBTENIR SOUHAITE POUR UN TIR INDIRECT</nc1ihm:description>
+        <nc1ihm:description xml:lang="en">Effect to be obtained on objective</nc1ihm:description>
+      </xs:appinfo>
+      <xs:documentation>TYPE D'EFFET TACTIQUE A OBTENIR SOUHAITE POUR UN TIR INDIRECT</xs:documentation>
+      <xs:documentation xml:lang="en">Effect to be obtained on objective</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:integer" />
+  </xs:simpleType>
+  <xs:simpleType name="L114_23Code">
+    <xs:annotation>
+      <xs:appinfo>
+        <nc1dico:source xmlns:nc1dico="urn:fra:nc1:dictionnaires">SFTT 3.4.8</nc1dico:source>
+        <nc1dico:derogation xmlns:nc1dico="urn:fra:nc1:dictionnaires">ATTITUDE</nc1dico:derogation>
+        <nc1ihm:description>TYPE D'ATTITUDE (MOBILITE) DE PERSONNEL</nc1ihm:description>
+        <nc1ihm:description xml:lang="en">Attitude</nc1ihm:description>
+      </xs:appinfo>
+      <xs:documentation>TYPE D'ATTITUDE (MOBILITE) DE PERSONNEL</xs:documentation>
+      <xs:documentation xml:lang="en">Attitude</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:integer" />
+  </xs:simpleType>
+  <xs:simpleType name="L114_24Code">
+    <xs:annotation>
+      <xs:appinfo>
+        <nc1dico:source xmlns:nc1dico="urn:fra:nc1:dictionnaires">SFTT 3.4.8</nc1dico:source>
+        <nc1dico:derogation xmlns:nc1dico="urn:fra:nc1:dictionnaires">POSTURE DE PROTECTION DU PERSONNEL</nc1dico:derogation>
+        <nc1ihm:description>TYPE DE POSTURE DE PERSONNEL
+STAT DICTIONNAIRE 396</nc1ihm:description>
+        <nc1ihm:description xml:lang="en">Protective Posture (STAT dictionary 396)</nc1ihm:description>
+      </xs:appinfo>
+      <xs:documentation>TYPE DE POSTURE DE PERSONNEL
+STAT DICTIONNAIRE 396</xs:documentation>
+      <xs:documentation xml:lang="en">Protective Posture (STAT dictionary 396)</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:integer" />
+  </xs:simpleType>
+  <xs:simpleType name="L114_27Code">
+    <xs:annotation>
+      <xs:appinfo>
+        <nc1dico:source xmlns:nc1dico="urn:fra:nc1:dictionnaires">SFTT 3.4.8</nc1dico:source>
+        <nc1dico:derogation xmlns:nc1dico="urn:fra:nc1:dictionnaires">VALIDATION EXECUTANT DE LA DIRECTIVE OU DEMANDE DE TIR</nc1dico:derogation>
+        <nc1ihm:description>VALIDATION DE LA DIRECTIVE DU TIR (ACCORDE/REFUSE) OU REFUS TECHNIQUE D'UNE DEMANDE (EX: DOUBLON)</nc1ihm:description>
+        <nc1ihm:description xml:lang="en">VALIDATION OF THE FIRE DIRECTIVE (GRANTED / REFUSED) OR TECHNICAL REFUSAL OF A REQUEST (EX: DUPLICATE)</nc1ihm:description>
+      </xs:appinfo>
+      <xs:documentation>VALIDATION DE LA DIRECTIVE DU TIR (ACCORDE/REFUSE) OU REFUS TECHNIQUE D'UNE DEMANDE (EX: DOUBLON)</xs:documentation>
+      <xs:documentation xml:lang="en">VALIDATION OF THE FIRE DIRECTIVE (GRANTED / REFUSED) OR TECHNICAL REFUSAL OF A REQUEST (EX: DUPLICATE)</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:integer" />
+  </xs:simpleType>
+  <xs:simpleType name="L114_29Code">
+    <xs:annotation>
+      <xs:appinfo>
+        <nc1dico:source xmlns:nc1dico="urn:fra:nc1:dictionnaires">SFTT 3.4.8</nc1dico:source>
+        <nc1dico:derogation xmlns:nc1dico="urn:fra:nc1:dictionnaires">PRIORITE DE TIR</nc1dico:derogation>
+        <nc1ihm:description>PRIORITE D'UNE DEMANDE DE TIR POUR UN APPUI INDIRECT</nc1ihm:description>
+        <nc1ihm:description xml:lang="en">Priority of firing (NC1)</nc1ihm:description>
+      </xs:appinfo>
+      <xs:documentation>PRIORITE D'UNE DEMANDE DE TIR POUR UN APPUI INDIRECT</xs:documentation>
+      <xs:documentation xml:lang="en">Priority of firing (NC1)</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:integer" />
+  </xs:simpleType>
+  <xs:simpleType name="L114_30Code">
+    <xs:annotation>
+      <xs:appinfo>
+        <nc1dico:source xmlns:nc1dico="urn:fra:nc1:dictionnaires">SFTT 3.4.8</nc1dico:source>
+        <nc1dico:derogation xmlns:nc1dico="urn:fra:nc1:dictionnaires">TYPE DE DIRECTIVE DE TIR</nc1dico:derogation>
+        <nc1ihm:description>TYPE DE DIRECTIVE DE TIR INDIRECT</nc1ihm:description>
+        <nc1ihm:description xml:lang="en">NC1 Fire command type</nc1ihm:description>
+      </xs:appinfo>
+      <xs:documentation>TYPE DE DIRECTIVE DE TIR INDIRECT</xs:documentation>
+      <xs:documentation xml:lang="en">NC1 Fire command type</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:integer" />
+  </xs:simpleType>
+  <xs:simpleType name="L114_32Code">
+    <xs:annotation>
+      <xs:appinfo>
+        <nc1dico:source xmlns:nc1dico="urn:fra:nc1:dictionnaires">SFTT 3.4.8</nc1dico:source>
+        <nc1dico:derogation xmlns:nc1dico="urn:fra:nc1:dictionnaires">METHODE DE CONTROLE</nc1dico:derogation>
+        <nc1ihm:description>METHODE DE CONTROLE D'UN TIR INDIRECT</nc1ihm:description>
+        <nc1ihm:description xml:lang="en">NC1 control method</nc1ihm:description>
+      </xs:appinfo>
+      <xs:documentation>METHODE DE CONTROLE D'UN TIR INDIRECT</xs:documentation>
+      <xs:documentation xml:lang="en">NC1 control method</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:integer" />
+  </xs:simpleType>
+  <xs:simpleType name="L114_33Code">
+    <xs:annotation>
+      <xs:appinfo>
+        <nc1dico:source xmlns:nc1dico="urn:fra:nc1:dictionnaires">SFTT 3.4.8</nc1dico:source>
+        <nc1dico:derogation xmlns:nc1dico="urn:fra:nc1:dictionnaires">TYPE DE TRAJECTOIRE</nc1dico:derogation>
+        <nc1ihm:description>TYPE DE TRAJECTOIRE D'UN TIR INDIRECT</nc1ihm:description>
+        <nc1ihm:description xml:lang="en">NC1 Trajectory type</nc1ihm:description>
+      </xs:appinfo>
+      <xs:documentation>TYPE DE TRAJECTOIRE D'UN TIR INDIRECT</xs:documentation>
+      <xs:documentation xml:lang="en">NC1 Trajectory type</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:integer" />
+  </xs:simpleType>
+  <xs:simpleType name="L114_36Code">
+    <xs:annotation>
+      <xs:appinfo>
+        <nc1dico:source xmlns:nc1dico="urn:fra:nc1:dictionnaires">SFTT 3.4.8</nc1dico:source>
+        <nc1dico:derogation xmlns:nc1dico="urn:fra:nc1:dictionnaires">ETAT DU TIR</nc1dico:derogation>
+        <nc1ihm:description>ETAT D'UN TIR DE LA DEMANDE A LA REALISATION</nc1ihm:description>
+        <nc1ihm:description xml:lang="en">NC1 fire status</nc1ihm:description>
+      </xs:appinfo>
+      <xs:documentation>ETAT D'UN TIR DE LA DEMANDE A LA REALISATION</xs:documentation>
+      <xs:documentation xml:lang="en">NC1 fire status</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:integer" />
+  </xs:simpleType>
+  <xs:simpleType name="L114_37Code">
+    <xs:annotation>
+      <xs:appinfo>
+        <nc1dico:source xmlns:nc1dico="urn:fra:nc1:dictionnaires">SFTT 3.4.8</nc1dico:source>
+        <nc1dico:derogation xmlns:nc1dico="urn:fra:nc1:dictionnaires">DOMMAGES</nc1dico:derogation>
+        <nc1ihm:description>DOMMAGES CAUSES PAR LE TIR. VALEURS NC1</nc1ihm:description>
+        <nc1ihm:description xml:lang="en">Damage caused by the firing</nc1ihm:description>
+      </xs:appinfo>
+      <xs:documentation>DOMMAGES CAUSES PAR LE TIR. VALEURS NC1</xs:documentation>
+      <xs:documentation xml:lang="en">Damage caused by the firing</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:integer" />
+  </xs:simpleType>
+  <xs:simpleType name="L114_38Code">
+    <xs:annotation>
+      <xs:appinfo>
+        <nc1dico:source xmlns:nc1dico="urn:fra:nc1:dictionnaires">SFTT 3.4.8</nc1dico:source>
+        <nc1dico:derogation xmlns:nc1dico="urn:fra:nc1:dictionnaires">EFFET MUNITIONS</nc1dico:derogation>
+        <nc1ihm:description>EXCLUSIF DE EFFET A OBTENIR SUIVANT LE TYPE DE MUNITIONS</nc1ihm:description>
+        <nc1ihm:description xml:lang="en">Exclusive of effect to be obtained</nc1ihm:description>
+      </xs:appinfo>
+      <xs:documentation>EXCLUSIF DE EFFET A OBTENIR SUIVANT LE TYPE DE MUNITIONS</xs:documentation>
+      <xs:documentation xml:lang="en">Exclusive of effect to be obtained</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:integer" />
+  </xs:simpleType>
+  <xs:simpleType name="L114_39Code">
+    <xs:annotation>
+      <xs:appinfo>
+        <nc1dico:source xmlns:nc1dico="urn:fra:nc1:dictionnaires">SFTT 3.4.8</nc1dico:source>
+        <nc1dico:derogation xmlns:nc1dico="urn:fra:nc1:dictionnaires">MODE DE DECLENCHEMENT MUNITIONS</nc1dico:derogation>
+        <nc1ihm:description>MODE QUI PERMET DE STIPULER LE RETARD SOUHAITE POUR L'EXPLOSION DE LA MUNITION</nc1ihm:description>
+        <nc1ihm:description xml:lang="en">Method of release ammunitions</nc1ihm:description>
+      </xs:appinfo>
+      <xs:documentation>MODE QUI PERMET DE STIPULER LE RETARD SOUHAITE POUR L'EXPLOSION DE LA MUNITION</xs:documentation>
+      <xs:documentation xml:lang="en">Method of release ammunitions</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:integer" />
+  </xs:simpleType>
+  <xs:simpleType name="L114_6Code">
+    <xs:annotation>
+      <xs:appinfo>
+        <nc1dico:source xmlns:nc1dico="urn:fra:nc1:dictionnaires">SFTT V3.4.4</nc1dico:source>
+        <nc1ihm:description>Intitulé de type d'action tactique pour le combat.</nc1ihm:description>
+        <nc1ihm:description xml:lang="en">Title of type of action task for the combat.</nc1ihm:description>
+      </xs:appinfo>
+      <xs:documentation>Intitulé de type d'action tactique pour le combat.</xs:documentation>
+      <xs:documentation xml:lang="en">Title of type of action task for the combat.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:integer" />
+  </xs:simpleType>
+  <xs:simpleType name="L114_8Code">
+    <xs:annotation>
+      <xs:appinfo>
+        <nc1dico:source xmlns:nc1dico="urn:fra:nc1:dictionnaires">SFTT 3.4.8</nc1dico:source>
+        <nc1dico:derogation xmlns:nc1dico="urn:fra:nc1:dictionnaires">TYPE MISSION APPUI FEUX</nc1dico:derogation>
+        <nc1ihm:description>INTITULE DE TYPE DE MISSION TACTIQUE POUR LES FEUX</nc1ihm:description>
+        <nc1ihm:description xml:lang="en">Title of type of tactical mission for Fires</nc1ihm:description>
+      </xs:appinfo>
+      <xs:documentation>INTITULE DE TYPE DE MISSION TACTIQUE POUR LES FEUX</xs:documentation>
+      <xs:documentation xml:lang="en">Title of type of tactical mission for Fires</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:integer" />
+  </xs:simpleType>
+  <xs:simpleType name="L114_9Code">
+    <xs:annotation>
+      <xs:appinfo>
+        <nc1dico:source xmlns:nc1dico="urn:fra:nc1:dictionnaires">SFTT 3.4.8</nc1dico:source>
+        <nc1dico:derogation xmlns:nc1dico="urn:fra:nc1:dictionnaires">CATEGORIE DE MISSION</nc1dico:derogation>
+        <nc1ihm:description>DESIGNE LA CATEGORIE METIER DE LA MISSION</nc1ihm:description>
+        <nc1ihm:description xml:lang="en">Indicate the category job by the mission</nc1ihm:description>
+      </xs:appinfo>
+      <xs:documentation>DESIGNE LA CATEGORIE METIER DE LA MISSION</xs:documentation>
+      <xs:documentation xml:lang="en">Indicate the category job by the mission</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:integer" />
+  </xs:simpleType>
+  <xs:simpleType name="L115_1Code">
+    <xs:annotation>
+      <xs:appinfo>
+        <nc1dico:source xmlns:nc1dico="urn:fra:nc1:dictionnaires">SFTT 3.4.8</nc1dico:source>
+        <nc1dico:derogation xmlns:nc1dico="urn:fra:nc1:dictionnaires">ACTIVITES PLATE-FORME TERRESTRE, AERIENNE OU MARITIME</nc1dico:derogation>
+        <nc1ihm:description>PERMET DE DEFINIR L'ACTIVITE GENERALE D'UNE PLATE-FORME TERRESTRE, AERIENNE OU MARITIME</nc1ihm:description>
+        <nc1ihm:description xml:lang="en">Ground, air or maritime platform general activity</nc1ihm:description>
+      </xs:appinfo>
+      <xs:documentation>PERMET DE DEFINIR L'ACTIVITE GENERALE D'UNE PLATE-FORME TERRESTRE, AERIENNE OU MARITIME</xs:documentation>
+      <xs:documentation xml:lang="en">Ground, air or maritime platform general activity</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:integer" />
+  </xs:simpleType>
+  <xs:simpleType name="L115_2Code">
+    <xs:annotation>
+      <xs:appinfo>
+        <nc1dico:source xmlns:nc1dico="urn:fra:nc1:dictionnaires">SFTT 3.4.8</nc1dico:source>
+        <nc1dico:derogation xmlns:nc1dico="urn:fra:nc1:dictionnaires">TYPE GENERAL PLATE-FORME TERRESTRE</nc1dico:derogation>
+        <nc1ihm:description>PERMET DE DEFINIR LE TYPE GENERAL D'UNE PLATE-FORME TERRESTRE.</nc1ihm:description>
+        <nc1ihm:description xml:lang="en">Ground track general type.</nc1ihm:description>
+      </xs:appinfo>
+      <xs:documentation>PERMET DE DEFINIR LE TYPE GENERAL D'UNE PLATE-FORME TERRESTRE.</xs:documentation>
+      <xs:documentation xml:lang="en">Ground track general type.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:integer" />
+  </xs:simpleType>
+  <xs:simpleType name="L115_3Code">
+    <xs:annotation>
+      <xs:appinfo>
+        <nc1dico:source xmlns:nc1dico="urn:fra:nc1:dictionnaires">SFTT 3.4.8</nc1dico:source>
+        <nc1dico:derogation xmlns:nc1dico="urn:fra:nc1:dictionnaires">TYPE SPECIFIQUE PLATE-FORME TERRESTRE</nc1dico:derogation>
+        <nc1ihm:description>PERMET DE DEFINIR LE TYPE SPECIFIQUE D'UNE PLATE-FORME TERRESTRE.</nc1ihm:description>
+        <nc1ihm:description xml:lang="en">Air track specific type.</nc1ihm:description>
+      </xs:appinfo>
+      <xs:documentation>PERMET DE DEFINIR LE TYPE SPECIFIQUE D'UNE PLATE-FORME TERRESTRE.</xs:documentation>
+      <xs:documentation xml:lang="en">Air track specific type.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:integer" />
+  </xs:simpleType>
+  <xs:simpleType name="L116_1Code">
+    <xs:annotation>
+      <xs:appinfo>
+        <nc1dico:source xmlns:nc1dico="urn:fra:nc1:dictionnaires">SFTT 3.4.8</nc1dico:source>
+        <nc1dico:derogation xmlns:nc1dico="urn:fra:nc1:dictionnaires">ACTIVITES PLATE-FORME TERRESTRE, AERIENNE OU MARITIME</nc1dico:derogation>
+        <nc1ihm:description>PERMET DE DEFINIR L'ACTIVITE GENERALE D'UNE PLATE-FORME TERRESTRE, AERIENNE OU MARITIME</nc1ihm:description>
+        <nc1ihm:description xml:lang="en">Ground, air or maritime platform general activity</nc1ihm:description>
+      </xs:appinfo>
+      <xs:documentation>PERMET DE DEFINIR L'ACTIVITE GENERALE D'UNE PLATE-FORME TERRESTRE, AERIENNE OU MARITIME</xs:documentation>
+      <xs:documentation xml:lang="en">Ground, air or maritime platform general activity</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:integer" />
+  </xs:simpleType>
+  <xs:simpleType name="L116_2Code">
+    <xs:annotation>
+      <xs:appinfo>
+        <nc1dico:source xmlns:nc1dico="urn:fra:nc1:dictionnaires">SFTT 3.4.8</nc1dico:source>
+        <nc1dico:derogation xmlns:nc1dico="urn:fra:nc1:dictionnaires">TYPE GENERAL PLATE-FORME AIR</nc1dico:derogation>
+        <nc1ihm:description>PERMET DE DEFINIR LE TYPE GENERAL D'UNE PLATE-FORME AIR.</nc1ihm:description>
+        <nc1ihm:description xml:lang="en">Air track general type.</nc1ihm:description>
+      </xs:appinfo>
+      <xs:documentation>PERMET DE DEFINIR LE TYPE GENERAL D'UNE PLATE-FORME AIR.</xs:documentation>
+      <xs:documentation xml:lang="en">Air track general type.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:integer" />
+  </xs:simpleType>
+  <xs:simpleType name="L116_3Code">
+    <xs:annotation>
+      <xs:appinfo>
+        <nc1dico:source xmlns:nc1dico="urn:fra:nc1:dictionnaires">SFTT 3.4.8</nc1dico:source>
+        <nc1dico:derogation xmlns:nc1dico="urn:fra:nc1:dictionnaires">TYPE SPECIFIQUE PLATE-FORME AIR</nc1dico:derogation>
+        <nc1ihm:description>PERMET DE DEFINIR LE TYPE SPECIFIQUE D'UNE PLATE-FORME AIR.
+NB : CONTIENT TOUTES LES VALEURS DU DICTIONNAIRE L116/2 « TYPE GENERAL PLATE-FORME AIR ». LA CORRESPONDANCE AVEC CE DICO EST INDIQUEE EN COLONNE 'L116_2'</nc1ihm:description>
+        <nc1ihm:description xml:lang="en">Air track specific type.</nc1ihm:description>
+      </xs:appinfo>
+      <xs:documentation>PERMET DE DEFINIR LE TYPE SPECIFIQUE D'UNE PLATE-FORME AIR.
+NB : CONTIENT TOUTES LES VALEURS DU DICTIONNAIRE L116/2 « TYPE GENERAL PLATE-FORME AIR ». LA CORRESPONDANCE AVEC CE DICO EST INDIQUEE EN COLONNE 'L116_2'</xs:documentation>
+      <xs:documentation xml:lang="en">Air track specific type.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:integer" />
+  </xs:simpleType>
+  <xs:simpleType name="L117_5Code">
+    <xs:annotation>
+      <xs:appinfo>
+        <nc1dico:source xmlns:nc1dico="urn:fra:nc1:dictionnaires">SFTT 3.4.8</nc1dico:source>
+        <nc1dico:derogation xmlns:nc1dico="urn:fra:nc1:dictionnaires">QUALITE (1 BIT)</nc1dico:derogation>
+        <nc1ihm:description>CE CHAMP PERMET D’INDIQUER LA QUALITE DES INFORMATIONS TRANSMISES SUR LA POSITION D'UNE ENTITE TACTIQUE. LA QUALITE  EST FONCTION DE SA SOURCE DE DETECTION. ELLE PEUT ETRE SOIT REELLE (LA POSITION EST CONNUE PRECISEMENT) SOIT ESTIMEE (ELLE EST APPROXIMATIVE ET NON DETERMINISTE). ELLE SE COMBINE A L'INFORMATION DE STATUS (PRESENT, PLANIFIE) POUR LA VALEUR PRESENT EN AJOUTANT UNE PRECISION SUR LA JUSTESSE DE L'INFORMATION DE POSITION.</nc1ihm:description>
+        <nc1ihm:description xml:lang="en">Allows to define a binary quality level: real location (measured by BFT) or estimated otherwise.</nc1ihm:description>
+      </xs:appinfo>
+      <xs:documentation>CE CHAMP PERMET D’INDIQUER LA QUALITE DES INFORMATIONS TRANSMISES SUR LA POSITION D'UNE ENTITE TACTIQUE. LA QUALITE  EST FONCTION DE SA SOURCE DE DETECTION. ELLE PEUT ETRE SOIT REELLE (LA POSITION EST CONNUE PRECISEMENT) SOIT ESTIMEE (ELLE EST APPROXIMATIVE ET NON DETERMINISTE). ELLE SE COMBINE A L'INFORMATION DE STATUS (PRESENT, PLANIFIE) POUR LA VALEUR PRESENT EN AJOUTANT UNE PRECISION SUR LA JUSTESSE DE L'INFORMATION DE POSITION.</xs:documentation>
+      <xs:documentation xml:lang="en">Allows to define a binary quality level: real location (measured by BFT) or estimated otherwise.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:integer" />
+  </xs:simpleType>
+  <xs:simpleType name="L121_1Code">
+    <xs:annotation>
+      <xs:appinfo>
+        <nc1dico:source xmlns:nc1dico="urn:fra:nc1:dictionnaires">SFTT 3.4.8</nc1dico:source>
+        <nc1dico:derogation xmlns:nc1dico="urn:fra:nc1:dictionnaires">VITESSE TERRE</nc1dico:derogation>
+        <nc1ihm:description>VITESSE APPROXIMATIVE DE REFERENCE AU SOL</nc1ihm:description>
+        <nc1ihm:description xml:lang="en">APPROXIMATE GROUND SPEED REFERENCE</nc1ihm:description>
+      </xs:appinfo>
+      <xs:documentation>VITESSE APPROXIMATIVE DE REFERENCE AU SOL</xs:documentation>
+      <xs:documentation xml:lang="en">APPROXIMATE GROUND SPEED REFERENCE</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:integer" />
+  </xs:simpleType>
+  <xs:simpleType name="L125_16Code">
+    <xs:annotation>
+      <xs:appinfo>
+        <nc1dico:source xmlns:nc1dico="urn:fra:nc1:dictionnaires">SFTT 3.4.8</nc1dico:source>
+        <nc1dico:derogation xmlns:nc1dico="urn:fra:nc1:dictionnaires">ETAT FATIGUE PERSONNELS</nc1dico:derogation>
+        <nc1ihm:description>DESCRIPTION DE L'ETAT DE FATIGUE DE PERSONNELS APPARTENANT A UNE UNITE DANS LE CADRE D'EVALUER SON POTENTIEL AU COMBAT.</nc1ihm:description>
+        <nc1ihm:description xml:lang="en">Description of the state of fatigue of staffs belonging to a unit to estimate its potential at the combat.</nc1ihm:description>
+      </xs:appinfo>
+      <xs:documentation>DESCRIPTION DE L'ETAT DE FATIGUE DE PERSONNELS APPARTENANT A UNE UNITE DANS LE CADRE D'EVALUER SON POTENTIEL AU COMBAT.</xs:documentation>
+      <xs:documentation xml:lang="en">Description of the state of fatigue of staffs belonging to a unit to estimate its potential at the combat.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:integer" />
+  </xs:simpleType>
+  <xs:simpleType name="L125_17Code">
+    <xs:annotation>
+      <xs:appinfo>
+        <nc1dico:source xmlns:nc1dico="urn:fra:nc1:dictionnaires">SFTT 3.4.8</nc1dico:source>
+        <nc1dico:derogation xmlns:nc1dico="urn:fra:nc1:dictionnaires">CAPAOPS MATERIEL/ARMEMENT/MUNITIONS/CARBURANT/EFFECTIF</nc1dico:derogation>
+        <nc1ihm:description>PERMET DE DEFINIR UN NIVEAU DE CAPACITE OPERATIONNEL DANS LE DOMAINE DES EFFECTIFS, DES MATERIELS, DES RESSOURCES OU SUR LE PLAN GLOBAL. IL S'AGIT D'UN NIVEAU DE CAPACITE EXPRIME EN POURCENTAGE DE &lt;60% A &gt;90 D'UNE UNITE DANS LE BUT D'EVALUER SA CAPAOPS.</nc1ihm:description>
+        <nc1ihm:description xml:lang="en">Description of the potential of armament / ammunitions / foods / fuel of a unit to estimate its CAPAOPS.</nc1ihm:description>
+      </xs:appinfo>
+      <xs:documentation>PERMET DE DEFINIR UN NIVEAU DE CAPACITE OPERATIONNEL DANS LE DOMAINE DES EFFECTIFS, DES MATERIELS, DES RESSOURCES OU SUR LE PLAN GLOBAL. IL S'AGIT D'UN NIVEAU DE CAPACITE EXPRIME EN POURCENTAGE DE &lt;60% A &gt;90 D'UNE UNITE DANS LE BUT D'EVALUER SA CAPAOPS.</xs:documentation>
+      <xs:documentation xml:lang="en">Description of the potential of armament / ammunitions / foods / fuel of a unit to estimate its CAPAOPS.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:integer" />
+  </xs:simpleType>
+  <xs:simpleType name="L125_18Code">
+    <xs:annotation>
+      <xs:appinfo>
+        <nc1dico:source xmlns:nc1dico="urn:fra:nc1:dictionnaires">SFTT 3.4.8</nc1dico:source>
+        <nc1dico:derogation xmlns:nc1dico="urn:fra:nc1:dictionnaires">COMPTE RENDU ACTION TACTIQUE</nc1dico:derogation>
+        <nc1ihm:description>DESCRIPTION DE L'ETAT D'AVANCEMENT D'UNE TACHE.
+REFERENCE DICO STAT 25.</nc1ihm:description>
+        <nc1ihm:description xml:lang="en">Description of the progress of a task. | Reference dictionnary STAT25.</nc1ihm:description>
+      </xs:appinfo>
+      <xs:documentation>DESCRIPTION DE L'ETAT D'AVANCEMENT D'UNE TACHE.
+REFERENCE DICO STAT 25.</xs:documentation>
+      <xs:documentation xml:lang="en">Description of the progress of a task. | Reference dictionnary STAT25.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:integer" />
+  </xs:simpleType>
+  <xs:simpleType name="L125_19Code">
+    <xs:annotation>
+      <xs:appinfo>
+        <nc1dico:source xmlns:nc1dico="urn:fra:nc1:dictionnaires">SFTT 3.4.8</nc1dico:source>
+        <nc1dico:derogation xmlns:nc1dico="urn:fra:nc1:dictionnaires">QUALIFIANT DE FIN ACTIVATION</nc1dico:derogation>
+        <nc1ihm:description>PERMET DE QUALIFIER LE MODE DE FIN D'ACTIVATION POUR UNE MINE.</nc1ihm:description>
+        <nc1ihm:description xml:lang="en">Qualify the mode of THE END OF ACTIVATION for a mine.</nc1ihm:description>
+      </xs:appinfo>
+      <xs:documentation>PERMET DE QUALIFIER LE MODE DE FIN D'ACTIVATION POUR UNE MINE.</xs:documentation>
+      <xs:documentation xml:lang="en">Qualify the mode of THE END OF ACTIVATION for a mine.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:integer" />
+  </xs:simpleType>
+  <xs:simpleType name="L125_1Code">
+    <xs:annotation>
+      <xs:appinfo>
+        <nc1dico:source xmlns:nc1dico="urn:fra:nc1:dictionnaires">SFTT 3.4.8</nc1dico:source>
+        <nc1dico:derogation xmlns:nc1dico="urn:fra:nc1:dictionnaires">INDICATEUR D’ETAT OPERATIONNEL</nc1dico:derogation>
+        <nc1ihm:description>QUALIFICATION DE L'ETAT OPERATIONNEL D'UNE UNITE, D'UNE INSTALLATION ETC. CORRESPOND AU DICTIONNAIRE COMBATEFFECTIVENESS DE L'ADATP3.</nc1ihm:description>
+        <nc1ihm:description xml:lang="en">Shortened qualification (with respect to dictionary L125/20) of the operational status of a unit, a facility, .. etc.</nc1ihm:description>
+      </xs:appinfo>
+      <xs:documentation>QUALIFICATION DE L'ETAT OPERATIONNEL D'UNE UNITE, D'UNE INSTALLATION ETC. CORRESPOND AU DICTIONNAIRE COMBATEFFECTIVENESS DE L'ADATP3.</xs:documentation>
+      <xs:documentation xml:lang="en">Shortened qualification (with respect to dictionary L125/20) of the operational status of a unit, a facility, .. etc.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:integer" />
+  </xs:simpleType>
+  <xs:simpleType name="L125_20Code">
+    <xs:annotation>
+      <xs:appinfo>
+        <nc1dico:source xmlns:nc1dico="urn:fra:nc1:dictionnaires">SFTT v3.4.7</nc1dico:source>
+        <nc1dico:derogation xmlns:nc1dico="urn:fra:nc1:dictionnaires">ETAT OPERATIONNEL</nc1dico:derogation>
+        <nc1ihm:description>QUALIFICATION DE L'ETAT OPERATIONNEL D'UNE UNITE, D'UNE INSTALLATION ETC...
+DICO STAT 289</nc1ihm:description>
+        <nc1ihm:description xml:lang="en">Qualification (with respect to dictionary L125/20) of the operational status of a unit, a facility, .. etc. (STAT dictionary 289)</nc1ihm:description>
+      </xs:appinfo>
+      <xs:documentation>QUALIFICATION DE L'ETAT OPERATIONNEL D'UNE UNITE, D'UNE INSTALLATION ETC...
+DICO STAT 289</xs:documentation>
+      <xs:documentation xml:lang="en">Qualification (with respect to dictionary L125/20) of the operational status of a unit, a facility, .. etc. (STAT dictionary 289)</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:integer" />
+  </xs:simpleType>
+  <xs:simpleType name="L125_23Code">
+    <xs:annotation>
+      <xs:appinfo>
+        <nc1dico:source xmlns:nc1dico="urn:fra:nc1:dictionnaires">SFTT 3.4.8</nc1dico:source>
+        <nc1dico:derogation xmlns:nc1dico="urn:fra:nc1:dictionnaires">ETAT DE SECURISATION</nc1dico:derogation>
+        <nc1ihm:description>DESCRIPTION DE L'ETAT DE SECURISATION D'UNE INSTALLATION
+DICO STAT 152</nc1ihm:description>
+        <nc1ihm:description xml:lang="en">Description of the security status of a facility (STAT dictionary 152)</nc1ihm:description>
+      </xs:appinfo>
+      <xs:documentation>DESCRIPTION DE L'ETAT DE SECURISATION D'UNE INSTALLATION
+DICO STAT 152</xs:documentation>
+      <xs:documentation xml:lang="en">Description of the security status of a facility (STAT dictionary 152)</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:integer" />
+  </xs:simpleType>
+  <xs:simpleType name="L125_24Code">
+    <xs:annotation>
+      <xs:appinfo>
+        <nc1dico:source xmlns:nc1dico="urn:fra:nc1:dictionnaires">SFTT 3.4.8</nc1dico:source>
+        <nc1dico:derogation xmlns:nc1dico="urn:fra:nc1:dictionnaires">ETAT D'EXECUTION OU DE DEMOLITION</nc1dico:derogation>
+        <nc1ihm:description>DECRIT L'ETAT D'EXECUTION OU DE DEMOLITION D'UNE INSTALLATION, D'UN OBSTACLE...
+DICO STAT 118</nc1ihm:description>
+        <nc1ihm:description xml:lang="en">Describes the state of execution or demolition of a facility, an obstacle ... (STAT dictionary 118)</nc1ihm:description>
+      </xs:appinfo>
+      <xs:documentation>DECRIT L'ETAT D'EXECUTION OU DE DEMOLITION D'UNE INSTALLATION, D'UN OBSTACLE...
+DICO STAT 118</xs:documentation>
+      <xs:documentation xml:lang="en">Describes the state of execution or demolition of a facility, an obstacle ... (STAT dictionary 118)</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:integer" />
+  </xs:simpleType>
+  <xs:simpleType name="L125_5Code">
+    <xs:annotation>
+      <xs:appinfo>
+        <nc1dico:source xmlns:nc1dico="urn:fra:nc1:dictionnaires">SFTT 3.4.8</nc1dico:source>
+        <nc1dico:derogation xmlns:nc1dico="urn:fra:nc1:dictionnaires">INDICATEUR DE TRAITEMENT SPECIFIQUE</nc1dico:derogation>
+        <nc1ihm:description>INDICATEUR PERMETTANT DE MARQUER UNE PISTE POUR INDIQUER QU’ELLE PRESENTE UN INTERET PARTICULIER. AUCUNE PROCEDURE SPECIFIQUE CONCERNANT LE TRAITEMENT DE CET INDICATEUR N’EST SPECIFIE.</nc1ihm:description>
+        <nc1ihm:description xml:lang="en">Indicator allowing to mark a track to indicate that it presents a particular interest. No specific procedure concerning the treatment of this indicator is specified.</nc1ihm:description>
+      </xs:appinfo>
+      <xs:documentation>INDICATEUR PERMETTANT DE MARQUER UNE PISTE POUR INDIQUER QU’ELLE PRESENTE UN INTERET PARTICULIER. AUCUNE PROCEDURE SPECIFIQUE CONCERNANT LE TRAITEMENT DE CET INDICATEUR N’EST SPECIFIE.</xs:documentation>
+      <xs:documentation xml:lang="en">Indicator allowing to mark a track to indicate that it presents a particular interest. No specific procedure concerning the treatment of this indicator is specified.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:integer" />
+  </xs:simpleType>
+  <xs:simpleType name="L125_7Code">
+    <xs:annotation>
+      <xs:appinfo>
+        <nc1dico:source xmlns:nc1dico="urn:fra:nc1:dictionnaires">SFTT 3.4.8</nc1dico:source>
+        <nc1dico:derogation xmlns:nc1dico="urn:fra:nc1:dictionnaires">ORGANISATIONSTATUSAVAILABILITYCODE</nc1dico:derogation>
+        <nc1ihm:description>DESCRIPTION DE L'ETAT DE DISPONIBILITE D'UNE UNITE POUR ETRE OPERATIONNELLE
+DICO STAT 283</nc1ihm:description>
+        <nc1ihm:description xml:lang="en">Description of the state of readiness of a unit to be operational ((STAT dictionary 283)</nc1ihm:description>
+      </xs:appinfo>
+      <xs:documentation>DESCRIPTION DE L'ETAT DE DISPONIBILITE D'UNE UNITE POUR ETRE OPERATIONNELLE
+DICO STAT 283</xs:documentation>
+      <xs:documentation xml:lang="en">Description of the state of readiness of a unit to be operational ((STAT dictionary 283)</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:integer" />
+  </xs:simpleType>
+  <xs:simpleType name="L135_10Code">
+    <xs:annotation>
+      <xs:appinfo>
+        <nc1dico:source xmlns:nc1dico="urn:fra:nc1:dictionnaires">SFTT 3.4.8</nc1dico:source>
+        <nc1dico:derogation xmlns:nc1dico="urn:fra:nc1:dictionnaires">FRANCHISSEMENT DE LIGNE</nc1dico:derogation>
+        <nc1ihm:description>INDICATEUR DE FRANCHISSEMENT AUTORISE D'UNE LIGNE TACTIQUE</nc1ihm:description>
+        <nc1ihm:description xml:lang="en">INDICATOR OF CROSSING AUTHORIZES OF A TACTICAL LINE</nc1ihm:description>
+      </xs:appinfo>
+      <xs:documentation>INDICATEUR DE FRANCHISSEMENT AUTORISE D'UNE LIGNE TACTIQUE</xs:documentation>
+      <xs:documentation xml:lang="en">INDICATOR OF CROSSING AUTHORIZES OF A TACTICAL LINE</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:integer" />
+  </xs:simpleType>
+  <xs:simpleType name="L135_11Code">
+    <xs:annotation>
+      <xs:appinfo>
+        <nc1dico:source xmlns:nc1dico="urn:fra:nc1:dictionnaires">SFTT 3.4.8</nc1dico:source>
+        <nc1dico:derogation xmlns:nc1dico="urn:fra:nc1:dictionnaires">INDICATEUR DE POSER</nc1dico:derogation>
+        <nc1ihm:description>INDIQUE LA CAPACITE DE POSER POUR UN AERONEF</nc1ihm:description>
+        <nc1ihm:description xml:lang="en">Specify the capacity to rest for an aircraft</nc1ihm:description>
+      </xs:appinfo>
+      <xs:documentation>INDIQUE LA CAPACITE DE POSER POUR UN AERONEF</xs:documentation>
+      <xs:documentation xml:lang="en">Specify the capacity to rest for an aircraft</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:integer" />
+  </xs:simpleType>
+  <xs:simpleType name="L135_14Code">
+    <xs:annotation>
+      <xs:appinfo>
+        <nc1dico:source xmlns:nc1dico="urn:fra:nc1:dictionnaires">SFTT 3.4.8</nc1dico:source>
+        <nc1dico:derogation xmlns:nc1dico="urn:fra:nc1:dictionnaires">INDICATEUR DE FIABILITE</nc1dico:derogation>
+        <nc1ihm:description>INDICATION DE LA FIABILITE D'UNE INFORMATION TACTIQUE. COUPLEE A L'INDICATEUR DE CREDIBILITE L135/15 FORME L'INDICATEUR DE CONFIANCE DE L'INFORMATION
+REPRESENTE SOUS FORME DE LETTRE A..F.
+'A' CORRESPOND A LA VALEUR 1.
+'F' CORRESPOND A LA VALEUR 6.</nc1ihm:description>
+        <nc1ihm:description xml:lang="en">INDICATION OF THE RELIABILITY OF TACTICAL UNIT. LINDED TO INDICATOR OF RELIABILITY L135/15, IT FORMS THE CONFIDENCE INDICATOR UNIT. REPRESENTED BY A..F LETTER FORM. 'A' corresponds to the value 1, ""F"" to the value 6".</nc1ihm:description>
+      </xs:appinfo>
+      <xs:documentation>INDICATION DE LA FIABILITE D'UNE INFORMATION TACTIQUE. COUPLEE A L'INDICATEUR DE CREDIBILITE L135/15 FORME L'INDICATEUR DE CONFIANCE DE L'INFORMATION
+REPRESENTE SOUS FORME DE LETTRE A..F.
+'A' CORRESPOND A LA VALEUR 1.
+'F' CORRESPOND A LA VALEUR 6.</xs:documentation>
+      <xs:documentation xml:lang="en">INDICATION OF THE RELIABILITY OF TACTICAL UNIT. LINDED TO INDICATOR OF RELIABILITY L135/15, IT FORMS THE CONFIDENCE INDICATOR UNIT. REPRESENTED BY A..F LETTER FORM. 'A' corresponds to the value 1, ""F"" to the value 6".</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:integer" />
+  </xs:simpleType>
+  <xs:simpleType name="L135_15Code">
+    <xs:annotation>
+      <xs:appinfo>
+        <nc1dico:source xmlns:nc1dico="urn:fra:nc1:dictionnaires">SFTT 3.4.8</nc1dico:source>
+        <nc1dico:derogation xmlns:nc1dico="urn:fra:nc1:dictionnaires">INDICATEUR DE CREDIBILITE / EXACTITUDE</nc1dico:derogation>
+        <nc1ihm:description>INDICATION DE LA CREDIBILITE D'UNE INFORMATION TACTIQUE. COUPLEE A L'INDICATEUR DE FIABILITE L135/14 FORME L'INDICATEUR DE CONFIANCE DE LINFORMATION.
+DICO STAT 139</nc1ihm:description>
+        <nc1ihm:description xml:lang="en">INDICATION OF THE CREDIBILITY OF TACTICAL UNIT. LINDED TO INDICATOR OF RELIABILITY L135/14, IT FORMS THE CONFIDENCE INDICATOR UNIT. (STAT dictionary 139)</nc1ihm:description>
+      </xs:appinfo>
+      <xs:documentation>INDICATION DE LA CREDIBILITE D'UNE INFORMATION TACTIQUE. COUPLEE A L'INDICATEUR DE FIABILITE L135/14 FORME L'INDICATEUR DE CONFIANCE DE LINFORMATION.
+DICO STAT 139</xs:documentation>
+      <xs:documentation xml:lang="en">INDICATION OF THE CREDIBILITY OF TACTICAL UNIT. LINDED TO INDICATOR OF RELIABILITY L135/14, IT FORMS THE CONFIDENCE INDICATOR UNIT. (STAT dictionary 139)</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:integer" />
+  </xs:simpleType>
+  <xs:simpleType name="L135_16Code">
+    <xs:annotation>
+      <xs:appinfo>
+        <nc1dico:source xmlns:nc1dico="urn:fra:nc1:dictionnaires">SFTT 3.4.8</nc1dico:source>
+        <nc1dico:derogation xmlns:nc1dico="urn:fra:nc1:dictionnaires">TYPE DE SUBORDINATION</nc1dico:derogation>
+        <nc1ihm:description>INDICATION DES CARACTERISTIQUES DE PRELEVEMENT/RENFORCEMENT D'UNE UNITE DANS UNE ARTICULATION TACTIQUE ORGANIQUE OU CONJONCTURELLE.</nc1ihm:description>
+        <nc1ihm:description xml:lang="en">Indication of the characteristics of attachments and detachments of a unity in a cyclical tactical joint.</nc1ihm:description>
+      </xs:appinfo>
+      <xs:documentation>INDICATION DES CARACTERISTIQUES DE PRELEVEMENT/RENFORCEMENT D'UNE UNITE DANS UNE ARTICULATION TACTIQUE ORGANIQUE OU CONJONCTURELLE.</xs:documentation>
+      <xs:documentation xml:lang="en">Indication of the characteristics of attachments and detachments of a unity in a cyclical tactical joint.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:integer" />
+  </xs:simpleType>
+  <xs:simpleType name="L135_1Code">
+    <xs:annotation>
+      <xs:appinfo>
+        <nc1dico:source xmlns:nc1dico="urn:fra:nc1:dictionnaires">SFTT 3.4.8</nc1dico:source>
+        <nc1dico:derogation xmlns:nc1dico="urn:fra:nc1:dictionnaires">INDICATEUR TIC</nc1dico:derogation>
+        <nc1ihm:description>INDIQUE UN ETAT DE DETRESSE / PRISE A PARTIE</nc1ihm:description>
+        <nc1ihm:description xml:lang="en">Specify  a state of distress / engaged</nc1ihm:description>
+      </xs:appinfo>
+      <xs:documentation>INDIQUE UN ETAT DE DETRESSE / PRISE A PARTIE</xs:documentation>
+      <xs:documentation xml:lang="en">Specify  a state of distress / engaged</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:integer" />
+  </xs:simpleType>
+  <xs:simpleType name="L135_25Code">
+    <xs:annotation>
+      <xs:appinfo>
+        <nc1dico:source xmlns:nc1dico="urn:fra:nc1:dictionnaires">SFTT 3.4.8</nc1dico:source>
+        <nc1dico:derogation xmlns:nc1dico="urn:fra:nc1:dictionnaires">INDICATEUR DE MOBILITE PISTE MER/AIR</nc1dico:derogation>
+        <nc1ihm:description>PERMET D'INDIQUER  L'ETAT DE MOBILITE D'UNE UNITE H OU D'UNE PISTE, D'UN INDIVIDU OBSERVE</nc1ihm:description>
+        <nc1ihm:description xml:lang="en">Indicate the state of mobility of a unit H or of a track, an observed individual</nc1ihm:description>
+      </xs:appinfo>
+      <xs:documentation>PERMET D'INDIQUER  L'ETAT DE MOBILITE D'UNE UNITE H OU D'UNE PISTE, D'UN INDIVIDU OBSERVE</xs:documentation>
+      <xs:documentation xml:lang="en">Indicate the state of mobility of a unit H or of a track, an observed individual</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:integer" />
+  </xs:simpleType>
+  <xs:simpleType name="L135_30Code">
+    <xs:annotation>
+      <xs:appinfo>
+        <nc1dico:source xmlns:nc1dico="urn:fra:nc1:dictionnaires">SFTT 3.4.8</nc1dico:source>
+        <nc1dico:derogation xmlns:nc1dico="urn:fra:nc1:dictionnaires">INDICATEUR DE DEBARQUEMENT</nc1dico:derogation>
+        <nc1ihm:description>PERMET D'INDIQUER  L'ETAT DE DEBARQUABILITE D'UNE UNITE H OU D'UNE PISTE, D'UN INDIVIDU OBSERVE ETC…</nc1ihm:description>
+        <nc1ihm:description xml:lang="en">Indicator of dismounting</nc1ihm:description>
+      </xs:appinfo>
+      <xs:documentation>PERMET D'INDIQUER  L'ETAT DE DEBARQUABILITE D'UNE UNITE H OU D'UNE PISTE, D'UN INDIVIDU OBSERVE ETC…</xs:documentation>
+      <xs:documentation xml:lang="en">Indicator of dismounting</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:integer" />
+  </xs:simpleType>
+  <xs:simpleType name="L135_32Code">
+    <xs:annotation>
+      <xs:appinfo>
+        <nc1dico:source xmlns:nc1dico="urn:fra:nc1:dictionnaires">SFTT 3.4.8</nc1dico:source>
+        <nc1dico:derogation xmlns:nc1dico="urn:fra:nc1:dictionnaires">INDICATEUR D'ETAT DE PRATICABILITE GENERAL D'UN AXE</nc1dico:derogation>
+        <nc1ihm:description>INDIQUE L'ETAT DE PRATICABILITE GENERAL D'UN AXE EN FONCTION DES SAISONS</nc1ihm:description>
+        <nc1ihm:description xml:lang="en">Specify the general state of practicability of an axis according to the seasons</nc1ihm:description>
+      </xs:appinfo>
+      <xs:documentation>INDIQUE L'ETAT DE PRATICABILITE GENERAL D'UN AXE EN FONCTION DES SAISONS</xs:documentation>
+      <xs:documentation xml:lang="en">Specify the general state of practicability of an axis according to the seasons</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:integer" />
+  </xs:simpleType>
+  <xs:simpleType name="L135_33Code">
+    <xs:annotation>
+      <xs:appinfo>
+        <nc1dico:source xmlns:nc1dico="urn:fra:nc1:dictionnaires">SFTT 3.4.8</nc1dico:source>
+        <nc1dico:derogation xmlns:nc1dico="urn:fra:nc1:dictionnaires">INDICATEUR D'ETAT DE PRATICABILITE PARTICULIER D'UN AXE</nc1dico:derogation>
+        <nc1ihm:description>INDIQUE L'ETAT DE PRATICABILITE PARTICULIER D'UN AXE DANS L'INSTANT</nc1ihm:description>
+        <nc1ihm:description xml:lang="en">Specify the particular state of practicability of an axis in an instant</nc1ihm:description>
+      </xs:appinfo>
+      <xs:documentation>INDIQUE L'ETAT DE PRATICABILITE PARTICULIER D'UN AXE DANS L'INSTANT</xs:documentation>
+      <xs:documentation xml:lang="en">Specify the particular state of practicability of an axis in an instant</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:integer" />
+  </xs:simpleType>
+  <xs:simpleType name="L135_43Code">
+    <xs:annotation>
+      <xs:appinfo>
+        <nc1dico:source xmlns:nc1dico="urn:fra:nc1:dictionnaires">SFTT 3.4.8</nc1dico:source>
+        <nc1dico:derogation xmlns:nc1dico="urn:fra:nc1:dictionnaires">INDICATEUR DE MINE AU SOL</nc1dico:derogation>
+        <nc1ihm:description>PERMET D'INDIQUER LA PRESENCE OU L'ABSENCE DE MINES AU SOL</nc1ihm:description>
+        <nc1ihm:description xml:lang="en">Indicate the presence or the absence of mines to the ground</nc1ihm:description>
+      </xs:appinfo>
+      <xs:documentation>PERMET D'INDIQUER LA PRESENCE OU L'ABSENCE DE MINES AU SOL</xs:documentation>
+      <xs:documentation xml:lang="en">Indicate the presence or the absence of mines to the ground</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:integer" />
+  </xs:simpleType>
+  <xs:simpleType name="L135_47Code">
+    <xs:annotation>
+      <xs:appinfo>
+        <nc1dico:source xmlns:nc1dico="urn:fra:nc1:dictionnaires">SFTT 3.4.8</nc1dico:source>
+        <nc1dico:derogation xmlns:nc1dico="urn:fra:nc1:dictionnaires">INDICATEUR DE MODALITE DE FIN DE TIR</nc1dico:derogation>
+        <nc1ihm:description>MODALITE DE FIN DE TIR</nc1ihm:description>
+        <nc1ihm:description xml:lang="en">Engagement for the end of fire</nc1ihm:description>
+      </xs:appinfo>
+      <xs:documentation>MODALITE DE FIN DE TIR</xs:documentation>
+      <xs:documentation xml:lang="en">Engagement for the end of fire</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:integer" />
+  </xs:simpleType>
+  <xs:simpleType name="L135_49Code">
+    <xs:annotation>
+      <xs:appinfo>
+        <nc1dico:source xmlns:nc1dico="urn:fra:nc1:dictionnaires">SFTT 3.4.8</nc1dico:source>
+        <nc1dico:derogation xmlns:nc1dico="urn:fra:nc1:dictionnaires">MODE FRANCHISSEMENT</nc1dico:derogation>
+        <nc1ihm:description>INDIQUE LE MODE DE FRANCHISSEMENT UTILISE SUR UN SITE DE FRANCHISSEMENT</nc1ihm:description>
+        <nc1ihm:description xml:lang="en">Specify the mode of crossing used on a site of crossing</nc1ihm:description>
+      </xs:appinfo>
+      <xs:documentation>INDIQUE LE MODE DE FRANCHISSEMENT UTILISE SUR UN SITE DE FRANCHISSEMENT</xs:documentation>
+      <xs:documentation xml:lang="en">Specify the mode of crossing used on a site of crossing</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:integer" />
+  </xs:simpleType>
+  <xs:simpleType name="L135_5Code">
+    <xs:annotation>
+      <xs:appinfo>
+        <nc1dico:source xmlns:nc1dico="urn:fra:nc1:dictionnaires">SFTT 3.4.8</nc1dico:source>
+        <nc1dico:derogation xmlns:nc1dico="urn:fra:nc1:dictionnaires">INDICATEUR DE DETRESSE</nc1dico:derogation>
+        <nc1ihm:description>PERMETTANT D'INDIQUER  LE NIVEAU DE DETRESSE D'UNE UNITE H</nc1ihm:description>
+        <nc1ihm:description xml:lang="en">Indicate the level of distress of a unit H</nc1ihm:description>
+      </xs:appinfo>
+      <xs:documentation>PERMETTANT D'INDIQUER  LE NIVEAU DE DETRESSE D'UNE UNITE H</xs:documentation>
+      <xs:documentation xml:lang="en">Indicate the level of distress of a unit H</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:integer" />
+  </xs:simpleType>
+  <xs:simpleType name="L140_1Code">
+    <xs:annotation>
+      <xs:appinfo>
+        <nc1dico:source xmlns:nc1dico="urn:fra:nc1:dictionnaires">SFTT 3.4.8</nc1dico:source>
+        <nc1dico:derogation xmlns:nc1dico="urn:fra:nc1:dictionnaires">ACTIVITES PLATE-FORME TERRESTRE AERIENNE OU MARITIME</nc1dico:derogation>
+        <nc1ihm:description>PERMET DE DEFINIR L'ACTIVITE GENERALE D'UNE PLATE-FORME TERRESTRE, AERIENNE OU MARITIME</nc1ihm:description>
+        <nc1ihm:description xml:lang="en">Ground, air or maritime platform general activity</nc1ihm:description>
+      </xs:appinfo>
+      <xs:documentation>PERMET DE DEFINIR L'ACTIVITE GENERALE D'UNE PLATE-FORME TERRESTRE, AERIENNE OU MARITIME</xs:documentation>
+      <xs:documentation xml:lang="en">Ground, air or maritime platform general activity</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:integer" />
+  </xs:simpleType>
+  <xs:simpleType name="L140_2Code">
+    <xs:annotation>
+      <xs:appinfo>
+        <nc1dico:source xmlns:nc1dico="urn:fra:nc1:dictionnaires">SFTT 3.4.8</nc1dico:source>
+        <nc1dico:derogation xmlns:nc1dico="urn:fra:nc1:dictionnaires">TYPE GENERAL PISTE MARITIME</nc1dico:derogation>
+        <nc1ihm:description>TYPE GENERAL PISTE MARITIME.</nc1ihm:description>
+        <nc1ihm:description xml:lang="en">Maritime track general type.</nc1ihm:description>
+      </xs:appinfo>
+      <xs:documentation>TYPE GENERAL PISTE MARITIME.</xs:documentation>
+      <xs:documentation xml:lang="en">Maritime track general type.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:integer" />
+  </xs:simpleType>
+  <xs:simpleType name="L140_3Code">
+    <xs:annotation>
+      <xs:appinfo>
+        <nc1dico:source xmlns:nc1dico="urn:fra:nc1:dictionnaires">SFTT 3.4.8</nc1dico:source>
+        <nc1dico:derogation xmlns:nc1dico="urn:fra:nc1:dictionnaires">TYPE SPECIFIQUE PISTE MARITIME</nc1dico:derogation>
+        <nc1ihm:description>TYPE SPECIFIQUE PISTE MARITIME.</nc1ihm:description>
+        <nc1ihm:description xml:lang="en">Maritime track specific type.</nc1ihm:description>
+      </xs:appinfo>
+      <xs:documentation>TYPE SPECIFIQUE PISTE MARITIME.</xs:documentation>
+      <xs:documentation xml:lang="en">Maritime track specific type.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:integer" />
+  </xs:simpleType>
+  <xs:simpleType name="L150_2Code">
+    <xs:annotation>
+      <xs:appinfo>
+        <nc1dico:source xmlns:nc1dico="urn:fra:nc1:dictionnaires">SFTT 3.4.8</nc1dico:source>
+        <nc1dico:derogation xmlns:nc1dico="urn:fra:nc1:dictionnaires">COULEUR DE TRAIT OU REMPLISSAGE</nc1dico:derogation>
+        <nc1ihm:description>PERMET DE DEFINIR LA COULEUR D'UN POINT, D'UNE LIGNE OU DU CONTOUR OU REMPLISSAGE D'UNE ZONE</nc1ihm:description>
+      </xs:appinfo>
+      <xs:documentation>PERMET DE DEFINIR LA COULEUR D'UN POINT, D'UNE LIGNE OU DU CONTOUR OU REMPLISSAGE D'UNE ZONE</xs:documentation>
+      <xs:documentation xml:lang="en"></xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:integer" />
+  </xs:simpleType>
+  <xs:simpleType name="L150_3Code">
+    <xs:annotation>
+      <xs:appinfo>
+        <nc1dico:source xmlns:nc1dico="urn:fra:nc1:dictionnaires">SFTT 3.4.8</nc1dico:source>
+        <nc1dico:derogation xmlns:nc1dico="urn:fra:nc1:dictionnaires">TYPE DE TRAIT (CONTOUR)</nc1dico:derogation>
+        <nc1ihm:description>PERMET DE DEFINIR LE TYPE DE TRACE DE LA LIGNE OU DU CONTOUR D'UNE ZONE</nc1ihm:description>
+      </xs:appinfo>
+      <xs:documentation>PERMET DE DEFINIR LE TYPE DE TRACE DE LA LIGNE OU DU CONTOUR D'UNE ZONE</xs:documentation>
+      <xs:documentation xml:lang="en"></xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:integer" />
+  </xs:simpleType>
+  <xs:simpleType name="L150_4Code">
+    <xs:annotation>
+      <xs:appinfo>
+        <nc1dico:source xmlns:nc1dico="urn:fra:nc1:dictionnaires">SFTT 3.4.8</nc1dico:source>
+        <nc1dico:derogation xmlns:nc1dico="urn:fra:nc1:dictionnaires">EPAISSEUR DE TRAIT</nc1dico:derogation>
+        <nc1ihm:description>PERMET DE DEFINIR L'EPAISSEUR DU TRACE DE LA LIGNE OU DU CONTOUR D'UNE ZONE</nc1ihm:description>
+      </xs:appinfo>
+      <xs:documentation>PERMET DE DEFINIR L'EPAISSEUR DU TRACE DE LA LIGNE OU DU CONTOUR D'UNE ZONE</xs:documentation>
+      <xs:documentation xml:lang="en"></xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:integer" />
+  </xs:simpleType>
+  <xs:simpleType name="L150_5Code">
+    <xs:annotation>
+      <xs:appinfo>
+        <nc1dico:source xmlns:nc1dico="urn:fra:nc1:dictionnaires">SFTT 3.4.8</nc1dico:source>
+        <nc1dico:derogation xmlns:nc1dico="urn:fra:nc1:dictionnaires">TYPE DE FLECHE EN FIN DE LIGNE</nc1dico:derogation>
+        <nc1ihm:description>PERMET DE DEFINIR LE TYPE DE FLECHE EN BOUT DU TRACE D'UNE LIGNE</nc1ihm:description>
+      </xs:appinfo>
+      <xs:documentation>PERMET DE DEFINIR LE TYPE DE FLECHE EN BOUT DU TRACE D'UNE LIGNE</xs:documentation>
+      <xs:documentation xml:lang="en"></xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:integer" />
+  </xs:simpleType>
+  <xs:simpleType name="L150_6Code">
+    <xs:annotation>
+      <xs:appinfo>
+        <nc1dico:source xmlns:nc1dico="urn:fra:nc1:dictionnaires">SFTT 3.4.8</nc1dico:source>
+        <nc1dico:derogation xmlns:nc1dico="urn:fra:nc1:dictionnaires">TYPE DE REMPLISSAGE D'UNE ZONE</nc1dico:derogation>
+        <nc1ihm:description>PERMET DE DEFINIR LE TYPE DE REMPLISSAGE D'UNE ZONE</nc1ihm:description>
+      </xs:appinfo>
+      <xs:documentation>PERMET DE DEFINIR LE TYPE DE REMPLISSAGE D'UNE ZONE</xs:documentation>
+      <xs:documentation xml:lang="en"></xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:integer" />
+  </xs:simpleType>
+  <xs:simpleType name="L150_7Code">
+    <xs:annotation>
+      <xs:appinfo>
+        <nc1dico:source xmlns:nc1dico="urn:fra:nc1:dictionnaires">SFTT 3.4.8</nc1dico:source>
+        <nc1dico:derogation xmlns:nc1dico="urn:fra:nc1:dictionnaires">TYPE DE REPRESENTATION D'UN POINT</nc1dico:derogation>
+        <nc1ihm:description>PERMET DE DEFINIR LE FORMAT DE REPRESENTATION D'UN POINT</nc1ihm:description>
+      </xs:appinfo>
+      <xs:documentation>PERMET DE DEFINIR LE FORMAT DE REPRESENTATION D'UN POINT</xs:documentation>
+      <xs:documentation xml:lang="en"></xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:integer" />
+  </xs:simpleType>
+  <xs:simpleType name="L160_7Code">
+    <xs:annotation>
+      <xs:appinfo>
+        <nc1dico:source xmlns:nc1dico="urn:fra:nc1:dictionnaires">SFTT 3.4.8</nc1dico:source>
+        <nc1dico:derogation xmlns:nc1dico="urn:fra:nc1:dictionnaires">TYPE DE RADIO</nc1dico:derogation>
+        <nc1ihm:description>IDENTIFICATION D’UN TYPE DE RADIO.</nc1ihm:description>
+        <nc1ihm:description xml:lang="en">Type of radio</nc1ihm:description>
+      </xs:appinfo>
+      <xs:documentation>IDENTIFICATION D’UN TYPE DE RADIO.</xs:documentation>
+      <xs:documentation xml:lang="en">Type of radio</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:integer" />
+  </xs:simpleType>
+  <xs:simpleType name="L160_9Code">
+    <xs:annotation>
+      <xs:appinfo>
+        <nc1dico:source xmlns:nc1dico="urn:fra:nc1:dictionnaires">SFTT V3.4.4</nc1dico:source>
+        <nc1dico:derogation xmlns:nc1dico="urn:fra:nc1:dictionnaires">NUMERO DE CANAL</nc1dico:derogation>
+        <nc1ihm:description>Numéro de canal entre 1 et 127.</nc1ihm:description>
+        <nc1ihm:description xml:lang="en">Number of channel between 1 and 127.</nc1ihm:description>
+      </xs:appinfo>
+      <xs:documentation>Numéro de canal entre 1 et 127.</xs:documentation>
+      <xs:documentation xml:lang="en">Number of channel between 1 and 127.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:integer" />
+  </xs:simpleType>
+  <xs:simpleType name="L165_10Code">
+    <xs:annotation>
+      <xs:appinfo>
+        <nc1dico:source xmlns:nc1dico="urn:fra:nc1:dictionnaires">SFTT 3.4.8</nc1dico:source>
+        <nc1dico:derogation xmlns:nc1dico="urn:fra:nc1:dictionnaires">CARACTERISATION DE LA COUVERTURE NUAGEUSE</nc1dico:derogation>
+        <nc1ihm:description>CARACTERISE LA COUVERTURE NUAGEUSE. DICO STAT 91</nc1ihm:description>
+        <nc1ihm:description xml:lang="en">Characterized cloud cover. (STAT dictionary 91)</nc1ihm:description>
+      </xs:appinfo>
+      <xs:documentation>CARACTERISE LA COUVERTURE NUAGEUSE. DICO STAT 91</xs:documentation>
+      <xs:documentation xml:lang="en">Characterized cloud cover. (STAT dictionary 91)</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:integer" />
+  </xs:simpleType>
+  <xs:simpleType name="L165_11Code">
+    <xs:annotation>
+      <xs:appinfo>
+        <nc1dico:source xmlns:nc1dico="urn:fra:nc1:dictionnaires">SFTT 3.4.8</nc1dico:source>
+        <nc1dico:derogation xmlns:nc1dico="urn:fra:nc1:dictionnaires">CATEGORIE DE VENT</nc1dico:derogation>
+        <nc1ihm:description>DECRI UNE CATEGORIE DE VENT. DICO STAT 440</nc1ihm:description>
+        <nc1ihm:description xml:lang="en">Described a category of wind</nc1ihm:description>
+      </xs:appinfo>
+      <xs:documentation>DECRI UNE CATEGORIE DE VENT. DICO STAT 440</xs:documentation>
+      <xs:documentation xml:lang="en">Described a category of wind</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:integer" />
+  </xs:simpleType>
+  <xs:simpleType name="L165_12Code">
+    <xs:annotation>
+      <xs:appinfo>
+        <nc1dico:source xmlns:nc1dico="urn:fra:nc1:dictionnaires">SFTT 3.4.8</nc1dico:source>
+        <nc1dico:derogation xmlns:nc1dico="urn:fra:nc1:dictionnaires">STABILITE DE L'AIR</nc1dico:derogation>
+        <nc1ihm:description>DECRIT L'ETAT DE STABILITE DE L'AIR. DICO STAT 450</nc1ihm:description>
+        <nc1ihm:description xml:lang="en">Described the state of stability of the air</nc1ihm:description>
+      </xs:appinfo>
+      <xs:documentation>DECRIT L'ETAT DE STABILITE DE L'AIR. DICO STAT 450</xs:documentation>
+      <xs:documentation xml:lang="en">Described the state of stability of the air</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:integer" />
+  </xs:simpleType>
+  <xs:simpleType name="L165_6Code">
+    <xs:annotation>
+      <xs:appinfo>
+        <nc1dico:source xmlns:nc1dico="urn:fra:nc1:dictionnaires">SFTT 3.4.8</nc1dico:source>
+        <nc1dico:derogation xmlns:nc1dico="urn:fra:nc1:dictionnaires">GRADIENT DE TEMPERATURE</nc1dico:derogation>
+        <nc1ihm:description>DECRIT LE TYPE DE GRADIENT DE TEMPERATURE. DICO STAT 56</nc1ihm:description>
+        <nc1ihm:description xml:lang="en">Described the type of gradient of temperature</nc1ihm:description>
+      </xs:appinfo>
+      <xs:documentation>DECRIT LE TYPE DE GRADIENT DE TEMPERATURE. DICO STAT 56</xs:documentation>
+      <xs:documentation xml:lang="en">Described the type of gradient of temperature</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:integer" />
+  </xs:simpleType>
+  <xs:simpleType name="L165_7Code">
+    <xs:annotation>
+      <xs:appinfo>
+        <nc1dico:source xmlns:nc1dico="urn:fra:nc1:dictionnaires">SFTT 3.4.8</nc1dico:source>
+        <nc1dico:derogation xmlns:nc1dico="urn:fra:nc1:dictionnaires">CATEGORIE DE VISIBILITE</nc1dico:derogation>
+        <nc1ihm:description>DECRIT LA CATEGORIE DE VISIBILITE. DICO STAT 452</nc1ihm:description>
+        <nc1ihm:description xml:lang="en">Described category of visibility</nc1ihm:description>
+      </xs:appinfo>
+      <xs:documentation>DECRIT LA CATEGORIE DE VISIBILITE. DICO STAT 452</xs:documentation>
+      <xs:documentation xml:lang="en">Described category of visibility</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:integer" />
+  </xs:simpleType>
+  <xs:simpleType name="L165_9Code">
+    <xs:annotation>
+      <xs:appinfo>
+        <nc1dico:source xmlns:nc1dico="urn:fra:nc1:dictionnaires">SFTT 3.4.8</nc1dico:source>
+        <nc1dico:derogation xmlns:nc1dico="urn:fra:nc1:dictionnaires">TYPE DE COUVERTURE NUAGEUSE</nc1dico:derogation>
+        <nc1ihm:description>DECRIT LE TYPE DE COUVERTURE NUAGEUSE. DICO STAT 92</nc1ihm:description>
+        <nc1ihm:description xml:lang="en">Described the type of cloud layer</nc1ihm:description>
+      </xs:appinfo>
+      <xs:documentation>DECRIT LE TYPE DE COUVERTURE NUAGEUSE. DICO STAT 92</xs:documentation>
+      <xs:documentation xml:lang="en">Described the type of cloud layer</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:integer" />
+  </xs:simpleType>
+  <xs:simpleType name="L170_4Code">
+    <xs:annotation>
+      <xs:appinfo>
+        <nc1dico:source xmlns:nc1dico="urn:fra:nc1:dictionnaires">SFTT 3.4.8</nc1dico:source>
+        <nc1dico:derogation xmlns:nc1dico="urn:fra:nc1:dictionnaires">INDICATEUR IFF MODE IV</nc1dico:derogation>
+        <nc1ihm:description>REPONSE D'UN TRANSMONDEUR IFF MODE IV.</nc1ihm:description>
+        <nc1ihm:description xml:lang="en">Indicator IFF mode IV</nc1ihm:description>
+      </xs:appinfo>
+      <xs:documentation>REPONSE D'UN TRANSMONDEUR IFF MODE IV.</xs:documentation>
+      <xs:documentation xml:lang="en">Indicator IFF mode IV</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:integer" />
+  </xs:simpleType>
+</xs:schema>

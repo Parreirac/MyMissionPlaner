@@ -1,0 +1,195 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<gc:CodeList xmlns:nc1dico="urn:fra:nc1:dictionnaires" xmlns:gc="http://docs.oasis-open.org/codelist/ns/genericode/1.0/">
+  <Annotation>
+    <Description>
+      <nc1dico:description>PERMET DE DEFINIR LE FORMAT DE REPRESENTATION D'UN POINT</nc1dico:description>
+      <nc1dico:description xml:lang="en"></nc1dico:description>
+    </Description>
+    <AppInfo>
+      <nc1dico:source>SFTT 3.4.8</nc1dico:source>
+      <nc1dico:derogation>TYPE DE REPRESENTATION D'UN POINT</nc1dico:derogation>
+    </AppInfo>
+  </Annotation>
+  <Identification>
+    <ShortName>L150_7Code</ShortName>
+    <Version>9.0.0</Version>
+    <CanonicalUri>urn:fra:nc1:common:sicsdicos:L150_7Code</CanonicalUri>
+    <CanonicalVersionUri>urn:fra:nc1:common:sicsdicos:L150_7Code:9.0.0</CanonicalVersionUri>
+  </Identification>
+  <ColumnSet DatatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes">
+    <Column Id="code" Use="required">
+      <ShortName>Code</ShortName>
+      <Data Type="int" />
+    </Column>
+    <Column Id="short" Use="required">
+      <ShortName>Short</ShortName>
+      <Data Type="string" />
+    </Column>
+    <Column Id="long" Use="optional">
+      <ShortName>Long</ShortName>
+      <Data Type="string" />
+    </Column>
+    <Column Id="short-en" Use="optional">
+      <ShortName>Short anglais</ShortName>
+      <Data Type="string" />
+    </Column>
+    <Column Id="long-en" Use="optional">
+      <ShortName>Long anglais</ShortName>
+      <Data Type="string" />
+    </Column>
+    <Column Id="parent" Use="optional">
+      <ShortName>Parent</ShortName>
+      <Data Type="int" />
+    </Column>
+    <Column Id="codeSymbole" Use="optional">
+      <ShortName>Code Symbole</ShortName>
+      <Data Type="string" />
+    </Column>
+    <Column Id="codeHierarchique" Use="optional">
+      <ShortName>Code Hierarchique</ShortName>
+      <Data Type="string" />
+    </Column>
+    <Key Id="codeKey">
+      <ShortName>CodeKey</ShortName>
+      <ColumnRef Ref="code" />
+    </Key>
+  </ColumnSet>
+  <SimpleCodeList>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>0</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>CARRE</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>CARRE</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>SQUARE</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>SQUARE</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>1</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>ROND</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>ROND</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>CIRCLE</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>CIRCLE</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>2</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>CROIX TYPE X</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>CROIX TYPE X</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>X CROSS</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>X CROSS</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>3</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>CROIX TYPE +</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>CROIX TYPE +</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>+ CROSS</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>+ CROSS</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>4</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>PUNAISE</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>PUNAISE</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>THUMBTACK</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>THUMBTACK</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>5</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>LOSANGE</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>LOSANGE</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>DIAMOND</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>DIAMOND</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>6</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>TRIANGLE </SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>TRIANGLE </SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>TRIANGLE</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>TRIANGLE</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>7</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>ETOILE</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>ETOILE</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>STAR</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>STAR</SimpleValue>
+      </Value>
+    </Row>
+  </SimpleCodeList>
+</gc:CodeList>

@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<cva:ContextValueAssociation xmlns:cva="http://docs.oasis-open.org/codelist/ns/ContextValueAssociation/1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="urn:fra:nc1:message:apercu3d" queryBinding="xslt2" xmlns:nc1apercu3d="urn:fra:nc1:message:apercu3d">
+  <!-- NC1 V.9.0.0 -->
+  <ValueLists>
+    <ValueList xml:id="nc1msgcom-ClassificationCode" uri="../Dictionnaires/ClassificationCode.gc" />
+    <ValueList xml:id="nc1msgcom-UrgencyLevelCode" uri="../Dictionnaires/UrgencyLevelCode.gc" />
+  </ValueLists>
+  <Contexts>
+    <Context address="/nc1apercu3d:NC1_Apercu3D/@classification" values="nc1msgcom-ClassificationCode" />
+    <Context address="/nc1apercu3d:NC1_Apercu3D/@urgencyLevel" values="nc1msgcom-UrgencyLevelCode" />
+  </Contexts>
+</cva:ContextValueAssociation>

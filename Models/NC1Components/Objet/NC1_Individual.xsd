@@ -1,0 +1,739 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema targetNamespace="urn:fra:nc1:objet:individual" xmlns:nc1ihm="urn:fra:nc1:IHM" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:nc1individual="urn:fra:nc1:objet:individual" xmlns:nc1common="urn:fra:nc1:common:attribute" xmlns:nc1com="urn:fra:nc1:common:communication" xmlns:nc1location="urn:fra:nc1:common:location" xmlns:nc1objcom="urn:fra:nc1:common:object" xmlns:nc1sicsdicos="urn:fra:nc1:common:sicsdicos">
+  <!-- NC1 V.9.0.0 -->
+  <xs:import namespace="urn:fra:nc1:common:attribute" schemaLocation="../Commun/Common.xsd" />
+  <xs:import namespace="urn:fra:nc1:common:communication" schemaLocation="../Commun/Communication.xsd" />
+  <xs:import namespace="urn:fra:nc1:common:location" schemaLocation="../Commun/Location.xsd" />
+  <xs:import namespace="urn:fra:nc1:common:object" schemaLocation="../Commun/Object.xsd" />
+  <xs:import namespace="urn:fra:nc1:common:sicsdicos" schemaLocation="../Commun/SICS_Dictionaries.xsd" />
+  <xs:element name="NC1_Individual" type="nc1individual:IndividualType">
+    <xs:annotation>
+      <xs:documentation>L’objet NC1_Individual représente un ou plusieurs individus ou personnes physiques auxquels peut être attribuée une fonction opérationnelle.</xs:documentation>
+      <xs:documentation xml:lang="en">The object NC1_Individual represents one or several individuals or physical persons to whom can be attributed an operational function.</xs:documentation>
+      <xs:appinfo>
+        <nc1:type xmlns:nc1="urn:fra:nc1">Objet</nc1:type>
+        <nc1ihm:Nom>Individu</nc1ihm:Nom>
+        <nc1ihm:Nom xml:lang="en">Individual</nc1ihm:Nom>
+        <nc1:MessH xmlns:nc1="urn:fra:nc1">Message H3.7 Crew</nc1:MessH>
+        <nc1:MessADatP3 xmlns:nc1="urn:fra:nc1">PERSID, PERSNID / PERSACT(sets complets, message BIOINTREC), BIOSUPP, PWDETL</nc1:MessADatP3>
+        <nc1:LastNC1ModifyVersion xmlns:nc1="urn:fra:nc1">9.0.0</nc1:LastNC1ModifyVersion>
+      </xs:appinfo>
+    </xs:annotation>
+  </xs:element>
+  <xs:complexType name="IndividualHistoryItemType">
+    <xs:annotation>
+      <xs:documentation>Elément de main courante sur un individu.</xs:documentation>
+      <xs:documentation xml:lang="en">Elements about facts involving a person.</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" name="comment" type="nc1common:LongTextObjectType">
+        <xs:annotation>
+          <xs:documentation>Commentaires en texte libre : faits, lieu des faits, etc...</xs:documentation>
+          <xs:documentation xml:lang="en">Free text comments: event, event place, etc...</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Commentaire</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">comment</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="eventId" type="nc1common:Nc1ObjectRefType">
+        <xs:annotation>
+          <xs:documentation>Identifiant unique NC1 de l’évènement relié aux faits.</xs:documentation>
+          <xs:documentation xml:lang="en">NC1 ID of the event related to the fact.</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Evènement</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">Event</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="IndividualType">
+    <xs:annotation>
+      <xs:documentation>L’objet NC1_Individual représente un individu ou personne physique à laquelle est attribuée une fonction guerre. Cette personne est affectée d'un code spécialité et peut servir un ou plusieurs matériels.</xs:documentation>
+      <xs:documentation xml:lang="en">The NC1_Individual object represents an individual or physical person with a warfare characteristic. Specialty and ability to serve some equipment is specified.</xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="nc1objcom:AgentType">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="tacticalData">
+            <xs:annotation>
+              <xs:documentation>Données tactiques de l’individu.</xs:documentation>
+              <xs:documentation xml:lang="en">Individual tactical data.</xs:documentation>
+              <xs:appinfo>
+                <nc1ihm:Nom>Données tactiques</nc1ihm:Nom>
+                <nc1ihm:Nom xml:lang="en">tactical datas</nc1ihm:Nom>
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element minOccurs="0" name="name" type="nc1common:ShortTextObjectType">
+                  <xs:annotation>
+                    <xs:documentation>Nom opérationnel donné à l’individu ou au groupe d’individus.</xs:documentation>
+                    <xs:documentation xml:lang="en">Operational name assigned to the individual.</xs:documentation>
+                    <xs:appinfo>
+                      <nc1ihm:Nom>Nom</nc1ihm:Nom>
+                      <nc1ihm:Nom xml:lang="en">name</nc1ihm:Nom>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:element>
+                <xs:element name="symbolCode" type="nc1common:SymbolCodeType">
+                  <xs:annotation>
+                    <xs:documentation>Code contenant les informations de symbologie, d'identité (AMI, ENI, etc.), de nationalité, d'état de planification.</xs:documentation>
+                    <xs:documentation xml:lang="en">Code specifying information about symbology, identity (Friend, enemy, …), nationality, planification status.</xs:documentation>
+                    <xs:appinfo>
+                      <nc1ihm:Nom>Code du symbole</nc1ihm:Nom>
+                      <nc1ihm:Nom xml:lang="en">Symbol code</nc1ihm:Nom>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:element>
+                <xs:element minOccurs="0" name="eirn" type="nc1common:EirnType">
+                  <xs:annotation>
+                    <xs:documentation>Identifiant EIRN utilisé par la messagerie VMF.</xs:documentation>
+                    <xs:documentation xml:lang="en">EIRN identifier used by VMF messaging.</xs:documentation>
+                    <xs:appinfo>
+                      <nc1ihm:Nom>Identifiant EIRN</nc1ihm:Nom>
+                      <nc1ihm:Nom xml:lang="en">eirn id</nc1ihm:Nom>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:element>
+                <xs:element minOccurs="0" name="tnl16" type="nc1common:Tnl16Type">
+                  <xs:annotation>
+                    <xs:documentation>Track Number L16.</xs:documentation>
+                    <xs:documentation xml:lang="en">track number L16.</xs:documentation>
+                    <xs:appinfo>
+                      <nc1ihm:Nom>Identifiant TNL16</nc1ihm:Nom>
+                      <nc1ihm:Nom xml:lang="en">TNL16 id</nc1ihm:Nom>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:element>
+                <xs:element minOccurs="0" name="attitude" type="nc1sicsdicos:L112_6Code">
+                  <xs:annotation>
+                    <xs:documentation>Attitude de l’individu.</xs:documentation>
+                    <xs:documentation xml:lang="en">Individual attitude.</xs:documentation>
+                    <xs:appinfo>
+                      <nc1ihm:Nom>Attitude</nc1ihm:Nom>
+                      <nc1ihm:Nom xml:lang="en">Attitude</nc1ihm:Nom>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:element>
+                <xs:element minOccurs="0" name="individualCategory" type="nc1sicsdicos:L112_1Code">
+                  <xs:annotation>
+                    <xs:documentation>Catégorie générale de l’individu (ex : « LOCAL POPULATION »).</xs:documentation>
+                    <xs:documentation xml:lang="en">"General category to which the individual belongs (e.g. ""LOCAL POPULATION"")".</xs:documentation>
+                    <xs:appinfo>
+                      <nc1ihm:Nom>Catégorie</nc1ihm:Nom>
+                      <nc1ihm:Nom xml:lang="en">Category</nc1ihm:Nom>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:element>
+                <xs:element minOccurs="0" name="operationalStatusIndicator" type="nc1sicsdicos:L125_1Code">
+                  <xs:annotation>
+                    <xs:documentation>Indicateur d’état opérationnel.</xs:documentation>
+                    <xs:documentation xml:lang="en">Operational status indicator.</xs:documentation>
+                    <xs:appinfo>
+                      <nc1ihm:Nom>Indicateur opérationnel</nc1ihm:Nom>
+                      <nc1ihm:Nom xml:lang="en">Operational indicator</nc1ihm:Nom>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:element>
+                <xs:element minOccurs="0" name="membersCount" type="nc1sicsdicos:L104_1Code">
+                  <xs:annotation>
+                    <xs:documentation>Nombre d’individus composant le Groupe d’Individus.</xs:documentation>
+                    <xs:documentation xml:lang="en">Number of individuals the group is composed of.</xs:documentation>
+                    <xs:appinfo>
+                      <nc1ihm:Nom>Nombre d’individus</nc1ihm:Nom>
+                      <nc1ihm:Nom xml:lang="en">Number of individuals</nc1ihm:Nom>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:element>
+                <xs:element minOccurs="0" name="responsibleUnitId" type="nc1common:Nc1ObjectRefType">
+                  <xs:annotation>
+                    <xs:documentation>Unité responsable de l’individu ou du groupe d’individus.</xs:documentation>
+                    <xs:documentation xml:lang="en">NC1 identifier of the unit responsible for the individual or the group of individuals.</xs:documentation>
+                    <xs:appinfo>
+                      <nc1ihm:Nom>Unité responsable</nc1ihm:Nom>
+                      <nc1ihm:Nom xml:lang="en">Responsible unit</nc1ihm:Nom>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:element>
+                <xs:element minOccurs="0" name="reliability" type="nc1sicsdicos:L135_14Code">
+                  <xs:annotation>
+                    <xs:documentation>Evaluation de la fiabilité de la source d’information.</xs:documentation>
+                    <xs:documentation xml:lang="en">Assessment of the reliability of the information source.</xs:documentation>
+                    <xs:appinfo>
+                      <nc1ihm:Nom>Fiabilité</nc1ihm:Nom>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:element>
+                <xs:element minOccurs="0" name="credibility" type="nc1sicsdicos:L135_15Code">
+                  <xs:annotation>
+                    <xs:documentation>Evaluation de la crédibilité de la source d’information.</xs:documentation>
+                    <xs:documentation xml:lang="en">Assessment of the credibility of the information source.</xs:documentation>
+                    <xs:appinfo>
+                      <nc1ihm:Nom>Crédibilité</nc1ihm:Nom>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:element>
+                <xs:element minOccurs="0" name="url" type="nc1common:MediumTextObjectType">
+                  <xs:annotation>
+                    <xs:documentation>Lien vers un fichier associé à l’objet.</xs:documentation>
+                    <xs:documentation xml:lang="en">Link to a file associated with the object.</xs:documentation>
+                    <xs:appinfo>
+                      <nc1ihm:Nom>Url</nc1ihm:Nom>
+                      <nc1ihm:Nom xml:lang="en">url</nc1ihm:Nom>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:element>
+                <xs:element minOccurs="0" name="comment" type="nc1common:LongTextObjectType">
+                  <xs:annotation>
+                    <xs:documentation>Commentaire en texte libre.</xs:documentation>
+                    <xs:documentation xml:lang="en">free text comment.</xs:documentation>
+                    <xs:appinfo>
+                      <nc1ihm:Nom>Commentaire</nc1ihm:Nom>
+                      <nc1ihm:Nom xml:lang="en">comment</nc1ihm:Nom>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:element>
+                <xs:element minOccurs="0" name="extVersion" type="nc1common:ExtVersType">
+                  <xs:annotation>
+                    <xs:documentation>Extension pour versions suivantes compatibles.</xs:documentation>
+                    <xs:documentation xml:lang="en">Extension for following compatible versions.</xs:documentation>
+                    <xs:appinfo>
+                      <nc1ihm:Nom>Extension de version</nc1ihm:Nom>
+                      <nc1ihm:Nom xml:lang="en">version extension</nc1ihm:Nom>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:element>
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+          <xs:element minOccurs="0" name="generalData">
+            <xs:annotation>
+              <xs:documentation>Données générales de l’individu.</xs:documentation>
+              <xs:documentation xml:lang="en">General data of the individual.</xs:documentation>
+              <xs:appinfo>
+                <nc1ihm:Nom>Données générales</nc1ihm:Nom>
+                <nc1ihm:Nom xml:lang="en">General data</nc1ihm:Nom>
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element minOccurs="0" name="rank" type="nc1sicsdicos:L112_10Code">
+                  <xs:annotation>
+                    <xs:documentation>Grade, si l’individu est militaire (ex : « LNT »).</xs:documentation>
+                    <xs:documentation xml:lang="en">"Rank, if the individual is a serviceman (e.g. ""LNT"")".</xs:documentation>
+                    <xs:appinfo>
+                      <nc1ihm:Nom>Grade</nc1ihm:Nom>
+                      <nc1ihm:Nom xml:lang="en">Rank</nc1ihm:Nom>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:element>
+                <xs:element minOccurs="0" name="firstName" type="nc1common:ShortTextObjectType">
+                  <xs:annotation>
+                    <xs:documentation>Prénom.</xs:documentation>
+                    <xs:documentation xml:lang="en">First name of the individual.</xs:documentation>
+                    <xs:appinfo>
+                      <nc1ihm:Nom>Prénom</nc1ihm:Nom>
+                      <nc1ihm:Nom xml:lang="en">First name of the individual</nc1ihm:Nom>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:element>
+                <xs:element minOccurs="0" name="lastName" type="nc1common:ShortTextObjectType">
+                  <xs:annotation>
+                    <xs:documentation>Nom de famille.</xs:documentation>
+                    <xs:documentation xml:lang="en">Surname of the individual.</xs:documentation>
+                    <xs:appinfo>
+                      <nc1ihm:Nom>Nom</nc1ihm:Nom>
+                      <nc1ihm:Nom xml:lang="en">name</nc1ihm:Nom>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:element>
+                <xs:element minOccurs="0" name="gender" type="nc1sicsdicos:L112_12Code">
+                  <xs:annotation>
+                    <xs:documentation>Sexe (ex : « FEMALE »).</xs:documentation>
+                    <xs:documentation xml:lang="en">"Gender (e.g. ""FEMALE"")".</xs:documentation>
+                    <xs:appinfo>
+                      <nc1ihm:Nom>Sexe</nc1ihm:Nom>
+                      <nc1ihm:Nom xml:lang="en">Gender</nc1ihm:Nom>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:element>
+                <xs:element minOccurs="0" name="militaryRegistrationNumber" type="nc1common:ShortTextObjectType">
+                  <xs:annotation>
+                    <xs:documentation>Numéro de matricule militaire, ou identifiant défense (lien vers le TUEM).</xs:documentation>
+                    <xs:documentation xml:lang="en">military registration number or identifier defence (link to TUEM).</xs:documentation>
+                    <xs:appinfo>
+                      <nc1ihm:Nom>Numéro de matricule</nc1ihm:Nom>
+                      <nc1ihm:Nom xml:lang="en">Military registration number</nc1ihm:Nom>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:element>
+                <xs:element minOccurs="0" name="functionOrProfession" type="nc1common:MediumTextObjectType">
+                  <xs:annotation>
+                    <xs:documentation>Description de la fonction ou de la profession de l’individu (ex : « MAIRE DU VILLAGE » ou « MENUISIER »).</xs:documentation>
+                    <xs:documentation xml:lang="en">"Description of the function or profession of the individual (e.g. VILLAGE'S MAYOR"" or ""CARPENTER"")".</xs:documentation>
+                    <xs:appinfo>
+                      <nc1ihm:Nom>Fonction ou profession</nc1ihm:Nom>
+                      <nc1ihm:Nom xml:lang="en">Function or profession</nc1ihm:Nom>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:element>
+                <xs:element minOccurs="0" name="isCombatant" type="xs:boolean">
+                  <xs:annotation>
+                    <xs:documentation>Individu combattant ou non.</xs:documentation>
+                    <xs:documentation xml:lang="en">Specifies if the individual is a combatant.</xs:documentation>
+                    <xs:appinfo>
+                      <nc1ihm:Nom>Combattant</nc1ihm:Nom>
+                      <nc1ihm:Nom xml:lang="en">Fighter</nc1ihm:Nom>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:element>
+                <xs:element minOccurs="0" name="chiefCharacteristics" type="nc1common:MediumTextObjectType">
+                  <xs:annotation>
+                    <xs:documentation>Dans le cas d’un groupe d’individus, description en texte libre du chef, permettant son identification.</xs:documentation>
+                    <xs:documentation xml:lang="en">Description of the group of individuals' head, for identification purpose.</xs:documentation>
+                    <xs:appinfo>
+                      <nc1ihm:Nom>Caractéristiques du chef</nc1ihm:Nom>
+                      <nc1ihm:Nom xml:lang="en">Chief characteristics</nc1ihm:Nom>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:element>
+                <xs:element minOccurs="0" name="politicalAllegiance" type="nc1common:ShortTextObjectType">
+                  <xs:annotation>
+                    <xs:documentation>Allégeance politique.</xs:documentation>
+                    <xs:documentation xml:lang="en">Political allegiance of the individual.</xs:documentation>
+                    <xs:appinfo>
+                      <nc1ihm:Nom>Allégeance politique</nc1ihm:Nom>
+                      <nc1ihm:Nom xml:lang="en">Political allegiance of the individual</nc1ihm:Nom>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:element>
+                <xs:element minOccurs="0" name="religion" type="nc1sicsdicos:L112_17Code">
+                  <xs:annotation>
+                    <xs:documentation>Religion.</xs:documentation>
+                    <xs:documentation xml:lang="en">Religion of the individual.</xs:documentation>
+                    <xs:appinfo>
+                      <nc1ihm:Nom>Religion</nc1ihm:Nom>
+                      <nc1ihm:Nom xml:lang="en">Religion of the individual</nc1ihm:Nom>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:element>
+                <xs:element minOccurs="0" name="ethnicGroup" type="nc1common:ShortTextObjectType">
+                  <xs:annotation>
+                    <xs:documentation>Groupe ethnique.</xs:documentation>
+                    <xs:documentation xml:lang="en">Ethnical group of the individual.</xs:documentation>
+                    <xs:appinfo>
+                      <nc1ihm:Nom>Groupe ethnique</nc1ihm:Nom>
+                      <nc1ihm:Nom xml:lang="en">Ethnical group of the individual</nc1ihm:Nom>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:element>
+                <xs:element minOccurs="0" name="intelLink" type="nc1common:MediumTextObjectType">
+                  <xs:annotation>
+                    <xs:documentation>Nom de la fiche RENS se rapportant à l’individu ou au groupe d’individus.</xs:documentation>
+                    <xs:documentation xml:lang="en">Name card UCR related to the individual or group of individuals.</xs:documentation>
+                    <xs:appinfo>
+                      <nc1ihm:Nom>Lien RENS</nc1ihm:Nom>
+                      <nc1ihm:Nom xml:lang="en">INTEL link</nc1ihm:Nom>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:element>
+                <xs:element minOccurs="0" name="patientLink" type="nc1common:MediumTextObjectType">
+                  <xs:annotation>
+                    <xs:documentation>Nom de la fiche patient se rapportant à l’individu ou au groupe d’individus.</xs:documentation>
+                    <xs:documentation xml:lang="en">Name of the patient file relating to the individual or group of individuals.</xs:documentation>
+                    <xs:appinfo>
+                      <nc1ihm:Nom>Lien SANTE</nc1ihm:Nom>
+                      <nc1ihm:Nom xml:lang="en">Patient link</nc1ihm:Nom>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:element>
+                <xs:element minOccurs="0" name="cuerLink" type="nc1common:MediumTextObjectType">
+                  <xs:annotation>
+                    <xs:documentation>Catalogue unique d'emploi des ressources.</xs:documentation>
+                    <xs:documentation xml:lang="en">Unique catalogue of employment of the resources.</xs:documentation>
+                    <xs:appinfo>
+                      <nc1ihm:Nom>Lien CUER</nc1ihm:Nom>
+                      <nc1ihm:Nom xml:lang="en">CUER link</nc1ihm:Nom>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:element>
+                <xs:element minOccurs="0" name="extVersion" type="nc1common:ExtVersType">
+                  <xs:annotation>
+                    <xs:documentation>Extension pour versions suivantes compatibles.</xs:documentation>
+                    <xs:documentation xml:lang="en">Extension for following compatible versions.</xs:documentation>
+                    <xs:appinfo>
+                      <nc1ihm:Nom>Extension de version</nc1ihm:Nom>
+                      <nc1ihm:Nom xml:lang="en">version extension</nc1ihm:Nom>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:element>
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+          <xs:element minOccurs="0" name="comData" type="nc1com:ComDataType">
+            <xs:annotation>
+              <xs:documentation>Données de communication de l’individu.</xs:documentation>
+              <xs:documentation xml:lang="en">Communication data of the individual.</xs:documentation>
+              <xs:appinfo>
+                <nc1ihm:Nom>Données de communication</nc1ihm:Nom>
+                <nc1ihm:Nom xml:lang="en">Communication data</nc1ihm:Nom>
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:element>
+          <xs:element minOccurs="0" name="historyItems">
+            <xs:annotation>
+              <xs:documentation>Données d'historique sur l’individu.</xs:documentation>
+              <xs:documentation xml:lang="en">Individual history information.</xs:documentation>
+              <xs:appinfo>
+                <nc1ihm:Nom>Données d'historique</nc1ihm:Nom>
+                <nc1ihm:Nom xml:lang="en">History information</nc1ihm:Nom>
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element maxOccurs="unbounded" minOccurs="0" name="historyItem" type="nc1individual:IndividualHistoryItemType">
+                  <xs:annotation>
+                    <xs:documentation>Ligne d'historique sur l'individu.</xs:documentation>
+                    <xs:documentation xml:lang="en">Individual history item.</xs:documentation>
+                    <xs:appinfo>
+                      <nc1ihm:Nom>Ligne d'historique</nc1ihm:Nom>
+                      <nc1ihm:Nom xml:lang="en">History item</nc1ihm:Nom>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:element>
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+          <xs:element minOccurs="0" name="physicalCharacteristics">
+            <xs:annotation>
+              <xs:documentation>Caractéristiques physiques de l’individu.</xs:documentation>
+              <xs:documentation xml:lang="en">Physical characteristics of the individual.</xs:documentation>
+              <xs:appinfo>
+                <nc1ihm:Nom>Caractéristiques physiques</nc1ihm:Nom>
+                <nc1ihm:Nom xml:lang="en">Physical characteristics</nc1ihm:Nom>
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element minOccurs="0" name="height" type="nc1common:Decimal0To999Type">
+                  <xs:annotation>
+                    <xs:documentation>Taille (centimètres).</xs:documentation>
+                    <xs:documentation xml:lang="en">Height of the individual (cm).</xs:documentation>
+                    <xs:appinfo>
+                      <nc1ihm:Nom>Taille</nc1ihm:Nom>
+                      <nc1ihm:Nom xml:lang="en">Size</nc1ihm:Nom>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:element>
+                <xs:element minOccurs="0" name="weight" type="nc1common:Decimal0To999Type">
+                  <xs:annotation>
+                    <xs:documentation>Poids (kg).</xs:documentation>
+                    <xs:documentation xml:lang="en">Weight (kilograms).</xs:documentation>
+                    <xs:appinfo>
+                      <nc1ihm:Nom>Poids</nc1ihm:Nom>
+                      <nc1ihm:Nom xml:lang="en">Weight</nc1ihm:Nom>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:element>
+                <xs:element minOccurs="0" name="approximateAge" type="nc1common:Decimal0To999Type">
+                  <xs:annotation>
+                    <xs:documentation>Age estimé.</xs:documentation>
+                    <xs:documentation xml:lang="en">Estimated age.</xs:documentation>
+                    <xs:appinfo>
+                      <nc1ihm:Nom>Age</nc1ihm:Nom>
+                      <nc1ihm:Nom xml:lang="en">Age</nc1ihm:Nom>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:element>
+                <xs:element minOccurs="0" name="dateOfBirth" type="xs:dateTime">
+                  <xs:annotation>
+                    <xs:documentation>Date de naissance.</xs:documentation>
+                    <xs:documentation xml:lang="en">Date of birth.</xs:documentation>
+                    <xs:appinfo>
+                      <nc1ihm:Nom>Date de naissance</nc1ihm:Nom>
+                      <nc1ihm:Nom xml:lang="en">Date of birth</nc1ihm:Nom>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:element>
+                <xs:element minOccurs="0" name="dateOfDeath" type="xs:dateTime">
+                  <xs:annotation>
+                    <xs:documentation>Date de décès.</xs:documentation>
+                    <xs:documentation xml:lang="en">Date of death.</xs:documentation>
+                    <xs:appinfo>
+                      <nc1ihm:Nom>Date de décès</nc1ihm:Nom>
+                      <nc1ihm:Nom xml:lang="en">Date of death</nc1ihm:Nom>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:element>
+                <xs:element minOccurs="0" name="eyesColour" type="nc1sicsdicos:L112_15Code">
+                  <xs:annotation>
+                    <xs:documentation>Couleur des yeux.</xs:documentation>
+                    <xs:documentation xml:lang="en">Eyes colour.</xs:documentation>
+                    <xs:appinfo>
+                      <nc1ihm:Nom>Couleur des yeux</nc1ihm:Nom>
+                      <nc1ihm:Nom xml:lang="en">Eyes colour</nc1ihm:Nom>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:element>
+                <xs:element minOccurs="0" name="hairColour" type="nc1sicsdicos:L112_16Code">
+                  <xs:annotation>
+                    <xs:documentation>Couleur des cheveux.</xs:documentation>
+                    <xs:documentation xml:lang="en">Hair colour.</xs:documentation>
+                    <xs:appinfo>
+                      <nc1ihm:Nom>Couleur des cheveux</nc1ihm:Nom>
+                      <nc1ihm:Nom xml:lang="en">Hair colour</nc1ihm:Nom>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:element>
+                <xs:element minOccurs="0" name="bloodType" type="nc1sicsdicos:L112_13Code">
+                  <xs:annotation>
+                    <xs:documentation>Rhésus sanguin (ex : « APLUS »).</xs:documentation>
+                    <xs:documentation xml:lang="en">"Blood type (e.g. ""APLUS"")".</xs:documentation>
+                    <xs:appinfo>
+                      <nc1ihm:Nom>Groupe sanguin</nc1ihm:Nom>
+                      <nc1ihm:Nom xml:lang="en">Blood type</nc1ihm:Nom>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:element>
+                <xs:element minOccurs="0" name="description" type="nc1common:MediumTextObjectType">
+                  <xs:annotation>
+                    <xs:documentation>Description en texte libre des caractéristiques physiques de l’individu.</xs:documentation>
+                    <xs:documentation xml:lang="en">Free text description of the physical characteristics of the individual.</xs:documentation>
+                    <xs:appinfo>
+                      <nc1ihm:Nom>Description</nc1ihm:Nom>
+                      <nc1ihm:Nom xml:lang="en">Description</nc1ihm:Nom>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:element>
+                <xs:element minOccurs="0" name="extVersion" type="nc1common:ExtVersType">
+                  <xs:annotation>
+                    <xs:documentation>Extension pour versions suivantes compatibles.</xs:documentation>
+                    <xs:documentation xml:lang="en">Extension for following compatible versions.</xs:documentation>
+                    <xs:appinfo>
+                      <nc1ihm:Nom>Extension de version</nc1ihm:Nom>
+                      <nc1ihm:Nom xml:lang="en">version extension</nc1ihm:Nom>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:element>
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+          <xs:element minOccurs="0" name="administrativeProperties">
+            <xs:annotation>
+              <xs:documentation>Données administratives de l’individu.</xs:documentation>
+              <xs:documentation xml:lang="en">Administrative data of the individual.</xs:documentation>
+              <xs:appinfo>
+                <nc1ihm:Nom>Données administratives</nc1ihm:Nom>
+                <nc1ihm:Nom xml:lang="en">Administrative data</nc1ihm:Nom>
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element minOccurs="0" name="identityDocumentNumber" type="nc1common:ShortTextObjectType">
+                  <xs:annotation>
+                    <xs:documentation>Numéro de document d’identité (passeport ou autre).</xs:documentation>
+                    <xs:documentation xml:lang="en">Identity document number of the individual.</xs:documentation>
+                    <xs:appinfo>
+                      <nc1ihm:Nom>Numéro de document d’identité</nc1ihm:Nom>
+                      <nc1ihm:Nom xml:lang="en">Identity document number</nc1ihm:Nom>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:element>
+                <xs:element minOccurs="0" name="maritalStatus" type="nc1sicsdicos:L112_11Code">
+                  <xs:annotation>
+                    <xs:documentation>Statut marital (ex : « MARRIED »).</xs:documentation>
+                    <xs:documentation xml:lang="en">Marital status of the individual.</xs:documentation>
+                    <xs:appinfo>
+                      <nc1ihm:Nom>Statut marital</nc1ihm:Nom>
+                      <nc1ihm:Nom xml:lang="en">Marital status</nc1ihm:Nom>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:element>
+                <xs:element minOccurs="0" name="numberOfChildren" type="nc1common:Int0To99Type">
+                  <xs:annotation>
+                    <xs:documentation>Nombre d’enfants.</xs:documentation>
+                    <xs:documentation xml:lang="en">Number of children of the individual.</xs:documentation>
+                    <xs:appinfo>
+                      <nc1ihm:Nom>Nombre d’enfants</nc1ihm:Nom>
+                      <nc1ihm:Nom xml:lang="en">Number of children of the individual</nc1ihm:Nom>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:element>
+                <xs:element minOccurs="0" name="category" type="nc1sicsdicos:L112_8Code">
+                  <xs:annotation>
+                    <xs:documentation>Catégorie générale de l’individu (ex : « LOCAL POPULATION »).</xs:documentation>
+                    <xs:documentation xml:lang="en">"General category to which the individual belongs (e.g. ""LOCAL POPULATION"")".</xs:documentation>
+                    <xs:appinfo>
+                      <nc1ihm:Nom>Catégorie</nc1ihm:Nom>
+                      <nc1ihm:Nom xml:lang="en">Category</nc1ihm:Nom>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:element>
+                <xs:element minOccurs="0" name="militaryCategory" type="nc1sicsdicos:L112_3Code">
+                  <xs:annotation>
+                    <xs:documentation>Catégorie militaire de l’individu.</xs:documentation>
+                    <xs:documentation xml:lang="en">Military category to which the individual belongs.</xs:documentation>
+                    <xs:appinfo>
+                      <nc1ihm:Nom>Catégorie militaire</nc1ihm:Nom>
+                      <nc1ihm:Nom xml:lang="en">Military category</nc1ihm:Nom>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:element>
+                <xs:element minOccurs="0" name="unitId" type="nc1common:Nc1ObjectRefType">
+                  <xs:annotation>
+                    <xs:documentation>Si l’individu est militaire, identifiant unique NC1 de l’unité d’appartenance.</xs:documentation>
+                    <xs:documentation xml:lang="en">If the individual is a serviceman: NC1 ID of the unit he belongs to.</xs:documentation>
+                    <xs:appinfo>
+                      <nc1ihm:Nom>Unité</nc1ihm:Nom>
+                      <nc1ihm:Nom xml:lang="en">unit</nc1ihm:Nom>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:element>
+                <xs:element minOccurs="0" name="extVersion" type="nc1common:ExtVersType">
+                  <xs:annotation>
+                    <xs:documentation>Extension pour versions suivantes compatibles.</xs:documentation>
+                    <xs:documentation xml:lang="en">Extension for following compatible versions.</xs:documentation>
+                    <xs:appinfo>
+                      <nc1ihm:Nom>Extension de version</nc1ihm:Nom>
+                      <nc1ihm:Nom xml:lang="en">version extension</nc1ihm:Nom>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:element>
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+          <xs:element minOccurs="0" name="location">
+            <xs:annotation>
+              <xs:documentation>Localisation.</xs:documentation>
+              <xs:documentation xml:lang="en">Location.</xs:documentation>
+              <xs:appinfo>
+                <nc1ihm:Nom>Localisation</nc1ihm:Nom>
+                <nc1ihm:Nom xml:lang="en">Location</nc1ihm:Nom>
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element minOccurs="0" name="name" type="nc1common:Text1To30ObjectType">
+                  <xs:annotation>
+                    <xs:documentation>Nom de baptême donné par l'opérateur à la localisation. Par exemple un nom de ville ou de lieu.</xs:documentation>
+                    <xs:documentation xml:lang="en">Name assigned to the location, e.g. city or place name.</xs:documentation>
+                    <xs:appinfo>
+                      <nc1ihm:Nom>Nom</nc1ihm:Nom>
+                      <nc1ihm:Nom xml:lang="en">name</nc1ihm:Nom>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:element>
+                <xs:choice>
+                  <xs:element name="point" type="nc1location:PointType">
+                    <xs:annotation>
+                      <xs:documentation>Point localisé.</xs:documentation>
+                      <xs:documentation xml:lang="en">Geolocalized point.</xs:documentation>
+                      <xs:appinfo>
+                        <nc1ihm:Nom>Point</nc1ihm:Nom>
+                        <nc1ihm:Nom xml:lang="en">Point</nc1ihm:Nom>
+                      </xs:appinfo>
+                    </xs:annotation>
+                  </xs:element>
+                  <xs:element name="polygon" type="nc1location:PolygonType">
+                    <xs:annotation>
+                      <xs:documentation>Polygone, ou ligne brisée fermée.</xs:documentation>
+                      <xs:documentation xml:lang="en">Polygon, or closed polyline.</xs:documentation>
+                      <xs:appinfo>
+                        <nc1ihm:Nom>Polygone</nc1ihm:Nom>
+                        <nc1ihm:Nom xml:lang="en">Polygon</nc1ihm:Nom>
+                      </xs:appinfo>
+                    </xs:annotation>
+                  </xs:element>
+                  <xs:element name="circle" type="nc1location:CircleType">
+                    <xs:annotation>
+                      <xs:documentation>Cercle.</xs:documentation>
+                      <xs:documentation xml:lang="en">Circle.</xs:documentation>
+                      <xs:appinfo>
+                        <nc1ihm:Nom>Cercle</nc1ihm:Nom>
+                        <nc1ihm:Nom xml:lang="en">Circle</nc1ihm:Nom>
+                      </xs:appinfo>
+                    </xs:annotation>
+                  </xs:element>
+                  <xs:element name="ellipse" type="nc1location:EllipseType">
+                    <xs:annotation>
+                      <xs:documentation>Ellipse.</xs:documentation>
+                      <xs:documentation xml:lang="en">Ellipse.</xs:documentation>
+                      <xs:appinfo>
+                        <nc1ihm:Nom>Ellipse</nc1ihm:Nom>
+                        <nc1ihm:Nom xml:lang="en">Ellipse</nc1ihm:Nom>
+                      </xs:appinfo>
+                    </xs:annotation>
+                  </xs:element>
+                  <xs:element name="arcband" type="nc1location:ArcbandType">
+                    <xs:annotation>
+                      <xs:documentation>Radarc ou segment d’anneau.</xs:documentation>
+                      <xs:documentation xml:lang="en">Arcband.</xs:documentation>
+                      <xs:appinfo>
+                        <nc1ihm:Nom>Radarc</nc1ihm:Nom>
+                        <nc1ihm:Nom xml:lang="en">Arcband, or 4 points sector</nc1ihm:Nom>
+                      </xs:appinfo>
+                    </xs:annotation>
+                  </xs:element>
+                </xs:choice>
+                <xs:choice minOccurs="0">
+                  <xs:element minOccurs="0" name="groundSpeed" type="nc1common:SpeedType">
+                    <xs:annotation>
+                      <xs:documentation>Vitesse au sol de la localisation (km/h).</xs:documentation>
+                      <xs:documentation xml:lang="en">ground speed of location (km/h).</xs:documentation>
+                      <xs:appinfo>
+                        <nc1ihm:Nom>Vitesse au sol</nc1ihm:Nom>
+                        <nc1ihm:Nom xml:lang="en">ground speed</nc1ihm:Nom>
+                      </xs:appinfo>
+                    </xs:annotation>
+                  </xs:element>
+                  <xs:element minOccurs="0" name="approximateSpeed" type="nc1sicsdicos:L121_1Code">
+                    <xs:annotation>
+                      <xs:documentation>Vitesse approximative.</xs:documentation>
+                      <xs:documentation xml:lang="en">approxiamte speed.</xs:documentation>
+                      <xs:appinfo>
+                        <nc1ihm:Nom>Vitesse approximative</nc1ihm:Nom>
+                        <nc1ihm:Nom xml:lang="en">approxiamte speed</nc1ihm:Nom>
+                      </xs:appinfo>
+                    </xs:annotation>
+                  </xs:element>
+                </xs:choice>
+                <xs:element minOccurs="0" name="course" type="nc1common:AngleType">
+                  <xs:annotation>
+                    <xs:documentation>Direction du vecteur vitesse.</xs:documentation>
+                    <xs:documentation xml:lang="en">Rotation angle of the speed vector from the geographical North.</xs:documentation>
+                    <xs:appinfo>
+                      <nc1ihm:Nom>Direction</nc1ihm:Nom>
+                      <nc1ihm:Nom xml:lang="en">Direction</nc1ihm:Nom>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:element>
+                <xs:element minOccurs="0" name="datetime" type="xs:dateTime">
+                  <xs:annotation>
+                    <xs:documentation>Horodatage du relevé de position sur le terrain. Par défaut, l'heure de saisie dans le système.</xs:documentation>
+                    <xs:documentation xml:lang="en">Field position report time. By default, time of the input in the system.</xs:documentation>
+                    <xs:appinfo>
+                      <nc1ihm:Nom>Horodatage</nc1ihm:Nom>
+                      <nc1ihm:Nom xml:lang="en">Timestamp</nc1ihm:Nom>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:element>
+                <xs:element minOccurs="0" name="quality" type="nc1sicsdicos:L117_5Code">
+                  <xs:annotation>
+                    <xs:documentation>Qualité de la mesure de la localisation.</xs:documentation>
+                    <xs:documentation xml:lang="en">Location measurement quality.</xs:documentation>
+                    <xs:appinfo>
+                      <nc1ihm:Nom>Qualité</nc1ihm:Nom>
+                      <nc1ihm:Nom xml:lang="en">Quality</nc1ihm:Nom>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:element>
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+</xs:schema>

@@ -1,0 +1,25 @@
+﻿Evolutions réalisées :
+L'ODB conserve les noms, s'ils existent.
+ _mapView.CaptureMouse();// modif pra .ReleaseMouseCapture(); Le drag&drop fonctionne sur la carte
+ chargement des shapefiles (sbx a debugegr)
+ - drag&drog d'un fichier vers l'appli
+- terrain en local
+TODO : 
+https://www.codeproject.com/Articles/17025/Custom-TreeView-Layout-in-WPF pour l'ODB 
+- afficher le nom de la carto plutot que le texte de la barre de status
+- legende d'une  carte (openstreetmap +++)
+
+
+- Lecture d'une mission (pb sur la serialization du temps)
+- ViewshedServiceUrl = "http://sampleserver6.arcgisonline.com/arcgis/rest/services/Elevation/ESRI_Elevation_World/GPServer/Viewshed";
+quid si terrain en local ?
+- Status bar, (apparait dans Viewshed)
+- i18n
+- rechercher un lieu par son nom.
+_coordinateReadoutFormat comment le changer pour selection  des coordonnées. (Voire apres les unités de mesure)
+BUG :
+Certains calculs de secteur de surveillance ne se lancent pas (gibraltar)
+tooltip qui apparaissent mal
+Dans le panneau Goto, on devrait avoir une preselection d'une echelle et d'un type de coordonnées.
+Le calcul de serveur est plus limité en longeur que ce qui est dans la fenetre
+http://sampleserver6.arcgisonline.com/arcgis/rest/services/Elevation/ESRI_Elevation_World/GPServer/Viewshed indique valeur par defaut 15 km, max 20.

@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema targetNamespace="urn:fra:nc1:message:cbrncdr" xmlns:nc1ihm="urn:fra:nc1:IHM" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:nc1cbrncdr="urn:fra:nc1:message:cbrncdr" xmlns:nc1cbrn="urn:fra:nc1:common:cbrn" xmlns:nc1msgcom="urn:fra:nc1:common:message">
+  <!-- NC1 V.9.0.0 -->
+  <xs:import namespace="urn:fra:nc1:common:cbrn" schemaLocation="../Commun/Cbrn.xsd" />
+  <xs:import namespace="urn:fra:nc1:common:message" schemaLocation="../Commun/Message.xsd" />
+  <xs:element name="NC1_CBRN-CDR">
+    <xs:annotation>
+      <xs:documentation>Le message NC1_CBRN-CDR permet de de diffuser les prévisions météorologiques nécessaires au calcul des zones de danger associées à un événement biologique ou chimique. Ces prévisions météorologiques sont données par tranches horaires de deux heures.</xs:documentation>
+      <xs:documentation xml:lang="en">The NC1_CBRN-CDR message allows of to spread weather forecasts necessary for the calculation of the zones of danger associated with a biological or chemical event. These weather forecasts are given by time slots of two hours.</xs:documentation>
+      <xs:appinfo>
+        <nc1:type xmlns:nc1="urn:fra:nc1">Message</nc1:type>
+        <nc1ihm:Nom>Diffusion des informations météorologiques</nc1ihm:Nom>
+        <nc1ihm:Nom xml:lang="en">Cbrn chemical downwind report</nc1ihm:Nom>
+        <nc1:MessH xmlns:nc1="urn:fra:nc1">N/A</nc1:MessH>
+        <nc1:MessADatP3 xmlns:nc1="urn:fra:nc1">CBRN_CDR</nc1:MessADatP3>
+        <nc1:LastNC1ModifyVersion xmlns:nc1="urn:fra:nc1">9.0.0</nc1:LastNC1ModifyVersion>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:complexContent>
+        <xs:extension base="nc1msgcom:BaseMessageType">
+          <xs:sequence>
+            <xs:element name="aream" type="nc1cbrn:AreamType">
+              <xs:annotation>
+                <xs:documentation>Nom de la zone de validité.</xs:documentation>
+                <xs:documentation xml:lang="en">Validity area name.</xs:documentation>
+                <xs:appinfo>
+                  <nc1ihm:Nom>AREAM</nc1ihm:Nom>
+                  <nc1ihm:Nom xml:lang="en">AREAM</nc1ihm:Nom>
+                </xs:appinfo>
+              </xs:annotation>
+            </xs:element>
+            <xs:element name="whiskeym" type="nc1cbrn:WhiskeymType">
+              <xs:annotation>
+                <xs:documentation>Météo au sol pour la première période météo de deux heures.</xs:documentation>
+                <xs:documentation xml:lang="en">Ground weather for the 1st 2 hours weather period.</xs:documentation>
+                <xs:appinfo>
+                  <nc1ihm:Nom>WHISKEYM</nc1ihm:Nom>
+                  <nc1ihm:Nom xml:lang="en">WHISKEYM</nc1ihm:Nom>
+                </xs:appinfo>
+              </xs:annotation>
+            </xs:element>
+            <xs:element minOccurs="0" name="xraym" type="nc1cbrn:XraymType">
+              <xs:annotation>
+                <xs:documentation>Météo au sol pour la deuxième période météo de deux heures.</xs:documentation>
+                <xs:documentation xml:lang="en">Ground weather for the 2nd 2 hours weather period.</xs:documentation>
+                <xs:appinfo>
+                  <nc1ihm:Nom>XRAYM</nc1ihm:Nom>
+                  <nc1ihm:Nom xml:lang="en">XRAYM</nc1ihm:Nom>
+                </xs:appinfo>
+              </xs:annotation>
+            </xs:element>
+            <xs:element minOccurs="0" name="yankeem" type="nc1cbrn:YankeemType">
+              <xs:annotation>
+                <xs:documentation>Météo au sol pour la troisième période météo de deux heures.</xs:documentation>
+                <xs:documentation xml:lang="en">Ground weather for the 3rd 2 hours weather period.</xs:documentation>
+                <xs:appinfo>
+                  <nc1ihm:Nom>YANKEEM</nc1ihm:Nom>
+                  <nc1ihm:Nom xml:lang="en">YANKEEM</nc1ihm:Nom>
+                </xs:appinfo>
+              </xs:annotation>
+            </xs:element>
+            <xs:element name="zulum" type="nc1cbrn:ZulumType">
+              <xs:annotation>
+                <xs:documentation>Horodatage d'observation et période de validité.</xs:documentation>
+                <xs:documentation xml:lang="en">Observation timestamp and period of validity.</xs:documentation>
+                <xs:appinfo>
+                  <nc1ihm:Nom>ZULUM</nc1ihm:Nom>
+                  <nc1ihm:Nom xml:lang="en">ZULUM</nc1ihm:Nom>
+                </xs:appinfo>
+              </xs:annotation>
+            </xs:element>
+          </xs:sequence>
+        </xs:extension>
+      </xs:complexContent>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

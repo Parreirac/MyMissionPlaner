@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<cva:ContextValueAssociation xmlns:cva="http://docs.oasis-open.org/codelist/ns/ContextValueAssociation/1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="urn:fra:nc1:message:conarep" queryBinding="xslt2" xmlns:nc1conarep="urn:fra:nc1:message:conarep">
+  <!-- NC1 V.9.0.0 -->
+  <ValueLists>
+    <ValueList xml:id="nc1msgcom-ClassificationCode" uri="../Dictionnaires/ClassificationCode.gc" />
+    <ValueList xml:id="nc1msgcom-UrgencyLevelCode" uri="../Dictionnaires/UrgencyLevelCode.gc" />
+    <ValueList xml:id="nc1objcom-ActivationStatusCode" uri="../Dictionnaires/ActivationStatusCode.gc" />
+    <ValueList xml:id="nc1objcom-IsFullCode" uri="../Dictionnaires/IsFullCode.gc" />
+    <ValueList xml:id="nc1convoy-ConvoyStatusCode" uri="../Dictionnaires/ConvoyStatusCode.gc" />
+    <ValueList xml:id="nc1convoy-MovementPriorityCode" uri="../Dictionnaires/MovementPriorityCode.gc" />
+    <ValueList xml:id="nc1convoy-MovementPrimaryConsiderationCode" uri="../Dictionnaires/MovementPrimaryConsiderationCode.gc" />
+    <ValueList xml:id="nc1sicsdicos-L117_5Code" uri="../Dictionnaires/L117_5Code.gc" />
+    <ValueList xml:id="nc1logistics-MobilityCategoryCode" uri="../Dictionnaires/MobilityCategoryCode.gc" />
+    <ValueList xml:id="nc1route-ModeOfTransportationCode" uri="../Dictionnaires/ModeOfTransportationCode.gc" />
+    <ValueList xml:id="nc1sicsdicos-L135_32Code" uri="../Dictionnaires/L135_32Code.gc" />
+    <ValueList xml:id="nc1sicsdicos-L135_33Code" uri="../Dictionnaires/L135_33Code.gc" />
+    <ValueList xml:id="nc1sicsdicos-L135_14Code" uri="../Dictionnaires/L135_14Code.gc" />
+    <ValueList xml:id="nc1sicsdicos-L135_15Code" uri="../Dictionnaires/L135_15Code.gc" />
+    <ValueList xml:id="nc1sicsdicos-L112_1Code" uri="../Dictionnaires/L112_1Code.gc" />
+    <ValueList xml:id="nc1unit-UnitFrSpecificCode" uri="../Dictionnaires/UnitFrSpecificCode.gc" />
+    <ValueList xml:id="nc1sicsdicos-L125_1Code" uri="../Dictionnaires/L125_1Code.gc" />
+    <ValueList xml:id="nc1sicsdicos-L115_1Code" uri="../Dictionnaires/L115_1Code.gc" />
+    <ValueList xml:id="nc1sicsdicos-L135_30Code" uri="../Dictionnaires/L135_30Code.gc" />
+    <ValueList xml:id="nc1sicsdicos-L110_30Code" uri="../Dictionnaires/L110_30Code.gc" />
+    <ValueList xml:id="nc1sicsdicos-L135_1Code" uri="../Dictionnaires/L135_1Code.gc" />
+    <ValueList xml:id="nc1sicsdicos-L125_7Code" uri="../Dictionnaires/L125_7Code.gc" />
+    <ValueList xml:id="nc1sicsdicos-L107_1Code" uri="../Dictionnaires/L107_1Code.gc" />
+    <ValueList xml:id="nc1sicsdicos-L114_1Code" uri="../Dictionnaires/L114_1Code.gc" />
+    <ValueList xml:id="nc1sicsdicos-L135_16Code" uri="../Dictionnaires/L135_16Code.gc" />
+    <ValueList xml:id="nc1sicsdicos-L125_17Code" uri="../Dictionnaires/L125_17Code.gc" />
+    <ValueList xml:id="nc1sicsdicos-L125_16Code" uri="../Dictionnaires/L125_16Code.gc" />
+    <ValueList xml:id="nc1sicsdicos-L114_10Code" uri="../Dictionnaires/L114_10Code.gc" />
+  </ValueLists>
+  <Contexts>
+    <Context address="/nc1conarep:NC1_ConARep/@classification" values="nc1msgcom-ClassificationCode" />
+    <Context address="/nc1conarep:NC1_ConARep/@urgencyLevel" values="nc1msgcom-UrgencyLevelCode" />
+    <Context address="/nc1conarep:NC1_ConARep/movementArrivalReport/convoy/@activationStatus" values="nc1objcom-ActivationStatusCode" />
+    <Context address="/nc1conarep:NC1_ConARep/movementArrivalReport/convoy/@isFull" values="nc1objcom-IsFullCode" />
+    <Context address="/nc1conarep:NC1_ConARep/movementArrivalReport/convoy/tacticalData/status" values="nc1convoy-ConvoyStatusCode" />
+    <Context address="/nc1conarep:NC1_ConARep/movementArrivalReport/convoy/movementData/priority" values="nc1convoy-MovementPriorityCode" />
+    <Context address="/nc1conarep:NC1_ConARep/movementArrivalReport/convoy/movementData/primaryConsideration" values="nc1convoy-MovementPrimaryConsiderationCode" />
+    <Context address="/nc1conarep:NC1_ConARep/movementArrivalReport/convoy/location/quality" values="nc1sicsdicos-L117_5Code" />
+    <Context address="/nc1conarep:NC1_ConARep/movementArrivalReport/associatedRoute/@activationStatus" values="nc1objcom-ActivationStatusCode" />
+    <Context address="/nc1conarep:NC1_ConARep/movementArrivalReport/associatedRoute/@isFull" values="nc1objcom-IsFullCode" />
+    <Context address="/nc1conarep:NC1_ConARep/movementArrivalReport/associatedRoute/tacticalData/mobility" values="nc1logistics-MobilityCategoryCode" />
+    <Context address="/nc1conarep:NC1_ConARep/movementArrivalReport/associatedRoute/tacticalData/modeOfTransportation" values="nc1route-ModeOfTransportationCode" />
+    <Context address="/nc1conarep:NC1_ConARep/movementArrivalReport/associatedRoute/tacticalData/generalPracticability" values="nc1sicsdicos-L135_32Code" />
+    <Context address="/nc1conarep:NC1_ConARep/movementArrivalReport/associatedRoute/tacticalData/instantPracticability" values="nc1sicsdicos-L135_33Code" />
+    <Context address="/nc1conarep:NC1_ConARep/movementArrivalReport/event/@activationStatus" values="nc1objcom-ActivationStatusCode" />
+    <Context address="/nc1conarep:NC1_ConARep/movementArrivalReport/event/@isFull" values="nc1objcom-IsFullCode" />
+    <Context address="/nc1conarep:NC1_ConARep/movementArrivalReport/event/tacticalData/reliability" values="nc1sicsdicos-L135_14Code" />
+    <Context address="/nc1conarep:NC1_ConARep/movementArrivalReport/event/tacticalData/credibility" values="nc1sicsdicos-L135_15Code" />
+    <Context address="/nc1conarep:NC1_ConARep/movementArrivalReport/event/tacticalData/personnelCasualties/category" values="nc1sicsdicos-L112_1Code" />
+    <Context address="/nc1conarep:NC1_ConARep/movementArrivalReport/event/location/quality" values="nc1sicsdicos-L117_5Code" />
+    <Context address="/nc1conarep:NC1_ConARep/movementArrivalReport/reportingUnit/@activationStatus" values="nc1objcom-ActivationStatusCode" />
+    <Context address="/nc1conarep:NC1_ConARep/movementArrivalReport/reportingUnit/@isFull" values="nc1objcom-IsFullCode" />
+    <Context address="/nc1conarep:NC1_ConARep/movementArrivalReport/reportingUnit/tacticalData/frSpecificSymbol" values="nc1unit-UnitFrSpecificCode" />
+    <Context address="/nc1conarep:NC1_ConARep/movementArrivalReport/reportingUnit/tacticalData/operationalStatusIndicator" values="nc1sicsdicos-L125_1Code" />
+    <Context address="/nc1conarep:NC1_ConARep/movementArrivalReport/reportingUnit/tacticalData/activity" values="nc1sicsdicos-L115_1Code" />
+    <Context address="/nc1conarep:NC1_ConARep/movementArrivalReport/reportingUnit/tacticalData/isDismounted" values="nc1sicsdicos-L135_30Code" />
+    <Context address="/nc1conarep:NC1_ConARep/movementArrivalReport/reportingUnit/tacticalData/commandAndControlRole" values="nc1sicsdicos-L110_30Code" />
+    <Context address="/nc1conarep:NC1_ConARep/movementArrivalReport/reportingUnit/tacticalData/ticIndicator" values="nc1sicsdicos-L135_1Code" />
+    <Context address="/nc1conarep:NC1_ConARep/movementArrivalReport/reportingUnit/tacticalData/availability" values="nc1sicsdicos-L125_7Code" />
+    <Context address="/nc1conarep:NC1_ConARep/movementArrivalReport/reportingUnit/tacticalData/cbrnProtection" values="nc1sicsdicos-L107_1Code" />
+    <Context address="/nc1conarep:NC1_ConARep/movementArrivalReport/reportingUnit/tacticalData/weaponControlOrder" values="nc1sicsdicos-L114_1Code" />
+    <Context address="/nc1conarep:NC1_ConARep/movementArrivalReport/reportingUnit/tacticalData/subordination/subordinationType" values="nc1sicsdicos-L135_16Code" />
+    <Context address="/nc1conarep:NC1_ConARep/movementArrivalReport/reportingUnit/status/operationalStatus/effectif" values="nc1sicsdicos-L125_17Code" />
+    <Context address="/nc1conarep:NC1_ConARep/movementArrivalReport/reportingUnit/status/operationalStatus/personnelTiredness" values="nc1sicsdicos-L125_16Code" />
+    <Context address="/nc1conarep:NC1_ConARep/movementArrivalReport/reportingUnit/status/operationalStatus/equipment" values="nc1sicsdicos-L125_17Code" />
+    <Context address="/nc1conarep:NC1_ConARep/movementArrivalReport/reportingUnit/status/operationalStatus/fuel" values="nc1sicsdicos-L125_17Code" />
+    <Context address="/nc1conarep:NC1_ConARep/movementArrivalReport/reportingUnit/status/operationalStatus/ammunitions" values="nc1sicsdicos-L125_17Code" />
+    <Context address="/nc1conarep:NC1_ConARep/movementArrivalReport/reportingUnit/location/quality" values="nc1sicsdicos-L117_5Code" />
+    <Context address="/nc1conarep:NC1_ConARep/movementArrivalReport/reportingUnit/anticipatedStance/validityPeriod/tacticalTime" values="nc1sicsdicos-L114_10Code" />
+  </Contexts>
+</cva:ContextValueAssociation>

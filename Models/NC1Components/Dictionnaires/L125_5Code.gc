@@ -1,0 +1,93 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<gc:CodeList xmlns:nc1dico="urn:fra:nc1:dictionnaires" xmlns:gc="http://docs.oasis-open.org/codelist/ns/genericode/1.0/">
+  <Annotation>
+    <Description>
+      <nc1dico:description>INDICATEUR PERMETTANT DE MARQUER UNE PISTE POUR INDIQUER QU’ELLE PRESENTE UN INTERET PARTICULIER. AUCUNE PROCEDURE SPECIFIQUE CONCERNANT LE TRAITEMENT DE CET INDICATEUR N’EST SPECIFIE.</nc1dico:description>
+      <nc1dico:description xml:lang="en">Indicator allowing to mark a track to indicate that it presents a particular interest. No specific procedure concerning the treatment of this indicator is specified.</nc1dico:description>
+    </Description>
+    <AppInfo>
+      <nc1dico:source>SFTT 3.4.8</nc1dico:source>
+      <nc1dico:derogation>INDICATEUR DE TRAITEMENT SPECIFIQUE</nc1dico:derogation>
+    </AppInfo>
+  </Annotation>
+  <Identification>
+    <ShortName>L125_5Code</ShortName>
+    <Version>9.0.0</Version>
+    <CanonicalUri>urn:fra:nc1:common:sicsdicos:L125_5Code</CanonicalUri>
+    <CanonicalVersionUri>urn:fra:nc1:common:sicsdicos:L125_5Code:9.0.0</CanonicalVersionUri>
+  </Identification>
+  <ColumnSet DatatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes">
+    <Column Id="code" Use="required">
+      <ShortName>Code</ShortName>
+      <Data Type="int" />
+    </Column>
+    <Column Id="short" Use="required">
+      <ShortName>Short</ShortName>
+      <Data Type="string" />
+    </Column>
+    <Column Id="long" Use="optional">
+      <ShortName>Long</ShortName>
+      <Data Type="string" />
+    </Column>
+    <Column Id="short-en" Use="optional">
+      <ShortName>Short anglais</ShortName>
+      <Data Type="string" />
+    </Column>
+    <Column Id="long-en" Use="optional">
+      <ShortName>Long anglais</ShortName>
+      <Data Type="string" />
+    </Column>
+    <Column Id="parent" Use="optional">
+      <ShortName>Parent</ShortName>
+      <Data Type="int" />
+    </Column>
+    <Column Id="codeSymbole" Use="optional">
+      <ShortName>Code Symbole</ShortName>
+      <Data Type="string" />
+    </Column>
+    <Column Id="codeHierarchique" Use="optional">
+      <ShortName>Code Hierarchique</ShortName>
+      <Data Type="string" />
+    </Column>
+    <Key Id="codeKey">
+      <ShortName>CodeKey</ShortName>
+      <ColumnRef Ref="code" />
+    </Key>
+  </ColumnSet>
+  <SimpleCodeList>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>0</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>NOSPEC</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>INDIQUE QUE LA PISTE NE DISPOSE PAS DE MARQUEUR DE TRAITEMENT SPECIFIQUE</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>NOSPECMARKER</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>INDICATE THAT THE TRACK HAS NOT A SPECIFIC  TREATMENT'S MARKER</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>1</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>SPEC</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>INDIQUE QUE LA PISTE DISPOSE D'UN MARQUEUR DE TRAITEMENT SPECIFIQUE</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>SPECMARKER</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>INDICATE THAT THE TRACK HAS A SPECIFIC  TREATMENT'S MARKER</SimpleValue>
+      </Value>
+    </Row>
+  </SimpleCodeList>
+</gc:CodeList>

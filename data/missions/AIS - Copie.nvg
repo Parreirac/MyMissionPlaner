@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<nvg version="0.3">
+   <a href="http://niris.ncia.nato.int:8080/tracks-monitor/TrackStoreTrack?rawTrackId=95768918-c090-4fe8-8d1b-f32fe4f7b8db">
+      <point course="328.8" id="95768918-c090-4fe8-8d1b-f32fe4f7b8db"
+             label="AIS:244216000 - Unknown"
+             speed="9.61123110151188"
+             symbol="app6a:SPSP----------C"
+             x="4.082719330949744"
+             y="51.97369599028778"/>
+   </a>
+   <a href="http://niris.ncia.nato.int:8080/tracks-monitor/TrackStoreTrack?rawTrackId=da10aeaa-c2ea-4f65-9faf-dbbdff02765a">
+      <point course="277.0" id="da10aeaa-c2ea-4f65-9faf-dbbdff02765a"
+             label="AIS:273441760 - Unknown"
+             speed="13.606911447084233"
+             symbol="app6a:SPSP----------C"
+             x="4.515552789899873"
+             y="52.46708303297556"/>
+   </a>
+</nvg>

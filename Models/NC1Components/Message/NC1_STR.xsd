@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema targetNamespace="urn:fra:nc1:message:str" xmlns:nc1ihm="urn:fra:nc1:IHM" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:nc1str="urn:fra:nc1:message:str" xmlns:nc1msgcom="urn:fra:nc1:common:message">
+  <!-- NC1 V.9.0.0 -->
+  <xs:import namespace="urn:fra:nc1:common:message" schemaLocation="../Commun/Message.xsd" />
+  <xs:element name="NC1_STR">
+    <xs:annotation>
+      <xs:documentation>Le message NC1_STR permet de décrire et d’envoyer sa situation de référence vers les subordonnés, les voisins et à titre d’information au supérieur.</xs:documentation>
+      <xs:documentation xml:lang="en">The NC1_STR message allows to describe and send its reference situation to subordinates, neighbours and to superior for information purpose.</xs:documentation>
+      <xs:appinfo>
+        <nc1:type xmlns:nc1="urn:fra:nc1">Message</nc1:type>
+        <nc1ihm:Nom>Situation tactique de référence</nc1ihm:Nom>
+        <nc1ihm:Nom xml:lang="en">Tactical situation reference</nc1ihm:Nom>
+        <nc1:MessH xmlns:nc1="urn:fra:nc1">N/A</nc1:MessH>
+        <nc1:MessADatP3 xmlns:nc1="urn:fra:nc1">N/A</nc1:MessADatP3>
+        <nc1:LastNC1ModifyVersion xmlns:nc1="urn:fra:nc1">9.0.0</nc1:LastNC1ModifyVersion>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:complexContent>
+        <xs:extension base="nc1msgcom:BaseMessageType">
+          <xs:sequence>
+            <xs:element name="enemyForcesSituation" type="nc1msgcom:MixedAnyType">
+              <xs:annotation>
+                <xs:documentation>Situation de référence ennemie.</xs:documentation>
+                <xs:documentation xml:lang="en">Reference situation of the enemy forces.</xs:documentation>
+                <xs:appinfo>
+                  <nc1ihm:Nom>Situation de référence ennemie</nc1ihm:Nom>
+                  <nc1ihm:Nom xml:lang="en">Reference situation of the enemy forces</nc1ihm:Nom>
+                </xs:appinfo>
+              </xs:annotation>
+            </xs:element>
+            <xs:element name="ownForcesSituation" type="nc1msgcom:MixedAnyType">
+              <xs:annotation>
+                <xs:documentation>Situation de référence amie.</xs:documentation>
+                <xs:documentation xml:lang="en">Reference situation of own forces.</xs:documentation>
+                <xs:appinfo>
+                  <nc1ihm:Nom>Situation de référence amie</nc1ihm:Nom>
+                  <nc1ihm:Nom xml:lang="en">Reference situation of own forces</nc1ihm:Nom>
+                </xs:appinfo>
+              </xs:annotation>
+            </xs:element>
+            <xs:element minOccurs="0" name="environment" type="nc1msgcom:MixedAnyType">
+              <xs:annotation>
+                <xs:documentation>Milieu.</xs:documentation>
+                <xs:documentation xml:lang="en">Environment.</xs:documentation>
+                <xs:appinfo>
+                  <nc1ihm:Nom>Milieu</nc1ihm:Nom>
+                  <nc1ihm:Nom xml:lang="en">Environment</nc1ihm:Nom>
+                </xs:appinfo>
+              </xs:annotation>
+            </xs:element>
+            <xs:element minOccurs="0" name="comment" type="nc1msgcom:CommentSectionType">
+              <xs:annotation>
+                <xs:documentation>Commentaire en texte libre.</xs:documentation>
+                <xs:documentation xml:lang="en">free text comment.</xs:documentation>
+                <xs:appinfo>
+                  <nc1ihm:Nom>Commentaire</nc1ihm:Nom>
+                  <nc1ihm:Nom xml:lang="en">comment</nc1ihm:Nom>
+                </xs:appinfo>
+              </xs:annotation>
+            </xs:element>
+          </xs:sequence>
+        </xs:extension>
+      </xs:complexContent>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

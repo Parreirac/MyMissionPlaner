@@ -1,0 +1,1127 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<gc:CodeList xmlns:nc1dico="urn:fra:nc1:dictionnaires" xmlns:gc="http://docs.oasis-open.org/codelist/ns/genericode/1.0/">
+  <Annotation>
+    <Description>
+      <nc1dico:description>Dénomination d'un agent NRBC.</nc1dico:description>
+      <nc1dico:description xml:lang="en">CBRN agent name.</nc1dico:description>
+    </Description>
+    <AppInfo>
+      <nc1dico:source>STAT dictionnaire 85
+ADatP-3 BL14 1022/9</nc1dico:source>
+      <nc1dico:derogation></nc1dico:derogation>
+    </AppInfo>
+  </Annotation>
+  <Identification>
+    <ShortName>SubstanceNameCode</ShortName>
+    <Version>9.0.0</Version>
+    <CanonicalUri>urn:fra:nc1:common:cbrn:SubstanceNameCode</CanonicalUri>
+    <CanonicalVersionUri>urn:fra:nc1:common:cbrn:SubstanceNameCode:9.0.0</CanonicalVersionUri>
+  </Identification>
+  <ColumnSet DatatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes">
+    <Column Id="code" Use="required">
+      <ShortName>Code</ShortName>
+      <Data Type="int" />
+    </Column>
+    <Column Id="short" Use="required">
+      <ShortName>Short</ShortName>
+      <Data Type="string" />
+    </Column>
+    <Column Id="long" Use="optional">
+      <ShortName>Long</ShortName>
+      <Data Type="string" />
+    </Column>
+    <Column Id="short-en" Use="optional">
+      <ShortName>Short anglais</ShortName>
+      <Data Type="string" />
+    </Column>
+    <Column Id="long-en" Use="optional">
+      <ShortName>Long anglais</ShortName>
+      <Data Type="string" />
+    </Column>
+    <Column Id="parent" Use="optional">
+      <ShortName>Parent</ShortName>
+      <Data Type="int" />
+    </Column>
+    <Column Id="codeSymbole" Use="optional">
+      <ShortName>Code Symbole</ShortName>
+      <Data Type="string" />
+    </Column>
+    <Column Id="codeHierarchique" Use="optional">
+      <ShortName>Code Hierarchique</ShortName>
+      <Data Type="string" />
+    </Column>
+    <Key Id="codeKey">
+      <ShortName>CodeKey</ShortName>
+      <ColumnRef Ref="code" />
+    </Key>
+  </ColumnSet>
+  <SimpleCodeList>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>0</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>AFLATOXINE</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>AFLATOXINS</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>1</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>BRUCELLOSE</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>BRUCELLA SPP</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>2</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>CHOLERA</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>VIBRIO CHOLERAE</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>3</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>DERIVE DE LA VARIOLE (SMALL POX)</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>MONKEYPOX VIRUS</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>4</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>ENTEROTOXINE STAPHYLOCOCCIQUE</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>STAPHYLOCOCCAL ENTEROTOXINS</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>5</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>FIEVRE JAUNE</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>YELLOW FEVER VIRUS</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>6</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>HANTAVIRUS</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>HANTAVIRUSES</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>7</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>IDEM</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>ESCHERICHIA COLI</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>8</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>PESTE</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>YERSINIA PESTIS</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>9</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>RICINE</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>RICINS</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>10</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>RICKETSIE</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>RICKETTSIA RICKETTSII</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>11</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>SALMONELLOSE</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>SALMONELLA SPP</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>12</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>SHIGUELLOSE</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>SHIGELLA DYSENTERIAE</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>13</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>TETRODONTOXINE</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>TETRADOTOXIN</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>14</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>TOXIQUE BOTULINIQUE</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>BOTULINUM TOXINS</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>15</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>TULAREMIE</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>FRANCISELLA TULARENSIS</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>16</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>VARIOLE</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>VARIOLA VIRUS</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>17</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>VIRUS DE L’ENCEPHALITE EQUINE DU VENEZUELA</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>VENEZUELAN EQUINE ENCEPHALITIS VIRUS</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>18</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>VIRUS DE LA FIEVRE HEMORAGIQUE</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>CRIMEAN-CONGO HEMORRHAGIC FEVER VIRUS</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>19</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>VIRUS DU CHIKUNGUNYA</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>CHIKUNGUNYA VIRUS</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>20</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>VIRUS EBOLA</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>EBOLA VIRUS</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>21</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>VIRUS INFLUENZA TYPE H5N1</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>INFLUENZA VIRUS</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>22</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>AMERICIUM</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>AMERICIUM</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>23</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>AMERICIUM / BERILLIUM</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>AMERICIUM / BERILLIUM</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>24</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>ANTHRAX</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>BACILLUS ANTHRACIS</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>25</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>ARSNCL</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>ARSENICAL BLISTER AGENT</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>26</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>AUTRE</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>AUTRE</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>27</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>BURKHOLDERIA MALLEI</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>BURKHOLDERIA MALLEI</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>28</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>BURKHOLDERIA PSEUDOMALLEI</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>BURKHOLDERIA PSEUDOMALLEI</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>29</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>CALIFORNIUM</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>CALIFORNIUM</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>30</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>CARBONNE 14</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>CARBON</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>31</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>CESIUM-137</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>CESIUM</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>32</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>CHLORE RADIOACTIF</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>CHLORINE</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>33</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>CLOSTRIDIUM PERFRINGENS TOXINS</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>CLOSTRIDIUM PERFRINGENS TOXINS</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>34</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>COBALT-60</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>COBALT</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>35</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>COMBINAISON DE PLUSIEURS TYPES DE RADIATIONS</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>MIXTURE OF RADIATION EMISSIONS</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>36</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>COXIELLA BURNETII</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>COXIELLA BURNETII</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>37</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>CURIUM</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>CURIUM</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>38</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>CYCLSR</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>CYCLO-SARIN</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>39</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>CYNDE</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>CYANOGEN AGENT</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>40</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>DIPSGN</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>DI-PHOSGENE</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>41</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>DLRNT</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>DELIRIANT AGENT</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>42</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>DPRSNT</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>DEPRESSANT AGENT</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>43</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>EEEV</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>EASTERN EQUINE ENCEPHALOMYELITIS VIRUS</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>44</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>ETBV</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>EUROPEAN TICK BORNE ENCEPHALITIS VIRUS</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>45</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>FLAVIVIRUSES</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>FLAVIVIRUSES</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>46</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>G</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>G-AGENT</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>47</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>H</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>MUSTARD AGENT</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>48</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>HDRNCY</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>HYDROGEN CYANIDE</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>49</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>HT</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>YPERITE TRIMERE</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>50</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>IODE</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>IODINE</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>51</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>IODE 131</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>IODINE 131</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>52</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>IRRIDIUM</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>*</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>53</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>JUNIN VIRUS</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>JUNIN VIRUS</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>54</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>KRYPTON</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>KRYPTON</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>55</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>LWSITE</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>LEWISITE</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>56</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>MACHUPO VIRUS</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>MACHUPO VIRUS</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>57</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>NKN</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>NOT KNOWN</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>58</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>NOS</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>NOT OTHERWISE SPECIFIED</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>59</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>NTRGNM</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>NITROGEN MUSTARD</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>60</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>OMSK HEMORRHAGIC FEVER VIRUS</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>OMSK HEMORRHAGIC FEVER VIRUS</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>61</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>ORIENTIA TSUTSUGAMUSHI</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>ORIENTIA TSUTSUGAMUSHI</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>62</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>PALYTOXIN</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>PALYTOXIN</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>63</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>PHOSGN</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>PHOSGENE</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>64</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>PHOSPORUS</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>PHOSPHORUS</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>65</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>PHSGNO</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>*</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>66</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>PLUTONIUM</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>PLUTONIUM</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>67</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>POLONIUM</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>POLONIUM</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>68</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>POTASIUM</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>POTASIUM</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>69</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>PROMETHIUM</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>PROMETHIUM</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>70</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>PSYDLC</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>PSYCHEDELIC AGENT</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>71</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>QNCLDN</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>QUINUCLIDINYL BENZILATE</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>72</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>RADIUM</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>RADIUM</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>73</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>RICKETTSIE TYPHI</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>RICKETTSIA TYPHI</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>74</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>RIFT VALLEY FEVER VIRUS</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>RIFT VALLEY FEVER VIRUS</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>75</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>RUTHENIUM / RHODIUN</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>RUTHENIUM / RHODIUN</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>76</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>SARIN</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>SARIN</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>77</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>SAXITOXINES</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>SAXITOXINS</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>78</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>SELENIUM</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>SELENIUM</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>79</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>SOMAN</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>SOMAN</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>80</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>STMLNT</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>STIMULANT AGENT</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>81</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>STRONTIUM</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>STRONTIUM</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>82</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>TABUN</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>TABUN</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>83</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>TG</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>LACRYMOGENE</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>84</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>THULIUM</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>THULIUM</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>85</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>THYPHUS</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>SALMONELLA TYPHI</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>86</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>TRGAS</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>TEAR GAS</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>87</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>URANIUM</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>URANIUM</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>88</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>URANIUM APPAUVRI</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>DEPLETED URANIUM</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>89</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>URANIUM NATUREL</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>NATURAL URANIUM</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>90</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>URTCNT</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>URTICANT AGENT</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>91</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>V</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>V-AGENT</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>92</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>VIRUS MARBURG</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>MARBURG VIRUS</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>93</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>VX</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>A4</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>94</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>YTURBIUM</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>YTURBIUM</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>95</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>LASV</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>EUROPEAN TICK BORNE ENCEPHALITIS VIRUS*</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>96</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>WEEV</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>WESTERN EQUINE ENCEPHALOMYELITIS VIRUS*</SimpleValue>
+      </Value>
+    </Row>
+  </SimpleCodeList>
+</gc:CodeList>

@@ -1,0 +1,431 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema targetNamespace="urn:fra:nc1:objet:obstacle" xmlns:nc1ihm="urn:fra:nc1:IHM" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:nc1obstacle="urn:fra:nc1:objet:obstacle" xmlns:nc1common="urn:fra:nc1:common:attribute" xmlns:nc1location="urn:fra:nc1:common:location" xmlns:nc1logistics="urn:fra:nc1:common:logistics" xmlns:nc1objcom="urn:fra:nc1:common:object" xmlns:nc1sicsdicos="urn:fra:nc1:common:sicsdicos">
+  <!-- NC1 V.9.0.0 -->
+  <xs:import namespace="urn:fra:nc1:common:attribute" schemaLocation="../Commun/Common.xsd" />
+  <xs:import namespace="urn:fra:nc1:common:location" schemaLocation="../Commun/Location.xsd" />
+  <xs:import namespace="urn:fra:nc1:common:logistics" schemaLocation="../Commun/Logistics.xsd" />
+  <xs:import namespace="urn:fra:nc1:common:object" schemaLocation="../Commun/Object.xsd" />
+  <xs:import namespace="urn:fra:nc1:common:sicsdicos" schemaLocation="../Commun/SICS_Dictionaries.xsd" />
+  <xs:element name="NC1_Obstacle" type="nc1obstacle:ObstacleType">
+    <xs:annotation>
+      <xs:documentation>L’objet NC1_Obstacle est caractérisé par un type d’obstacle conforme à l’APP-6(B), ainsi que par une numérotation d’obstacle conforme au GEN 60-111.</xs:documentation>
+      <xs:documentation xml:lang="en">The object NC1_Obstacle is characterized by a type of obstacle in compliance with the APP-6 ( B ), as well as by a numbering of obstacle in compliance with the GEN 60-111.</xs:documentation>
+      <xs:appinfo>
+        <nc1:type xmlns:nc1="urn:fra:nc1">Objet</nc1:type>
+        <nc1ihm:Nom>Obstacle</nc1ihm:Nom>
+        <nc1ihm:Nom xml:lang="en">Obstacle</nc1ihm:Nom>
+        <nc1:MessH xmlns:nc1="urn:fra:nc1">Message H5.2 Obstacle</nc1:MessH>
+        <nc1:MessADatP3 xmlns:nc1="urn:fra:nc1">ADDLOBS, OBSCAT, OBSDATA</nc1:MessADatP3>
+        <nc1:LastNC1ModifyVersion xmlns:nc1="urn:fra:nc1">9.0.0</nc1:LastNC1ModifyVersion>
+      </xs:appinfo>
+    </xs:annotation>
+  </xs:element>
+  <xs:simpleType name="Number9Type">
+    <xs:annotation>
+      <xs:documentation>Numéro d’obstacle sur 9 caractères.</xs:documentation>
+      <xs:documentation xml:lang="en">Obstacle number on 9 characters according to GEN 60-111 standard.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="nc1common:AlphaNumSpaceStringType">
+      <xs:maxLength value="9" />
+      <xs:minLength value="9" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="ObstacleFrSpecificCode">
+    <xs:annotation>
+      <xs:appinfo>
+        <nc1dico:source xmlns:nc1dico="urn:fra:nc1:dictionnaires">SFTT 3.4.8</nc1dico:source>
+        <nc1dico:derogation xmlns:nc1dico="urn:fra:nc1:dictionnaires">TYPE D'OBSTACLE/OUVRAGE</nc1dico:derogation>
+        <nc1ihm:description>DECRIT LE TYPE D'UN OBSTACLE OU D'UN OUVRAGE. REFERENCE LIST_E DU STANAG 2430.
+APP6B - FAMILLE 2.X.2.2.1</nc1ihm:description>
+      </xs:appinfo>
+      <xs:documentation>DECRIT LE TYPE D'UN OBSTACLE OU D'UN OUVRAGE. REFERENCE LIST_E DU STANAG 2430.
+APP6B - FAMILLE 2.X.2.2.1</xs:documentation>
+      <xs:documentation xml:lang="en"></xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:integer" />
+  </xs:simpleType>
+  <xs:simpleType name="ObstacleSymbolCode">
+    <xs:annotation>
+      <xs:appinfo>
+        <nc1dico:source xmlns:nc1dico="urn:fra:nc1:dictionnaires">SFTT 3.4.8</nc1dico:source>
+        <nc1dico:derogation xmlns:nc1dico="urn:fra:nc1:dictionnaires">TYPE D'OBSTACLE/OUVRAGE</nc1dico:derogation>
+        <nc1ihm:description>DECRIT LE TYPE D'UN OBSTACLE OU D'UN OUVRAGE. REFERENCE LIST_E DU STANAG 2430.
+APP6B - FAMILLE 2.X.2.2.1</nc1ihm:description>
+        <nc1ihm:description xml:lang="en">describe obstacle type or facilitiy type refering the STANAG 2430 (AENGRP-02(B) ) list.</nc1ihm:description>
+      </xs:appinfo>
+      <xs:documentation>DECRIT LE TYPE D'UN OBSTACLE OU D'UN OUVRAGE. REFERENCE LIST_E DU STANAG 2430.
+APP6B - FAMILLE 2.X.2.2.1</xs:documentation>
+      <xs:documentation xml:lang="en">describe obstacle type or facilitiy type refering the STANAG 2430 (AENGRP-02(B) ) list.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:integer" />
+  </xs:simpleType>
+  <xs:complexType name="ObstacleType">
+    <xs:annotation>
+      <xs:documentation>Un obstacle est une entrave naturelle ou artificielle visant à infliger à une force adverse des pertes supplémentaires soit en personnel, soit en temps ou en équipement.</xs:documentation>
+      <xs:documentation xml:lang="en">An obstacle is a natural or artificial hindrance aiming to inflict additional losses in personnel, time or equipment to an opponent force.</xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="nc1objcom:PhysicalObjectType">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="tacticalData">
+            <xs:annotation>
+              <xs:documentation>Données tactiques de l'obstacle.</xs:documentation>
+              <xs:documentation xml:lang="en">Obstacle tactical data.</xs:documentation>
+              <xs:appinfo>
+                <nc1ihm:Nom>Données tactiques</nc1ihm:Nom>
+                <nc1ihm:Nom xml:lang="en">tactical datas</nc1ihm:Nom>
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element minOccurs="0" name="name" type="nc1common:ShortTextObjectType">
+                  <xs:annotation>
+                    <xs:documentation>Nom de l’obstacle affiché sur la cartographie.</xs:documentation>
+                    <xs:documentation xml:lang="en">Unit displayed name.</xs:documentation>
+                    <xs:appinfo>
+                      <nc1ihm:Nom>Nom</nc1ihm:Nom>
+                      <nc1ihm:Nom xml:lang="en">name</nc1ihm:Nom>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:element>
+                <xs:element name="symbolCode" type="nc1common:SymbolCodeType">
+                  <xs:annotation>
+                    <xs:documentation>Code contenant les informations de symbologie, d'identité (AMI, ENI, etc.), de nationalité, d'état de planification.</xs:documentation>
+                    <xs:documentation xml:lang="en">Code specifying information about symbology, identity (Friend, enemy, …), nationality, planification status.</xs:documentation>
+                    <xs:appinfo>
+                      <nc1ihm:Nom>Code du symbole</nc1ihm:Nom>
+                      <nc1ihm:Nom xml:lang="en">Symbol code</nc1ihm:Nom>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:element>
+                <xs:element minOccurs="0" name="frSpecificSymbol" type="nc1obstacle:ObstacleFrSpecificCode">
+                  <xs:annotation>
+                    <xs:documentation>Indicateur de spécificité française pour le code symbole et sa représentation graphique.</xs:documentation>
+                    <xs:documentation xml:lang="en">French specificity indicator for the symbol code and its graphic representation.</xs:documentation>
+                    <xs:appinfo>
+                      <nc1ihm:Nom>Spécialisation Fr du code symbole</nc1ihm:Nom>
+                      <nc1ihm:Nom xml:lang="en">Fr specific symbol</nc1ihm:Nom>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:element>
+                <xs:element minOccurs="0" name="number9" type="nc1obstacle:Number9Type">
+                  <xs:annotation>
+                    <xs:documentation>Numéro d’obstacle sur 9 caractères encodé selon le GEN 60-111.</xs:documentation>
+                    <xs:documentation xml:lang="en">9 characters obstacle number, following GEN 60-111.</xs:documentation>
+                    <xs:appinfo>
+                      <nc1ihm:Nom>Numéro d’obstacle</nc1ihm:Nom>
+                      <nc1ihm:Nom xml:lang="en">Obstacle number</nc1ihm:Nom>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:element>
+                <xs:element minOccurs="0" name="achievementStatus" type="nc1sicsdicos:L114_16Code">
+                  <xs:annotation>
+                    <xs:documentation>Etat d’achèvement de l’obstacle.</xs:documentation>
+                    <xs:documentation xml:lang="en">Obstacle achievement status.</xs:documentation>
+                    <xs:appinfo>
+                      <nc1ihm:Nom>Etat d’achèvement</nc1ihm:Nom>
+                      <nc1ihm:Nom xml:lang="en">Achievement status</nc1ihm:Nom>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:element>
+                <xs:element minOccurs="0" name="isBreached" type="xs:boolean">
+                  <xs:annotation>
+                    <xs:documentation>Obstacle brèché ou non.</xs:documentation>
+                    <xs:documentation xml:lang="en">Breached obstacle indicator.</xs:documentation>
+                    <xs:appinfo>
+                      <nc1ihm:Nom>Brèché</nc1ihm:Nom>
+                      <nc1ihm:Nom xml:lang="en">Breach</nc1ihm:Nom>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:element>
+                <xs:element minOccurs="0" name="isPassable" type="xs:boolean">
+                  <xs:annotation>
+                    <xs:documentation>Obstacle passable ou non.</xs:documentation>
+                    <xs:documentation xml:lang="en">Passable obstacle indicator.</xs:documentation>
+                    <xs:appinfo>
+                      <nc1ihm:Nom>Passable</nc1ihm:Nom>
+                      <nc1ihm:Nom xml:lang="en">Passable</nc1ihm:Nom>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:element>
+                <xs:element minOccurs="0" name="isMarked" type="xs:boolean">
+                  <xs:annotation>
+                    <xs:documentation>Obstacle marqué ou non.</xs:documentation>
+                    <xs:documentation xml:lang="en">Marked obstacle or not.</xs:documentation>
+                    <xs:appinfo>
+                      <nc1ihm:Nom>Marqué</nc1ihm:Nom>
+                      <nc1ihm:Nom xml:lang="en">Marked</nc1ihm:Nom>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:element>
+                <xs:element minOccurs="0" name="minePresence" type="nc1sicsdicos:L135_43Code">
+                  <xs:annotation>
+                    <xs:documentation>Obstacle miné ou non (ex : « Présence de mines au sol, confirmé »).</xs:documentation>
+                    <xs:documentation xml:lang="en">"Mined obstacle indicator (e.g. ""Landmines presence, confirmed""".</xs:documentation>
+                    <xs:appinfo>
+                      <nc1ihm:Nom>Présence de mines</nc1ihm:Nom>
+                      <nc1ihm:Nom xml:lang="en">Landmines presence</nc1ihm:Nom>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:element>
+                <xs:element minOccurs="0" name="isCoveredByEnemyFire" type="xs:boolean">
+                  <xs:annotation>
+                    <xs:documentation>Obstacle couvert par les feux ennemi ou non.</xs:documentation>
+                    <xs:documentation xml:lang="en">Obstacle covered by enemy fire or not.</xs:documentation>
+                    <xs:appinfo>
+                      <nc1ihm:Nom>Couverture par les feux ENI</nc1ihm:Nom>
+                      <nc1ihm:Nom xml:lang="en">Enemy fire range</nc1ihm:Nom>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:element>
+                <xs:element minOccurs="0" name="bypassRouteId" type="nc1common:Nc1ObjectRefType">
+                  <xs:annotation>
+                    <xs:documentation>Identifiant unique NC1 de l’itinéraire de contournement de l’obstacle.</xs:documentation>
+                    <xs:documentation xml:lang="en">NC1 ID of the route bypassing the obstacle.</xs:documentation>
+                    <xs:appinfo>
+                      <nc1ihm:Nom>Itinéraire de contournement</nc1ihm:Nom>
+                      <nc1ihm:Nom xml:lang="en">Route bypassing the obstacle</nc1ihm:Nom>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:element>
+                <xs:element maxOccurs="unbounded" minOccurs="0" name="logisticStatus" type="nc1logistics:LogisticStatusType">
+                  <xs:annotation>
+                    <xs:documentation>Etat logistique de l’obstacle.</xs:documentation>
+                    <xs:documentation xml:lang="en">Logistic status of the obstacle.</xs:documentation>
+                    <xs:appinfo>
+                      <nc1ihm:Nom>Etat logistique</nc1ihm:Nom>
+                      <nc1ihm:Nom xml:lang="en">Logistic status</nc1ihm:Nom>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:element>
+                <xs:element minOccurs="0" name="responsibleUnitId" type="nc1common:Nc1ObjectRefType">
+                  <xs:annotation>
+                    <xs:documentation>Identifiant unique NC1 de l’unité responsable de l’Obstacle.</xs:documentation>
+                    <xs:documentation xml:lang="en">NC1 ID of the unit responsible for the obstacle.</xs:documentation>
+                    <xs:appinfo>
+                      <nc1ihm:Nom>Unité responsable</nc1ihm:Nom>
+                      <nc1ihm:Nom xml:lang="en">Responsible unit</nc1ihm:Nom>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:element>
+                <xs:element minOccurs="0" name="dimensions" type="nc1common:DimensionType">
+                  <xs:annotation>
+                    <xs:documentation>Dimensions de l’obstacle.</xs:documentation>
+                    <xs:documentation xml:lang="en">Dimensions of the obstacle.</xs:documentation>
+                    <xs:appinfo>
+                      <nc1ihm:Nom>Dimensions</nc1ihm:Nom>
+                      <nc1ihm:Nom xml:lang="en">Dimensions</nc1ihm:Nom>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:element>
+                <xs:element maxOccurs="unbounded" minOccurs="0" name="activationPeriod" type="nc1common:PeriodType">
+                  <xs:annotation>
+                    <xs:documentation>Période d’activation de l’obstacle.</xs:documentation>
+                    <xs:documentation xml:lang="en">Activation period of the obstacle.</xs:documentation>
+                    <xs:appinfo>
+                      <nc1ihm:Nom>Période d’activation</nc1ihm:Nom>
+                      <nc1ihm:Nom xml:lang="en">Activation period</nc1ihm:Nom>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:element>
+                <xs:element minOccurs="0" name="activationEndDatetimeQualifier" type="nc1sicsdicos:L125_19Code">
+                  <xs:annotation>
+                    <xs:documentation>Qualifiant de la fin d’activation de l’obstacle (ex : « AUTODESTRUCTION »).</xs:documentation>
+                    <xs:documentation xml:lang="en">"End of activation mode of the obstacle (e.g. ""AUTODESTRUCTION"")".</xs:documentation>
+                    <xs:appinfo>
+                      <nc1ihm:Nom>Qualifiant de fin d’activation</nc1ihm:Nom>
+                      <nc1ihm:Nom xml:lang="en">Activation end date time qualifier</nc1ihm:Nom>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:element>
+                <xs:element minOccurs="0" name="reliability" type="nc1sicsdicos:L135_14Code">
+                  <xs:annotation>
+                    <xs:documentation>Evaluation de la fiabilité de la source d’information.</xs:documentation>
+                    <xs:documentation xml:lang="en">Assessment of the reliability of the information source.</xs:documentation>
+                    <xs:appinfo>
+                      <nc1ihm:Nom>Fiabilité</nc1ihm:Nom>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:element>
+                <xs:element minOccurs="0" name="credibility" type="nc1sicsdicos:L135_15Code">
+                  <xs:annotation>
+                    <xs:documentation>Evaluation de la crédibilité de la source d’information.</xs:documentation>
+                    <xs:documentation xml:lang="en">Assessment of the credibility of the information source.</xs:documentation>
+                    <xs:appinfo>
+                      <nc1ihm:Nom>Crédibilité</nc1ihm:Nom>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:element>
+                <xs:element minOccurs="0" name="nature" type="nc1sicsdicos:L110_40Code">
+                  <xs:annotation>
+                    <xs:documentation>Nature de l'obstacle.</xs:documentation>
+                    <xs:documentation xml:lang="en">Obstacle nature.</xs:documentation>
+                    <xs:appinfo>
+                      <nc1ihm:Nom>Nature obstacle</nc1ihm:Nom>
+                      <nc1ihm:Nom xml:lang="en">obstacle type</nc1ihm:Nom>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:element>
+                <xs:element minOccurs="0" name="url" type="nc1common:MediumTextObjectType">
+                  <xs:annotation>
+                    <xs:documentation>Lien vers un fichier associé à l’objet.</xs:documentation>
+                    <xs:documentation xml:lang="en">Link to a file associated with the object.</xs:documentation>
+                    <xs:appinfo>
+                      <nc1ihm:Nom>Url</nc1ihm:Nom>
+                      <nc1ihm:Nom xml:lang="en">url</nc1ihm:Nom>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:element>
+                <xs:element minOccurs="0" name="comment" type="nc1common:LongTextObjectType">
+                  <xs:annotation>
+                    <xs:documentation>Commentaire en texte libre.</xs:documentation>
+                    <xs:documentation xml:lang="en">Free text comment.</xs:documentation>
+                    <xs:appinfo>
+                      <nc1ihm:Nom>Commentaire</nc1ihm:Nom>
+                      <nc1ihm:Nom xml:lang="en">comment</nc1ihm:Nom>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:element>
+                <xs:element minOccurs="0" name="extVersion" type="nc1common:ExtVersType">
+                  <xs:annotation>
+                    <xs:documentation>Extension pour versions suivantes compatibles.</xs:documentation>
+                    <xs:documentation xml:lang="en">Extension for following compatible versions.</xs:documentation>
+                    <xs:appinfo>
+                      <nc1ihm:Nom>Extension de version</nc1ihm:Nom>
+                      <nc1ihm:Nom xml:lang="en">version extension</nc1ihm:Nom>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:element>
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+          <xs:element minOccurs="0" name="location">
+            <xs:annotation>
+              <xs:documentation>Localisation.</xs:documentation>
+              <xs:documentation xml:lang="en">Location.</xs:documentation>
+              <xs:appinfo>
+                <nc1ihm:Nom>Localisation</nc1ihm:Nom>
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element minOccurs="0" name="name" type="nc1common:Text1To30ObjectType">
+                  <xs:annotation>
+                    <xs:documentation>Nom de baptême donné par l'opérateur à la localisation. Par exemple un nom de ville ou de lieu.</xs:documentation>
+                    <xs:documentation xml:lang="en">Name assigned to the location, e.g. city or place name.</xs:documentation>
+                    <xs:appinfo>
+                      <nc1ihm:Nom>Nom</nc1ihm:Nom>
+                      <nc1ihm:Nom xml:lang="en">name</nc1ihm:Nom>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:element>
+                <xs:choice>
+                  <xs:element name="point" type="nc1location:PointType">
+                    <xs:annotation>
+                      <xs:documentation>Point localisé.</xs:documentation>
+                      <xs:documentation xml:lang="en">Geolocalized point.</xs:documentation>
+                      <xs:appinfo>
+                        <nc1ihm:Nom>Point</nc1ihm:Nom>
+                        <nc1ihm:Nom xml:lang="en">Point</nc1ihm:Nom>
+                      </xs:appinfo>
+                    </xs:annotation>
+                  </xs:element>
+                  <xs:element name="multipoint" type="nc1location:MultipointType">
+                    <xs:annotation>
+                      <xs:documentation>Liste de points.</xs:documentation>
+                      <xs:documentation xml:lang="en">List of points.</xs:documentation>
+                      <xs:appinfo>
+                        <nc1ihm:Nom>Multipoint</nc1ihm:Nom>
+                        <nc1ihm:Nom xml:lang="en">Multipoint</nc1ihm:Nom>
+                      </xs:appinfo>
+                    </xs:annotation>
+                  </xs:element>
+                  <xs:element name="polyline" type="nc1location:PolylineType">
+                    <xs:annotation>
+                      <xs:documentation>Ligne brisée orientée, sans largeur.</xs:documentation>
+                      <xs:documentation xml:lang="en">Width less oriented polyline.</xs:documentation>
+                      <xs:appinfo>
+                        <nc1ihm:Nom>Polyligne</nc1ihm:Nom>
+                        <nc1ihm:Nom xml:lang="en">Polyline</nc1ihm:Nom>
+                      </xs:appinfo>
+                    </xs:annotation>
+                  </xs:element>
+                  <xs:element name="polygon" type="nc1location:PolygonType">
+                    <xs:annotation>
+                      <xs:documentation>Polygone, ou ligne brisée fermée.</xs:documentation>
+                      <xs:documentation xml:lang="en">Polygon, or closed polyline.</xs:documentation>
+                      <xs:appinfo>
+                        <nc1ihm:Nom>Polygone</nc1ihm:Nom>
+                        <nc1ihm:Nom xml:lang="en">Polygon</nc1ihm:Nom>
+                      </xs:appinfo>
+                    </xs:annotation>
+                  </xs:element>
+                  <xs:element name="circle" type="nc1location:CircleType">
+                    <xs:annotation>
+                      <xs:documentation>Cercle.</xs:documentation>
+                      <xs:documentation xml:lang="en">Circle.</xs:documentation>
+                      <xs:appinfo>
+                        <nc1ihm:Nom>Cercle</nc1ihm:Nom>
+                        <nc1ihm:Nom xml:lang="en">Circle</nc1ihm:Nom>
+                      </xs:appinfo>
+                    </xs:annotation>
+                  </xs:element>
+                  <xs:element name="ellipse" type="nc1location:EllipseType">
+                    <xs:annotation>
+                      <xs:documentation>Ellipse.</xs:documentation>
+                      <xs:documentation xml:lang="en">Ellipse.</xs:documentation>
+                      <xs:appinfo>
+                        <nc1ihm:Nom>Ellipse</nc1ihm:Nom>
+                        <nc1ihm:Nom xml:lang="en">Ellipse</nc1ihm:Nom>
+                      </xs:appinfo>
+                    </xs:annotation>
+                  </xs:element>
+                  <xs:element name="arcband" type="nc1location:ArcbandType">
+                    <xs:annotation>
+                      <xs:documentation>Radarc, ou segment d’anneau.</xs:documentation>
+                      <xs:documentation xml:lang="en">Arcband, or 4 points sector.</xs:documentation>
+                      <xs:appinfo>
+                        <nc1ihm:Nom>Radarc</nc1ihm:Nom>
+                        <nc1ihm:Nom xml:lang="en">Arcband</nc1ihm:Nom>
+                      </xs:appinfo>
+                    </xs:annotation>
+                  </xs:element>
+                </xs:choice>
+                <xs:element minOccurs="0" name="datetime" type="xs:dateTime">
+                  <xs:annotation>
+                    <xs:documentation>Horodatage du relevé de position sur le terrain. Par défaut, l'heure de saisie dans le système.</xs:documentation>
+                    <xs:documentation xml:lang="en">Field position report time. By default, time of the input in the system.</xs:documentation>
+                    <xs:appinfo>
+                      <nc1ihm:Nom>Horodatage</nc1ihm:Nom>
+                      <nc1ihm:Nom xml:lang="en">Timestamp</nc1ihm:Nom>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:element>
+                <xs:element maxOccurs="unbounded" minOccurs="0" name="validityPeriod" type="nc1common:PeriodType">
+                  <xs:annotation>
+                    <xs:documentation>Période de validité.</xs:documentation>
+                    <xs:documentation xml:lang="en">Validity period.</xs:documentation>
+                    <xs:appinfo>
+                      <nc1ihm:Nom>Période de validité</nc1ihm:Nom>
+                      <nc1ihm:Nom xml:lang="en">Validity period</nc1ihm:Nom>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:element>
+                <xs:element minOccurs="0" name="quality" type="nc1sicsdicos:L117_5Code">
+                  <xs:annotation>
+                    <xs:documentation>Qualité de la mesure de la localisation.</xs:documentation>
+                    <xs:documentation xml:lang="en">Location measurement quality.</xs:documentation>
+                    <xs:appinfo>
+                      <nc1ihm:Nom>Qualité</nc1ihm:Nom>
+                      <nc1ihm:Nom xml:lang="en">Quality</nc1ihm:Nom>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:element>
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+</xs:schema>

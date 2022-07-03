@@ -1,0 +1,176 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema targetNamespace="urn:fra:nc1:message:intreq" xmlns:nc1ihm="urn:fra:nc1:IHM" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:nc1intreq="urn:fra:nc1:message:intreq" xmlns:nc1common="urn:fra:nc1:common:attribute" xmlns:nc1msgcom="urn:fra:nc1:common:message" xmlns:nc1objcom="urn:fra:nc1:common:object" xmlns:nc1airparticipant="urn:fra:nc1:objet:airparticipant" xmlns:nc1airtrack="urn:fra:nc1:objet:airtrack" xmlns:nc1cbrnevent="urn:fra:nc1:objet:cbrnevent" xmlns:nc1convoy="urn:fra:nc1:objet:convoy" xmlns:nc1event="urn:fra:nc1:objet:event" xmlns:nc1facility="urn:fra:nc1:objet:facility" xmlns:nc1freeshape="urn:fra:nc1:objet:freeshape" xmlns:nc1groundentity="urn:fra:nc1:objet:groundentity" xmlns:nc1groundparticipant="urn:fra:nc1:objet:groundparticipant" xmlns:nc1groundtrack="urn:fra:nc1:objet:groundtrack" xmlns:nc1individual="urn:fra:nc1:objet:individual" xmlns:nc1intelreq="urn:fra:nc1:objet:intelrequirement" xmlns:nc1obstacle="urn:fra:nc1:objet:obstacle" xmlns:nc1organisation="urn:fra:nc1:objet:organisation" xmlns:nc1participant="urn:fra:nc1:objet:participant" xmlns:nc1route="urn:fra:nc1:objet:route" xmlns:nc1seaparticipant="urn:fra:nc1:objet:seaparticipant" xmlns:nc1seatrack="urn:fra:nc1:objet:seatrack" xmlns:nc1tacarea="urn:fra:nc1:objet:tacarea" xmlns:nc1tacline="urn:fra:nc1:objet:tacline" xmlns:nc1tacpoint="urn:fra:nc1:objet:tacpoint" xmlns:nc1track="urn:fra:nc1:objet:track" xmlns:nc1unit="urn:fra:nc1:objet:unit">
+  <!-- NC1 V.9.0.0 -->
+  <xs:import namespace="urn:fra:nc1:common:attribute" schemaLocation="../Commun/Common.xsd" />
+  <xs:import namespace="urn:fra:nc1:common:message" schemaLocation="../Commun/Message.xsd" />
+  <xs:import namespace="urn:fra:nc1:common:object" schemaLocation="../Commun/Object.xsd" />
+  <xs:import namespace="urn:fra:nc1:objet:airparticipant" schemaLocation="../Objet/NC1_AirParticipant.xsd" />
+  <xs:import namespace="urn:fra:nc1:objet:airtrack" schemaLocation="../Objet/NC1_AirTrack.xsd" />
+  <xs:import namespace="urn:fra:nc1:objet:cbrnevent" schemaLocation="../Objet/NC1_CbrnEvent.xsd" />
+  <xs:import namespace="urn:fra:nc1:objet:convoy" schemaLocation="../Objet/NC1_Convoy.xsd" />
+  <xs:import namespace="urn:fra:nc1:objet:event" schemaLocation="../Objet/NC1_Event.xsd" />
+  <xs:import namespace="urn:fra:nc1:objet:facility" schemaLocation="../Objet/NC1_Facility.xsd" />
+  <xs:import namespace="urn:fra:nc1:objet:freeshape" schemaLocation="../Objet/NC1_FreeShape.xsd" />
+  <xs:import namespace="urn:fra:nc1:objet:groundentity" schemaLocation="../Objet/NC1_GroundEntity.xsd" />
+  <xs:import namespace="urn:fra:nc1:objet:groundparticipant" schemaLocation="../Objet/NC1_GroundParticipant.xsd" />
+  <xs:import namespace="urn:fra:nc1:objet:groundtrack" schemaLocation="../Objet/NC1_GroundTrack.xsd" />
+  <xs:import namespace="urn:fra:nc1:objet:individual" schemaLocation="../Objet/NC1_Individual.xsd" />
+  <xs:import namespace="urn:fra:nc1:objet:intelrequirement" schemaLocation="../Objet/NC1_IntelRequirement.xsd" />
+  <xs:import namespace="urn:fra:nc1:objet:obstacle" schemaLocation="../Objet/NC1_Obstacle.xsd" />
+  <xs:import namespace="urn:fra:nc1:objet:organisation" schemaLocation="../Objet/NC1_Organisation.xsd" />
+  <xs:import namespace="urn:fra:nc1:objet:participant" schemaLocation="../Commun/Participant.xsd" />
+  <xs:import namespace="urn:fra:nc1:objet:route" schemaLocation="../Objet/NC1_Route.xsd" />
+  <xs:import namespace="urn:fra:nc1:objet:seaparticipant" schemaLocation="../Objet/NC1_SeaParticipant.xsd" />
+  <xs:import namespace="urn:fra:nc1:objet:seatrack" schemaLocation="../Objet/NC1_SeaTrack.xsd" />
+  <xs:import namespace="urn:fra:nc1:objet:tacarea" schemaLocation="../Objet/NC1_TacArea.xsd" />
+  <xs:import namespace="urn:fra:nc1:objet:tacline" schemaLocation="../Objet/NC1_TacLine.xsd" />
+  <xs:import namespace="urn:fra:nc1:objet:tacpoint" schemaLocation="../Objet/NC1_TacPoint.xsd" />
+  <xs:import namespace="urn:fra:nc1:objet:track" schemaLocation="../Commun/Track.xsd" />
+  <xs:import namespace="urn:fra:nc1:objet:unit" schemaLocation="../Objet/NC1_Unit.xsd" />
+  <xs:element name="NC1_INTREQ">
+    <xs:annotation>
+      <xs:documentation>Le message NC1_INTREQ est utilisé pour demander une information de renseignement.</xs:documentation>
+      <xs:documentation xml:lang="en">The NC1_INTREQ message is used to request intelligence information.</xs:documentation>
+      <xs:appinfo>
+        <nc1:type xmlns:nc1="urn:fra:nc1">Message</nc1:type>
+        <nc1ihm:Nom>Demande de renseignement</nc1ihm:Nom>
+        <nc1ihm:Nom xml:lang="en">Intelligence request</nc1ihm:Nom>
+        <nc1:MessH xmlns:nc1="urn:fra:nc1">N/A</nc1:MessH>
+        <nc1:MessADatP3 xmlns:nc1="urn:fra:nc1">INTREQ</nc1:MessADatP3>
+        <nc1:LastNC1ModifyVersion xmlns:nc1="urn:fra:nc1">9.0.0</nc1:LastNC1ModifyVersion>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:complexContent>
+        <xs:extension base="nc1msgcom:BaseMessageType">
+          <xs:sequence>
+            <xs:element name="intelligenceRequest">
+              <xs:annotation>
+                <xs:documentation>Demande de renseignement.</xs:documentation>
+                <xs:documentation xml:lang="en">Intelligence request.</xs:documentation>
+                <xs:appinfo>
+                  <nc1ihm:Nom>Demande de renseignement</nc1ihm:Nom>
+                  <nc1ihm:Nom xml:lang="en">Intelligence request</nc1ihm:Nom>
+                </xs:appinfo>
+              </xs:annotation>
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="intelRequirement" type="nc1intelreq:IntelRequirementType">
+                    <xs:annotation>
+                      <xs:documentation>Besoin en renseignement.</xs:documentation>
+                      <xs:documentation xml:lang="en">Intelligence Requirement.</xs:documentation>
+                      <xs:appinfo>
+                        <nc1ihm:Nom>Besoin en renseignement</nc1ihm:Nom>
+                        <nc1ihm:Nom xml:lang="en">Intelligence Requirement</nc1ihm:Nom>
+                      </xs:appinfo>
+                    </xs:annotation>
+                  </xs:element>
+                  <xs:element maxOccurs="unbounded" minOccurs="0" name="involvedPhysicalObject" type="nc1objcom:PhysicalObjectType">
+                    <xs:annotation>
+                      <xs:documentation>Entité physique sur laquelle le renseignement est demandé.</xs:documentation>
+                      <xs:documentation xml:lang="en">Physical entity for which intelligence is requested.</xs:documentation>
+                      <xs:appinfo>
+                        <nc1ihm:Nom>Entité physique</nc1ihm:Nom>
+                        <nc1ihm:Nom xml:lang="en">Physical entity</nc1ihm:Nom>
+                      </xs:appinfo>
+                    </xs:annotation>
+                  </xs:element>
+                  <xs:element maxOccurs="unbounded" minOccurs="0" name="involvedRoute" type="nc1route:RouteType">
+                    <xs:annotation>
+                      <xs:documentation>Itinéraire sur lequel le renseignement est demandé.</xs:documentation>
+                      <xs:documentation xml:lang="en">Route subject to the intelligence request.</xs:documentation>
+                      <xs:appinfo>
+                        <nc1ihm:Nom>Itinéraire</nc1ihm:Nom>
+                        <nc1ihm:Nom xml:lang="en">Route</nc1ihm:Nom>
+                      </xs:appinfo>
+                    </xs:annotation>
+                  </xs:element>
+                  <xs:element maxOccurs="unbounded" minOccurs="0" name="involvedTacPoint" type="nc1tacpoint:TacPointType">
+                    <xs:annotation>
+                      <xs:documentation>Point tactique sur lequel le renseignement est demandé.</xs:documentation>
+                      <xs:documentation xml:lang="en">Tactical point subject to the intelligence request.</xs:documentation>
+                      <xs:appinfo>
+                        <nc1ihm:Nom>Point tactique</nc1ihm:Nom>
+                        <nc1ihm:Nom xml:lang="en">Tactical point</nc1ihm:Nom>
+                      </xs:appinfo>
+                    </xs:annotation>
+                  </xs:element>
+                  <xs:element maxOccurs="unbounded" minOccurs="0" name="involvedTacLine" type="nc1tacline:TacLineType">
+                    <xs:annotation>
+                      <xs:documentation>Ligne tactique sur laquelle le renseignement est demandé.</xs:documentation>
+                      <xs:documentation xml:lang="en">Tactical line for which the intelligence is requested.</xs:documentation>
+                      <xs:appinfo>
+                        <nc1ihm:Nom>Ligne tactique</nc1ihm:Nom>
+                        <nc1ihm:Nom xml:lang="en">Tactical line</nc1ihm:Nom>
+                      </xs:appinfo>
+                    </xs:annotation>
+                  </xs:element>
+                  <xs:element maxOccurs="unbounded" minOccurs="0" name="involvedTacArea" type="nc1tacarea:TacAreaType">
+                    <xs:annotation>
+                      <xs:documentation>Surface tactique sur laquelle le renseignement est demandé.</xs:documentation>
+                      <xs:documentation xml:lang="en">Tactical area for which intelligence is requested.</xs:documentation>
+                      <xs:appinfo>
+                        <nc1ihm:Nom>Surface tactique</nc1ihm:Nom>
+                        <nc1ihm:Nom xml:lang="en">Tactical area</nc1ihm:Nom>
+                      </xs:appinfo>
+                    </xs:annotation>
+                  </xs:element>
+                  <xs:element maxOccurs="unbounded" minOccurs="0" name="involvedEvent" type="nc1event:EventType">
+                    <xs:annotation>
+                      <xs:documentation>Evénement sur lequel le renseignement est demandé.</xs:documentation>
+                      <xs:documentation xml:lang="en">Event subject to the intelligence request.</xs:documentation>
+                      <xs:appinfo>
+                        <nc1ihm:Nom>Evénement</nc1ihm:Nom>
+                        <nc1ihm:Nom xml:lang="en">Event</nc1ihm:Nom>
+                      </xs:appinfo>
+                    </xs:annotation>
+                  </xs:element>
+                  <xs:element maxOccurs="unbounded" minOccurs="0" name="involvedCbrnEvent" type="nc1cbrnevent:CbrnEventType">
+                    <xs:annotation>
+                      <xs:documentation>Evénement NRBC sur lequel le renseignement est demandé.</xs:documentation>
+                      <xs:documentation xml:lang="en">CBRN event subject to the intelligence request.</xs:documentation>
+                      <xs:appinfo>
+                        <nc1ihm:Nom>Evénement NRBC</nc1ihm:Nom>
+                        <nc1ihm:Nom xml:lang="en">CBRN event</nc1ihm:Nom>
+                      </xs:appinfo>
+                    </xs:annotation>
+                  </xs:element>
+                  <xs:element maxOccurs="unbounded" minOccurs="0" name="involvedFreeShape" type="nc1freeshape:FreeShapeType">
+                    <xs:annotation>
+                      <xs:documentation>Forme libre sur laquelle le renseignement est demandé.</xs:documentation>
+                      <xs:documentation xml:lang="en">Free shape subject to the intelligence request.</xs:documentation>
+                      <xs:appinfo>
+                        <nc1ihm:Nom>Forme libre</nc1ihm:Nom>
+                        <nc1ihm:Nom xml:lang="en">Free shape</nc1ihm:Nom>
+                      </xs:appinfo>
+                    </xs:annotation>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element minOccurs="0" name="comment" type="nc1common:WideTextType">
+              <xs:annotation>
+                <xs:documentation>Commentaire en texte libre.</xs:documentation>
+                <xs:documentation xml:lang="en">free text comment.</xs:documentation>
+                <xs:appinfo>
+                  <nc1ihm:Nom>Commentaire</nc1ihm:Nom>
+                  <nc1ihm:Nom xml:lang="en">comment</nc1ihm:Nom>
+                </xs:appinfo>
+              </xs:annotation>
+            </xs:element>
+            <xs:element minOccurs="0" name="url" type="nc1common:MediumTextType">
+              <xs:annotation>
+                <xs:documentation>Lien vers un fichier associé au message.</xs:documentation>
+                <xs:documentation xml:lang="en">Link to a file attached to the message.</xs:documentation>
+                <xs:appinfo>
+                  <nc1ihm:Nom>Url</nc1ihm:Nom>
+                  <nc1ihm:Nom xml:lang="en">url</nc1ihm:Nom>
+                </xs:appinfo>
+              </xs:annotation>
+            </xs:element>
+          </xs:sequence>
+        </xs:extension>
+      </xs:complexContent>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

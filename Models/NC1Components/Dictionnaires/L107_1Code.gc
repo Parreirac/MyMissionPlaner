@@ -1,0 +1,333 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<gc:CodeList xmlns:nc1dico="urn:fra:nc1:dictionnaires" xmlns:gc="http://docs.oasis-open.org/codelist/ns/genericode/1.0/">
+  <Annotation>
+    <Description>
+      <nc1dico:description>DESCRIPTION DE L'ETAT DE DISPONIBILITE D'UNE UNITE POUR ETRE OPERATIONNELLE
+DICO STAT 284
+REFERENCE : NDS 503994/CFT/DIV.ACE/BGEN-NRBC DU 05/03/2013</nc1dico:description>
+      <nc1dico:description xml:lang="en">Description of the state of readiness of a unit to be operational (STAT dictionary 284) Reference: 503 994 NDS / CFT / DIV.ACE / BGEN of CBRN-05/03/2013</nc1dico:description>
+    </Description>
+    <AppInfo>
+      <nc1dico:source>SFTT 3.4.8</nc1dico:source>
+      <nc1dico:derogation>NIVEAU PROTECTION NRBC</nc1dico:derogation>
+    </AppInfo>
+  </Annotation>
+  <Identification>
+    <ShortName>L107_1Code</ShortName>
+    <Version>9.0.0</Version>
+    <CanonicalUri>urn:fra:nc1:common:sicsdicos:L107_1Code</CanonicalUri>
+    <CanonicalVersionUri>urn:fra:nc1:common:sicsdicos:L107_1Code:9.0.0</CanonicalVersionUri>
+  </Identification>
+  <ColumnSet DatatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes">
+    <Column Id="code" Use="required">
+      <ShortName>Code</ShortName>
+      <Data Type="int" />
+    </Column>
+    <Column Id="short" Use="required">
+      <ShortName>Short</ShortName>
+      <Data Type="string" />
+    </Column>
+    <Column Id="long" Use="optional">
+      <ShortName>Long</ShortName>
+      <Data Type="string" />
+    </Column>
+    <Column Id="short-en" Use="optional">
+      <ShortName>Short anglais</ShortName>
+      <Data Type="string" />
+    </Column>
+    <Column Id="long-en" Use="optional">
+      <ShortName>Long anglais</ShortName>
+      <Data Type="string" />
+    </Column>
+    <Column Id="parent" Use="optional">
+      <ShortName>Parent</ShortName>
+      <Data Type="int" />
+    </Column>
+    <Column Id="codeSymbole" Use="optional">
+      <ShortName>Code Symbole</ShortName>
+      <Data Type="string" />
+    </Column>
+    <Column Id="codeHierarchique" Use="optional">
+      <ShortName>Code Hierarchique</ShortName>
+      <Data Type="string" />
+    </Column>
+    <Key Id="codeKey">
+      <ShortName>CodeKey</ShortName>
+      <ColumnRef Ref="code" />
+    </Key>
+  </ColumnSet>
+  <SimpleCodeList>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>0</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>-</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>NO STATEMENT</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>-</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>NO STATEMENT</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>1</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>0</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>AUCUNE MENACE NRBC</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>0</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>NO CBRN MASK CARRIED NO INDIVIDUAL EQPT</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>2</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>0M</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>AUCUNE MENACE NRBC / MASQUE PORTE</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>0M</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>NO CBRN MASK WORN NO INDIVIDUAL EQPT</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>3</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>1</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>NIVEAU MENACE NUL</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>1</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>V.LOW CBRN MASK CARRIED IND EQPT IMED AVAIL</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>4</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>1M</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>NIVEAU MENACE NUL / MASQUE PORTE</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>1M</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>V.LOW CBRN MASK WORN IND EQPT IMED AVAIL</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>5</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>2</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>NIVEAU MENACE FAIBLE</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>2</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>LOW CBRN MASK GLOVES &amp; BOOTS CARRIED SUIT WORN</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>6</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>2M</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>NIVEAU MENACE FAIBLE / MASQUE PORTE CAPUCHE FERMEE</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>2M</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>LOW CBRN MASK &amp; SUIT WORN BOOTS &amp; GLOVES CARRIED</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>7</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>3</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>NIVEAU MENACE MOYEN</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>3</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>MED CBRN MASK &amp; GLOVES CARRIED SUIT &amp; BOOTS WORN</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>8</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>3M</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>NIVEAU MENACE MOYEN / MASQUE PORTE CAPUCHE FERMEE</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>3M</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>MED CBRN MASK SUIT &amp; BOOTS WORN GLOVES CARRIED</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>9</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>4</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>NIVEAU MENACE ELEVE</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>4</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>HIGH CBRN MASK CARRIED SUIT BOOTS &amp; GLOVES WORN.</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>10</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>4M</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>NIVEAU MENACE ELEVE / MASQUE PORTE CAPUCHE FERMEE</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>4M</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>HIGH CBRN MASK SUIT  BOOTS &amp; GLOVES WORN</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>11</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>MOPP0</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>MOPP0</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>MOPP0</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>MOPP0</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>12</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>MOPP1</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>MOPP1</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>MOPP1</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>MOPP1</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>13</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>MOPP2</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>MOPP2</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>MOPP2</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>MOPP2</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>14</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>MOPP3</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>MOPP3</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>MOPP3</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>MOPP3</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>15</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>MOPPRY</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>MOPP READY</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>MOPPRY</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>MOPP READY</SimpleValue>
+      </Value>
+    </Row>
+  </SimpleCodeList>
+</gc:CodeList>

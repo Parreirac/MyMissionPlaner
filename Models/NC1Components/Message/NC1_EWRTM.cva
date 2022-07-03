@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<cva:ContextValueAssociation xmlns:cva="http://docs.oasis-open.org/codelist/ns/ContextValueAssociation/1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="urn:fra:nc1:message:ewrtm" queryBinding="xslt2" xmlns:nc1ewrtm="urn:fra:nc1:message:ewrtm">
+  <!-- NC1 V.9.0.0 -->
+  <ValueLists>
+    <ValueList xml:id="nc1msgcom-ClassificationCode" uri="../Dictionnaires/ClassificationCode.gc" />
+    <ValueList xml:id="nc1msgcom-UrgencyLevelCode" uri="../Dictionnaires/UrgencyLevelCode.gc" />
+    <ValueList xml:id="nc1objcom-ActivationStatusCode" uri="../Dictionnaires/ActivationStatusCode.gc" />
+    <ValueList xml:id="nc1objcom-IsFullCode" uri="../Dictionnaires/IsFullCode.gc" />
+    <ValueList xml:id="nc1unit-UnitFrSpecificCode" uri="../Dictionnaires/UnitFrSpecificCode.gc" />
+    <ValueList xml:id="nc1sicsdicos-L125_1Code" uri="../Dictionnaires/L125_1Code.gc" />
+    <ValueList xml:id="nc1sicsdicos-L115_1Code" uri="../Dictionnaires/L115_1Code.gc" />
+    <ValueList xml:id="nc1sicsdicos-L135_30Code" uri="../Dictionnaires/L135_30Code.gc" />
+    <ValueList xml:id="nc1sicsdicos-L110_30Code" uri="../Dictionnaires/L110_30Code.gc" />
+    <ValueList xml:id="nc1sicsdicos-L135_1Code" uri="../Dictionnaires/L135_1Code.gc" />
+    <ValueList xml:id="nc1sicsdicos-L125_7Code" uri="../Dictionnaires/L125_7Code.gc" />
+    <ValueList xml:id="nc1sicsdicos-L107_1Code" uri="../Dictionnaires/L107_1Code.gc" />
+    <ValueList xml:id="nc1sicsdicos-L114_1Code" uri="../Dictionnaires/L114_1Code.gc" />
+    <ValueList xml:id="nc1sicsdicos-L135_16Code" uri="../Dictionnaires/L135_16Code.gc" />
+    <ValueList xml:id="nc1sicsdicos-L125_17Code" uri="../Dictionnaires/L125_17Code.gc" />
+    <ValueList xml:id="nc1sicsdicos-L125_16Code" uri="../Dictionnaires/L125_16Code.gc" />
+    <ValueList xml:id="nc1sicsdicos-L117_5Code" uri="../Dictionnaires/L117_5Code.gc" />
+    <ValueList xml:id="nc1sicsdicos-L114_10Code" uri="../Dictionnaires/L114_10Code.gc" />
+    <ValueList xml:id="nc1sicsdicos-L105_2Code" uri="../Dictionnaires/L105_2Code.gc" />
+    <ValueList xml:id="nc1ew-SignalTypeCode" uri="../Dictionnaires/SignalTypeCode.gc" />
+    <ValueList xml:id="nc1ew-RadioRadarFunctionCode" uri="../Dictionnaires/RadioRadarFunctionCode.gc" />
+    <ValueList xml:id="nc1ew-MissionPriorityCode" uri="../Dictionnaires/MissionPriorityCode.gc" />
+    <ValueList xml:id="nc1ew-EcmTypeCode" uri="../Dictionnaires/EcmTypeCode.gc" />
+    <ValueList xml:id="nc1ew-EcmTechniqueCode" uri="../Dictionnaires/EcmTechniqueCode.gc" />
+    <ValueList xml:id="nc1ew-MechanicalJammingTechniqueCode" uri="../Dictionnaires/MechanicalJammingTechniqueCode.gc" />
+  </ValueLists>
+  <Contexts>
+    <Context address="/nc1ewrtm:NC1_EWRTM/@classification" values="nc1msgcom-ClassificationCode" />
+    <Context address="/nc1ewrtm:NC1_EWRTM/@urgencyLevel" values="nc1msgcom-UrgencyLevelCode" />
+    <Context address="/nc1ewrtm:NC1_EWRTM/taskedUnit/@activationStatus" values="nc1objcom-ActivationStatusCode" />
+    <Context address="/nc1ewrtm:NC1_EWRTM/taskedUnit/@isFull" values="nc1objcom-IsFullCode" />
+    <Context address="/nc1ewrtm:NC1_EWRTM/taskedUnit/tacticalData/frSpecificSymbol" values="nc1unit-UnitFrSpecificCode" />
+    <Context address="/nc1ewrtm:NC1_EWRTM/taskedUnit/tacticalData/operationalStatusIndicator" values="nc1sicsdicos-L125_1Code" />
+    <Context address="/nc1ewrtm:NC1_EWRTM/taskedUnit/tacticalData/activity" values="nc1sicsdicos-L115_1Code" />
+    <Context address="/nc1ewrtm:NC1_EWRTM/taskedUnit/tacticalData/isDismounted" values="nc1sicsdicos-L135_30Code" />
+    <Context address="/nc1ewrtm:NC1_EWRTM/taskedUnit/tacticalData/commandAndControlRole" values="nc1sicsdicos-L110_30Code" />
+    <Context address="/nc1ewrtm:NC1_EWRTM/taskedUnit/tacticalData/ticIndicator" values="nc1sicsdicos-L135_1Code" />
+    <Context address="/nc1ewrtm:NC1_EWRTM/taskedUnit/tacticalData/availability" values="nc1sicsdicos-L125_7Code" />
+    <Context address="/nc1ewrtm:NC1_EWRTM/taskedUnit/tacticalData/cbrnProtection" values="nc1sicsdicos-L107_1Code" />
+    <Context address="/nc1ewrtm:NC1_EWRTM/taskedUnit/tacticalData/weaponControlOrder" values="nc1sicsdicos-L114_1Code" />
+    <Context address="/nc1ewrtm:NC1_EWRTM/taskedUnit/tacticalData/subordination/subordinationType" values="nc1sicsdicos-L135_16Code" />
+    <Context address="/nc1ewrtm:NC1_EWRTM/taskedUnit/status/operationalStatus/effectif" values="nc1sicsdicos-L125_17Code" />
+    <Context address="/nc1ewrtm:NC1_EWRTM/taskedUnit/status/operationalStatus/personnelTiredness" values="nc1sicsdicos-L125_16Code" />
+    <Context address="/nc1ewrtm:NC1_EWRTM/taskedUnit/status/operationalStatus/equipment" values="nc1sicsdicos-L125_17Code" />
+    <Context address="/nc1ewrtm:NC1_EWRTM/taskedUnit/status/operationalStatus/fuel" values="nc1sicsdicos-L125_17Code" />
+    <Context address="/nc1ewrtm:NC1_EWRTM/taskedUnit/status/operationalStatus/ammunitions" values="nc1sicsdicos-L125_17Code" />
+    <Context address="/nc1ewrtm:NC1_EWRTM/taskedUnit/location/quality" values="nc1sicsdicos-L117_5Code" />
+    <Context address="/nc1ewrtm:NC1_EWRTM/taskedUnit/anticipatedStance/validityPeriod/tacticalTime" values="nc1sicsdicos-L114_10Code" />
+    <Context address="/nc1ewrtm:NC1_EWRTM/ecmTargetInformation/ecmtgt/country" values="nc1sicsdicos-L105_2Code" />
+    <Context address="/nc1ewrtm:NC1_EWRTM/ecmTargetInformation/_5etginfo/signalType" values="nc1ew-SignalTypeCode" />
+    <Context address="/nc1ewrtm:NC1_EWRTM/ecmTargetInformation/_5etginfo/radioRadarFunction" values="nc1ew-RadioRadarFunctionCode" />
+    <Context address="/nc1ewrtm:NC1_EWRTM/ecmTargetInformation/_5ecmact/missionPriority" values="nc1ew-MissionPriorityCode" />
+    <Context address="/nc1ewrtm:NC1_EWRTM/ecmTargetInformation/_5ecmact/type" values="nc1ew-EcmTypeCode" />
+    <Context address="/nc1ewrtm:NC1_EWRTM/ecmTargetInformation/_5ecmact/technique" values="nc1ew-EcmTechniqueCode" />
+    <Context address="/nc1ewrtm:NC1_EWRTM/esmTargetInformation/esmtgt/country" values="nc1sicsdicos-L105_2Code" />
+    <Context address="/nc1ewrtm:NC1_EWRTM/esmTargetInformation/_5etginfo/signalType" values="nc1ew-SignalTypeCode" />
+    <Context address="/nc1ewrtm:NC1_EWRTM/esmTargetInformation/_5etginfo/radioRadarFunction" values="nc1ew-RadioRadarFunctionCode" />
+    <Context address="/nc1ewrtm:NC1_EWRTM/esmTargetInformation/_5esmact/missionPriority" values="nc1ew-MissionPriorityCode" />
+    <Context address="/nc1ewrtm:NC1_EWRTM/_8chaff/mechanicalJammingTechnique" values="nc1ew-MechanicalJammingTechniqueCode" />
+    <Context address="/nc1ewrtm:NC1_EWRTM/_8timeloc/country" values="nc1sicsdicos-L105_2Code" />
+  </Contexts>
+</cva:ContextValueAssociation>

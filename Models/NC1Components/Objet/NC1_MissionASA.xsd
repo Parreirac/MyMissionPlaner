@@ -1,0 +1,668 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema targetNamespace="urn:fra:nc1:objet:missionASA" xmlns:nc1ihm="urn:fra:nc1:IHM" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:nc1missionASA="urn:fra:nc1:objet:missionASA" xmlns:nc1common="urn:fra:nc1:common:attribute" xmlns:nc1msgcom="urn:fra:nc1:common:message" xmlns:nc1objcom="urn:fra:nc1:common:object" xmlns:nc1sicsdicos="urn:fra:nc1:common:sicsdicos" xmlns:nc1acm="urn:fra:nc1:objet:acm">
+  <!-- NC1 V.9.0.0 -->
+  <xs:import namespace="urn:fra:nc1:common:attribute" schemaLocation="../Commun/Common.xsd" />
+  <xs:import namespace="urn:fra:nc1:common:message" schemaLocation="../Commun/Message.xsd" />
+  <xs:import namespace="urn:fra:nc1:common:object" schemaLocation="../Commun/Object.xsd" />
+  <xs:import namespace="urn:fra:nc1:common:sicsdicos" schemaLocation="../Commun/SICS_Dictionaries.xsd" />
+  <xs:import namespace="urn:fra:nc1:objet:acm" schemaLocation="NC1_AcmWez.xsd" />
+  <xs:element name="NC1_MissionASA" type="nc1missionASA:MissionASAType">
+    <xs:annotation>
+      <xs:documentation></xs:documentation>
+      <xs:documentation xml:lang="en"></xs:documentation>
+      <xs:appinfo>
+        <nc1:type xmlns:nc1="urn:fra:nc1">Objet</nc1:type>
+        <nc1ihm:Nom>MissionASA</nc1ihm:Nom>
+        <nc1ihm:Nom xml:lang="en">SurfaceToAirMission</nc1ihm:Nom>
+        <nc1:MessH xmlns:nc1="urn:fra:nc1">N/A</nc1:MessH>
+        <nc1:MessADatP3 xmlns:nc1="urn:fra:nc1">N/A</nc1:MessADatP3>
+        <nc1:LastNC1ModifyVersion xmlns:nc1="urn:fra:nc1">9.0.0</nc1:LastNC1ModifyVersion>
+      </xs:appinfo>
+    </xs:annotation>
+  </xs:element>
+  <xs:simpleType name="AircraftEquipmentCode">
+    <xs:annotation>
+      <xs:appinfo>
+        <nc1dico:source xmlns:nc1dico="urn:fra:nc1:dictionnaires">NCi+</nc1dico:source>
+        <nc1ihm:description>Equipement aéronef.</nc1ihm:description>
+        <nc1ihm:description xml:lang="en">Aircraft equipment.</nc1ihm:description>
+      </xs:appinfo>
+      <xs:documentation>Equipement aéronef.</xs:documentation>
+      <xs:documentation xml:lang="en">Aircraft equipment.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:integer" />
+  </xs:simpleType>
+  <xs:simpleType name="AircraftTypeCode">
+    <xs:annotation>
+      <xs:appinfo>
+        <nc1dico:source xmlns:nc1dico="urn:fra:nc1:dictionnaires">NCi+</nc1dico:source>
+        <nc1ihm:description>Type d'aéronef.</nc1ihm:description>
+        <nc1ihm:description xml:lang="en">Aircraft type.</nc1ihm:description>
+      </xs:appinfo>
+      <xs:documentation>Type d'aéronef.</xs:documentation>
+      <xs:documentation xml:lang="en">Aircraft type.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:integer" />
+  </xs:simpleType>
+  <xs:complexType name="ElementDefenceType">
+    <xs:annotation>
+      <xs:documentation>Elément à défendre.</xs:documentation>
+      <xs:documentation xml:lang="en">element to defend.</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="location" type="nc1common:Nc1ObjectRefType">
+        <xs:annotation>
+          <xs:documentation>Localisation de l'élément.</xs:documentation>
+          <xs:documentation xml:lang="en">element location.</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Localisation de l'élément</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">element location</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="nature" type="nc1common:MediumTextType">
+        <xs:annotation>
+          <xs:documentation>Nature de l'élément.</xs:documentation>
+          <xs:documentation xml:lang="en">element nature.</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Nature de l'élément</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">element nature</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="priority" type="nc1missionASA:PriorityCode">
+        <xs:annotation>
+          <xs:documentation>Priorité de défense.</xs:documentation>
+          <xs:documentation xml:lang="en">defense priority.</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Priorité de défense</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">defense priority</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="MissionASAType">
+    <xs:annotation>
+      <xs:documentation></xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="nc1objcom:BaseObjectType">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="tacticalData">
+            <xs:annotation>
+              <xs:documentation>Données tactiques de la mission.</xs:documentation>
+              <xs:documentation xml:lang="en">tactical datas of the mission.</xs:documentation>
+              <xs:appinfo>
+                <nc1ihm:Nom>Données tactiques</nc1ihm:Nom>
+                <nc1ihm:Nom xml:lang="en">tactical datas</nc1ihm:Nom>
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element minOccurs="0" name="airDefenceMissionNumber" type="nc1common:ShortTextObjectType">
+                  <xs:annotation>
+                    <xs:documentation>Numéro du temps de manœuvre.</xs:documentation>
+                    <xs:documentation xml:lang="en">operating step number.</xs:documentation>
+                    <xs:appinfo>
+                      <nc1ihm:Nom>Numéro du temps de manœuvre</nc1ihm:Nom>
+                      <nc1ihm:Nom xml:lang="en">operating step number</nc1ihm:Nom>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:element>
+                <xs:element minOccurs="0" name="tacticalPhase" type="nc1sicsdicos:L114_10Code">
+                  <xs:annotation>
+                    <xs:documentation>Temps dans lequel s’inscrit l’action tactique, correspondant à un temps de l’OPORD.</xs:documentation>
+                    <xs:documentation xml:lang="en">Time in which the tactical action takes place, corresponding to an OPORD time.</xs:documentation>
+                    <xs:appinfo>
+                      <nc1ihm:Nom>Phase tactique</nc1ihm:Nom>
+                      <nc1ihm:Nom xml:lang="en">tactical phase</nc1ihm:Nom>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:element>
+                <xs:element minOccurs="0" name="validityPeriod" type="nc1common:PeriodType">
+                  <xs:annotation>
+                    <xs:documentation>Créneau de la mission.</xs:documentation>
+                    <xs:documentation xml:lang="en">validity period of the mission.</xs:documentation>
+                    <xs:appinfo>
+                      <nc1ihm:Nom>Créneau horaire</nc1ihm:Nom>
+                      <nc1ihm:Nom xml:lang="en">validity period</nc1ihm:Nom>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:element>
+                <xs:element maxOccurs="unbounded" name="airDefenceUnitMission">
+                  <xs:annotation>
+                    <xs:documentation>Description des missions ASA affectées aux unités ASA.</xs:documentation>
+                    <xs:documentation xml:lang="en">Description of ASA missions assigned to ASA units.</xs:documentation>
+                    <xs:appinfo>
+                      <nc1ihm:Nom>Description des missions ASA affectées aux unités ASA</nc1ihm:Nom>
+                      <nc1ihm:Nom xml:lang="en">Description of ASA missions assigned to ASA units</nc1ihm:Nom>
+                    </xs:appinfo>
+                  </xs:annotation>
+                  <xs:complexType>
+                    <xs:sequence>
+                      <xs:element name="airDefenceUnitId" type="nc1common:Nc1ObjectRefType">
+                        <xs:annotation>
+                          <xs:documentation>Identifiant unité ASA.</xs:documentation>
+                          <xs:documentation xml:lang="en">ASA unit identifier.</xs:documentation>
+                          <xs:appinfo>
+                            <nc1ihm:Nom>Identifiant unité ASA</nc1ihm:Nom>
+                            <nc1ihm:Nom xml:lang="en">ASA unit identifier</nc1ihm:Nom>
+                          </xs:appinfo>
+                        </xs:annotation>
+                      </xs:element>
+                      <xs:element maxOccurs="unbounded" name="airDefenceMission">
+                        <xs:annotation>
+                          <xs:documentation>Mission ASA.</xs:documentation>
+                          <xs:documentation xml:lang="en">Air defense mission.</xs:documentation>
+                          <xs:appinfo>
+                            <nc1ihm:Nom>Mission ASA</nc1ihm:Nom>
+                            <nc1ihm:Nom xml:lang="en">Air defense mission</nc1ihm:Nom>
+                          </xs:appinfo>
+                        </xs:annotation>
+                        <xs:complexType>
+                          <xs:sequence>
+                            <xs:element name="missionNumber" type="xs:unsignedShort">
+                              <xs:annotation>
+                                <xs:documentation>Numéro de la mission.</xs:documentation>
+                                <xs:documentation xml:lang="en">mission number.</xs:documentation>
+                                <xs:appinfo>
+                                  <nc1ihm:Nom>Numéro de la mission</nc1ihm:Nom>
+                                  <nc1ihm:Nom xml:lang="en">mission number</nc1ihm:Nom>
+                                </xs:appinfo>
+                              </xs:annotation>
+                            </xs:element>
+                            <xs:element maxOccurs="unbounded" name="weaponsSystem" type="nc1missionASA:SurfaceToAirTypeCode">
+                              <xs:annotation>
+                                <xs:documentation>Type de systèmes d'armes.</xs:documentation>
+                                <xs:documentation xml:lang="en">weapon system type.</xs:documentation>
+                                <xs:appinfo>
+                                  <nc1ihm:Nom>Type de systèmes d'armes</nc1ihm:Nom>
+                                  <nc1ihm:Nom xml:lang="en">weapon system type</nc1ihm:Nom>
+                                </xs:appinfo>
+                              </xs:annotation>
+                            </xs:element>
+                            <xs:element maxOccurs="unbounded" minOccurs="0" name="weaponsSystemUnlisted" type="nc1common:ShortTextType">
+                              <xs:annotation>
+                                <xs:documentation>Type de systèmes d'armes non répertoriés.</xs:documentation>
+                                <xs:documentation xml:lang="en">unlisted weapon system type.</xs:documentation>
+                                <xs:appinfo>
+                                  <nc1ihm:Nom>Type de systèmes d'armes non répertoriés</nc1ihm:Nom>
+                                  <nc1ihm:Nom xml:lang="en">unlisted weapon system type</nc1ihm:Nom>
+                                </xs:appinfo>
+                              </xs:annotation>
+                            </xs:element>
+                            <xs:element maxOccurs="unbounded" minOccurs="0" name="batteryId" type="nc1common:Nc1ObjectRefType">
+                              <xs:annotation>
+                                <xs:documentation>Identifiant des batteries.</xs:documentation>
+                                <xs:documentation xml:lang="en">battery id.</xs:documentation>
+                                <xs:appinfo>
+                                  <nc1ihm:Nom>Identifiant des batteries</nc1ihm:Nom>
+                                  <nc1ihm:Nom xml:lang="en">battery id</nc1ihm:Nom>
+                                </xs:appinfo>
+                              </xs:annotation>
+                            </xs:element>
+                            <xs:element minOccurs="0" name="batteryCount" type="nc1common:Int0To99Type">
+                              <xs:annotation>
+                                <xs:documentation>Nombre de batteries.</xs:documentation>
+                                <xs:documentation xml:lang="en">battery count.</xs:documentation>
+                                <xs:appinfo>
+                                  <nc1ihm:Nom>Nombre de batteries</nc1ihm:Nom>
+                                  <nc1ihm:Nom xml:lang="en">battery count</nc1ihm:Nom>
+                                </xs:appinfo>
+                              </xs:annotation>
+                            </xs:element>
+                            <xs:element minOccurs="0" name="actualMissionEndDatetime" type="xs:dateTime">
+                              <xs:annotation>
+                                <xs:documentation>Date de fin de la mission.</xs:documentation>
+                                <xs:appinfo>
+                                  <nc1ihm:Nom>Date de fin de la mission</nc1ihm:Nom>
+                                </xs:appinfo>
+                              </xs:annotation>
+                            </xs:element>
+                            <xs:element minOccurs="0" name="nextMissionStartDatetime" type="xs:dateTime">
+                              <xs:annotation>
+                                <xs:documentation>Date de début de la future mission.</xs:documentation>
+                                <xs:documentation xml:lang="en">next mission start datetime.</xs:documentation>
+                                <xs:appinfo>
+                                  <nc1ihm:Nom>Date de début de la future mission</nc1ihm:Nom>
+                                  <nc1ihm:Nom xml:lang="en">next mission start datetime</nc1ihm:Nom>
+                                </xs:appinfo>
+                              </xs:annotation>
+                            </xs:element>
+                            <xs:element minOccurs="0" name="specialInstructions" type="nc1common:MediumTextType">
+                              <xs:annotation>
+                                <xs:documentation>Consignes particulières.</xs:documentation>
+                                <xs:documentation xml:lang="en">specific instructions.</xs:documentation>
+                                <xs:appinfo>
+                                  <nc1ihm:Nom>Consignes particulières</nc1ihm:Nom>
+                                  <nc1ihm:Nom xml:lang="en">specific instructions</nc1ihm:Nom>
+                                </xs:appinfo>
+                              </xs:annotation>
+                            </xs:element>
+                            <xs:element maxOccurs="unbounded" minOccurs="0" name="particularArea" type="nc1common:Nc1ObjectRefType">
+                              <xs:annotation>
+                                <xs:documentation>Zones particulières.</xs:documentation>
+                                <xs:documentation xml:lang="en">particular areas.</xs:documentation>
+                                <xs:appinfo>
+                                  <nc1ihm:Nom>Zones particulières</nc1ihm:Nom>
+                                  <nc1ihm:Nom xml:lang="en">particular areas</nc1ihm:Nom>
+                                </xs:appinfo>
+                              </xs:annotation>
+                            </xs:element>
+                            <xs:element maxOccurs="unbounded" minOccurs="0" name="priorityThreat">
+                              <xs:annotation>
+                                <xs:documentation>Menaces prioritaires.</xs:documentation>
+                                <xs:documentation xml:lang="en">Priority threat.</xs:documentation>
+                                <xs:appinfo>
+                                  <nc1ihm:Nom>Menaces prioritaires</nc1ihm:Nom>
+                                  <nc1ihm:Nom xml:lang="en">Priority threat</nc1ihm:Nom>
+                                </xs:appinfo>
+                              </xs:annotation>
+                              <xs:complexType>
+                                <xs:sequence>
+                                  <xs:element name="priorityOfTheThreat" type="nc1missionASA:PriorityCode">
+                                    <xs:annotation>
+                                      <xs:documentation>Priorité de la menace.</xs:documentation>
+                                      <xs:documentation xml:lang="en">Threat priority.</xs:documentation>
+                                      <xs:appinfo>
+                                        <nc1ihm:Nom>Priorité de la menace</nc1ihm:Nom>
+                                        <nc1ihm:Nom xml:lang="en">Threat priority</nc1ihm:Nom>
+                                      </xs:appinfo>
+                                    </xs:annotation>
+                                  </xs:element>
+                                  <xs:element name="aircraftType" type="nc1missionASA:AircraftTypeCode">
+                                    <xs:annotation>
+                                      <xs:documentation>Type d'aéronef.</xs:documentation>
+                                      <xs:documentation xml:lang="en">aircraft type.</xs:documentation>
+                                      <xs:appinfo>
+                                        <nc1ihm:Nom>Type d'aéronef</nc1ihm:Nom>
+                                        <nc1ihm:Nom xml:lang="en">aircraft type</nc1ihm:Nom>
+                                      </xs:appinfo>
+                                    </xs:annotation>
+                                  </xs:element>
+                                  <xs:element minOccurs="0" name="penetrationAxis" type="nc1common:Nc1ObjectRefType">
+                                    <xs:annotation>
+                                      <xs:documentation>Axe de pénétration présumé.</xs:documentation>
+                                      <xs:documentation xml:lang="en">presumed penetration axis.</xs:documentation>
+                                      <xs:appinfo>
+                                        <nc1ihm:Nom>Axe de pénétration présumé</nc1ihm:Nom>
+                                        <nc1ihm:Nom xml:lang="en">presumed penetration axis</nc1ihm:Nom>
+                                      </xs:appinfo>
+                                    </xs:annotation>
+                                  </xs:element>
+                                  <xs:element maxOccurs="unbounded" minOccurs="0" name="equipmentAndWeapon">
+                                    <xs:annotation>
+                                      <xs:documentation>Armement et équipement.</xs:documentation>
+                                      <xs:documentation xml:lang="en">weapons and equipment.</xs:documentation>
+                                      <xs:appinfo>
+                                        <nc1ihm:Nom>Armement et équipement</nc1ihm:Nom>
+                                        <nc1ihm:Nom xml:lang="en">weapons and equipment</nc1ihm:Nom>
+                                      </xs:appinfo>
+                                    </xs:annotation>
+                                    <xs:complexType>
+                                      <xs:sequence>
+                                        <xs:element minOccurs="0" name="aircraftWeapon" type="nc1missionASA:WeaponCode">
+                                          <xs:annotation>
+                                            <xs:documentation>Armement de l'aéronef.</xs:documentation>
+                                            <xs:documentation xml:lang="en">aircraft weapons.</xs:documentation>
+                                            <xs:appinfo>
+                                              <nc1ihm:Nom>Armement de l'aéronef</nc1ihm:Nom>
+                                              <nc1ihm:Nom xml:lang="en">aircraft weapons</nc1ihm:Nom>
+                                            </xs:appinfo>
+                                          </xs:annotation>
+                                        </xs:element>
+                                        <xs:element minOccurs="0" name="aircraftWeaponUnlisted" type="nc1common:ShortTextType">
+                                          <xs:annotation>
+                                            <xs:documentation>Armement de l'aéronef non répertorié.</xs:documentation>
+                                            <xs:documentation xml:lang="en">unlisted aircraf weapons.</xs:documentation>
+                                            <xs:appinfo>
+                                              <nc1ihm:Nom>Armement de l'aéronef non répertorié</nc1ihm:Nom>
+                                              <nc1ihm:Nom xml:lang="en">unlisted aircraf weapons</nc1ihm:Nom>
+                                            </xs:appinfo>
+                                          </xs:annotation>
+                                        </xs:element>
+                                        <xs:element minOccurs="0" name="aircraftEquipment" type="nc1missionASA:AircraftEquipmentCode">
+                                          <xs:annotation>
+                                            <xs:documentation>Equipement de l'aéronef.</xs:documentation>
+                                            <xs:documentation xml:lang="en">equipment of the aircraft.</xs:documentation>
+                                            <xs:appinfo>
+                                              <nc1ihm:Nom>Equipement de l'aéronef</nc1ihm:Nom>
+                                              <nc1ihm:Nom xml:lang="en">equipment of the aircraft</nc1ihm:Nom>
+                                            </xs:appinfo>
+                                          </xs:annotation>
+                                        </xs:element>
+                                        <xs:element minOccurs="0" name="aircraftEquipmentUnlisted" type="nc1common:ShortTextType">
+                                          <xs:annotation>
+                                            <xs:documentation>Equipement de l'aéronef non répertorié.</xs:documentation>
+                                            <xs:documentation xml:lang="en">unlisted aircraft equipment.</xs:documentation>
+                                            <xs:appinfo>
+                                              <nc1ihm:Nom>Equipement de l'aéronef non répertorié</nc1ihm:Nom>
+                                              <nc1ihm:Nom xml:lang="en">unlisted aircraft equipment</nc1ihm:Nom>
+                                            </xs:appinfo>
+                                          </xs:annotation>
+                                        </xs:element>
+                                      </xs:sequence>
+                                    </xs:complexType>
+                                  </xs:element>
+                                </xs:sequence>
+                              </xs:complexType>
+                            </xs:element>
+                            <xs:element maxOccurs="unbounded" minOccurs="0" name="implantationArea">
+                              <xs:annotation>
+                                <xs:documentation>Zones d'implantation proposées.</xs:documentation>
+                                <xs:documentation xml:lang="en">implantation areas proposed.</xs:documentation>
+                                <xs:appinfo>
+                                  <nc1ihm:Nom>Zones d'implantation proposée</nc1ihm:Nom>
+                                  <nc1ihm:Nom xml:lang="en">implantation area proposed</nc1ihm:Nom>
+                                </xs:appinfo>
+                              </xs:annotation>
+                              <xs:complexType>
+                                <xs:sequence>
+                                  <xs:element minOccurs="0" name="orderNumber" type="nc1common:Int1To99999Type">
+                                    <xs:annotation>
+                                      <xs:documentation>Numéro d'ordre.</xs:documentation>
+                                      <xs:documentation xml:lang="en">order number.</xs:documentation>
+                                      <xs:appinfo>
+                                        <nc1ihm:Nom>Numéro d'ordre</nc1ihm:Nom>
+                                        <nc1ihm:Nom xml:lang="en">order number</nc1ihm:Nom>
+                                      </xs:appinfo>
+                                    </xs:annotation>
+                                  </xs:element>
+                                  <xs:element minOccurs="0" name="airDefenceSectionId" type="nc1common:Nc1ObjectRefType">
+                                    <xs:annotation>
+                                      <xs:documentation>Identifiant section ASA.</xs:documentation>
+                                      <xs:documentation xml:lang="en">air defense section id.</xs:documentation>
+                                      <xs:appinfo>
+                                        <nc1ihm:Nom>Identifiant section ASA</nc1ihm:Nom>
+                                        <nc1ihm:Nom xml:lang="en">air defense section id</nc1ihm:Nom>
+                                      </xs:appinfo>
+                                    </xs:annotation>
+                                  </xs:element>
+                                </xs:sequence>
+                              </xs:complexType>
+                            </xs:element>
+                            <xs:element maxOccurs="unbounded" minOccurs="0" name="specialDefence">
+                              <xs:annotation>
+                                <xs:documentation>Défenses particulières.</xs:documentation>
+                                <xs:documentation xml:lang="en">special defenses.</xs:documentation>
+                                <xs:appinfo>
+                                  <nc1ihm:Nom>Défense particulières</nc1ihm:Nom>
+                                  <nc1ihm:Nom xml:lang="en">special defenses</nc1ihm:Nom>
+                                </xs:appinfo>
+                              </xs:annotation>
+                              <xs:complexType>
+                                <xs:sequence>
+                                  <xs:element minOccurs="0" name="unitToDefend" type="nc1missionASA:UnitDefenceType">
+                                    <xs:annotation>
+                                      <xs:documentation>Unité à défendre.</xs:documentation>
+                                      <xs:documentation xml:lang="en">unit to defend.</xs:documentation>
+                                      <xs:appinfo>
+                                        <nc1ihm:Nom>Unité à défendre</nc1ihm:Nom>
+                                        <nc1ihm:Nom xml:lang="en">unit to defend</nc1ihm:Nom>
+                                      </xs:appinfo>
+                                    </xs:annotation>
+                                  </xs:element>
+                                  <xs:element minOccurs="0" name="unitToEscort" type="nc1missionASA:UnitDefenceType">
+                                    <xs:annotation>
+                                      <xs:documentation>Unité à accompagner.</xs:documentation>
+                                      <xs:documentation xml:lang="en">unit to escort.</xs:documentation>
+                                      <xs:appinfo>
+                                        <nc1ihm:Nom>Unité à accompagner</nc1ihm:Nom>
+                                        <nc1ihm:Nom xml:lang="en">unit to escort</nc1ihm:Nom>
+                                      </xs:appinfo>
+                                    </xs:annotation>
+                                  </xs:element>
+                                  <xs:element minOccurs="0" name="elementToDefend" type="nc1missionASA:ElementDefenceType">
+                                    <xs:annotation>
+                                      <xs:documentation>Elément particulier à défendre.</xs:documentation>
+                                      <xs:documentation xml:lang="en">specific elemen to defend.</xs:documentation>
+                                      <xs:appinfo>
+                                        <nc1ihm:Nom>Elément particulier à défendre</nc1ihm:Nom>
+                                        <nc1ihm:Nom xml:lang="en">specific elemen to defend</nc1ihm:Nom>
+                                      </xs:appinfo>
+                                    </xs:annotation>
+                                  </xs:element>
+                                </xs:sequence>
+                              </xs:complexType>
+                            </xs:element>
+                            <xs:element maxOccurs="unbounded" minOccurs="0" name="surveillanceArea">
+                              <xs:annotation>
+                                <xs:documentation>Zones à surveiller.</xs:documentation>
+                                <xs:documentation xml:lang="en">surveillance area.</xs:documentation>
+                                <xs:appinfo>
+                                  <nc1ihm:Nom>Zones à surveiller</nc1ihm:Nom>
+                                  <nc1ihm:Nom xml:lang="en">surveillance area</nc1ihm:Nom>
+                                </xs:appinfo>
+                              </xs:annotation>
+                              <xs:complexType>
+                                <xs:sequence>
+                                  <xs:element minOccurs="0" name="proposedDeploymentArea" type="nc1common:Nc1ObjectRefType">
+                                    <xs:annotation>
+                                      <xs:documentation>Zone de déploiement proposée.</xs:documentation>
+                                      <xs:documentation xml:lang="en">proposed deployment area.</xs:documentation>
+                                      <xs:appinfo>
+                                        <nc1ihm:Nom>Zone de déploiement proposée</nc1ihm:Nom>
+                                        <nc1ihm:Nom xml:lang="en">proposed deployment area</nc1ihm:Nom>
+                                      </xs:appinfo>
+                                    </xs:annotation>
+                                  </xs:element>
+                                  <xs:element name="surveillanceArea">
+                                    <xs:annotation>
+                                      <xs:documentation>Zone de surveillance.</xs:documentation>
+                                      <xs:documentation xml:lang="en">surveillance area.</xs:documentation>
+                                      <xs:appinfo>
+                                        <nc1ihm:Nom>Zone de surveillance</nc1ihm:Nom>
+                                        <nc1ihm:Nom xml:lang="en">surveillance area</nc1ihm:Nom>
+                                      </xs:appinfo>
+                                    </xs:annotation>
+                                    <xs:complexType>
+                                      <xs:sequence>
+                                        <xs:element name="area" type="nc1common:Nc1ObjectRefType">
+                                          <xs:annotation>
+                                            <xs:documentation>Zone.</xs:documentation>
+                                            <xs:documentation xml:lang="en">area.</xs:documentation>
+                                            <xs:appinfo>
+                                              <nc1ihm:Nom>Zone</nc1ihm:Nom>
+                                              <nc1ihm:Nom xml:lang="en">area</nc1ihm:Nom>
+                                            </xs:appinfo>
+                                          </xs:annotation>
+                                        </xs:element>
+                                        <xs:element name="verticalLevel" type="nc1acm:LevelsType">
+                                          <xs:annotation>
+                                            <xs:documentation>Dimension verticale.</xs:documentation>
+                                            <xs:documentation xml:lang="en">Vertical level.</xs:documentation>
+                                            <xs:appinfo>
+                                              <nc1ihm:Nom>Dimension verticale</nc1ihm:Nom>
+                                              <nc1ihm:Nom xml:lang="en">Vertical level</nc1ihm:Nom>
+                                            </xs:appinfo>
+                                          </xs:annotation>
+                                        </xs:element>
+                                      </xs:sequence>
+                                    </xs:complexType>
+                                  </xs:element>
+                                  <xs:element minOccurs="0" name="comment" type="nc1common:LongTextType">
+                                    <xs:annotation>
+                                      <xs:documentation>Commentaire.</xs:documentation>
+                                      <xs:documentation xml:lang="en">comment.</xs:documentation>
+                                      <xs:appinfo>
+                                        <nc1ihm:Nom>Commentaire</nc1ihm:Nom>
+                                        <nc1ihm:Nom xml:lang="en">comment</nc1ihm:Nom>
+                                      </xs:appinfo>
+                                    </xs:annotation>
+                                  </xs:element>
+                                </xs:sequence>
+                              </xs:complexType>
+                            </xs:element>
+                            <xs:element maxOccurs="unbounded" minOccurs="0" name="defenceArea">
+                              <xs:annotation>
+                                <xs:documentation>Zones à défendre.</xs:documentation>
+                                <xs:documentation xml:lang="en">defence area.</xs:documentation>
+                                <xs:appinfo>
+                                  <nc1ihm:Nom>Zones à défendre</nc1ihm:Nom>
+                                  <nc1ihm:Nom xml:lang="en">defence area</nc1ihm:Nom>
+                                </xs:appinfo>
+                              </xs:annotation>
+                              <xs:complexType>
+                                <xs:sequence>
+                                  <xs:element name="areaLocation" type="nc1common:Nc1ObjectRefType">
+                                    <xs:annotation>
+                                      <xs:documentation>Localisation de la zone à défendre.</xs:documentation>
+                                      <xs:documentation xml:lang="en">Location of the area to be defended.</xs:documentation>
+                                      <xs:appinfo>
+                                        <nc1ihm:Nom>Localisation de la zone à défendre</nc1ihm:Nom>
+                                        <nc1ihm:Nom xml:lang="en">Location of the area to be defended</nc1ihm:Nom>
+                                      </xs:appinfo>
+                                    </xs:annotation>
+                                  </xs:element>
+                                  <xs:element minOccurs="0" name="role" type="nc1common:MediumTextType">
+                                    <xs:annotation>
+                                      <xs:documentation>Role.</xs:documentation>
+                                      <xs:documentation xml:lang="en">role.</xs:documentation>
+                                      <xs:appinfo>
+                                        <nc1ihm:Nom>Role</nc1ihm:Nom>
+                                        <nc1ihm:Nom xml:lang="en">role</nc1ihm:Nom>
+                                      </xs:appinfo>
+                                    </xs:annotation>
+                                  </xs:element>
+                                  <xs:element minOccurs="0" name="elementToDefend" type="nc1missionASA:ElementDefenceType">
+                                    <xs:annotation>
+                                      <xs:documentation>Elément particulier à défendre.</xs:documentation>
+                                      <xs:documentation xml:lang="en">specific elemen to defend.</xs:documentation>
+                                      <xs:appinfo>
+                                        <nc1ihm:Nom>Elément particulier à défendre</nc1ihm:Nom>
+                                        <nc1ihm:Nom xml:lang="en">specific elemen to defend</nc1ihm:Nom>
+                                      </xs:appinfo>
+                                    </xs:annotation>
+                                  </xs:element>
+                                </xs:sequence>
+                              </xs:complexType>
+                            </xs:element>
+                          </xs:sequence>
+                        </xs:complexType>
+                      </xs:element>
+                    </xs:sequence>
+                  </xs:complexType>
+                </xs:element>
+                <xs:element minOccurs="0" name="url" type="nc1common:MediumTextObjectType">
+                  <xs:annotation>
+                    <xs:documentation>Lien vers un fichier associé à l’objet.</xs:documentation>
+                    <xs:documentation xml:lang="en">Link to a file associated with the object.</xs:documentation>
+                    <xs:appinfo>
+                      <nc1ihm:Nom>Url</nc1ihm:Nom>
+                      <nc1ihm:Nom xml:lang="en">url</nc1ihm:Nom>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:element>
+                <xs:element minOccurs="0" name="comment" type="nc1common:LongTextObjectType">
+                  <xs:annotation>
+                    <xs:documentation>Commentaire en texte libre.</xs:documentation>
+                    <xs:documentation xml:lang="en">free text comment.</xs:documentation>
+                    <xs:appinfo>
+                      <nc1ihm:Nom>Commentaire</nc1ihm:Nom>
+                      <nc1ihm:Nom xml:lang="en">comment</nc1ihm:Nom>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:element>
+                <xs:element minOccurs="0" name="extVersion" type="nc1common:ExtVersType">
+                  <xs:annotation>
+                    <xs:documentation>Extension pour versions suivantes compatibles.</xs:documentation>
+                    <xs:documentation xml:lang="en">Extension for following compatible versions.</xs:documentation>
+                    <xs:appinfo>
+                      <nc1ihm:Nom>Extension de version</nc1ihm:Nom>
+                      <nc1ihm:Nom xml:lang="en">version extension</nc1ihm:Nom>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:element>
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:simpleType name="PriorityCode">
+    <xs:annotation>
+      <xs:appinfo>
+        <nc1dico:source xmlns:nc1dico="urn:fra:nc1:dictionnaires">NCi+</nc1dico:source>
+        <nc1ihm:description>Priorité.</nc1ihm:description>
+        <nc1ihm:description xml:lang="en">Priority.</nc1ihm:description>
+      </xs:appinfo>
+      <xs:documentation>Priorité.</xs:documentation>
+      <xs:documentation xml:lang="en">Priority.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:integer" />
+  </xs:simpleType>
+  <xs:simpleType name="SurfaceToAirTypeCode">
+    <xs:annotation>
+      <xs:appinfo>
+        <nc1dico:source xmlns:nc1dico="urn:fra:nc1:dictionnaires">NCi+</nc1dico:source>
+        <nc1ihm:description>Type de systèmes d'armes.</nc1ihm:description>
+        <nc1ihm:description xml:lang="en">weapon system type.</nc1ihm:description>
+      </xs:appinfo>
+      <xs:documentation>Type de systèmes d'armes.</xs:documentation>
+      <xs:documentation xml:lang="en">weapon system type.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:integer" />
+  </xs:simpleType>
+  <xs:complexType name="UnitDefenceType">
+    <xs:annotation>
+      <xs:documentation>Défense d'une unité.</xs:documentation>
+      <xs:documentation xml:lang="en">unity defenses</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="unit" type="nc1common:Nc1ObjectRefType">
+        <xs:annotation>
+          <xs:documentation>Unité.</xs:documentation>
+          <xs:documentation xml:lang="en">unit.</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Unité</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">unit</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="unitHq" type="nc1common:Nc1ObjectRefType">
+        <xs:annotation>
+          <xs:documentation>PC de l'unité.</xs:documentation>
+          <xs:documentation xml:lang="en">unit PC.</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>PC de l'unité</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">unit PC</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="priority" type="nc1missionASA:PriorityCode">
+        <xs:annotation>
+          <xs:documentation>Priorité de défense.</xs:documentation>
+          <xs:documentation xml:lang="en">defense priority.</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Priorité de défense</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">defense priority</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="comment" type="nc1common:LongTextType">
+        <xs:annotation>
+          <xs:documentation>Commentaire.</xs:documentation>
+          <xs:documentation xml:lang="en">comment.</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Commentaire</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">comment</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:simpleType name="WeaponCode">
+    <xs:annotation>
+      <xs:appinfo>
+        <nc1dico:source xmlns:nc1dico="urn:fra:nc1:dictionnaires">NCi+</nc1dico:source>
+        <nc1ihm:description>Armement.</nc1ihm:description>
+        <nc1ihm:description xml:lang="en">armament.</nc1ihm:description>
+      </xs:appinfo>
+      <xs:documentation>Armement.</xs:documentation>
+      <xs:documentation xml:lang="en">armament.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:integer" />
+  </xs:simpleType>
+</xs:schema>

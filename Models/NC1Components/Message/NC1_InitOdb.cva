@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<cva:ContextValueAssociation xmlns:cva="http://docs.oasis-open.org/codelist/ns/ContextValueAssociation/1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="urn:fra:nc1:message:initodb" queryBinding="xslt2" xmlns:nc1initodb="urn:fra:nc1:message:initodb">
+  <!-- NC1 V.9.0.0 -->
+  <ValueLists>
+    <ValueList xml:id="nc1msgcom-ClassificationCode" uri="../Dictionnaires/ClassificationCode.gc" />
+    <ValueList xml:id="nc1msgcom-UrgencyLevelCode" uri="../Dictionnaires/UrgencyLevelCode.gc" />
+    <ValueList xml:id="nc1unit-UnitFrSpecificCode" uri="../Dictionnaires/UnitFrSpecificCode.gc" />
+    <ValueList xml:id="nc1sicsdicos-L110_30Code" uri="../Dictionnaires/L110_30Code.gc" />
+  </ValueLists>
+  <Contexts>
+    <Context address="/nc1initodb:NC1_InitOdb/@classification" values="nc1msgcom-ClassificationCode" />
+    <Context address="/nc1initodb:NC1_InitOdb/@urgencyLevel" values="nc1msgcom-UrgencyLevelCode" />
+    <Context address="/nc1initodb:NC1_InitOdb/forces/frSpecificSymbol" values="nc1unit-UnitFrSpecificCode" />
+    <Context address="/nc1initodb:NC1_InitOdb/forces/commandAndControlRole" values="nc1sicsdicos-L110_30Code" />
+  </Contexts>
+</cva:ContextValueAssociation>

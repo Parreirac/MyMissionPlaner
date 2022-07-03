@@ -1,0 +1,147 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<gc:CodeList xmlns:nc1dico="urn:fra:nc1:dictionnaires" xmlns:gc="http://docs.oasis-open.org/codelist/ns/genericode/1.0/">
+  <Annotation>
+    <Description>
+      <nc1dico:description>Domaine du message.</nc1dico:description>
+      <nc1dico:description xml:lang="en">message domain.</nc1dico:description>
+    </Description>
+    <AppInfo>
+      <nc1dico:source>STAT</nc1dico:source>
+      <nc1dico:derogation></nc1dico:derogation>
+    </AppInfo>
+  </Annotation>
+  <Identification>
+    <ShortName>InformationTypeCode</ShortName>
+    <Version>9.0.0</Version>
+    <CanonicalUri>urn:fra:nc1:service:stcupdate:InformationTypeCode</CanonicalUri>
+    <CanonicalVersionUri>urn:fra:nc1:service:stcupdate:InformationTypeCode:9.0.0</CanonicalVersionUri>
+  </Identification>
+  <ColumnSet DatatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes">
+    <Column Id="code" Use="required">
+      <ShortName>Code</ShortName>
+      <Data Type="int" />
+    </Column>
+    <Column Id="short" Use="required">
+      <ShortName>Short</ShortName>
+      <Data Type="string" />
+    </Column>
+    <Column Id="long" Use="optional">
+      <ShortName>Long</ShortName>
+      <Data Type="string" />
+    </Column>
+    <Column Id="short-en" Use="optional">
+      <ShortName>Short anglais</ShortName>
+      <Data Type="string" />
+    </Column>
+    <Column Id="long-en" Use="optional">
+      <ShortName>Long anglais</ShortName>
+      <Data Type="string" />
+    </Column>
+    <Column Id="parent" Use="optional">
+      <ShortName>Parent</ShortName>
+      <Data Type="int" />
+    </Column>
+    <Column Id="codeSymbole" Use="optional">
+      <ShortName>Code Symbole</ShortName>
+      <Data Type="string" />
+    </Column>
+    <Column Id="codeHierarchique" Use="optional">
+      <ShortName>Code Hierarchique</ShortName>
+      <Data Type="string" />
+    </Column>
+    <Key Id="codeKey">
+      <ShortName>CodeKey</ShortName>
+      <ColumnRef Ref="code" />
+    </Key>
+  </ColumnSet>
+  <SimpleCodeList>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>0</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>Intégral</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>Tous les objets de la STC du SIOC émetteur</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>1</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>Participants et pistes amies</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>Participants et pistes amies connus du SIOC émetteur</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>2</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>Situation amie</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>Participants et pistes, unités et installations amies connus du SIOC émetteur</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>3</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>Situation ennemie</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>Pistes, unités et installations ennemies connues du SIOC émetteur</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>4</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>Obstacles et Entité terrain</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>Obstacles et Entités terrain connus du SIOC émetteur</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>5</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>Mesures de coordination 2D</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>Mesures de coordination 2D (tous les objets qui héritent de la classe _2DCoordinationMean) connues du SIOC émetteur</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>6</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>Logistique</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>Unités et installations amies connues du SIOC émetteur pour les données logistiques</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>7</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>Mixte</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>Tout groupe d'objets non spécifié dans les autres codes</SimpleValue>
+      </Value>
+    </Row>
+  </SimpleCodeList>
+</gc:CodeList>

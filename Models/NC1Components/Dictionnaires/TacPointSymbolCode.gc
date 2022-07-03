@@ -1,0 +1,3781 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<gc:CodeList xmlns:nc1dico="urn:fra:nc1:dictionnaires" xmlns:gc="http://docs.oasis-open.org/codelist/ns/genericode/1.0/">
+  <Annotation>
+    <Description>
+      <nc1dico:description>DECRIT LE TYPE DE POINT TACTIQUE.</nc1dico:description>
+      <nc1dico:description xml:lang="en">describe tactical point type.</nc1dico:description>
+    </Description>
+    <AppInfo>
+      <nc1dico:source>SFTT 3.4.8</nc1dico:source>
+      <nc1dico:derogation>TYPE POINT TACTIQUE</nc1dico:derogation>
+    </AppInfo>
+  </Annotation>
+  <Identification>
+    <ShortName>TacPointSymbolCode</ShortName>
+    <Version>9.0.0</Version>
+    <CanonicalUri>urn:fra:nc1:objet:tacpoint:TacPointSymbolCode</CanonicalUri>
+    <CanonicalVersionUri>urn:fra:nc1:objet:tacpoint:TacPointSymbolCode:9.0.0</CanonicalVersionUri>
+  </Identification>
+  <ColumnSet DatatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes">
+    <Column Id="code" Use="required">
+      <ShortName>Code</ShortName>
+      <Data Type="int" />
+    </Column>
+    <Column Id="short" Use="required">
+      <ShortName>Short</ShortName>
+      <Data Type="string" />
+    </Column>
+    <Column Id="long" Use="optional">
+      <ShortName>Long</ShortName>
+      <Data Type="string" />
+    </Column>
+    <Column Id="short-en" Use="optional">
+      <ShortName>Short anglais</ShortName>
+      <Data Type="string" />
+    </Column>
+    <Column Id="long-en" Use="optional">
+      <ShortName>Long anglais</ShortName>
+      <Data Type="string" />
+    </Column>
+    <Column Id="parent" Use="optional">
+      <ShortName>Parent</ShortName>
+      <Data Type="int" />
+    </Column>
+    <Column Id="codeSymbole" Use="optional">
+      <ShortName>Code Symbole</ShortName>
+      <Data Type="string" />
+    </Column>
+    <Column Id="codeHierarchique" Use="optional">
+      <ShortName>Code Hierarchique</ShortName>
+      <Data Type="string" />
+    </Column>
+    <Key Id="codeKey">
+      <ShortName>CodeKey</ShortName>
+      <ColumnRef Ref="code" />
+    </Key>
+  </ColumnSet>
+  <SimpleCodeList>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>-11</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>PT STATION</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>STATION</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>STATION</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>STATION</SimpleValue>
+      </Value>
+      <Value ColumnRef="parent">
+        <SimpleValue>4</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeSymbole">
+        <SimpleValue>G.C.OXST--.....</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeHierarchique">
+        <SimpleValue>2.X.2.5.1.8</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>-10</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>PT ARMEMENT</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>POINT ARMEMENT</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>WEAPON</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>WEAPON</SimpleValue>
+      </Value>
+      <Value ColumnRef="parent">
+        <SimpleValue>4</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeSymbole">
+        <SimpleValue>G.C.OXW---.....</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeHierarchique">
+        <SimpleValue>2.X.2.5.1.3</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>-9</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>PT SS-MARIN</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>POINT SOUS-MARIN</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>UNDRWATR</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>UNDERWATER</SimpleValue>
+      </Value>
+      <Value ColumnRef="parent">
+        <SimpleValue>4</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeSymbole">
+        <SimpleValue>G.C.OXU---.....</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeHierarchique">
+        <SimpleValue>2.X.2.5.1.2</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>-8</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>PT COORD MUN</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>POINT DE COORDINATION MUNITIONS</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>AMUP</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>AMMUNITION POINTS</SimpleValue>
+      </Value>
+      <Value ColumnRef="parent">
+        <SimpleValue>-3</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeSymbole">
+        <SimpleValue>G.C.SPM---.....</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeHierarchique">
+        <SimpleValue>2.X.2.4.1.15</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>-7</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>PT SOUTIEN</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>POINT DE SOUTIEN</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>SYP</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>SUPPLY POINTS</SimpleValue>
+      </Value>
+      <Value ColumnRef="parent">
+        <SimpleValue>-3</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeSymbole">
+        <SimpleValue>G.C.SPQ---.....</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeHierarchique">
+        <SimpleValue>2.X.2.4.1.14</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>-6</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>PT NRBC</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>GRAPHIQUES NUCLEAIRES, BIOLOGIQUES ET CHIMIQUES</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>NBCG</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>NUCLEAR, BIOLOGICAL AND CHEMICAL GRAPHICS</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeSymbole">
+        <SimpleValue>G.C.BW----.....</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeHierarchique">
+        <SimpleValue>2.X.2.2.4</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>-5</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>PT OFF</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>POINT GRAPHIQUE D'ATTAQUE</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>OFF PT</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>OFFENCE POINT GRAPHIC</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeSymbole">
+        <SimpleValue>G.C.MOP---.....</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeHierarchique">
+        <SimpleValue>2.X.2.1.5.1</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>-4</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>PT DEF</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>POINT GRAPHIQUE DE DEFENSE</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>DEF PT</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>DEFENCE POINT GRAPHIC</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeSymbole">
+        <SimpleValue>G.C.MMP---.....</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeHierarchique">
+        <SimpleValue>2.X.2.1.4.1</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>-3</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>PT LOG</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>POINT LOGISTIQUE</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>LGP</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>POINTS (LOGISTIQUE)</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeSymbole">
+        <SimpleValue>G.C.SP----.....</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeHierarchique">
+        <SimpleValue>2.X.2.4.1</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>-2</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>PT APPUI FEU</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>POINT D'APPUI FEU</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>FSP</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>FIRE SUPPORT POINT</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeSymbole">
+        <SimpleValue>G.C.FS----.....</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeHierarchique">
+        <SimpleValue>2.X.2.3.1</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>-1</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>PT TACTIQUE</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>POINT TACTIQUE</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>POINTS</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>POINTS</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeSymbole">
+        <SimpleValue>G.C.MGP---.....</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeHierarchique">
+        <SimpleValue>2.X.2.1.1.1</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>4</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>PT PARTICULIER</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>POINT PARTICULIER</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>SPC2</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>SPECIAL POINT (POINTS C2)</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeSymbole">
+        <SimpleValue>G.C.OX----.....</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeHierarchique">
+        <SimpleValue>2.X.2.5.1</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>5</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>PT COORD</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>POINT DE COORDINATION GENERAL</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>GENUNCP</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>GENERAL OR UNSPECIFIED COMMAND AND CONTROL POINT</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeSymbole">
+        <SimpleValue>G.C.OG----.....</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeHierarchique">
+        <SimpleValue>2.X.2.5.2</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>10</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>POINT D'INTERET</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>POINT D'INTERET</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>POI</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>POINT OF INTEREST</SimpleValue>
+      </Value>
+      <Value ColumnRef="parent">
+        <SimpleValue>-1</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeSymbole">
+        <SimpleValue>G.C.MGPI--.....</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeHierarchique">
+        <SimpleValue>2.X.2.1.1.1.2</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>13</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>POS OBSERVATEUR</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>POSITION DE L'OBSERVATEUR</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>SPTPOS</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>FIRE SUPPORT STATION</SimpleValue>
+      </Value>
+      <Value ColumnRef="parent">
+        <SimpleValue>-2</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeSymbole">
+        <SimpleValue>G.C.FSS---.....</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeHierarchique">
+        <SimpleValue>2.X.2.3.1.2</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>14</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>PT ECHANGE MED</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>POINT D'ECHANGE MEDICAL (TRANSFERT D'AMBULANCE)</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>AMBEXP</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>AMBULANCE EXCHANGE POINT</SimpleValue>
+      </Value>
+      <Value ColumnRef="parent">
+        <SimpleValue>-3</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeSymbole">
+        <SimpleValue>G.C.SPA---.....</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeHierarchique">
+        <SimpleValue>2.X.2.4.1.1</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>15</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>PT CANNIBALISA°</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>POINT DE CANNIBALISATION</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>CZP</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>CANNIBALIZATION POINT</SimpleValue>
+      </Value>
+      <Value ColumnRef="parent">
+        <SimpleValue>-3</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeSymbole">
+        <SimpleValue>G.C.SPC---.....</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeHierarchique">
+        <SimpleValue>2.X.2.4.1.2</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>16</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>PT RELEVE BLESSE</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>POINT DE RELEVE DE BLESSES</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>CCP</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>CASUALTY COLLECTION POINT</SimpleValue>
+      </Value>
+      <Value ColumnRef="parent">
+        <SimpleValue>-3</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeSymbole">
+        <SimpleValue>G.C.SPY---.....</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeHierarchique">
+        <SimpleValue>2.X.2.4.1.3</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>17</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>PT RGPT CIVIL</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>POINT DE REGROUPEMENT DE CIVILS</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>CIVCOLPT</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>CIVILIAN COLLECTION POINT</SimpleValue>
+      </Value>
+      <Value ColumnRef="parent">
+        <SimpleValue>-3</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeSymbole">
+        <SimpleValue>G.C.SPT---.....</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeHierarchique">
+        <SimpleValue>2.X.2.4.1.4</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>18</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>PT RGPT DETENU</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>POINT DE REGROUPEMENT DE DETENUS</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>DETCOLPT</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>DETAINEE COLLECTION POINT</SimpleValue>
+      </Value>
+      <Value ColumnRef="parent">
+        <SimpleValue>-3</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeSymbole">
+        <SimpleValue>G.C.SPD---.....</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeHierarchique">
+        <SimpleValue>2.X.2.4.1.5</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>19</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>PT RGPT POW</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>POINT DE REGROUPEMENT DE PRISONNIERS DE GUERRE (POW)</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>EPW</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>ENEMY PRISONER OF WAR (EPW) COLLECTION POINT</SimpleValue>
+      </Value>
+      <Value ColumnRef="parent">
+        <SimpleValue>-3</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeSymbole">
+        <SimpleValue>G.C.SPE---.....</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeHierarchique">
+        <SimpleValue>2.X.2.4.1.6</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>20</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>PT RDV LOG</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>POINT DE RENDEZ-VOUS LOGISTIQUE</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>LRP</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>LOGISTICS RELEASE POINT (LRP)</SimpleValue>
+      </Value>
+      <Value ColumnRef="parent">
+        <SimpleValue>-3</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeSymbole">
+        <SimpleValue>G.C.SPL---.....</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeHierarchique">
+        <SimpleValue>2.X.2.4.1.7</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>21</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>PT RGPT MAINT</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>POINT DE REGROUPEMENT DE MAINTENANCE</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>MAIN PT</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>MAINTENANCE COLLECTION POINT</SimpleValue>
+      </Value>
+      <Value ColumnRef="parent">
+        <SimpleValue>-3</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeSymbole">
+        <SimpleValue>G.C.SPM---.....</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeHierarchique">
+        <SimpleValue>2.X.2.4.1.8</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>22</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>PT RAVITAILL.</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>POINT DE RAVITAILLEMENT MUNITIONS, CARBURANT ET SOUTIEN GENERAL</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>RRRSP</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>REARM, REFUEL AND RE-SUPPLY POINT</SimpleValue>
+      </Value>
+      <Value ColumnRef="parent">
+        <SimpleValue>-3</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeSymbole">
+        <SimpleValue>G.C.SPR---.....</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeHierarchique">
+        <SimpleValue>2.X.2.4.1.9</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>23</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>PT RAV EN VOL</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>POINT DE RAVITAILLEMENT DE CARBURANT EN VOL</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>ROM</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>REFUEL ON THE MOVE (ROM) POINT</SimpleValue>
+      </Value>
+      <Value ColumnRef="parent">
+        <SimpleValue>-3</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeSymbole">
+        <SimpleValue>G.C.SPU---.....</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeHierarchique">
+        <SimpleValue>2.X.2.4.1.10</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>24</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>POSTE CTRL CIRCU</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>POSTE DE CONTROLE DE CIRCULATION</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>TCP</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>TRAFFIC CONTROL POST (TCP)</SimpleValue>
+      </Value>
+      <Value ColumnRef="parent">
+        <SimpleValue>-3</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeSymbole">
+        <SimpleValue>G.C.SPO---.....</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeHierarchique">
+        <SimpleValue>2.X.2.4.1.11</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>25</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>PT TRANSF CHARGE</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>POINT DE TRANSFERT MOBILE</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>TTP</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>TRAILER TRANSFER POINT</SimpleValue>
+      </Value>
+      <Value ColumnRef="parent">
+        <SimpleValue>-3</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeSymbole">
+        <SimpleValue>G.C.SPI---.....</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeHierarchique">
+        <SimpleValue>2.X.2.4.1.12</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>26</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>PTRGPT UNITMAINT</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>POINT DE REGROUPEMENT DES UNITES DE LA MAINTENANCE</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>UMCP</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>UNIT MAINTENANCE COLLECTION POINT</SimpleValue>
+      </Value>
+      <Value ColumnRef="parent">
+        <SimpleValue>-3</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeSymbole">
+        <SimpleValue>G.C.SPN---.....</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeHierarchique">
+        <SimpleValue>2.X.2.4.1.13</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>29</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>REFP</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>POINT DE REFERENCE</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>REFP</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>REFERENCE POINT</SimpleValue>
+      </Value>
+      <Value ColumnRef="parent">
+        <SimpleValue>4</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeSymbole">
+        <SimpleValue>G.C.OXE---.....</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeHierarchique">
+        <SimpleValue>2.X.2.5.1.1</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>32</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>BOUEE ACOUSTIQUE</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>BOUEE ACOUSTIQUE</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>SONOBUOY</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>SONOBUOY</SimpleValue>
+      </Value>
+      <Value ColumnRef="parent">
+        <SimpleValue>4</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeSymbole">
+        <SimpleValue>G.C.OXY---.....</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeHierarchique">
+        <SimpleValue>2.X.2.5.1.4</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>33</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>FORMATION</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>FORMATION</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>FORM</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>FORMATION</SimpleValue>
+      </Value>
+      <Value ColumnRef="parent">
+        <SimpleValue>4</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeSymbole">
+        <SimpleValue>G.C.OXN---.....</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeHierarchique">
+        <SimpleValue>2.X.2.5.1.5</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>34</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>PORT MARITIME</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>PORT MARITIME</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>HARBOUR</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>HARBOUR</SimpleValue>
+      </Value>
+      <Value ColumnRef="parent">
+        <SimpleValue>4</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeSymbole">
+        <SimpleValue>G.C.OXH---.....</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeHierarchique">
+        <SimpleValue>2.X.2.5.1.6</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>35</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>PT COORD MAR</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>POINT DE COORDINATION MARITIME</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>ROUTE</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>ROUTE</SimpleValue>
+      </Value>
+      <Value ColumnRef="parent">
+        <SimpleValue>4</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeSymbole">
+        <SimpleValue>G.C.OXR---.....</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeHierarchique">
+        <SimpleValue>2.X.2.5.1.7</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>37</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>PT RECHERCHE</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>POINT GENERAL DE RECHERCHE</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>SEARCH</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>SEARCH</SimpleValue>
+      </Value>
+      <Value ColumnRef="parent">
+        <SimpleValue>4</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeSymbole">
+        <SimpleValue>G.C.OXS---.....</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeHierarchique">
+        <SimpleValue>2.X.2.5.1.9</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>38</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>ACP</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>POINT DE CONTROLE AERIEN</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>ACP</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>AIR CONTROL</SimpleValue>
+      </Value>
+      <Value ColumnRef="parent">
+        <SimpleValue>4</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeSymbole">
+        <SimpleValue>G.C.OXA---.....</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeHierarchique">
+        <SimpleValue>2.X.2.5.1.10</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>39</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>PT CONTROLE</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>POINT DE CONTROLE (CHECKPOINT)</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>CHECKPT</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>CHECKPOINT</SimpleValue>
+      </Value>
+      <Value ColumnRef="parent">
+        <SimpleValue>5</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeSymbole">
+        <SimpleValue>G.C.OGC---.....</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeHierarchique">
+        <SimpleValue>2.X.2.5.2.1</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>40</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>PT CONTACT</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>POINT DE CONTACT</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>POC</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>CONTACT POINT</SimpleValue>
+      </Value>
+      <Value ColumnRef="parent">
+        <SimpleValue>5</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeSymbole">
+        <SimpleValue>G.C.OGP---.....</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeHierarchique">
+        <SimpleValue>2.X.2.5.2.2</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>41</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>PT COORDINATION</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>POINT DE COORDINATION</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>CRDPNT</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>COORDINATION POINT</SimpleValue>
+      </Value>
+      <Value ColumnRef="parent">
+        <SimpleValue>5</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeSymbole">
+        <SimpleValue>G.C.OGT---.....</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeHierarchique">
+        <SimpleValue>2.X.2.5.2.3</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>42</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>PT DECISION</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>POINT DE DECISION</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>DECPNT</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>DECISION POINT</SimpleValue>
+      </Value>
+      <Value ColumnRef="parent">
+        <SimpleValue>5</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeSymbole">
+        <SimpleValue>G.C.OGD---.....</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeHierarchique">
+        <SimpleValue>2.X.2.5.2.4</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>43</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>PT JONCTION</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>POINT DE JONCTION</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>LNKPPT</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>LINKUP POINT</SimpleValue>
+      </Value>
+      <Value ColumnRef="parent">
+        <SimpleValue>5</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeSymbole">
+        <SimpleValue>G.C.OGL---.....</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeHierarchique">
+        <SimpleValue>2.X.2.5.2.5</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>44</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>PT PASSAGE OBLIG</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>POINT DE PASSAGE OBLIGE</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>PSSGPT</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>PASSAGE POINT</SimpleValue>
+      </Value>
+      <Value ColumnRef="parent">
+        <SimpleValue>5</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeSymbole">
+        <SimpleValue>G.C.OGN---.....</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeHierarchique">
+        <SimpleValue>2.X.2.5.2.6</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>45</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>PT RALLIEMENT</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>POINT DE RALLIEMENT</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>RALYPT</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>RALLY POINT</SimpleValue>
+      </Value>
+      <Value ColumnRef="parent">
+        <SimpleValue>5</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeSymbole">
+        <SimpleValue>G.C.OGR---.....</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeHierarchique">
+        <SimpleValue>2.X.2.5.2.7</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>46</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>PT DISLOCATION</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>POINT DE DISLOCATION  OU POINT DE LARGAGE</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>RELPT</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>RELEASE POINT</SimpleValue>
+      </Value>
+      <Value ColumnRef="parent">
+        <SimpleValue>5</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeSymbole">
+        <SimpleValue>G.C.OGS---.....</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeHierarchique">
+        <SimpleValue>2.X.2.5.2.8</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>47</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>PT DEPART</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>POINT DE DEPART</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>STRTPT</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>START POINT</SimpleValue>
+      </Value>
+      <Value ColumnRef="parent">
+        <SimpleValue>5</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeSymbole">
+        <SimpleValue>G.C.OGI---.....</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeHierarchique">
+        <SimpleValue>2.X.2.5.2.9</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>48</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>WAYPOINT</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>WAYPOINT</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>WAYPT C2</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>WAYPOINT C2</SimpleValue>
+      </Value>
+      <Value ColumnRef="parent">
+        <SimpleValue>5</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeSymbole">
+        <SimpleValue>G.C.OGW---.....</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeHierarchique">
+        <SimpleValue>2.X.2.5.2.10</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>49</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>PT REPERE OBJ</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>POINT DE REPERE D'UN OBJECTIF</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>TRP</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>TARGET REFERENCE POINT (TRP)</SimpleValue>
+      </Value>
+      <Value ColumnRef="parent">
+        <SimpleValue>-4</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeSymbole">
+        <SimpleValue>G.C.MMPT--.....</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeHierarchique">
+        <SimpleValue>2.X.2.1.4.1.1</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>52</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>POSTE AVANCE</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>POSTE AVANCE</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>OUTPOST</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>OUTPOST</SimpleValue>
+      </Value>
+      <Value ColumnRef="parent">
+        <SimpleValue>-4</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeSymbole">
+        <SimpleValue>G.C.MMPO--.....</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeHierarchique">
+        <SimpleValue>2.X.2.1.4.1.4</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>53</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>PT DECON</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>POINT DE DECONTAMINATION (SANS PRECISION)</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>CBRNPT</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>DECON SITE/POINT
+(UNSPECIFIED)</SimpleValue>
+      </Value>
+      <Value ColumnRef="parent">
+        <SimpleValue>69</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeSymbole">
+        <SimpleValue>G.C.BWDP--.....</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeHierarchique">
+        <SimpleValue>2.X.2.2.4.11.1</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>54</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>PT DECON ALTER</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>POINT DE DECONTAMINATION ALTERNATIF</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>ADECONPT</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>ALTERNATE DECON SITE/POINT
+(UNSPECIFIED)</SimpleValue>
+      </Value>
+      <Value ColumnRef="parent">
+        <SimpleValue>69</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeSymbole">
+        <SimpleValue>G.C.BWDA--.....</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeHierarchique">
+        <SimpleValue>2.X.2.2.4.11.2</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>55</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>PT DECON TROUPE</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>POINT DE DECONTAMINATION DE TROUPES</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>TROOPS</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>POINT (TROOPS)</SimpleValue>
+      </Value>
+      <Value ColumnRef="parent">
+        <SimpleValue>69</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeSymbole">
+        <SimpleValue>G.C.BWDT--.....</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeHierarchique">
+        <SimpleValue>2.X.2.2.4.11.3</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>56</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>PT DECON EQPT</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>POINT DE DECONTAMINATION D'EQUIPEMENT</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>EQUIP</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>POINT (EQUIPMENT)</SimpleValue>
+      </Value>
+      <Value ColumnRef="parent">
+        <SimpleValue>69</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeSymbole">
+        <SimpleValue>G.C.BWDE--.....</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeHierarchique">
+        <SimpleValue>2.X.2.2.4.11.4</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>57</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>PT DECON TRP-EQT</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>POINT DE DECONTAMINATION DE TROUPES ET D'EQUIPEMENT</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>EQ&amp;TROOP</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>POINT (EQUIPMENT AND TROOPS)</SimpleValue>
+      </Value>
+      <Value ColumnRef="parent">
+        <SimpleValue>69</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeSymbole">
+        <SimpleValue>G.C.BWDS--.....</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeHierarchique">
+        <SimpleValue>2.X.2.2.4.11.5</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>58</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>PT DECON OPS</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>POINT DE DECONTAMINATION OPERATIONNEL</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>ODECONPT</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>POINT (OPERATIONAL DECONTAMINATION)</SimpleValue>
+      </Value>
+      <Value ColumnRef="parent">
+        <SimpleValue>69</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeSymbole">
+        <SimpleValue>G.C.BWDO--.....</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeHierarchique">
+        <SimpleValue>2.X.2.2.4.11.6</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>59</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>PT DECON APPROF</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>POINT DE DECONTAMINATION APPROFFONDIE</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>DECONPT+</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>POINT (THOROUGH DECONTAMINATION)</SimpleValue>
+      </Value>
+      <Value ColumnRef="parent">
+        <SimpleValue>69</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeSymbole">
+        <SimpleValue>G.C.BWDG--.....</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeHierarchique">
+        <SimpleValue>2.X.2.2.4.11.7</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>60</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>PT DECON PRINC</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>POINT PRINCIPAL DE DECONTAMINATION POUR LES EQUIPEMENTS</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>EDECONPT</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>DECON POINT (MAIN) EQUIPMENT</SimpleValue>
+      </Value>
+      <Value ColumnRef="parent">
+        <SimpleValue>69</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeSymbole">
+        <SimpleValue>G.C.BWDEM-.....</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeHierarchique">
+        <SimpleValue>2.X.2.2.4.11.8</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>61</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>PT DECON AVANCE</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>POINT DE DECONTAMINATION AVANCE DE TROUPES</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>TDECONPT</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>DECON POINT (FORWARD) TROOPS</SimpleValue>
+      </Value>
+      <Value ColumnRef="parent">
+        <SimpleValue>69</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeSymbole">
+        <SimpleValue>G.C.BWDTF-.....</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeHierarchique">
+        <SimpleValue>2.X.2.2.4.11.9</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>62</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>PT DEPART INIT</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>POINT DE DEPART INITIAL</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>PTDPRT</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>POINT OF DEPARTURE</SimpleValue>
+      </Value>
+      <Value ColumnRef="parent">
+        <SimpleValue>-5</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeSymbole">
+        <SimpleValue>G.C.MOPD--.....</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeHierarchique">
+        <SimpleValue>2.X.2.1.5.1.1</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>63</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>FRGDZER</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>POINT ZERO DES DETONATIONS NUCLEAIRES AMIES</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>FRGDZER</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>NUCLEAR DETONATIONS FRIENDLY GROUND ZERO</SimpleValue>
+      </Value>
+      <Value ColumnRef="parent">
+        <SimpleValue>-6</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeSymbole">
+        <SimpleValue>G.C.BWN---.....</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeHierarchique">
+        <SimpleValue>2.X.2.2.4.2</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>64</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>ENYGDZER</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>POINT ZERO ENNEMI CONNU</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>ENYGDZER</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>ENEMY KNOWN GROUND ZERO</SimpleValue>
+      </Value>
+      <Value ColumnRef="parent">
+        <SimpleValue>-6</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeSymbole">
+        <SimpleValue>GHC.BWE---.....</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeHierarchique">
+        <SimpleValue>2.X.2.2.4.3</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>65</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>ENYTEMPL</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>ENEMY TEMPLATED</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>ENYTEMPL</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>ENEMY TEMPLATED</SimpleValue>
+      </Value>
+      <Value ColumnRef="parent">
+        <SimpleValue>-6</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeSymbole">
+        <SimpleValue>GHC.BWI---.....</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeHierarchique">
+        <SimpleValue>2.X.2.2.4.4</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>66</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>FR PLAND</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>AMI PLANIFIE OU SOUS ORDRE</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>FR PLAND</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>FRIENDLY PLANNED OR ON-ORDER</SimpleValue>
+      </Value>
+      <Value ColumnRef="parent">
+        <SimpleValue>-6</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeSymbole">
+        <SimpleValue>GFC.BWF---.....</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeHierarchique">
+        <SimpleValue>2.X.2.2.4.5</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>67</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>FALL PROD</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>RETOMBEES</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>FALLPROD</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>FALLOUT PRODUCING</SimpleValue>
+      </Value>
+      <Value ColumnRef="parent">
+        <SimpleValue>-6</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeSymbole">
+        <SimpleValue>G.C.BWP---.....</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeHierarchique">
+        <SimpleValue>2.X.2.2.4.6</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>68</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>CHEMI ATK EVT</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>RETOMBEES D'ATTAQUES BIOLOGIQUES ET CHIMIQUES</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>CHEMIATK</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>BIOLOGICAL AND CHEMICAL ATTACK, RELEASE EVENTS</SimpleValue>
+      </Value>
+      <Value ColumnRef="parent">
+        <SimpleValue>-6</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeSymbole">
+        <SimpleValue>G.C.BWK---.....</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeHierarchique">
+        <SimpleValue>2.X.2.2.4.10</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>69</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>DECONPT</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>POINT DE DECONTAMINATION</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>DECONPT</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>DECONTAMINATION (DECON) POINTS</SimpleValue>
+      </Value>
+      <Value ColumnRef="parent">
+        <SimpleValue>-6</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeSymbole">
+        <SimpleValue>G.C.BWD---.....</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeHierarchique">
+        <SimpleValue>2.X.2.2.4.11</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>70</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>PT ELECTRO-MAGN</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>POINT FIXE ELECTRO-MAGNETIQUE</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>ELECMAGN</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>ELECTRO-MAGNETIC</SimpleValue>
+      </Value>
+      <Value ColumnRef="parent">
+        <SimpleValue>-1</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeSymbole">
+        <SimpleValue>G.C.MGPFE-.....</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeHierarchique">
+        <SimpleValue>2.X.2.1.1.1.1.1</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>71</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>PT ACOUSTIQUE</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>POINT FIXE ACOUSTIQUE</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>ACOUSTIC</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>ACOUSTIC</SimpleValue>
+      </Value>
+      <Value ColumnRef="parent">
+        <SimpleValue>-1</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeSymbole">
+        <SimpleValue>G.C.MGPFA-.....</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeHierarchique">
+        <SimpleValue>2.X.2.1.1.1.1.2</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>73</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>PT DISTR GEN</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>POINT DE DISTRIBUTION GENERAL</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>GENERAL</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>GENERAL</SimpleValue>
+      </Value>
+      <Value ColumnRef="parent">
+        <SimpleValue>-7</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeSymbole">
+        <SimpleValue>G.C.SPQT--.....</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeHierarchique">
+        <SimpleValue>2.X.2.4.1.14.1</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>74</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>PT DISTR CL.I</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>POINT DE DISTRIBUTION DE CLASSE I (CONSOMMABLE VIVRE)</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>CLASS I</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>CLASS I</SimpleValue>
+      </Value>
+      <Value ColumnRef="parent">
+        <SimpleValue>-7</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeSymbole">
+        <SimpleValue>G.C.SPQA--.....</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeHierarchique">
+        <SimpleValue>2.X.2.4.1.14.2</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>75</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>PT DISTR CL.II</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>POINT DE DISTRIBUTION DE CLASSE II (EFFETS DE PAQUETAGE)</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>CLASS II</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>CLASS II</SimpleValue>
+      </Value>
+      <Value ColumnRef="parent">
+        <SimpleValue>-7</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeSymbole">
+        <SimpleValue>G.C.SPQB--.....</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeHierarchique">
+        <SimpleValue>2.X.2.4.1.14.3</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>76</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>PT DISTR CL.III</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>POINT DE DISTRIBUTION DE CLASSE III (PRODUITS PETROLIERS)</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>CLASSIII</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>CLASS III</SimpleValue>
+      </Value>
+      <Value ColumnRef="parent">
+        <SimpleValue>-7</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeSymbole">
+        <SimpleValue>G.C.SPQC--.....</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeHierarchique">
+        <SimpleValue>2.X.2.4.1.14.4</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>77</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>PT DISTR CL.IV</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>POINT DE DISTRIBUTION DE CLASSE IV (MATERIEL DE CONSTRUCTION)</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>CLASS IV</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>CLASS IV</SimpleValue>
+      </Value>
+      <Value ColumnRef="parent">
+        <SimpleValue>-7</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeSymbole">
+        <SimpleValue>G.C.SPQD--.....</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeHierarchique">
+        <SimpleValue>2.X.2.4.1.14.5</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>78</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>PT DISTR CL.V</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>POINT DE DISTRIBUTION DE CLASSE V (MUNITIONS)</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>CLASS V</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>CLASS V</SimpleValue>
+      </Value>
+      <Value ColumnRef="parent">
+        <SimpleValue>-7</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeSymbole">
+        <SimpleValue>G.C.SPQE--.....</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeHierarchique">
+        <SimpleValue>2.X.2.4.1.14.6</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>79</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>PT DISTR CL.VI</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>POINT DE DISTRIBUTION DE CLASSE VI (ARTICLE A USAGE PERSONNEL)</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>CLASS VI</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>CLASS VI</SimpleValue>
+      </Value>
+      <Value ColumnRef="parent">
+        <SimpleValue>-7</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeSymbole">
+        <SimpleValue>G.C.SPQF--.....</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeHierarchique">
+        <SimpleValue>2.X.2.4.1.14.7</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>80</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>PT DISTR CL.VII</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>POINT DE DISTRIBUTION DE CLASSE VII (SYSTEMES D'ARMES COMPLETS)</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>CLASSVII</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>CLASS VII</SimpleValue>
+      </Value>
+      <Value ColumnRef="parent">
+        <SimpleValue>-7</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeSymbole">
+        <SimpleValue>G.C.SPQG--.....</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeHierarchique">
+        <SimpleValue>2.X.2.4.1.14.8</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>81</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>PT DISTR CL.VIII</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>POINT DE DISTRIBUTION DE CLASSE VIII (MATERIEL MEDICAL)</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>CLASVIII</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>CLASS VIII</SimpleValue>
+      </Value>
+      <Value ColumnRef="parent">
+        <SimpleValue>-7</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeSymbole">
+        <SimpleValue>G.C.SPQH--.....</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeHierarchique">
+        <SimpleValue>2.X.2.4.1.14.9</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>82</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>PT DISTR CL.IX</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>POINT DE DISTRIBUTION DE CLASSE IX (PIECES DE RECHANGE - MAINTENANCE)</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>CLASSIX</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>CLASS IX</SimpleValue>
+      </Value>
+      <Value ColumnRef="parent">
+        <SimpleValue>-7</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeSymbole">
+        <SimpleValue>G.C.SPQI--.....</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeHierarchique">
+        <SimpleValue>2.X.2.4.1.14.10</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>83</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>PT DISTR CL.X</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>POINT DE DISTRIBUTION DE CLASSE X (ARTICLES NON STANDARDS - NON MILITAIRES)</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>CLASSX</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>CLASS X</SimpleValue>
+      </Value>
+      <Value ColumnRef="parent">
+        <SimpleValue>-7</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeSymbole">
+        <SimpleValue>G.C.SPQJ--.....</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeHierarchique">
+        <SimpleValue>2.X.2.4.1.14.11</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>84</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>PT RAV MUNITION</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>POINT DE RAVITAILLEMENT EN MUNITIONS</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>ASP</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>AMMUNITION SUPPLY POINT (ASP)</SimpleValue>
+      </Value>
+      <Value ColumnRef="parent">
+        <SimpleValue>-8</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeSymbole">
+        <SimpleValue>G.C.SPMA--.....</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeHierarchique">
+        <SimpleValue>2.X.2.4.1.15.1</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>85</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>PT TRANSF MUN</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>POINT DE TRANSFERT DE MUNITIONS</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>ATP</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>AMMUNITION TRANSFER POINT (ATP)</SimpleValue>
+      </Value>
+      <Value ColumnRef="parent">
+        <SimpleValue>-8</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeSymbole">
+        <SimpleValue>G.C.SPMT--.....</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeHierarchique">
+        <SimpleValue>2.X.2.4.1.15.2</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>86</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>PT REF MARITIME</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>POINT DE REFERENCE MARITIME</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>NAV REF</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>NAV REFERENCE</SimpleValue>
+      </Value>
+      <Value ColumnRef="parent">
+        <SimpleValue>29</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeSymbole">
+        <SimpleValue>G.C.OXRN--.....</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeHierarchique">
+        <SimpleValue>2.X.2.5.1.1.1</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>87</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>PT REF LDT</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>POINT DE REFERENCE DE LIAISON DE DONNEES TACTIQUE</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>DLRP</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>DLRP</SimpleValue>
+      </Value>
+      <Value ColumnRef="parent">
+        <SimpleValue>29</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeSymbole">
+        <SimpleValue>G.C.OXRD--.....</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeHierarchique">
+        <SimpleValue>2.X.2.5.1.1.2</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>88</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>PT REF SSMARIN</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>POINT DE REFERENCE SOUS-MARIN</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>DATUM</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>DATUM</SimpleValue>
+      </Value>
+      <Value ColumnRef="parent">
+        <SimpleValue>-9</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeSymbole">
+        <SimpleValue>G.C.OXUD--.....</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeHierarchique">
+        <SimpleValue>2.X.2.5.1.2.1</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>89</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>PT CONTACT BREF</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>POINT DE CONTACT BREF</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>BRIEF CT</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>BRIEF CONTACT</SimpleValue>
+      </Value>
+      <Value ColumnRef="parent">
+        <SimpleValue>-9</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeSymbole">
+        <SimpleValue>G.C.OXUB--.....</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeHierarchique">
+        <SimpleValue>2.X.2.5.1.2.2</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>90</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>PT CONTACT PERDU</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>POINT DE CONTACT PERDU</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>LOST CT</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>LOST CONTACT</SimpleValue>
+      </Value>
+      <Value ColumnRef="parent">
+        <SimpleValue>-9</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeSymbole">
+        <SimpleValue>G.C.OXUL--.....</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeHierarchique">
+        <SimpleValue>2.X.2.5.1.2.3</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>91</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>PT NAUFRAGE</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>POINT DE NAUFRAGE</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>SINKER</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>SINKER</SimpleValue>
+      </Value>
+      <Value ColumnRef="parent">
+        <SimpleValue>-9</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeSymbole">
+        <SimpleValue>G.C.OXUS--.....</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeHierarchique">
+        <SimpleValue>2.X.2.5.1.2.4</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>92</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>POINT VISE</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>POINT VISE</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>AIM PT</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>AIM POINT</SimpleValue>
+      </Value>
+      <Value ColumnRef="parent">
+        <SimpleValue>-10</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeSymbole">
+        <SimpleValue>G.C.OXWA--.....</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeHierarchique">
+        <SimpleValue>2.X.2.5.1.3.1</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>93</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>PT LARGAGE</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>POINT DE LARGAGE</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>DROP PT</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>DROP POINT</SimpleValue>
+      </Value>
+      <Value ColumnRef="parent">
+        <SimpleValue>-10</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeSymbole">
+        <SimpleValue>G.C.OXWD--.....</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeHierarchique">
+        <SimpleValue>2.X.2.5.1.3.2</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>94</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>PT ENTREE</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>POINT D'ENTREE</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>ENTRY PT</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>ENTRY POINT</SimpleValue>
+      </Value>
+      <Value ColumnRef="parent">
+        <SimpleValue>-10</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeSymbole">
+        <SimpleValue>G.C.OXWE--.....</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeHierarchique">
+        <SimpleValue>2.X.2.5.1.3.3</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>95</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>POINT ZERO</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>POINT ZERO</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>GD ZERO</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>GROUND ZERO</SimpleValue>
+      </Value>
+      <Value ColumnRef="parent">
+        <SimpleValue>-10</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeSymbole">
+        <SimpleValue>G.C.OXWG--.....</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeHierarchique">
+        <SimpleValue>2.X.2.5.1.3.4</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>96</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>PT DETECT° MISS</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>POINT DE DETECTION MISSILE</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>MSLDET</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>MSL DETECT POINT</SimpleValue>
+      </Value>
+      <Value ColumnRef="parent">
+        <SimpleValue>-10</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeSymbole">
+        <SimpleValue>G.C.OXWM--.....</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeHierarchique">
+        <SimpleValue>2.X.2.5.1.3.5</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>97</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>PT IMPACT</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>POINT D'IMPACT</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>IMPTPT</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>IMPACT POINT</SimpleValue>
+      </Value>
+      <Value ColumnRef="parent">
+        <SimpleValue>-10</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeSymbole">
+        <SimpleValue>G.C.OXWI--.....</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeHierarchique">
+        <SimpleValue>2.X.2.5.1.3.6</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>98</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>PT IMPACT PREVU</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>POINT D'IMPACT PREVU</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>PIMPTPT</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>PREDICTED IMPACT POINT</SimpleValue>
+      </Value>
+      <Value ColumnRef="parent">
+        <SimpleValue>-10</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeSymbole">
+        <SimpleValue>G.C.OXWP--.....</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeHierarchique">
+        <SimpleValue>2.X.2.5.1.3.7</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>99</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>BOUEE  PAT CENT</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>BOUEE  PATTERN CENTRE</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>PAT CENT</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>PATTERN CENTRE</SimpleValue>
+      </Value>
+      <Value ColumnRef="parent">
+        <SimpleValue>32</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeSymbole">
+        <SimpleValue>G.C.OXYP--.....</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeHierarchique">
+        <SimpleValue>2.X.2.5.1.4.1</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>100</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>BOUEE DIFAR</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>BOUEE DIFAR</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>DIFAR</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>DIFAR</SimpleValue>
+      </Value>
+      <Value ColumnRef="parent">
+        <SimpleValue>32</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeSymbole">
+        <SimpleValue>G.C.OXYD--.....</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeHierarchique">
+        <SimpleValue>2.X.2.5.1.4.2</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>101</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>BOUEE LOFAR</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>BOUEE LOFAR</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>LOFAR</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>LOFAR</SimpleValue>
+      </Value>
+      <Value ColumnRef="parent">
+        <SimpleValue>32</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeSymbole">
+        <SimpleValue>G.C.OXYL--.....</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeHierarchique">
+        <SimpleValue>2.X.2.5.1.4.3</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>102</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>BOUEE CASS</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>BOUEE CASS</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>CASS</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>CASS</SimpleValue>
+      </Value>
+      <Value ColumnRef="parent">
+        <SimpleValue>32</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeSymbole">
+        <SimpleValue>G.C.OXYC--.....</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeHierarchique">
+        <SimpleValue>2.X.2.5.1.4.4</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>103</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>BOUEE DICASS</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>BOUEE DICASS</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>DICASS</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>DICASS</SimpleValue>
+      </Value>
+      <Value ColumnRef="parent">
+        <SimpleValue>32</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeSymbole">
+        <SimpleValue>G.C.OXYS--.....</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeHierarchique">
+        <SimpleValue>2.X.2.5.1.4.5</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>104</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>BOUEE BT</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>BOUEE BT</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>BT</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>BT</SimpleValue>
+      </Value>
+      <Value ColumnRef="parent">
+        <SimpleValue>32</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeSymbole">
+        <SimpleValue>G.C.OXYB--.....</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeHierarchique">
+        <SimpleValue>2.X.2.5.1.4.6</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>105</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>BOUEE ANM</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>BOUEE ANM</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>ANM</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>ANM</SimpleValue>
+      </Value>
+      <Value ColumnRef="parent">
+        <SimpleValue>32</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeSymbole">
+        <SimpleValue>G.C.OXYA--.....</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeHierarchique">
+        <SimpleValue>2.X.2.5.1.4.7</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>106</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>BOUEE VLAD</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>BOUEE VLAD</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>VLAD</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>VLAD</SimpleValue>
+      </Value>
+      <Value ColumnRef="parent">
+        <SimpleValue>32</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeSymbole">
+        <SimpleValue>G.C.OXYV--.....</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeHierarchique">
+        <SimpleValue>2.X.2.5.1.4.8</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>107</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>BOUEE ATAC</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>BOUEE ATAC</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>ATAC</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>ATAC</SimpleValue>
+      </Value>
+      <Value ColumnRef="parent">
+        <SimpleValue>32</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeSymbole">
+        <SimpleValue>G.C.OXYT--.....</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeHierarchique">
+        <SimpleValue>2.X.2.5.1.4.9</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>108</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>BOUEE RO</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>BOUEE RO</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>RO</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>RO</SimpleValue>
+      </Value>
+      <Value ColumnRef="parent">
+        <SimpleValue>32</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeSymbole">
+        <SimpleValue>G.C.OXYR--.....</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeHierarchique">
+        <SimpleValue>2.X.2.5.1.4.10</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>109</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>BOUEE KINGPIN</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>BOUEE KINGPIN</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>KINGPIN</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>KINGPIN</SimpleValue>
+      </Value>
+      <Value ColumnRef="parent">
+        <SimpleValue>32</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeSymbole">
+        <SimpleValue>G.C.OXYK--.....</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeHierarchique">
+        <SimpleValue>2.X.2.5.1.4.11</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>110</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>PT Q</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>POINT Q</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>PT Q</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>POINT Q</SimpleValue>
+      </Value>
+      <Value ColumnRef="parent">
+        <SimpleValue>34</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeSymbole">
+        <SimpleValue>G.C.OXHQ--.....</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeHierarchique">
+        <SimpleValue>2.X.2.5.1.6.1</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>111</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>PT A</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>POINT A</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>PT A</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>POINT A</SimpleValue>
+      </Value>
+      <Value ColumnRef="parent">
+        <SimpleValue>34</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeSymbole">
+        <SimpleValue>G.C.OXHA--.....</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeHierarchique">
+        <SimpleValue>2.X.2.5.1.6.2</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>112</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>PT Y</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>POINT Y</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>PT Y</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>POINT Y</SimpleValue>
+      </Value>
+      <Value ColumnRef="parent">
+        <SimpleValue>34</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeSymbole">
+        <SimpleValue>G.C.OXHY--.....</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeHierarchique">
+        <SimpleValue>2.X.2.5.1.6.3</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>113</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>PT X</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>POINT X</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>PT X</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>POINT X</SimpleValue>
+      </Value>
+      <Value ColumnRef="parent">
+        <SimpleValue>34</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeSymbole">
+        <SimpleValue>G.C.OXHX--.....</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeHierarchique">
+        <SimpleValue>2.X.2.5.1.6.4</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>114</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>PT RGPT MAR</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>POINT DE REGROUPEMENT MARITIME</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>RDV</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>RENDEZVOUS</SimpleValue>
+      </Value>
+      <Value ColumnRef="parent">
+        <SimpleValue>35</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeSymbole">
+        <SimpleValue>G.C.OXRR--.....</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeHierarchique">
+        <SimpleValue>2.X.2.5.1.7.1</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>115</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>PT DIVERSION</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>POINT DE DIVERSION</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>DIVRSION</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>DIVERSIONS</SimpleValue>
+      </Value>
+      <Value ColumnRef="parent">
+        <SimpleValue>35</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeSymbole">
+        <SimpleValue>G.C.OXRD--.....</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeHierarchique">
+        <SimpleValue>2.X.2.5.1.7.2</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>116</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>PT RECALAGE GPS</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>POINT DE RECALAGE GPS</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>WAYPT</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>WAYPOINT</SimpleValue>
+      </Value>
+      <Value ColumnRef="parent">
+        <SimpleValue>35</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeSymbole">
+        <SimpleValue>G.C.OXRW--.....</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeHierarchique">
+        <SimpleValue>2.X.2.5.1.7.3</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>117</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>PIM</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>PIM</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>PIM</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>PIM</SimpleValue>
+      </Value>
+      <Value ColumnRef="parent">
+        <SimpleValue>35</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeSymbole">
+        <SimpleValue>G.C.OXRP--.....</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeHierarchique">
+        <SimpleValue>2.X.2.5.1.7.4</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>118</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>PT R</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>POINT R</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>POINT R</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>POINT R</SimpleValue>
+      </Value>
+      <Value ColumnRef="parent">
+        <SimpleValue>35</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeSymbole">
+        <SimpleValue>G.C.OXRT--.....</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeHierarchique">
+        <SimpleValue>2.X.2.5.1.7.5</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>119</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>PT STAT NAVIRE</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>POINT DE STATION DU NAVIRE</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>COMB ST</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>COMBATANT STATION</SimpleValue>
+      </Value>
+      <Value ColumnRef="parent">
+        <SimpleValue>-11</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeSymbole">
+        <SimpleValue>G.C.OXSTC-.....</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeHierarchique">
+        <SimpleValue>2.X.2.5.1.8.1</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>120</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>PT STAT RAS</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>POINT DE STATION RAS (REPLENISHMENT AT SEA)</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>RAS</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>REPLENISHMENT AT SEA (RAS) STATION</SimpleValue>
+      </Value>
+      <Value ColumnRef="parent">
+        <SimpleValue>-11</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeSymbole">
+        <SimpleValue>G.C.OXSTR-.....</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeHierarchique">
+        <SimpleValue>2.X.2.5.1.8.2</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>121</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>PT STAT SECOURS</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>POINT DE STATION DE SECOURS</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>RESC ST</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>RESCUE STATION</SimpleValue>
+      </Value>
+      <Value ColumnRef="parent">
+        <SimpleValue>-11</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeSymbole">
+        <SimpleValue>G.C.OXSTH-.....</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeHierarchique">
+        <SimpleValue>2.X.2.5.1.8.3</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>122</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>PT STAT SSMARIN</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>POINT STATION SOUS-MARIN</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>SUBM ST</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>SUBMARINE STATION</SimpleValue>
+      </Value>
+      <Value ColumnRef="parent">
+        <SimpleValue>-11</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeSymbole">
+        <SimpleValue>G.C.OXSTS-.....</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeHierarchique">
+        <SimpleValue>2.X.2.5.1.8.4</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>123</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>PT STAT ASW SSM</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>POINT DE STATION ASW SOUS-MARIN</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>ASW ST</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>ASW SUBMARINE STATION</SimpleValue>
+      </Value>
+      <Value ColumnRef="parent">
+        <SimpleValue>-11</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeSymbole">
+        <SimpleValue>G.C.OXSTSA.....</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeHierarchique">
+        <SimpleValue>2.X.2.5.1.8.5</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>124</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>PT ZONE RECH</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>POINT DE ZONE DE RECHERCHE</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>SAR AREA</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>SEARCH AREA</SimpleValue>
+      </Value>
+      <Value ColumnRef="parent">
+        <SimpleValue>37</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeSymbole">
+        <SimpleValue>G.C.OXSA--.....</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeHierarchique">
+        <SimpleValue>2.X.2.5.1.9.1</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>125</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>DIP POSITION</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>DIP POSITION</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>DIP POS</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>DIP POSITION</SimpleValue>
+      </Value>
+      <Value ColumnRef="parent">
+        <SimpleValue>37</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeSymbole">
+        <SimpleValue>G.C.OXSD--.....</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeHierarchique">
+        <SimpleValue>2.X.2.5.1.9.2</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>126</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>PT CENT RECH</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>POINT CENTRAL DE ZONE DE RECHERCHE</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>SEARCHCT</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>SEARCH CENTRE</SimpleValue>
+      </Value>
+      <Value ColumnRef="parent">
+        <SimpleValue>37</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeSymbole">
+        <SimpleValue>G.C.OXSC--.....</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeHierarchique">
+        <SimpleValue>2.X.2.5.1.9.3</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>127</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>PT PAT AERO CBT</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>POINT DE PATROUILLE AERIENNE DE COMBAT</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>CAP</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>COMBAT AIR PATROL (CAP)</SimpleValue>
+      </Value>
+      <Value ColumnRef="parent">
+        <SimpleValue>38</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeSymbole">
+        <SimpleValue>G.C.OXAC--.....</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeHierarchique">
+        <SimpleValue>2.X.2.5.1.10.1</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>128</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>PT AEW</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>POINT AEW</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>AEW</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>AIRBORNE EARLY WARNING (AEW)</SimpleValue>
+      </Value>
+      <Value ColumnRef="parent">
+        <SimpleValue>38</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeSymbole">
+        <SimpleValue>G.C.OXAA--.....</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeHierarchique">
+        <SimpleValue>2.X.2.5.1.10.2</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>129</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>PT TACAN</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>POINT TACAN</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>TACAN</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>TACAN</SimpleValue>
+      </Value>
+      <Value ColumnRef="parent">
+        <SimpleValue>38</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeSymbole">
+        <SimpleValue>G.C.OXAT--.....</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeHierarchique">
+        <SimpleValue>2.X.2.5.1.10.3</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>130</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>PT TANKING</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>POINT TANKING</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>TANKING</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>TANKING</SimpleValue>
+      </Value>
+      <Value ColumnRef="parent">
+        <SimpleValue>38</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeSymbole">
+        <SimpleValue>G.C.OXAK--.....</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeHierarchique">
+        <SimpleValue>2.X.2.5.1.10.4</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>131</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>PT AWFW</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>POINT AWFW</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>AWFW</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>ANTISUBMARINE WARFARE FIXED WING</SimpleValue>
+      </Value>
+      <Value ColumnRef="parent">
+        <SimpleValue>38</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeSymbole">
+        <SimpleValue>G.C.OXAF--.....</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeHierarchique">
+        <SimpleValue>2.X.2.5.1.10.5</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>132</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>PT AWRW</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>POINT AWRW</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>AWRW</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>ANTISUBMARINE WARFARE ROTARY WING</SimpleValue>
+      </Value>
+      <Value ColumnRef="parent">
+        <SimpleValue>38</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeSymbole">
+        <SimpleValue>G.C.OXAH--.....</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeHierarchique">
+        <SimpleValue>2.X.2.5.1.10.6</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>133</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>PT TOMCAT</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>POINT TOMCAT</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>TOMCAT</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>TOMCAT</SimpleValue>
+      </Value>
+      <Value ColumnRef="parent">
+        <SimpleValue>38</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeSymbole">
+        <SimpleValue>G.C.OXAO--.....</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeHierarchique">
+        <SimpleValue>2.X.2.5.1.10.7</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>134</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>PT RESCUE</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>POINT RESCUE</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>RESCUE</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>RESCUE</SimpleValue>
+      </Value>
+      <Value ColumnRef="parent">
+        <SimpleValue>38</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeSymbole">
+        <SimpleValue>G.C.OXAR--.....</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeHierarchique">
+        <SimpleValue>2.X.2.5.1.10.8</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>135</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>PT REPLENISH</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>POINT REPLENISH</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>REPLNISH</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>REPLENISH</SimpleValue>
+      </Value>
+      <Value ColumnRef="parent">
+        <SimpleValue>38</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeSymbole">
+        <SimpleValue>G.C.OXAP--.....</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeHierarchique">
+        <SimpleValue>2.X.2.5.1.10.9</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>136</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>PT MARSHALL</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>POINT MARSHALL</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>MARSHALL</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>MARSHALL</SimpleValue>
+      </Value>
+      <Value ColumnRef="parent">
+        <SimpleValue>38</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeSymbole">
+        <SimpleValue>G.C.OXAM--.....</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeHierarchique">
+        <SimpleValue>2.X.2.5.1.10.10</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>137</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>PT STRIKE IP</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>POINT STRIKE IP</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>STRIKEIP</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>STRIKE IP</SimpleValue>
+      </Value>
+      <Value ColumnRef="parent">
+        <SimpleValue>38</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeSymbole">
+        <SimpleValue>G.C.OXAS--.....</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeHierarchique">
+        <SimpleValue>2.X.2.5.1.10.11</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>138</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>PT CORRIDOR TAB</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>POINT CORRIDOR TAB</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>CORRIDOR</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>CORRIDOR TAB</SimpleValue>
+      </Value>
+      <Value ColumnRef="parent">
+        <SimpleValue>38</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeSymbole">
+        <SimpleValue>G.C.OXAD--.....</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeHierarchique">
+        <SimpleValue>2.X.2.5.1.10.12</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>144</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>POSTE DE COMBAT</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>POSTE DE COMBAT</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>CBTOUTPT</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>COMBAT OUTPOST</SimpleValue>
+      </Value>
+      <Value ColumnRef="parent">
+        <SimpleValue>52</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeSymbole">
+        <SimpleValue>G.C.MMPOC-.....</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeHierarchique">
+        <SimpleValue>2.X.2.1.4.1.4.1</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>145</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>POSTE OBSERVAT°</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>POSTE D'OBSERVATION</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>OPDSR</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>OBSERVATION POST OCCUPIED BY DISMOUNTED SCOUTS OR RECONNAISSANCE</SimpleValue>
+      </Value>
+      <Value ColumnRef="parent">
+        <SimpleValue>52</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeSymbole">
+        <SimpleValue>G.C.MMPOR-.....</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeHierarchique">
+        <SimpleValue>2.X.2.1.4.1.4.2</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>146</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>POSTE OBS° ART</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>POSTE D'OBSERVATION D'ARTILLERIE</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>FWOBSPOS</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>FORWARD OBSERVER POSITION</SimpleValue>
+      </Value>
+      <Value ColumnRef="parent">
+        <SimpleValue>52</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeSymbole">
+        <SimpleValue>G.C.MMPOF-.....</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeHierarchique">
+        <SimpleValue>2.X.2.1.4.1.4.3</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>147</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>POSTE D'ECOUTE</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>POSTE D'ECOUTE</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>OP/LP</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>SENSOR OUTPOST/LISTENING POST (OP/LP)</SimpleValue>
+      </Value>
+      <Value ColumnRef="parent">
+        <SimpleValue>52</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeSymbole">
+        <SimpleValue>G.C.MMPOS-.....</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeHierarchique">
+        <SimpleValue>2.X.2.1.4.1.4.4</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>148</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>POSTE OBS° NRBC</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>POSTE D'OBSERVATION NRBC DEBARQUE</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>CBRNOBS</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>CBRN OBSERVATION POST (DISMOUNTED)</SimpleValue>
+      </Value>
+      <Value ColumnRef="parent">
+        <SimpleValue>52</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeSymbole">
+        <SimpleValue>G.C.MMPON-.....</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeHierarchique">
+        <SimpleValue>2.X.2.1.4.1.4.5</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>149</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>POSTE OBS° FAC</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>POSTE D'OBSERVATION FAC (FORWARD AIR CONTROLLER)</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>FAC</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>FORWARD AIR CONTROLLER (FAC)</SimpleValue>
+      </Value>
+      <Value ColumnRef="parent">
+        <SimpleValue>52</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeSymbole">
+        <SimpleValue>G.C.MMPON-.....</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeHierarchique">
+        <SimpleValue>2.X.2.1.4.1.4.6</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>150</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>POSTE OBS° TACP</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>POSTE D'OBSERVATION TACP (TACTICAL AIR CONTROL PARTY)</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>TACP</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>TACTICAL AIR CONTROL PARTY (TACP)</SimpleValue>
+      </Value>
+      <Value ColumnRef="parent">
+        <SimpleValue>52</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeSymbole">
+        <SimpleValue>G.C.MMPON-.....</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeHierarchique">
+        <SimpleValue>2.X.2.1.4.1.4.7</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>151</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>PT STAT PICKET</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>POINT DE STATION PICKET</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>PICKET</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>PICKET STATION</SimpleValue>
+      </Value>
+      <Value ColumnRef="parent">
+        <SimpleValue>-11</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeSymbole">
+        <SimpleValue>G.C.OXSTCP.....</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeHierarchique">
+        <SimpleValue>2.X.2.5.1.8.1.1</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>152</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>PT STAT NAV ASW</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>POINT DE STATION DE NAVIRE ASW</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>ASW SHIP</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>ASW SHIP STATION</SimpleValue>
+      </Value>
+      <Value ColumnRef="parent">
+        <SimpleValue>-11</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeSymbole">
+        <SimpleValue>G.C.OXSTCA.....</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeHierarchique">
+        <SimpleValue>2.X.2.5.1.8.1.2</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>153</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>PT ELECTRO-OPT</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>POINT FIXE ELECTRO-OPTIQUE</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>ELECTRO OPT</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>ELECTRO-OPTICAL</SimpleValue>
+      </Value>
+      <Value ColumnRef="parent">
+        <SimpleValue>-1</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeSymbole">
+        <SimpleValue>G.C.MGPFO-.....</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeHierarchique">
+        <SimpleValue>2.X.2.1.1.1.1.3</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>154</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>OBJECTIF/CIBLE</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>OBJECTIF / CIBLE</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>TARGET</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>POINT / SINGLE TARGET</SimpleValue>
+      </Value>
+      <Value ColumnRef="parent">
+        <SimpleValue>-2</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeSymbole">
+        <SimpleValue>G.C.FSTP--.....</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeHierarchique">
+        <SimpleValue>2.X.2.3.1.1.1</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>157</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>ZONE REPOS</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>ZONE DE REPOS</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>REST</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>REST</SimpleValue>
+      </Value>
+      <Value ColumnRef="parent">
+        <SimpleValue>-3</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeSymbole">
+        <SimpleValue>G.C.SARR--.....</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeHierarchique">
+        <SimpleValue>2.X.2.4.3.6</SimpleValue>
+      </Value>
+    </Row>
+  </SimpleCodeList>
+</gc:CodeList>

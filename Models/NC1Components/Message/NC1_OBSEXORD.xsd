@@ -1,0 +1,480 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema targetNamespace="urn:fra:nc1:message:obsexord" xmlns:nc1ihm="urn:fra:nc1:IHM" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:nc1obsexord="urn:fra:nc1:message:obsexord" xmlns:nc1common="urn:fra:nc1:common:attribute" xmlns:nc1location="urn:fra:nc1:common:location" xmlns:nc1msgcom="urn:fra:nc1:common:message" xmlns:nc1facility="urn:fra:nc1:objet:facility" xmlns:nc1freeshape="urn:fra:nc1:objet:freeshape" xmlns:nc1groundentity="urn:fra:nc1:objet:groundentity" xmlns:nc1obstacle="urn:fra:nc1:objet:obstacle" xmlns:nc1route="urn:fra:nc1:objet:route" xmlns:nc1tacarea="urn:fra:nc1:objet:tacarea" xmlns:nc1tacline="urn:fra:nc1:objet:tacline" xmlns:nc1tacpoint="urn:fra:nc1:objet:tacpoint" xmlns:nc1unit="urn:fra:nc1:objet:unit">
+  <!-- NC1 V.9.0.0 -->
+  <xs:import namespace="urn:fra:nc1:common:attribute" schemaLocation="../Commun/Common.xsd" />
+  <xs:import namespace="urn:fra:nc1:common:location" schemaLocation="../Commun/Location.xsd" />
+  <xs:import namespace="urn:fra:nc1:common:message" schemaLocation="../Commun/Message.xsd" />
+  <xs:import namespace="urn:fra:nc1:objet:facility" schemaLocation="../Objet/NC1_Facility.xsd" />
+  <xs:import namespace="urn:fra:nc1:objet:freeshape" schemaLocation="../Objet/NC1_FreeShape.xsd" />
+  <xs:import namespace="urn:fra:nc1:objet:groundentity" schemaLocation="../Objet/NC1_GroundEntity.xsd" />
+  <xs:import namespace="urn:fra:nc1:objet:obstacle" schemaLocation="../Objet/NC1_Obstacle.xsd" />
+  <xs:import namespace="urn:fra:nc1:objet:route" schemaLocation="../Objet/NC1_Route.xsd" />
+  <xs:import namespace="urn:fra:nc1:objet:tacarea" schemaLocation="../Objet/NC1_TacArea.xsd" />
+  <xs:import namespace="urn:fra:nc1:objet:tacline" schemaLocation="../Objet/NC1_TacLine.xsd" />
+  <xs:import namespace="urn:fra:nc1:objet:tacpoint" schemaLocation="../Objet/NC1_TacPoint.xsd" />
+  <xs:import namespace="urn:fra:nc1:objet:unit" schemaLocation="../Objet/NC1_Unit.xsd" />
+  <xs:element name="NC1_OBSEXORD">
+    <xs:annotation>
+      <xs:documentation>Ordre de réalisation d'obstacles amis ou ennemis et en particulier d'approbation et de réalisation du plan d'obstacles.</xs:documentation>
+      <xs:documentation xml:lang="en">Order of realization of friendly or enemy obstacles and in particular approval and realization of the plan of obstacles.</xs:documentation>
+      <xs:appinfo>
+        <nc1:type xmlns:nc1="urn:fra:nc1">Message</nc1:type>
+        <nc1ihm:Nom>Ordre d'exécution d'obstacle</nc1ihm:Nom>
+        <nc1ihm:Nom xml:lang="en">Obstacle execution order</nc1ihm:Nom>
+        <nc1:MessH xmlns:nc1="urn:fra:nc1">N/A</nc1:MessH>
+        <nc1:MessADatP3 xmlns:nc1="urn:fra:nc1">OBSEXORD</nc1:MessADatP3>
+        <nc1:LastNC1ModifyVersion xmlns:nc1="urn:fra:nc1">9.0.0</nc1:LastNC1ModifyVersion>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:complexContent>
+        <xs:extension base="nc1msgcom:BaseMessageType">
+          <xs:sequence>
+            <xs:element name="missionId" type="nc1common:Nc1ObjectRefType">
+              <xs:annotation>
+                <xs:documentation>Identifiant unique NC1 de la mission du génie.</xs:documentation>
+                <xs:documentation xml:lang="en">NC1 ID of the engineer mission.</xs:documentation>
+                <xs:appinfo>
+                  <nc1ihm:Nom>Identifiant de la mission</nc1ihm:Nom>
+                  <nc1ihm:Nom xml:lang="en">Mission ID</nc1ihm:Nom>
+                </xs:appinfo>
+              </xs:annotation>
+            </xs:element>
+            <xs:element maxOccurs="unbounded" name="obstacleOrWork">
+              <xs:annotation>
+                <xs:documentation>Obstacle ou ouvrage à réaliser ou à détruire.</xs:documentation>
+                <xs:documentation xml:lang="en">Obstacle or work to build or to destroy.</xs:documentation>
+                <xs:appinfo>
+                  <nc1ihm:Nom>Obstacle, ouvrage</nc1ihm:Nom>
+                  <nc1ihm:Nom xml:lang="en">Obstacle or work</nc1ihm:Nom>
+                </xs:appinfo>
+              </xs:annotation>
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:choice>
+                    <xs:element name="obstacle" type="nc1obstacle:ObstacleType">
+                      <xs:annotation>
+                        <xs:documentation>Obstacle.</xs:documentation>
+                        <xs:documentation xml:lang="en">Obstacle.</xs:documentation>
+                        <xs:appinfo>
+                          <nc1ihm:Nom>Obstacle</nc1ihm:Nom>
+                          <nc1ihm:Nom xml:lang="en">Obstacle</nc1ihm:Nom>
+                        </xs:appinfo>
+                      </xs:annotation>
+                    </xs:element>
+                    <xs:element name="facility" type="nc1facility:FacilityType">
+                      <xs:annotation>
+                        <xs:documentation>Installation.</xs:documentation>
+                        <xs:documentation xml:lang="en">Facility.</xs:documentation>
+                        <xs:appinfo>
+                          <nc1ihm:Nom>Installation</nc1ihm:Nom>
+                          <nc1ihm:Nom xml:lang="en">Facility</nc1ihm:Nom>
+                        </xs:appinfo>
+                      </xs:annotation>
+                    </xs:element>
+                    <xs:element name="groundEntity" type="nc1groundentity:GroundEntityType">
+                      <xs:annotation>
+                        <xs:documentation>Entité terrain.</xs:documentation>
+                        <xs:documentation xml:lang="en">Ground entity.</xs:documentation>
+                        <xs:appinfo>
+                          <nc1ihm:Nom>Entité terrain</nc1ihm:Nom>
+                          <nc1ihm:Nom xml:lang="en">Ground entity</nc1ihm:Nom>
+                        </xs:appinfo>
+                      </xs:annotation>
+                    </xs:element>
+                  </xs:choice>
+                  <xs:element minOccurs="0" name="noWorkBeforeDatetime" type="xs:dateTime">
+                    <xs:annotation>
+                      <xs:documentation>Horodatage avant lequel aucun travail n'est autorisé.</xs:documentation>
+                      <xs:documentation xml:lang="en">Time before which no work is permitted.</xs:documentation>
+                      <xs:appinfo>
+                        <nc1ihm:Nom>Horodatage "Pas avant"</nc1ihm:Nom>
+                        <nc1ihm:Nom xml:lang="en">no work before date time</nc1ihm:Nom>
+                      </xs:appinfo>
+                    </xs:annotation>
+                  </xs:element>
+                  <xs:element minOccurs="0" name="startDatetime" type="xs:dateTime">
+                    <xs:annotation>
+                      <xs:documentation>Horodatage de début de réalisation.</xs:documentation>
+                      <xs:documentation xml:lang="en">Achievement start timestamp.</xs:documentation>
+                      <xs:appinfo>
+                        <nc1ihm:Nom>Horodatage de début</nc1ihm:Nom>
+                        <nc1ihm:Nom xml:lang="en">Period start timestamp</nc1ihm:Nom>
+                      </xs:appinfo>
+                    </xs:annotation>
+                  </xs:element>
+                  <xs:element name="endDatetime" type="xs:dateTime">
+                    <xs:annotation>
+                      <xs:documentation>Horodatage de fin de réalisation.</xs:documentation>
+                      <xs:documentation xml:lang="en">Achievement end timestamp.</xs:documentation>
+                      <xs:appinfo>
+                        <nc1ihm:Nom>Horodatage de fin</nc1ihm:Nom>
+                        <nc1ihm:Nom xml:lang="en">Period end  timestamp</nc1ihm:Nom>
+                      </xs:appinfo>
+                    </xs:annotation>
+                  </xs:element>
+                  <xs:element minOccurs="0" name="tacticalObjective" type="nc1obsexord:EngineerTacticalObjectiveCode">
+                    <xs:annotation>
+                      <xs:documentation>Objectif tactique de l'obstacle ou de l'ouvrage.</xs:documentation>
+                      <xs:documentation xml:lang="en">Tactical objective of the obstacle or work.</xs:documentation>
+                      <xs:appinfo>
+                        <nc1ihm:Nom>Objectif tactique</nc1ihm:Nom>
+                        <nc1ihm:Nom xml:lang="en">Tactical objective</nc1ihm:Nom>
+                      </xs:appinfo>
+                    </xs:annotation>
+                  </xs:element>
+                  <xs:element name="toBeMarked" type="xs:boolean">
+                    <xs:annotation>
+                      <xs:documentation>Indique si l'obstacle ou ouvrage doit être marqué.</xs:documentation>
+                      <xs:documentation xml:lang="en">Specifies if the obstacle or the work must be marked.</xs:documentation>
+                      <xs:appinfo>
+                        <nc1ihm:Nom>Marqué ou non</nc1ihm:Nom>
+                        <nc1ihm:Nom xml:lang="en">Marked or not</nc1ihm:Nom>
+                      </xs:appinfo>
+                    </xs:annotation>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element maxOccurs="unbounded" minOccurs="0" name="routeToTaskSite">
+              <xs:annotation>
+                <xs:documentation>Itinéraire d'approche.</xs:documentation>
+                <xs:documentation xml:lang="en">Route approach.</xs:documentation>
+                <xs:appinfo>
+                  <nc1ihm:Nom>Itinéraire d'approche</nc1ihm:Nom>
+                  <nc1ihm:Nom xml:lang="en">Route approach</nc1ihm:Nom>
+                </xs:appinfo>
+              </xs:annotation>
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="route" type="nc1route:RouteType">
+                    <xs:annotation>
+                      <xs:documentation>Itinéraire.</xs:documentation>
+                      <xs:documentation xml:lang="en">Route.</xs:documentation>
+                      <xs:appinfo>
+                        <nc1ihm:Nom>Itinéraire</nc1ihm:Nom>
+                        <nc1ihm:Nom xml:lang="en">Route</nc1ihm:Nom>
+                      </xs:appinfo>
+                    </xs:annotation>
+                  </xs:element>
+                  <xs:element maxOccurs="unbounded" name="engineerAssemblyArea">
+                    <xs:annotation>
+                      <xs:documentation>Point ou zone de rassemblement avant la réalisation de la tâche génie.</xs:documentation>
+                      <xs:documentation xml:lang="en">Assembly Point or area before achievement of the engineer mission.</xs:documentation>
+                      <xs:appinfo>
+                        <nc1ihm:Nom>Lieu de rassemblement</nc1ihm:Nom>
+                        <nc1ihm:Nom xml:lang="en">Assembly area</nc1ihm:Nom>
+                      </xs:appinfo>
+                    </xs:annotation>
+                    <xs:complexType>
+                      <xs:choice>
+                        <xs:element name="tacPoint" type="nc1tacpoint:TacPointType">
+                          <xs:annotation>
+                            <xs:documentation>Point tactique.</xs:documentation>
+                            <xs:documentation xml:lang="en">Tactical point.</xs:documentation>
+                            <xs:appinfo>
+                              <nc1ihm:Nom>Point tactique</nc1ihm:Nom>
+                              <nc1ihm:Nom xml:lang="en">Tactical point</nc1ihm:Nom>
+                            </xs:appinfo>
+                          </xs:annotation>
+                        </xs:element>
+                        <xs:element name="tacLine" type="nc1tacline:TacLineType">
+                          <xs:annotation>
+                            <xs:documentation>Ligne tactique.</xs:documentation>
+                            <xs:documentation xml:lang="en">Tactical line.</xs:documentation>
+                            <xs:appinfo>
+                              <nc1ihm:Nom>Ligne tactique</nc1ihm:Nom>
+                              <nc1ihm:Nom xml:lang="en">Tactical line</nc1ihm:Nom>
+                            </xs:appinfo>
+                          </xs:annotation>
+                        </xs:element>
+                        <xs:element name="tacArea" type="nc1tacarea:TacAreaType">
+                          <xs:annotation>
+                            <xs:documentation>Surface tactique.</xs:documentation>
+                            <xs:documentation xml:lang="en">Tactical area.</xs:documentation>
+                            <xs:appinfo>
+                              <nc1ihm:Nom>Surface tactique</nc1ihm:Nom>
+                              <nc1ihm:Nom xml:lang="en">Tactical area</nc1ihm:Nom>
+                            </xs:appinfo>
+                          </xs:annotation>
+                        </xs:element>
+                        <xs:element name="freeShape" type="nc1freeshape:FreeShapeType">
+                          <xs:annotation>
+                            <xs:documentation>Forme graphique libre.</xs:documentation>
+                            <xs:documentation xml:lang="en">Free shape.</xs:documentation>
+                            <xs:appinfo>
+                              <nc1ihm:Nom>Forme libre</nc1ihm:Nom>
+                              <nc1ihm:Nom xml:lang="en">Free shape</nc1ihm:Nom>
+                            </xs:appinfo>
+                          </xs:annotation>
+                        </xs:element>
+                      </xs:choice>
+                    </xs:complexType>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element maxOccurs="unbounded" minOccurs="0" name="ressources">
+              <xs:annotation>
+                <xs:documentation>Ressources en personnel et matériel.</xs:documentation>
+                <xs:documentation xml:lang="en">Men and equipment resources.</xs:documentation>
+                <xs:appinfo>
+                  <nc1ihm:Nom>Ressources</nc1ihm:Nom>
+                  <nc1ihm:Nom xml:lang="en">Resources</nc1ihm:Nom>
+                </xs:appinfo>
+              </xs:annotation>
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element minOccurs="0" name="manPower" type="nc1common:MediumTextType">
+                    <xs:annotation>
+                      <xs:documentation>Ressources en personnel allouées ou demandées pour réaliser la tâche génie.</xs:documentation>
+                      <xs:documentation xml:lang="en">Staff resources allocated or assigned to perform the engineering task.</xs:documentation>
+                      <xs:appinfo>
+                        <nc1ihm:Nom>Ressources en personnel</nc1ihm:Nom>
+                        <nc1ihm:Nom xml:lang="en">Manpower</nc1ihm:Nom>
+                      </xs:appinfo>
+                    </xs:annotation>
+                  </xs:element>
+                  <xs:element minOccurs="0" name="materialAndEquipment" type="nc1common:MediumTextType">
+                    <xs:annotation>
+                      <xs:documentation>Ressources en matériel allouées ou demandées pour réaliser la tâche génie.</xs:documentation>
+                      <xs:documentation xml:lang="en">Resources allocated or equipment required to perform the engineering task.</xs:documentation>
+                      <xs:appinfo>
+                        <nc1ihm:Nom>Ressources en matériel</nc1ihm:Nom>
+                        <nc1ihm:Nom xml:lang="en">Material and equipment</nc1ihm:Nom>
+                      </xs:appinfo>
+                    </xs:annotation>
+                  </xs:element>
+                  <xs:element name="engineerUnitId" type="nc1common:Nc1ObjectRefType">
+                    <xs:annotation>
+                      <xs:documentation>Unité du génie fournissant les ressources nécessaires à la tâche génie.</xs:documentation>
+                      <xs:documentation xml:lang="en">Engineer unit providing resources for the engineer mission.</xs:documentation>
+                      <xs:appinfo>
+                        <nc1ihm:Nom>Unité du génie</nc1ihm:Nom>
+                        <nc1ihm:Nom xml:lang="en">Engineer unit</nc1ihm:Nom>
+                      </xs:appinfo>
+                    </xs:annotation>
+                  </xs:element>
+                  <xs:element minOccurs="0" name="rendezVous">
+                    <xs:annotation>
+                      <xs:documentation>Localisation et horodatage du rendez-vous donné au personnel devant réaliser la tâche génie.</xs:documentation>
+                      <xs:documentation xml:lang="en">Location and time stamp of the appointment given to the staff to perform the engineering task.</xs:documentation>
+                      <xs:appinfo>
+                        <nc1ihm:Nom>Rendez-vous</nc1ihm:Nom>
+                        <nc1ihm:Nom xml:lang="en">Rendezvous</nc1ihm:Nom>
+                      </xs:appinfo>
+                    </xs:annotation>
+                    <xs:complexType>
+                      <xs:sequence>
+                        <xs:element name="location" type="nc1location:PointType">
+                          <xs:annotation>
+                            <xs:documentation>Localisation du rendez-vous.</xs:documentation>
+                            <xs:documentation xml:lang="en">Rendezvous location.</xs:documentation>
+                            <xs:appinfo>
+                              <nc1ihm:Nom>Localisation</nc1ihm:Nom>
+                              <nc1ihm:Nom xml:lang="en">Location</nc1ihm:Nom>
+                            </xs:appinfo>
+                          </xs:annotation>
+                        </xs:element>
+                        <xs:element minOccurs="0" name="datetime" type="xs:dateTime">
+                          <xs:annotation>
+                            <xs:documentation>Horodatage du rendez-vous.</xs:documentation>
+                            <xs:documentation xml:lang="en">Rendezvous time.</xs:documentation>
+                            <xs:appinfo>
+                              <nc1ihm:Nom>Horodatage</nc1ihm:Nom>
+                              <nc1ihm:Nom xml:lang="en">Timestamp</nc1ihm:Nom>
+                            </xs:appinfo>
+                          </xs:annotation>
+                        </xs:element>
+                      </xs:sequence>
+                    </xs:complexType>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element maxOccurs="unbounded" minOccurs="0" name="minesDetails">
+              <xs:annotation>
+                <xs:documentation>Données relatives au minage.</xs:documentation>
+                <xs:documentation xml:lang="en">Mine-laying information.</xs:documentation>
+                <xs:appinfo>
+                  <nc1ihm:Nom>Minage</nc1ihm:Nom>
+                  <nc1ihm:Nom xml:lang="en">Mines</nc1ihm:Nom>
+                </xs:appinfo>
+              </xs:annotation>
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="mines" type="nc1common:MediumTextType">
+                    <xs:annotation>
+                      <xs:documentation>Description en texte libre des quantités allouées ou demandées de mines anti-char et anti-personnelles.</xs:documentation>
+                      <xs:documentation xml:lang="en">Free-text description of the allocated or requested amounts of anti-tank mines and anti-personnel.</xs:documentation>
+                      <xs:appinfo>
+                        <nc1ihm:Nom>Mines</nc1ihm:Nom>
+                        <nc1ihm:Nom xml:lang="en">Mines</nc1ihm:Nom>
+                      </xs:appinfo>
+                    </xs:annotation>
+                  </xs:element>
+                  <xs:element minOccurs="0" name="explosives" type="nc1common:MediumTextType">
+                    <xs:annotation>
+                      <xs:documentation>Description en texte libre des types d'explosifs et des quantités allouées ou demandées.</xs:documentation>
+                      <xs:documentation xml:lang="en">Prose description of the types of explosives and the quantities allocated or requested.</xs:documentation>
+                      <xs:appinfo>
+                        <nc1ihm:Nom>Explosifs</nc1ihm:Nom>
+                        <nc1ihm:Nom xml:lang="en">Explosives</nc1ihm:Nom>
+                      </xs:appinfo>
+                    </xs:annotation>
+                  </xs:element>
+                  <xs:element minOccurs="0" name="dump">
+                    <xs:annotation>
+                      <xs:documentation>Localisation et horodatage du dépôt de ou des mines ou explosifs.</xs:documentation>
+                      <xs:documentation xml:lang="en">Location and time stamp of the deposit or the mines or explosive.</xs:documentation>
+                      <xs:appinfo>
+                        <nc1ihm:Nom>Dépôt</nc1ihm:Nom>
+                        <nc1ihm:Nom xml:lang="en">Dump</nc1ihm:Nom>
+                      </xs:appinfo>
+                    </xs:annotation>
+                    <xs:complexType>
+                      <xs:sequence>
+                        <xs:element name="location" type="nc1location:PointType">
+                          <xs:annotation>
+                            <xs:documentation>Localisation du dépôt.</xs:documentation>
+                            <xs:documentation xml:lang="en">Warehouse location.</xs:documentation>
+                            <xs:appinfo>
+                              <nc1ihm:Nom>Localisation</nc1ihm:Nom>
+                              <nc1ihm:Nom xml:lang="en">Location</nc1ihm:Nom>
+                            </xs:appinfo>
+                          </xs:annotation>
+                        </xs:element>
+                        <xs:element minOccurs="0" name="datetime" type="xs:dateTime">
+                          <xs:annotation>
+                            <xs:documentation>Horodatage du dépôt.</xs:documentation>
+                            <xs:documentation xml:lang="en">Dump timestamp.</xs:documentation>
+                            <xs:appinfo>
+                              <nc1ihm:Nom>Horodatage</nc1ihm:Nom>
+                              <nc1ihm:Nom xml:lang="en">Timestamp</nc1ihm:Nom>
+                            </xs:appinfo>
+                          </xs:annotation>
+                        </xs:element>
+                      </xs:sequence>
+                    </xs:complexType>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element maxOccurs="unbounded" minOccurs="0" name="areaResponsibleUnit">
+              <xs:annotation>
+                <xs:documentation>Unité responsable de la zone dans laquelle la tâche génie est réalisée.</xs:documentation>
+                <xs:documentation xml:lang="en">Unit responsible of the area where engineer mission is performed.</xs:documentation>
+                <xs:appinfo>
+                  <nc1ihm:Nom>Unité responsable de la zone</nc1ihm:Nom>
+                  <nc1ihm:Nom xml:lang="en">Area responsible unit</nc1ihm:Nom>
+                </xs:appinfo>
+              </xs:annotation>
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="ownUnit" type="nc1unit:UnitType">
+                    <xs:annotation>
+                      <xs:documentation>Unité de la force.</xs:documentation>
+                      <xs:documentation xml:lang="en">Own unit.</xs:documentation>
+                      <xs:appinfo>
+                        <nc1ihm:Nom>Unité</nc1ihm:Nom>
+                        <nc1ihm:Nom xml:lang="en">unit</nc1ihm:Nom>
+                      </xs:appinfo>
+                    </xs:annotation>
+                  </xs:element>
+                  <xs:element name="unitFunction" type="nc1obsexord:UnitFunctionCode">
+                    <xs:annotation>
+                      <xs:documentation>Fonction de l'unité.</xs:documentation>
+                      <xs:documentation xml:lang="en">Unit function.</xs:documentation>
+                      <xs:appinfo>
+                        <nc1ihm:Nom>Fonction de l'unité</nc1ihm:Nom>
+                        <nc1ihm:Nom xml:lang="en">Unit function</nc1ihm:Nom>
+                      </xs:appinfo>
+                    </xs:annotation>
+                  </xs:element>
+                  <xs:element name="rendezVous">
+                    <xs:annotation>
+                      <xs:documentation>Localisation et horodatage du rendez-vous avec les représentants de l'unité.</xs:documentation>
+                      <xs:documentation xml:lang="en">Location and time stamp of the appointments with the representatives of the unit.</xs:documentation>
+                      <xs:appinfo>
+                        <nc1ihm:Nom>Rendez-vous</nc1ihm:Nom>
+                        <nc1ihm:Nom xml:lang="en">Rendezvous</nc1ihm:Nom>
+                      </xs:appinfo>
+                    </xs:annotation>
+                    <xs:complexType>
+                      <xs:sequence>
+                        <xs:element name="location" type="nc1location:PointType">
+                          <xs:annotation>
+                            <xs:documentation>Localisation du rendez-vous.</xs:documentation>
+                            <xs:documentation xml:lang="en">Rendezvous location.</xs:documentation>
+                            <xs:appinfo>
+                              <nc1ihm:Nom>Localisation</nc1ihm:Nom>
+                              <nc1ihm:Nom xml:lang="en">Location</nc1ihm:Nom>
+                            </xs:appinfo>
+                          </xs:annotation>
+                        </xs:element>
+                        <xs:element minOccurs="0" name="datetime" type="xs:dateTime">
+                          <xs:annotation>
+                            <xs:documentation>Horodatage du rendez-vous.</xs:documentation>
+                            <xs:documentation xml:lang="en">Rendezvous time.</xs:documentation>
+                            <xs:appinfo>
+                              <nc1ihm:Nom>Horodatage</nc1ihm:Nom>
+                              <nc1ihm:Nom xml:lang="en">Timestamp</nc1ihm:Nom>
+                            </xs:appinfo>
+                          </xs:annotation>
+                        </xs:element>
+                      </xs:sequence>
+                    </xs:complexType>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="acknowledgement" type="xs:boolean">
+              <xs:annotation>
+                <xs:documentation>Demande d’aperçu.</xs:documentation>
+                <xs:documentation xml:lang="en">Acknowledgement request.</xs:documentation>
+                <xs:appinfo>
+                  <nc1ihm:Nom>Demande d’aperçu</nc1ihm:Nom>
+                  <nc1ihm:Nom xml:lang="en">Acknowledgement request</nc1ihm:Nom>
+                </xs:appinfo>
+              </xs:annotation>
+            </xs:element>
+            <xs:element minOccurs="0" name="comment" type="nc1msgcom:CommentSectionType">
+              <xs:annotation>
+                <xs:documentation>Commentaire en texte libre.</xs:documentation>
+                <xs:documentation xml:lang="en">free text comment.</xs:documentation>
+                <xs:appinfo>
+                  <nc1ihm:Nom>Commentaire</nc1ihm:Nom>
+                  <nc1ihm:Nom xml:lang="en">comment</nc1ihm:Nom>
+                </xs:appinfo>
+              </xs:annotation>
+            </xs:element>
+          </xs:sequence>
+        </xs:extension>
+      </xs:complexContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:simpleType name="EngineerTacticalObjectiveCode">
+    <xs:annotation>
+      <xs:appinfo>
+        <nc1dico:source xmlns:nc1dico="urn:fra:nc1:dictionnaires">AdatP-3 BL14 1456/2</nc1dico:source>
+        <nc1ihm:description>Objectif tactique lié à la réalisation ou à la destruction d'un obstacle ou ouvrage par les unités du génie.</nc1ihm:description>
+        <nc1ihm:description xml:lang="en">Tactical objective bound to the realization or to the destruction of an obstacle by the units of the engineering.</nc1ihm:description>
+      </xs:appinfo>
+      <xs:documentation>Objectif tactique lié à la réalisation ou à la destruction d'un obstacle ou ouvrage par les unités du génie.</xs:documentation>
+      <xs:documentation xml:lang="en">Tactical objective bound to the realization or to the destruction of an obstacle by the units of the engineering.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:integer" />
+  </xs:simpleType>
+  <xs:simpleType name="UnitFunctionCode">
+    <xs:annotation>
+      <xs:appinfo>
+        <nc1dico:source xmlns:nc1dico="urn:fra:nc1:dictionnaires">AdatP-3 1496/4</nc1dico:source>
+        <nc1ihm:description>Fonction d'une unité.</nc1ihm:description>
+        <nc1ihm:description xml:lang="en">Function of a unit.</nc1ihm:description>
+      </xs:appinfo>
+      <xs:documentation>Fonction d'une unité.</xs:documentation>
+      <xs:documentation xml:lang="en">Function of a unit.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:integer" />
+  </xs:simpleType>
+</xs:schema>

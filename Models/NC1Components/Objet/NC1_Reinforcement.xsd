@@ -1,0 +1,225 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema targetNamespace="urn:fra:nc1:objet:reinforcement" xmlns:nc1ihm="urn:fra:nc1:IHM" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:nc1reinforcement="urn:fra:nc1:objet:reinforcement" xmlns:nc1common="urn:fra:nc1:common:attribute" xmlns:nc1objcom="urn:fra:nc1:common:object" xmlns:nc1sicsdicos="urn:fra:nc1:common:sicsdicos">
+  <!-- NC1 V.9.0.0 -->
+  <xs:import namespace="urn:fra:nc1:common:attribute" schemaLocation="../Commun/Common.xsd" />
+  <xs:import namespace="urn:fra:nc1:common:object" schemaLocation="../Commun/Object.xsd" />
+  <xs:import namespace="urn:fra:nc1:common:sicsdicos" schemaLocation="../Commun/SICS_Dictionaries.xsd" />
+  <xs:element name="NC1_Reinforcement" type="nc1reinforcement:ReinforcementType">
+    <xs:annotation>
+      <xs:documentation>L’objet NC1_Reinforcement décrit le renforcement d’une unité au profit d’une autre, par une unité et pour un type de subordination dans une période donnée.</xs:documentation>
+      <xs:documentation xml:lang="en">The NC1_Reinforcement object describes the reinforcement of a unit from another one, and for a given subordination type in a given period.</xs:documentation>
+      <xs:appinfo>
+        <nc1:type xmlns:nc1="urn:fra:nc1">Objet</nc1:type>
+        <nc1ihm:Nom>Renforcement</nc1ihm:Nom>
+        <nc1ihm:Nom xml:lang="en">Reinforcement</nc1ihm:Nom>
+        <nc1:MessH xmlns:nc1="urn:fra:nc1">Message H3.0 TrackM </nc1:MessH>
+        <nc1:MessADatP3 xmlns:nc1="urn:fra:nc1">ORBATLAND</nc1:MessADatP3>
+        <nc1:LastNC1ModifyVersion xmlns:nc1="urn:fra:nc1">9.0.0</nc1:LastNC1ModifyVersion>
+      </xs:appinfo>
+    </xs:annotation>
+  </xs:element>
+  <xs:complexType name="GivenUnitDescriptionType">
+    <xs:annotation>
+      <xs:documentation>Description d’une unité donnée en renforcement.</xs:documentation>
+      <xs:documentation xml:lang="en">Description of a reinforcing unit.</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="volume" type="nc1common:Int0To99Type">
+        <xs:annotation>
+          <xs:documentation>Volume de l’unité donnée en renforcement.</xs:documentation>
+          <xs:documentation xml:lang="en">Volume of the unit in terms of constituent units/equipments.</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Volume</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">Volume</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="level" type="nc1common:MediumTextObjectType">
+        <xs:annotation>
+          <xs:documentation>Niveau hiérarchique de l’unité donnée en renforcement (ex : « COMPAGNIE »).</xs:documentation>
+          <xs:documentation xml:lang="en">"Hierarchical level of the reinforcing unit (e.g. ""PLATOON"")".</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Niveau</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">Level</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="type" type="nc1common:MediumTextObjectType">
+        <xs:annotation>
+          <xs:documentation>Type de l’unité donnée en renforcement (ex : « INFANTRY »).</xs:documentation>
+          <xs:documentation xml:lang="en">"Type of the reinforcing unit (e.g. ""INFANTRY"")".</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Type</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">Type</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="GivenUnitType">
+    <xs:annotation>
+      <xs:documentation>Identification d'une unité donnée en renforcement.</xs:documentation>
+      <xs:documentation xml:lang="en">Identifying a particular reinforcing unit.</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="givenUnitId" type="nc1common:Nc1ObjectRefType">
+        <xs:annotation>
+          <xs:documentation>Identifiant unique NC1 de l'unité donnée en renforcement.</xs:documentation>
+          <xs:documentation xml:lang="en">NC1 ID of the reinforcing unit.</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Unité donnée</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">Reinforcing unit</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="reinforcementId" type="nc1common:Nc1ObjectRefType">
+        <xs:annotation>
+          <xs:documentation>Identifiant unique NC1 d'un renforcement de référence.</xs:documentation>
+          <xs:documentation xml:lang="en">Unique NC1 identifier of a reference reinforcement.</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Renforcement de référence</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">reference reinforcement</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ReinforcementType">
+    <xs:annotation>
+      <xs:documentation>L’objet NC1_Reinforcement décrit le renforcement d’une unité au profit d’une autre, par une unité et pour un type de subordination dans une période donnée.</xs:documentation>
+      <xs:documentation xml:lang="en">The NC1_Reinforcement object describes the reinforcement of a unit from another one, and for a given subordination type in a given period.</xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="nc1objcom:BaseObjectType">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="tacticalData">
+            <xs:annotation>
+              <xs:documentation>Données tactiques du renforcement.</xs:documentation>
+              <xs:documentation xml:lang="en">Reinforcement tactical data.</xs:documentation>
+              <xs:appinfo>
+                <nc1ihm:Nom>Données tactiques</nc1ihm:Nom>
+                <nc1ihm:Nom xml:lang="en">Tactical datas</nc1ihm:Nom>
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element minOccurs="0" name="name" type="nc1common:ShortTextObjectType">
+                  <xs:annotation>
+                    <xs:documentation>Nom donné au renforcement.</xs:documentation>
+                    <xs:documentation xml:lang="en">Name assigned to the reinforcement.</xs:documentation>
+                    <xs:appinfo>
+                      <nc1ihm:Nom>Nom</nc1ihm:Nom>
+                      <nc1ihm:Nom xml:lang="en">Name</nc1ihm:Nom>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:element>
+                <xs:element name="providingUnitId" type="nc1common:Nc1ObjectRefType">
+                  <xs:annotation>
+                    <xs:documentation>Identifiant unique NC1 de l’unité donnant le renforcement (unité d’origine).</xs:documentation>
+                    <xs:documentation xml:lang="en">NC1 ID of the originating unit providing the reinforcement.</xs:documentation>
+                    <xs:appinfo>
+                      <nc1ihm:Nom>Unité donnant</nc1ihm:Nom>
+                      <nc1ihm:Nom xml:lang="en">Originating unit providing the reinforcement</nc1ihm:Nom>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:element>
+                <xs:element name="reinforcedUnitId" type="nc1common:Nc1ObjectRefType">
+                  <xs:annotation>
+                    <xs:documentation>Identifiant unique NC1 de l’unité renforcée.</xs:documentation>
+                    <xs:documentation xml:lang="en">NC1 ID of the reinforced unit.</xs:documentation>
+                    <xs:appinfo>
+                      <nc1ihm:Nom>Unité renforcée</nc1ihm:Nom>
+                      <nc1ihm:Nom xml:lang="en">Reinforced unit</nc1ihm:Nom>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:element>
+                <xs:element minOccurs="0" name="reinforcementId" type="nc1common:Nc1ObjectRefType">
+                  <xs:annotation>
+                    <xs:documentation>Identifiant unique NC1 d'un renforcement de référence.</xs:documentation>
+                    <xs:documentation xml:lang="en">Unique NC1 identifier of a reference reinforcement.</xs:documentation>
+                    <xs:appinfo>
+                      <nc1ihm:Nom>Renforcement de référence</nc1ihm:Nom>
+                      <nc1ihm:Nom xml:lang="en">Reference reinforcement</nc1ihm:Nom>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:element>
+                <xs:choice>
+                  <xs:element name="givenUnitDescription" type="nc1reinforcement:GivenUnitDescriptionType">
+                    <xs:annotation>
+                      <xs:documentation>Description en texte libre de ou des type(s) d’unité(s) donné(s) en renforcement.</xs:documentation>
+                      <xs:documentation xml:lang="en">Free text description of the reinforcing unit(s).</xs:documentation>
+                      <xs:appinfo>
+                        <nc1ihm:Nom>Description de l’unité donnée</nc1ihm:Nom>
+                        <nc1ihm:Nom xml:lang="en">Given unit description</nc1ihm:Nom>
+                      </xs:appinfo>
+                    </xs:annotation>
+                  </xs:element>
+                  <xs:element name="givenUnitId" type="nc1common:Nc1ObjectRefType">
+                    <xs:annotation>
+                      <xs:documentation>Identification d'une unité donnée en renforcement.</xs:documentation>
+                      <xs:documentation xml:lang="en">Identifying a particular reinforcing unit.</xs:documentation>
+                      <xs:appinfo>
+                        <nc1ihm:Nom>Unité donnée</nc1ihm:Nom>
+                        <nc1ihm:Nom xml:lang="en">Reinforcing unit</nc1ihm:Nom>
+                      </xs:appinfo>
+                    </xs:annotation>
+                  </xs:element>
+                </xs:choice>
+                <xs:element name="commandRelationshipCategory" type="nc1sicsdicos:L135_16Code">
+                  <xs:annotation>
+                    <xs:documentation>Type de subordination tactique.</xs:documentation>
+                    <xs:documentation xml:lang="en">Type of tactical subordination.</xs:documentation>
+                    <xs:appinfo>
+                      <nc1ihm:Nom>Type de subordination</nc1ihm:Nom>
+                      <nc1ihm:Nom xml:lang="en">Subordination type</nc1ihm:Nom>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:element>
+                <xs:element minOccurs="0" name="period" type="nc1common:PeriodType">
+                  <xs:annotation>
+                    <xs:documentation>Horodatages de début et de fin du renforcement.</xs:documentation>
+                    <xs:documentation xml:lang="en">Time stamping of the beginning and the end of the reinforcement.</xs:documentation>
+                    <xs:appinfo>
+                      <nc1ihm:Nom>Horodatage</nc1ihm:Nom>
+                      <nc1ihm:Nom xml:lang="en">Timestamp</nc1ihm:Nom>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:element>
+                <xs:element minOccurs="0" name="url" type="nc1common:MediumTextObjectType">
+                  <xs:annotation>
+                    <xs:documentation>Lien vers un fichier associé à l’objet.</xs:documentation>
+                    <xs:documentation xml:lang="en">Link to a file associated with the object.</xs:documentation>
+                    <xs:appinfo>
+                      <nc1ihm:Nom>Url</nc1ihm:Nom>
+                      <nc1ihm:Nom xml:lang="en">Url</nc1ihm:Nom>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:element>
+                <xs:element minOccurs="0" name="comment" type="nc1common:LongTextObjectType">
+                  <xs:annotation>
+                    <xs:documentation>Commentaire en texte libre.</xs:documentation>
+                    <xs:documentation xml:lang="en">free text comment.</xs:documentation>
+                    <xs:appinfo>
+                      <nc1ihm:Nom>Commentaire</nc1ihm:Nom>
+                      <nc1ihm:Nom xml:lang="en">Comment</nc1ihm:Nom>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:element>
+                <xs:element minOccurs="0" name="extVersion" type="nc1common:ExtVersType">
+                  <xs:annotation>
+                    <xs:documentation>Extension pour versions suivantes compatibles.</xs:documentation>
+                    <xs:documentation xml:lang="en">Extension for following compatible versions.</xs:documentation>
+                    <xs:appinfo>
+                      <nc1ihm:Nom>Extension de version</nc1ihm:Nom>
+                      <nc1ihm:Nom xml:lang="en">Version extension</nc1ihm:Nom>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:element>
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+</xs:schema>

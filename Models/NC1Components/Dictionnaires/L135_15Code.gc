@@ -1,0 +1,196 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<gc:CodeList xmlns:nc1dico="urn:fra:nc1:dictionnaires" xmlns:gc="http://docs.oasis-open.org/codelist/ns/genericode/1.0/">
+  <Annotation>
+    <Description>
+      <nc1dico:description>INDICATION DE LA CREDIBILITE D'UNE INFORMATION TACTIQUE. COUPLEE A L'INDICATEUR DE FIABILITE L135/14 FORME L'INDICATEUR DE CONFIANCE DE LINFORMATION.
+DICO STAT 139</nc1dico:description>
+      <nc1dico:description xml:lang="en">INDICATION OF THE CREDIBILITY OF TACTICAL UNIT. LINDED TO INDICATOR OF RELIABILITY L135/14, IT FORMS THE CONFIDENCE INDICATOR UNIT. (STAT dictionary 139)</nc1dico:description>
+    </Description>
+    <AppInfo>
+      <nc1dico:source>SFTT 3.4.8</nc1dico:source>
+      <nc1dico:derogation>INDICATEUR DE CREDIBILITE / EXACTITUDE</nc1dico:derogation>
+    </AppInfo>
+  </Annotation>
+  <Identification>
+    <ShortName>L135_15Code</ShortName>
+    <Version>9.0.0</Version>
+    <CanonicalUri>urn:fra:nc1:common:sicsdicos:L135_15Code</CanonicalUri>
+    <CanonicalVersionUri>urn:fra:nc1:common:sicsdicos:L135_15Code:9.0.0</CanonicalVersionUri>
+  </Identification>
+  <ColumnSet DatatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes">
+    <Column Id="code" Use="required">
+      <ShortName>Code</ShortName>
+      <Data Type="int" />
+    </Column>
+    <Column Id="short" Use="required">
+      <ShortName>Short</ShortName>
+      <Data Type="string" />
+    </Column>
+    <Column Id="long" Use="optional">
+      <ShortName>Long</ShortName>
+      <Data Type="string" />
+    </Column>
+    <Column Id="short-en" Use="optional">
+      <ShortName>Short anglais</ShortName>
+      <Data Type="string" />
+    </Column>
+    <Column Id="long-en" Use="optional">
+      <ShortName>Long anglais</ShortName>
+      <Data Type="string" />
+    </Column>
+    <Column Id="parent" Use="optional">
+      <ShortName>Parent</ShortName>
+      <Data Type="int" />
+    </Column>
+    <Column Id="codeSymbole" Use="optional">
+      <ShortName>Code Symbole</ShortName>
+      <Data Type="string" />
+    </Column>
+    <Column Id="codeHierarchique" Use="optional">
+      <ShortName>Code Hierarchique</ShortName>
+      <Data Type="string" />
+    </Column>
+    <Key Id="codeKey">
+      <ShortName>CodeKey</ShortName>
+      <ColumnRef Ref="code" />
+    </Key>
+  </ColumnSet>
+  <SimpleCodeList>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>0</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>-</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>NO STATEMENT</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>-</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>NO STATEMENT</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>1</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>CONFIRME</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>CONFIRME</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>CFRM</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>CONFIRMED</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>2</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>PROBABLE</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>PROBABLE</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>PROBL</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>PROBABLE</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>3</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>POSSIBLE</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>POSSIBLE</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>POSBL</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>POSSIBLE</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>4</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>INCERTAIN</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>INCERTAIN</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>DBFUL</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>DOUBTFUL</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>5</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>IMPROBABLE</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>IMPROBABLE</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>IMPROBL</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>IMPROBABLE</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>6</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>NON VERIFIABLE</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>L'EXACTITUDE NE PEUT PAS ETRE EVALUEE</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>NOTJDGTRUTH</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>TRUTH CANNOT BE JUDGED</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>7</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>EXIST NO-CONFIRM</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>INEXISTENCE CONFIRMEE</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>NONEXICFRM</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>NON-EXISTENCE - CONFIRMED</SimpleValue>
+      </Value>
+    </Row>
+  </SimpleCodeList>
+</gc:CodeList>

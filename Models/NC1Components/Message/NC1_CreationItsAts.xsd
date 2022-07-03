@@ -1,0 +1,137 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema targetNamespace="urn:fra:nc1:message:creationitsats" xmlns:nc1ihm="urn:fra:nc1:IHM" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:nc1creationitsats="urn:fra:nc1:message:creationitsats" xmlns:nc1common="urn:fra:nc1:common:attribute" xmlns:nc1msgcom="urn:fra:nc1:common:message" xmlns:nc1acm="urn:fra:nc1:objet:acm">
+  <!-- NC1 V.9.0.0 -->
+  <xs:import namespace="urn:fra:nc1:common:attribute" schemaLocation="../Commun/Common.xsd" />
+  <xs:import namespace="urn:fra:nc1:common:message" schemaLocation="../Commun/Message.xsd" />
+  <xs:import namespace="urn:fra:nc1:objet:acm" schemaLocation="../Objet/NC1_AcmWez.xsd" />
+  <xs:element name="NC1_CreationItsAts">
+    <xs:annotation>
+      <xs:documentation>Le message NC1_CreationItsAts permet d’assurer la sauvegarde d’un intervenant 3D par la création d’un Itinéraire Temporaire de Sauvegarde (ITS) ou d’une Aire Temporaire de Sauvegarde (ATS), dans un volume existant et attribué à une autre activité, ou en absence de volume.</xs:documentation>
+      <xs:documentation xml:lang="en">The NC1_CreationItsAts message allows to assure the protection of a 3D participant by the creation of a Temporary Route of Protection (ITS) or a Temporary Area of Protection (ATS), in a volume existing and attributed to another activity, or in absence of volume.</xs:documentation>
+      <xs:appinfo>
+        <nc1:type xmlns:nc1="urn:fra:nc1">Message</nc1:type>
+        <nc1ihm:Nom>Création ITS et ATS</nc1ihm:Nom>
+        <nc1ihm:Nom xml:lang="en">ITS/ATS creation</nc1ihm:Nom>
+        <nc1:MessH xmlns:nc1="urn:fra:nc1">N/A</nc1:MessH>
+        <nc1:MessADatP3 xmlns:nc1="urn:fra:nc1">N/A</nc1:MessADatP3>
+        <nc1:LastNC1ModifyVersion xmlns:nc1="urn:fra:nc1">9.0.0</nc1:LastNC1ModifyVersion>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:complexContent>
+        <xs:extension base="nc1msgcom:BaseMessageType">
+          <xs:sequence>
+            <xs:element name="createdITSorATS">
+              <xs:annotation>
+                <xs:documentation>Itinéraire ou aire de sauvegarde créé(e).</xs:documentation>
+                <xs:documentation xml:lang="en">Created ITS or ATS.</xs:documentation>
+                <xs:appinfo>
+                  <nc1ihm:Nom>Itinéraire ou aire de sauvegarde</nc1ihm:Nom>
+                  <nc1ihm:Nom xml:lang="en">ITS or ATS</nc1ihm:Nom>
+                </xs:appinfo>
+              </xs:annotation>
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="createdITSorATS" type="nc1acm:AcmWezType">
+                    <xs:annotation>
+                      <xs:documentation>Itinéraire ou aire de sauvegarde créé(e).</xs:documentation>
+                      <xs:documentation xml:lang="en">Created ITS or ATS.</xs:documentation>
+                      <xs:appinfo>
+                        <nc1ihm:Nom>ITS ou ATS créé(e)</nc1ihm:Nom>
+                        <nc1ihm:Nom xml:lang="en">Created ITS/ATS</nc1ihm:Nom>
+                      </xs:appinfo>
+                    </xs:annotation>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="additionalInformation">
+              <xs:annotation>
+                <xs:documentation>Informations complémentaires.</xs:documentation>
+                <xs:documentation xml:lang="en">Additional information.</xs:documentation>
+                <xs:appinfo>
+                  <nc1ihm:Nom>Informations complémentaires</nc1ihm:Nom>
+                  <nc1ihm:Nom xml:lang="en">Additional information</nc1ihm:Nom>
+                </xs:appinfo>
+              </xs:annotation>
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="is3DAckRequested" type="xs:boolean">
+                    <xs:annotation>
+                      <xs:documentation>Demande d’aperçu 3D.</xs:documentation>
+                      <xs:documentation xml:lang="en">3D acknowledgement request.</xs:documentation>
+                      <xs:appinfo>
+                        <nc1ihm:Nom>Demande d’aperçu 3D</nc1ihm:Nom>
+                        <nc1ihm:Nom xml:lang="en">3D acknowledgement request</nc1ihm:Nom>
+                      </xs:appinfo>
+                    </xs:annotation>
+                  </xs:element>
+                  <xs:element minOccurs="0" name="purpose" type="nc1common:LongTextType">
+                    <xs:annotation>
+                      <xs:documentation>But de l’ITS ou ATS.</xs:documentation>
+                      <xs:documentation xml:lang="en">ITS/ATS purpose.</xs:documentation>
+                      <xs:appinfo>
+                        <nc1ihm:Nom>But</nc1ihm:Nom>
+                        <nc1ihm:Nom xml:lang="en">Aim</nc1ihm:Nom>
+                      </xs:appinfo>
+                    </xs:annotation>
+                  </xs:element>
+                  <xs:element minOccurs="0" name="optReference" type="nc1common:MediumTextType">
+                    <xs:annotation>
+                      <xs:documentation>Référence de l’Ordre Pour les Transmissions.</xs:documentation>
+                      <xs:documentation xml:lang="en">OPT reference.</xs:documentation>
+                      <xs:appinfo>
+                        <nc1ihm:Nom>Référence OPT</nc1ihm:Nom>
+                        <nc1ihm:Nom xml:lang="en">OPT reference</nc1ihm:Nom>
+                      </xs:appinfo>
+                    </xs:annotation>
+                  </xs:element>
+                  <xs:element name="callsign" type="nc1common:MediumTextType">
+                    <xs:annotation>
+                      <xs:documentation>Indicatif radio de l’autorité de contrôle.</xs:documentation>
+                      <xs:documentation xml:lang="en">Control authority callsign.</xs:documentation>
+                      <xs:appinfo>
+                        <nc1ihm:Nom>Indicatif radio</nc1ihm:Nom>
+                        <nc1ihm:Nom xml:lang="en">Callsign</nc1ihm:Nom>
+                      </xs:appinfo>
+                    </xs:annotation>
+                  </xs:element>
+                  <xs:element minOccurs="0" name="channelNumber" type="nc1common:Int0To99Type">
+                    <xs:annotation>
+                      <xs:documentation>Numéro de canal de l’autorité de contrôle.</xs:documentation>
+                      <xs:documentation xml:lang="en">Controlling authority channel number.</xs:documentation>
+                      <xs:appinfo>
+                        <nc1ihm:Nom>Numéro canal</nc1ihm:Nom>
+                        <nc1ihm:Nom xml:lang="en">Channel number</nc1ihm:Nom>
+                      </xs:appinfo>
+                    </xs:annotation>
+                  </xs:element>
+                  <xs:element minOccurs="0" name="comment" type="nc1common:MediumTextType">
+                    <xs:annotation>
+                      <xs:documentation>Commentaire à propos de l’autorité de contrôle.</xs:documentation>
+                      <xs:documentation xml:lang="en">Observations about controlling authority.</xs:documentation>
+                      <xs:appinfo>
+                        <nc1ihm:Nom>Commentaire</nc1ihm:Nom>
+                        <nc1ihm:Nom xml:lang="en">comment</nc1ihm:Nom>
+                      </xs:appinfo>
+                    </xs:annotation>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element minOccurs="0" name="comment" type="nc1msgcom:CommentSectionType">
+              <xs:annotation>
+                <xs:documentation>Commentaire en texte libre.</xs:documentation>
+                <xs:documentation xml:lang="en">free text comment.</xs:documentation>
+                <xs:appinfo>
+                  <nc1ihm:Nom>Commentaire</nc1ihm:Nom>
+                  <nc1ihm:Nom xml:lang="en">comment</nc1ihm:Nom>
+                </xs:appinfo>
+              </xs:annotation>
+            </xs:element>
+          </xs:sequence>
+        </xs:extension>
+      </xs:complexContent>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

@@ -1,0 +1,493 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema targetNamespace="urn:fra:nc1:objet:unit" xmlns:nc1ihm="urn:fra:nc1:IHM" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:nc1unit="urn:fra:nc1:objet:unit" xmlns:nc1common="urn:fra:nc1:common:attribute" xmlns:nc1com="urn:fra:nc1:common:communication" xmlns:nc1location="urn:fra:nc1:common:location" xmlns:nc1logistics="urn:fra:nc1:common:logistics" xmlns:nc1objcom="urn:fra:nc1:common:object" xmlns:nc1sicsdicos="urn:fra:nc1:common:sicsdicos">
+  <!-- NC1 V.9.0.0 -->
+  <xs:import namespace="urn:fra:nc1:common:attribute" schemaLocation="../Commun/Common.xsd" />
+  <xs:import namespace="urn:fra:nc1:common:communication" schemaLocation="../Commun/Communication.xsd" />
+  <xs:import namespace="urn:fra:nc1:common:location" schemaLocation="../Commun/Location.xsd" />
+  <xs:import namespace="urn:fra:nc1:common:logistics" schemaLocation="../Commun/Logistics.xsd" />
+  <xs:import namespace="urn:fra:nc1:common:object" schemaLocation="../Commun/Object.xsd" />
+  <xs:import namespace="urn:fra:nc1:common:sicsdicos" schemaLocation="../Commun/SICS_Dictionaries.xsd" />
+  <xs:element name="NC1_Unit" type="nc1unit:UnitType">
+    <xs:annotation>
+      <xs:documentation>L’objet NC1_Unit est une entité militaire identifiée, organisée, regroupée sous le commandement d'un même chef, dotée d’un état opérationnel, dotée de moyens en matériels et personnel, et localisée. Elle peut appartenir ou non à l'Ordre de Bataille ami. L’objet NC1_Unit peut être observé ou issu du renseignement.</xs:documentation>
+      <xs:documentation xml:lang="en">The NC1_Unit object is an identified military entity, organised under the command of a single head, with an operational status, allocated equipment and staff, and localized. The NC1_Unit object can be observed or provided by intelligence.</xs:documentation>
+      <xs:appinfo>
+        <nc1:type xmlns:nc1="urn:fra:nc1">Objet</nc1:type>
+        <nc1ihm:Nom>Unité</nc1ihm:Nom>
+        <nc1ihm:Nom xml:lang="en">Unit</nc1ihm:Nom>
+        <nc1:MessH xmlns:nc1="urn:fra:nc1">Message H4.6 Unit</nc1:MessH>
+        <nc1:MessADatP3 xmlns:nc1="urn:fra:nc1">Segment « UNIT Details » dans le message ORBATLAND, ORGID, EORGID, ORGANIZATION TYPE (1311)</nc1:MessADatP3>
+        <nc1:LastNC1ModifyVersion xmlns:nc1="urn:fra:nc1">9.0.0</nc1:LastNC1ModifyVersion>
+      </xs:appinfo>
+    </xs:annotation>
+  </xs:element>
+  <xs:simpleType name="IdOpsType">
+    <xs:annotation>
+      <xs:documentation>Indicatif opérationnel d’une unité.</xs:documentation>
+      <xs:documentation xml:lang="en">Operational callsign of a unit.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="nc1common:AlphaNumStringType">
+      <xs:maxLength value="4" />
+      <xs:minLength value="1" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="UnitFrSpecificCode">
+    <xs:annotation>
+      <xs:appinfo>
+        <nc1dico:source xmlns:nc1dico="urn:fra:nc1:dictionnaires">SFTT 3.4.8</nc1dico:source>
+        <nc1dico:derogation xmlns:nc1dico="urn:fra:nc1:dictionnaires">FAMILLE UNITE TACTIQUE APP 6B</nc1dico:derogation>
+        <nc1ihm:description>DECRIT LES FAMILLES "UNITE TACTIQUE" (GROUND, AIR, SEA ET SOF) AU SENS APP6 ET CLEF D'ENTREE DANS L'APP6.</nc1ihm:description>
+        <nc1ihm:description xml:lang="en">DESCRIBES THE "TACTICAL UNIT" FAMILIES (GROUND, AIR, SEA AND SOF) IN APP6 MEANING AND ENTRY KEY IN APP6.</nc1ihm:description>
+      </xs:appinfo>
+      <xs:documentation>DECRIT LES FAMILLES "UNITE TACTIQUE" (GROUND, AIR, SEA ET SOF) AU SENS APP6 ET CLEF D'ENTREE DANS L'APP6.</xs:documentation>
+      <xs:documentation xml:lang="en">DESCRIBES THE "TACTICAL UNIT" FAMILIES (GROUND, AIR, SEA AND SOF) IN APP6 MEANING AND ENTRY KEY IN APP6.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:integer" />
+  </xs:simpleType>
+  <xs:simpleType name="UnitSymbolCode">
+    <xs:annotation>
+      <xs:appinfo>
+        <nc1dico:source xmlns:nc1dico="urn:fra:nc1:dictionnaires">SFTT 3.4.8</nc1dico:source>
+        <nc1dico:derogation xmlns:nc1dico="urn:fra:nc1:dictionnaires">FAMILLE UNITE TACTIQUE APP 6B</nc1dico:derogation>
+        <nc1ihm:description>DECRIT LES FAMILLES "UNITE TACTIQUE" (GROUND, AIR, SEA ET SOF) AU SENS APP6 ET CLEF D'ENTREE DANS L'APP6.</nc1ihm:description>
+        <nc1ihm:description xml:lang="en">DESCRIBES THE "TACTICAL UNIT" FAMILIES (GROUND, AIR, SEA AND SOF) IN APP6 MEANING AND ENTRY KEY IN APP6.</nc1ihm:description>
+      </xs:appinfo>
+      <xs:documentation>DECRIT LES FAMILLES "UNITE TACTIQUE" (GROUND, AIR, SEA ET SOF) AU SENS APP6 ET CLEF D'ENTREE DANS L'APP6.</xs:documentation>
+      <xs:documentation xml:lang="en">DESCRIBES THE "TACTICAL UNIT" FAMILIES (GROUND, AIR, SEA AND SOF) IN APP6 MEANING AND ENTRY KEY IN APP6.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:integer" />
+  </xs:simpleType>
+  <xs:complexType name="UnitType">
+    <xs:annotation>
+      <xs:documentation>L’objet NC1_Unit est une entité militaire identifiée, organisée, regroupée sous le commandement d'un même chef, dotée d’un état opérationnel, dotée de moyens en matériels et personnel et localisée.</xs:documentation>
+      <xs:documentation xml:lang="en">The NC1_Unit object is an identified military entity, organised under the command of a single head, with an operational status, allocated equipment and staff, and localized.</xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="nc1objcom:AgentType">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="tacticalData">
+            <xs:annotation>
+              <xs:documentation>Données tactiques de l’unité.</xs:documentation>
+              <xs:documentation xml:lang="en">Unit tactical data.</xs:documentation>
+              <xs:appinfo>
+                <nc1ihm:Nom>Données tactiques</nc1ihm:Nom>
+                <nc1ihm:Nom xml:lang="en">tactical datas</nc1ihm:Nom>
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element minOccurs="0" name="name" type="nc1common:ShortTextObjectType">
+                  <xs:annotation>
+                    <xs:documentation>Nom de l’unité affichée sur la cartographie.</xs:documentation>
+                    <xs:documentation xml:lang="en">Unit displayed name.</xs:documentation>
+                    <xs:appinfo>
+                      <nc1ihm:Nom>Nom de baptême</nc1ihm:Nom>
+                      <nc1ihm:Nom xml:lang="en">Given name</nc1ihm:Nom>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:element>
+                <xs:element name="symbolCode" type="nc1common:SymbolCodeType">
+                  <xs:annotation>
+                    <xs:documentation>Code contenant les informations de symbologie, d'identité (AMI, ENI, etc.), de nationalité, d'état de planification.</xs:documentation>
+                    <xs:documentation xml:lang="en">Code specifying information about symbology, identity (Friend, enemy, …), nationality, planification status.</xs:documentation>
+                    <xs:appinfo>
+                      <nc1ihm:Nom>Code du symbole</nc1ihm:Nom>
+                      <nc1ihm:Nom xml:lang="en">Symbol code</nc1ihm:Nom>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:element>
+                <xs:element minOccurs="0" name="frSpecificSymbol" type="nc1unit:UnitFrSpecificCode">
+                  <xs:annotation>
+                    <xs:documentation>Indicateur de spécificité française pour le code symbole et sa représentation graphique</xs:documentation>
+                    <xs:documentation xml:lang="en">French specificity indicator for the symbol code and its graphic representation</xs:documentation>
+                    <xs:appinfo>
+                      <nc1ihm:Nom>Spécialisation Fr du code symbole</nc1ihm:Nom>
+                      <nc1ihm:Nom xml:lang="en">Fr specific symbol</nc1ihm:Nom>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:element>
+                <xs:element minOccurs="0" name="modifier" type="nc1common:ShortTextObjectType">
+                  <xs:annotation>
+                    <xs:documentation>Modifieur du code symbole, précisant une sous-spécialité de l’unité (ex : « MONTAGNE » pour une unité d’infanterie de montagne).</xs:documentation>
+                    <xs:documentation xml:lang="en">"If the facility is a medical facility: symbol code modifier (e.g. ""ROLE 1"")".</xs:documentation>
+                    <xs:appinfo>
+                      <nc1ihm:Nom>Modifieur</nc1ihm:Nom>
+                      <nc1ihm:Nom xml:lang="en">Modifier</nc1ihm:Nom>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:element>
+                <xs:element minOccurs="0" name="operationalStatusIndicator" type="nc1sicsdicos:L125_1Code">
+                  <xs:annotation>
+                    <xs:documentation>Indicateur d’état opérationnel.</xs:documentation>
+                    <xs:documentation xml:lang="en">Operational status indicator.</xs:documentation>
+                    <xs:appinfo>
+                      <nc1ihm:Nom>Indicateur opérationnel</nc1ihm:Nom>
+                      <nc1ihm:Nom xml:lang="en">Operational indicator</nc1ihm:Nom>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:element>
+                <xs:element minOccurs="0" name="activity" type="nc1sicsdicos:L115_1Code">
+                  <xs:annotation>
+                    <xs:documentation>Indicateur d’activité de l’unité.</xs:documentation>
+                    <xs:documentation xml:lang="en">Unit activity indicator.</xs:documentation>
+                    <xs:appinfo>
+                      <nc1ihm:Nom>Activité</nc1ihm:Nom>
+                      <nc1ihm:Nom xml:lang="en">Activity</nc1ihm:Nom>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:element>
+                <xs:element minOccurs="0" name="idOps" type="nc1unit:IdOpsType">
+                  <xs:annotation>
+                    <xs:documentation>Indicatif opérationnel de l'unité.</xs:documentation>
+                    <xs:documentation xml:lang="en">Operational callsign of the unit.</xs:documentation>
+                    <xs:appinfo>
+                      <nc1ihm:Nom>Indicatif opérationnel</nc1ihm:Nom>
+                      <nc1ihm:Nom xml:lang="en">Operational callsign</nc1ihm:Nom>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:element>
+                <xs:element minOccurs="0" name="eirn" type="nc1common:EirnType">
+                  <xs:annotation>
+                    <xs:documentation>Identifiant EIRN utilisé par la messagerie VMF.</xs:documentation>
+                    <xs:documentation xml:lang="en">EIRN identifier used by VMF messaging.</xs:documentation>
+                    <xs:appinfo>
+                      <nc1ihm:Nom>Identifiant EIRN</nc1ihm:Nom>
+                      <nc1ihm:Nom xml:lang="en">eirn id</nc1ihm:Nom>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:element>
+                <xs:element minOccurs="0" name="tnl16" type="nc1common:Tnl16Type">
+                  <xs:annotation>
+                    <xs:documentation>Track Number L16.</xs:documentation>
+                    <xs:documentation xml:lang="en">track number L16.</xs:documentation>
+                    <xs:appinfo>
+                      <nc1ihm:Nom>Identifiant TNL16</nc1ihm:Nom>
+                      <nc1ihm:Nom xml:lang="en">TNL16 id</nc1ihm:Nom>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:element>
+                <xs:element minOccurs="0" name="stnl16" type="nc1common:Stnl16Type">
+                  <xs:annotation>
+                    <xs:documentation>Source Track Number L16.</xs:documentation>
+                    <xs:documentation xml:lang="en">L16 Track Number.</xs:documentation>
+                    <xs:appinfo>
+                      <nc1ihm:Nom>Identifiant STN L16</nc1ihm:Nom>
+                      <nc1ihm:Nom xml:lang="en">L16 Track Number</nc1ihm:Nom>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:element>
+                <xs:element minOccurs="0" name="isDismounted" type="nc1sicsdicos:L135_30Code">
+                  <xs:annotation>
+                    <xs:documentation>Indique si l’unité est débarquée (=1) ou embarquée (=0).</xs:documentation>
+                    <xs:documentation xml:lang="en">Specify if the unit is dismounted (=1) or mounted (=0).</xs:documentation>
+                    <xs:appinfo>
+                      <nc1ihm:Nom>Débarquée</nc1ihm:Nom>
+                      <nc1ihm:Nom xml:lang="en">Disembarked</nc1ihm:Nom>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:element>
+                <xs:element minOccurs="0" name="commandAndControlRole" type="nc1sicsdicos:L110_30Code">
+                  <xs:annotation>
+                    <xs:documentation>Si l’unité est un poste de commandement, type de poste de commandement (ex : « TACTCP »).</xs:documentation>
+                    <xs:documentation xml:lang="en">"Command and control role when the unit is a command post (e.g. ""TACTCP"")".</xs:documentation>
+                    <xs:appinfo>
+                      <nc1ihm:Nom>Type de PC</nc1ihm:Nom>
+                      <nc1ihm:Nom xml:lang="en">Command and control role</nc1ihm:Nom>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:element>
+                <xs:element minOccurs="0" name="ticIndicator" type="nc1sicsdicos:L135_1Code">
+                  <xs:annotation>
+                    <xs:documentation>Indicateur d'alarme (TIC, Troops In Contact).</xs:documentation>
+                    <xs:documentation xml:lang="en">Alarm Indicator (ICT, Troops In Contact).</xs:documentation>
+                    <xs:appinfo>
+                      <nc1ihm:Nom>Indicateur d'alarme</nc1ihm:Nom>
+                      <nc1ihm:Nom xml:lang="en">Alarm Indicator</nc1ihm:Nom>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:element>
+                <xs:element minOccurs="0" name="availability" type="nc1sicsdicos:L125_7Code">
+                  <xs:annotation>
+                    <xs:documentation>Délai de disponibilité opérationnelle de l’Unité (ex : « WTN24H »).</xs:documentation>
+                    <xs:documentation xml:lang="en">"Required time for operational availability (e.g. ""WTN24H"")".</xs:documentation>
+                    <xs:appinfo>
+                      <nc1ihm:Nom>Disponibilité</nc1ihm:Nom>
+                      <nc1ihm:Nom xml:lang="en">Availability</nc1ihm:Nom>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:element>
+                <xs:element minOccurs="0" name="cbrnProtection" type="nc1sicsdicos:L107_1Code">
+                  <xs:annotation>
+                    <xs:documentation>Niveau de protection NRBC de l’unité.</xs:documentation>
+                    <xs:documentation xml:lang="en">Unit CBRN protection.</xs:documentation>
+                    <xs:appinfo>
+                      <nc1ihm:Nom>Protection NRBC</nc1ihm:Nom>
+                      <nc1ihm:Nom xml:lang="en">CBRN protection</nc1ihm:Nom>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:element>
+                <xs:element minOccurs="0" name="weaponControlOrder" type="nc1sicsdicos:L114_1Code">
+                  <xs:annotation>
+                    <xs:documentation>Consignes de tir en vigueur dans l’unité.</xs:documentation>
+                    <xs:documentation xml:lang="en">Unit weapon control order.</xs:documentation>
+                    <xs:appinfo>
+                      <nc1ihm:Nom>Consignes de tir</nc1ihm:Nom>
+                      <nc1ihm:Nom xml:lang="en">Weapon control order assigned to the airspace area</nc1ihm:Nom>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:element>
+                <xs:element minOccurs="0" name="subordination">
+                  <xs:annotation>
+                    <xs:documentation>Subordination.</xs:documentation>
+                    <xs:documentation xml:lang="en">Subordination.</xs:documentation>
+                    <xs:appinfo>
+                      <nc1ihm:Nom>Subordination</nc1ihm:Nom>
+                      <nc1ihm:Nom xml:lang="en">Subordination</nc1ihm:Nom>
+                    </xs:appinfo>
+                  </xs:annotation>
+                  <xs:complexType>
+                    <xs:sequence>
+                      <xs:element minOccurs="0" name="superiorUnitId" type="nc1common:Nc1ObjectRefType">
+                        <xs:annotation>
+                          <xs:documentation>Identifiant unique NC1 du supérieur hiérarchique conjoncturel de l’unité.</xs:documentation>
+                          <xs:documentation xml:lang="en">NC1 ID of the current immediate superior of the unit.</xs:documentation>
+                          <xs:appinfo>
+                            <nc1ihm:Nom>Unité supérieure</nc1ihm:Nom>
+                            <nc1ihm:Nom xml:lang="en">Superior unit</nc1ihm:Nom>
+                          </xs:appinfo>
+                        </xs:annotation>
+                      </xs:element>
+                      <xs:element minOccurs="0" name="subordinationType" type="nc1sicsdicos:L135_16Code">
+                        <xs:annotation>
+                          <xs:documentation>Type de subordination de l’unité à son supérieur hiérarchique conjoncturel.</xs:documentation>
+                          <xs:documentation xml:lang="en">Type of subordination of the unit to its current immediate superior.</xs:documentation>
+                          <xs:appinfo>
+                            <nc1ihm:Nom>Type de subordination</nc1ihm:Nom>
+                            <nc1ihm:Nom xml:lang="en">Subordination type</nc1ihm:Nom>
+                          </xs:appinfo>
+                        </xs:annotation>
+                      </xs:element>
+                      <xs:element minOccurs="0" name="detachmentPeriod" type="nc1common:PeriodType">
+                        <xs:annotation>
+                          <xs:documentation>Période de validité du détachement, si l’unité est détachée.</xs:documentation>
+                          <xs:documentation xml:lang="en">Validity period of the detachment, if the unit is detached.</xs:documentation>
+                          <xs:appinfo>
+                            <nc1ihm:Nom>Période de détachement</nc1ihm:Nom>
+                            <nc1ihm:Nom xml:lang="en">Detachment period</nc1ihm:Nom>
+                          </xs:appinfo>
+                        </xs:annotation>
+                      </xs:element>
+                    </xs:sequence>
+                  </xs:complexType>
+                </xs:element>
+                <xs:element minOccurs="0" name="url" type="nc1common:MediumTextObjectType">
+                  <xs:annotation>
+                    <xs:documentation>Lien vers un fichier associé à l’objet.</xs:documentation>
+                    <xs:documentation xml:lang="en">Link to a file associated with the object.</xs:documentation>
+                    <xs:appinfo>
+                      <nc1ihm:Nom>Url</nc1ihm:Nom>
+                      <nc1ihm:Nom xml:lang="en">url</nc1ihm:Nom>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:element>
+                <xs:element minOccurs="0" name="comment" type="nc1common:LongTextObjectType">
+                  <xs:annotation>
+                    <xs:documentation>Commentaire en texte libre.</xs:documentation>
+                    <xs:documentation xml:lang="en">free text comment.</xs:documentation>
+                    <xs:appinfo>
+                      <nc1ihm:Nom>Commentaire</nc1ihm:Nom>
+                      <nc1ihm:Nom xml:lang="en">comment</nc1ihm:Nom>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:element>
+                <xs:element minOccurs="0" name="extVersion" type="nc1common:ExtVersType">
+                  <xs:annotation>
+                    <xs:documentation>Extension pour versions suivantes compatibles.</xs:documentation>
+                    <xs:documentation xml:lang="en">Extension for following compatible versions.</xs:documentation>
+                    <xs:appinfo>
+                      <nc1ihm:Nom>Extension de version</nc1ihm:Nom>
+                      <nc1ihm:Nom xml:lang="en">version extension</nc1ihm:Nom>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:element>
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+          <xs:element minOccurs="0" name="comData" type="nc1com:ComDataType">
+            <xs:annotation>
+              <xs:documentation>Données de communication de l’unité.</xs:documentation>
+              <xs:documentation xml:lang="en">Communication data of the unit.</xs:documentation>
+              <xs:appinfo>
+                <nc1ihm:Nom>Données de communication</nc1ihm:Nom>
+                <nc1ihm:Nom xml:lang="en">Communication data</nc1ihm:Nom>
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:element>
+          <xs:element minOccurs="0" name="status" type="nc1logistics:StatusType">
+            <xs:annotation>
+              <xs:documentation>Etat opérationnel et logistique de l’unité.</xs:documentation>
+              <xs:documentation xml:lang="en">Operational and logistic status of the unit.</xs:documentation>
+              <xs:appinfo>
+                <nc1ihm:Nom>Etat</nc1ihm:Nom>
+                <nc1ihm:Nom xml:lang="en">Status</nc1ihm:Nom>
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:element>
+          <xs:element minOccurs="0" name="location">
+            <xs:annotation>
+              <xs:documentation>Localisation.</xs:documentation>
+              <xs:documentation xml:lang="en">Location.</xs:documentation>
+              <xs:appinfo>
+                <nc1ihm:Nom>Localisation constatée ou courante</nc1ihm:Nom>
+                <nc1ihm:Nom xml:lang="en">Location</nc1ihm:Nom>
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element minOccurs="0" name="name" type="nc1common:Text1To30ObjectType">
+                  <xs:annotation>
+                    <xs:documentation>Nom de baptême donné par l'opérateur à la localisation. Par exemple un nom de ville ou de lieu.</xs:documentation>
+                    <xs:documentation xml:lang="en">Name assigned to the location, e.g. city or place name.</xs:documentation>
+                    <xs:appinfo>
+                      <nc1ihm:Nom>Nom</nc1ihm:Nom>
+                      <nc1ihm:Nom xml:lang="en">name</nc1ihm:Nom>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:element>
+                <xs:element name="point" type="nc1location:PointType">
+                  <xs:annotation>
+                    <xs:documentation>Point localisé.</xs:documentation>
+                    <xs:documentation xml:lang="en">Geolocalized point.</xs:documentation>
+                    <xs:appinfo>
+                      <nc1ihm:Nom>Point</nc1ihm:Nom>
+                      <nc1ihm:Nom xml:lang="en">Point</nc1ihm:Nom>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:element>
+                <xs:element minOccurs="0" name="speed" type="nc1common:SpeedType">
+                  <xs:annotation>
+                    <xs:documentation>Vitesse au sol de la localisation.</xs:documentation>
+                    <xs:documentation xml:lang="en">Location ground speed.</xs:documentation>
+                    <xs:appinfo>
+                      <nc1ihm:Nom>Vitesse</nc1ihm:Nom>
+                      <nc1ihm:Nom xml:lang="en">Speed</nc1ihm:Nom>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:element>
+                <xs:element minOccurs="0" name="course" type="nc1common:AngleType">
+                  <xs:annotation>
+                    <xs:documentation>Direction du vecteur vitesse.</xs:documentation>
+                    <xs:documentation xml:lang="en">Rotation angle of the speed vector from the geographical North.</xs:documentation>
+                    <xs:appinfo>
+                      <nc1ihm:Nom>Direction</nc1ihm:Nom>
+                      <nc1ihm:Nom xml:lang="en">Direction</nc1ihm:Nom>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:element>
+                <xs:element minOccurs="0" name="datetime" type="xs:dateTime">
+                  <xs:annotation>
+                    <xs:documentation>Horodatage du relevé de position sur le terrain. Par défaut, l'heure de saisie dans le système.</xs:documentation>
+                    <xs:documentation xml:lang="en">Field position report time. By default, time of the input in the system.</xs:documentation>
+                    <xs:appinfo>
+                      <nc1ihm:Nom>Horodatage</nc1ihm:Nom>
+                      <nc1ihm:Nom xml:lang="en">Timestamp</nc1ihm:Nom>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:element>
+                <xs:element maxOccurs="unbounded" minOccurs="0" name="validityPeriod" type="nc1common:PeriodType">
+                  <xs:annotation>
+                    <xs:documentation>Période de validité.</xs:documentation>
+                    <xs:documentation xml:lang="en">Validity period.</xs:documentation>
+                    <xs:appinfo>
+                      <nc1ihm:Nom>Période de validité</nc1ihm:Nom>
+                      <nc1ihm:Nom xml:lang="en">Validity period</nc1ihm:Nom>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:element>
+                <xs:element minOccurs="0" name="quality" type="nc1sicsdicos:L117_5Code">
+                  <xs:annotation>
+                    <xs:documentation>Qualité de la mesure de la localisation.</xs:documentation>
+                    <xs:documentation xml:lang="en">Location measurement quality.</xs:documentation>
+                    <xs:appinfo>
+                      <nc1ihm:Nom>Qualité</nc1ihm:Nom>
+                      <nc1ihm:Nom xml:lang="en">Quality</nc1ihm:Nom>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:element>
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+          <xs:element maxOccurs="unbounded" minOccurs="0" name="anticipatedStance">
+            <xs:annotation>
+              <xs:documentation>Position prévue ou anticipée.</xs:documentation>
+              <xs:documentation xml:lang="en">Anticipated or foreseen Location.</xs:documentation>
+              <xs:appinfo>
+                <nc1ihm:Nom>Position prévisionnelle</nc1ihm:Nom>
+                <nc1ihm:Nom xml:lang="en">Anticipated Location</nc1ihm:Nom>
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="validityPeriod" type="nc1common:MultiposturePeriodType">
+                  <xs:annotation>
+                    <xs:documentation>Période de validité.</xs:documentation>
+                    <xs:appinfo>
+                      <nc1ihm:Nom>Période de validité</nc1ihm:Nom>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:element>
+                <xs:element minOccurs="0" name="locationStance">
+                  <xs:annotation>
+                    <xs:documentation>Localisation de la position.</xs:documentation>
+                    <xs:documentation xml:lang="en">Location stance.</xs:documentation>
+                    <xs:appinfo>
+                      <nc1ihm:Nom>Localisation de la position</nc1ihm:Nom>
+                      <nc1ihm:Nom xml:lang="en">Location stance</nc1ihm:Nom>
+                    </xs:appinfo>
+                  </xs:annotation>
+                  <xs:complexType>
+                    <xs:sequence>
+                      <xs:element minOccurs="0" name="name" type="nc1common:Text1To30ObjectType">
+                        <xs:annotation>
+                          <xs:documentation>Nom de baptême donné par l'opérateur à la localisation. Par exemple un nom de ville ou de lieu.</xs:documentation>
+                          <xs:appinfo>
+                            <nc1ihm:Nom>Nom</nc1ihm:Nom>
+                            <nc1ihm:Nom xml:lang="en">name</nc1ihm:Nom>
+                          </xs:appinfo>
+                        </xs:annotation>
+                      </xs:element>
+                      <xs:element name="point" type="nc1location:PointType">
+                        <xs:annotation>
+                          <xs:documentation>Point localisé.</xs:documentation>
+                          <xs:appinfo>
+                            <nc1ihm:Nom>Point</nc1ihm:Nom>
+                          </xs:appinfo>
+                        </xs:annotation>
+                      </xs:element>
+                      <xs:element minOccurs="0" name="speed" type="nc1common:SpeedType">
+                        <xs:annotation>
+                          <xs:documentation>Vitesse au sol de la localisation.</xs:documentation>
+                          <xs:appinfo>
+                            <nc1ihm:Nom>Vitesse</nc1ihm:Nom>
+                          </xs:appinfo>
+                        </xs:annotation>
+                      </xs:element>
+                      <xs:element minOccurs="0" name="course" type="nc1common:AngleType">
+                        <xs:annotation>
+                          <xs:documentation>Direction du vecteur vitesse.</xs:documentation>
+                          <xs:appinfo>
+                            <nc1ihm:Nom>Direction</nc1ihm:Nom>
+                          </xs:appinfo>
+                        </xs:annotation>
+                      </xs:element>
+                    </xs:sequence>
+                  </xs:complexType>
+                </xs:element>
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+</xs:schema>

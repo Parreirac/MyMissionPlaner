@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<cva:ContextValueAssociation xmlns:cva="http://docs.oasis-open.org/codelist/ns/ContextValueAssociation/1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="urn:fra:nc1:objet:cbrnevent" queryBinding="xslt2" xmlns:nc1cbrnevent="urn:fra:nc1:objet:cbrnevent">
+  <!-- NC1 V.9.0.0 -->
+  <ValueLists>
+    <ValueList xml:id="nc1objcom-ActivationStatusCode" uri="../Dictionnaires/ActivationStatusCode.gc" />
+    <ValueList xml:id="nc1objcom-IsFullCode" uri="../Dictionnaires/IsFullCode.gc" />
+    <ValueList xml:id="nc1cbrn-IncidentTypeCode" uri="../Dictionnaires/IncidentTypeCode.gc" />
+    <ValueList xml:id="nc1cbrn-LocationQualifierCode" uri="../Dictionnaires/LocationQualifierCode.gc" />
+    <ValueList xml:id="nc1cbrn-IncidentQualificationCode" uri="../Dictionnaires/IncidentQualificationCode.gc" />
+    <ValueList xml:id="nc1cbrn-DeliverySystemTypeCode" uri="../Dictionnaires/DeliverySystemTypeCode.gc" />
+    <ValueList xml:id="nc1cbrn-ContainerTypeCode" uri="../Dictionnaires/ContainerTypeCode.gc" />
+    <ValueList xml:id="nc1cbrn-SizeOfReleaseCode" uri="../Dictionnaires/SizeOfReleaseCode.gc" />
+    <ValueList xml:id="nc1cbrn-ReleaseTypeCode" uri="../Dictionnaires/ReleaseTypeCode.gc" />
+    <ValueList xml:id="nc1cbrn-SubstanceTypeCode" uri="../Dictionnaires/SubstanceTypeCode.gc" />
+    <ValueList xml:id="nc1cbrn-SubstanceNameCode" uri="../Dictionnaires/SubstanceNameCode.gc" />
+    <ValueList xml:id="nc1cbrn-PersistencyTypeCode" uri="../Dictionnaires/PersistencyTypeCode.gc" />
+    <ValueList xml:id="nc1cbrn-DetectionTypeCode" uri="../Dictionnaires/DetectionTypeCode.gc" />
+    <ValueList xml:id="nc1cbrn-DetectionConfidenceLevelCode" uri="../Dictionnaires/DetectionConfidenceLevelCode.gc" />
+    <ValueList xml:id="nc1cbrn-IncidentDescriptionCode" uri="../Dictionnaires/IncidentDescriptionCode.gc" />
+    <ValueList xml:id="nc1cbrn-IncidentStatusCode" uri="../Dictionnaires/IncidentStatusCode.gc" />
+    <ValueList xml:id="nc1cbrn-TerrainTopographyDescriptionCode" uri="../Dictionnaires/TerrainTopographyDescriptionCode.gc" />
+    <ValueList xml:id="nc1cbrn-VegetationDescriptionCode" uri="../Dictionnaires/VegetationDescriptionCode.gc" />
+    <ValueList xml:id="nc1cbrn-AirStabilityCategoryCode" uri="../Dictionnaires/AirStabilityCategoryCode.gc" />
+    <ValueList xml:id="nc1cbrn-RelativeHumidityRangeCode" uri="../Dictionnaires/RelativeHumidityRangeCode.gc" />
+    <ValueList xml:id="nc1cbrn-SignificantWeatherPhenomenaCode" uri="../Dictionnaires/SignificantWeatherPhenomenaCode.gc" />
+    <ValueList xml:id="nc1cbrn-CloudCoverageCode" uri="../Dictionnaires/CloudCoverageCode.gc" />
+  </ValueLists>
+  <Contexts>
+    <Context address="/nc1cbrnevent:NC1_CbrnEvent/@activationStatus" values="nc1objcom-ActivationStatusCode" />
+    <Context address="/nc1cbrnevent:NC1_CbrnEvent/@isFull" values="nc1objcom-IsFullCode" />
+    <Context address="/nc1cbrnevent:NC1_CbrnEvent/alfa/incidentType" values="nc1cbrn-IncidentTypeCode" />
+    <Context address="/nc1cbrnevent:NC1_CbrnEvent/foxtrot/incidentLocation/locationQualifier" values="nc1cbrn-LocationQualifierCode" />
+    <Context address="/nc1cbrnevent:NC1_CbrnEvent/golf/incidentQualification" values="nc1cbrn-IncidentQualificationCode" />
+    <Context address="/nc1cbrnevent:NC1_CbrnEvent/golf/deliverySystem" values="nc1cbrn-DeliverySystemTypeCode" />
+    <Context address="/nc1cbrnevent:NC1_CbrnEvent/golf/substanceContainerType" values="nc1cbrn-ContainerTypeCode" />
+    <Context address="/nc1cbrnevent:NC1_CbrnEvent/golf/sizeOfRelease" values="nc1cbrn-SizeOfReleaseCode" />
+    <Context address="/nc1cbrnevent:NC1_CbrnEvent/india/releaseType" values="nc1cbrn-ReleaseTypeCode" />
+    <Context address="/nc1cbrnevent:NC1_CbrnEvent/india/substanceType" values="nc1cbrn-SubstanceTypeCode" />
+    <Context address="/nc1cbrnevent:NC1_CbrnEvent/india/substanceName" values="nc1cbrn-SubstanceNameCode" />
+    <Context address="/nc1cbrnevent:NC1_CbrnEvent/india/persistencyType" values="nc1cbrn-PersistencyTypeCode" />
+    <Context address="/nc1cbrnevent:NC1_CbrnEvent/india/detectionType" values="nc1cbrn-DetectionTypeCode" />
+    <Context address="/nc1cbrnevent:NC1_CbrnEvent/india/confidenceLevel" values="nc1cbrn-DetectionConfidenceLevelCode" />
+    <Context address="/nc1cbrnevent:NC1_CbrnEvent/miker/incidentDescription" values="nc1cbrn-IncidentDescriptionCode" />
+    <Context address="/nc1cbrnevent:NC1_CbrnEvent/miker/incidentStatus" values="nc1cbrn-IncidentStatusCode" />
+    <Context address="/nc1cbrnevent:NC1_CbrnEvent/tango/terrainTopographyDescription" values="nc1cbrn-TerrainTopographyDescriptionCode" />
+    <Context address="/nc1cbrnevent:NC1_CbrnEvent/tango/vegetationDescription" values="nc1cbrn-VegetationDescriptionCode" />
+    <Context address="/nc1cbrnevent:NC1_CbrnEvent/zulu/airStabilityCategory" values="nc1cbrn-AirStabilityCategoryCode" />
+    <Context address="/nc1cbrnevent:NC1_CbrnEvent/zulu/relativeHumidity" values="nc1cbrn-RelativeHumidityRangeCode" />
+    <Context address="/nc1cbrnevent:NC1_CbrnEvent/zulu/significantWeatherPhenomena" values="nc1cbrn-SignificantWeatherPhenomenaCode" />
+    <Context address="/nc1cbrnevent:NC1_CbrnEvent/zulu/cloudCoverage" values="nc1cbrn-CloudCoverageCode" />
+  </Contexts>
+</cva:ContextValueAssociation>

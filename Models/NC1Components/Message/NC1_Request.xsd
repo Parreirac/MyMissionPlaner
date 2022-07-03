@@ -1,0 +1,134 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema targetNamespace="urn:fra:nc1:message:request" xmlns:nc1ihm="urn:fra:nc1:IHM" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:nc1request="urn:fra:nc1:message:request" xmlns:nc1common="urn:fra:nc1:common:attribute" xmlns:nc1msgcom="urn:fra:nc1:common:message">
+  <!-- NC1 V.9.0.0 -->
+  <xs:import namespace="urn:fra:nc1:common:attribute" schemaLocation="../Commun/Common.xsd" />
+  <xs:import namespace="urn:fra:nc1:common:message" schemaLocation="../Commun/Message.xsd" />
+  <xs:element name="NC1_Request">
+    <xs:annotation>
+      <xs:documentation>Le message NC1_Request est utilisé pour traiter des demandes dont la réponse peut être déclenchée de manière automatique et traiter toutes les demandes.</xs:documentation>
+      <xs:documentation xml:lang="en">The NC1_Request message is used to handle requests whose response can be automatically triggered and process all requests.</xs:documentation>
+      <xs:appinfo>
+        <nc1:type xmlns:nc1="urn:fra:nc1">Message</nc1:type>
+        <nc1ihm:Nom>Demande</nc1ihm:Nom>
+        <nc1ihm:Nom xml:lang="en">Request</nc1ihm:Nom>
+        <nc1:MessH xmlns:nc1="urn:fra:nc1">N/A</nc1:MessH>
+        <nc1:MessADatP3 xmlns:nc1="urn:fra:nc1">N/A</nc1:MessADatP3>
+        <nc1:LastNC1ModifyVersion xmlns:nc1="urn:fra:nc1">9.0.0</nc1:LastNC1ModifyVersion>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:complexContent>
+        <xs:extension base="nc1msgcom:BaseMessageType">
+          <xs:sequence>
+            <xs:element name="request">
+              <xs:annotation>
+                <xs:documentation>Demande.</xs:documentation>
+                <xs:documentation xml:lang="en">Request.</xs:documentation>
+                <xs:appinfo>
+                  <nc1ihm:Nom>Demande</nc1ihm:Nom>
+                  <nc1ihm:Nom xml:lang="en">Request</nc1ihm:Nom>
+                </xs:appinfo>
+              </xs:annotation>
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:choice>
+                    <xs:element name="messageType" type="nc1common:Nc1MessageTypeCode">
+                      <xs:annotation>
+                        <xs:documentation>Type de message demandé.</xs:documentation>
+                        <xs:documentation xml:lang="en">Requested message type.</xs:documentation>
+                        <xs:appinfo>
+                          <nc1ihm:Nom>Type de message demandé</nc1ihm:Nom>
+                          <nc1ihm:Nom xml:lang="en">Requested message type</nc1ihm:Nom>
+                        </xs:appinfo>
+                      </xs:annotation>
+                    </xs:element>
+                    <xs:element name="messageId" type="nc1msgcom:Nc1MessageIdType">
+                      <xs:annotation>
+                        <xs:documentation>Identifiant unique NC1 du message demandé.</xs:documentation>
+                        <xs:documentation xml:lang="en">NC1 ID of the requested message.</xs:documentation>
+                        <xs:appinfo>
+                          <nc1ihm:Nom>Message demandé</nc1ihm:Nom>
+                          <nc1ihm:Nom xml:lang="en">Requested message</nc1ihm:Nom>
+                        </xs:appinfo>
+                      </xs:annotation>
+                    </xs:element>
+                    <xs:element name="objectId" type="nc1common:Nc1ObjectRefType">
+                      <xs:annotation>
+                        <xs:documentation>Identifiant unique NC1 de l'objet demandé.</xs:documentation>
+                        <xs:documentation xml:lang="en">NC1 ID of the requested object.</xs:documentation>
+                        <xs:appinfo>
+                          <nc1ihm:Nom>Objet demandé</nc1ihm:Nom>
+                          <nc1ihm:Nom xml:lang="en">Request object</nc1ihm:Nom>
+                        </xs:appinfo>
+                      </xs:annotation>
+                    </xs:element>
+                    <xs:element name="information" type="nc1common:LongTextType">
+                      <xs:annotation>
+                        <xs:documentation>Informations demandées.</xs:documentation>
+                        <xs:documentation xml:lang="en">Requested information.</xs:documentation>
+                        <xs:appinfo>
+                          <nc1ihm:Nom>Informations</nc1ihm:Nom>
+                          <nc1ihm:Nom xml:lang="en">Information</nc1ihm:Nom>
+                        </xs:appinfo>
+                      </xs:annotation>
+                    </xs:element>
+                  </xs:choice>
+                  <xs:element minOccurs="0" name="additionalInformation" type="nc1common:MediumTextType">
+                    <xs:annotation>
+                      <xs:documentation>Précisions en texte libre sur la demande.</xs:documentation>
+                      <xs:documentation xml:lang="en">Free text additional information about the request.</xs:documentation>
+                      <xs:appinfo>
+                        <nc1ihm:Nom>Précisions sur la demande</nc1ihm:Nom>
+                        <nc1ihm:Nom xml:lang="en">Request additional information</nc1ihm:Nom>
+                      </xs:appinfo>
+                    </xs:annotation>
+                  </xs:element>
+                  <xs:element minOccurs="0" name="recipientCategory" type="nc1common:ShortTextType">
+                    <xs:annotation>
+                      <xs:documentation>Cellule fonctionnelle du PC à qui s’adresse la demande (ex « S2 »).</xs:documentation>
+                      <xs:documentation xml:lang="en">"Recipient (functional cell) of the request (e.g. ""S2"")".</xs:documentation>
+                      <xs:appinfo>
+                        <nc1ihm:Nom>Cellule fonctionnelle</nc1ihm:Nom>
+                        <nc1ihm:Nom xml:lang="en">Functional cell</nc1ihm:Nom>
+                      </xs:appinfo>
+                    </xs:annotation>
+                  </xs:element>
+                  <xs:element minOccurs="0" name="responseRequestedDatetime" type="nc1common:QualifiedDatetimeType">
+                    <xs:annotation>
+                      <xs:documentation>Horodatage demandé pour la réponse.</xs:documentation>
+                      <xs:documentation xml:lang="en">Requested time for the response.</xs:documentation>
+                      <xs:appinfo>
+                        <nc1ihm:Nom>Horodatage</nc1ihm:Nom>
+                        <nc1ihm:Nom xml:lang="en">Timestamp</nc1ihm:Nom>
+                      </xs:appinfo>
+                    </xs:annotation>
+                  </xs:element>
+                  <xs:element minOccurs="0" name="onTimeRequestCycleDuration" type="nc1common:Duration10YearsType">
+                    <xs:annotation>
+                      <xs:documentation>Si la demande exige une réponse à temps, durée du cycle.</xs:documentation>
+                      <xs:documentation xml:lang="en">Cycle duration when a cyclic response is required.</xs:documentation>
+                      <xs:appinfo>
+                        <nc1ihm:Nom>Durée du cycle</nc1ihm:Nom>
+                        <nc1ihm:Nom xml:lang="en">Cycle duration</nc1ihm:Nom>
+                      </xs:appinfo>
+                    </xs:annotation>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element minOccurs="0" name="comment" type="nc1msgcom:CommentSectionType">
+              <xs:annotation>
+                <xs:documentation>Commentaire en texte libre.</xs:documentation>
+                <xs:documentation xml:lang="en">free text comment.</xs:documentation>
+                <xs:appinfo>
+                  <nc1ihm:Nom>Commentaire</nc1ihm:Nom>
+                  <nc1ihm:Nom xml:lang="en">comment</nc1ihm:Nom>
+                </xs:appinfo>
+              </xs:annotation>
+            </xs:element>
+          </xs:sequence>
+        </xs:extension>
+      </xs:complexContent>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

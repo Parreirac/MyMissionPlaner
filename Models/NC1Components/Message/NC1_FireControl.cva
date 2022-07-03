@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<cva:ContextValueAssociation xmlns:cva="http://docs.oasis-open.org/codelist/ns/ContextValueAssociation/1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="urn:fra:nc1:message:firecontrol" queryBinding="xslt2" xmlns:nc1firecontrol="urn:fra:nc1:message:firecontrol">
+  <!-- NC1 V.9.0.0 -->
+  <ValueLists>
+    <ValueList xml:id="nc1msgcom-ClassificationCode" uri="../Dictionnaires/ClassificationCode.gc" />
+    <ValueList xml:id="nc1msgcom-UrgencyLevelCode" uri="../Dictionnaires/UrgencyLevelCode.gc" />
+    <ValueList xml:id="nc1objcom-ActivationStatusCode" uri="../Dictionnaires/ActivationStatusCode.gc" />
+    <ValueList xml:id="nc1objcom-IsFullCode" uri="../Dictionnaires/IsFullCode.gc" />
+    <ValueList xml:id="nc1sicsdicos-L114_36Code" uri="../Dictionnaires/L114_36Code.gc" />
+    <ValueList xml:id="nc1sicsdicos-L114_33Code" uri="../Dictionnaires/L114_33Code.gc" />
+    <ValueList xml:id="nc1sicsdicos-L135_47Code" uri="../Dictionnaires/L135_47Code.gc" />
+    <ValueList xml:id="nc1sicsdicos-L114_32Code" uri="../Dictionnaires/L114_32Code.gc" />
+    <ValueList xml:id="nc1sicsdicos-L114_22Code" uri="../Dictionnaires/L114_22Code.gc" />
+    <ValueList xml:id="nc1sicsdicos-L114_20Code" uri="../Dictionnaires/L114_20Code.gc" />
+    <ValueList xml:id="nc1sicsdicos-L114_23Code" uri="../Dictionnaires/L114_23Code.gc" />
+    <ValueList xml:id="nc1sicsdicos-L114_38Code" uri="../Dictionnaires/L114_38Code.gc" />
+    <ValueList xml:id="nc1sicsdicos-L114_39Code" uri="../Dictionnaires/L114_39Code.gc" />
+    <ValueList xml:id="nc1fire-SurfaceLRUCode" uri="../Dictionnaires/SurfaceLRUCode.gc" />
+    <ValueList xml:id="nc1sicsdicos-L114_30Code" uri="../Dictionnaires/L114_30Code.gc" />
+  </ValueLists>
+  <Contexts>
+    <Context address="/nc1firecontrol:NC1_FireControl/@classification" values="nc1msgcom-ClassificationCode" />
+    <Context address="/nc1firecontrol:NC1_FireControl/@urgencyLevel" values="nc1msgcom-UrgencyLevelCode" />
+    <Context address="/nc1firecontrol:NC1_FireControl/fireMissionCommand/fire/@activationStatus" values="nc1objcom-ActivationStatusCode" />
+    <Context address="/nc1firecontrol:NC1_FireControl/fireMissionCommand/fire/@isFull" values="nc1objcom-IsFullCode" />
+    <Context address="/nc1firecontrol:NC1_FireControl/fireMissionCommand/fire/tacticalData/status" values="nc1sicsdicos-L114_36Code" />
+    <Context address="/nc1firecontrol:NC1_FireControl/fireMissionCommand/fire/callForFireData/trajectory" values="nc1sicsdicos-L114_33Code" />
+    <Context address="/nc1firecontrol:NC1_FireControl/fireMissionCommand/fire/callForFireData/endOfFire" values="nc1sicsdicos-L135_47Code" />
+    <Context address="/nc1firecontrol:NC1_FireControl/fireMissionCommand/fire/callForFireData/adjustmentFire/controlMethod" values="nc1sicsdicos-L114_32Code" />
+    <Context address="/nc1firecontrol:NC1_FireControl/fireMissionCommand/fire/callForFireData/fireForEffect/controlMethod" values="nc1sicsdicos-L114_32Code" />
+    <Context address="/nc1firecontrol:NC1_FireControl/fireMissionCommand/fire/callForFireData/tacticalEffect/requiredEffect" values="nc1sicsdicos-L114_22Code" />
+    <Context address="/nc1firecontrol:NC1_FireControl/fireMissionCommand/fire/callForFireData/tacticalEffect/targetData/targetType" values="nc1sicsdicos-L114_20Code" />
+    <Context address="/nc1firecontrol:NC1_FireControl/fireMissionCommand/fire/callForFireData/tacticalEffect/targetData/attitude" values="nc1sicsdicos-L114_23Code" />
+    <Context address="/nc1firecontrol:NC1_FireControl/fireMissionCommand/fire/callForFireData/ammunitionEffect/requestedAmmunition/type" values="nc1sicsdicos-L114_38Code" />
+    <Context address="/nc1firecontrol:NC1_FireControl/fireMissionCommand/fire/callForFireData/ammunitionEffect/requestedAmmunition/triggerMode" values="nc1sicsdicos-L114_39Code" />
+    <Context address="/nc1firecontrol:NC1_FireControl/fireMissionCommand/fire/callForFireData/ammunitionEffect/surfaceLRU" values="nc1fire-SurfaceLRUCode" />
+    <Context address="/nc1firecontrol:NC1_FireControl/fireMissionCommand/missionCommandType" values="nc1sicsdicos-L114_30Code" />
+  </Contexts>
+</cva:ContextValueAssociation>

@@ -1,0 +1,696 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema targetNamespace="urn:fra:nc1:objet:facility" xmlns:nc1ihm="urn:fra:nc1:IHM" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:nc1facility="urn:fra:nc1:objet:facility" xmlns:nc1common="urn:fra:nc1:common:attribute" xmlns:nc1com="urn:fra:nc1:common:communication" xmlns:nc1location="urn:fra:nc1:common:location" xmlns:nc1objcom="urn:fra:nc1:common:object" xmlns:nc1sicsdicos="urn:fra:nc1:common:sicsdicos">
+  <!-- NC1 V.9.0.0 -->
+  <xs:import namespace="urn:fra:nc1:common:attribute" schemaLocation="../Commun/Common.xsd" />
+  <xs:import namespace="urn:fra:nc1:common:communication" schemaLocation="../Commun/Communication.xsd" />
+  <xs:import namespace="urn:fra:nc1:common:location" schemaLocation="../Commun/Location.xsd" />
+  <xs:import namespace="urn:fra:nc1:common:object" schemaLocation="../Commun/Object.xsd" />
+  <xs:import namespace="urn:fra:nc1:common:sicsdicos" schemaLocation="../Commun/SICS_Dictionaries.xsd" />
+  <xs:element name="NC1_Facility" type="nc1facility:FacilityType">
+    <xs:annotation>
+      <xs:documentation>L’objet NC1_Facility correspond à la notion de site qui décrit des équipements d’infrastructure ou à faible mobilité. </xs:documentation>
+      <xs:documentation xml:lang="en">The object NC1_Facility correspond in the notion of site which describes equipments of infrastructure or in low mobility.</xs:documentation>
+      <xs:appinfo>
+        <nc1:type xmlns:nc1="urn:fra:nc1">Objet</nc1:type>
+        <nc1ihm:Nom>Installation</nc1ihm:Nom>
+        <nc1ihm:Nom xml:lang="en">Facility</nc1ihm:Nom>
+        <nc1:MessH xmlns:nc1="urn:fra:nc1">Message H3.6 Facility</nc1:MessH>
+        <nc1:MessADatP3 xmlns:nc1="urn:fra:nc1">N/A</nc1:MessADatP3>
+        <nc1:LastNC1ModifyVersion xmlns:nc1="urn:fra:nc1">9.0.0</nc1:LastNC1ModifyVersion>
+      </xs:appinfo>
+    </xs:annotation>
+  </xs:element>
+  <xs:complexType name="CrossingMeanType">
+    <xs:annotation>
+      <xs:documentation>Caractérisation d'un moyen de franchissement.</xs:documentation>
+      <xs:documentation xml:lang="en">Crossing mean characteristics.</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" name="longestSpanLengthDimension" type="nc1common:Decimal0To9999999999Type">
+        <xs:annotation>
+          <xs:documentation>Longueur de la plus grande travée du moyen de franchissement (mètres).</xs:documentation>
+          <xs:documentation xml:lang="en">Length of the longest span for the crossing mean (meters).</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Longueur de la plus grande travée</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">Length of the longest span</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="spanCount" type="nc1common:Int0To999Type">
+        <xs:annotation>
+          <xs:documentation>Nombre de travées du moyen de franchissement.</xs:documentation>
+          <xs:documentation xml:lang="en">Number of spans of the crossing mean.</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Nombre de travées</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">Number of spans</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="designType" type="nc1sicsdicos:L110_41Code">
+        <xs:annotation>
+          <xs:documentation>Type du moyen de franchissement.</xs:documentation>
+          <xs:documentation xml:lang="en">Design type of the crossing mean.</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Type du moyen</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">Type of mean</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="usage" type="nc1sicsdicos:L135_49Code">
+        <xs:annotation>
+          <xs:documentation>Mode de franchissement à employer.</xs:documentation>
+          <xs:documentation xml:lang="en">Mode of crossing to be used.</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Mode de franchissement</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">Mode of crossing</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="DeathCountPerGroupType">
+    <xs:annotation>
+      <xs:documentation>Nombre de morts, par catégorie d’appartenance.</xs:documentation>
+      <xs:documentation xml:lang="en">Number of dead persons per category.</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="category" type="nc1sicsdicos:L112_8Code">
+        <xs:annotation>
+          <xs:documentation>Catégorie d’appartenance (ex : « FRFOR »).</xs:documentation>
+          <xs:documentation xml:lang="en">"Specifies the category which dead persons admitted in the facility belong to (e.g. ""FRFOR"")".</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Catégorie</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">Category</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="deathCount" type="nc1common:Int0To999Type">
+        <xs:annotation>
+          <xs:documentation>Nombre de morts.</xs:documentation>
+          <xs:documentation xml:lang="en">Number of dead persons for the relevant category.</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Nombre de mort</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">Dead count</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:simpleType name="FacilityFrSpecificCode">
+    <xs:annotation>
+      <xs:appinfo />
+      <xs:documentation></xs:documentation>
+      <xs:documentation xml:lang="en"></xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:integer" />
+  </xs:simpleType>
+  <xs:simpleType name="FacilitySymbolCode">
+    <xs:annotation>
+      <xs:appinfo>
+        <nc1dico:source xmlns:nc1dico="urn:fra:nc1:dictionnaires">SFTT 3.4.8</nc1dico:source>
+        <nc1dico:derogation xmlns:nc1dico="urn:fra:nc1:dictionnaires">FAMILLE INSTALLATION APP 6B</nc1dico:derogation>
+        <nc1ihm:description>DECRIT LES FAMILLES "INSTALLATION" AU SENS APP6 ET CLEF D'ENTREE DANS L'APP6.</nc1ihm:description>
+        <nc1ihm:description xml:lang="en">DESCRIBES THE "INSTALLATION" FAMILIES IN THE APP6 SENSE AND ENTRY KEY IN THE APP6.</nc1ihm:description>
+      </xs:appinfo>
+      <xs:documentation>DECRIT LES FAMILLES "INSTALLATION" AU SENS APP6 ET CLEF D'ENTREE DANS L'APP6.</xs:documentation>
+      <xs:documentation xml:lang="en">DESCRIBES THE "INSTALLATION" FAMILIES IN THE APP6 SENSE AND ENTRY KEY IN THE APP6.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:integer" />
+  </xs:simpleType>
+  <xs:complexType name="FacilityType">
+    <xs:annotation>
+      <xs:documentation>L’objet NC1_FACILITY décrit des équipements d’infrastructure ou à faible mobilité (base arrière ayant un rôle tactique).</xs:documentation>
+      <xs:documentation xml:lang="en">The NC1_FACILITY object describes infrastructure facilities or low mobility facilities (rear base with a tactical role).</xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="nc1objcom:PhysicalObjectType">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="tacticalData">
+            <xs:annotation>
+              <xs:documentation>Données tactiques de l'installation.</xs:documentation>
+              <xs:documentation xml:lang="en">Facility tactical data.</xs:documentation>
+              <xs:appinfo>
+                <nc1ihm:Nom>Données tactiques</nc1ihm:Nom>
+                <nc1ihm:Nom xml:lang="en">tactical datas</nc1ihm:Nom>
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element minOccurs="0" name="name" type="nc1common:ShortTextObjectType">
+                  <xs:annotation>
+                    <xs:documentation>Nom de l’installation affiché sur la cartographie.</xs:documentation>
+                    <xs:documentation xml:lang="en">Facility displayed name.</xs:documentation>
+                    <xs:appinfo>
+                      <nc1ihm:Nom>Nom</nc1ihm:Nom>
+                      <nc1ihm:Nom xml:lang="en">name</nc1ihm:Nom>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:element>
+                <xs:element name="symbolCode" type="nc1common:SymbolCodeType">
+                  <xs:annotation>
+                    <xs:documentation>Code contenant les informations de symbologie, d'identité (AMI, ENI, etc.), de nationalité, d'état de planification.</xs:documentation>
+                    <xs:documentation xml:lang="en">Code specifying information about symbology, identity (Friend, enemy, …), nationality, planification status.</xs:documentation>
+                    <xs:appinfo>
+                      <nc1ihm:Nom>Code du symbole</nc1ihm:Nom>
+                      <nc1ihm:Nom xml:lang="en">Symbol code</nc1ihm:Nom>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:element>
+                <xs:element minOccurs="0" name="frSpecificSymbol" type="nc1facility:FacilityFrSpecificCode">
+                  <xs:annotation>
+                    <xs:documentation>Indicateur de spécificité française pour le code symbole et sa représentation graphique.</xs:documentation>
+                    <xs:documentation xml:lang="en">French specificity indicator for the symbol code and its graphic representation.</xs:documentation>
+                    <xs:appinfo>
+                      <nc1ihm:Nom>Spécialisation Fr du code symbole</nc1ihm:Nom>
+                      <nc1ihm:Nom xml:lang="en">Fr specific symbol</nc1ihm:Nom>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:element>
+                <xs:element minOccurs="0" name="modifier" type="nc1facility:MedicalFacilityModifierCode">
+                  <xs:annotation>
+                    <xs:documentation>Qualifiant du code symbole, si l’installation est médicale (ex : « ROLE 1 »).</xs:documentation>
+                    <xs:documentation xml:lang="en">"If the facility is a medical facility: symbol code modifier (e.g. ""ROLE 1"")".</xs:documentation>
+                    <xs:appinfo>
+                      <nc1ihm:Nom>Qualifiant du code symbole</nc1ihm:Nom>
+                      <nc1ihm:Nom xml:lang="en">Symbol code modifier</nc1ihm:Nom>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:element>
+                <xs:element minOccurs="0" name="eirn" type="nc1common:EirnType">
+                  <xs:annotation>
+                    <xs:documentation>Identifiant EIRN utilisé par la messagerie VMF.</xs:documentation>
+                    <xs:documentation xml:lang="en">EIRN identifier used by VMF messaging.</xs:documentation>
+                    <xs:appinfo>
+                      <nc1ihm:Nom>Identifiant EIRN</nc1ihm:Nom>
+                      <nc1ihm:Nom xml:lang="en">eirn id</nc1ihm:Nom>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:element>
+                <xs:element minOccurs="0" name="tnl16" type="nc1common:Tnl16Type">
+                  <xs:annotation>
+                    <xs:documentation>Track Number L16.</xs:documentation>
+                    <xs:documentation xml:lang="en">track number L16.</xs:documentation>
+                    <xs:appinfo>
+                      <nc1ihm:Nom>Identifiant TNL16</nc1ihm:Nom>
+                      <nc1ihm:Nom xml:lang="en">TNL16 id</nc1ihm:Nom>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:element>
+                <xs:element minOccurs="0" name="distressIndicator" type="nc1sicsdicos:L135_1Code">
+                  <xs:annotation>
+                    <xs:documentation>Indicateur de détresse.</xs:documentation>
+                    <xs:documentation xml:lang="en">Distress indicator.</xs:documentation>
+                    <xs:appinfo>
+                      <nc1ihm:Nom>Détresse</nc1ihm:Nom>
+                      <nc1ihm:Nom xml:lang="en">Distress</nc1ihm:Nom>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:element>
+                <xs:element minOccurs="0" name="baseIdentificationCode" type="nc1common:ShortTextObjectType">
+                  <xs:annotation>
+                    <xs:documentation>Code site de l’installation.</xs:documentation>
+                    <xs:documentation xml:lang="en">Site code of the facility.</xs:documentation>
+                    <xs:appinfo>
+                      <nc1ihm:Nom>Code site</nc1ihm:Nom>
+                      <nc1ihm:Nom xml:lang="en">Site code</nc1ihm:Nom>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:element>
+                <xs:element minOccurs="0" name="responsibleUnitId" type="nc1common:Nc1ObjectRefType">
+                  <xs:annotation>
+                    <xs:documentation>Identifiant unique de l’unité responsable de l’installation.</xs:documentation>
+                    <xs:documentation xml:lang="en">NC1 identifier of the unit responsible for the facility.</xs:documentation>
+                    <xs:appinfo>
+                      <nc1ihm:Nom>Unité responsable</nc1ihm:Nom>
+                      <nc1ihm:Nom xml:lang="en">Responsible unit</nc1ihm:Nom>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:element>
+                <xs:element minOccurs="0" name="operationalStatusIndicator" type="nc1sicsdicos:L125_1Code">
+                  <xs:annotation>
+                    <xs:documentation>Indicateur d’état opérationnel.</xs:documentation>
+                    <xs:documentation xml:lang="en">Operational status indicator.</xs:documentation>
+                    <xs:appinfo>
+                      <nc1ihm:Nom>Indicateur opérationnel</nc1ihm:Nom>
+                      <nc1ihm:Nom xml:lang="en">Operational indicator</nc1ihm:Nom>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:element>
+                <xs:element minOccurs="0" name="securityStatus" type="nc1sicsdicos:L125_23Code">
+                  <xs:annotation>
+                    <xs:documentation>Etat de sécurisation de l’installation (ex : « SECURED »).</xs:documentation>
+                    <xs:documentation xml:lang="en">"Security status of the facility (e.g. ""SECURED"")".</xs:documentation>
+                    <xs:appinfo>
+                      <nc1ihm:Nom>Etat de sécurisation</nc1ihm:Nom>
+                      <nc1ihm:Nom xml:lang="en">Security status</nc1ihm:Nom>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:element>
+                <xs:element minOccurs="0" name="minePresence" type="nc1sicsdicos:L135_43Code">
+                  <xs:annotation>
+                    <xs:documentation>Installation minée ou non (ex : « Présence de mines au sol, confirmé »).</xs:documentation>
+                    <xs:documentation xml:lang="en">"Mined facility indicator (e.g. ""Landmines presence, confirmed""".</xs:documentation>
+                    <xs:appinfo>
+                      <nc1ihm:Nom>Présence de mines</nc1ihm:Nom>
+                      <nc1ihm:Nom xml:lang="en">Landmines presence</nc1ihm:Nom>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:element>
+                <xs:element minOccurs="0" name="isCoveredByEnemyFire" type="xs:boolean">
+                  <xs:annotation>
+                    <xs:documentation>Installation sous le feu ennemi ou non (ex : « COV »).</xs:documentation>
+                    <xs:documentation xml:lang="en">"Facility covered by enemy fire (ex. : ""COV"")".</xs:documentation>
+                    <xs:appinfo>
+                      <nc1ihm:Nom>Couvert par le feu</nc1ihm:Nom>
+                      <nc1ihm:Nom xml:lang="en">Covered by enemy fire</nc1ihm:Nom>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:element>
+                <xs:element minOccurs="0" name="primaryConstructionMaterial" type="nc1sicsdicos:L110_33Code">
+                  <xs:annotation>
+                    <xs:documentation>Matériau principal de construction de l’installation (ex : « METAL »).</xs:documentation>
+                    <xs:documentation xml:lang="en">"Primary construction material of the facility (e.g. ""METAL"")".</xs:documentation>
+                    <xs:appinfo>
+                      <nc1ihm:Nom>Matériau de construction</nc1ihm:Nom>
+                      <nc1ihm:Nom xml:lang="en">Primary construction material</nc1ihm:Nom>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:element>
+                <xs:element minOccurs="0" name="achievementStatus" type="nc1sicsdicos:L125_24Code">
+                  <xs:annotation>
+                    <xs:documentation>Etat d'avancement dans l’exécution ou la démolition de l’installation.</xs:documentation>
+                    <xs:documentation xml:lang="en">Progress in the performance or the demolition of the facility.</xs:documentation>
+                    <xs:appinfo>
+                      <nc1ihm:Nom>Etat d'avancement</nc1ihm:Nom>
+                      <nc1ihm:Nom xml:lang="en">Achievement status</nc1ihm:Nom>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:element>
+                <xs:element minOccurs="0" name="dimensions" type="nc1common:DimensionType">
+                  <xs:annotation>
+                    <xs:documentation>Dimensions de l’installation.</xs:documentation>
+                    <xs:documentation xml:lang="en">Dimensions of the facility.</xs:documentation>
+                    <xs:appinfo>
+                      <nc1ihm:Nom>Dimensions</nc1ihm:Nom>
+                      <nc1ihm:Nom xml:lang="en">Dimensions</nc1ihm:Nom>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:element>
+                <xs:element minOccurs="0" name="soilPracticabilityDescription" type="nc1sicsdicos:L135_32Code">
+                  <xs:annotation>
+                    <xs:documentation>Praticabilité générale du terrain de l’installation (ex : « SUMMER »).</xs:documentation>
+                    <xs:documentation xml:lang="en">"General soil trafficability of the facility (e.g. ""SUMMER"")".</xs:documentation>
+                    <xs:appinfo>
+                      <nc1ihm:Nom>Praticabilité du terrain</nc1ihm:Nom>
+                      <nc1ihm:Nom xml:lang="en">Soil passability</nc1ihm:Nom>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:element>
+                <xs:element minOccurs="0" name="instantSoilPracticability" type="nc1sicsdicos:L135_33Code">
+                  <xs:annotation>
+                    <xs:documentation>Praticabilité actuelle du terrain de l’installation (1=praticable, 0=non praticable).</xs:documentation>
+                    <xs:documentation xml:lang="en">Current facility soil passability (1=passable, 0=non-passable).</xs:documentation>
+                    <xs:appinfo>
+                      <nc1ihm:Nom>Praticabilité actuelle</nc1ihm:Nom>
+                      <nc1ihm:Nom xml:lang="en">Current passability</nc1ihm:Nom>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:element>
+                <xs:element minOccurs="0" name="url" type="nc1common:MediumTextObjectType">
+                  <xs:annotation>
+                    <xs:documentation>Lien vers un fichier associé à l’objet.</xs:documentation>
+                    <xs:documentation xml:lang="en">Link to a file associated with the object.</xs:documentation>
+                    <xs:appinfo>
+                      <nc1ihm:Nom>Url</nc1ihm:Nom>
+                      <nc1ihm:Nom xml:lang="en">url</nc1ihm:Nom>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:element>
+                <xs:element minOccurs="0" name="comment" type="nc1common:LongTextObjectType">
+                  <xs:annotation>
+                    <xs:documentation>Commentaires en texte libre.</xs:documentation>
+                    <xs:documentation xml:lang="en">Free text comment.</xs:documentation>
+                    <xs:appinfo>
+                      <nc1ihm:Nom>Commentaire</nc1ihm:Nom>
+                      <nc1ihm:Nom xml:lang="en">comment</nc1ihm:Nom>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:element>
+                <xs:element minOccurs="0" name="extVersion" type="nc1common:ExtVersType">
+                  <xs:annotation>
+                    <xs:documentation>Extension pour versions suivantes compatibles.</xs:documentation>
+                    <xs:documentation xml:lang="en">Extension for following compatible versions.</xs:documentation>
+                    <xs:appinfo>
+                      <nc1ihm:Nom>Extension de version</nc1ihm:Nom>
+                      <nc1ihm:Nom xml:lang="en">version extension</nc1ihm:Nom>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:element>
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+          <xs:element minOccurs="0" name="comData" type="nc1com:ComDataType">
+            <xs:annotation>
+              <xs:documentation>Données de communication de l'installation.</xs:documentation>
+              <xs:documentation xml:lang="en">Communication data of the facility.</xs:documentation>
+              <xs:appinfo>
+                <nc1ihm:Nom>Données de communication</nc1ihm:Nom>
+                <nc1ihm:Nom xml:lang="en">Communication data</nc1ihm:Nom>
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:element>
+          <xs:element minOccurs="0" name="medicalFacilityData">
+            <xs:annotation>
+              <xs:documentation>Données tactiques spécifiques à l'installation médicale.</xs:documentation>
+              <xs:documentation xml:lang="en">Medical facility tactical data.</xs:documentation>
+              <xs:appinfo>
+                <nc1ihm:Nom>Données d’installation médicale</nc1ihm:Nom>
+                <nc1ihm:Nom xml:lang="en">Medical facility data</nc1ihm:Nom>
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element minOccurs="0" name="establishedBedCount" type="nc1common:Int0To999Type">
+                  <xs:annotation>
+                    <xs:documentation>Nombre total de lits installés.</xs:documentation>
+                    <xs:documentation xml:lang="en">Number of occupied beds, per category of casualties.</xs:documentation>
+                    <xs:appinfo>
+                      <nc1ihm:Nom>Nombre de lits installés</nc1ihm:Nom>
+                      <nc1ihm:Nom xml:lang="en">Number of installed beds</nc1ihm:Nom>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:element>
+                <xs:element minOccurs="0" name="medicalMissionStatus" type="nc1sicsdicos:L112_23Code">
+                  <xs:annotation>
+                    <xs:documentation>Evaluation de la capacité à remplir la mission (ex « MA »).</xs:documentation>
+                    <xs:documentation xml:lang="en">Capability to perform assigned mission.</xs:documentation>
+                    <xs:appinfo>
+                      <nc1ihm:Nom>Etat de la mission de santé</nc1ihm:Nom>
+                      <nc1ihm:Nom xml:lang="en">Medical mission status</nc1ihm:Nom>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:element>
+                <xs:element minOccurs="0" name="surgeryTeamsCount" type="nc1common:Int0To99Type">
+                  <xs:annotation>
+                    <xs:documentation>Nombre d’équipes chirurgicales de l’installation médicale.</xs:documentation>
+                    <xs:documentation xml:lang="en">Number of surgical team in the facility.</xs:documentation>
+                    <xs:appinfo>
+                      <nc1ihm:Nom>Nombre d’équipes chirurgicales</nc1ihm:Nom>
+                      <nc1ihm:Nom xml:lang="en">Number of surgical teams</nc1ihm:Nom>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:element>
+                <xs:element maxOccurs="unbounded" minOccurs="0" name="personnel" type="nc1facility:PersonnelType">
+                  <xs:annotation>
+                    <xs:documentation>Quantité de personnel médical, par spécialité.</xs:documentation>
+                    <xs:documentation xml:lang="en">Number of medical personnel, per specialty.</xs:documentation>
+                    <xs:appinfo>
+                      <nc1ihm:Nom>Personnel</nc1ihm:Nom>
+                      <nc1ihm:Nom xml:lang="en">Personnel</nc1ihm:Nom>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:element>
+                <xs:element minOccurs="0" name="medicalVehiculesAvailableCount" type="nc1common:Int0To999Type">
+                  <xs:annotation>
+                    <xs:documentation>Nombre de véhicules sanitaires disponibles.</xs:documentation>
+                    <xs:documentation xml:lang="en">Number of sanitary vehicles available.</xs:documentation>
+                    <xs:appinfo>
+                      <nc1ihm:Nom>Nombre de véhicules sanitaires disponibles</nc1ihm:Nom>
+                      <nc1ihm:Nom xml:lang="en">Number of sanitary vehicles available</nc1ihm:Nom>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:element>
+                <xs:element minOccurs="0" name="medicalVehiculesUsedCount" type="nc1common:Int0To999Type">
+                  <xs:annotation>
+                    <xs:documentation>Nombre de véhicules sanitaires réalisés.</xs:documentation>
+                    <xs:documentation xml:lang="en">Number of sanitary vehicles used.</xs:documentation>
+                    <xs:appinfo>
+                      <nc1ihm:Nom>Nombre de véhicules sanitaires réalisés</nc1ihm:Nom>
+                      <nc1ihm:Nom xml:lang="en">Number of sanitary vehicles used</nc1ihm:Nom>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:element>
+                <xs:element minOccurs="0" name="woundedWaitingCount" type="nc1common:Int0To999Type">
+                  <xs:annotation>
+                    <xs:documentation>Nombre total de blessés en attente d’un geste chirurgical.</xs:documentation>
+                    <xs:documentation xml:lang="en">Total number of wounded awaiting surgery.</xs:documentation>
+                    <xs:appinfo>
+                      <nc1ihm:Nom>Nombre de blessés en attente d’un geste chirurgical</nc1ihm:Nom>
+                      <nc1ihm:Nom xml:lang="en">Number of wounded awaiting surgery</nc1ihm:Nom>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:element>
+                <xs:element minOccurs="0" name="woundedStretcherAwaitingEvacuationCount" type="nc1common:Int0To999Type">
+                  <xs:annotation>
+                    <xs:documentation>Nombre de blessés couchés en attente d’une évacuation.</xs:documentation>
+                    <xs:documentation xml:lang="en">Total number of lying wounded awaiting evacuation.</xs:documentation>
+                    <xs:appinfo>
+                      <nc1ihm:Nom>Nombre de blessés couchés en attente d’une évacuation</nc1ihm:Nom>
+                      <nc1ihm:Nom xml:lang="en">Total number of lying wounded awaiting evacuation</nc1ihm:Nom>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:element>
+                <xs:element minOccurs="0" name="woundedSittingAwaitingEvacuationCount" type="nc1common:Int0To999Type">
+                  <xs:annotation>
+                    <xs:documentation>Nombre de blessés assis en attente d’une évacuation.</xs:documentation>
+                    <xs:documentation xml:lang="en">Total number of sitting wounded awaiting evacuation.</xs:documentation>
+                    <xs:appinfo>
+                      <nc1ihm:Nom>Nombre de blessés assis en attente d’une évacuation</nc1ihm:Nom>
+                      <nc1ihm:Nom xml:lang="en">Total number of sitting wounded awaiting evacuation</nc1ihm:Nom>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:element>
+                <xs:element maxOccurs="unbounded" minOccurs="0" name="deathCountPerGroupType" type="nc1facility:DeathCountPerGroupType">
+                  <xs:annotation>
+                    <xs:documentation>Nombre total de décédés présents dans l’installation médicale, par catégorie d’appartenance.</xs:documentation>
+                    <xs:documentation xml:lang="en">Number of dead persons in the medical facility, per category.</xs:documentation>
+                    <xs:appinfo>
+                      <nc1ihm:Nom>Nombre de décédés par catégorie</nc1ihm:Nom>
+                      <nc1ihm:Nom xml:lang="en">Number of dead per group type</nc1ihm:Nom>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:element>
+                <xs:element maxOccurs="unbounded" minOccurs="0" name="occupiedBedCountPerGroup" type="nc1facility:OccupiedBedCountPerGroupType">
+                  <xs:annotation>
+                    <xs:documentation>Nombre de lits occupés, par catégorie d’appartenance des victimes.</xs:documentation>
+                    <xs:documentation xml:lang="en">Number of occupied beds, per category of casualties.</xs:documentation>
+                    <xs:appinfo>
+                      <nc1ihm:Nom>Nombre de lits occupés par catégorie</nc1ihm:Nom>
+                      <nc1ihm:Nom xml:lang="en">Number of occupied beds per group type</nc1ihm:Nom>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:element>
+                <xs:element maxOccurs="unbounded" minOccurs="0" name="admittedIndividualId" type="nc1common:Nc1ObjectRefType">
+                  <xs:annotation>
+                    <xs:documentation>Identifiant d’un individu admis dans l’installation médicale.</xs:documentation>
+                    <xs:documentation xml:lang="en">ID of an individual admitted in the medical facility.</xs:documentation>
+                    <xs:appinfo>
+                      <nc1ihm:Nom>Identifiant d’un individu admis</nc1ihm:Nom>
+                      <nc1ihm:Nom xml:lang="en">ID of an admitted individual</nc1ihm:Nom>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:element>
+                <xs:element minOccurs="0" name="comment" type="nc1common:LongTextObjectType">
+                  <xs:annotation>
+                    <xs:documentation>Commentaire en texte libre : disponibilité, nombre de jours détenus en fournitures, carences sérieuses, et capacité de l’installation à remplir la mission.</xs:documentation>
+                    <xs:documentation xml:lang="en">Free text observations: availability, number of days' supplies, serious shortages and ability of the facility to fulfill the assigned mission.</xs:documentation>
+                    <xs:appinfo>
+                      <nc1ihm:Nom>Commentaire</nc1ihm:Nom>
+                      <nc1ihm:Nom xml:lang="en">comment</nc1ihm:Nom>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:element>
+                <xs:element minOccurs="0" name="extVersion" type="nc1common:ExtVersType">
+                  <xs:annotation>
+                    <xs:documentation>Extension pour versions suivantes compatibles.</xs:documentation>
+                    <xs:documentation xml:lang="en">Extension for following compatible versions.</xs:documentation>
+                    <xs:appinfo>
+                      <nc1ihm:Nom>Extension de version</nc1ihm:Nom>
+                      <nc1ihm:Nom xml:lang="en">version extension</nc1ihm:Nom>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:element>
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+          <xs:element minOccurs="0" name="bypassFacilityData">
+            <xs:annotation>
+              <xs:documentation>Données tactiques spécifiques à un site de franchissement.</xs:documentation>
+              <xs:documentation xml:lang="en">Bypass facility tactical data.</xs:documentation>
+              <xs:appinfo>
+                <nc1ihm:Nom>Données de site de franchissement</nc1ihm:Nom>
+                <nc1ihm:Nom xml:lang="en">Bypass facility data</nc1ihm:Nom>
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element minOccurs="0" name="crossingMean" type="nc1facility:CrossingMeanType">
+                  <xs:annotation>
+                    <xs:documentation>Caractérisation du site de franchissement.</xs:documentation>
+                    <xs:documentation xml:lang="en">Crossing site characteristics.</xs:documentation>
+                    <xs:appinfo>
+                      <nc1ihm:Nom>Caractérisation</nc1ihm:Nom>
+                      <nc1ihm:Nom xml:lang="en">Characterization</nc1ihm:Nom>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:element>
+                <xs:element minOccurs="0" name="isImprovementBankToDo" type="xs:boolean">
+                  <xs:annotation>
+                    <xs:documentation>Indique si les berges du moyen de franchissement doivent être consolidées.</xs:documentation>
+                    <xs:documentation xml:lang="en">Specifies if the banks of the bypass facility need to be strengthened.</xs:documentation>
+                    <xs:appinfo>
+                      <nc1ihm:Nom>Consolidation des berges</nc1ihm:Nom>
+                      <nc1ihm:Nom xml:lang="en">Bank improvement</nc1ihm:Nom>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:element>
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+          <xs:element minOccurs="0" name="location">
+            <xs:annotation>
+              <xs:documentation>Localisation.</xs:documentation>
+              <xs:documentation xml:lang="en">Location.</xs:documentation>
+              <xs:appinfo>
+                <nc1ihm:Nom>Localisation</nc1ihm:Nom>
+                <nc1ihm:Nom xml:lang="en">Location</nc1ihm:Nom>
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element minOccurs="0" name="name" type="nc1common:Text1To30ObjectType">
+                  <xs:annotation>
+                    <xs:documentation>Nom de baptême donné par l'opérateur à la localisation. Par exemple un nom de ville ou de lieu.</xs:documentation>
+                    <xs:documentation xml:lang="en">Name assigned to the location, e.g. city or place name.</xs:documentation>
+                    <xs:appinfo>
+                      <nc1ihm:Nom>Nom</nc1ihm:Nom>
+                      <nc1ihm:Nom xml:lang="en">name</nc1ihm:Nom>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:element>
+                <xs:choice>
+                  <xs:element name="point" type="nc1location:PointType">
+                    <xs:annotation>
+                      <xs:documentation>Point localisé.</xs:documentation>
+                      <xs:documentation xml:lang="en">Geolocalized point.</xs:documentation>
+                      <xs:appinfo>
+                        <nc1ihm:Nom>Point</nc1ihm:Nom>
+                        <nc1ihm:Nom xml:lang="en">Point</nc1ihm:Nom>
+                      </xs:appinfo>
+                    </xs:annotation>
+                  </xs:element>
+                  <xs:element name="multipoint" type="nc1location:MultipointType">
+                    <xs:annotation>
+                      <xs:documentation>Liste de points.</xs:documentation>
+                      <xs:documentation xml:lang="en">List of points.</xs:documentation>
+                      <xs:appinfo>
+                        <nc1ihm:Nom>Multipoint</nc1ihm:Nom>
+                        <nc1ihm:Nom xml:lang="en">Multipoint</nc1ihm:Nom>
+                      </xs:appinfo>
+                    </xs:annotation>
+                  </xs:element>
+                </xs:choice>
+                <xs:element minOccurs="0" name="datetime" type="xs:dateTime">
+                  <xs:annotation>
+                    <xs:documentation>Horodatage du relevé de position sur le terrain. Par défaut, l'heure de saisie dans le système.</xs:documentation>
+                    <xs:documentation xml:lang="en">Field position report time. By default, time of the input in the system.</xs:documentation>
+                    <xs:appinfo>
+                      <nc1ihm:Nom>Horodatage</nc1ihm:Nom>
+                      <nc1ihm:Nom xml:lang="en">Timestamp</nc1ihm:Nom>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:element>
+                <xs:element maxOccurs="unbounded" minOccurs="0" name="validityPeriod" type="nc1common:PeriodType">
+                  <xs:annotation>
+                    <xs:documentation>Période de validité.</xs:documentation>
+                    <xs:documentation xml:lang="en">Validity period.</xs:documentation>
+                    <xs:appinfo>
+                      <nc1ihm:Nom>Période de validité</nc1ihm:Nom>
+                      <nc1ihm:Nom xml:lang="en">Validity period</nc1ihm:Nom>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:element>
+                <xs:element minOccurs="0" name="quality" type="nc1sicsdicos:L117_5Code">
+                  <xs:annotation>
+                    <xs:documentation>Qualité de la mesure de la localisation.</xs:documentation>
+                    <xs:documentation xml:lang="en">Location measurement quality.</xs:documentation>
+                    <xs:appinfo>
+                      <nc1ihm:Nom>Qualité</nc1ihm:Nom>
+                      <nc1ihm:Nom xml:lang="en">Quality</nc1ihm:Nom>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:element>
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:simpleType name="MedicalFacilityModifierCode">
+    <xs:annotation>
+      <xs:appinfo>
+        <nc1dico:source xmlns:nc1dico="urn:fra:nc1:dictionnaires">SIRMED</nc1dico:source>
+      </xs:appinfo>
+      <xs:documentation></xs:documentation>
+      <xs:documentation xml:lang="en"></xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:integer" />
+  </xs:simpleType>
+  <xs:complexType name="OccupiedBedCountPerGroupType">
+    <xs:annotation>
+      <xs:documentation>Nombre de lits occupés, par catégorie d’appartenance des victimes.</xs:documentation>
+      <xs:documentation xml:lang="en">Number of occupied beds, per category of casualties.</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="category" type="nc1sicsdicos:L112_8Code">
+        <xs:annotation>
+          <xs:documentation>Catégorie d’appartenance (ex : « FRFOR »).</xs:documentation>
+          <xs:documentation xml:lang="en">"Specifies the category which dead persons admitted in the facility belong to (e.g. ""FRFOR"")".</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Catégorie</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">Category</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="bedCount" type="nc1common:Int0To999Type">
+        <xs:annotation>
+          <xs:documentation>Nombre de lits.</xs:documentation>
+          <xs:documentation xml:lang="en">Beds count.</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Nombre de lits</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">Beds count</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="PersonnelType">
+    <xs:annotation>
+      <xs:documentation>Nombre de personnes de l’installation médicale, par spécialité.</xs:documentation>
+      <xs:documentation xml:lang="en">Number of personnel for the medical facility, per speciality.</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="medicalSpeciality" type="nc1sicsdicos:L112_20Code">
+        <xs:annotation>
+          <xs:documentation>Spécialité médicale.</xs:documentation>
+          <xs:documentation xml:lang="en">Specifies the area of medicine in which the relevant personnel is specialized.</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Spécialité médicale</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">Specifies the area of medicine in which the relevant personnel is specialized</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="personnelCount" type="nc1common:Int0To999Type">
+        <xs:annotation>
+          <xs:documentation>Nombre de personnes de l’installation médicale ayant cette spécialité.</xs:documentation>
+          <xs:documentation xml:lang="en">Number of medical facility staff with this speciality.</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Nombre de personnes</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">Number of personnel</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

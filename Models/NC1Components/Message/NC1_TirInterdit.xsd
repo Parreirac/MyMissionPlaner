@@ -1,0 +1,208 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema targetNamespace="urn:fra:nc1:message:tirinterdit" xmlns:nc1ihm="urn:fra:nc1:IHM" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:nc1tirinterdit="urn:fra:nc1:message:tirinterdit" xmlns:nc1common="urn:fra:nc1:common:attribute" xmlns:nc1location="urn:fra:nc1:common:location" xmlns:nc1msgcom="urn:fra:nc1:common:message" xmlns:nc1acm="urn:fra:nc1:objet:acm">
+  <!-- NC1 V.9.0.0 -->
+  <xs:import namespace="urn:fra:nc1:common:attribute" schemaLocation="../Commun/Common.xsd" />
+  <xs:import namespace="urn:fra:nc1:common:location" schemaLocation="../Commun/Location.xsd" />
+  <xs:import namespace="urn:fra:nc1:common:message" schemaLocation="../Commun/Message.xsd" />
+  <xs:import namespace="urn:fra:nc1:objet:acm" schemaLocation="../Objet/NC1_AcmWez.xsd" />
+  <xs:element name="NC1_TirInterdit">
+    <xs:annotation>
+      <xs:documentation>Le message NC1_TirInterdit est utilisé pour interdire les tirs dans un ou plusieurs volumes 3D, et pour une période de temps donnée.</xs:documentation>
+      <xs:documentation xml:lang="en">The NC1_TirInterdit message is used to prohibit the fires in one or more 3D volume, and for a given period of time.</xs:documentation>
+      <xs:appinfo>
+        <nc1:type xmlns:nc1="urn:fra:nc1">Message</nc1:type>
+        <nc1ihm:Nom>Tir interdit</nc1ihm:Nom>
+        <nc1ihm:Nom xml:lang="en">No fire</nc1ihm:Nom>
+        <nc1:MessH xmlns:nc1="urn:fra:nc1">N/A</nc1:MessH>
+        <nc1:MessADatP3 xmlns:nc1="urn:fra:nc1">N/A</nc1:MessADatP3>
+        <nc1:LastNC1ModifyVersion xmlns:nc1="urn:fra:nc1">9.0.0</nc1:LastNC1ModifyVersion>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:complexContent>
+        <xs:extension base="nc1msgcom:BaseMessageType">
+          <xs:sequence>
+            <xs:element name="is3DAckRequested" type="xs:boolean">
+              <xs:annotation>
+                <xs:documentation>Demande d’aperçu 3D.</xs:documentation>
+                <xs:documentation xml:lang="en">3D acknowledgement request.</xs:documentation>
+                <xs:appinfo>
+                  <nc1ihm:Nom>Demande d’aperçu 3D</nc1ihm:Nom>
+                  <nc1ihm:Nom xml:lang="en">3D acknowledgement request</nc1ihm:Nom>
+                </xs:appinfo>
+              </xs:annotation>
+            </xs:element>
+            <xs:element minOccurs="0" name="alertNumber" type="nc1common:ShortTextType">
+              <xs:annotation>
+                <xs:documentation>Numéro d'alerte.</xs:documentation>
+                <xs:documentation xml:lang="en">Alert number.</xs:documentation>
+                <xs:appinfo>
+                  <nc1ihm:Nom>Numéro d'alerte</nc1ihm:Nom>
+                  <nc1ihm:Nom xml:lang="en">Alert number</nc1ihm:Nom>
+                </xs:appinfo>
+              </xs:annotation>
+            </xs:element>
+            <xs:element maxOccurs="unbounded" name="zone">
+              <xs:annotation>
+                <xs:documentation>Zone d'interdiction des tirs.</xs:documentation>
+                <xs:documentation xml:lang="en">No shooting zone.</xs:documentation>
+                <xs:appinfo>
+                  <nc1ihm:Nom>Zone</nc1ihm:Nom>
+                  <nc1ihm:Nom xml:lang="en">area</nc1ihm:Nom>
+                </xs:appinfo>
+              </xs:annotation>
+              <xs:complexType>
+                <xs:choice>
+                  <xs:element name="name" type="nc1common:Text1To38ABNSType">
+                    <xs:annotation>
+                      <xs:documentation>Nom de la zone aérienne (attribut AdatP-3 "Name" du segment ACMID).</xs:documentation>
+                      <xs:appinfo>
+                        <nc1ihm:Nom>Nom</nc1ihm:Nom>
+                      </xs:appinfo>
+                    </xs:annotation>
+                  </xs:element>
+                  <xs:element name="designator" type="nc1common:Text1To5ANType">
+                    <xs:annotation>
+                      <xs:documentation>Désignateur de la zone aérienne (attribut AdatP-3 "Designator" du segment ACMID).</xs:documentation>
+                      <xs:appinfo>
+                        <nc1ihm:Nom>Désignateur</nc1ihm:Nom>
+                      </xs:appinfo>
+                    </xs:annotation>
+                  </xs:element>
+                  <xs:element name="volume">
+                    <xs:annotation>
+                      <xs:documentation>Volume 3D d'interdiction des tirs.</xs:documentation>
+                      <xs:documentation xml:lang="en">Fire interdiction volume.</xs:documentation>
+                      <xs:appinfo>
+                        <nc1ihm:Nom>Volume 3D</nc1ihm:Nom>
+                        <nc1ihm:Nom xml:lang="en">3D volume</nc1ihm:Nom>
+                      </xs:appinfo>
+                    </xs:annotation>
+                    <xs:complexType>
+                      <xs:sequence>
+                        <xs:element name="geometricalShape">
+                          <xs:annotation>
+                            <xs:documentation>Forme géométrique.</xs:documentation>
+                            <xs:documentation xml:lang="en">geometrical shape.</xs:documentation>
+                            <xs:appinfo>
+                              <nc1ihm:Nom>Forme géométrique</nc1ihm:Nom>
+                              <nc1ihm:Nom xml:lang="en">geometrical shape</nc1ihm:Nom>
+                            </xs:appinfo>
+                          </xs:annotation>
+                          <xs:complexType>
+                            <xs:choice>
+                              <xs:element name="arcband" type="nc1location:ArcbandType">
+                                <xs:annotation>
+                                  <xs:documentation>Radarc ou segment d’anneau.</xs:documentation>
+                                  <xs:documentation xml:lang="en">Arcband, or 4 points sector.</xs:documentation>
+                                  <xs:appinfo>
+                                    <nc1ihm:Nom>Radarc</nc1ihm:Nom>
+                                    <nc1ihm:Nom xml:lang="en">Arcband</nc1ihm:Nom>
+                                  </xs:appinfo>
+                                </xs:annotation>
+                              </xs:element>
+                              <xs:element name="polygon" type="nc1location:PolygonType">
+                                <xs:annotation>
+                                  <xs:documentation>Polygone, ou ligne brisée fermée.</xs:documentation>
+                                  <xs:documentation xml:lang="en">Polygon, or closed polyline.</xs:documentation>
+                                  <xs:appinfo>
+                                    <nc1ihm:Nom>Polygone</nc1ihm:Nom>
+                                    <nc1ihm:Nom xml:lang="en">Polygon</nc1ihm:Nom>
+                                  </xs:appinfo>
+                                </xs:annotation>
+                              </xs:element>
+                              <xs:element name="circle" type="nc1location:CircleType">
+                                <xs:annotation>
+                                  <xs:documentation>Cercle.</xs:documentation>
+                                  <xs:documentation xml:lang="en">Circle.</xs:documentation>
+                                  <xs:appinfo>
+                                    <nc1ihm:Nom>Cercle</nc1ihm:Nom>
+                                    <nc1ihm:Nom xml:lang="en">Circle</nc1ihm:Nom>
+                                  </xs:appinfo>
+                                </xs:annotation>
+                              </xs:element>
+                              <xs:element name="corridor" type="nc1acm:CorridorType">
+                                <xs:annotation>
+                                  <xs:documentation>Corridor.</xs:documentation>
+                                  <xs:documentation xml:lang="en">Corridor.</xs:documentation>
+                                  <xs:appinfo>
+                                    <nc1ihm:Nom>Corridor</nc1ihm:Nom>
+                                    <nc1ihm:Nom xml:lang="en">Corridor</nc1ihm:Nom>
+                                  </xs:appinfo>
+                                </xs:annotation>
+                              </xs:element>
+                              <xs:element name="airtrack" type="nc1acm:AirtrackType">
+                                <xs:annotation>
+                                  <xs:documentation>Ensemble de segments de route aérienne.</xs:documentation>
+                                  <xs:documentation xml:lang="en">Entire air route segments.</xs:documentation>
+                                  <xs:appinfo>
+                                    <nc1ihm:Nom>Airtrack</nc1ihm:Nom>
+                                    <nc1ihm:Nom xml:lang="en">Airtrack</nc1ihm:Nom>
+                                  </xs:appinfo>
+                                </xs:annotation>
+                              </xs:element>
+                              <xs:element name="polyarc" type="nc1location:PolyarcType">
+                                <xs:annotation>
+                                  <xs:documentation>Polygone associé à un arc de cercle.</xs:documentation>
+                                  <xs:documentation xml:lang="en">Polygon associated to a circular arc.</xs:documentation>
+                                  <xs:appinfo>
+                                    <nc1ihm:Nom>Polyarc</nc1ihm:Nom>
+                                    <nc1ihm:Nom xml:lang="en">Polyarc</nc1ihm:Nom>
+                                  </xs:appinfo>
+                                </xs:annotation>
+                              </xs:element>
+                              <xs:element name="aorbit" type="nc1location:AorbitType">
+                                <xs:annotation>
+                                  <xs:documentation>Hippodrome.</xs:documentation>
+                                  <xs:documentation xml:lang="en">Orbit.</xs:documentation>
+                                  <xs:appinfo>
+                                    <nc1ihm:Nom>Hippodrome</nc1ihm:Nom>
+                                    <nc1ihm:Nom xml:lang="en">Orbit</nc1ihm:Nom>
+                                  </xs:appinfo>
+                                </xs:annotation>
+                              </xs:element>
+                            </xs:choice>
+                          </xs:complexType>
+                        </xs:element>
+                        <xs:element name="levels" type="nc1acm:LevelsType">
+                          <xs:annotation>
+                            <xs:documentation>Niveaux d’altitude minimal et maximal.</xs:documentation>
+                            <xs:documentation xml:lang="en">Min and max altitude levels.</xs:documentation>
+                            <xs:appinfo>
+                              <nc1ihm:Nom>Niveaux</nc1ihm:Nom>
+                              <nc1ihm:Nom xml:lang="en">Levels</nc1ihm:Nom>
+                            </xs:appinfo>
+                          </xs:annotation>
+                        </xs:element>
+                      </xs:sequence>
+                    </xs:complexType>
+                  </xs:element>
+                </xs:choice>
+              </xs:complexType>
+            </xs:element>
+            <xs:element minOccurs="0" name="period" type="nc1common:PeriodType">
+              <xs:annotation>
+                <xs:documentation>Période d'interdiction des tirs.</xs:documentation>
+                <xs:documentation xml:lang="en">Fire interdiction period.</xs:documentation>
+                <xs:appinfo>
+                  <nc1ihm:Nom>Période d'interdiction</nc1ihm:Nom>
+                  <nc1ihm:Nom xml:lang="en">Interdiction period</nc1ihm:Nom>
+                </xs:appinfo>
+              </xs:annotation>
+            </xs:element>
+            <xs:element minOccurs="0" name="comment" type="nc1msgcom:CommentSectionType">
+              <xs:annotation>
+                <xs:documentation>Commentaire en texte libre.</xs:documentation>
+                <xs:documentation xml:lang="en">free text comment.</xs:documentation>
+                <xs:appinfo>
+                  <nc1ihm:Nom>Commentaire</nc1ihm:Nom>
+                  <nc1ihm:Nom xml:lang="en">comment</nc1ihm:Nom>
+                </xs:appinfo>
+              </xs:annotation>
+            </xs:element>
+          </xs:sequence>
+        </xs:extension>
+      </xs:complexContent>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

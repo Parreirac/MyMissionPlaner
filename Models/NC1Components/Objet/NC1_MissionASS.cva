@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<cva:ContextValueAssociation xmlns:cva="http://docs.oasis-open.org/codelist/ns/ContextValueAssociation/1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="urn:fra:nc1:objet:missionASS" queryBinding="xslt2" xmlns:nc1missionASS="urn:fra:nc1:objet:missionASS">
+  <!-- NC1 V.9.0.0 -->
+  <ValueLists>
+    <ValueList xml:id="nc1objcom-ActivationStatusCode" uri="../Dictionnaires/ActivationStatusCode.gc" />
+    <ValueList xml:id="nc1objcom-IsFullCode" uri="../Dictionnaires/IsFullCode.gc" />
+    <ValueList xml:id="nc1missionASS-TargetTypeCode" uri="../Dictionnaires/TargetTypeCode.gc" />
+    <ValueList xml:id="nc1missionASS-SubTargetTypeCode" uri="../Dictionnaires/SubTargetTypeCode.gc" />
+    <ValueList xml:id="nc1missionASS-TacticalLevelCode" uri="../Dictionnaires/TacticalLevelCode.gc" />
+    <ValueList xml:id="nc1missionASS-SearchedEffectCode" uri="../Dictionnaires/SearchedEffectCode.gc" />
+    <ValueList xml:id="nc1missionASS-CaliberCategoryCode" uri="../Dictionnaires/CaliberCategoryCode.gc" />
+    <ValueList xml:id="nc1missionASS-LoadTypeCode" uri="../Dictionnaires/LoadTypeCode.gc" />
+    <ValueList xml:id="nc1missionASS-MoyensAcquisitionCode" uri="../Dictionnaires/MoyensAcquisitionCode.gc" />
+    <ValueList xml:id="nc1missionASS-NatureMissionRenfCode" uri="../Dictionnaires/NatureMissionRenfCode.gc" />
+    <ValueList xml:id="nc1missionASS-MoyenAcquisitionArtCode" uri="../Dictionnaires/MoyenAcquisitionArtCode.gc" />
+    <ValueList xml:id="nc1missionASS-NatureMissionAcqCOBRACode" uri="../Dictionnaires/NatureMissionAcqCOBRACode.gc" />
+    <ValueList xml:id="nc1missionASS-TypeBatteryCode" uri="../Dictionnaires/TypeBatteryCode.gc" />
+    <ValueList xml:id="nc1missionASS-SubTypeBatteryCode" uri="../Dictionnaires/SubTypeBatteryCode.gc" />
+    <ValueList xml:id="nc1missionASS-BatteryPriorityCode" uri="../Dictionnaires/BatteryPriorityCode.gc" />
+    <ValueList xml:id="nc1missionASS-PriorityCOBRACode" uri="../Dictionnaires/PriorityCOBRACode.gc" />
+    <ValueList xml:id="nc1missionASS-TrustCode" uri="../Dictionnaires/TrustCode.gc" />
+    <ValueList xml:id="nc1missionASS-NatureMissionAcqCode" uri="../Dictionnaires/NatureMissionAcqCode.gc" />
+    <ValueList xml:id="nc1missionASS-IntelligenceActionPriorityCode" uri="../Dictionnaires/IntelligenceActionPriorityCode.gc" />
+    <ValueList xml:id="nc1missionASS-IntelligenceTypeCode" uri="../Dictionnaires/IntelligenceTypeCode.gc" />
+    <ValueList xml:id="nc1missionASS-TypeObservationCode" uri="../Dictionnaires/TypeObservationCode.gc" />
+    <ValueList xml:id="nc1sicsdicos-L105_4Code" uri="../Dictionnaires/L105_4Code.gc" />
+    <ValueList xml:id="nc1sicsdicos-L114_10Code" uri="../Dictionnaires/L114_10Code.gc" />
+  </ValueLists>
+  <Contexts>
+    <Context address="/nc1missionASS:NC1_MissionASS/@activationStatus" values="nc1objcom-ActivationStatusCode" />
+    <Context address="/nc1missionASS:NC1_MissionASS/@isFull" values="nc1objcom-IsFullCode" />
+    <Context address="/nc1missionASS:NC1_MissionASS/tacticalData/superiorFieldArtilleryMission/priorityTarget/targetNature" values="nc1missionASS-TargetTypeCode" />
+    <Context address="/nc1missionASS:NC1_MissionASS/tacticalData/superiorFieldArtilleryMission/priorityTarget/subTargetNature" values="nc1missionASS-SubTargetTypeCode" />
+    <Context address="/nc1missionASS:NC1_MissionASS/tacticalData/superiorFieldArtilleryMission/priorityTarget/tacticalLevel" values="nc1missionASS-TacticalLevelCode" />
+    <Context address="/nc1missionASS:NC1_MissionASS/tacticalData/superiorFieldArtilleryMission/searchedEffect" values="nc1missionASS-SearchedEffectCode" />
+    <Context address="/nc1missionASS:NC1_MissionASS/tacticalData/contactFieldArtilleryMission/priorityTarget/targetNature" values="nc1missionASS-TargetTypeCode" />
+    <Context address="/nc1missionASS:NC1_MissionASS/tacticalData/contactFieldArtilleryMission/priorityTarget/subTargetNature" values="nc1missionASS-SubTargetTypeCode" />
+    <Context address="/nc1missionASS:NC1_MissionASS/tacticalData/contactFieldArtilleryMission/priorityTarget/tacticalLevel" values="nc1missionASS-TacticalLevelCode" />
+    <Context address="/nc1missionASS:NC1_MissionASS/tacticalData/contactFieldArtilleryMission/searchedEffect/effectType" values="nc1missionASS-SearchedEffectCode" />
+    <Context address="/nc1missionASS:NC1_MissionASS/tacticalData/contactFieldArtilleryMission/consumption/caliber" values="nc1missionASS-CaliberCategoryCode" />
+    <Context address="/nc1missionASS:NC1_MissionASS/tacticalData/contactFieldArtilleryMission/consumption/loadType" values="nc1missionASS-LoadTypeCode" />
+    <Context address="/nc1missionASS:NC1_MissionASS/tacticalData/indepthFieldArtilleryMission/priorityTarget/targetNature" values="nc1missionASS-TargetTypeCode" />
+    <Context address="/nc1missionASS:NC1_MissionASS/tacticalData/indepthFieldArtilleryMission/priorityTarget/subTargetNature" values="nc1missionASS-SubTargetTypeCode" />
+    <Context address="/nc1missionASS:NC1_MissionASS/tacticalData/indepthFieldArtilleryMission/priorityTarget/tacticalLevel" values="nc1missionASS-TacticalLevelCode" />
+    <Context address="/nc1missionASS:NC1_MissionASS/tacticalData/indepthFieldArtilleryMission/effectByArea/searchedEffectType" values="nc1missionASS-SearchedEffectCode" />
+    <Context address="/nc1missionASS:NC1_MissionASS/tacticalData/indepthFieldArtilleryMission/acquisitionMeans" values="nc1missionASS-MoyensAcquisitionCode" />
+    <Context address="/nc1missionASS:NC1_MissionASS/tacticalData/indepthFieldArtilleryMission/consumption/caliber" values="nc1missionASS-CaliberCategoryCode" />
+    <Context address="/nc1missionASS:NC1_MissionASS/tacticalData/indepthFieldArtilleryMission/consumption/loadType" values="nc1missionASS-LoadTypeCode" />
+    <Context address="/nc1missionASS:NC1_MissionASS/tacticalData/fireReinforcementMission/fireUnitDescription/caliber" values="nc1missionASS-CaliberCategoryCode" />
+    <Context address="/nc1missionASS:NC1_MissionASS/tacticalData/fireReinforcementMission/fireReinforcementType" values="nc1missionASS-NatureMissionRenfCode" />
+    <Context address="/nc1missionASS:NC1_MissionASS/tacticalData/fireReinforcementMission/allocatedConsumption/caliber" values="nc1missionASS-CaliberCategoryCode" />
+    <Context address="/nc1missionASS:NC1_MissionASS/tacticalData/fireReinforcementMission/allocatedConsumption/loadType" values="nc1missionASS-LoadTypeCode" />
+    <Context address="/nc1missionASS:NC1_MissionASS/tacticalData/acquiringFieldArtilleryMission/resourcesType" values="nc1missionASS-MoyenAcquisitionArtCode" />
+    <Context address="/nc1missionASS:NC1_MissionASS/tacticalData/acquiringFieldArtilleryMission/acquiringCOBRA/missionNature" values="nc1missionASS-NatureMissionAcqCOBRACode" />
+    <Context address="/nc1missionASS:NC1_MissionASS/tacticalData/acquiringFieldArtilleryMission/acquiringCOBRA/equipmentPriority/type" values="nc1missionASS-TypeBatteryCode" />
+    <Context address="/nc1missionASS:NC1_MissionASS/tacticalData/acquiringFieldArtilleryMission/acquiringCOBRA/equipmentPriority/subType" values="nc1missionASS-SubTypeBatteryCode" />
+    <Context address="/nc1missionASS:NC1_MissionASS/tacticalData/acquiringFieldArtilleryMission/acquiringCOBRA/equipmentPriority/priority" values="nc1missionASS-BatteryPriorityCode" />
+    <Context address="/nc1missionASS:NC1_MissionASS/tacticalData/acquiringFieldArtilleryMission/acquiringCOBRA/missionPriority" values="nc1missionASS-PriorityCOBRACode" />
+    <Context address="/nc1missionASS:NC1_MissionASS/tacticalData/acquiringFieldArtilleryMission/acquiringCOBRA/trustLevel" values="nc1missionASS-TrustCode" />
+    <Context address="/nc1missionASS:NC1_MissionASS/tacticalData/acquiringFieldArtilleryMission/acquiring/missionNature" values="nc1missionASS-NatureMissionAcqCode" />
+    <Context address="/nc1missionASS:NC1_MissionASS/tacticalData/acquiringFieldArtilleryMission/acquiring/target/targetNature" values="nc1missionASS-TargetTypeCode" />
+    <Context address="/nc1missionASS:NC1_MissionASS/tacticalData/acquiringFieldArtilleryMission/acquiring/target/subTargetNature" values="nc1missionASS-SubTargetTypeCode" />
+    <Context address="/nc1missionASS:NC1_MissionASS/tacticalData/acquiringFieldArtilleryMission/acquiring/target/tacticalLevel" values="nc1missionASS-TacticalLevelCode" />
+    <Context address="/nc1missionASS:NC1_MissionASS/tacticalData/intelFieldArtilleryMission/intelTask/prioriteAction" values="nc1missionASS-IntelligenceActionPriorityCode" />
+    <Context address="/nc1missionASS:NC1_MissionASS/tacticalData/intelFieldArtilleryMission/intelTask/searchedFact/domain" values="nc1missionASS-IntelligenceTypeCode" />
+    <Context address="/nc1missionASS:NC1_MissionASS/tacticalData/intelFieldArtilleryMission/intelTask/searchedFact/observationType" values="nc1missionASS-TypeObservationCode" />
+    <Context address="/nc1missionASS:NC1_MissionASS/tacticalData/levelOfConfirmation" values="nc1sicsdicos-L105_4Code" />
+    <Context address="/nc1missionASS:NC1_MissionASS/tacticalData/tacticalPhase" values="nc1sicsdicos-L114_10Code" />
+  </Contexts>
+</cva:ContextValueAssociation>

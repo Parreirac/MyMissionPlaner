@@ -1,0 +1,371 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema targetNamespace="urn:fra:nc1:common:message" xmlns:nc1ihm="urn:fra:nc1:IHM" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:nc1msgcom="urn:fra:nc1:common:message" xmlns:nc1common="urn:fra:nc1:common:attribute" xmlns:nc1location="urn:fra:nc1:common:location" xmlns:nc1objcom="urn:fra:nc1:common:object" xmlns:nc12dcoord="urn:fra:nc1:objet:2dcoordinationmean" xmlns:nc13droute="urn:fra:nc1:objet:3droute" xmlns:nc1acm="urn:fra:nc1:objet:acm" xmlns:nc1airparticipant="urn:fra:nc1:objet:airparticipant" xmlns:nc1airtrack="urn:fra:nc1:objet:airtrack" xmlns:nc1cbrnevent="urn:fra:nc1:objet:cbrnevent" xmlns:nc1convoy="urn:fra:nc1:objet:convoy" xmlns:nc1event="urn:fra:nc1:objet:event" xmlns:nc1facility="urn:fra:nc1:objet:facility" xmlns:nc1fire="urn:fra:nc1:objet:fire" xmlns:nc1fireobjective="urn:fra:nc1:objet:fireobjective" xmlns:nc1freeshape="urn:fra:nc1:objet:freeshape" xmlns:nc1groundentity="urn:fra:nc1:objet:groundentity" xmlns:nc1groundparticipant="urn:fra:nc1:objet:groundparticipant" xmlns:nc1groundtrack="urn:fra:nc1:objet:groundtrack" xmlns:nc1iffprocedure="urn:fra:nc1:objet:iffprocedure" xmlns:nc1individual="urn:fra:nc1:objet:individual" xmlns:nc1intelreq="urn:fra:nc1:objet:intelrequirement" xmlns:nc1meteo="urn:fra:nc1:objet:meteo" xmlns:nc1mission="urn:fra:nc1:objet:mission" xmlns:nc1missionASA="urn:fra:nc1:objet:missionASA" xmlns:nc1missionASS="urn:fra:nc1:objet:missionASS" xmlns:nc1obstacle="urn:fra:nc1:objet:obstacle" xmlns:nc1organisation="urn:fra:nc1:objet:organisation" xmlns:nc1participant="urn:fra:nc1:objet:participant" xmlns:nc1reinforcement="urn:fra:nc1:objet:reinforcement" xmlns:nc1roe="urn:fra:nc1:objet:roe" xmlns:nc1route="urn:fra:nc1:objet:route" xmlns:nc1seaparticipant="urn:fra:nc1:objet:seaparticipant" xmlns:nc1seatrack="urn:fra:nc1:objet:seatrack" xmlns:nc1tacarea="urn:fra:nc1:objet:tacarea" xmlns:nc1tacline="urn:fra:nc1:objet:tacline" xmlns:nc1tacpoint="urn:fra:nc1:objet:tacpoint" xmlns:nc1track="urn:fra:nc1:objet:track" xmlns:nc1unit="urn:fra:nc1:objet:unit">
+  <!-- NC1 V.9.0.0 -->
+  <xs:import namespace="urn:fra:nc1:common:attribute" schemaLocation="Common.xsd" />
+  <xs:import namespace="urn:fra:nc1:common:location" schemaLocation="Location.xsd" />
+  <xs:import namespace="urn:fra:nc1:common:object" schemaLocation="Object.xsd" />
+  <xs:import namespace="urn:fra:nc1:objet:2dcoordinationmean" schemaLocation="2DCoordinationMean.xsd" />
+  <xs:import namespace="urn:fra:nc1:objet:3droute" schemaLocation="../Objet/NC1_3DRoute.xsd" />
+  <xs:import namespace="urn:fra:nc1:objet:acm" schemaLocation="../Objet/NC1_AcmWez.xsd" />
+  <xs:import namespace="urn:fra:nc1:objet:airparticipant" schemaLocation="../Objet/NC1_AirParticipant.xsd" />
+  <xs:import namespace="urn:fra:nc1:objet:airtrack" schemaLocation="../Objet/NC1_AirTrack.xsd" />
+  <xs:import namespace="urn:fra:nc1:objet:cbrnevent" schemaLocation="../Objet/NC1_CbrnEvent.xsd" />
+  <xs:import namespace="urn:fra:nc1:objet:convoy" schemaLocation="../Objet/NC1_Convoy.xsd" />
+  <xs:import namespace="urn:fra:nc1:objet:event" schemaLocation="../Objet/NC1_Event.xsd" />
+  <xs:import namespace="urn:fra:nc1:objet:facility" schemaLocation="../Objet/NC1_Facility.xsd" />
+  <xs:import namespace="urn:fra:nc1:objet:fire" schemaLocation="../Objet/NC1_Fire.xsd" />
+  <xs:import namespace="urn:fra:nc1:objet:fireobjective" schemaLocation="../Objet/NC1_FireObjective.xsd" />
+  <xs:import namespace="urn:fra:nc1:objet:freeshape" schemaLocation="../Objet/NC1_FreeShape.xsd" />
+  <xs:import namespace="urn:fra:nc1:objet:groundentity" schemaLocation="../Objet/NC1_GroundEntity.xsd" />
+  <xs:import namespace="urn:fra:nc1:objet:groundparticipant" schemaLocation="../Objet/NC1_GroundParticipant.xsd" />
+  <xs:import namespace="urn:fra:nc1:objet:groundtrack" schemaLocation="../Objet/NC1_GroundTrack.xsd" />
+  <xs:import namespace="urn:fra:nc1:objet:iffprocedure" schemaLocation="../Objet/NC1_IffProcedure.xsd" />
+  <xs:import namespace="urn:fra:nc1:objet:individual" schemaLocation="../Objet/NC1_Individual.xsd" />
+  <xs:import namespace="urn:fra:nc1:objet:intelrequirement" schemaLocation="../Objet/NC1_IntelRequirement.xsd" />
+  <xs:import namespace="urn:fra:nc1:objet:meteo" schemaLocation="../Objet/NC1_Meteo.xsd" />
+  <xs:import namespace="urn:fra:nc1:objet:mission" schemaLocation="../Objet/NC1_Mission.xsd" />
+  <xs:import namespace="urn:fra:nc1:objet:missionASA" schemaLocation="../Objet/NC1_MissionASA.xsd" />
+  <xs:import namespace="urn:fra:nc1:objet:missionASS" schemaLocation="../Objet/NC1_MissionASS.xsd" />
+  <xs:import namespace="urn:fra:nc1:objet:obstacle" schemaLocation="../Objet/NC1_Obstacle.xsd" />
+  <xs:import namespace="urn:fra:nc1:objet:organisation" schemaLocation="../Objet/NC1_Organisation.xsd" />
+  <xs:import namespace="urn:fra:nc1:objet:participant" schemaLocation="Participant.xsd" />
+  <xs:import namespace="urn:fra:nc1:objet:reinforcement" schemaLocation="../Objet/NC1_Reinforcement.xsd" />
+  <xs:import namespace="urn:fra:nc1:objet:roe" schemaLocation="../Objet/NC1_Roe.xsd" />
+  <xs:import namespace="urn:fra:nc1:objet:route" schemaLocation="../Objet/NC1_Route.xsd" />
+  <xs:import namespace="urn:fra:nc1:objet:seaparticipant" schemaLocation="../Objet/NC1_SeaParticipant.xsd" />
+  <xs:import namespace="urn:fra:nc1:objet:seatrack" schemaLocation="../Objet/NC1_SeaTrack.xsd" />
+  <xs:import namespace="urn:fra:nc1:objet:tacarea" schemaLocation="../Objet/NC1_TacArea.xsd" />
+  <xs:import namespace="urn:fra:nc1:objet:tacline" schemaLocation="../Objet/NC1_TacLine.xsd" />
+  <xs:import namespace="urn:fra:nc1:objet:tacpoint" schemaLocation="../Objet/NC1_TacPoint.xsd" />
+  <xs:import namespace="urn:fra:nc1:objet:track" schemaLocation="Track.xsd" />
+  <xs:import namespace="urn:fra:nc1:objet:unit" schemaLocation="../Objet/NC1_Unit.xsd" />
+  <xs:complexType name="AnyReferenceType">
+    <xs:annotation>
+      <xs:documentation>Permet de différencier les éléments à référencer.</xs:documentation>
+      <xs:documentation xml:lang="en">Allows to differentiate elements to be referenced.</xs:documentation>
+    </xs:annotation>
+    <xs:simpleContent>
+      <xs:extension base="nc1common:ShortTextType">
+        <xs:attribute name="attachedFile" type="nc1common:MediumTextObjectType">
+          <xs:annotation>
+            <xs:documentation>Lien vers un fichier.</xs:documentation>
+            <xs:documentation xml:lang="en">Link to a file.</xs:documentation>
+            <xs:appinfo>
+              <nc1ihm:Nom>attachedFile</nc1ihm:Nom>
+              <nc1ihm:Nom xml:lang="en">Url</nc1ihm:Nom>
+            </xs:appinfo>
+          </xs:annotation>
+        </xs:attribute>
+        <xs:attribute name="datetime" type="xs:dateTime">
+          <xs:annotation>
+            <xs:documentation>Groupe date heure.</xs:documentation>
+            <xs:documentation xml:lang="en">Group dates the hour.</xs:documentation>
+            <xs:appinfo>
+              <nc1ihm:Nom>Date Heure</nc1ihm:Nom>
+              <nc1ihm:Nom xml:lang="en">Date time</nc1ihm:Nom>
+            </xs:appinfo>
+          </xs:annotation>
+        </xs:attribute>
+        <xs:attribute name="id" type="nc1common:Nc1ObjectIdType">
+          <xs:annotation>
+            <xs:documentation>Identifiant de l'objet référencé.</xs:documentation>
+            <xs:documentation xml:lang="en">Identifier of the referenced object.</xs:documentation>
+            <xs:appinfo>
+              <nc1ihm:Nom>Id</nc1ihm:Nom>
+              <nc1ihm:Nom xml:lang="en">Id</nc1ihm:Nom>
+            </xs:appinfo>
+          </xs:annotation>
+        </xs:attribute>
+        <xs:attribute name="instance" type="nc1common:ShortTextObjectType">
+          <xs:annotation>
+            <xs:documentation>Instance de l'objet référencé.</xs:documentation>
+            <xs:documentation xml:lang="en">Context of the referenced object.</xs:documentation>
+            <xs:appinfo>
+              <nc1ihm:Nom>Instance</nc1ihm:Nom>
+              <nc1ihm:Nom xml:lang="en">Context</nc1ihm:Nom>
+            </xs:appinfo>
+          </xs:annotation>
+        </xs:attribute>
+        <xs:attribute name="type" use="required" type="nc1common:ShortTextType">
+          <xs:annotation>
+            <xs:documentation>Désigne le type de l'élément.</xs:documentation>
+            <xs:documentation xml:lang="en">Indicate the type of the element.</xs:documentation>
+            <xs:appinfo>
+              <nc1ihm:Nom>Type d'élément</nc1ihm:Nom>
+              <nc1ihm:Nom xml:lang="en">Type of element</nc1ihm:Nom>
+            </xs:appinfo>
+          </xs:annotation>
+        </xs:attribute>
+        <xs:attribute name="x" type="nc1location:LongitudeType">
+          <xs:annotation>
+            <xs:documentation>Longitude WGS84 du point (degrés décimaux).</xs:documentation>
+            <xs:documentation xml:lang="en">WGS 84 longitude of the point (decimal degrees).</xs:documentation>
+            <xs:appinfo>
+              <nc1ihm:Nom>x</nc1ihm:Nom>
+              <nc1ihm:Nom xml:lang="en">x</nc1ihm:Nom>
+            </xs:appinfo>
+          </xs:annotation>
+        </xs:attribute>
+        <xs:attribute name="y" type="nc1location:LatitudeType">
+          <xs:annotation>
+            <xs:documentation>Latitude WGS84 du point (degrés décimaux).</xs:documentation>
+            <xs:documentation xml:lang="en">WGS 84 latitude of the point (decimal degrees).</xs:documentation>
+            <xs:appinfo>
+              <nc1ihm:Nom>y</nc1ihm:Nom>
+              <nc1ihm:Nom xml:lang="en">y</nc1ihm:Nom>
+            </xs:appinfo>
+          </xs:annotation>
+        </xs:attribute>
+        <xs:attribute name="z" type="nc1location:AltitudeType">
+          <xs:annotation>
+            <xs:documentation>Altitude WGS84 du point (mètres).</xs:documentation>
+            <xs:documentation xml:lang="en">WGS84 altitude of the point (meters).</xs:documentation>
+            <xs:appinfo>
+              <nc1ihm:Nom>z</nc1ihm:Nom>
+              <nc1ihm:Nom xml:lang="en">z</nc1ihm:Nom>
+            </xs:appinfo>
+          </xs:annotation>
+        </xs:attribute>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="BaseMessageType" abstract="true">
+    <xs:annotation>
+      <xs:documentation>Base d'un message.</xs:documentation>
+      <xs:documentation xml:lang="en">Base of a message.</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" name="extVersion" type="nc1common:ExtVersType">
+        <xs:annotation>
+          <xs:documentation>Extension pour versions suivantes compatibles.</xs:documentation>
+          <xs:documentation xml:lang="en">Extension for following compatible versions.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="extFunction" type="nc1common:ExtFunctType">
+        <xs:annotation>
+          <xs:documentation>Extension pour les différentes communautés d'intérêt.</xs:documentation>
+          <xs:documentation xml:lang="en">Extension dedicated to the various communities of interest.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+    <xs:attribute name="classification" use="required" type="nc1msgcom:ClassificationCode">
+      <xs:annotation>
+        <xs:documentation>Classification de sécurité du message (ex : « CD »).</xs:documentation>
+        <xs:documentation xml:lang="en">Message security classification.</xs:documentation>
+        <xs:appinfo>
+          <nc1ihm:Nom>Classification</nc1ihm:Nom>
+          <nc1ihm:Nom xml:lang="en">Classification</nc1ihm:Nom>
+        </xs:appinfo>
+      </xs:annotation>
+    </xs:attribute>
+    <xs:attribute name="id" use="required" type="nc1msgcom:Nc1MessageIdType">
+      <xs:annotation>
+        <xs:documentation>Identifiant unique NC1 du message.</xs:documentation>
+        <xs:documentation xml:lang="en">NC1 ID of the object, generated by the creating unit.</xs:documentation>
+        <xs:appinfo>
+          <nc1ihm:Nom>Identifiant</nc1ihm:Nom>
+          <nc1ihm:Nom xml:lang="en">id</nc1ihm:Nom>
+        </xs:appinfo>
+      </xs:annotation>
+    </xs:attribute>
+    <xs:attribute name="lastChangeDatetime" use="required" type="xs:dateTime">
+      <xs:annotation>
+        <xs:documentation>Horodatage de dernière modification du message.</xs:documentation>
+        <xs:documentation xml:lang="en">Last modification timestamp.</xs:documentation>
+        <xs:appinfo>
+          <nc1ihm:Nom>Horodatage de dernière modification</nc1ihm:Nom>
+          <nc1ihm:Nom xml:lang="en">Last modification timestamp</nc1ihm:Nom>
+        </xs:appinfo>
+      </xs:annotation>
+    </xs:attribute>
+    <xs:attribute name="majorVersion" use="required" type="nc1common:Int0To99Type">
+      <xs:annotation>
+        <xs:documentation>Version majeure du référentiel NC1.</xs:documentation>
+        <xs:documentation xml:lang="en">NC1 object format major version.</xs:documentation>
+        <xs:appinfo>
+          <nc1ihm:Nom>Version majeure</nc1ihm:Nom>
+          <nc1ihm:Nom xml:lang="en">Major version</nc1ihm:Nom>
+        </xs:appinfo>
+      </xs:annotation>
+    </xs:attribute>
+    <xs:attribute name="mediumVersion" use="required" type="nc1common:Int0To99Type">
+      <xs:annotation>
+        <xs:documentation>Version de révision du référentiel NC1.</xs:documentation>
+        <xs:documentation xml:lang="en">Version of revision of the reference table NC1.</xs:documentation>
+        <xs:appinfo>
+          <nc1ihm:Nom>Version de révision</nc1ihm:Nom>
+          <nc1ihm:Nom xml:lang="en">Version of revision </nc1ihm:Nom>
+        </xs:appinfo>
+      </xs:annotation>
+    </xs:attribute>
+    <xs:attribute name="minorVersion" use="required" type="nc1common:Int0To99Type">
+      <xs:annotation>
+        <xs:documentation>Version mineure du référentiel NC1.</xs:documentation>
+        <xs:documentation xml:lang="en">NC1 standard minor version.</xs:documentation>
+        <xs:appinfo>
+          <nc1ihm:Nom>Version mineure</nc1ihm:Nom>
+          <nc1ihm:Nom xml:lang="en">Minor version</nc1ihm:Nom>
+        </xs:appinfo>
+      </xs:annotation>
+    </xs:attribute>
+    <xs:attribute name="referenceMessageId" type="nc1msgcom:ListOfIdType">
+      <xs:annotation>
+        <xs:documentation>Identifiant unique NC1 du message en référence.</xs:documentation>
+        <xs:documentation xml:lang="en">Referenced NC1 message identifier.</xs:documentation>
+        <xs:appinfo>
+          <nc1ihm:Nom>Référence</nc1ihm:Nom>
+          <nc1ihm:Nom xml:lang="en">Reference</nc1ihm:Nom>
+        </xs:appinfo>
+      </xs:annotation>
+    </xs:attribute>
+    <xs:attribute name="situation" use="required" type="nc1common:MessageTextObjectType">
+      <xs:annotation>
+        <xs:documentation>Attribut de situation (ex : « STC »).</xs:documentation>
+        <xs:documentation xml:lang="en">Context for the object.</xs:documentation>
+        <xs:appinfo>
+          <nc1ihm:Nom>Situation</nc1ihm:Nom>
+          <nc1ihm:Nom xml:lang="en">Context</nc1ihm:Nom>
+        </xs:appinfo>
+      </xs:annotation>
+    </xs:attribute>
+    <xs:attribute name="urgencyLevel" use="required" type="nc1msgcom:UrgencyLevelCode">
+      <xs:annotation>
+        <xs:documentation>Niveau d’urgence du message (ex : « ROUTINE »).</xs:documentation>
+        <xs:documentation xml:lang="en">"Message urgency level (e.g. ""ROUTINE"")".</xs:documentation>
+        <xs:appinfo>
+          <nc1ihm:Nom>Urgence</nc1ihm:Nom>
+          <nc1ihm:Nom xml:lang="en">Urgency</nc1ihm:Nom>
+        </xs:appinfo>
+      </xs:annotation>
+    </xs:attribute>
+  </xs:complexType>
+  <xs:simpleType name="ClassificationCode">
+    <xs:annotation>
+      <xs:appinfo>
+        <nc1dico:source xmlns:nc1dico="urn:fra:nc1:dictionnaires">OPL (ICD 61 du référentiel STC-E).</nc1dico:source>
+        <nc1ihm:description>Dictionnaire des niveaux de classification.</nc1ihm:description>
+        <nc1ihm:description xml:lang="en">Classification levels dictionary.</nc1ihm:description>
+      </xs:appinfo>
+      <xs:documentation>Dictionnaire des niveaux de classification.</xs:documentation>
+      <xs:documentation xml:lang="en">Classification levels dictionary.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:integer" />
+  </xs:simpleType>
+  <xs:complexType name="CommentSectionType">
+    <xs:annotation>
+      <xs:documentation>Section de commentaires d'un message.</xs:documentation>
+      <xs:documentation xml:lang="en">Comments section in a message.</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" name="comment" type="nc1common:LongTextType">
+        <xs:annotation>
+          <xs:documentation>Commentaire en texte libre.</xs:documentation>
+          <xs:documentation xml:lang="en">free text comment.</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Commentaire</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">comment</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="url" type="nc1common:MediumTextType">
+        <xs:annotation>
+          <xs:documentation>Lien vers un fichier associé au message.</xs:documentation>
+          <xs:documentation xml:lang="en">Link to a file attached to the message.</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Url</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">url</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:simpleType name="HierarchyLevelType">
+    <xs:restriction base="nc1common:ShortTextType">
+      <xs:pattern value="[a-zA-Z0-9](.[a-zA-Z0-9])*" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="ListOfIdType">
+    <xs:annotation>
+      <xs:documentation>Liste d'identifiants de message.</xs:documentation>
+      <xs:documentation xml:lang="en">List of message IDs.</xs:documentation>
+    </xs:annotation>
+    <xs:list itemType="nc1msgcom:Nc1MessageIdType" />
+  </xs:simpleType>
+  <xs:complexType name="MixedAnyType">
+    <xs:annotation>
+      <xs:documentation>Peut contenir du texte avec des références aux objets, des points de localisation, des liens fichiers ou des groupe date heure puis des objets NC1.</xs:documentation>
+      <xs:documentation xml:lang="en">Can contain of the text with references to objects, points of location, links files or group date the hour then the objects NC1.</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="mixedText">
+        <xs:annotation>
+          <xs:documentation>Zone de texte avec référence.</xs:documentation>
+          <xs:documentation xml:lang="en">Text field with reference.</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Zone de texte</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">Text field</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+        <xs:complexType mixed="true">
+          <xs:choice minOccurs="0" maxOccurs="unbounded">
+            <xs:element name="anyReference" type="nc1msgcom:AnyReferenceType">
+              <xs:annotation>
+                <xs:documentation>Peut être soit une référence objet, un point, un GDH ou un fichier.</xs:documentation>
+                <xs:documentation xml:lang="en">Can be or a reference object, a point, a GDH or a file.</xs:documentation>
+                <xs:appinfo>
+                  <nc1ihm:Nom>Reference</nc1ihm:Nom>
+                  <nc1ihm:Nom xml:lang="en">Reference</nc1ihm:Nom>
+                </xs:appinfo>
+              </xs:annotation>
+            </xs:element>
+          </xs:choice>
+        </xs:complexType>
+      </xs:element>
+      <xs:element minOccurs="0" name="objects">
+        <xs:annotation>
+          <xs:documentation>Liste d'objets liés.</xs:documentation>
+          <xs:documentation xml:lang="en">List of linked objects.</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Liste d'objets</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">List of objects</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element maxOccurs="unbounded" name="object" type="nc1objcom:BaseObjectType">
+              <xs:annotation>
+                <xs:documentation>Objet NC1.</xs:documentation>
+                <xs:documentation xml:lang="en">NC1 object.</xs:documentation>
+                <xs:appinfo>
+                  <nc1ihm:Nom>Objet NC1</nc1ihm:Nom>
+                  <nc1ihm:Nom xml:lang="en">NC1 object</nc1ihm:Nom>
+                </xs:appinfo>
+              </xs:annotation>
+            </xs:element>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:simpleType name="Nc1MessageIdType">
+    <xs:annotation>
+      <xs:documentation>Identifiant de messages NC1.</xs:documentation>
+      <xs:documentation xml:lang="en">NC1 message ID.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:nonNegativeInteger">
+      <xs:maxInclusive value="4294967295" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="UrgencyLevelCode">
+    <xs:annotation>
+      <xs:appinfo>
+        <nc1dico:source xmlns:nc1dico="urn:fra:nc1:dictionnaires">Exigence PIDS-SARC-REQ-199 du Référentiel STC-E</nc1dico:source>
+        <nc1ihm:description>Dictionnaire des niveaux d'urgence opérationnelle.</nc1ihm:description>
+        <nc1ihm:description xml:lang="en">Dictionary of the emergency levels operational.</nc1ihm:description>
+      </xs:appinfo>
+      <xs:documentation>Dictionnaire des niveaux d'urgence opérationnelle.</xs:documentation>
+      <xs:documentation xml:lang="en">Dictionary of the emergency levels operational.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:integer" />
+  </xs:simpleType>
+</xs:schema>

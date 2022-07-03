@@ -1,0 +1,181 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema targetNamespace="urn:fra:nc1:objet:groundtrack" xmlns:nc1ihm="urn:fra:nc1:IHM" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:nc1groundtrack="urn:fra:nc1:objet:groundtrack" xmlns:nc1common="urn:fra:nc1:common:attribute" xmlns:nc1com="urn:fra:nc1:common:communication" xmlns:nc1location="urn:fra:nc1:common:location" xmlns:nc1sicsdicos="urn:fra:nc1:common:sicsdicos" xmlns:nc1track="urn:fra:nc1:objet:track">
+  <!-- NC1 V.9.0.0 -->
+  <xs:import namespace="urn:fra:nc1:common:attribute" schemaLocation="../Commun/Common.xsd" />
+  <xs:import namespace="urn:fra:nc1:common:communication" schemaLocation="../Commun/Communication.xsd" />
+  <xs:import namespace="urn:fra:nc1:common:location" schemaLocation="../Commun/Location.xsd" />
+  <xs:import namespace="urn:fra:nc1:common:sicsdicos" schemaLocation="../Commun/SICS_Dictionaries.xsd" />
+  <xs:import namespace="urn:fra:nc1:objet:track" schemaLocation="../Commun/Track.xsd" />
+  <xs:element name="NC1_GroundTrack" type="nc1groundtrack:GroundTrackType">
+    <xs:annotation>
+      <xs:documentation>L’objet NC1_GroundTrack est créé suite à une observation réelle d’un mobile terrestre ami/ennemi/neutre.</xs:documentation>
+      <xs:documentation xml:lang="en">The NC1_GroundTrack object is created upon visual sighting of a friend/neutral/enemy land vehicle.</xs:documentation>
+      <xs:appinfo>
+        <nc1:type xmlns:nc1="urn:fra:nc1">Objet</nc1:type>
+        <nc1ihm:Nom>Piste terrestre</nc1ihm:Nom>
+        <nc1ihm:Nom xml:lang="en">Ground track</nc1ihm:Nom>
+        <nc1:MessH xmlns:nc1="urn:fra:nc1">Message H3.5 LandTrack</nc1:MessH>
+        <nc1:MessADatP3 xmlns:nc1="urn:fra:nc1">N/A</nc1:MessADatP3>
+        <nc1:LastNC1ModifyVersion xmlns:nc1="urn:fra:nc1">9.0.0</nc1:LastNC1ModifyVersion>
+      </xs:appinfo>
+    </xs:annotation>
+  </xs:element>
+  <xs:complexType name="GroundTrackType">
+    <xs:annotation>
+      <xs:documentation>L’objet NC1_GroundTrack est créé suite à une observation réelle d’un mobile terrestre ami/ennemi/neutre.</xs:documentation>
+      <xs:documentation xml:lang="en">The NC1_GroundTrack object is created upon visual sighting of a friend/neutral/enemy land vehicle.</xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="nc1track:TrackType">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="tacticalData" type="nc1track:TacticalDataType">
+            <xs:annotation>
+              <xs:documentation>Données tactiques.</xs:documentation>
+              <xs:documentation xml:lang="en">tactical datas.</xs:documentation>
+              <xs:appinfo>
+                <nc1ihm:Nom>Données tactiques</nc1ihm:Nom>
+                <nc1ihm:Nom xml:lang="en">tactical datas</nc1ihm:Nom>
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:element>
+          <xs:element minOccurs="0" name="specificData">
+            <xs:annotation>
+              <xs:documentation>Données spécifiques de la piste terrestre.</xs:documentation>
+              <xs:documentation xml:lang="en">Land track specific data.</xs:documentation>
+              <xs:appinfo>
+                <nc1ihm:Nom>Données spécifiques</nc1ihm:Nom>
+                <nc1ihm:Nom xml:lang="en">Specific data</nc1ihm:Nom>
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element minOccurs="0" name="activity" type="nc1sicsdicos:L115_1Code">
+                  <xs:annotation>
+                    <xs:documentation>Indicateur d’activité de la piste terrestre.</xs:documentation>
+                    <xs:documentation xml:lang="en">Land track activity indicator.</xs:documentation>
+                    <xs:appinfo>
+                      <nc1ihm:Nom>Activité</nc1ihm:Nom>
+                      <nc1ihm:Nom xml:lang="en">Activity</nc1ihm:Nom>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:element>
+                <xs:element minOccurs="0" name="generalType" type="nc1sicsdicos:L115_2Code">
+                  <xs:annotation>
+                    <xs:documentation>Type d'équipement général de la piste terrestre.</xs:documentation>
+                    <xs:documentation xml:lang="en">Land track general equipment type.</xs:documentation>
+                    <xs:appinfo>
+                      <nc1ihm:Nom>Type général</nc1ihm:Nom>
+                      <nc1ihm:Nom xml:lang="en">General type</nc1ihm:Nom>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:element>
+                <xs:element minOccurs="0" name="specificType" type="nc1sicsdicos:L115_3Code">
+                  <xs:annotation>
+                    <xs:documentation>Type d'équipement spécifique de la piste terrestre.</xs:documentation>
+                    <xs:documentation xml:lang="en">Land track specific equipment type.</xs:documentation>
+                    <xs:appinfo>
+                      <nc1ihm:Nom>Type spécifique</nc1ihm:Nom>
+                      <nc1ihm:Nom xml:lang="en">Specific type</nc1ihm:Nom>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:element>
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+          <xs:element minOccurs="0" name="comData" type="nc1com:ComDataType">
+            <xs:annotation>
+              <xs:documentation>Données de communication de la piste terrestre.</xs:documentation>
+              <xs:appinfo>
+                <nc1ihm:Nom>Données de communication</nc1ihm:Nom>
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:element>
+          <xs:element minOccurs="0" name="location">
+            <xs:annotation>
+              <xs:documentation>Localisation.</xs:documentation>
+              <xs:appinfo>
+                <nc1ihm:Nom>Localisation</nc1ihm:Nom>
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element minOccurs="0" name="name" type="nc1common:Text1To30ObjectType">
+                  <xs:annotation>
+                    <xs:documentation>Nom de baptême donné par l'opérateur à la localisation. Par exemple un nom de ville ou de lieu.</xs:documentation>
+                    <xs:appinfo>
+                      <nc1ihm:Nom>Nom</nc1ihm:Nom>
+                      <nc1ihm:Nom xml:lang="en">name</nc1ihm:Nom>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:element>
+                <xs:element name="point" type="nc1location:PointType">
+                  <xs:annotation>
+                    <xs:documentation>Point localisé.</xs:documentation>
+                    <xs:appinfo>
+                      <nc1ihm:Nom>Point</nc1ihm:Nom>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:element>
+                <xs:choice minOccurs="0">
+                  <xs:element minOccurs="0" name="groundSpeed" type="nc1common:SpeedType">
+                    <xs:annotation>
+                      <xs:documentation>Vitesse au sol de la localisation (km/h).</xs:documentation>
+                      <xs:documentation xml:lang="en">ground speed of location (km/h).</xs:documentation>
+                      <xs:appinfo>
+                        <nc1ihm:Nom>Vitesse au sol</nc1ihm:Nom>
+                        <nc1ihm:Nom xml:lang="en">ground speed</nc1ihm:Nom>
+                      </xs:appinfo>
+                    </xs:annotation>
+                  </xs:element>
+                  <xs:element minOccurs="0" name="approximateSpeed" type="nc1sicsdicos:L121_1Code">
+                    <xs:annotation>
+                      <xs:documentation>Vitesse approximative.</xs:documentation>
+                      <xs:documentation xml:lang="en">approxiamte speed.</xs:documentation>
+                      <xs:appinfo>
+                        <nc1ihm:Nom>Vitesse approximative</nc1ihm:Nom>
+                        <nc1ihm:Nom xml:lang="en">approxiamte speed</nc1ihm:Nom>
+                      </xs:appinfo>
+                    </xs:annotation>
+                  </xs:element>
+                </xs:choice>
+                <xs:element minOccurs="0" name="course" type="nc1common:AngleType">
+                  <xs:annotation>
+                    <xs:documentation>Orientation angulaire du vecteur vitesse, par rapport au Nord géographique.</xs:documentation>
+                    <xs:documentation xml:lang="en">Angular orientation of the speed vector, with respect to geographic North.</xs:documentation>
+                    <xs:appinfo>
+                      <nc1ihm:Nom>Direction</nc1ihm:Nom>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:element>
+                <xs:element minOccurs="0" name="datetime" type="xs:dateTime">
+                  <xs:annotation>
+                    <xs:documentation>Horodatage du relevé de position sur le terrain. Par défaut, l'heure de saisie dans le système.</xs:documentation>
+                    <xs:appinfo>
+                      <nc1ihm:Nom>Horodatage</nc1ihm:Nom>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:element>
+                <xs:element maxOccurs="unbounded" minOccurs="0" name="validityPeriod" type="nc1common:PeriodType">
+                  <xs:annotation>
+                    <xs:documentation>Période de validité.</xs:documentation>
+                    <xs:appinfo>
+                      <nc1ihm:Nom>Période de validité</nc1ihm:Nom>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:element>
+                <xs:element minOccurs="0" name="quality" type="nc1sicsdicos:L117_5Code">
+                  <xs:annotation>
+                    <xs:documentation>Qualité de la mesure de la localisation.</xs:documentation>
+                    <xs:appinfo>
+                      <nc1ihm:Nom>Qualité</nc1ihm:Nom>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:element>
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+</xs:schema>

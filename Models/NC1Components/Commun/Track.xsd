@@ -1,0 +1,233 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema targetNamespace="urn:fra:nc1:objet:track" xmlns:nc1ihm="urn:fra:nc1:IHM" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:nc1track="urn:fra:nc1:objet:track" xmlns:nc1common="urn:fra:nc1:common:attribute" xmlns:nc1location="urn:fra:nc1:common:location" xmlns:nc1objcom="urn:fra:nc1:common:object" xmlns:nc1sicsdicos="urn:fra:nc1:common:sicsdicos">
+  <!-- NC1 V.9.0.0 -->
+  <xs:import namespace="urn:fra:nc1:common:attribute" schemaLocation="Common.xsd" />
+  <xs:import namespace="urn:fra:nc1:common:location" schemaLocation="Location.xsd" />
+  <xs:import namespace="urn:fra:nc1:common:object" schemaLocation="Object.xsd" />
+  <xs:import namespace="urn:fra:nc1:common:sicsdicos" schemaLocation="SICS_Dictionaries.xsd" />
+  <xs:complexType name="LocationType">
+    <xs:annotation>
+      <xs:documentation>Localisation d'une piste.</xs:documentation>
+      <xs:documentation xml:lang="en">Location of a track.</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" name="name" type="nc1common:Text1To30ObjectType">
+        <xs:annotation>
+          <xs:documentation>Nom de baptême donné par l'opérateur à la localisation. Par exemple un nom de ville ou de lieu.</xs:documentation>
+          <xs:documentation xml:lang="en">Name assigned to the location, e.g. city or place name.</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Nom</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">name</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="point" type="nc1location:PointType">
+        <xs:annotation>
+          <xs:documentation>Point localisé.</xs:documentation>
+          <xs:documentation xml:lang="en">Geolocalized point.</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Point</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">Point</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="speed" type="nc1common:SpeedType">
+        <xs:annotation>
+          <xs:documentation>Vitesse au sol de la localisation (km/h).</xs:documentation>
+          <xs:documentation xml:lang="en">ground speed of location (km/h).</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Vitesse</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">Speed</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="course" type="nc1common:AngleType">
+        <xs:annotation>
+          <xs:documentation>Orientation angulaire du vecteur vitesse, par rapport au Nord géographique.</xs:documentation>
+          <xs:documentation xml:lang="en">Angular orientation of the speed vector, with respect to geographic North.</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Direction</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">Direction</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="datetime" type="xs:dateTime">
+        <xs:annotation>
+          <xs:documentation>Horodatage du relevé de position sur le terrain. Par défaut, l'heure de saisie dans le système.</xs:documentation>
+          <xs:documentation xml:lang="en">Field position report time. By default, time of the input in the system.</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Horodatage</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">Timestamp</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="validityPeriod" type="nc1common:PeriodType">
+        <xs:annotation>
+          <xs:documentation>Période de validité.</xs:documentation>
+          <xs:documentation xml:lang="en">Validity period.</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Période de validité</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">Validity period</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="quality" type="nc1sicsdicos:L117_5Code">
+        <xs:annotation>
+          <xs:documentation>Qualité de la mesure de la localisation.</xs:documentation>
+          <xs:documentation xml:lang="en">Location measurement quality.</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Qualité</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">Quality</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="TacticalDataType">
+    <xs:annotation>
+      <xs:documentation>Données tactiques d'une piste.</xs:documentation>
+      <xs:documentation xml:lang="en">Track tactical data.</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" name="name" type="nc1common:ShortTextObjectType">
+        <xs:annotation>
+          <xs:documentation>Nom de la piste affiché sur la cartographie.</xs:documentation>
+          <xs:documentation xml:lang="en">Track displayed name.</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Nom</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">name</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="symbolCode" type="nc1common:SymbolCodeType">
+        <xs:annotation>
+          <xs:documentation>Code contenant les informations de symbologie, d'identité (AMI, ENI, etc.), de nationalité, d'état de planification.</xs:documentation>
+          <xs:documentation xml:lang="en">Code specifying information about symbology, identity (Friend, enemy, …), nationality, planification status.</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Code du symbole</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">Symbol code</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="size" type="nc1sicsdicos:L104_2Code">
+        <xs:annotation>
+          <xs:documentation>Nombre d’éléments composant la piste (ex : « 2 »).</xs:documentation>
+          <xs:documentation xml:lang="en">"Number of elements the track is made of (e.g. ""2"")".</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Force</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">Force</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="eirn" type="nc1common:EirnType">
+        <xs:annotation>
+          <xs:documentation>Identifiant EIRN utilisé par la messagerie VMF.</xs:documentation>
+          <xs:documentation xml:lang="en">EIRN identifier used by VMF messaging.</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Identifiant EIRN</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">eirn id</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="tnL16" type="nc1common:Tnl16Type">
+        <xs:annotation>
+          <xs:documentation>Track Number L16.</xs:documentation>
+          <xs:documentation xml:lang="en">track number L16.</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Identifiant TNL16</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">TNL16 id</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="operationalStatusIndicator" type="nc1sicsdicos:L125_1Code">
+        <xs:annotation>
+          <xs:documentation>Indicateur d’état opérationnel.</xs:documentation>
+          <xs:documentation xml:lang="en">Operational status indicator.</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Indicateur opérationnel</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">Operational indicator</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="responsibleUnitId" type="nc1common:Nc1ObjectRefType">
+        <xs:annotation>
+          <xs:documentation>Identifiant unique de l’unité responsable du traitement de la piste.</xs:documentation>
+          <xs:documentation xml:lang="en">NC1 ID of the unit responsible for the management of the track.</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Unité responsable</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">Responsible unit</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="referenceUnitId" type="nc1common:Nc1ObjectRefType">
+        <xs:annotation>
+          <xs:documentation>Référence à l’unité d’appartenance.</xs:documentation>
+          <xs:documentation xml:lang="en">NC1 identifier of the belonging unit.</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Référence à une unité</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">Reference unit</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="reliability" type="nc1sicsdicos:L135_14Code">
+        <xs:annotation>
+          <xs:documentation>Evaluation de la fiabilité de la source d’information.</xs:documentation>
+          <xs:documentation xml:lang="en">Assessment of the reliability of the information source.</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Fiabilité</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">Assessment of the reliability of the source of information.</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="credibility" type="nc1sicsdicos:L135_15Code">
+        <xs:annotation>
+          <xs:documentation>Evaluation de la crédibilité de la source d’information.</xs:documentation>
+          <xs:documentation xml:lang="en">Assessment of the credibility of the information source.</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Crédibilité</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">Credibility</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="url" type="nc1common:MediumTextObjectType">
+        <xs:annotation>
+          <xs:documentation>Lien vers un fichier associé à l’objet.</xs:documentation>
+          <xs:documentation xml:lang="en">Link to a file associated with the object.</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Url</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">url</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="comment" type="nc1common:LongTextObjectType">
+        <xs:annotation>
+          <xs:documentation>Commentaire en texte libre.</xs:documentation>
+          <xs:documentation xml:lang="en">free text comment.</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Commentaire</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">comment</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="extVersion" type="nc1common:ExtVersType">
+        <xs:annotation>
+          <xs:documentation>Extension pour versions suivantes compatibles.</xs:documentation>
+          <xs:documentation xml:lang="en">Extension for following compatible versions.</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Extension de version</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">version extension</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="TrackType" abstract="true">
+    <xs:annotation>
+      <xs:documentation>Piste créée suite à une observation réelle d’un mobile ami/ennemi/neutre, aérien, terrestre ou maritime.</xs:documentation>
+      <xs:documentation xml:lang="en">Track created upon visual sighting of a friend/neutral/enemy, air, maritime vehicle.</xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="nc1objcom:PhysicalObjectType" />
+    </xs:complexContent>
+  </xs:complexType>
+</xs:schema>

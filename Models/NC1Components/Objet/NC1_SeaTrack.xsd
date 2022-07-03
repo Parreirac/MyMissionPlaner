@@ -1,0 +1,115 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema targetNamespace="urn:fra:nc1:objet:seatrack" xmlns:nc1ihm="urn:fra:nc1:IHM" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:nc1seatrack="urn:fra:nc1:objet:seatrack" xmlns:nc1com="urn:fra:nc1:common:communication" xmlns:nc1sicsdicos="urn:fra:nc1:common:sicsdicos" xmlns:nc1track="urn:fra:nc1:objet:track">
+  <!-- NC1 V.9.0.0 -->
+  <xs:import namespace="urn:fra:nc1:common:communication" schemaLocation="../Commun/Communication.xsd" />
+  <xs:import namespace="urn:fra:nc1:common:sicsdicos" schemaLocation="../Commun/SICS_Dictionaries.xsd" />
+  <xs:import namespace="urn:fra:nc1:objet:track" schemaLocation="../Commun/Track.xsd" />
+  <xs:element name="NC1_SeaTrack" type="nc1seatrack:SeaTrackType">
+    <xs:annotation>
+      <xs:documentation>L’objet NC1_SeaTrack est créé suite à une observation réelle d’un bâtiment de surface ami/ennemi/neutre.</xs:documentation>
+      <xs:documentation xml:lang="en">The NC1_SeaTrack object is created upon visual sighting of a friend/neutral/enemy surface ship.</xs:documentation>
+      <xs:appinfo>
+        <nc1:type xmlns:nc1="urn:fra:nc1">Objet</nc1:type>
+        <nc1ihm:Nom>Piste maritime</nc1ihm:Nom>
+        <nc1ihm:Nom xml:lang="en">Sea track</nc1ihm:Nom>
+        <nc1:MessH xmlns:nc1="urn:fra:nc1">Message H3.3 SeaTrack</nc1:MessH>
+        <nc1:MessADatP3 xmlns:nc1="urn:fra:nc1">N/A</nc1:MessADatP3>
+        <nc1:LastNC1ModifyVersion xmlns:nc1="urn:fra:nc1">9.0.0</nc1:LastNC1ModifyVersion>
+      </xs:appinfo>
+    </xs:annotation>
+  </xs:element>
+  <xs:complexType name="SeaTrackType">
+    <xs:annotation>
+      <xs:documentation>L’objet NC1_SeaTrack est créé suite à une observation réelle d’un bâtiment de surface ami/ennemi/neutre.</xs:documentation>
+      <xs:documentation xml:lang="en">The NC1_SeaTrack object is created upon visual sighting of a friend/neutral/enemy surface ship.</xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="nc1track:TrackType">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="tacticalData" type="nc1track:TacticalDataType">
+            <xs:annotation>
+              <xs:documentation>Données tactiques.</xs:documentation>
+              <xs:documentation xml:lang="en">tactical datas.</xs:documentation>
+              <xs:appinfo>
+                <nc1ihm:Nom>Données tactiques</nc1ihm:Nom>
+                <nc1ihm:Nom xml:lang="en">tactical datas</nc1ihm:Nom>
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:element>
+          <xs:element minOccurs="0" name="specificData">
+            <xs:annotation>
+              <xs:documentation>Données spécifiques de la piste maritime.</xs:documentation>
+              <xs:documentation xml:lang="en">Maritime track specific data.</xs:documentation>
+              <xs:appinfo>
+                <nc1ihm:Nom>Données spécifiques</nc1ihm:Nom>
+                <nc1ihm:Nom xml:lang="en">Specific data</nc1ihm:Nom>
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element minOccurs="0" name="activity" type="nc1sicsdicos:L140_1Code">
+                  <xs:annotation>
+                    <xs:documentation>Indicateur d’activité de la piste maritime.</xs:documentation>
+                    <xs:documentation xml:lang="en">Maritime track activity indicator.</xs:documentation>
+                    <xs:appinfo>
+                      <nc1ihm:Nom>Activité</nc1ihm:Nom>
+                      <nc1ihm:Nom xml:lang="en">Activity</nc1ihm:Nom>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:element>
+                <xs:element minOccurs="0" name="generalType" type="nc1sicsdicos:L140_2Code">
+                  <xs:annotation>
+                    <xs:documentation>Type d'équipement général de la piste maritime.</xs:documentation>
+                    <xs:documentation xml:lang="en">Maritime track general equipment type.</xs:documentation>
+                    <xs:appinfo>
+                      <nc1ihm:Nom>Type général</nc1ihm:Nom>
+                      <nc1ihm:Nom xml:lang="en">General type</nc1ihm:Nom>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:element>
+                <xs:element minOccurs="0" name="specificType" type="nc1sicsdicos:L140_3Code">
+                  <xs:annotation>
+                    <xs:documentation>Type d'équipement spécifique de la piste maritime.</xs:documentation>
+                    <xs:documentation xml:lang="en">Maritime track specific equipment type.</xs:documentation>
+                    <xs:appinfo>
+                      <nc1ihm:Nom>Type spécifique</nc1ihm:Nom>
+                      <nc1ihm:Nom xml:lang="en">Specific type</nc1ihm:Nom>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:element>
+                <xs:element minOccurs="0" name="mobilityIndicator" type="nc1sicsdicos:L135_25Code">
+                  <xs:annotation>
+                    <xs:documentation>Indicateur de mobilité.</xs:documentation>
+                    <xs:documentation xml:lang="en">Mobility indicator.</xs:documentation>
+                    <xs:appinfo>
+                      <nc1ihm:Nom>Indicateur de mobilité</nc1ihm:Nom>
+                      <nc1ihm:Nom xml:lang="en">Mobility indicator</nc1ihm:Nom>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:element>
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+          <xs:element minOccurs="0" name="comData" type="nc1com:ComDataType">
+            <xs:annotation>
+              <xs:documentation>Données de communication de la piste maritime.</xs:documentation>
+              <xs:appinfo>
+                <nc1ihm:Nom>Données de communication</nc1ihm:Nom>
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:element>
+          <xs:element minOccurs="0" name="location" type="nc1track:LocationType">
+            <xs:annotation>
+              <xs:documentation>Localisation.</xs:documentation>
+              <xs:documentation xml:lang="en">Location.</xs:documentation>
+              <xs:appinfo>
+                <nc1ihm:Nom>Localisation</nc1ihm:Nom>
+                <nc1ihm:Nom xml:lang="en">Location</nc1ihm:Nom>
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:element>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+</xs:schema>

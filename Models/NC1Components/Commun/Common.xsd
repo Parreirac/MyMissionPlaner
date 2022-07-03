@@ -1,0 +1,1342 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema targetNamespace="urn:fra:nc1:common:attribute" xmlns:nc1ihm="urn:fra:nc1:IHM" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:nc1common="urn:fra:nc1:common:attribute" xmlns:nc1sicsdicos="urn:fra:nc1:common:sicsdicos">
+  <!-- NC1 V.9.0.0 -->
+  <xs:import namespace="urn:fra:nc1:common:sicsdicos" schemaLocation="SICS_Dictionaries.xsd" />
+  <xs:simpleType name="ABNSType">
+    <xs:annotation>
+      <xs:documentation>Chaine de caractères composée de caractères alphanumériques et pouvant contenir des caractères spéciaux . , - ( et ) ainsi que le caractère 'espace'.</xs:documentation>
+      <xs:documentation xml:lang="en">Character string composed of alphanumeric characters and can contain special characters. - (and) and the character 'space'.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:pattern value="[A-Za-z0-9 \.,\-\(\)?]*" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="ABNType">
+    <xs:annotation>
+      <xs:documentation>Chaine de caractères composée uniquement de caractères alphanumériques minuscules ou majuscules.</xs:documentation>
+      <xs:documentation xml:lang="en">Character string composed only of lowercase or uppercase alphanumeric characters.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:pattern value="[A-Za-z0-9 ]*" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AlphaNumSpaceStringType">
+    <xs:annotation>
+      <xs:documentation>Chaine de caractères composée uniquement de caractères alphanumériques majuscules et du caractère espace.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:pattern value="[A-Z0-9 ]*" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AlphaNumStringType">
+    <xs:annotation>
+      <xs:documentation>Chaine de caractères composée uniquement de caractères alphanumériques majuscules.</xs:documentation>
+      <xs:documentation xml:lang="en">Alphanumeric string.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:pattern value="[A-Z0-9]*" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AngleType">
+    <xs:annotation>
+      <xs:documentation>Angle en degrés mesuré par rapport au Nord géographique, dans le sens des aiguilles d'une montre.</xs:documentation>
+      <xs:documentation xml:lang="en">Angle measured clockwise from the geographic North (degrees).</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:double">
+      <xs:maxInclusive value="360" />
+      <xs:minInclusive value="0" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="ANSType">
+    <xs:annotation>
+      <xs:documentation>Chaine de caractères composée de caractères alphanumériques et pouvant contenir des caractères spéciaux . , - ( et ).</xs:documentation>
+      <xs:documentation xml:lang="en">Character string composed of alphanumeric characters and can contain special characters. - (and).</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:pattern value="[A-Z0-9\.]*" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="ANType">
+    <xs:annotation>
+      <xs:documentation>Chaine de caractères composée uniquement de caractères alphanumériques minuscules ou majuscules.</xs:documentation>
+      <xs:documentation xml:lang="en">Character string composed only of lowercase or uppercase alphanumeric characters.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:pattern value="[A-Za-z0-9]*" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AType">
+    <xs:annotation>
+      <xs:documentation>Chaine de caractères composée uniquement de caractères alphabétiques minuscules ou majuscules.</xs:documentation>
+      <xs:documentation xml:lang="en">Character string composed only of lowercase alphabetic characters or uppercase.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:pattern value="[A-Za-z]*" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="CycleFrequencyCode">
+    <xs:annotation>
+      <xs:appinfo>
+        <nc1dico:source xmlns:nc1dico="urn:fra:nc1:dictionnaires">AdatP-3 BL11 1346/003</nc1dico:source>
+      </xs:appinfo>
+      <xs:documentation></xs:documentation>
+      <xs:documentation xml:lang="en"></xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:integer" />
+  </xs:simpleType>
+  <xs:simpleType name="Decimal0To1000000Type">
+    <xs:annotation>
+      <xs:documentation>Nombre décimal compris entre 0 et 1000000.</xs:documentation>
+      <xs:documentation xml:lang="en">Decimal number between 0 and 1000000.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:double">
+      <xs:maxInclusive value="1000000" />
+      <xs:minInclusive value="0" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="Decimal0To20Type">
+    <xs:annotation>
+      <xs:documentation>Nombre décimal compris entre 0 et 20.</xs:documentation>
+      <xs:documentation xml:lang="en">Decimal number between 0 and 20.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:double">
+      <xs:maxInclusive value="20" />
+      <xs:minInclusive value="0" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="Decimal0To99999999999999Type">
+    <xs:annotation>
+      <xs:documentation>Nombre décimal compris entre 0 et 9999999999999.</xs:documentation>
+      <xs:documentation xml:lang="en">Decimal number between 0 and 9999999999999.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:double">
+      <xs:maxInclusive value="99999999999999" />
+      <xs:minInclusive value="0" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="Decimal0To9999999999999Digits3Type">
+    <xs:annotation>
+      <xs:documentation>Nombre décimal compris entre 0 et 9999999999999, avec 3 décimales maximum.</xs:documentation>
+      <xs:documentation xml:lang="en">Decimal number between 0 and 9999999999999 with 3 decimals at most.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:decimal">
+      <xs:fractionDigits value="3" />
+      <xs:maxInclusive value="9999999999999" />
+      <xs:minInclusive value="0" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="Decimal0To99999999999Type">
+    <xs:annotation>
+      <xs:documentation>Nombre décimal compris entre 0 et 99999999999.</xs:documentation>
+      <xs:documentation xml:lang="en">Decimal number between 0 and 99999999999.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:double">
+      <xs:maxInclusive value="99999999999" />
+      <xs:minInclusive value="0" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="Decimal0To9999999999Type">
+    <xs:annotation>
+      <xs:documentation>Nombre décimal compris entre 0 et 9999999999.</xs:documentation>
+      <xs:documentation xml:lang="en">Decimal number between 0 and 9999999999.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:double">
+      <xs:maxInclusive value="9999999999" />
+      <xs:minInclusive value="0" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="Decimal0To99999999Digits3Type">
+    <xs:annotation>
+      <xs:documentation>Nombre décimal compris entre 0 et 99999999, avec 3 décimales maximum.</xs:documentation>
+      <xs:documentation xml:lang="en">decimal number between 0 and 99999999, with up to 3 decimals.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:decimal">
+      <xs:fractionDigits value="3" />
+      <xs:maxInclusive value="99999999" />
+      <xs:minInclusive value="0" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="Decimal0To99999999Type">
+    <xs:annotation>
+      <xs:documentation>Nombre décimal compris entre 0 et 99999999.</xs:documentation>
+      <xs:documentation xml:lang="en">Decimal number between 0 and 99999999.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:double">
+      <xs:maxInclusive value="99999999" />
+      <xs:minInclusive value="0" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="Decimal0To999999Type">
+    <xs:annotation>
+      <xs:documentation>Nombre décimal compris entre 0 et 999999.</xs:documentation>
+      <xs:documentation xml:lang="en">Decimal number between 0 and 999999.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:double">
+      <xs:maxInclusive value="999999" />
+      <xs:minInclusive value="0" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="Decimal0To9999Type">
+    <xs:annotation>
+      <xs:documentation>Nombre décimal compris entre 0 et 9999.</xs:documentation>
+      <xs:documentation xml:lang="en">Decimal number between 0 and 9999.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:double">
+      <xs:maxInclusive value="9999" />
+      <xs:minInclusive value="0" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="Decimal0To999Type">
+    <xs:annotation>
+      <xs:documentation>Nombre décimal compris entre 0 et 999.</xs:documentation>
+      <xs:documentation xml:lang="en">Decimal number between 0 and 999.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:double">
+      <xs:maxInclusive value="999" />
+      <xs:minInclusive value="0" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="Decimal0To99Type">
+    <xs:annotation>
+      <xs:documentation>Nombre décimal compris entre 0 et 99.</xs:documentation>
+      <xs:documentation xml:lang="en">Decimal number between 0 and 99.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:double">
+      <xs:maxInclusive value="99" />
+      <xs:minInclusive value="0" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:complexType name="DimensionType">
+    <xs:annotation>
+      <xs:documentation>Dimensions longueur, largeur, hauteur, profondeur.</xs:documentation>
+      <xs:documentation xml:lang="en">Length, width, height and depth dimensions.</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" name="length" type="nc1common:Decimal0To999999Type">
+        <xs:annotation>
+          <xs:documentation>Longueur (mètres).</xs:documentation>
+          <xs:documentation xml:lang="en">Length (meters).</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Longueur</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">Lenght</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="width" type="nc1common:Decimal0To999999Type">
+        <xs:annotation>
+          <xs:documentation>Largeur (mètres).</xs:documentation>
+          <xs:documentation xml:lang="en">Width (meters).</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Largeur</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">Width</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="height" type="nc1common:Decimal0To999999Type">
+        <xs:annotation>
+          <xs:documentation>Hauteur (mètres).</xs:documentation>
+          <xs:documentation xml:lang="en">Height (meters).</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Hauteur</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">Height</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="depth" type="nc1common:Decimal0To999999Type">
+        <xs:annotation>
+          <xs:documentation>Profondeur (mètres).</xs:documentation>
+          <xs:documentation xml:lang="en">Depth (meters).</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Profondeur</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">Depth</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:simpleType name="Duration10YearsType">
+    <xs:annotation>
+      <xs:documentation>Durée comprise entre 0 seconde et 10 ans.</xs:documentation>
+      <xs:documentation xml:lang="en">Duration between 0 seconds and 10 years.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:duration">
+      <xs:maxInclusive value="P10Y">
+        <xs:annotation>
+          <xs:documentation>10 ans.</xs:documentation>
+          <xs:documentation xml:lang="en">10 years</xs:documentation>
+        </xs:annotation>
+      </xs:maxInclusive>
+      <xs:minInclusive value="PT0S">
+        <xs:annotation>
+          <xs:documentation>0 seconde.</xs:documentation>
+          <xs:documentation xml:lang="en">0 second</xs:documentation>
+        </xs:annotation>
+      </xs:minInclusive>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="Duration1DayType">
+    <xs:annotation>
+      <xs:documentation>Durée comprise entre 0 seconde et 23 heures, 59 minutes, 59 secondes.</xs:documentation>
+      <xs:documentation xml:lang="en">Duration between 0 seconds and 23 hours, 59 minutes, 59 seconds.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:duration">
+      <xs:maxInclusive value="PT23H59M59S">
+        <xs:annotation>
+          <xs:documentation>1 jour.</xs:documentation>
+          <xs:documentation xml:lang="en">1 day</xs:documentation>
+        </xs:annotation>
+      </xs:maxInclusive>
+      <xs:minInclusive value="PT0S">
+        <xs:annotation>
+          <xs:documentation>0 seconde.</xs:documentation>
+          <xs:documentation xml:lang="en">0 second</xs:documentation>
+        </xs:annotation>
+      </xs:minInclusive>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="Duration1YearType">
+    <xs:annotation>
+      <xs:documentation>Durée comprise entre 0 seconde et 1 an.</xs:documentation>
+      <xs:documentation xml:lang="en">Duration between 0 seconds and 1 year.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:duration">
+      <xs:maxInclusive value="P1Y">
+        <xs:annotation>
+          <xs:documentation>1 an.</xs:documentation>
+          <xs:documentation xml:lang="en">1 year</xs:documentation>
+        </xs:annotation>
+      </xs:maxInclusive>
+      <xs:minInclusive value="PT0S">
+        <xs:annotation>
+          <xs:documentation>0 seconde.</xs:documentation>
+          <xs:documentation xml:lang="en">0 second</xs:documentation>
+        </xs:annotation>
+      </xs:minInclusive>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="Duration999YearsType">
+    <xs:annotation>
+      <xs:documentation>Durée comprise entre 0 seconde et 999 ans.</xs:documentation>
+      <xs:documentation xml:lang="en">Duration between 0 seconds and 999 years.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:duration">
+      <xs:maxInclusive value="P999Y">
+        <xs:annotation>
+          <xs:documentation>999 ans.</xs:documentation>
+          <xs:documentation xml:lang="en">999 years</xs:documentation>
+        </xs:annotation>
+      </xs:maxInclusive>
+      <xs:minInclusive value="PT0S">
+        <xs:annotation>
+          <xs:documentation>0 seconde.</xs:documentation>
+          <xs:documentation xml:lang="en">0 second</xs:documentation>
+        </xs:annotation>
+      </xs:minInclusive>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:complexType name="EirnType">
+    <xs:annotation>
+      <xs:documentation>L'EIRN (Entity Id Reference Number) représente l'identifiant VMF d'un objet.</xs:documentation>
+      <xs:documentation xml:lang="en">The EIRN (Entity Id Reference Number) represents the VMF identifier of an object.</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="urn" type="nc1common:Vmf_UrnType">
+        <xs:annotation>
+          <xs:documentation>Identifiant Unit Reference Number utilisé par la messagerie VMF.</xs:documentation>
+          <xs:documentation xml:lang="en">Unit Reference Number identifier used by VMF messaging.</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Identifiant URN</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">URN id</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="eisn" type="nc1common:Vmf_EisnType">
+        <xs:annotation>
+          <xs:documentation>Identifiant Entity Id Serial Number utilisé par la messagerie VMF.</xs:documentation>
+          <xs:documentation xml:lang="en">Entity Id Serial Number identifier used by VMF messaging.</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Identifiant EISN</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">eisn id</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:simpleType name="ElevationAngleType">
+    <xs:annotation>
+      <xs:documentation>Angle en degrés mesuré par rapport à l'horizon.</xs:documentation>
+      <xs:documentation xml:lang="en">Angle in degrees measured with regard to the horizon.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:double">
+      <xs:maxInclusive value="360" />
+      <xs:minInclusive value="0" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:complexType name="ExtFunctType">
+    <xs:annotation>
+      <xs:documentation>Extension pour les différentes communautés d'intérêt</xs:documentation>
+      <xs:documentation xml:lang="en">Extension dedicated to the various communities of interest.</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:any maxOccurs="unbounded" namespace="##other" processContents="lax">
+        <xs:annotation>
+          <xs:documentation>Extension pour les différentes communautés d'intérêt</xs:documentation>
+          <xs:documentation xml:lang="en">Extension dedicated to the various communities of interest.</xs:documentation>
+        </xs:annotation>
+      </xs:any>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ExtVersType">
+    <xs:annotation>
+      <xs:documentation>Extension pour les versions ultérieures</xs:documentation>
+      <xs:documentation xml:lang="en">Extension for future use.</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:any maxOccurs="unbounded" namespace="##local" processContents="lax">
+        <xs:annotation>
+          <xs:documentation>Extension pour les versions ultérieures</xs:documentation>
+          <xs:documentation xml:lang="en">Extension for future use.</xs:documentation>
+        </xs:annotation>
+      </xs:any>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:simpleType name="Int0To1000Type">
+    <xs:annotation>
+      <xs:documentation>Nombre entier compris entre 0 et 1000.</xs:documentation>
+      <xs:documentation xml:lang="en">Integer between 0 and 1000.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:unsignedShort">
+      <xs:maxInclusive value="1000" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="Int0To100Type">
+    <xs:annotation>
+      <xs:documentation>Nombre entier compris entre 0 et 100.</xs:documentation>
+      <xs:documentation xml:lang="en">Integer between 0 and 100.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:unsignedByte">
+      <xs:maxInclusive value="100" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="Int0To150Type">
+    <xs:annotation>
+      <xs:documentation>Nombre entier compris entre 0 et 150.</xs:documentation>
+      <xs:documentation xml:lang="en">Integer between 0 and 150.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:unsignedByte">
+      <xs:maxInclusive value="150" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="Int0To15Type">
+    <xs:annotation>
+      <xs:documentation>Nombre entier compris entre 0 et 15.</xs:documentation>
+      <xs:documentation xml:lang="en">Integer between 0 and 15.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:unsignedByte">
+      <xs:maxInclusive value="15" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="Int0To16383Type">
+    <xs:annotation>
+      <xs:documentation>Nombre entier compris entre 0 et 16383.</xs:documentation>
+      <xs:documentation xml:lang="en">Integer between 0 and 16383.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:unsignedShort">
+      <xs:maxInclusive value="16383" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="Int0To2147483647Type">
+    <xs:annotation>
+      <xs:documentation>Nombre entier compris entre 0 et 2147483647.</xs:documentation>
+      <xs:documentation xml:lang="en">Integer between 0 and 9999999999.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:unsignedLong">
+      <xs:maxInclusive value="2147483647" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="Int0To25000Type">
+    <xs:annotation>
+      <xs:documentation>Nombre entier compris entre 0 et 25000.</xs:documentation>
+      <xs:documentation xml:lang="en">Integer between 0 and 25000.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:unsignedShort">
+      <xs:maxInclusive value="25000" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="Int0To255Type">
+    <xs:annotation>
+      <xs:documentation>Nombre entier compris entre 0 et 255.</xs:documentation>
+      <xs:documentation xml:lang="en">Integer between 0 and 255.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:unsignedByte">
+      <xs:maxInclusive value="255" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="Int0To30000Type">
+    <xs:annotation>
+      <xs:documentation>Nombre entier compris entre 0 et 30000.</xs:documentation>
+      <xs:documentation xml:lang="en">Integer between 0 and 30000.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:unsignedShort">
+      <xs:maxInclusive value="30000" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="Int0To999999999999Type">
+    <xs:annotation>
+      <xs:documentation>Nombre entier compris entre 0 et 999999999999.</xs:documentation>
+      <xs:documentation xml:lang="en">Integer between 0 and 999999999999.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:unsignedLong">
+      <xs:maxInclusive value="999999999999" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="Int0To999999Type">
+    <xs:annotation>
+      <xs:documentation>Nombre entier compris entre 0 et 999999.</xs:documentation>
+      <xs:documentation xml:lang="en">Integer between 0 and 999999.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:unsignedInt">
+      <xs:maxInclusive value="999999" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="Int0To99999Type">
+    <xs:annotation>
+      <xs:documentation>Nombre entier compris entre 0 et 99999.</xs:documentation>
+      <xs:documentation xml:lang="en">Integer between 0 and 99999.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:unsignedInt">
+      <xs:maxInclusive value="99999" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="Int0To9999Type">
+    <xs:annotation>
+      <xs:documentation>Nombre entier compris entre 0 et 9999.</xs:documentation>
+      <xs:documentation xml:lang="en">Integer between 0 and 9999.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:unsignedShort">
+      <xs:maxInclusive value="9999" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="Int0To999Type">
+    <xs:annotation>
+      <xs:documentation>Nombre entier compris entre 0 et 999.</xs:documentation>
+      <xs:documentation xml:lang="en">Integer between 0 and 999.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:unsignedShort">
+      <xs:maxInclusive value="999" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="Int0To99Type">
+    <xs:annotation>
+      <xs:documentation>Nombre entier compris entre 0 et 99.</xs:documentation>
+      <xs:documentation xml:lang="en">Integer between 0 and 99.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:unsignedByte">
+      <xs:maxInclusive value="99" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="Int0To9Type">
+    <xs:annotation>
+      <xs:documentation>Nombre entier compris entre 0 et 9.</xs:documentation>
+      <xs:documentation xml:lang="en">Integer between 0 and 9.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:unsignedByte">
+      <xs:maxInclusive value="9" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="Int1To999999Type">
+    <xs:annotation>
+      <xs:documentation>Nombre entier compris entre 1 et 999999.</xs:documentation>
+      <xs:documentation xml:lang="en">Integer between 1 and 999999.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:unsignedInt">
+      <xs:maxInclusive value="999999" />
+      <xs:minInclusive value="1" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="Int1To99999Type">
+    <xs:annotation>
+      <xs:documentation>Nombre entier compris entre 1 et 99999.</xs:documentation>
+      <xs:documentation xml:lang="en">Integer between 1 and 99999.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:unsignedInt">
+      <xs:maxInclusive value="99999" />
+      <xs:minInclusive value="1" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="Int1To999Type">
+    <xs:annotation>
+      <xs:documentation>Nombre entier compris entre 1 et 999.</xs:documentation>
+      <xs:documentation xml:lang="en">Integer between 1 and 999.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:unsignedShort">
+      <xs:maxInclusive value="999" />
+      <xs:minInclusive value="1" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="Int1To99Type">
+    <xs:annotation>
+      <xs:documentation>Nombre entier compris entre 1 et 99.</xs:documentation>
+      <xs:documentation xml:lang="en">Integer between 1 and 99.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:unsignedByte">
+      <xs:maxInclusive value="99" />
+      <xs:minInclusive value="1" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="Int887To1140Type">
+    <xs:annotation>
+      <xs:documentation>Nombre entier compris en 887 et 1140.</xs:documentation>
+      <xs:documentation xml:lang="en">Integer between 887 and 1140.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:unsignedShort">
+      <xs:maxInclusive value="1140" />
+      <xs:minInclusive value="887" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="IntMinus63To63Type">
+    <xs:annotation>
+      <xs:documentation>Nombre entier compris entre -63 et 63.</xs:documentation>
+      <xs:documentation xml:lang="en">Integer between -63 and 63.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:byte">
+      <xs:maxInclusive value="63" />
+      <xs:minInclusive value="-63" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="IntMinus999To999Type">
+    <xs:annotation>
+      <xs:documentation>Nombre entier compris entre -999 et 999.</xs:documentation>
+      <xs:documentation xml:lang="en">Integer between -999 and 999.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:short">
+      <xs:maxInclusive value="999" />
+      <xs:minInclusive value="-999" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="LevelReferenceCode">
+    <xs:annotation>
+      <xs:appinfo>
+        <nc1dico:source xmlns:nc1dico="urn:fra:nc1:dictionnaires">NC1</nc1dico:source>
+      </xs:appinfo>
+      <xs:documentation></xs:documentation>
+      <xs:documentation xml:lang="en"></xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:integer" />
+  </xs:simpleType>
+  <xs:simpleType name="LongTextObjectType">
+    <xs:annotation>
+      <xs:documentation>Texte long inclus dans un objet NC1 de taille maximum de 500.</xs:documentation>
+      <xs:documentation xml:lang="en">Long text included in a NC1 object.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="nc1common:TextObjectType">
+      <xs:maxLength value="500" />
+      <xs:minLength value="1">
+        <xs:annotation>
+          <xs:documentation xml:lang="en">1 letter</xs:documentation>
+        </xs:annotation>
+      </xs:minLength>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="LongTextType">
+    <xs:annotation>
+      <xs:documentation>Texte long de 500 caractères.</xs:documentation>
+      <xs:documentation xml:lang="en">Long text.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="nc1common:TextType">
+      <xs:maxLength value="500" />
+      <xs:minLength value="1">
+        <xs:annotation>
+          <xs:documentation xml:lang="en">1 letter</xs:documentation>
+        </xs:annotation>
+      </xs:minLength>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="MediumTextObjectType">
+    <xs:annotation>
+      <xs:documentation>Texte moyen inclus dans un objet NC1 de taille maximum de 150.</xs:documentation>
+      <xs:documentation xml:lang="en">Medium text included in a NC1 object.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="nc1common:TextObjectType">
+      <xs:maxLength value="150" />
+      <xs:minLength value="1">
+        <xs:annotation>
+          <xs:documentation xml:lang="en">1 letter</xs:documentation>
+        </xs:annotation>
+      </xs:minLength>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="MediumTextType">
+    <xs:annotation>
+      <xs:documentation>Texte moyen de 150 caractères.</xs:documentation>
+      <xs:documentation xml:lang="en">Medium text.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="nc1common:TextType">
+      <xs:maxLength value="150" />
+      <xs:minLength value="1">
+        <xs:annotation>
+          <xs:documentation xml:lang="en">1 letter</xs:documentation>
+        </xs:annotation>
+      </xs:minLength>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="MessageTextObjectType">
+    <xs:annotation>
+      <xs:documentation>Texte court inclus dans un objet NC1 de taille maximum de 30.</xs:documentation>
+      <xs:documentation xml:lang="en">Short text included in NC1 object of maximum size shorter than 30.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="nc1common:TextObjectType">
+      <xs:maxLength value="30" />
+      <xs:minLength value="1" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:complexType name="MultiposturePeriodType">
+    <xs:annotation>
+      <xs:documentation>Période de la multiposture.</xs:documentation>
+      <xs:documentation xml:lang="en">Multiposture period.</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" name="startDatetime" type="xs:dateTime">
+        <xs:annotation>
+          <xs:documentation>Horodatage de début de la période.</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Horodatage de début</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="endDatetime" type="xs:dateTime">
+        <xs:annotation>
+          <xs:documentation>Horodatage de fin de la période.</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Horodatage de fin</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="tacticalTime" type="nc1sicsdicos:L114_10Code">
+        <xs:annotation>
+          <xs:documentation>Temps dans lequel s'inscrit la posture, correspond à un temps de l'OPORD.</xs:documentation>
+          <xs:documentation xml:lang="en">Stance tactical time from OPORD.</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Temps de manoeuvre</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">Manœuvre tactical time</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="periodDescription" type="nc1common:LongTextObjectType">
+        <xs:annotation>
+          <xs:documentation>Description en texte libre de la période de validité.</xs:documentation>
+          <xs:documentation xml:lang="en">Expiration time - free text.</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Description libre</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">Free description</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:simpleType name="Nc1MessageTypeCode">
+    <xs:annotation>
+      <xs:appinfo>
+        <nc1dico:source xmlns:nc1dico="urn:fra:nc1:dictionnaires">NC1</nc1dico:source>
+        <nc1ihm:description>Dictionnaire des types de messages NC1.</nc1ihm:description>
+        <nc1ihm:description xml:lang="en">Dictionary of the types of messages NC1.</nc1ihm:description>
+      </xs:appinfo>
+      <xs:documentation>Dictionnaire des types de messages NC1.</xs:documentation>
+      <xs:documentation xml:lang="en">Dictionary of the types of messages NC1.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:integer" />
+  </xs:simpleType>
+  <xs:simpleType name="Nc1ObjectIdType">
+    <xs:annotation>
+      <xs:documentation>Identifiant unique NC1.</xs:documentation>
+      <xs:documentation xml:lang="en">NC1 ID.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:maxLength value="14" />
+      <xs:minLength value="5" />
+      <xs:pattern value="([1-5]?[0-9]|6[0-3])(:(1638[0-3]|163[0-7][0-9]|16[0-2][0-9]{2}|1[0-5][0-9]{3}|[1-9][0-9]{3}|[1-9][0-9]{2}|[1-9][0-9]|[0-9])){2}">
+        <xs:annotation>
+          <xs:documentation>Nombre entre 0 et 63 sans 0 de padding, suivi de ":", suivi d'un nombre entre 0 et 16383 sans 0 de padding, suivi de ":", suivi d'un nombre entre 0 et 16383 sans 0 de padding.</xs:documentation>
+          <xs:documentation xml:lang="en">Integer between 0 and 63 without padding 0, followed by ":", followed by an integer between 0 and 16383 without padding 0, followed by ":", followed by an integer between 0 and 16383 without padding 0.</xs:documentation>
+        </xs:annotation>
+      </xs:pattern>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:complexType name="Nc1ObjectRefType">
+    <xs:annotation>
+      <xs:documentation>Référence à un objet NC1 : identifiant unique de l'objet NC1, avec ou sans instance.</xs:documentation>
+      <xs:documentation xml:lang="en">Reference to an object NC1: unique identifier of the object NC1, with or without context.</xs:documentation>
+    </xs:annotation>
+    <xs:attribute name="id" use="required" type="nc1common:Nc1ObjectIdType">
+      <xs:annotation>
+        <xs:documentation>Identifiant de l'objet.</xs:documentation>
+        <xs:documentation xml:lang="en">Identifier of the object.</xs:documentation>
+        <xs:appinfo>
+          <nc1ihm:Nom>Id</nc1ihm:Nom>
+          <nc1ihm:Nom xml:lang="en">Id</nc1ihm:Nom>
+        </xs:appinfo>
+      </xs:annotation>
+    </xs:attribute>
+    <xs:attribute name="instance" type="nc1common:ShortTextObjectType">
+      <xs:annotation>
+        <xs:documentation>Instance de l'objet.</xs:documentation>
+        <xs:documentation xml:lang="en">Context of the object.</xs:documentation>
+        <xs:appinfo>
+          <nc1ihm:Nom>Instance</nc1ihm:Nom>
+          <nc1ihm:Nom xml:lang="en">Context</nc1ihm:Nom>
+        </xs:appinfo>
+      </xs:annotation>
+    </xs:attribute>
+  </xs:complexType>
+  <xs:simpleType name="NicCodeType">
+    <xs:annotation>
+      <xs:documentation>Code NIC (National Item Code).</xs:documentation>
+      <xs:documentation xml:lang="en">NIC code (National Item Code).</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="nc1common:AlphaNumStringType">
+      <xs:maxLength value="20" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:complexType name="PeriodType">
+    <xs:annotation>
+      <xs:documentation>Période de temps.</xs:documentation>
+      <xs:documentation xml:lang="en">Time period.</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="startDatetime" type="xs:dateTime">
+        <xs:annotation>
+          <xs:documentation>Horodatage de début de la période.</xs:documentation>
+          <xs:documentation xml:lang="en">Timestamp of the beginning of the period.</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Horodatage de début</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">Period start timestamp</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="duration" type="nc1common:Duration10YearsType">
+        <xs:annotation>
+          <xs:documentation>Durée de la période.</xs:documentation>
+          <xs:documentation xml:lang="en">Period duration.</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Durée</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">Duration</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="QualifiedDatetimeType">
+    <xs:annotation>
+      <xs:documentation>Horodatage avec qualifiant d’horaire.</xs:documentation>
+      <xs:documentation xml:lang="en">Timestamp with time qualifier.</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" name="qualifier" type="nc1sicsdicos:L111_14Code">
+        <xs:annotation>
+          <xs:documentation>Qualifiant horaire (ex : « AFTER »).</xs:documentation>
+          <xs:documentation xml:lang="en">"Time qualifier (e.g. ""AFTER"")".</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Qualifiant</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">Qualifier</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="datetime" type="xs:dateTime">
+        <xs:annotation>
+          <xs:documentation>Horodatage.</xs:documentation>
+          <xs:documentation xml:lang="en">Timestamp.</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Horodatage</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">Timestamp</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:simpleType name="RatioType">
+    <xs:annotation>
+      <xs:documentation>Nombre décimal entre 0 et 1</xs:documentation>
+      <xs:documentation xml:lang="en">Decimal number between 0 and 1.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:double">
+      <xs:maxInclusive value="1" />
+      <xs:minInclusive value="0" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="ShortTextObjectType">
+    <xs:annotation>
+      <xs:documentation>Texte court inclus dans un objet NC1 de taille maximum de 20.
+</xs:documentation>
+      <xs:documentation xml:lang="en">Short text included in a NC1 object.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="nc1common:TextLightObjectType">
+      <xs:maxLength value="20" />
+      <xs:minLength value="1">
+        <xs:annotation>
+          <xs:documentation xml:lang="en">1 letter</xs:documentation>
+        </xs:annotation>
+      </xs:minLength>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="ShortTextType">
+    <xs:annotation>
+      <xs:documentation>Texte court de 20 caractères.
+</xs:documentation>
+      <xs:documentation xml:lang="en">Short text.
+</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="nc1common:TextLightType">
+      <xs:maxLength value="20" />
+      <xs:minLength value="1">
+        <xs:annotation>
+          <xs:documentation xml:lang="en">1 letter</xs:documentation>
+        </xs:annotation>
+      </xs:minLength>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="SpeedType">
+    <xs:annotation>
+      <xs:documentation>Vitesse (km/h).</xs:documentation>
+      <xs:documentation xml:lang="en">Speed (km/h).</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:short">
+      <xs:maxInclusive value="2000" />
+      <xs:minInclusive value="0" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="Stnl16Type">
+    <xs:annotation>
+      <xs:documentation>Source Track Number Liaison 16, sur 15 bits sous la forme de 5 octaux.</xs:documentation>
+      <xs:documentation xml:lang="en">L16 Track Number as a 5 octal figures over 15 bits.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:pattern value="[0-7]{5}" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="SymbolCodeType">
+    <xs:annotation>
+      <xs:documentation>Code de symbologie, préfixé par le standard utilisé.</xs:documentation>
+      <xs:documentation xml:lang="en">Symbol code and prefix of the used standard.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:maxLength value="21" />
+      <xs:minLength value="16" />
+      <xs:pattern value="[A-Z0-9]*:[A-Z0-9\-]{15}" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="Text1To10ABNSType">
+    <xs:annotation>
+      <xs:documentation>Texte entre 1 et 10 caractères alphabétiques, blanc, numériques ou spéciaux.</xs:documentation>
+      <xs:documentation xml:lang="en">1 to 10 characters string: alphabet., numeric, space or special.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="nc1common:ABNSType">
+      <xs:maxLength value="10" />
+      <xs:minLength value="1" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="Text1To10ANType">
+    <xs:annotation>
+      <xs:documentation></xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="nc1common:ANType">
+      <xs:maxLength value="10" />
+      <xs:minLength value="1" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="Text1To15ANSType">
+    <xs:annotation>
+      <xs:documentation>Texte entre 1 et 15 caractères alphabétiques, numériques, ou spéciaux.</xs:documentation>
+      <xs:documentation xml:lang="en">1 to 15 characters string: alphabet., numeric, space or special.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="nc1common:ANSType">
+      <xs:maxLength value="15" />
+      <xs:minLength value="1" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="Text1To15Type">
+    <xs:annotation>
+      <xs:documentation>Texte court de 15 caractères.</xs:documentation>
+      <xs:documentation xml:lang="en">15 characters short text.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="nc1common:TextLightType">
+      <xs:maxLength value="15" />
+      <xs:minLength value="1" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="Text1To16ABNSType">
+    <xs:annotation>
+      <xs:documentation>Texte entre 1 et 16 caractères alphabétiques, blanc, numériques ou spéciaux.</xs:documentation>
+      <xs:documentation xml:lang="en">1 to 16 characters string: alphabet., numeric, space or special.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="nc1common:ABNSType">
+      <xs:maxLength value="16" />
+      <xs:minLength value="1" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="Text1To18ABNSType">
+    <xs:annotation>
+      <xs:documentation>Texte entre 1 et 18 caractères alphabétiques, blanc, numériques ou spéciaux.</xs:documentation>
+      <xs:documentation xml:lang="en">1 to 18 characters string: alphabet., numeric, space or special.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="nc1common:ABNSType">
+      <xs:maxLength value="18" />
+      <xs:minLength value="1" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="Text1To20XType">
+    <xs:annotation>
+      <xs:documentation>Texte entre 1 et 20 caractères alphabétiques, blanc, numériques, spéciaux, ou étendus.</xs:documentation>
+      <xs:documentation xml:lang="en">1 to 20 characters string: alphabet., numeric, space, special or extended.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="nc1common:XType">
+      <xs:maxLength value="20" />
+      <xs:minLength value="1" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="Text1To30ABNSType">
+    <xs:annotation>
+      <xs:documentation>Texte entre 1 et 30 caractères alphabétiques, blanc, numériques ou spéciaux.</xs:documentation>
+      <xs:documentation xml:lang="en">1 to 30 characters string: alphabet., numeric, space or special.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="nc1common:ABNSType">
+      <xs:maxLength value="30" />
+      <xs:minLength value="1" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="Text1To30ObjectType">
+    <xs:annotation>
+      <xs:documentation>Texte court de 30 caractères inclus dans un objet NC1.</xs:documentation>
+      <xs:documentation xml:lang="en">30 characters short text included in a NC1 object.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="nc1common:TextObjectType">
+      <xs:maxLength value="30" />
+      <xs:minLength value="1" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="Text1To30Type">
+    <xs:annotation>
+      <xs:documentation>Texte court de 30 caractères.</xs:documentation>
+      <xs:documentation xml:lang="en">30 characters short text.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="nc1common:TextLightType">
+      <xs:maxLength value="30" />
+      <xs:minLength value="1" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="Text1To38ABNSType">
+    <xs:annotation>
+      <xs:documentation>Texte entre 1 et 38 caractères alphabétiques, blanc, numériques ou spéciaux.</xs:documentation>
+      <xs:documentation xml:lang="en">1 to 38 characters string: alphabet., numeric, space or special.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="nc1common:ABNSType">
+      <xs:maxLength value="38" />
+      <xs:minLength value="1" />
+      <xs:pattern value="[A-Z0-9 \.,\-\(\)?]*" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="Text1To38XType">
+    <xs:annotation>
+      <xs:documentation>Texte entre 1 et 38 caractères alphabétiques, blanc, numériques, spéciaux, ou étendus.</xs:documentation>
+      <xs:documentation xml:lang="en">1 to 38 characters string: alphabet., numeric, space, special or extended.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="nc1common:XType">
+      <xs:maxLength value="38" />
+      <xs:minLength value="1" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="Text1To3ANType">
+    <xs:annotation>
+      <xs:documentation>Texte entre 1 et 3 caractères alphanumériques.</xs:documentation>
+      <xs:documentation xml:lang="en">1 to 3 characters string: alphanumeric..</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="nc1common:ANType">
+      <xs:maxLength value="3" />
+      <xs:minLength value="1" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="Text1To40Type">
+    <xs:annotation>
+      <xs:documentation>Texte court de 40 caractères.</xs:documentation>
+      <xs:documentation xml:lang="en">40 characters short text.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="nc1common:TextLightType">
+      <xs:maxLength value="40" />
+      <xs:minLength value="1" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="Text1To4ANType">
+    <xs:annotation>
+      <xs:documentation>Texte entre 1 et 4 caractères alphanumériques.</xs:documentation>
+      <xs:documentation xml:lang="en">Text between 1 and 4 alphanumeric characters.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="nc1common:ANType">
+      <xs:maxLength value="4" />
+      <xs:minLength value="1" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="Text1To50Type">
+    <xs:annotation>
+      <xs:documentation>Texte court de 50 caractères.</xs:documentation>
+      <xs:documentation xml:lang="en">50 characters short text.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="nc1common:TextLightType">
+      <xs:maxLength value="50" />
+      <xs:minLength value="1" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="Text1To54ABNSType">
+    <xs:annotation>
+      <xs:documentation>Texte entre 1 et 54 caractères alphabétiques, blanc, numériques ou spéciaux.</xs:documentation>
+      <xs:documentation xml:lang="en">1 to 54 characters string: alphabet., numeric, space or special.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="nc1common:ABNSType">
+      <xs:maxLength value="54" />
+      <xs:minLength value="1" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="Text1To5ANType">
+    <xs:annotation>
+      <xs:documentation>Texte entre 1 et 5 caractères alphanumériques.</xs:documentation>
+      <xs:documentation xml:lang="en">1 to 5 characters string: alphanumeric..</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="nc1common:ANType">
+      <xs:maxLength value="5" />
+      <xs:minLength value="1" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="Text1To6ABNSType">
+    <xs:annotation>
+      <xs:documentation>Texte entre 1 et 6 caractères alphabétiques, blanc, numériques ou spéciaux.</xs:documentation>
+      <xs:documentation xml:lang="en">1 to 6 characters string: alphabet., numeric, space or special.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="nc1common:ABNSType">
+      <xs:maxLength value="6" />
+      <xs:minLength value="1" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="Text1To8ABNSType">
+    <xs:annotation>
+      <xs:documentation>Texte entre 1 et 8 caractères alphabétiques, blanc, numériques ou spéciaux.</xs:documentation>
+      <xs:documentation xml:lang="en">1 to 8 characters string: alphabet., numeric, space or special.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="nc1common:ABNSType">
+      <xs:maxLength value="8" />
+      <xs:minLength value="1" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="Text1To8ANType">
+    <xs:annotation>
+      <xs:documentation>Texte entre 1 et 8 caractères alphanumériques.</xs:documentation>
+      <xs:documentation xml:lang="en">1 to 8 characters string: alphanumeric..</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="nc1common:ANType">
+      <xs:maxLength value="8" />
+      <xs:minLength value="1" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="Text1To99ABNSType">
+    <xs:annotation>
+      <xs:documentation>Texte entre 1 et 99 caractères alphabétiques, blanc, numériques ou spéciaux.</xs:documentation>
+      <xs:documentation xml:lang="en">1 to 99 characters string: alphabet., numeric, space or special.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="nc1common:ABNSType">
+      <xs:maxLength value="99" />
+      <xs:minLength value="1">
+        <xs:annotation>
+          <xs:documentation xml:lang="en">1 letter</xs:documentation>
+        </xs:annotation>
+      </xs:minLength>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="Text1To99XType">
+    <xs:annotation>
+      <xs:documentation>Texte entre 1 et 99 caractères alphabétiques, blanc, numériques, spéciaux, ou étendus.</xs:documentation>
+      <xs:documentation xml:lang="en">1 to 99 characters string: alphabet., numeric, space, special or extended.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="nc1common:XType">
+      <xs:maxLength value="99" />
+      <xs:minLength value="1" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="Text1To9ABNSType">
+    <xs:annotation>
+      <xs:documentation>Texte entre 1 et 9 caractères alphabétiques, blanc, numériques ou spéciaux.</xs:documentation>
+      <xs:documentation xml:lang="en">1 to 8 characters string: alphabet., numeric, space or special.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="nc1common:ABNSType">
+      <xs:maxLength value="9" />
+      <xs:minLength value="1" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="Text2To2AType">
+    <xs:annotation>
+      <xs:documentation>Texte de deux lettres alphabétiques majuscules.</xs:documentation>
+      <xs:documentation xml:lang="en">2 characters string, uppercase letters.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="nc1common:AType">
+      <xs:pattern value="[A-Z]{2}" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="Text2To3ANType">
+    <xs:annotation>
+      <xs:documentation>Texte entre 2 et 3 caractères alphanumériques.</xs:documentation>
+      <xs:documentation xml:lang="en">2 to 3 characters string: alphanumeric..</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="nc1common:ANType">
+      <xs:maxLength value="3" />
+      <xs:minLength value="2" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="Text2To6ANType">
+    <xs:annotation>
+      <xs:documentation>Texte entre 2 et 6 caractères alphanumériques.</xs:documentation>
+      <xs:documentation xml:lang="en">2 to 6 characters string: alphanumeric..</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="nc1common:ANType">
+      <xs:maxLength value="6" />
+      <xs:minLength value="2" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="Text3To6ANType">
+    <xs:annotation>
+      <xs:documentation>Texte entre 3 et 6 caractères alphanumériques.</xs:documentation>
+      <xs:documentation xml:lang="en">3 to 6 characters string: alphanumeric..</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="nc1common:ANType">
+      <xs:maxLength value="6" />
+      <xs:minLength value="3" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="Text4To8AType">
+    <xs:annotation>
+      <xs:documentation>Texte entre 4 et 8 caractères alphabétiques.</xs:documentation>
+      <xs:documentation xml:lang="en">4 to 8 characters string: alphanumeric..</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="nc1common:AType">
+      <xs:maxLength value="8" />
+      <xs:minLength value="4" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="Text5To20ABNType">
+    <xs:annotation>
+      <xs:documentation>Texte entre 5 et 20 caractères alphanumériques ou blanc..</xs:documentation>
+      <xs:documentation xml:lang="en">5 to 20 characters string: alphanumeric. or space.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="nc1common:ABNType">
+      <xs:maxLength value="20" />
+      <xs:minLength value="5" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="TextLightObjectType">
+    <xs:annotation>
+      <xs:documentation>Jeu des 111 caractères pour les objets NC1.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:pattern value="[A-Za-z0-9àâäéèêëïîôöùûüÿç .,\-\(\)?!@#$%^&amp;*=_+\[\]\{\}\\&quot;';&lt;&gt;~|€/:]*" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="TextLightType">
+    <xs:annotation>
+      <xs:documentation>Jeu des 173 caractères pour les messages NC1. Identique TextType sans les 2 caractères CR et LF</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:pattern value="[A-Za-z0-9àâäéèêëïîôöùûüÿç .,\-\(\)?!@#$%^&amp;*=_+\[\]{}\\&quot;';&lt;&gt;~|€/:ÇåìÄÅÉæÆòÖÜøØáíóúñÑ¡«»ÁÂÀãÃðÐÊËÈÍÎÏÌÓßÔÒõÕµÚÛÙýÝ§°¿¢®&#x0009;&#x0060;&#x00A0;&#x0152;&#x0153;&#x2012;&#x2013;&#x2019;&#x2026;]*" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="TextObjectType">
+    <xs:annotation>
+      <xs:documentation>Jeu des 113 caractères pour les objets NC1.</xs:documentation>
+      <xs:documentation xml:lang="en">113 characters set for NC1 objects.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:pattern value="[A-Za-z0-9àâäéèêëïîôöùûüÿç .,\-\(\)?!@#$%^&amp;*=_+\[\]\{\}\\&quot;';&lt;&gt;~|€/:\n\r]*" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="TextType">
+    <xs:annotation>
+      <xs:documentation>Jeu des 175 caractères pour les messages NC1.</xs:documentation>
+      <xs:documentation xml:lang="en">Set of 182 characters for the NC1 messages.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:pattern value="[A-Za-z0-9àâäéèêëïîôöùûüÿç .,\-\(\)?!@#$%^&amp;*=_+\[\]{}\\&quot;';&lt;&gt;~|€/:\n\rÇåìÄÅÉæÆòÖÜøØáíóúñÑ¡«»ÁÂÀãÃðÐÊËÈÍÎÏÌÓßÔÒõÕµÚÛÙýÝ§°¿¢®&#x0009;&#x0060;&#x00A0;&#x0152;&#x0153;&#x2012;&#x2013;&#x2019;&#x2026;]*" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="Tnl16Type">
+    <xs:annotation>
+      <xs:documentation>Track Number Liaison 16, ou identifiant JRE, sur 19 bits sous la forme AANNN où A est un alphanumérique restreint à 5 bits et N est un numérique restreint à 3 bits (chiffre octal).</xs:documentation>
+      <xs:documentation xml:lang="en">L16 Track Number.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:maxLength value="5" />
+      <xs:minLength value="5" />
+      <xs:pattern value="[0-7A-HJ-NP-Z]{2}[0-7]{3}" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="TnoType">
+    <xs:annotation>
+      <xs:documentation>Numéro d’objectif (Target Number).</xs:documentation>
+      <xs:documentation xml:lang="en">Target number.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:maxLength value="6" />
+      <xs:minLength value="6" />
+      <xs:pattern value="[A-Z]{2}[0-9]{4}" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="Vmf_EisnType">
+    <xs:annotation>
+      <xs:documentation>Entity Id Serial Number, identifiant de la messagerie VMF sur 32 bits, formalisé par un nombre entier compris entre 0 et 4294967295.
+</xs:documentation>
+      <xs:documentation xml:lang="en">Entity Id Serial Number, identifier of the messaging VMF of 32 bits, formalized by an integer between 0 and 4294967295.
+</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:unsignedLong">
+      <xs:maxInclusive value="4294967295" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="Vmf_UrnType">
+    <xs:annotation>
+      <xs:documentation>Unit Reference Number, identifiant de la messagerie VMF sur 24 bits, formalisé par un nombre entier compris entre 0 et 16777215.</xs:documentation>
+      <xs:documentation xml:lang="en">Unit Reference Number, identifier of the messaging VMF 24 bits, formality by an integer between 0 and 16,777,215.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:unsignedLong">
+      <xs:maxInclusive value="16777215" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="WideTextObjectType">
+    <xs:annotation>
+      <xs:documentation>Texte très long inclus dans un objet NC1.</xs:documentation>
+      <xs:documentation xml:lang="en">Very long text included in a NC1 object.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="nc1common:TextObjectType">
+      <xs:maxLength value="7680" />
+      <xs:minLength value="1">
+        <xs:annotation>
+          <xs:documentation xml:lang="en">1 letter</xs:documentation>
+        </xs:annotation>
+      </xs:minLength>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="WideTextType">
+    <xs:annotation>
+      <xs:documentation>Texte très long.</xs:documentation>
+      <xs:documentation xml:lang="en">Very long text.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="nc1common:TextType">
+      <xs:maxLength value="7680" />
+      <xs:minLength value="1">
+        <xs:annotation>
+          <xs:documentation xml:lang="en">1 letter</xs:documentation>
+        </xs:annotation>
+      </xs:minLength>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="XType">
+    <xs:annotation>
+      <xs:documentation>Chaine de caractères composée de caractères alphanumériques et pouvant contenir des caractères spéciaux .,-()!@#$%^&amp;*=_+\[\]\\"';&lt;&gt;~|.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:pattern value="[A-Za-z0-9 .,\-\(\)!@#$%^&amp;*=_+\[\]\\&quot;';&lt;&gt;~|]*" />
+    </xs:restriction>
+  </xs:simpleType>
+</xs:schema>

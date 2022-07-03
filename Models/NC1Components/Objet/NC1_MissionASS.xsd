@@ -1,0 +1,1618 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema targetNamespace="urn:fra:nc1:objet:missionASS" xmlns:nc1ihm="urn:fra:nc1:IHM" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:nc1missionASS="urn:fra:nc1:objet:missionASS" xmlns:nc1common="urn:fra:nc1:common:attribute" xmlns:nc1objcom="urn:fra:nc1:common:object" xmlns:nc1sicsdicos="urn:fra:nc1:common:sicsdicos">
+  <!-- NC1 V.9.0.0 -->
+  <xs:import namespace="urn:fra:nc1:common:attribute" schemaLocation="../Commun/Common.xsd" />
+  <xs:import namespace="urn:fra:nc1:common:object" schemaLocation="../Commun/Object.xsd" />
+  <xs:import namespace="urn:fra:nc1:common:sicsdicos" schemaLocation="../Commun/SICS_Dictionaries.xsd" />
+  <xs:element name="NC1_MissionASS" type="nc1missionASS:MissionASSType">
+    <xs:annotation>
+      <xs:documentation></xs:documentation>
+      <xs:appinfo>
+        <nc1:type xmlns:nc1="urn:fra:nc1">Objet</nc1:type>
+        <nc1ihm:Nom>Missions de l'artillerie sol-sol</nc1ihm:Nom>
+        <nc1ihm:Nom xml:lang="en">Field Artillery Missions</nc1ihm:Nom>
+        <nc1:MessH xmlns:nc1="urn:fra:nc1">N/A</nc1:MessH>
+        <nc1:MessADatP3 xmlns:nc1="urn:fra:nc1">N/A</nc1:MessADatP3>
+        <nc1:LastNC1ModifyVersion xmlns:nc1="urn:fra:nc1">9.0.0</nc1:LastNC1ModifyVersion>
+      </xs:appinfo>
+    </xs:annotation>
+  </xs:element>
+  <xs:complexType name="AllocatedConsumptionType">
+    <xs:annotation>
+      <xs:documentation>Description des consommations allouées.</xs:documentation>
+      <xs:documentation xml:lang="en">allocated consumptions description.</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="caliber" type="nc1missionASS:CaliberCategoryCode">
+        <xs:annotation>
+          <xs:documentation>Description du lanceur.</xs:documentation>
+          <xs:documentation xml:lang="en">descritpion of caliber.</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Catégorie calibre</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">caliber category</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="otherCaliber" type="nc1common:ShortTextObjectType">
+        <xs:annotation>
+          <xs:documentation>Autre calibre.</xs:documentation>
+          <xs:documentation xml:lang="en">other caliber.</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Autre calibre</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">other caliber</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="loadType" type="nc1missionASS:LoadTypeCode">
+        <xs:annotation>
+          <xs:documentation>Description du type de chargement en fonction du calibre.</xs:documentation>
+          <xs:documentation xml:lang="en">Description of the type of loading according to the caliber.</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Type de chargement</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">load type</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="allowedAmmo" type="nc1common:Int0To9999Type">
+        <xs:annotation>
+          <xs:documentation>Quantité Allouée.</xs:documentation>
+          <xs:documentation xml:lang="en">allocated quantity.</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Quantité Allouée</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">allocated quantity</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="usedAmmo" type="nc1common:Int0To9999Type">
+        <xs:annotation>
+          <xs:documentation>Quantité Consommée.</xs:documentation>
+          <xs:documentation xml:lang="en">consumed quantity.</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Quantité Consommée</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">consumed quantity</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="AllottedQuantityType">
+    <xs:annotation>
+      <xs:documentation>Description des quantités réparties.</xs:documentation>
+      <xs:documentation xml:lang="en">Description of the quantities distributed.</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="plannedQuantity" type="nc1common:Int0To9999Type">
+        <xs:annotation>
+          <xs:documentation>Quantité de consommation planifiée.</xs:documentation>
+          <xs:documentation xml:lang="en">planned consumption quantity.</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Quantité planifiée</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">planned quantity</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="opportunityQuantity" type="nc1common:Int0To9999Type">
+        <xs:annotation>
+          <xs:documentation>Quantité opportunité.</xs:documentation>
+          <xs:documentation xml:lang="en">opportunity quantity.</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Quantité opportunité</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">opportunity quantity</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:simpleType name="BatteryPriorityCode">
+    <xs:annotation>
+      <xs:appinfo>
+        <nc1dico:source xmlns:nc1dico="urn:fra:nc1:dictionnaires">NCi+</nc1dico:source>
+        <nc1ihm:description>Priorité de la batterie.</nc1ihm:description>
+        <nc1ihm:description xml:lang="en">Battery priority.</nc1ihm:description>
+      </xs:appinfo>
+      <xs:documentation>Priorité de la batterie.</xs:documentation>
+      <xs:documentation xml:lang="en">Battery priority.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:integer" />
+  </xs:simpleType>
+  <xs:simpleType name="CaliberCategoryCode">
+    <xs:annotation>
+      <xs:appinfo>
+        <nc1dico:source xmlns:nc1dico="urn:fra:nc1:dictionnaires">ATLAS</nc1dico:source>
+        <nc1ihm:description>Catégorie de calibre.</nc1ihm:description>
+        <nc1ihm:description xml:lang="en">Caliber category.</nc1ihm:description>
+      </xs:appinfo>
+      <xs:documentation>Catégorie de calibre.</xs:documentation>
+      <xs:documentation xml:lang="en">Caliber category.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:integer" />
+  </xs:simpleType>
+  <xs:complexType name="ConsumptionType">
+    <xs:annotation>
+      <xs:documentation>Description des consommations.</xs:documentation>
+      <xs:documentation xml:lang="en">description of consumptions.</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="caliber" type="nc1missionASS:CaliberCategoryCode">
+        <xs:annotation>
+          <xs:documentation>Description du lanceur.</xs:documentation>
+          <xs:documentation xml:lang="en">descritpion of caliber.</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Catégorie calibre</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">caliber category</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="otherCaliber" type="nc1common:ShortTextObjectType">
+        <xs:annotation>
+          <xs:documentation>Autre calibre.</xs:documentation>
+          <xs:documentation xml:lang="en">other caliber.</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Autre calibre</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">other caliber</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="loadType" type="nc1missionASS:LoadTypeCode">
+        <xs:annotation>
+          <xs:documentation>Description du type de chargement en fonction du calibre.</xs:documentation>
+          <xs:documentation xml:lang="en">Description of the type of loading according to the caliber.</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Type de chargement</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">load type</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:choice>
+        <xs:element name="globalAmmo" type="nc1common:Int0To9999Type">
+          <xs:annotation>
+            <xs:documentation>Quantité globale prévue.</xs:documentation>
+            <xs:documentation xml:lang="en">global quantity planned</xs:documentation>
+            <xs:appinfo>
+              <nc1ihm:Nom>Quantité globale</nc1ihm:Nom>
+              <nc1ihm:Nom xml:lang="en">global quantity</nc1ihm:Nom>
+            </xs:appinfo>
+          </xs:annotation>
+        </xs:element>
+        <xs:element name="allottedAmmo" type="nc1missionASS:AllottedQuantityType">
+          <xs:annotation>
+            <xs:documentation>Quantité répartie prévue.</xs:documentation>
+            <xs:documentation xml:lang="en">Anticipated distributed quantity</xs:documentation>
+            <xs:appinfo>
+              <nc1ihm:Nom>Quantité répartie</nc1ihm:Nom>
+              <nc1ihm:Nom xml:lang="en">Distributed quantity</nc1ihm:Nom>
+            </xs:appinfo>
+          </xs:annotation>
+        </xs:element>
+      </xs:choice>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ContactEffectType">
+    <xs:annotation>
+      <xs:documentation>Description d’un effet au contact.</xs:documentation>
+      <xs:documentation xml:lang="en">Description of a contact effect.</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="supportUnitId" type="nc1common:Nc1ObjectRefType">
+        <xs:annotation>
+          <xs:documentation>Identifiant unique de l’unité appuyée bénéficiant de l’effet.</xs:documentation>
+          <xs:documentation xml:lang="en">Unique identifier of the supported unit benefiting from the effect.</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Unité appuyée</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">supported unit</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="effectType" type="nc1missionASS:SearchedEffectCode">
+        <xs:annotation>
+          <xs:documentation>Type d’effet recherché.</xs:documentation>
+          <xs:documentation xml:lang="en">searched effect type.</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Type d’effet</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">effect type</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="otherEffect" type="nc1common:MediumTextObjectType">
+        <xs:annotation>
+          <xs:documentation>Description des effets en texte libre.</xs:documentation>
+          <xs:documentation xml:lang="en">description of effects in free text.</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Autres Effets</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">other effects</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="EffectByAreaType">
+    <xs:annotation>
+      <xs:documentation>Description des effets par zone.</xs:documentation>
+      <xs:documentation xml:lang="en">description of effects by area.</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="areaId" type="nc1common:Nc1ObjectRefType">
+        <xs:annotation>
+          <xs:documentation>Identifiant unique de la zone d’application où l’effet est recherché.</xs:documentation>
+          <xs:documentation xml:lang="en">Unique identifier of the application area where the effect is sought.</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Zone d’application effet</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">effect application area</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="validityPeriod" type="nc1common:PeriodType">
+        <xs:annotation>
+          <xs:documentation>Créneau d’activation de la zone.</xs:documentation>
+          <xs:documentation xml:lang="en">validity period of the area activation.</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Créneau d’activation</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">validity period of activation</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="searchedEffectType" type="nc1missionASS:SearchedEffectCode">
+        <xs:annotation>
+          <xs:documentation>Effet recherché dans la zone d’application.</xs:documentation>
+          <xs:documentation xml:lang="en">searched effect in the application area.</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Effet recherché</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">searched effect</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="otherEffect" type="nc1common:MediumTextObjectType">
+        <xs:annotation>
+          <xs:documentation>Description des effets en texte libre.</xs:documentation>
+          <xs:documentation xml:lang="en">description of effects in free text.</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Autres Effets</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">other effects</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="EquipmentPriorityType">
+    <xs:annotation>
+      <xs:documentation>Description d’un type d’objectif prioritaire.</xs:documentation>
+      <xs:documentation xml:lang="en">descritption of a high payoff target type.</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="priorityId" type="nc1common:ShortTextObjectType">
+        <xs:annotation>
+          <xs:documentation>Identifiant de la priorité.</xs:documentation>
+          <xs:documentation xml:lang="en">priority id.</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Identifiant</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">id</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="type" type="nc1missionASS:TypeBatteryCode">
+        <xs:annotation>
+          <xs:documentation>Type de batterie.</xs:documentation>
+          <xs:documentation xml:lang="en">battery type.</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Type de batterie</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">battery type</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="subType" type="nc1missionASS:SubTypeBatteryCode">
+        <xs:annotation>
+          <xs:documentation>Sous type de batterie.</xs:documentation>
+          <xs:documentation xml:lang="en">battery subtype.</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Sous type batterie</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">battery subtype</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="priority" type="nc1missionASS:BatteryPriorityCode">
+        <xs:annotation>
+          <xs:documentation>Priorité donnée.</xs:documentation>
+          <xs:documentation xml:lang="en">given priority.</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Priorité</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">priority</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="FireUnitDescriptionType">
+    <xs:annotation>
+      <xs:documentation>Description d’un type d’unité feux.</xs:documentation>
+      <xs:documentation xml:lang="en">Description of a fire unit.</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="caliber" type="nc1missionASS:CaliberCategoryCode">
+        <xs:annotation>
+          <xs:documentation>Description du lanceur.</xs:documentation>
+          <xs:documentation xml:lang="en">descritpion of caliber.</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Catégorie calibre</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">caliber category</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="otherCaliber" type="nc1common:ShortTextObjectType">
+        <xs:annotation>
+          <xs:documentation>Autre calibre.</xs:documentation>
+          <xs:documentation xml:lang="en">other caliber.</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Autre calibre</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">other caliber</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="unitType" type="nc1common:SymbolCodeType">
+        <xs:annotation>
+          <xs:documentation>Description du type d’unité feu.</xs:documentation>
+          <xs:documentation xml:lang="en">description of fire unit type.</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Type d’unité</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">unit type</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="allowedAmmo" type="nc1common:Int0To99999Type">
+        <xs:annotation>
+          <xs:documentation>Quantité.</xs:documentation>
+          <xs:documentation xml:lang="en">quantity.</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Quantité</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">quantity</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="comment" type="nc1common:MediumTextObjectType">
+        <xs:annotation>
+          <xs:documentation>Commentaire sur l’unité.</xs:documentation>
+          <xs:documentation xml:lang="en">comment about unit.</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Commentaire</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">comment</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="FormationType">
+    <xs:annotation>
+      <xs:documentation>Description d’une formation.</xs:documentation>
+      <xs:documentation xml:lang="en">Descritpion of a formation.</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="unitId" type="nc1common:Nc1ObjectRefType">
+        <xs:annotation>
+          <xs:documentation>Unité.</xs:documentation>
+          <xs:documentation xml:lang="en">Unit.</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Unité</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">Unit</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="rank" type="nc1common:MediumTextObjectType">
+        <xs:annotation>
+          <xs:documentation>Nom rang.</xs:documentation>
+          <xs:documentation xml:lang="en">Rank name.</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Nom rang</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">Rank name</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="function" type="nc1common:MediumTextObjectType">
+        <xs:annotation>
+          <xs:documentation>Fonction.</xs:documentation>
+          <xs:documentation xml:lang="en">Function.</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Fonction</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">Function</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:simpleType name="IntelligenceActionPriorityCode">
+    <xs:annotation>
+      <xs:appinfo>
+        <nc1dico:source xmlns:nc1dico="urn:fra:nc1:dictionnaires">ATLAS</nc1dico:source>
+        <nc1ihm:description>Priorité de l'action de renseignement.</nc1ihm:description>
+        <nc1ihm:description xml:lang="en">Intelligence task priority.</nc1ihm:description>
+      </xs:appinfo>
+      <xs:documentation>Priorité de l'action de renseignement.</xs:documentation>
+      <xs:documentation xml:lang="en">Intelligence task priority.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:integer" />
+  </xs:simpleType>
+  <xs:simpleType name="IntelligenceTypeCode">
+    <xs:annotation>
+      <xs:appinfo>
+        <nc1dico:source xmlns:nc1dico="urn:fra:nc1:dictionnaires">NCi+</nc1dico:source>
+        <nc1ihm:description>Domaine du renseignement.</nc1ihm:description>
+        <nc1ihm:description xml:lang="en">Intelligence domain.</nc1ihm:description>
+      </xs:appinfo>
+      <xs:documentation>Domaine du renseignement.</xs:documentation>
+      <xs:documentation xml:lang="en">Intelligence domain.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:integer" />
+  </xs:simpleType>
+  <xs:complexType name="IntelTaskType">
+    <xs:annotation>
+      <xs:documentation>Description des taches de renseignement.</xs:documentation>
+      <xs:documentation xml:lang="en">Description of intelligence tasks.</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" name="prioriteAction" type="nc1missionASS:IntelligenceActionPriorityCode">
+        <xs:annotation>
+          <xs:documentation>Priorité de l’action de recherche.</xs:documentation>
+          <xs:documentation xml:lang="en">Search task priority.</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Priorité</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">priority</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="validityPeriod" type="nc1common:PeriodType">
+        <xs:annotation>
+          <xs:documentation>Créneau de recherche.</xs:documentation>
+          <xs:documentation xml:lang="en">Validity period of search.</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Créneau de recherche</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">validity period of search</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:choice>
+        <xs:element name="limitSupplyTime" type="xs:dateTime">
+          <xs:annotation>
+            <xs:documentation>Heure limite de fourniture du renseignement.</xs:documentation>
+            <xs:documentation xml:lang="en">limit intelligence supply time</xs:documentation>
+            <xs:appinfo>
+              <nc1ihm:Nom>Heure limite</nc1ihm:Nom>
+              <nc1ihm:Nom xml:lang="en">limit supply time</nc1ihm:Nom>
+            </xs:appinfo>
+          </xs:annotation>
+        </xs:element>
+        <xs:element name="cycleSupplyTime" type="nc1missionASS:SupplyPeriodType">
+          <xs:annotation>
+            <xs:documentation>Heure de la première fourniture et périodicité de la fourniture du renseignement.</xs:documentation>
+            <xs:documentation xml:lang="en">Time of the first provision and periodicity of the provision of the information</xs:documentation>
+            <xs:appinfo>
+              <nc1ihm:Nom>Périodicité</nc1ihm:Nom>
+              <nc1ihm:Nom xml:lang="en">cycle</nc1ihm:Nom>
+            </xs:appinfo>
+          </xs:annotation>
+        </xs:element>
+      </xs:choice>
+      <xs:element minOccurs="0" name="searchArea" type="nc1common:Nc1ObjectRefType">
+        <xs:annotation>
+          <xs:documentation>Zone de recherche.</xs:documentation>
+          <xs:documentation xml:lang="en">Search area.</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Zone de recherche</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">search area</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="searchedFact" type="nc1missionASS:SearchedFactType">
+        <xs:annotation>
+          <xs:documentation>Fait recherché.</xs:documentation>
+          <xs:documentation xml:lang="en">Searched facts.</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Fait recherché</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">searched facts</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="clue" type="nc1common:MediumTextObjectType">
+        <xs:annotation>
+          <xs:documentation>Indices pour la  recherche.</xs:documentation>
+          <xs:documentation xml:lang="en">Clues for search.</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Indices</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">clues</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:simpleType name="LoadTypeCode">
+    <xs:annotation>
+      <xs:appinfo>
+        <nc1dico:source xmlns:nc1dico="urn:fra:nc1:dictionnaires">ATLAS</nc1dico:source>
+        <nc1ihm:description>Type de chargement.</nc1ihm:description>
+        <nc1ihm:description xml:lang="en">Load type.</nc1ihm:description>
+      </xs:appinfo>
+      <xs:documentation>Type de chargement.</xs:documentation>
+      <xs:documentation xml:lang="en">Load type.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:integer" />
+  </xs:simpleType>
+  <xs:complexType name="MissionASSType">
+    <xs:annotation>
+      <xs:documentation></xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="nc1objcom:BaseObjectType">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="tacticalData">
+            <xs:annotation>
+              <xs:documentation>Données tactiques de la mission.</xs:documentation>
+              <xs:documentation xml:lang="en">tactical datas of the mission.</xs:documentation>
+              <xs:appinfo>
+                <nc1ihm:Nom>Données tactiques</nc1ihm:Nom>
+                <nc1ihm:Nom xml:lang="en">tactical datas</nc1ihm:Nom>
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="missionASSName" type="nc1common:Text1To10ANType">
+                  <xs:annotation>
+                    <xs:documentation>Identification de la mission.</xs:documentation>
+                    <xs:documentation xml:lang="en">mission id.</xs:documentation>
+                    <xs:appinfo>
+                      <nc1ihm:Nom>Nom</nc1ihm:Nom>
+                      <nc1ihm:Nom xml:lang="en">name</nc1ihm:Nom>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:element>
+                <xs:element name="executiveUnitId" type="nc1common:Nc1ObjectRefType">
+                  <xs:annotation>
+                    <xs:documentation>Identifiant unique de l’unité exécutant la mission.</xs:documentation>
+                    <xs:documentation xml:lang="en">Unique identifier of the unit performing the mission.</xs:documentation>
+                    <xs:appinfo>
+                      <nc1ihm:Nom>Unité exécutante</nc1ihm:Nom>
+                      <nc1ihm:Nom xml:lang="en">executive unit</nc1ihm:Nom>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:element>
+                <xs:choice>
+                  <xs:element name="superiorFieldArtilleryMission">
+                    <xs:annotation>
+                      <xs:documentation>Description de la mission artillerie Sol-Sol du supérieur.</xs:documentation>
+                      <xs:documentation xml:lang="en">superior field artillery mission.</xs:documentation>
+                      <xs:appinfo>
+                        <nc1ihm:Nom>Mission feux du supérieur</nc1ihm:Nom>
+                        <nc1ihm:Nom xml:lang="en">superior fire artillery mission</nc1ihm:Nom>
+                      </xs:appinfo>
+                    </xs:annotation>
+                    <xs:complexType>
+                      <xs:sequence>
+                        <xs:element maxOccurs="unbounded" name="priorityTarget" type="nc1missionASS:PriorityTargetType">
+                          <xs:annotation>
+                            <xs:documentation>Description des types d’objectif prioritaires.</xs:documentation>
+                            <xs:documentation xml:lang="en">Description of the priority objective types.</xs:documentation>
+                            <xs:appinfo>
+                              <nc1ihm:Nom>Type Objectif Prioritaire</nc1ihm:Nom>
+                              <nc1ihm:Nom xml:lang="en">priority targer type</nc1ihm:Nom>
+                            </xs:appinfo>
+                          </xs:annotation>
+                        </xs:element>
+                        <xs:element name="fireSupportArea" type="nc1common:Nc1ObjectRefType">
+                          <xs:annotation>
+                            <xs:documentation>Identifiant unique de la zone de la mission feux du supérieur.</xs:documentation>
+                            <xs:documentation xml:lang="en">Unique identifier of the superior fire mission area.</xs:documentation>
+                            <xs:appinfo>
+                              <nc1ihm:Nom>Zone d’application des feux</nc1ihm:Nom>
+                              <nc1ihm:Nom xml:lang="en">fires application area</nc1ihm:Nom>
+                            </xs:appinfo>
+                          </xs:annotation>
+                        </xs:element>
+                        <xs:element maxOccurs="unbounded" minOccurs="0" name="searchedEffect" type="nc1missionASS:SearchedEffectCode">
+                          <xs:annotation>
+                            <xs:documentation>Liste des effets recherchés lors de la mission feux du supérieur.</xs:documentation>
+                            <xs:documentation xml:lang="en">List of effects sought during the superior's fire mission.</xs:documentation>
+                            <xs:appinfo>
+                              <nc1ihm:Nom>Effets recherchés</nc1ihm:Nom>
+                              <nc1ihm:Nom xml:lang="en">searched effects</nc1ihm:Nom>
+                            </xs:appinfo>
+                          </xs:annotation>
+                        </xs:element>
+                        <xs:element minOccurs="0" name="otherEffect" type="nc1common:ShortTextObjectType">
+                          <xs:annotation>
+                            <xs:documentation>Description des effets en texte libre.</xs:documentation>
+                            <xs:documentation xml:lang="en">description of effects in free text.</xs:documentation>
+                            <xs:appinfo>
+                              <nc1ihm:Nom>Autres Effets</nc1ihm:Nom>
+                              <nc1ihm:Nom xml:lang="en">other effects</nc1ihm:Nom>
+                            </xs:appinfo>
+                          </xs:annotation>
+                        </xs:element>
+                      </xs:sequence>
+                    </xs:complexType>
+                  </xs:element>
+                  <xs:element name="contactFieldArtilleryMission">
+                    <xs:annotation>
+                      <xs:documentation>Description de la mission artillerie Sol-Sol au contact.</xs:documentation>
+                      <xs:documentation xml:lang="en">contact field artillery mission.</xs:documentation>
+                      <xs:appinfo>
+                        <nc1ihm:Nom>Mission feux au contact</nc1ihm:Nom>
+                        <nc1ihm:Nom xml:lang="en">contact field artillery mission</nc1ihm:Nom>
+                      </xs:appinfo>
+                    </xs:annotation>
+                    <xs:complexType>
+                      <xs:sequence>
+                        <xs:element name="groundUnitId" type="nc1common:Nc1ObjectRefType">
+                          <xs:annotation>
+                            <xs:documentation>Identifiant unique de l'unité de mêlée.</xs:documentation>
+                            <xs:documentation xml:lang="en">Unique identifier of the melee unit.</xs:documentation>
+                            <xs:appinfo>
+                              <nc1ihm:Nom>Unité de mêlée</nc1ihm:Nom>
+                              <nc1ihm:Nom xml:lang="en">Melee unit</nc1ihm:Nom>
+                            </xs:appinfo>
+                          </xs:annotation>
+                        </xs:element>
+                        <xs:element maxOccurs="unbounded" name="priorityTarget" type="nc1missionASS:PriorityTargetType">
+                          <xs:annotation>
+                            <xs:documentation>Description des types d’objectif prioritaires.</xs:documentation>
+                            <xs:documentation xml:lang="en">Description of the priority objective types.</xs:documentation>
+                            <xs:appinfo>
+                              <nc1ihm:Nom>Type Objectif Prioritaire</nc1ihm:Nom>
+                              <nc1ihm:Nom xml:lang="en">priority targer type</nc1ihm:Nom>
+                            </xs:appinfo>
+                          </xs:annotation>
+                        </xs:element>
+                        <xs:element maxOccurs="unbounded" minOccurs="0" name="fireSupportArea" type="nc1common:Nc1ObjectRefType">
+                          <xs:annotation>
+                            <xs:documentation>Identifiant unique de la zone de la mission feux au contact.</xs:documentation>
+                            <xs:documentation xml:lang="en">Unique identifier of the fire mission zone on contact.</xs:documentation>
+                            <xs:appinfo>
+                              <nc1ihm:Nom>Zone d’application des feux</nc1ihm:Nom>
+                              <nc1ihm:Nom xml:lang="en">fires application area</nc1ihm:Nom>
+                            </xs:appinfo>
+                          </xs:annotation>
+                        </xs:element>
+                        <xs:element maxOccurs="unbounded" minOccurs="0" name="searchedEffect" type="nc1missionASS:ContactEffectType">
+                          <xs:annotation>
+                            <xs:documentation>Liste des effets recherchés lors de la mission feux au contact.</xs:documentation>
+                            <xs:documentation xml:lang="en">List of effects sought during the fire on contact mission.</xs:documentation>
+                            <xs:appinfo>
+                              <nc1ihm:Nom>Effets recherchés</nc1ihm:Nom>
+                              <nc1ihm:Nom xml:lang="en">searched effects</nc1ihm:Nom>
+                            </xs:appinfo>
+                          </xs:annotation>
+                        </xs:element>
+                        <xs:element maxOccurs="unbounded" name="consumption" type="nc1missionASS:ConsumptionType">
+                          <xs:annotation>
+                            <xs:documentation>Description des consommations pour la mission feux au contact.</xs:documentation>
+                            <xs:documentation xml:lang="en">descritpion of allocated consumptions for fire in contact mission.</xs:documentation>
+                            <xs:appinfo>
+                              <nc1ihm:Nom>Consommation</nc1ihm:Nom>
+                              <nc1ihm:Nom xml:lang="en">conumptions</nc1ihm:Nom>
+                            </xs:appinfo>
+                          </xs:annotation>
+                        </xs:element>
+                        <xs:element name="immediatelyAvailable" type="nc1common:Int0To99Type">
+                          <xs:annotation>
+                            <xs:documentation>Disponibilité instantanée (en pourcentage).</xs:documentation>
+                            <xs:documentation xml:lang="en">Instant availability (in percentage).</xs:documentation>
+                            <xs:appinfo>
+                              <nc1ihm:Nom>Disponibilité instantanée</nc1ihm:Nom>
+                              <nc1ihm:Nom xml:lang="en">immediatly available</nc1ihm:Nom>
+                            </xs:appinfo>
+                          </xs:annotation>
+                        </xs:element>
+                        <xs:element minOccurs="0" name="delayedAvailable" type="nc1common:Int0To99Type">
+                          <xs:annotation>
+                            <xs:documentation>Disponibilité différée (en pourcentage).</xs:documentation>
+                            <xs:documentation xml:lang="en">delayed available.</xs:documentation>
+                            <xs:appinfo>
+                              <nc1ihm:Nom>Disponibilité différée</nc1ihm:Nom>
+                              <nc1ihm:Nom xml:lang="en">delayed available</nc1ihm:Nom>
+                            </xs:appinfo>
+                          </xs:annotation>
+                        </xs:element>
+                        <xs:element minOccurs="0" name="notice" type="nc1common:Int0To2147483647Type">
+                          <xs:annotation>
+                            <xs:documentation>Préavis en seconde.</xs:documentation>
+                            <xs:documentation xml:lang="en">notice in seconds.</xs:documentation>
+                            <xs:appinfo>
+                              <nc1ihm:Nom>Préavis</nc1ihm:Nom>
+                              <nc1ihm:Nom xml:lang="en">notice in seconds</nc1ihm:Nom>
+                            </xs:appinfo>
+                          </xs:annotation>
+                        </xs:element>
+                        <xs:element minOccurs="0" name="target" type="nc1missionASS:ObjectifType">
+                          <xs:annotation>
+                            <xs:documentation>Description de l’objectif.</xs:documentation>
+                            <xs:documentation xml:lang="en">target description.</xs:documentation>
+                            <xs:appinfo>
+                              <nc1ihm:Nom>Objectif</nc1ihm:Nom>
+                              <nc1ihm:Nom xml:lang="en">objective</nc1ihm:Nom>
+                            </xs:appinfo>
+                          </xs:annotation>
+                        </xs:element>
+                      </xs:sequence>
+                    </xs:complexType>
+                  </xs:element>
+                  <xs:element name="indepthFieldArtilleryMission">
+                    <xs:annotation>
+                      <xs:documentation>Description de la mission artillerie Sol-Sol dans la profondeur.</xs:documentation>
+                      <xs:documentation xml:lang="en">in depth field artillery mission.</xs:documentation>
+                      <xs:appinfo>
+                        <nc1ihm:Nom>Mission feux dans la profondeur</nc1ihm:Nom>
+                        <nc1ihm:Nom xml:lang="en">in depth field artillery mission</nc1ihm:Nom>
+                      </xs:appinfo>
+                    </xs:annotation>
+                    <xs:complexType>
+                      <xs:sequence>
+                        <xs:element maxOccurs="unbounded" name="priorityTarget" type="nc1missionASS:PriorityTargetType">
+                          <xs:annotation>
+                            <xs:documentation>Description des types d’objectif prioritaires.</xs:documentation>
+                            <xs:documentation xml:lang="en">Description of the priority objective types.</xs:documentation>
+                            <xs:appinfo>
+                              <nc1ihm:Nom>Type Objectif Prioritaire</nc1ihm:Nom>
+                              <nc1ihm:Nom xml:lang="en">priority targer type</nc1ihm:Nom>
+                            </xs:appinfo>
+                          </xs:annotation>
+                        </xs:element>
+                        <xs:element minOccurs="0" name="target" type="nc1missionASS:ObjectifType">
+                          <xs:annotation>
+                            <xs:documentation>Description de l’objectif.</xs:documentation>
+                            <xs:documentation xml:lang="en">target description.</xs:documentation>
+                            <xs:appinfo>
+                              <nc1ihm:Nom>Objectif</nc1ihm:Nom>
+                              <nc1ihm:Nom xml:lang="en">objective</nc1ihm:Nom>
+                            </xs:appinfo>
+                          </xs:annotation>
+                        </xs:element>
+                        <xs:element maxOccurs="unbounded" name="effectByArea" type="nc1missionASS:EffectByAreaType">
+                          <xs:annotation>
+                            <xs:documentation>Description des effets recherchés par zone d’application.</xs:documentation>
+                            <xs:documentation xml:lang="en">descritpion of effects by application area.</xs:documentation>
+                            <xs:appinfo>
+                              <nc1ihm:Nom>Effets par zone</nc1ihm:Nom>
+                              <nc1ihm:Nom xml:lang="en">effect by area</nc1ihm:Nom>
+                            </xs:appinfo>
+                          </xs:annotation>
+                        </xs:element>
+                        <xs:element name="acquisitionMeans" type="nc1missionASS:MoyensAcquisitionCode">
+                          <xs:annotation>
+                            <xs:documentation>Moyens d’acquisition (répertorié) mis en œuvre lors de la mission feux dans la profondeur.</xs:documentation>
+                            <xs:documentation xml:lang="en">Means of acquisition (listed) implemented during the deep fire mission.</xs:documentation>
+                            <xs:appinfo>
+                              <nc1ihm:Nom>Moyens d’acquisition</nc1ihm:Nom>
+                              <nc1ihm:Nom xml:lang="en">acquisitions means</nc1ihm:Nom>
+                            </xs:appinfo>
+                          </xs:annotation>
+                        </xs:element>
+                        <xs:element minOccurs="0" name="otherAcquisitionMeans" type="nc1common:MediumTextObjectType">
+                          <xs:annotation>
+                            <xs:documentation>Description d’un autre moyen d’acquisition (non répertorié) mis en œuvre lors de la mission feux dans la profondeur.</xs:documentation>
+                            <xs:documentation xml:lang="en">Description of another means of acquisition (not listed) implemented during the deep fire mission.</xs:documentation>
+                            <xs:appinfo>
+                              <nc1ihm:Nom>Autre moyen d’acquisition</nc1ihm:Nom>
+                              <nc1ihm:Nom xml:lang="en">other mean of acquisition</nc1ihm:Nom>
+                            </xs:appinfo>
+                          </xs:annotation>
+                        </xs:element>
+                        <xs:element minOccurs="0" name="acquisitionModes" type="nc1common:MediumTextObjectType">
+                          <xs:annotation>
+                            <xs:documentation>Description des modalités d’acquisition.</xs:documentation>
+                            <xs:documentation xml:lang="en">description of acquiring Terms.</xs:documentation>
+                            <xs:appinfo>
+                              <nc1ihm:Nom>Modalités d’acquisition</nc1ihm:Nom>
+                              <nc1ihm:Nom xml:lang="en">acquisition terms</nc1ihm:Nom>
+                            </xs:appinfo>
+                          </xs:annotation>
+                        </xs:element>
+                        <xs:element maxOccurs="unbounded" name="consumption" type="nc1missionASS:ConsumptionType">
+                          <xs:annotation>
+                            <xs:documentation>Description des consommations pour la mission feux dans la profondeur.</xs:documentation>
+                            <xs:documentation xml:lang="en">in depth fire missions consumptions description.</xs:documentation>
+                            <xs:appinfo>
+                              <nc1ihm:Nom>Consommation</nc1ihm:Nom>
+                              <nc1ihm:Nom xml:lang="en">conumptions</nc1ihm:Nom>
+                            </xs:appinfo>
+                          </xs:annotation>
+                        </xs:element>
+                      </xs:sequence>
+                    </xs:complexType>
+                  </xs:element>
+                  <xs:element name="fireReinforcementMission">
+                    <xs:annotation>
+                      <xs:documentation>Description de la mission de renforcement des feux de l’artillerie Sol-Sol.</xs:documentation>
+                      <xs:documentation xml:lang="en">description of the fire reinforcment of the field artillery mission.</xs:documentation>
+                      <xs:appinfo>
+                        <nc1ihm:Nom>Mission renforcement feux</nc1ihm:Nom>
+                        <nc1ihm:Nom xml:lang="en">fire reinforcment mission</nc1ihm:Nom>
+                      </xs:appinfo>
+                    </xs:annotation>
+                    <xs:complexType>
+                      <xs:sequence>
+                        <xs:element name="beneficialUnitId" type="nc1common:Nc1ObjectRefType">
+                          <xs:annotation>
+                            <xs:documentation>Identifiant unique de l'unité de mêlée bénéficiaire du renforcement.</xs:documentation>
+                            <xs:documentation xml:lang="en">Unique identifier of the melee unit receiving the reinforcement.</xs:documentation>
+                            <xs:appinfo>
+                              <nc1ihm:Nom>Unité bénéficiaire</nc1ihm:Nom>
+                              <nc1ihm:Nom xml:lang="en">beneficial unit</nc1ihm:Nom>
+                            </xs:appinfo>
+                          </xs:annotation>
+                        </xs:element>
+                        <xs:element maxOccurs="unbounded" minOccurs="0" name="fireUnitDescription" type="nc1missionASS:FireUnitDescriptionType">
+                          <xs:annotation>
+                            <xs:documentation>Unité type feux.</xs:documentation>
+                            <xs:documentation xml:lang="en">fire unit type.</xs:documentation>
+                            <xs:appinfo>
+                              <nc1ihm:Nom>Unités type feux</nc1ihm:Nom>
+                              <nc1ihm:Nom xml:lang="en">fire units type</nc1ihm:Nom>
+                            </xs:appinfo>
+                          </xs:annotation>
+                        </xs:element>
+                        <xs:element name="fireReinforcementType" type="nc1missionASS:NatureMissionRenfCode">
+                          <xs:annotation>
+                            <xs:documentation>Nature de la mission de renforcement.</xs:documentation>
+                            <xs:documentation xml:lang="en">Nature of the reinforcement mission.</xs:documentation>
+                            <xs:appinfo>
+                              <nc1ihm:Nom>Nature renforcement</nc1ihm:Nom>
+                              <nc1ihm:Nom xml:lang="en">reinforcment nature</nc1ihm:Nom>
+                            </xs:appinfo>
+                          </xs:annotation>
+                        </xs:element>
+                        <xs:element minOccurs="0" name="priorNotice" type="nc1common:Int0To2147483647Type">
+                          <xs:annotation>
+                            <xs:documentation>Préavis en seconde.</xs:documentation>
+                            <xs:documentation xml:lang="en">notice in seconds.</xs:documentation>
+                            <xs:appinfo>
+                              <nc1ihm:Nom>Préavis</nc1ihm:Nom>
+                              <nc1ihm:Nom xml:lang="en">notice in seconds</nc1ihm:Nom>
+                            </xs:appinfo>
+                          </xs:annotation>
+                        </xs:element>
+                        <xs:element maxOccurs="unbounded" name="fireSupportArea" type="nc1common:Nc1ObjectRefType">
+                          <xs:annotation>
+                            <xs:documentation>Identifiant unique de la zone de la mission feux du supérieur.</xs:documentation>
+                            <xs:documentation xml:lang="en">Unique identifier of the superior fire mission area.</xs:documentation>
+                            <xs:appinfo>
+                              <nc1ihm:Nom>Zone d’application des feux</nc1ihm:Nom>
+                              <nc1ihm:Nom xml:lang="en">fires application area</nc1ihm:Nom>
+                            </xs:appinfo>
+                          </xs:annotation>
+                        </xs:element>
+                        <xs:element maxOccurs="unbounded" name="allocatedConsumption" type="nc1missionASS:AllocatedConsumptionType">
+                          <xs:annotation>
+                            <xs:documentation>Description des consommations pour la mission de renforcement.</xs:documentation>
+                            <xs:documentation xml:lang="en">description of allocated consumptions for reinforcment mission.</xs:documentation>
+                            <xs:appinfo>
+                              <nc1ihm:Nom>Consommation</nc1ihm:Nom>
+                              <nc1ihm:Nom xml:lang="en">conumptions</nc1ihm:Nom>
+                            </xs:appinfo>
+                          </xs:annotation>
+                        </xs:element>
+                      </xs:sequence>
+                    </xs:complexType>
+                  </xs:element>
+                  <xs:element name="acquiringFieldArtilleryMission">
+                    <xs:annotation>
+                      <xs:documentation>Description des missions d’acquisition de l’artillerie Sol-Sol.</xs:documentation>
+                      <xs:documentation xml:lang="en">Description of the field artillery acquisition missions.</xs:documentation>
+                      <xs:appinfo>
+                        <nc1ihm:Nom>Mission acquisition</nc1ihm:Nom>
+                        <nc1ihm:Nom xml:lang="en">acquiring mission</nc1ihm:Nom>
+                      </xs:appinfo>
+                    </xs:annotation>
+                    <xs:complexType>
+                      <xs:sequence>
+                        <xs:element minOccurs="0" name="beneficialUnitId" type="nc1common:Nc1ObjectRefType">
+                          <xs:annotation>
+                            <xs:documentation>Identifiant unique de l’unité bénéficiant de la mission.</xs:documentation>
+                            <xs:documentation xml:lang="en">Unique identifier of the unit benefiting from the mission.</xs:documentation>
+                            <xs:appinfo>
+                              <nc1ihm:Nom>Unité bénéficiaire</nc1ihm:Nom>
+                              <nc1ihm:Nom xml:lang="en">beneficial unit</nc1ihm:Nom>
+                            </xs:appinfo>
+                          </xs:annotation>
+                        </xs:element>
+                        <xs:element name="resourcesType" type="nc1missionASS:MoyenAcquisitionArtCode">
+                          <xs:annotation>
+                            <xs:documentation>Type de moyen d’acquisition pour réaliser la mission.</xs:documentation>
+                            <xs:documentation xml:lang="en">Type of acquisition means to carry out the mission.</xs:documentation>
+                            <xs:appinfo>
+                              <nc1ihm:Nom>Type de moyen</nc1ihm:Nom>
+                              <nc1ihm:Nom xml:lang="en">ressource type</nc1ihm:Nom>
+                            </xs:appinfo>
+                          </xs:annotation>
+                        </xs:element>
+                        <xs:element maxOccurs="unbounded" minOccurs="0" name="observationArea" type="nc1common:Nc1ObjectRefType">
+                          <xs:annotation>
+                            <xs:documentation>Liste des  zone d’observation / recherche / restriction.</xs:documentation>
+                            <xs:documentation xml:lang="en">List of observation / search / restriction areas.</xs:documentation>
+                            <xs:appinfo>
+                              <nc1ihm:Nom>Zone d’observation</nc1ihm:Nom>
+                              <nc1ihm:Nom xml:lang="en">observation area</nc1ihm:Nom>
+                            </xs:appinfo>
+                          </xs:annotation>
+                        </xs:element>
+                        <xs:element maxOccurs="unbounded" minOccurs="0" name="deploymentArea" type="nc1common:Nc1ObjectRefType">
+                          <xs:annotation>
+                            <xs:documentation>Liste des zones de déploiement.</xs:documentation>
+                            <xs:documentation xml:lang="en">List of deployment areas.</xs:documentation>
+                            <xs:appinfo>
+                              <nc1ihm:Nom>Zone de déploiement</nc1ihm:Nom>
+                              <nc1ihm:Nom xml:lang="en">deployment area</nc1ihm:Nom>
+                            </xs:appinfo>
+                          </xs:annotation>
+                        </xs:element>
+                        <xs:choice>
+                          <xs:element name="acquiringCOBRA">
+                            <xs:annotation>
+                              <xs:documentation>Description de la mission d’acquisition COBRA.</xs:documentation>
+                              <xs:documentation xml:lang="en">descritpion of acquiring mission COBRA.</xs:documentation>
+                              <xs:appinfo>
+                                <nc1ihm:Nom>Mission acquisition COBRA</nc1ihm:Nom>
+                                <nc1ihm:Nom xml:lang="en">acquiring cobra missio,</nc1ihm:Nom>
+                              </xs:appinfo>
+                            </xs:annotation>
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element name="missionNature" type="nc1missionASS:NatureMissionAcqCOBRACode">
+                                  <xs:annotation>
+                                    <xs:documentation>Nature de la mission d’acquisition COBRA.</xs:documentation>
+                                    <xs:documentation xml:lang="en">Nature of the COBRA acquisition mission.</xs:documentation>
+                                    <xs:appinfo>
+                                      <nc1ihm:Nom>Nature de la mission</nc1ihm:Nom>
+                                      <nc1ihm:Nom xml:lang="en">mission nature</nc1ihm:Nom>
+                                    </xs:appinfo>
+                                  </xs:annotation>
+                                </xs:element>
+                                <xs:element maxOccurs="unbounded" minOccurs="0" name="equipmentPriority" type="nc1missionASS:EquipmentPriorityType">
+                                  <xs:annotation>
+                                    <xs:documentation>Listes de priorité des équipements COBRA.</xs:documentation>
+                                    <xs:documentation xml:lang="en">COBRA equipment priority lists.</xs:documentation>
+                                    <xs:appinfo>
+                                      <nc1ihm:Nom>Priorité des équipements</nc1ihm:Nom>
+                                      <nc1ihm:Nom xml:lang="en">equipment priority</nc1ihm:Nom>
+                                    </xs:appinfo>
+                                  </xs:annotation>
+                                </xs:element>
+                                <xs:element minOccurs="0" name="missionPriority" type="nc1missionASS:PriorityCOBRACode">
+                                  <xs:annotation>
+                                    <xs:documentation>Priorité de la mission COBRA.</xs:documentation>
+                                    <xs:documentation xml:lang="en">COBRA mission priority.</xs:documentation>
+                                    <xs:appinfo>
+                                      <nc1ihm:Nom>Priorité</nc1ihm:Nom>
+                                      <nc1ihm:Nom xml:lang="en">priority</nc1ihm:Nom>
+                                    </xs:appinfo>
+                                  </xs:annotation>
+                                </xs:element>
+                                <xs:element minOccurs="0" name="fireUnitDistance" type="nc1common:Int0To9999Type">
+                                  <xs:annotation>
+                                    <xs:documentation>Distance entre les batteries (en mètre).</xs:documentation>
+                                    <xs:documentation xml:lang="en">fire unit distance (in metre).</xs:documentation>
+                                    <xs:appinfo>
+                                      <nc1ihm:Nom>Distance entre batteries</nc1ihm:Nom>
+                                      <nc1ihm:Nom xml:lang="en">fire unit distance</nc1ihm:Nom>
+                                    </xs:appinfo>
+                                  </xs:annotation>
+                                </xs:element>
+                                <xs:element minOccurs="0" name="minNumberOfTrajectories" type="nc1common:Int0To999Type">
+                                  <xs:annotation>
+                                    <xs:documentation>Nombre minimum de trajectoires.</xs:documentation>
+                                    <xs:documentation xml:lang="en">minimum number of trajectories.</xs:documentation>
+                                    <xs:appinfo>
+                                      <nc1ihm:Nom>Nombre min de trajectoires</nc1ihm:Nom>
+                                      <nc1ihm:Nom xml:lang="en">minimum number of trajectories</nc1ihm:Nom>
+                                    </xs:appinfo>
+                                  </xs:annotation>
+                                </xs:element>
+                                <xs:element minOccurs="0" name="trustLevel" type="nc1missionASS:TrustCode">
+                                  <xs:annotation>
+                                    <xs:documentation>Niveau de confiance de présence d’une batterie ennemie.</xs:documentation>
+                                    <xs:documentation xml:lang="en">trust level of presence of ennemy battery.</xs:documentation>
+                                    <xs:appinfo>
+                                      <nc1ihm:Nom>Niveau confiance batterie ENI</nc1ihm:Nom>
+                                      <nc1ihm:Nom xml:lang="en">trust level of ENI battery</nc1ihm:Nom>
+                                    </xs:appinfo>
+                                  </xs:annotation>
+                                </xs:element>
+                                <xs:element minOccurs="0" name="fireUnitId" type="nc1common:Nc1ObjectRefType">
+                                  <xs:annotation>
+                                    <xs:documentation>Identifiant unique de l’unité chargée du tir.</xs:documentation>
+                                    <xs:documentation xml:lang="en">Unique identifier of the firing unit.</xs:documentation>
+                                    <xs:appinfo>
+                                      <nc1ihm:Nom>Unité chargé du tir</nc1ihm:Nom>
+                                      <nc1ihm:Nom xml:lang="en">fire unit</nc1ihm:Nom>
+                                    </xs:appinfo>
+                                  </xs:annotation>
+                                </xs:element>
+                                <xs:element minOccurs="0" name="registrationFireUnitId" type="nc1common:Nc1ObjectRefType">
+                                  <xs:annotation>
+                                    <xs:documentation>Identifiant unique de l'unité pour la mise en place.</xs:documentation>
+                                    <xs:documentation xml:lang="en">Unique identifier of the unit for implementation.</xs:documentation>
+                                    <xs:appinfo>
+                                      <nc1ihm:Nom>Moyen feu MEP</nc1ihm:Nom>
+                                      <nc1ihm:Nom xml:lang="en">fire mean MEP</nc1ihm:Nom>
+                                    </xs:appinfo>
+                                  </xs:annotation>
+                                </xs:element>
+                                <xs:element minOccurs="0" name="delegationFireIndicator" type="xs:boolean">
+                                  <xs:annotation>
+                                    <xs:documentation>Indicateur pour la délégation de tir.</xs:documentation>
+                                    <xs:documentation xml:lang="en">delegation fire indicator.</xs:documentation>
+                                    <xs:appinfo>
+                                      <nc1ihm:Nom>Indicateur</nc1ihm:Nom>
+                                      <nc1ihm:Nom xml:lang="en">indicator</nc1ihm:Nom>
+                                    </xs:appinfo>
+                                  </xs:annotation>
+                                </xs:element>
+                                <xs:element minOccurs="0" name="delegationFireNumber" type="nc1common:Int0To9999Type">
+                                  <xs:annotation>
+                                    <xs:documentation>Nombre de tir délégués pour la délégation de tir.</xs:documentation>
+                                    <xs:documentation xml:lang="en">Number of shooting delegates for the shooting delegation.</xs:documentation>
+                                    <xs:appinfo>
+                                      <nc1ihm:Nom>Nbre tirs délégués</nc1ihm:Nom>
+                                      <nc1ihm:Nom xml:lang="en">delegated fire number</nc1ihm:Nom>
+                                    </xs:appinfo>
+                                  </xs:annotation>
+                                </xs:element>
+                                <xs:element minOccurs="0" name="delegationComment" type="nc1common:LongTextObjectType">
+                                  <xs:annotation>
+                                    <xs:documentation>Commentaire sur la délégation de tir.</xs:documentation>
+                                    <xs:documentation xml:lang="en">comment about shoot delegation.</xs:documentation>
+                                    <xs:appinfo>
+                                      <nc1ihm:Nom>Commentaire sur la délégation</nc1ihm:Nom>
+                                      <nc1ihm:Nom xml:lang="en">comment about delegation</nc1ihm:Nom>
+                                    </xs:appinfo>
+                                  </xs:annotation>
+                                </xs:element>
+                              </xs:sequence>
+                            </xs:complexType>
+                          </xs:element>
+                          <xs:element name="acquiring">
+                            <xs:annotation>
+                              <xs:documentation>Description de la mission d’acquisition (hors COBRA).</xs:documentation>
+                              <xs:documentation xml:lang="en">description of the acquisition mission (NO-COBRA).</xs:documentation>
+                              <xs:appinfo>
+                                <nc1ihm:Nom>Mission acquisition hors COBRA</nc1ihm:Nom>
+                                <nc1ihm:Nom xml:lang="en">acquiring mission no-COBRA</nc1ihm:Nom>
+                              </xs:appinfo>
+                            </xs:annotation>
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element name="missionNature" type="nc1missionASS:NatureMissionAcqCode">
+                                  <xs:annotation>
+                                    <xs:documentation>Nature de la mission d’acquisition.</xs:documentation>
+                                    <xs:documentation xml:lang="en">Nature of the acquisition mission.</xs:documentation>
+                                    <xs:appinfo>
+                                      <nc1ihm:Nom>Nature de la mission</nc1ihm:Nom>
+                                      <nc1ihm:Nom xml:lang="en">mission nature</nc1ihm:Nom>
+                                    </xs:appinfo>
+                                  </xs:annotation>
+                                </xs:element>
+                                <xs:element minOccurs="0" name="target" type="nc1missionASS:PriorityTargetType">
+                                  <xs:annotation>
+                                    <xs:documentation>Objectifs.</xs:documentation>
+                                    <xs:documentation xml:lang="en">objectives.</xs:documentation>
+                                    <xs:appinfo>
+                                      <nc1ihm:Nom>Objectifs</nc1ihm:Nom>
+                                      <nc1ihm:Nom xml:lang="en">objectives</nc1ihm:Nom>
+                                    </xs:appinfo>
+                                  </xs:annotation>
+                                </xs:element>
+                                <xs:element minOccurs="0" name="coordinationUnit" type="nc1missionASS:FormationType">
+                                  <xs:annotation>
+                                    <xs:documentation>Formation coordination.</xs:documentation>
+                                    <xs:documentation xml:lang="en">coordination unit.</xs:documentation>
+                                    <xs:appinfo>
+                                      <nc1ihm:Nom>Formation coordination</nc1ihm:Nom>
+                                      <nc1ihm:Nom xml:lang="en">coordination unit</nc1ihm:Nom>
+                                    </xs:appinfo>
+                                  </xs:annotation>
+                                </xs:element>
+                                <xs:element minOccurs="0" name="rattachmentUnit" type="nc1missionASS:FormationType">
+                                  <xs:annotation>
+                                    <xs:documentation>Formation rattachement.</xs:documentation>
+                                    <xs:documentation xml:lang="en">rattachment unit.</xs:documentation>
+                                    <xs:appinfo>
+                                      <nc1ihm:Nom>Formation rattachement</nc1ihm:Nom>
+                                      <nc1ihm:Nom xml:lang="en">rattachment unit</nc1ihm:Nom>
+                                    </xs:appinfo>
+                                  </xs:annotation>
+                                </xs:element>
+                                <xs:element minOccurs="0" name="firingExecutionTerms" type="nc1common:MediumTextObjectType">
+                                  <xs:annotation>
+                                    <xs:documentation>Description des modalités d’exécution des tirs.</xs:documentation>
+                                    <xs:documentation xml:lang="en">description of firing execution terms.</xs:documentation>
+                                    <xs:appinfo>
+                                      <nc1ihm:Nom>Modalités exécution tir</nc1ihm:Nom>
+                                      <nc1ihm:Nom xml:lang="en">fire execution terms</nc1ihm:Nom>
+                                    </xs:appinfo>
+                                  </xs:annotation>
+                                </xs:element>
+                                <xs:element minOccurs="0" name="firingRegistrationTerms" type="nc1common:MediumTextObjectType">
+                                  <xs:annotation>
+                                    <xs:documentation>Description des modalités de Mise En Place.</xs:documentation>
+                                    <xs:documentation xml:lang="en">Description of the registration modalities.</xs:documentation>
+                                    <xs:appinfo>
+                                      <nc1ihm:Nom>Modalités MEP</nc1ihm:Nom>
+                                      <nc1ihm:Nom xml:lang="en">MEP Terms</nc1ihm:Nom>
+                                    </xs:appinfo>
+                                  </xs:annotation>
+                                </xs:element>
+                              </xs:sequence>
+                            </xs:complexType>
+                          </xs:element>
+                        </xs:choice>
+                      </xs:sequence>
+                    </xs:complexType>
+                  </xs:element>
+                  <xs:element name="intelFieldArtilleryMission">
+                    <xs:annotation>
+                      <xs:documentation>Description de la mission de renseignement de l’artillerie Sol-Sol.</xs:documentation>
+                      <xs:documentation xml:lang="en">description of the itelligence field artillery mission.</xs:documentation>
+                      <xs:appinfo>
+                        <nc1ihm:Nom>Mission renseignement</nc1ihm:Nom>
+                      </xs:appinfo>
+                    </xs:annotation>
+                    <xs:complexType>
+                      <xs:sequence>
+                        <xs:element minOccurs="0" name="priority" type="nc1common:MediumTextObjectType">
+                          <xs:annotation>
+                            <xs:documentation>Description des efforts ou des priorités à prendre en compte lors de la mission de renseignement.</xs:documentation>
+                            <xs:documentation xml:lang="en">Description of the efforts or priorities to take into account during the intelligence mission.</xs:documentation>
+                            <xs:appinfo>
+                              <nc1ihm:Nom>Effort ou priorité</nc1ihm:Nom>
+                              <nc1ihm:Nom xml:lang="en">effort or priority</nc1ihm:Nom>
+                            </xs:appinfo>
+                          </xs:annotation>
+                        </xs:element>
+                        <xs:choice>
+                          <xs:element name="areaId" type="nc1common:Nc1ObjectRefType">
+                            <xs:annotation>
+                              <xs:documentation>Renseignement à partir d’une zone.</xs:documentation>
+                              <xs:documentation xml:lang="en">Intelligence from an area.</xs:documentation>
+                              <xs:appinfo>
+                                <nc1ihm:Nom>Zone d’effort ou de priorité</nc1ihm:Nom>
+                                <nc1ihm:Nom xml:lang="en">effort or priority area</nc1ihm:Nom>
+                              </xs:appinfo>
+                            </xs:annotation>
+                          </xs:element>
+                          <xs:element maxOccurs="unbounded" name="intelTask" type="nc1missionASS:IntelTaskType">
+                            <xs:annotation>
+                              <xs:documentation>Description des actions de renseignement à réaliser.</xs:documentation>
+                              <xs:documentation xml:lang="en">description of intelligence tasks to do.</xs:documentation>
+                              <xs:appinfo>
+                                <nc1ihm:Nom>Actions de renseignement</nc1ihm:Nom>
+                                <nc1ihm:Nom xml:lang="en">Intelligence actions</nc1ihm:Nom>
+                              </xs:appinfo>
+                            </xs:annotation>
+                          </xs:element>
+                        </xs:choice>
+                      </xs:sequence>
+                    </xs:complexType>
+                  </xs:element>
+                </xs:choice>
+                <xs:element minOccurs="0" name="levelOfConfirmation" type="nc1sicsdicos:L105_4Code">
+                  <xs:annotation>
+                    <xs:documentation>Niveau de confirmation de la mission.</xs:documentation>
+                    <xs:documentation xml:lang="en">level of confirmation of the mission.</xs:documentation>
+                    <xs:appinfo>
+                      <nc1ihm:Nom>Niveau de confirmation</nc1ihm:Nom>
+                      <nc1ihm:Nom xml:lang="en">level of confirmation</nc1ihm:Nom>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:element>
+                <xs:element minOccurs="0" name="tacticalPhase" type="nc1sicsdicos:L114_10Code">
+                  <xs:annotation>
+                    <xs:documentation>Temps dans lequel s’inscrit l’action tactique, correspondant à un temps de l’OPORD.</xs:documentation>
+                    <xs:documentation xml:lang="en">Time in which the tactical action takes place, corresponding to an OPORD time.</xs:documentation>
+                    <xs:appinfo>
+                      <nc1ihm:Nom>Phase tactique</nc1ihm:Nom>
+                      <nc1ihm:Nom xml:lang="en">tactical phase</nc1ihm:Nom>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:element>
+                <xs:element minOccurs="0" name="validityPeriod" type="nc1common:PeriodType">
+                  <xs:annotation>
+                    <xs:documentation>Créneau de la mission.</xs:documentation>
+                    <xs:documentation xml:lang="en">validity period of the mission.</xs:documentation>
+                    <xs:appinfo>
+                      <nc1ihm:Nom>Créneau horaire</nc1ihm:Nom>
+                      <nc1ihm:Nom xml:lang="en">validity period</nc1ihm:Nom>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:element>
+                <xs:element minOccurs="0" name="url" type="nc1common:MediumTextObjectType">
+                  <xs:annotation>
+                    <xs:documentation>Lien vers un fichier associé à l’objet.</xs:documentation>
+                    <xs:documentation xml:lang="en">Link to a file associated with the object.</xs:documentation>
+                    <xs:appinfo>
+                      <nc1ihm:Nom>Url</nc1ihm:Nom>
+                      <nc1ihm:Nom xml:lang="en">url</nc1ihm:Nom>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:element>
+                <xs:element minOccurs="0" name="comment" type="nc1common:LongTextObjectType">
+                  <xs:annotation>
+                    <xs:documentation>Commentaire en texte libre.</xs:documentation>
+                    <xs:documentation xml:lang="en">free text comment.</xs:documentation>
+                    <xs:appinfo>
+                      <nc1ihm:Nom>Commentaire</nc1ihm:Nom>
+                      <nc1ihm:Nom xml:lang="en">comment</nc1ihm:Nom>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:element>
+                <xs:element minOccurs="0" name="extVersion" type="nc1common:ExtVersType">
+                  <xs:annotation>
+                    <xs:documentation>Extension pour versions suivantes compatibles.</xs:documentation>
+                    <xs:documentation xml:lang="en">Extension for following compatible versions.</xs:documentation>
+                    <xs:appinfo>
+                      <nc1ihm:Nom>Extension de version</nc1ihm:Nom>
+                      <nc1ihm:Nom xml:lang="en">version extension</nc1ihm:Nom>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:element>
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:simpleType name="MoyenAcquisitionArtCode">
+    <xs:annotation>
+      <xs:appinfo>
+        <nc1dico:source xmlns:nc1dico="urn:fra:nc1:dictionnaires">NCi+</nc1dico:source>
+        <nc1ihm:description>Moyen d'acquisition artillerie.</nc1ihm:description>
+        <nc1ihm:description xml:lang="en">Mean of artillery acquisition.</nc1ihm:description>
+      </xs:appinfo>
+      <xs:documentation>Moyen d'acquisition artillerie.</xs:documentation>
+      <xs:documentation xml:lang="en">Mean of artillery acquisition.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:integer" />
+  </xs:simpleType>
+  <xs:simpleType name="MoyensAcquisitionCode">
+    <xs:annotation>
+      <xs:appinfo>
+        <nc1dico:source xmlns:nc1dico="urn:fra:nc1:dictionnaires">NCi+</nc1dico:source>
+        <nc1ihm:description>Moyen d'acquisition.</nc1ihm:description>
+        <nc1ihm:description xml:lang="en">Mean of acquisition.</nc1ihm:description>
+      </xs:appinfo>
+      <xs:documentation>Moyen d'acquisition.</xs:documentation>
+      <xs:documentation xml:lang="en">Mean of acquisition.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:integer" />
+  </xs:simpleType>
+  <xs:simpleType name="NatureMissionAcqCOBRACode">
+    <xs:annotation>
+      <xs:appinfo>
+        <nc1dico:source xmlns:nc1dico="urn:fra:nc1:dictionnaires">NCi+</nc1dico:source>
+        <nc1ihm:description>Nature de la mission d'acquisition COBRA.</nc1ihm:description>
+        <nc1ihm:description xml:lang="en">Nature of the COBRA acquisition mission.</nc1ihm:description>
+      </xs:appinfo>
+      <xs:documentation>Nature de la mission d'acquisition COBRA.</xs:documentation>
+      <xs:documentation xml:lang="en">Nature of the COBRA acquisition mission.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:integer" />
+  </xs:simpleType>
+  <xs:simpleType name="NatureMissionAcqCode">
+    <xs:annotation>
+      <xs:appinfo>
+        <nc1dico:source xmlns:nc1dico="urn:fra:nc1:dictionnaires">NCi+</nc1dico:source>
+        <nc1ihm:description>Nature de la mission d'acquisition.</nc1ihm:description>
+        <nc1ihm:description xml:lang="en">Nature of the COBRA acquisition mission.</nc1ihm:description>
+      </xs:appinfo>
+      <xs:documentation>Nature de la mission d'acquisition.</xs:documentation>
+      <xs:documentation xml:lang="en">Nature of the COBRA acquisition mission.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:integer" />
+  </xs:simpleType>
+  <xs:simpleType name="NatureMissionRenfCode">
+    <xs:annotation>
+      <xs:appinfo>
+        <nc1dico:source xmlns:nc1dico="urn:fra:nc1:dictionnaires">ATLAS</nc1dico:source>
+        <nc1ihm:description>Nature de la mission de renforcement.</nc1ihm:description>
+        <nc1ihm:description xml:lang="en">Nature of the reinforcement mission.</nc1ihm:description>
+      </xs:appinfo>
+      <xs:documentation>Nature de la mission de renforcement.</xs:documentation>
+      <xs:documentation xml:lang="en">Nature of the reinforcement mission.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:integer" />
+  </xs:simpleType>
+  <xs:complexType name="ObjectifType">
+    <xs:annotation>
+      <xs:documentation>Description d’un objectif (force ou terrain).</xs:documentation>
+      <xs:documentation xml:lang="en">Objective desciption (force or terrain).</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:choice>
+        <xs:element name="objectiveForces" type="nc1missionASS:ObjectiveForcesType">
+          <xs:annotation>
+            <xs:documentation>Description de l’objectif de type force.</xs:documentation>
+            <xs:documentation xml:lang="en">description of Force type objective.</xs:documentation>
+            <xs:appinfo>
+              <nc1ihm:Nom>Objectif force</nc1ihm:Nom>
+              <nc1ihm:Nom xml:lang="en">objective force</nc1ihm:Nom>
+            </xs:appinfo>
+          </xs:annotation>
+        </xs:element>
+        <xs:element name="areaId" type="nc1common:Nc1ObjectRefType">
+          <xs:annotation>
+            <xs:documentation>Identifiant unique de l’objectif terrain.</xs:documentation>
+            <xs:documentation xml:lang="en">Area objective id.</xs:documentation>
+            <xs:appinfo>
+              <nc1ihm:Nom>Objectif terrain</nc1ihm:Nom>
+              <nc1ihm:Nom xml:lang="en">objective area</nc1ihm:Nom>
+            </xs:appinfo>
+          </xs:annotation>
+        </xs:element>
+      </xs:choice>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ObjectiveForcesType">
+    <xs:annotation>
+      <xs:documentation>Description d'un objectif force.</xs:documentation>
+      <xs:documentation xml:lang="en">Descritpion of force objective.</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="unitId" type="nc1common:Nc1ObjectRefType">
+        <xs:annotation>
+          <xs:documentation>Identifiant unique de l’objectif force.</xs:documentation>
+          <xs:documentation xml:lang="en">Force objective id.</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Type de la force</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">force id</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="comment" type="nc1common:MediumTextObjectType">
+        <xs:annotation>
+          <xs:documentation>Commentaire concernant l’objectif force.</xs:documentation>
+          <xs:documentation xml:lang="en">Comment about force goal.</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Commentaire</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">comment</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:simpleType name="PriorityCOBRACode">
+    <xs:annotation>
+      <xs:appinfo>
+        <nc1dico:source xmlns:nc1dico="urn:fra:nc1:dictionnaires">NCi+</nc1dico:source>
+        <nc1ihm:description>Priorité de la mission COBRA.</nc1ihm:description>
+        <nc1ihm:description xml:lang="en">COBRA mission priority.</nc1ihm:description>
+      </xs:appinfo>
+      <xs:documentation>Priorité de la mission COBRA.</xs:documentation>
+      <xs:documentation xml:lang="en">COBRA mission priority.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:integer" />
+  </xs:simpleType>
+  <xs:complexType name="PriorityTargetType">
+    <xs:annotation>
+      <xs:documentation>Description d'un objectif prioritaire.</xs:documentation>
+      <xs:documentation xml:lang="en">Description of high playoff objective.</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="targetNature" type="nc1missionASS:TargetTypeCode">
+        <xs:annotation>
+          <xs:documentation>Type d’objectif (ex : « Dépôt », « Blindés »).</xs:documentation>
+          <xs:documentation xml:lang="en">Target type.</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Type objectif</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">target type</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="subTargetNature" type="nc1missionASS:SubTargetTypeCode">
+        <xs:annotation>
+          <xs:documentation>Sous type de l’objectif (Ex : « Munitions », « Léger »).</xs:documentation>
+          <xs:documentation xml:lang="en">Objective subtype.</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Sous type objectif</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">objective subtype</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="tacticalLevel" type="nc1missionASS:TacticalLevelCode">
+        <xs:annotation>
+          <xs:documentation>Echelon tactique de l’objectif.</xs:documentation>
+          <xs:documentation xml:lang="en">Tactical level of the objective.</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Echelon tactique</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">tactical level</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:simpleType name="SearchedEffectCode">
+    <xs:annotation>
+      <xs:appinfo>
+        <nc1dico:source xmlns:nc1dico="urn:fra:nc1:dictionnaires">NCi+</nc1dico:source>
+        <nc1ihm:description>Effet recherché.</nc1ihm:description>
+        <nc1ihm:description xml:lang="en">Searched effect.</nc1ihm:description>
+      </xs:appinfo>
+      <xs:documentation>Effet recherché.</xs:documentation>
+      <xs:documentation xml:lang="en">Searched effect.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:integer" />
+  </xs:simpleType>
+  <xs:complexType name="SearchedFactType">
+    <xs:annotation>
+      <xs:documentation>Fait recherché.</xs:documentation>
+      <xs:documentation xml:lang="en">Searched facts.</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="ref" type="nc1common:Text1To8ANType">
+        <xs:annotation>
+          <xs:documentation>Référence du fait.</xs:documentation>
+          <xs:documentation xml:lang="en">Fact reference.</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Référence du fait</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">fact reference</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="domain" type="nc1missionASS:IntelligenceTypeCode">
+        <xs:annotation>
+          <xs:documentation>Domaine de la recherche.</xs:documentation>
+          <xs:documentation xml:lang="en">Search domain.</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Domaine</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">domain</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="searchedElement" type="nc1common:MediumTextObjectType">
+        <xs:annotation>
+          <xs:documentation>Description des éléments recherchés pour ce fait.</xs:documentation>
+          <xs:documentation xml:lang="en">Description of the elements sought for this fact.</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Elément recherché</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">searched element</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="isOfImmediateInterestIndicator" type="xs:boolean">
+        <xs:annotation>
+          <xs:documentation>Indique si le renseignement est d’intérêt immédiat.</xs:documentation>
+          <xs:documentation xml:lang="en">Is of immediate interest indicator.</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Renseignement d’intérêt immédiat</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">Information of immediate interest</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element maxOccurs="unbounded" name="interestedAuthority" type="nc1common:Nc1ObjectRefType">
+        <xs:annotation>
+          <xs:documentation>Liste des autorités intéressées par le fait.</xs:documentation>
+          <xs:documentation xml:lang="en">List of authorities involved in the fact.</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Autorités intéressées</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">involved authorities</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="observationType" type="nc1missionASS:TypeObservationCode">
+        <xs:annotation>
+          <xs:documentation>Type des observations à réaliser (présence, attitude, …).</xs:documentation>
+          <xs:documentation xml:lang="en">Observation to do type.</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Type d’observation</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">observation type</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:simpleType name="SubTargetTypeCode">
+    <xs:annotation>
+      <xs:appinfo>
+        <nc1dico:source xmlns:nc1dico="urn:fra:nc1:dictionnaires">NCi+</nc1dico:source>
+        <nc1ihm:description>Sous-type de cible.</nc1ihm:description>
+        <nc1ihm:description xml:lang="en">Target subtype.</nc1ihm:description>
+      </xs:appinfo>
+      <xs:documentation>Sous-type de cible.</xs:documentation>
+      <xs:documentation xml:lang="en">Target subtype.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:integer" />
+  </xs:simpleType>
+  <xs:simpleType name="SubTypeBatteryCode">
+    <xs:annotation>
+      <xs:appinfo>
+        <nc1dico:source xmlns:nc1dico="urn:fra:nc1:dictionnaires">ATLAS</nc1dico:source>
+        <nc1ihm:description>Sous type de batteries.</nc1ihm:description>
+        <nc1ihm:description xml:lang="en">Batteries subtype.</nc1ihm:description>
+      </xs:appinfo>
+      <xs:documentation>Sous type de batteries.</xs:documentation>
+      <xs:documentation xml:lang="en">Batteries subtype.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:integer" />
+  </xs:simpleType>
+  <xs:complexType name="SupplyPeriodType">
+    <xs:annotation>
+      <xs:documentation>Date et périodicité fournies.</xs:documentation>
+      <xs:documentation xml:lang="en">Date and periodicity provided.</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" name="firstSupply" type="xs:dateTime">
+        <xs:annotation>
+          <xs:documentation>Date et horaire de la première fourniture du renseignement.</xs:documentation>
+          <xs:documentation xml:lang="en">First intelligence supply date and schedule.</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Date première fourniture</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">first supply</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="supplyCycle" type="nc1common:Int0To2147483647Type">
+        <xs:annotation>
+          <xs:documentation>Périodicité de la fourniture en seconde.</xs:documentation>
+          <xs:documentation xml:lang="en">Supply cycle.</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Périodicité</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">cycle</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:simpleType name="TacticalLevelCode">
+    <xs:annotation>
+      <xs:appinfo>
+        <nc1dico:source xmlns:nc1dico="urn:fra:nc1:dictionnaires">NCi+</nc1dico:source>
+        <nc1ihm:description>Niveau tactique.</nc1ihm:description>
+        <nc1ihm:description xml:lang="en">Tactical level.</nc1ihm:description>
+      </xs:appinfo>
+      <xs:documentation>Niveau tactique.</xs:documentation>
+      <xs:documentation xml:lang="en">Tactical level.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:integer" />
+  </xs:simpleType>
+  <xs:simpleType name="TargetTypeCode">
+    <xs:annotation>
+      <xs:appinfo>
+        <nc1dico:source xmlns:nc1dico="urn:fra:nc1:dictionnaires">NCi+</nc1dico:source>
+        <nc1ihm:description>Type de cible.</nc1ihm:description>
+        <nc1ihm:description xml:lang="en">Target type.</nc1ihm:description>
+      </xs:appinfo>
+      <xs:documentation>Type de cible.</xs:documentation>
+      <xs:documentation xml:lang="en">Target type.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:integer" />
+  </xs:simpleType>
+  <xs:simpleType name="TrustCode">
+    <xs:annotation>
+      <xs:appinfo>
+        <nc1dico:source xmlns:nc1dico="urn:fra:nc1:dictionnaires">NCi+</nc1dico:source>
+        <nc1ihm:description>Niveau de confiance.</nc1ihm:description>
+        <nc1ihm:description xml:lang="en">Trust level.</nc1ihm:description>
+      </xs:appinfo>
+      <xs:documentation>Niveau de confiance.</xs:documentation>
+      <xs:documentation xml:lang="en">Trust level.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:integer" />
+  </xs:simpleType>
+  <xs:simpleType name="TypeBatteryCode">
+    <xs:annotation>
+      <xs:appinfo>
+        <nc1dico:source xmlns:nc1dico="urn:fra:nc1:dictionnaires">NCi+</nc1dico:source>
+        <nc1ihm:description>Type de batteries.</nc1ihm:description>
+        <nc1ihm:description xml:lang="en">Batteries type.</nc1ihm:description>
+      </xs:appinfo>
+      <xs:documentation>Type de batteries.</xs:documentation>
+      <xs:documentation xml:lang="en">Batteries type.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:integer" />
+  </xs:simpleType>
+  <xs:simpleType name="TypeObservationCode">
+    <xs:annotation>
+      <xs:appinfo>
+        <nc1dico:source xmlns:nc1dico="urn:fra:nc1:dictionnaires">NCi+</nc1dico:source>
+        <nc1ihm:description>Type d'observation.</nc1ihm:description>
+        <nc1ihm:description xml:lang="en">Observation type.</nc1ihm:description>
+      </xs:appinfo>
+      <xs:documentation>Type d'observation.</xs:documentation>
+      <xs:documentation xml:lang="en">Observation type.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:integer" />
+  </xs:simpleType>
+</xs:schema>

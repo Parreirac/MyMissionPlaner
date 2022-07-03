@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<cva:ContextValueAssociation xmlns:cva="http://docs.oasis-open.org/codelist/ns/ContextValueAssociation/1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="urn:fra:nc1:message:medsitrep" queryBinding="xslt2" xmlns:nc1medsitrep="urn:fra:nc1:message:medsitrep">
+  <!-- NC1 V.9.0.0 -->
+  <ValueLists>
+    <ValueList xml:id="nc1msgcom-ClassificationCode" uri="../Dictionnaires/ClassificationCode.gc" />
+    <ValueList xml:id="nc1msgcom-UrgencyLevelCode" uri="../Dictionnaires/UrgencyLevelCode.gc" />
+    <ValueList xml:id="nc1objcom-ActivationStatusCode" uri="../Dictionnaires/ActivationStatusCode.gc" />
+    <ValueList xml:id="nc1objcom-IsFullCode" uri="../Dictionnaires/IsFullCode.gc" />
+    <ValueList xml:id="nc1facility-FacilityFrSpecificCode" uri="../Dictionnaires/FacilityFrSpecificCode.gc" />
+    <ValueList xml:id="nc1facility-MedicalFacilityModifierCode" uri="../Dictionnaires/MedicalFacilityModifierCode.gc" />
+    <ValueList xml:id="nc1sicsdicos-L135_1Code" uri="../Dictionnaires/L135_1Code.gc" />
+    <ValueList xml:id="nc1sicsdicos-L125_1Code" uri="../Dictionnaires/L125_1Code.gc" />
+    <ValueList xml:id="nc1sicsdicos-L125_23Code" uri="../Dictionnaires/L125_23Code.gc" />
+    <ValueList xml:id="nc1sicsdicos-L135_43Code" uri="../Dictionnaires/L135_43Code.gc" />
+    <ValueList xml:id="nc1sicsdicos-L110_33Code" uri="../Dictionnaires/L110_33Code.gc" />
+    <ValueList xml:id="nc1sicsdicos-L125_24Code" uri="../Dictionnaires/L125_24Code.gc" />
+    <ValueList xml:id="nc1sicsdicos-L135_32Code" uri="../Dictionnaires/L135_32Code.gc" />
+    <ValueList xml:id="nc1sicsdicos-L135_33Code" uri="../Dictionnaires/L135_33Code.gc" />
+    <ValueList xml:id="nc1sicsdicos-L112_23Code" uri="../Dictionnaires/L112_23Code.gc" />
+    <ValueList xml:id="nc1sicsdicos-L112_20Code" uri="../Dictionnaires/L112_20Code.gc" />
+    <ValueList xml:id="nc1sicsdicos-L112_8Code" uri="../Dictionnaires/L112_8Code.gc" />
+    <ValueList xml:id="nc1sicsdicos-L110_41Code" uri="../Dictionnaires/L110_41Code.gc" />
+    <ValueList xml:id="nc1sicsdicos-L135_49Code" uri="../Dictionnaires/L135_49Code.gc" />
+    <ValueList xml:id="nc1sicsdicos-L117_5Code" uri="../Dictionnaires/L117_5Code.gc" />
+  </ValueLists>
+  <Contexts>
+    <Context address="/nc1medsitrep:NC1_MedSitRep/@classification" values="nc1msgcom-ClassificationCode" />
+    <Context address="/nc1medsitrep:NC1_MedSitRep/@urgencyLevel" values="nc1msgcom-UrgencyLevelCode" />
+    <Context address="/nc1medsitrep:NC1_MedSitRep/medicalFacilityReport/facility/@activationStatus" values="nc1objcom-ActivationStatusCode" />
+    <Context address="/nc1medsitrep:NC1_MedSitRep/medicalFacilityReport/facility/@isFull" values="nc1objcom-IsFullCode" />
+    <Context address="/nc1medsitrep:NC1_MedSitRep/medicalFacilityReport/facility/tacticalData/frSpecificSymbol" values="nc1facility-FacilityFrSpecificCode" />
+    <Context address="/nc1medsitrep:NC1_MedSitRep/medicalFacilityReport/facility/tacticalData/modifier" values="nc1facility-MedicalFacilityModifierCode" />
+    <Context address="/nc1medsitrep:NC1_MedSitRep/medicalFacilityReport/facility/tacticalData/distressIndicator" values="nc1sicsdicos-L135_1Code" />
+    <Context address="/nc1medsitrep:NC1_MedSitRep/medicalFacilityReport/facility/tacticalData/operationalStatusIndicator" values="nc1sicsdicos-L125_1Code" />
+    <Context address="/nc1medsitrep:NC1_MedSitRep/medicalFacilityReport/facility/tacticalData/securityStatus" values="nc1sicsdicos-L125_23Code" />
+    <Context address="/nc1medsitrep:NC1_MedSitRep/medicalFacilityReport/facility/tacticalData/minePresence" values="nc1sicsdicos-L135_43Code" />
+    <Context address="/nc1medsitrep:NC1_MedSitRep/medicalFacilityReport/facility/tacticalData/primaryConstructionMaterial" values="nc1sicsdicos-L110_33Code" />
+    <Context address="/nc1medsitrep:NC1_MedSitRep/medicalFacilityReport/facility/tacticalData/achievementStatus" values="nc1sicsdicos-L125_24Code" />
+    <Context address="/nc1medsitrep:NC1_MedSitRep/medicalFacilityReport/facility/tacticalData/soilPracticabilityDescription" values="nc1sicsdicos-L135_32Code" />
+    <Context address="/nc1medsitrep:NC1_MedSitRep/medicalFacilityReport/facility/tacticalData/instantSoilPracticability" values="nc1sicsdicos-L135_33Code" />
+    <Context address="/nc1medsitrep:NC1_MedSitRep/medicalFacilityReport/facility/medicalFacilityData/medicalMissionStatus" values="nc1sicsdicos-L112_23Code" />
+    <Context address="/nc1medsitrep:NC1_MedSitRep/medicalFacilityReport/facility/medicalFacilityData/personnel/medicalSpeciality" values="nc1sicsdicos-L112_20Code" />
+    <Context address="/nc1medsitrep:NC1_MedSitRep/medicalFacilityReport/facility/medicalFacilityData/deathCountPerGroupType/category" values="nc1sicsdicos-L112_8Code" />
+    <Context address="/nc1medsitrep:NC1_MedSitRep/medicalFacilityReport/facility/medicalFacilityData/occupiedBedCountPerGroup/category" values="nc1sicsdicos-L112_8Code" />
+    <Context address="/nc1medsitrep:NC1_MedSitRep/medicalFacilityReport/facility/bypassFacilityData/crossingMean/designType" values="nc1sicsdicos-L110_41Code" />
+    <Context address="/nc1medsitrep:NC1_MedSitRep/medicalFacilityReport/facility/bypassFacilityData/crossingMean/usage" values="nc1sicsdicos-L135_49Code" />
+    <Context address="/nc1medsitrep:NC1_MedSitRep/medicalFacilityReport/facility/location/quality" values="nc1sicsdicos-L117_5Code" />
+  </Contexts>
+</cva:ContextValueAssociation>

@@ -1,0 +1,89 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema targetNamespace="urn:fra:nc1:message:cbrn3chem" xmlns:nc1ihm="urn:fra:nc1:IHM" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:nc1cbrn3chem="urn:fra:nc1:message:cbrn3chem" xmlns:nc1cbrn="urn:fra:nc1:common:cbrn" xmlns:nc1msgcom="urn:fra:nc1:common:message" xmlns:nc1cbrnevent="urn:fra:nc1:objet:cbrnevent">
+  <!-- NC1 V.9.0.0 -->
+  <xs:import namespace="urn:fra:nc1:common:cbrn" schemaLocation="../Commun/Cbrn.xsd" />
+  <xs:import namespace="urn:fra:nc1:common:message" schemaLocation="../Commun/Message.xsd" />
+  <xs:import namespace="urn:fra:nc1:objet:cbrnevent" schemaLocation="../Objet/NC1_CbrnEvent.xsd" />
+  <xs:element name="NC1_CBRN-3-CHEM">
+    <xs:annotation>
+      <xs:documentation>Le message NC1_CBRN-3-CHEM permet la transmission de l'alerte immédiate d'une contamination redoutée, ainsi que les zones de danger associées à un événement chimique.</xs:documentation>
+      <xs:documentation xml:lang="en">The NC1_CBRN-3-CHEM message allows the transmission of the immediate alert of a dreaded contamination, as well as the zones of danger associated with a chemical event.</xs:documentation>
+      <xs:appinfo>
+        <nc1:type xmlns:nc1="urn:fra:nc1">Message</nc1:type>
+        <nc1ihm:Nom>Diffusion de l'alerte d'un événement chimique</nc1ihm:Nom>
+        <nc1ihm:Nom xml:lang="en">Cbrn 3 chemical report</nc1ihm:Nom>
+        <nc1:MessH xmlns:nc1="urn:fra:nc1">N/A</nc1:MessH>
+        <nc1:MessADatP3 xmlns:nc1="urn:fra:nc1">CBRN_3_CHEM</nc1:MessADatP3>
+        <nc1:LastNC1ModifyVersion xmlns:nc1="urn:fra:nc1">9.0.0</nc1:LastNC1ModifyVersion>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:complexContent>
+        <xs:extension base="nc1msgcom:BaseMessageType">
+          <xs:sequence>
+            <xs:element name="cbrnEvent" type="nc1cbrnevent:CbrnEventType">
+              <xs:annotation>
+                <xs:documentation>Evénement NRBC.</xs:documentation>
+                <xs:documentation xml:lang="en">CBRN event.</xs:documentation>
+                <xs:appinfo>
+                  <nc1ihm:Nom>Evénement NRBC</nc1ihm:Nom>
+                  <nc1ihm:Nom xml:lang="en">CBRN event</nc1ihm:Nom>
+                </xs:appinfo>
+              </xs:annotation>
+            </xs:element>
+            <xs:element name="papaa" type="nc1cbrn:PapaaType">
+              <xs:annotation>
+                <xs:documentation>Zones de diffusion et zone de danger associées à l'agent NRBC.</xs:documentation>
+                <xs:documentation xml:lang="en">Release areas and hazard area associated to the CBRN event.</xs:documentation>
+                <xs:appinfo>
+                  <nc1ihm:Nom>PAPAA</nc1ihm:Nom>
+                  <nc1ihm:Nom xml:lang="en">PAPAA</nc1ihm:Nom>
+                </xs:appinfo>
+              </xs:annotation>
+            </xs:element>
+            <xs:element name="papax" type="nc1cbrn:PapaxType">
+              <xs:annotation>
+                <xs:documentation>Localisation de la zone de danger pour une période météo de deux heures donnée.</xs:documentation>
+                <xs:documentation xml:lang="en">Location of the danger zone for a given weather two-hour period.</xs:documentation>
+                <xs:appinfo>
+                  <nc1ihm:Nom>PAPAX</nc1ihm:Nom>
+                  <nc1ihm:Nom xml:lang="en">PAPAX</nc1ihm:Nom>
+                </xs:appinfo>
+              </xs:annotation>
+            </xs:element>
+            <xs:element minOccurs="0" name="xrayb" type="nc1cbrn:XraybType">
+              <xs:annotation>
+                <xs:documentation>Contour calculé de la contamination NRBC.</xs:documentation>
+                <xs:documentation xml:lang="en">Calculated shape of the CBRN contamination.</xs:documentation>
+                <xs:appinfo>
+                  <nc1ihm:Nom>XRAYB</nc1ihm:Nom>
+                  <nc1ihm:Nom xml:lang="en">XRAYB</nc1ihm:Nom>
+                </xs:appinfo>
+              </xs:annotation>
+            </xs:element>
+            <xs:element minOccurs="0" name="oscar" type="nc1cbrn:OscarType">
+              <xs:annotation>
+                <xs:documentation>Horodatage des lignes de contour estimées de l'événement.</xs:documentation>
+                <xs:documentation xml:lang="en">Datetime of the estimated area outlines of the event.</xs:documentation>
+                <xs:appinfo>
+                  <nc1ihm:Nom>OSCAR</nc1ihm:Nom>
+                  <nc1ihm:Nom xml:lang="en">OSCAR</nc1ihm:Nom>
+                </xs:appinfo>
+              </xs:annotation>
+            </xs:element>
+            <xs:element minOccurs="0" name="crbnInfo" type="nc1msgcom:MixedAnyType">
+              <xs:annotation>
+                <xs:documentation>Informations supplémentaires.</xs:documentation>
+                <xs:documentation xml:lang="en">Additional information.</xs:documentation>
+                <xs:appinfo>
+                  <nc1ihm:Nom>CBRN INFO</nc1ihm:Nom>
+                  <nc1ihm:Nom xml:lang="en">CBRN INFO</nc1ihm:Nom>
+                </xs:appinfo>
+              </xs:annotation>
+            </xs:element>
+          </xs:sequence>
+        </xs:extension>
+      </xs:complexContent>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

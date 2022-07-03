@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema targetNamespace="urn:fra:nc1:common:health" xmlns:nc1ihm="urn:fra:nc1:IHM" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:nc1medical="urn:fra:nc1:common:health" xmlns:nc1common="urn:fra:nc1:common:attribute" xmlns:nc1sicsdicos="urn:fra:nc1:common:sicsdicos">
+  <!-- NC1 V.9.0.0 -->
+  <xs:import namespace="urn:fra:nc1:common:attribute" schemaLocation="Common.xsd" />
+  <xs:import namespace="urn:fra:nc1:common:sicsdicos" schemaLocation="SICS_Dictionaries.xsd" />
+  <xs:simpleType name="InjurySeverityCode">
+    <xs:annotation>
+      <xs:appinfo>
+        <nc1dico:source xmlns:nc1dico="urn:fra:nc1:dictionnaires">TTA 915</nc1dico:source>
+      </xs:appinfo>
+      <xs:documentation></xs:documentation>
+      <xs:documentation xml:lang="en"></xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:integer" />
+  </xs:simpleType>
+  <xs:complexType name="PersonnelCasualtiesType">
+    <xs:annotation>
+      <xs:documentation>Caractérisation d'une ou plusieurs victimes.</xs:documentation>
+      <xs:documentation xml:lang="en">Characterization of the casualties.</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" name="category" type="nc1sicsdicos:L112_1Code">
+        <xs:annotation>
+          <xs:documentation>Catégorie des victimes (CIV, OWN, etc.).</xs:documentation>
+          <xs:documentation xml:lang="en">Casualties category (CIV, OWN, ..etc.).</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Catégorie</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">Category</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="nationality" type="nc1common:ShortTextObjectType">
+        <xs:annotation>
+          <xs:documentation>Nationalité des victimes.</xs:documentation>
+          <xs:documentation xml:lang="en">Nationality of the casualties.</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Nationalité</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">Nationality</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="injuredCount" type="nc1common:Int0To999Type">
+        <xs:annotation>
+          <xs:documentation>Nombre de blessés parmi les victimes.</xs:documentation>
+          <xs:documentation xml:lang="en">Number of injured persons among the casualties.</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Nombre de blessés</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">Number of wounded</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="killedCount" type="nc1common:Int0To999Type">
+        <xs:annotation>
+          <xs:documentation>Nombre de tués parmi les victimes.</xs:documentation>
+          <xs:documentation xml:lang="en">Number of killed persons among the casualties.</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Nombre de tués</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">Killed count</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

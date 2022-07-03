@@ -1,0 +1,170 @@
+﻿<UserControl
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:esri="http://schemas.esri.com/arcgis/runtime/2013"
+             xmlns:viewModels="clr-namespace:MilitaryPlanner.ViewModels"
+             xmlns:helper="clr-namespace:MilitaryPlanner.Helpers"
+    xmlns:ei="http://schemas.microsoft.com/xaml/behaviors" x:Class="MilitaryPlanner.Views.MapView"
+             xmlns:xceed="http://schemas.xceed.com/wpf/xaml/toolkit"
+             xmlns:behavior="clr-namespace:MilitaryPlanner.Behavior" 
+    xmlns:esri1="clr-namespace:Esri.ArcGISRuntime.UI;assembly=Esri.ArcGISRuntime" 
+    xmlns:esri2="clr-namespace:Esri.ArcGISRuntime.Mapping;assembly=Esri.ArcGISRuntime"
+    xmlns:esri3="clr-namespace:Esri.ArcGISRuntime.Toolkit;assembly=Esri.ArcGISRuntime.toolkit" xmlns:esri31="clr-namespace:Esri.ArcGISRuntime.Toolkit.UI.Controls;assembly=Esri.ArcGISRuntime.Toolkit"
+    mc:Ignorable="d" 
+             d:DesignHeight="500" d:DesignWidth="500">
+    <UserControl.Resources>
+        <viewModels:MapViewModel x:Key="MyMapViewModel" />
+        <BooleanToVisibilityConverter x:Key="BoolConverter" />
+        <Image x:Key="AddImage" Source="/MyMissionPlaner;component/icons/GenericBlueAdd_C_16.png"/>
+        <Image x:Key="BackImage" Source="/MyMissionPlaner;component/icons/GenericBlueArrowStepLeftBackward32.png"/>
+        <Image x:Key="ForwardImage" Source="/MyMissionPlaner;component/icons/GenericBlueArrowStepRightForward32.png"/>
+        <Image x:Key="SaveImage" Source="/MyMissionPlaner;component/icons/GenericSave_B_32.png"/>
+        <Image x:Key="LoadImage" Source="/MyMissionPlaner;component/icons/CadastralJobLoad32.png"/>
+        <Image x:Key="MeasureImage" Source="/MyMissionPlaner;component/icons/MeasureTool32.png"/>
+        <Image x:Key="ViewShedImage" Source="/MyMissionPlaner;component/icons/View32.png"/>
+        <Image x:Key="GotoXYImage" Source="/MyMissionPlaner;component/icons/GoToXY32.png"/>
+        <Image x:Key="RoutingImage" Source="/MyMissionPlaner;component/icons/Route32.png"/>
+        <Image x:Key="BasemapImage" Source="/MyMissionPlaner;component/icons/Basemap32.png"/>
+    </UserControl.Resources>
+    <Grid DataContext="{StaticResource MyMapViewModel}">
+        <VisualStateManager.VisualStateGroups>
+            <VisualStateGroup x:Name="ShowHideTopPanel">
+                <VisualStateGroup.Transitions>
+                    <VisualTransition GeneratedDuration="0:0:0.3"/>
+                </VisualStateGroup.Transitions>
+                <VisualState x:Name="ShowPanel">
+                    <Storyboard>
+                        <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)" Storyboard.TargetName="stackPanel">
+                            <EasingDoubleKeyFrame KeyTime="0" Value="47"/>
+                        </DoubleAnimationUsingKeyFrames>
+                    </Storyboard>
+                </VisualState>
+                <VisualState x:Name="HidePanel">
+                    <Storyboard>
+                        <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)" Storyboard.TargetName="stackPanel">
+                            <EasingDoubleKeyFrame KeyTime="0" Value="15"/>
+                        </DoubleAnimationUsingKeyFrames>
+                        <BooleanAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.IsHitTestVisible)" Storyboard.TargetName="HideObject">
+                            <DiscreteBooleanKeyFrame KeyTime="0" Value="False"/>
+                        </BooleanAnimationUsingKeyFrames>
+                    </Storyboard>
+                </VisualState>
+            </VisualStateGroup>
+        </VisualStateManager.VisualStateGroups>
+        <esri:MapView x:Name="MyMapView"
+            helper:EventToCommand.Event="Loaded"
+		    helper:EventToCommand.CommandParameter="{Binding ElementName=MyMapView}"
+		    helper:EventToCommand.Command="{Binding SetMapCommand}">
+            <ei:Interaction.Behaviors>
+                <behavior:FrameworkElementDropBehavior/>
+            </ei:Interaction.Behaviors>
+            <esri2:Map x:Name="MyMap">
+                <esri2:Map.OperationalLayers>
+                    <!-- ajout pra  -->
+                    <!-- ArcGIS Online Tiled Basemap Layer -->
+                    <esri2:ArcGISTiledLayer Id="basemap" Source="http://services.arcgisonline.com/ArcGIS/rest/services/World_Topo_Map/MapServer" />
+                    <esri2:ArcGISTiledLayer Id="MensurationMapServiceLayer" Source="http://sampleserver6.arcgisonline.com/arcgis/rest/services/Toronto/ImageServer" />
+                </esri2:Map.OperationalLayers>
+            </esri2:Map>
+            <esri:MapView.GraphicsOverlays>
+                <esri1:GraphicsOverlay Id="graphicsOverlay" />
+                <!-- la ligne du dessus sert elle ? -->
+            </esri:MapView.GraphicsOverlays>
+        </esri:MapView>
+        <esri31:ScaleLine MapScale="{Binding ElementName=MyMapView,Path=MapScale }" 
+                                          HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="10" />
+        <TextBlock HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="0,0,10,10" Text="{Binding CoordinateReadout}">
+            <TextBlock.ContextMenu>
+                <ContextMenu>
+                    <MenuItem Header="Format">
+                        <MenuItem Command="{Binding CoordinateReadoutFormatCommand}" CommandParameter="DD" Header="DD" />
+                        <MenuItem Command="{Binding CoordinateReadoutFormatCommand}" CommandParameter="DMS" Header="DMS" />
+                        <MenuItem Command="{Binding CoordinateReadoutFormatCommand}" CommandParameter="GARS" Header="GARS" />
+                        <MenuItem Command="{Binding CoordinateReadoutFormatCommand}" CommandParameter="GEOREF" Header="GEOREF" />
+                        <MenuItem Command="{Binding CoordinateReadoutFormatCommand}" CommandParameter="MGRS" Header="MGRS" />
+                        <MenuItem Command="{Binding CoordinateReadoutFormatCommand}" CommandParameter="USNG" Header="USNG" />
+                        <MenuItem Command="{Binding CoordinateReadoutFormatCommand}" CommandParameter="UTM" Header="UTM" />
+                    </MenuItem>
+                </ContextMenu>
+            </TextBlock.ContextMenu>
+        </TextBlock>
+        <Rectangle x:Name="HideObject" Fill="#00F4F4F5" HorizontalAlignment="Left" VerticalAlignment="Top" Height="2000" Margin="0,19,0,0" Stroke="Black" StrokeThickness="0" Width="2000">
+            <ei:Interaction.Triggers>
+                <ei:EventTrigger EventName="MouseEnter">
+                    <ei:GoToStateAction StateName="HidePanel"/>
+                </ei:EventTrigger>
+            </ei:Interaction.Triggers>
+        </Rectangle>
+        <Rectangle x:Name="ShowObject" Fill="#00F4F4F5" HorizontalAlignment="Left" Height="13.6" Stroke="Black" VerticalAlignment="Top" StrokeThickness="0" Width="2000">
+            <ei:Interaction.Triggers>
+                <ei:EventTrigger EventName="MouseEnter">
+                    <ei:GoToStateAction StateName="ShowPanel"/>
+                </ei:EventTrigger>
+            </ei:Interaction.Triggers>
+        </Rectangle>
+        <StackPanel x:Name="stackPanel" Background="Transparent" Margin="0,-78,0,0" Height="52" VerticalAlignment="Top" HorizontalAlignment="Center" >
+            <StackPanel.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </StackPanel.RenderTransform>
+            <Grid x:Name="layoutGrid" Margin="5" Background="Transparent">
+                <StackPanel x:Name="MyStackPanel" Orientation="Horizontal">
+                    <Button Content="{StaticResource AddImage}" Margin="3" Command="{Binding PhaseAddCommand}"            
+							ToolTipService.ToolTip="Add a new phase"/>
+                    <Button Content="{StaticResource BackImage}" Margin="3" Command="{Binding PhaseBackCommand}"            
+							ToolTipService.ToolTip="Go back one phase"/>
+                    <Button Content="{StaticResource ForwardImage}" Margin="3" Command="{Binding PhaseNextCommand}"            
+							ToolTipService.ToolTip="Go forward one phase"/>
+                    <Button Content="{StaticResource SaveImage}" Margin="3" Command="{Binding SaveCommand}"            
+							ToolTipService.ToolTip="Save mission or geomessages"/>
+                    <Button Content="{StaticResource LoadImage}" Margin="3" Command="{Binding LoadCommand}"          
+							ToolTipService.ToolTip="Load mission"/>
+                    <Button Content="{StaticResource MeasureImage}" Margin="3" Command="{Binding MeasureCommand}"            
+							ToolTipService.ToolTip="Measure" />
+                    <Button Content="{StaticResource ViewShedImage}" Margin="3" Command="{Binding ToggleViewShedToolCommand}" CommandParameter="True"            
+							ToolTipService.ToolTip="ViewShed Tool" />
+                    <Button Content="{StaticResource GotoXYImage}" Margin="3" Command="{Binding ToggleGotoXYToolCommand}" CommandParameter="True"            
+							ToolTipService.ToolTip="GotoXY Tool" />
+                    <Button Content="{StaticResource RoutingImage}" Margin="3" Command="{Binding ToggleNetworkingToolCommand}" CommandParameter="True"            
+							ToolTipService.ToolTip="Routing Tool" />
+                    <Button x:Name="image" Content="{StaticResource BasemapImage}" Margin="3" Command="{Binding ToggleBasemapGalleryCommand}" CommandParameter="True"            
+							ToolTipService.ToolTip="Basemap Gallery" />
+                </StackPanel>
+            </Grid>
+        </StackPanel>
+        <Border x:Name="TimeAwareAttributeEditor"
+                Visibility="{Binding HasTimeExtent, Converter={StaticResource BoolConverter}}"
+                Background="White"
+                BorderBrush="Black"
+                BorderThickness="1"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Bottom"
+                Margin="20"
+                Padding="10">
+            <Border.Effect>
+                <DropShadowEffect />
+            </Border.Effect>
+            <StackPanel Orientation="Vertical">
+                <StackPanel Orientation="Horizontal" Margin="2,2,2,2">
+                    <TextBlock Width="30" Margin="2"
+                                   VerticalAlignment="Center"
+                                   Text="Start" />
+                    <xceed:DateTimePicker Value="{Binding StartTime, Mode=TwoWay}" Width="140" HorizontalAlignment="Left" Margin="3,0,0,0" FormatString="yyyy/MM/dd HH:mm" Format="Custom" TimeFormat="Custom" TimeFormatString="HH:mm" />
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" Margin="2,2,2,2">
+                    <TextBlock Width="30" Margin="2"
+                                   VerticalAlignment="Center"
+                                   Text="End" />
+                    <xceed:DateTimePicker Value="{Binding EndTime , Mode=TwoWay}" Width="140" HorizontalAlignment="Left" Margin="3,0,0,0" FormatString="yyyy/MM/dd HH:mm" Format="Custom" TimeFormat="Custom" TimeFormatString="HH:mm" />
+                </StackPanel>
+            </StackPanel>
+        </Border>
+        <TextBlock VerticalAlignment="Bottom" HorizontalAlignment="Left" Margin="10,0,0,40" Text="{Binding PhaseDescription}" />
+    </Grid>
+</UserControl>

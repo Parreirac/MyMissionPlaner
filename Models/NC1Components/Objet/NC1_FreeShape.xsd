@@ -1,0 +1,322 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema targetNamespace="urn:fra:nc1:objet:freeshape" xmlns:nc1ihm="urn:fra:nc1:IHM" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:nc1freeshape="urn:fra:nc1:objet:freeshape" xmlns:nc1common="urn:fra:nc1:common:attribute" xmlns:nc1location="urn:fra:nc1:common:location" xmlns:nc1objcom="urn:fra:nc1:common:object" xmlns:nc1sicsdicos="urn:fra:nc1:common:sicsdicos">
+  <!-- NC1 V.9.0.0 -->
+  <xs:import namespace="urn:fra:nc1:common:attribute" schemaLocation="../Commun/Common.xsd" />
+  <xs:import namespace="urn:fra:nc1:common:location" schemaLocation="../Commun/Location.xsd" />
+  <xs:import namespace="urn:fra:nc1:common:object" schemaLocation="../Commun/Object.xsd" />
+  <xs:import namespace="urn:fra:nc1:common:sicsdicos" schemaLocation="../Commun/SICS_Dictionaries.xsd" />
+  <xs:element name="NC1_FreeShape" type="nc1freeshape:FreeShapeType">
+    <xs:annotation>
+      <xs:documentation>L’objet NC1_FreeShape est une forme graphique libre comprenant du style et un libellé.</xs:documentation>
+      <xs:documentation xml:lang="en">The object NC1_FreeShape is a free graphic form understanding of the style and the title.</xs:documentation>
+      <xs:appinfo>
+        <nc1:type xmlns:nc1="urn:fra:nc1">Objet</nc1:type>
+        <nc1ihm:Nom>Forme libre</nc1ihm:Nom>
+        <nc1ihm:Nom xml:lang="en">Free shape</nc1ihm:Nom>
+        <nc1:MessH xmlns:nc1="urn:fra:nc1">N/A</nc1:MessH>
+        <nc1:MessADatP3 xmlns:nc1="urn:fra:nc1">N/A</nc1:MessADatP3>
+        <nc1:LastNC1ModifyVersion xmlns:nc1="urn:fra:nc1">9.0.0</nc1:LastNC1ModifyVersion>
+      </xs:appinfo>
+    </xs:annotation>
+  </xs:element>
+  <xs:complexType name="FreeShapeType">
+    <xs:annotation>
+      <xs:documentation>L’objet NC1_FreeShape est une forme graphique libre comprenant du style (épaisseur, couleur, fléchage) et un libellé associé.</xs:documentation>
+      <xs:documentation xml:lang="en">The NC1_FreeShape object is a free graphical shape with associated style (thickness, colour, arrow) and label.</xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="nc1objcom:LocalisedObjectType">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="tacticalData">
+            <xs:annotation>
+              <xs:documentation>Données tactiques de la forme graphique libre.</xs:documentation>
+              <xs:documentation xml:lang="en">Free shape tactical data.</xs:documentation>
+              <xs:appinfo>
+                <nc1ihm:Nom>Données tactiques</nc1ihm:Nom>
+                <nc1ihm:Nom xml:lang="en">tactical datas</nc1ihm:Nom>
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element minOccurs="0" name="name" type="nc1common:ShortTextObjectType">
+                  <xs:annotation>
+                    <xs:documentation>Nom de la forme graphique libre affiché sur la cartographie.</xs:documentation>
+                    <xs:documentation xml:lang="en">Free shape displayed name.</xs:documentation>
+                    <xs:appinfo>
+                      <nc1ihm:Nom>Nom</nc1ihm:Nom>
+                      <nc1ihm:Nom xml:lang="en">name</nc1ihm:Nom>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:element>
+                <xs:element name="style">
+                  <xs:annotation>
+                    <xs:documentation>Style de la forme graphique libre (couleur, remplissage, fléchage, etc.).</xs:documentation>
+                    <xs:appinfo>
+                      <nc1ihm:Nom>Style</nc1ihm:Nom>
+                    </xs:appinfo>
+                  </xs:annotation>
+                  <xs:complexType>
+                    <xs:choice>
+                      <xs:element name="point">
+                        <xs:annotation>
+                          <xs:documentation>Forme de type ponctuel.</xs:documentation>
+                          <xs:appinfo>
+                            <nc1ihm:Nom>Ponctuel</nc1ihm:Nom>
+                          </xs:appinfo>
+                        </xs:annotation>
+                        <xs:complexType>
+                          <xs:sequence>
+                            <xs:element minOccurs="0" name="type" type="nc1sicsdicos:L150_7Code">
+                              <xs:annotation>
+                                <xs:documentation>Type de point.</xs:documentation>
+                                <xs:appinfo>
+                                  <nc1ihm:Nom>Type de point</nc1ihm:Nom>
+                                </xs:appinfo>
+                              </xs:annotation>
+                            </xs:element>
+                            <xs:element minOccurs="0" name="color" type="nc1sicsdicos:L150_2Code">
+                              <xs:annotation>
+                                <xs:documentation>Couleur du point.</xs:documentation>
+                                <xs:appinfo>
+                                  <nc1ihm:Nom>Couleur du point</nc1ihm:Nom>
+                                </xs:appinfo>
+                              </xs:annotation>
+                            </xs:element>
+                          </xs:sequence>
+                        </xs:complexType>
+                      </xs:element>
+                      <xs:element name="line">
+                        <xs:annotation>
+                          <xs:documentation>Forme de type ligne.</xs:documentation>
+                          <xs:appinfo>
+                            <nc1ihm:Nom>Ligne</nc1ihm:Nom>
+                          </xs:appinfo>
+                        </xs:annotation>
+                        <xs:complexType>
+                          <xs:sequence>
+                            <xs:element minOccurs="0" name="type" type="nc1sicsdicos:L150_3Code">
+                              <xs:annotation>
+                                <xs:documentation>Type de ligne.</xs:documentation>
+                                <xs:appinfo>
+                                  <nc1ihm:Nom>Type de ligne</nc1ihm:Nom>
+                                </xs:appinfo>
+                              </xs:annotation>
+                            </xs:element>
+                            <xs:element minOccurs="0" name="arrowType" type="nc1sicsdicos:L150_5Code">
+                              <xs:annotation>
+                                <xs:documentation>Type de la flèche</xs:documentation>
+                                <xs:appinfo>
+                                  <nc1ihm:Nom>Type de la flèche</nc1ihm:Nom>
+                                </xs:appinfo>
+                              </xs:annotation>
+                            </xs:element>
+                            <xs:element minOccurs="0" name="color" type="nc1sicsdicos:L150_2Code">
+                              <xs:annotation>
+                                <xs:documentation>Couleur de la ligne.</xs:documentation>
+                                <xs:appinfo>
+                                  <nc1ihm:Nom>Couleur de la ligne</nc1ihm:Nom>
+                                </xs:appinfo>
+                              </xs:annotation>
+                            </xs:element>
+                            <xs:element minOccurs="0" name="thikness" type="nc1sicsdicos:L150_4Code">
+                              <xs:annotation>
+                                <xs:documentation>Epaisseur du trait.</xs:documentation>
+                                <xs:appinfo>
+                                  <nc1ihm:Nom>Epaisseur du trait</nc1ihm:Nom>
+                                </xs:appinfo>
+                              </xs:annotation>
+                            </xs:element>
+                          </xs:sequence>
+                        </xs:complexType>
+                      </xs:element>
+                      <xs:element name="area">
+                        <xs:annotation>
+                          <xs:documentation>Forme de type zone.</xs:documentation>
+                          <xs:appinfo>
+                            <nc1ihm:Nom>Zone</nc1ihm:Nom>
+                          </xs:appinfo>
+                        </xs:annotation>
+                        <xs:complexType>
+                          <xs:sequence>
+                            <xs:element minOccurs="0" name="type" type="nc1sicsdicos:L150_6Code">
+                              <xs:annotation>
+                                <xs:documentation>Type de zone</xs:documentation>
+                                <xs:appinfo>
+                                  <nc1ihm:Nom>Type de zone</nc1ihm:Nom>
+                                </xs:appinfo>
+                              </xs:annotation>
+                            </xs:element>
+                            <xs:element minOccurs="0" name="outlineType" type="nc1sicsdicos:L150_3Code">
+                              <xs:annotation>
+                                <xs:documentation>Type de contour.</xs:documentation>
+                                <xs:appinfo>
+                                  <nc1ihm:Nom>Type de contour</nc1ihm:Nom>
+                                </xs:appinfo>
+                              </xs:annotation>
+                            </xs:element>
+                            <xs:element minOccurs="0" name="outlineColor" type="nc1sicsdicos:L150_2Code">
+                              <xs:annotation>
+                                <xs:documentation>Couleur du contour.</xs:documentation>
+                                <xs:appinfo>
+                                  <nc1ihm:Nom>Couleur du contour</nc1ihm:Nom>
+                                </xs:appinfo>
+                              </xs:annotation>
+                            </xs:element>
+                            <xs:element minOccurs="0" name="fillColor" type="nc1sicsdicos:L150_2Code">
+                              <xs:annotation>
+                                <xs:documentation>Couleur de remplissage.</xs:documentation>
+                                <xs:appinfo>
+                                  <nc1ihm:Nom>Couleur de remplissage</nc1ihm:Nom>
+                                </xs:appinfo>
+                              </xs:annotation>
+                            </xs:element>
+                          </xs:sequence>
+                        </xs:complexType>
+                      </xs:element>
+                    </xs:choice>
+                  </xs:complexType>
+                </xs:element>
+                <xs:element minOccurs="0" name="displayPeriod" type="nc1common:PeriodType">
+                  <xs:annotation>
+                    <xs:documentation>Période durant laquelle la forme graphique est affichée.</xs:documentation>
+                    <xs:documentation xml:lang="en">Free shape display period.</xs:documentation>
+                    <xs:appinfo>
+                      <nc1ihm:Nom>Période d’affichage</nc1ihm:Nom>
+                      <nc1ihm:Nom xml:lang="en">Display period</nc1ihm:Nom>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:element>
+                <xs:element minOccurs="0" name="url" type="nc1common:MediumTextObjectType">
+                  <xs:annotation>
+                    <xs:documentation>Lien vers un fichier associé à l’objet.</xs:documentation>
+                    <xs:documentation xml:lang="en">Link to a file associated with the object.</xs:documentation>
+                    <xs:appinfo>
+                      <nc1ihm:Nom>Url</nc1ihm:Nom>
+                      <nc1ihm:Nom xml:lang="en">url</nc1ihm:Nom>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:element>
+                <xs:element minOccurs="0" name="comment" type="nc1common:LongTextObjectType">
+                  <xs:annotation>
+                    <xs:documentation>Commentaire en texte libre.</xs:documentation>
+                    <xs:documentation xml:lang="en">free text comment.</xs:documentation>
+                    <xs:appinfo>
+                      <nc1ihm:Nom>Commentaire</nc1ihm:Nom>
+                      <nc1ihm:Nom xml:lang="en">comment</nc1ihm:Nom>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:element>
+                <xs:element minOccurs="0" name="extVersion" type="nc1common:ExtVersType">
+                  <xs:annotation>
+                    <xs:documentation>Extension pour versions suivantes compatibles.</xs:documentation>
+                    <xs:documentation xml:lang="en">Extension for following compatible versions.</xs:documentation>
+                    <xs:appinfo>
+                      <nc1ihm:Nom>Extension de version</nc1ihm:Nom>
+                      <nc1ihm:Nom xml:lang="en">version extension</nc1ihm:Nom>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:element>
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+          <xs:element name="location">
+            <xs:annotation>
+              <xs:documentation>Localisation.</xs:documentation>
+              <xs:documentation xml:lang="en">Location.</xs:documentation>
+              <xs:appinfo>
+                <nc1ihm:Nom>Localisation</nc1ihm:Nom>
+                <nc1ihm:Nom xml:lang="en">Location</nc1ihm:Nom>
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:complexType>
+              <xs:sequence>
+                <xs:choice>
+                  <xs:element name="point" type="nc1location:PointType">
+                    <xs:annotation>
+                      <xs:documentation>Point localisé.</xs:documentation>
+                      <xs:documentation xml:lang="en">Geolocalized point.</xs:documentation>
+                      <xs:appinfo>
+                        <nc1ihm:Nom>Point</nc1ihm:Nom>
+                        <nc1ihm:Nom xml:lang="en">Point</nc1ihm:Nom>
+                      </xs:appinfo>
+                    </xs:annotation>
+                  </xs:element>
+                  <xs:element name="polyline" type="nc1location:PolylineType">
+                    <xs:annotation>
+                      <xs:documentation>Ligne brisée orientée, sans largeur.</xs:documentation>
+                      <xs:documentation xml:lang="en">Width less oriented polyline.</xs:documentation>
+                      <xs:appinfo>
+                        <nc1ihm:Nom>Polyligne</nc1ihm:Nom>
+                        <nc1ihm:Nom xml:lang="en">Polyline</nc1ihm:Nom>
+                      </xs:appinfo>
+                    </xs:annotation>
+                  </xs:element>
+                  <xs:element name="polygon" type="nc1location:PolygonType">
+                    <xs:annotation>
+                      <xs:documentation>Polygone, ou ligne brisée fermée.</xs:documentation>
+                      <xs:documentation xml:lang="en">Polygon, or closed polyline.</xs:documentation>
+                      <xs:appinfo>
+                        <nc1ihm:Nom>Polygone</nc1ihm:Nom>
+                        <nc1ihm:Nom xml:lang="en">Polygon</nc1ihm:Nom>
+                      </xs:appinfo>
+                    </xs:annotation>
+                  </xs:element>
+                  <xs:element name="rectangle" type="nc1location:RectangleType">
+                    <xs:annotation>
+                      <xs:documentation>Rectangle.</xs:documentation>
+                      <xs:documentation xml:lang="en">Rectangle.</xs:documentation>
+                      <xs:appinfo>
+                        <nc1ihm:Nom>Rectangle</nc1ihm:Nom>
+                        <nc1ihm:Nom xml:lang="en">Rectangle</nc1ihm:Nom>
+                      </xs:appinfo>
+                    </xs:annotation>
+                  </xs:element>
+                  <xs:element name="circle" type="nc1location:CircleType">
+                    <xs:annotation>
+                      <xs:documentation>Cercle.</xs:documentation>
+                      <xs:documentation xml:lang="en">Circle.</xs:documentation>
+                      <xs:appinfo>
+                        <nc1ihm:Nom>Cercle</nc1ihm:Nom>
+                        <nc1ihm:Nom xml:lang="en">Circle</nc1ihm:Nom>
+                      </xs:appinfo>
+                    </xs:annotation>
+                  </xs:element>
+                  <xs:element name="ellipse" type="nc1location:EllipseType">
+                    <xs:annotation>
+                      <xs:documentation>Ellipse.</xs:documentation>
+                      <xs:documentation xml:lang="en">Ellipse.</xs:documentation>
+                      <xs:appinfo>
+                        <nc1ihm:Nom>Ellipse</nc1ihm:Nom>
+                        <nc1ihm:Nom xml:lang="en">Ellipse</nc1ihm:Nom>
+                      </xs:appinfo>
+                    </xs:annotation>
+                  </xs:element>
+                  <xs:element name="arcband" type="nc1location:ArcbandType">
+                    <xs:annotation>
+                      <xs:documentation>Radarc, ou secteur à 4 points.</xs:documentation>
+                      <xs:documentation xml:lang="en">Arcband, or 4 points sector.</xs:documentation>
+                      <xs:appinfo>
+                        <nc1ihm:Nom>Radarc</nc1ihm:Nom>
+                        <nc1ihm:Nom xml:lang="en">Arcband, or 4 points sector</nc1ihm:Nom>
+                      </xs:appinfo>
+                    </xs:annotation>
+                  </xs:element>
+                  <xs:element name="corridor" type="nc1location:CorridorType">
+                    <xs:annotation>
+                      <xs:documentation>Corridor.</xs:documentation>
+                      <xs:documentation xml:lang="en">Corridor.</xs:documentation>
+                      <xs:appinfo>
+                        <nc1ihm:Nom>Corridor</nc1ihm:Nom>
+                        <nc1ihm:Nom xml:lang="en">Corridor</nc1ihm:Nom>
+                      </xs:appinfo>
+                    </xs:annotation>
+                  </xs:element>
+                </xs:choice>
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+</xs:schema>

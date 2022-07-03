@@ -1,0 +1,114 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<gc:CodeList xmlns:nc1dico="urn:fra:nc1:dictionnaires" xmlns:gc="http://docs.oasis-open.org/codelist/ns/genericode/1.0/">
+  <Annotation>
+    <Description>
+      <nc1dico:description>Type de consigne horaire d'arrivée ou de passage sur un point d'itinéraire 3D.</nc1dico:description>
+      <nc1dico:description xml:lang="en">Type of hourly instruction of arrival or passage on a point of 3D route.</nc1dico:description>
+    </Description>
+    <AppInfo>
+      <nc1dico:source>NC1</nc1dico:source>
+      <nc1dico:derogation></nc1dico:derogation>
+    </AppInfo>
+  </Annotation>
+  <Identification>
+    <ShortName>TimingInstructionsTypeCode</ShortName>
+    <Version>9.0.0</Version>
+    <CanonicalUri>urn:fra:nc1:objet:3droute:TimingInstructionsTypeCode</CanonicalUri>
+    <CanonicalVersionUri>urn:fra:nc1:objet:3droute:TimingInstructionsTypeCode:9.0.0</CanonicalVersionUri>
+  </Identification>
+  <ColumnSet DatatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes">
+    <Column Id="code" Use="required">
+      <ShortName>Code</ShortName>
+      <Data Type="int" />
+    </Column>
+    <Column Id="short" Use="required">
+      <ShortName>Short</ShortName>
+      <Data Type="string" />
+    </Column>
+    <Column Id="long" Use="optional">
+      <ShortName>Long</ShortName>
+      <Data Type="string" />
+    </Column>
+    <Column Id="short-en" Use="optional">
+      <ShortName>Short anglais</ShortName>
+      <Data Type="string" />
+    </Column>
+    <Column Id="long-en" Use="optional">
+      <ShortName>Long anglais</ShortName>
+      <Data Type="string" />
+    </Column>
+    <Column Id="parent" Use="optional">
+      <ShortName>Parent</ShortName>
+      <Data Type="int" />
+    </Column>
+    <Column Id="codeSymbole" Use="optional">
+      <ShortName>Code Symbole</ShortName>
+      <Data Type="string" />
+    </Column>
+    <Column Id="codeHierarchique" Use="optional">
+      <ShortName>Code Hierarchique</ShortName>
+      <Data Type="string" />
+    </Column>
+    <Key Id="codeKey">
+      <ShortName>CodeKey</ShortName>
+      <ColumnRef Ref="code" />
+    </Key>
+  </ColumnSet>
+  <SimpleCodeList>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>0</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>TENIR</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>LE PORTEUR DOIT ETRE PRESENT DURANT AU MOINS LE CRENEAU SPECIFIE</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>1</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>PASSER DANS</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>LE PORTEUR DOIT ETRE PRESENT DURANT AU PLUS LE CRENEAU SPECIFIE</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>2</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>PASSER AVANT</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>LE PORTEUR DOIT PASSER AVANT L'HORAIRE SPECIFIE</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>3</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>PASSER APRES</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>LE PORTEUR DOIT PASSER APRES L'HORAIRE SPECIFIE</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>4</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>PASSER A</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>LE PORTEUR DOIT PASSER A L'HORAIRE SPECIFIE</SimpleValue>
+      </Value>
+    </Row>
+  </SimpleCodeList>
+</gc:CodeList>

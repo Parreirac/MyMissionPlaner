@@ -1,0 +1,235 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<gc:CodeList xmlns:nc1dico="urn:fra:nc1:dictionnaires" xmlns:gc="http://docs.oasis-open.org/codelist/ns/genericode/1.0/">
+  <Annotation>
+    <Description>
+      <nc1dico:description>Description d'un événement chimique, biologique, ou radiologique.</nc1dico:description>
+      <nc1dico:description xml:lang="en">Description of a chemical, biological event, or radiological.</nc1dico:description>
+    </Description>
+    <AppInfo>
+      <nc1dico:source>ADatP-3 BL14 1724/4</nc1dico:source>
+      <nc1dico:derogation></nc1dico:derogation>
+    </AppInfo>
+  </Annotation>
+  <Identification>
+    <ShortName>IncidentDescriptionCode</ShortName>
+    <Version>9.0.0</Version>
+    <CanonicalUri>urn:fra:nc1:common:cbrn:IncidentDescriptionCode</CanonicalUri>
+    <CanonicalVersionUri>urn:fra:nc1:common:cbrn:IncidentDescriptionCode:9.0.0</CanonicalVersionUri>
+  </Identification>
+  <ColumnSet DatatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes">
+    <Column Id="code" Use="required">
+      <ShortName>Code</ShortName>
+      <Data Type="int" />
+    </Column>
+    <Column Id="short" Use="required">
+      <ShortName>Short</ShortName>
+      <Data Type="string" />
+    </Column>
+    <Column Id="long" Use="optional">
+      <ShortName>Long</ShortName>
+      <Data Type="string" />
+    </Column>
+    <Column Id="short-en" Use="optional">
+      <ShortName>Short anglais</ShortName>
+      <Data Type="string" />
+    </Column>
+    <Column Id="long-en" Use="optional">
+      <ShortName>Long anglais</ShortName>
+      <Data Type="string" />
+    </Column>
+    <Column Id="parent" Use="optional">
+      <ShortName>Parent</ShortName>
+      <Data Type="int" />
+    </Column>
+    <Column Id="codeSymbole" Use="optional">
+      <ShortName>Code Symbole</ShortName>
+      <Data Type="string" />
+    </Column>
+    <Column Id="codeHierarchique" Use="optional">
+      <ShortName>Code Hierarchique</ShortName>
+      <Data Type="string" />
+    </Column>
+    <Key Id="codeKey">
+      <ShortName>CodeKey</ShortName>
+      <ColumnRef Ref="code" />
+    </Key>
+  </ColumnSet>
+  <SimpleCodeList>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>0</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>ARDD</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>ACTIVATED RADIOLOGICAL DISPERSION DEVICE</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>1</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>CLOUD</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>VISIBLE CLOUD</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>2</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>DPC</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>DAMAGED PACKAGE AND CONTAMINATION</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>3</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>ESD</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>EVIDENCE OF SITE DISRUPTION</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>4</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>EXFIRE</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>EXPLOSIONS AND FIRE</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>5</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>EXS</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>EXPOSED SOURCE</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>6</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>FIRE</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>BURNING FIRE</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>7</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>INT</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>INTACT PACKAGE OR DEVICE</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>8</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>INWAT</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>SUBSTANCE SPILLED INTO WATER</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>9</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>LEAK</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>CONTINUOUS FLOW FROM DAMAGED PIPE OR CONTAINER</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>10</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>LIQUID</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>LIQUID</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>11</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>MSLINT</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>MISSILE INTERCEPT</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>12</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>NARDD</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>NON ACTIVATED RADIOLOGICAL DISPERSION DEVICE</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>13</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>POOL</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>LARGE QUANTITY OF STILL LIQUID</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>14</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>RUP</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>CATASTROPHIC RUPTURE OF A TANK</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>15</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>SPILL</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>SMALL QUANTITY OF STILL LIQUID</SimpleValue>
+      </Value>
+    </Row>
+  </SimpleCodeList>
+</gc:CodeList>

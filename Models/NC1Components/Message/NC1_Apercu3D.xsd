@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema targetNamespace="urn:fra:nc1:message:apercu3d" xmlns:nc1ihm="urn:fra:nc1:IHM" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:nc1apercu3d="urn:fra:nc1:message:apercu3d" xmlns:nc1common="urn:fra:nc1:common:attribute" xmlns:nc1msgcom="urn:fra:nc1:common:message">
+  <!-- NC1 V.9.0.0 -->
+  <xs:import namespace="urn:fra:nc1:common:attribute" schemaLocation="../Commun/Common.xsd" />
+  <xs:import namespace="urn:fra:nc1:common:message" schemaLocation="../Commun/Message.xsd" />
+  <xs:element name="NC1_Apercu3D">
+    <xs:annotation>
+      <xs:documentation>Le message NC1_Apercu3d permet d’indiquer la prise en compte ou non d’un message reçu relatif à la troisième dimension, notamment pour rendre compte de l’application de consignes.</xs:documentation>
+      <xs:documentation xml:lang="en">The NC1_Apercu3d message allows to indicate that a 3D-related message has been or not taken into account, in particular if it includes instructions.</xs:documentation>
+      <xs:appinfo>
+        <nc1:type xmlns:nc1="urn:fra:nc1">Message</nc1:type>
+        <nc1ihm:Nom>Aperçu 3D</nc1ihm:Nom>
+        <nc1ihm:Nom xml:lang="en">3D acknowledgement</nc1ihm:Nom>
+        <nc1:MessH xmlns:nc1="urn:fra:nc1">N/A</nc1:MessH>
+        <nc1:MessADatP3 xmlns:nc1="urn:fra:nc1">N/A</nc1:MessADatP3>
+        <nc1:LastNC1ModifyVersion xmlns:nc1="urn:fra:nc1">9.0.0</nc1:LastNC1ModifyVersion>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:complexContent>
+        <xs:extension base="nc1msgcom:BaseMessageType">
+          <xs:sequence>
+            <xs:element name="messageConsideration">
+              <xs:annotation>
+                <xs:documentation>Prise en compte ou non du message.</xs:documentation>
+                <xs:documentation xml:lang="en">Considered message or not.</xs:documentation>
+                <xs:appinfo>
+                  <nc1ihm:Nom>Prise en compte</nc1ihm:Nom>
+                  <nc1ihm:Nom xml:lang="en">Considered message</nc1ihm:Nom>
+                </xs:appinfo>
+              </xs:annotation>
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="isConsidered" type="xs:boolean">
+                    <xs:annotation>
+                      <xs:documentation>Prise en compte ou non du message.</xs:documentation>
+                      <xs:documentation xml:lang="en">Considered message or not.</xs:documentation>
+                      <xs:appinfo>
+                        <nc1ihm:Nom>Prise en compte ou non du message</nc1ihm:Nom>
+                        <nc1ihm:Nom xml:lang="en">Considered message or not</nc1ihm:Nom>
+                      </xs:appinfo>
+                    </xs:annotation>
+                  </xs:element>
+                  <xs:element minOccurs="0" name="part" type="nc1common:MediumTextType">
+                    <xs:annotation>
+                      <xs:documentation>Description en texte libre de la partie du message prise en compte.</xs:documentation>
+                      <xs:documentation xml:lang="en">Free-text description of the part of message considered.</xs:documentation>
+                      <xs:appinfo>
+                        <nc1ihm:Nom>Partie du message concernée</nc1ihm:Nom>
+                        <nc1ihm:Nom xml:lang="en">Relevant part of the message</nc1ihm:Nom>
+                      </xs:appinfo>
+                    </xs:annotation>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element minOccurs="0" name="comment" type="nc1msgcom:CommentSectionType">
+              <xs:annotation>
+                <xs:documentation>Commentaire en texte libre.</xs:documentation>
+                <xs:documentation xml:lang="en">free text comment.</xs:documentation>
+                <xs:appinfo>
+                  <nc1ihm:Nom>Commentaire</nc1ihm:Nom>
+                  <nc1ihm:Nom xml:lang="en">comment</nc1ihm:Nom>
+                </xs:appinfo>
+              </xs:annotation>
+            </xs:element>
+          </xs:sequence>
+        </xs:extension>
+      </xs:complexContent>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

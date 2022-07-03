@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<cva:ContextValueAssociation xmlns:cva="http://docs.oasis-open.org/codelist/ns/ContextValueAssociation/1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="urn:fra:nc1:message:medevac" queryBinding="xslt2" xmlns:nc1medevac="urn:fra:nc1:message:medevac">
+  <!-- NC1 V.9.0.0 -->
+  <ValueLists>
+    <ValueList xml:id="nc1msgcom-ClassificationCode" uri="../Dictionnaires/ClassificationCode.gc" />
+    <ValueList xml:id="nc1msgcom-UrgencyLevelCode" uri="../Dictionnaires/UrgencyLevelCode.gc" />
+    <ValueList xml:id="nc1objcom-ActivationStatusCode" uri="../Dictionnaires/ActivationStatusCode.gc" />
+    <ValueList xml:id="nc1objcom-IsFullCode" uri="../Dictionnaires/IsFullCode.gc" />
+    <ValueList xml:id="nc1tacpoint-TacPointFrSpecificCode" uri="../Dictionnaires/TacPointFrSpecificCode.gc" />
+    <ValueList xml:id="nc1sicsdicos-L117_5Code" uri="../Dictionnaires/L117_5Code.gc" />
+    <ValueList xml:id="nc1unit-UnitFrSpecificCode" uri="../Dictionnaires/UnitFrSpecificCode.gc" />
+    <ValueList xml:id="nc1sicsdicos-L125_1Code" uri="../Dictionnaires/L125_1Code.gc" />
+    <ValueList xml:id="nc1sicsdicos-L115_1Code" uri="../Dictionnaires/L115_1Code.gc" />
+    <ValueList xml:id="nc1sicsdicos-L135_30Code" uri="../Dictionnaires/L135_30Code.gc" />
+    <ValueList xml:id="nc1sicsdicos-L110_30Code" uri="../Dictionnaires/L110_30Code.gc" />
+    <ValueList xml:id="nc1sicsdicos-L135_1Code" uri="../Dictionnaires/L135_1Code.gc" />
+    <ValueList xml:id="nc1sicsdicos-L125_7Code" uri="../Dictionnaires/L125_7Code.gc" />
+    <ValueList xml:id="nc1sicsdicos-L107_1Code" uri="../Dictionnaires/L107_1Code.gc" />
+    <ValueList xml:id="nc1sicsdicos-L114_1Code" uri="../Dictionnaires/L114_1Code.gc" />
+    <ValueList xml:id="nc1sicsdicos-L135_16Code" uri="../Dictionnaires/L135_16Code.gc" />
+    <ValueList xml:id="nc1sicsdicos-L125_17Code" uri="../Dictionnaires/L125_17Code.gc" />
+    <ValueList xml:id="nc1sicsdicos-L125_16Code" uri="../Dictionnaires/L125_16Code.gc" />
+    <ValueList xml:id="nc1sicsdicos-L114_10Code" uri="../Dictionnaires/L114_10Code.gc" />
+    <ValueList xml:id="nc1medevac-PickupZoneEnemyActivityCode" uri="../Dictionnaires/PickupZoneEnemyActivityCode.gc" />
+  </ValueLists>
+  <Contexts>
+    <Context address="/nc1medevac:NC1_MEDEVAC-NINE-LINE/@classification" values="nc1msgcom-ClassificationCode" />
+    <Context address="/nc1medevac:NC1_MEDEVAC-NINE-LINE/@urgencyLevel" values="nc1msgcom-UrgencyLevelCode" />
+    <Context address="/nc1medevac:NC1_MEDEVAC-NINE-LINE/medicalEvacuationRequest/pickupPoint/@activationStatus" values="nc1objcom-ActivationStatusCode" />
+    <Context address="/nc1medevac:NC1_MEDEVAC-NINE-LINE/medicalEvacuationRequest/pickupPoint/@isFull" values="nc1objcom-IsFullCode" />
+    <Context address="/nc1medevac:NC1_MEDEVAC-NINE-LINE/medicalEvacuationRequest/pickupPoint/tacticalData/frSpecificSymbol" values="nc1tacpoint-TacPointFrSpecificCode" />
+    <Context address="/nc1medevac:NC1_MEDEVAC-NINE-LINE/medicalEvacuationRequest/pickupPoint/location/quality" values="nc1sicsdicos-L117_5Code" />
+    <Context address="/nc1medevac:NC1_MEDEVAC-NINE-LINE/medicalEvacuationRequest/comData/requestingUnitComData/@activationStatus" values="nc1objcom-ActivationStatusCode" />
+    <Context address="/nc1medevac:NC1_MEDEVAC-NINE-LINE/medicalEvacuationRequest/comData/requestingUnitComData/@isFull" values="nc1objcom-IsFullCode" />
+    <Context address="/nc1medevac:NC1_MEDEVAC-NINE-LINE/medicalEvacuationRequest/comData/requestingUnitComData/tacticalData/frSpecificSymbol" values="nc1unit-UnitFrSpecificCode" />
+    <Context address="/nc1medevac:NC1_MEDEVAC-NINE-LINE/medicalEvacuationRequest/comData/requestingUnitComData/tacticalData/operationalStatusIndicator" values="nc1sicsdicos-L125_1Code" />
+    <Context address="/nc1medevac:NC1_MEDEVAC-NINE-LINE/medicalEvacuationRequest/comData/requestingUnitComData/tacticalData/activity" values="nc1sicsdicos-L115_1Code" />
+    <Context address="/nc1medevac:NC1_MEDEVAC-NINE-LINE/medicalEvacuationRequest/comData/requestingUnitComData/tacticalData/isDismounted" values="nc1sicsdicos-L135_30Code" />
+    <Context address="/nc1medevac:NC1_MEDEVAC-NINE-LINE/medicalEvacuationRequest/comData/requestingUnitComData/tacticalData/commandAndControlRole" values="nc1sicsdicos-L110_30Code" />
+    <Context address="/nc1medevac:NC1_MEDEVAC-NINE-LINE/medicalEvacuationRequest/comData/requestingUnitComData/tacticalData/ticIndicator" values="nc1sicsdicos-L135_1Code" />
+    <Context address="/nc1medevac:NC1_MEDEVAC-NINE-LINE/medicalEvacuationRequest/comData/requestingUnitComData/tacticalData/availability" values="nc1sicsdicos-L125_7Code" />
+    <Context address="/nc1medevac:NC1_MEDEVAC-NINE-LINE/medicalEvacuationRequest/comData/requestingUnitComData/tacticalData/cbrnProtection" values="nc1sicsdicos-L107_1Code" />
+    <Context address="/nc1medevac:NC1_MEDEVAC-NINE-LINE/medicalEvacuationRequest/comData/requestingUnitComData/tacticalData/weaponControlOrder" values="nc1sicsdicos-L114_1Code" />
+    <Context address="/nc1medevac:NC1_MEDEVAC-NINE-LINE/medicalEvacuationRequest/comData/requestingUnitComData/tacticalData/subordination/subordinationType" values="nc1sicsdicos-L135_16Code" />
+    <Context address="/nc1medevac:NC1_MEDEVAC-NINE-LINE/medicalEvacuationRequest/comData/requestingUnitComData/status/operationalStatus/effectif" values="nc1sicsdicos-L125_17Code" />
+    <Context address="/nc1medevac:NC1_MEDEVAC-NINE-LINE/medicalEvacuationRequest/comData/requestingUnitComData/status/operationalStatus/personnelTiredness" values="nc1sicsdicos-L125_16Code" />
+    <Context address="/nc1medevac:NC1_MEDEVAC-NINE-LINE/medicalEvacuationRequest/comData/requestingUnitComData/status/operationalStatus/equipment" values="nc1sicsdicos-L125_17Code" />
+    <Context address="/nc1medevac:NC1_MEDEVAC-NINE-LINE/medicalEvacuationRequest/comData/requestingUnitComData/status/operationalStatus/fuel" values="nc1sicsdicos-L125_17Code" />
+    <Context address="/nc1medevac:NC1_MEDEVAC-NINE-LINE/medicalEvacuationRequest/comData/requestingUnitComData/status/operationalStatus/ammunitions" values="nc1sicsdicos-L125_17Code" />
+    <Context address="/nc1medevac:NC1_MEDEVAC-NINE-LINE/medicalEvacuationRequest/comData/requestingUnitComData/location/quality" values="nc1sicsdicos-L117_5Code" />
+    <Context address="/nc1medevac:NC1_MEDEVAC-NINE-LINE/medicalEvacuationRequest/comData/requestingUnitComData/anticipatedStance/validityPeriod/tacticalTime" values="nc1sicsdicos-L114_10Code" />
+    <Context address="/nc1medevac:NC1_MEDEVAC-NINE-LINE/medicalEvacuationRequest/pickupZoneEnemyActivity/areaSecurity" values="nc1medevac-PickupZoneEnemyActivityCode" />
+  </Contexts>
+</cva:ContextValueAssociation>

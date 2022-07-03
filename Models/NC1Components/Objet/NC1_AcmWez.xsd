@@ -1,0 +1,659 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema targetNamespace="urn:fra:nc1:objet:acm" xmlns:nc1ihm="urn:fra:nc1:IHM" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:nc1acm="urn:fra:nc1:objet:acm" xmlns:nc1common="urn:fra:nc1:common:attribute" xmlns:nc1location="urn:fra:nc1:common:location" xmlns:nc1objcom="urn:fra:nc1:common:object">
+  <!-- NC1 V.9.0.0 -->
+  <xs:import namespace="urn:fra:nc1:common:attribute" schemaLocation="../Commun/Common.xsd" />
+  <xs:import namespace="urn:fra:nc1:common:location" schemaLocation="../Commun/Location.xsd" />
+  <xs:import namespace="urn:fra:nc1:common:object" schemaLocation="../Commun/Object.xsd" />
+  <xs:element name="NC1_AcmWez" type="nc1acm:AcmWezType">
+    <xs:annotation>
+      <xs:documentation>Un ACM/WEZ est un découpage espace-temps de l'espace aérien, affecté à un intervenant dans la 3e dimension.</xs:documentation>
+      <xs:documentation xml:lang="en">An ACM / WEZ is a division space-time of the air space, allocated to a participant in the 3rd dimension.</xs:documentation>
+      <xs:appinfo>
+        <nc1:type xmlns:nc1="urn:fra:nc1">Objet</nc1:type>
+        <nc1ihm:Nom>ACM-WEZ</nc1ihm:Nom>
+        <nc1ihm:Nom xml:lang="en">ACM-WEZ</nc1ihm:Nom>
+        <nc1:MessH xmlns:nc1="urn:fra:nc1">N/A</nc1:MessH>
+        <nc1:MessADatP3 xmlns:nc1="urn:fra:nc1">Set ACMID du message ACO (BL11)</nc1:MessADatP3>
+        <nc1:LastNC1ModifyVersion xmlns:nc1="urn:fra:nc1">9.0.0</nc1:LastNC1ModifyVersion>
+      </xs:appinfo>
+    </xs:annotation>
+  </xs:element>
+  <xs:complexType name="AcmPeriodType">
+    <xs:annotation>
+      <xs:documentation>Période d’activation d’un ACM.</xs:documentation>
+      <xs:documentation xml:lang="en">ACM activation period.</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="startDatetime" type="xs:dateTime">
+        <xs:annotation>
+          <xs:documentation>Horodatage de début de la période.</xs:documentation>
+          <xs:documentation xml:lang="en">Timestamp of the beginning of the period.</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Horodatage de début</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">Period start timestamp</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="endDatetime" type="nc1common:QualifiedDatetimeType">
+        <xs:annotation>
+          <xs:documentation>Horodatage de fin de la période.</xs:documentation>
+          <xs:documentation xml:lang="en">Period end timestamp.</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Horodatage de fin</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">Period end  timestamp</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="cycleFrequency" type="nc1common:CycleFrequencyCode">
+        <xs:annotation>
+          <xs:documentation>Fréquence du cycle de d’activation de la période.</xs:documentation>
+          <xs:documentation xml:lang="en">Period activation cycle frequency.</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Fréquence du cycle</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">Cycle frequency</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:choice minOccurs="0">
+        <xs:element minOccurs="0" name="cycleDuration" type="nc1common:Duration999YearsType">
+          <xs:annotation>
+            <xs:documentation>Durée du cycle d’activation.</xs:documentation>
+            <xs:documentation xml:lang="en">Activation cycle duration.</xs:documentation>
+            <xs:appinfo>
+              <nc1ihm:Nom>Durée du cycle</nc1ihm:Nom>
+              <nc1ihm:Nom xml:lang="en">Cycle duration</nc1ihm:Nom>
+            </xs:appinfo>
+          </xs:annotation>
+        </xs:element>
+        <xs:element minOccurs="0" name="cycleEndDatetime" type="xs:dateTime">
+          <xs:annotation>
+            <xs:documentation>Horodatage de fin du cycle d’activation.</xs:documentation>
+            <xs:documentation xml:lang="en">Activation cycle end timestamp.</xs:documentation>
+            <xs:appinfo>
+              <nc1ihm:Nom>Horodatage de fin du cycle</nc1ihm:Nom>
+              <nc1ihm:Nom xml:lang="en">Cycle end datetime</nc1ihm:Nom>
+            </xs:appinfo>
+          </xs:annotation>
+        </xs:element>
+      </xs:choice>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:simpleType name="AcmStatusCode">
+    <xs:annotation>
+      <xs:appinfo>
+        <nc1dico:source xmlns:nc1dico="urn:fra:nc1:dictionnaires">AdatP-3 BL11 1156/005</nc1dico:source>
+      </xs:appinfo>
+      <xs:documentation></xs:documentation>
+      <xs:documentation xml:lang="en"></xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:integer" />
+  </xs:simpleType>
+  <xs:simpleType name="AcmTypeCode">
+    <xs:annotation>
+      <xs:appinfo>
+        <nc1dico:source xmlns:nc1dico="urn:fra:nc1:dictionnaires">AdatP-3 BL11 1389/002</nc1dico:source>
+      </xs:appinfo>
+      <xs:documentation></xs:documentation>
+      <xs:documentation xml:lang="en"></xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:integer" />
+  </xs:simpleType>
+  <xs:simpleType name="AcmUsageTypeCode">
+    <xs:annotation>
+      <xs:appinfo>
+        <nc1dico:source xmlns:nc1dico="urn:fra:nc1:dictionnaires">AdatP-3 BL11 1389/003</nc1dico:source>
+      </xs:appinfo>
+      <xs:documentation></xs:documentation>
+      <xs:documentation xml:lang="en"></xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:integer" />
+  </xs:simpleType>
+  <xs:complexType name="AcmWezType">
+    <xs:annotation>
+      <xs:documentation>Un ACM/WEZ est un découpage espace-temps de l'espace aérien, affecté à un intervenant dans la troisième dimension.</xs:documentation>
+      <xs:documentation xml:lang="en">An ACM / WEZ is a division space-time of the air space, allocated to a participant in the 3rd dimension.</xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="nc1objcom:LocalisedObjectType">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="tacticalData">
+            <xs:annotation>
+              <xs:documentation>Données tactiques de la zone aérienne.</xs:documentation>
+              <xs:documentation xml:lang="en">ACM tactical data.</xs:documentation>
+              <xs:appinfo>
+                <nc1ihm:Nom>Données tactiques</nc1ihm:Nom>
+                <nc1ihm:Nom xml:lang="en">tactical datas</nc1ihm:Nom>
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:complexType>
+              <xs:sequence>
+                <xs:choice>
+                  <xs:element name="name" type="nc1common:Text1To38ABNSType">
+                    <xs:annotation>
+                      <xs:documentation>Nom de la zone aérienne.</xs:documentation>
+                      <xs:documentation xml:lang="en">ACM name.</xs:documentation>
+                      <xs:appinfo>
+                        <nc1ihm:Nom>Nom</nc1ihm:Nom>
+                        <nc1ihm:Nom xml:lang="en">name</nc1ihm:Nom>
+                      </xs:appinfo>
+                    </xs:annotation>
+                  </xs:element>
+                  <xs:element name="designator" type="nc1common:Text1To5ANType">
+                    <xs:annotation>
+                      <xs:documentation>Désignateur de la zone aérienne.</xs:documentation>
+                      <xs:documentation xml:lang="en">ACM designator.</xs:documentation>
+                      <xs:appinfo>
+                        <nc1ihm:Nom>Désignateur</nc1ihm:Nom>
+                        <nc1ihm:Nom xml:lang="en">Designator</nc1ihm:Nom>
+                      </xs:appinfo>
+                    </xs:annotation>
+                  </xs:element>
+                </xs:choice>
+                <xs:element minOccurs="0" name="status" type="nc1acm:AcmStatusCode">
+                  <xs:annotation>
+                    <xs:documentation>Etat de mise à jour de la zone aérienne (ex : « CHANGE »).</xs:documentation>
+                    <xs:documentation xml:lang="en">"Update status of the ACM (e.g. ""CHANGE"")".</xs:documentation>
+                    <xs:appinfo>
+                      <nc1ihm:Nom>Etat de mise à jour</nc1ihm:Nom>
+                      <nc1ihm:Nom xml:lang="en">Update status</nc1ihm:Nom>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:element>
+                <xs:choice>
+                  <xs:element name="type" type="nc1acm:AcmTypeCode">
+                    <xs:annotation>
+                      <xs:documentation>Type de la zone aérienne (ex : « ADAREA »).</xs:documentation>
+                      <xs:documentation xml:lang="en">"Airspace area type (ex : ""ADAREA"")".</xs:documentation>
+                      <xs:appinfo>
+                        <nc1ihm:Nom>Type</nc1ihm:Nom>
+                        <nc1ihm:Nom xml:lang="en">Type</nc1ihm:Nom>
+                      </xs:appinfo>
+                    </xs:annotation>
+                  </xs:element>
+                  <xs:element name="otherType" type="nc1common:Text2To6ANType">
+                    <xs:annotation>
+                      <xs:documentation>Type de la zone aérienne, autre.</xs:documentation>
+                      <xs:documentation xml:lang="en">Other airspace area type.</xs:documentation>
+                      <xs:appinfo>
+                        <nc1ihm:Nom>Type, autre</nc1ihm:Nom>
+                        <nc1ihm:Nom xml:lang="en">Other type</nc1ihm:Nom>
+                      </xs:appinfo>
+                    </xs:annotation>
+                  </xs:element>
+                </xs:choice>
+                <xs:choice>
+                  <xs:element maxOccurs="unbounded" name="usageType" type="nc1acm:AcmUsageTypeCode">
+                    <xs:annotation>
+                      <xs:documentation>Type d’usage de la zone aérienne (ex : « AAR »).</xs:documentation>
+                      <xs:documentation xml:lang="en">"Airspace area usage type (ex : "" AAR "")".</xs:documentation>
+                      <xs:appinfo>
+                        <nc1ihm:Nom>Type d’usage</nc1ihm:Nom>
+                        <nc1ihm:Nom xml:lang="en">Type of usage</nc1ihm:Nom>
+                      </xs:appinfo>
+                    </xs:annotation>
+                  </xs:element>
+                  <xs:element name="otherUsageType" type="nc1common:Text2To6ANType">
+                    <xs:annotation>
+                      <xs:documentation>Type d’usage de la zone aérienne, autre.</xs:documentation>
+                      <xs:documentation xml:lang="en">Other airspace area usage type.</xs:documentation>
+                      <xs:appinfo>
+                        <nc1ihm:Nom>Type d’usage, autre</nc1ihm:Nom>
+                        <nc1ihm:Nom xml:lang="en">Other usage type</nc1ihm:Nom>
+                      </xs:appinfo>
+                    </xs:annotation>
+                  </xs:element>
+                </xs:choice>
+                <xs:element maxOccurs="unbounded" minOccurs="0" name="activationPeriod" type="nc1acm:AcmPeriodType">
+                  <xs:annotation>
+                    <xs:documentation>Période d’activation de la zone aérienne.</xs:documentation>
+                    <xs:documentation xml:lang="en">ACM activation period.</xs:documentation>
+                    <xs:appinfo>
+                      <nc1ihm:Nom>Période d’activation</nc1ihm:Nom>
+                      <nc1ihm:Nom xml:lang="en">Activation period</nc1ihm:Nom>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:element>
+                <xs:element maxOccurs="unbounded" minOccurs="0" name="controlPoint" type="nc1acm:ControlPointType">
+                  <xs:annotation>
+                    <xs:documentation>Point de contrôle associé à la zone aérienne.</xs:documentation>
+                    <xs:documentation xml:lang="en">Control point associated to an ACM .</xs:documentation>
+                    <xs:appinfo>
+                      <nc1ihm:Nom>Point(s) de contrôle</nc1ihm:Nom>
+                      <nc1ihm:Nom xml:lang="en">Control point(s)</nc1ihm:Nom>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:element>
+                <xs:element minOccurs="0" name="controlAuthority" type="nc1acm:ControlAuthorityType">
+                  <xs:annotation>
+                    <xs:documentation>Autorité responsable de la gestion de la zone aérienne.</xs:documentation>
+                    <xs:documentation xml:lang="en">ACM control authority.</xs:documentation>
+                    <xs:appinfo>
+                      <nc1ihm:Nom>Autorité de contrôle</nc1ihm:Nom>
+                      <nc1ihm:Nom xml:lang="en">Control authority</nc1ihm:Nom>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:element>
+                <xs:element minOccurs="0" name="transitInstructions" type="nc1common:WideTextObjectType">
+                  <xs:annotation>
+                    <xs:documentation>Instructions de transit relatives à la zone aérienne.</xs:documentation>
+                    <xs:documentation xml:lang="en">Airspace area transit instructions.</xs:documentation>
+                    <xs:appinfo>
+                      <nc1ihm:Nom>Instructions de transit</nc1ihm:Nom>
+                      <nc1ihm:Nom xml:lang="en">Transit instructions</nc1ihm:Nom>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:element>
+                <xs:element minOccurs="0" name="broadcastReferencePointName" type="nc1common:Text1To38XType">
+                  <xs:annotation>
+                    <xs:documentation>Nom du point de référence.</xs:documentation>
+                    <xs:documentation xml:lang="en">Reference point name.</xs:documentation>
+                    <xs:appinfo>
+                      <nc1ihm:Nom>Point de référence</nc1ihm:Nom>
+                      <nc1ihm:Nom xml:lang="en">Reference point</nc1ihm:Nom>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:element>
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+          <xs:element minOccurs="0" name="location">
+            <xs:annotation>
+              <xs:documentation>Localisation.</xs:documentation>
+              <xs:documentation xml:lang="en">Location.</xs:documentation>
+              <xs:appinfo>
+                <nc1ihm:Nom>Localisation</nc1ihm:Nom>
+                <nc1ihm:Nom xml:lang="en">Location</nc1ihm:Nom>
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:complexType>
+              <xs:sequence>
+                <xs:choice>
+                  <xs:element name="point" type="nc1location:PointType">
+                    <xs:annotation>
+                      <xs:documentation>Point localisé.</xs:documentation>
+                      <xs:documentation xml:lang="en">Geolocalized point.</xs:documentation>
+                      <xs:appinfo>
+                        <nc1ihm:Nom>Point</nc1ihm:Nom>
+                        <nc1ihm:Nom xml:lang="en">Point</nc1ihm:Nom>
+                      </xs:appinfo>
+                    </xs:annotation>
+                  </xs:element>
+                  <xs:element name="polyline" type="nc1location:PolylineType">
+                    <xs:annotation>
+                      <xs:documentation>Ligne brisée orientée, sans largeur.</xs:documentation>
+                      <xs:documentation xml:lang="en">Width less oriented polyline.</xs:documentation>
+                      <xs:appinfo>
+                        <nc1ihm:Nom>Polyligne</nc1ihm:Nom>
+                        <nc1ihm:Nom xml:lang="en">Polyline</nc1ihm:Nom>
+                      </xs:appinfo>
+                    </xs:annotation>
+                  </xs:element>
+                  <xs:element name="polygon" type="nc1location:PolygonType">
+                    <xs:annotation>
+                      <xs:documentation>Polygone, ou ligne brisée fermée.</xs:documentation>
+                      <xs:documentation xml:lang="en">Polygon, or closed polyline.</xs:documentation>
+                      <xs:appinfo>
+                        <nc1ihm:Nom>Polygone</nc1ihm:Nom>
+                        <nc1ihm:Nom xml:lang="en">Polygon</nc1ihm:Nom>
+                      </xs:appinfo>
+                    </xs:annotation>
+                  </xs:element>
+                  <xs:element name="circle" type="nc1location:CircleType">
+                    <xs:annotation>
+                      <xs:documentation>Cercle.</xs:documentation>
+                      <xs:documentation xml:lang="en">Circle.</xs:documentation>
+                      <xs:appinfo>
+                        <nc1ihm:Nom>Cercle</nc1ihm:Nom>
+                        <nc1ihm:Nom xml:lang="en">Circle</nc1ihm:Nom>
+                      </xs:appinfo>
+                    </xs:annotation>
+                  </xs:element>
+                  <xs:element name="arcband" type="nc1location:ArcbandType">
+                    <xs:annotation>
+                      <xs:documentation>Radarc ou segment d’anneau.</xs:documentation>
+                      <xs:documentation xml:lang="en">Arcband.</xs:documentation>
+                      <xs:appinfo>
+                        <nc1ihm:Nom>Radarc</nc1ihm:Nom>
+                        <nc1ihm:Nom xml:lang="en">Arcband, or 4 points sector</nc1ihm:Nom>
+                      </xs:appinfo>
+                    </xs:annotation>
+                  </xs:element>
+                  <xs:element name="corridor" type="nc1location:CorridorType">
+                    <xs:annotation>
+                      <xs:documentation>Corridor.</xs:documentation>
+                      <xs:documentation xml:lang="en">Corridor.</xs:documentation>
+                      <xs:appinfo>
+                        <nc1ihm:Nom>Corridor</nc1ihm:Nom>
+                        <nc1ihm:Nom xml:lang="en">Corridor</nc1ihm:Nom>
+                      </xs:appinfo>
+                    </xs:annotation>
+                  </xs:element>
+                  <xs:element name="polyarc" type="nc1location:PolyarcType">
+                    <xs:annotation>
+                      <xs:documentation>Polygone associé à un arc de cercle.</xs:documentation>
+                      <xs:documentation xml:lang="en">Polygon associated to a circular arc.</xs:documentation>
+                      <xs:appinfo>
+                        <nc1ihm:Nom>Polyarc</nc1ihm:Nom>
+                        <nc1ihm:Nom xml:lang="en">Polyarc</nc1ihm:Nom>
+                      </xs:appinfo>
+                    </xs:annotation>
+                  </xs:element>
+                  <xs:element name="airtrack" type="nc1acm:AirtrackType">
+                    <xs:annotation>
+                      <xs:documentation>Ensemble de segments de route aérienne.</xs:documentation>
+                      <xs:documentation xml:lang="en">Entire air route segments.</xs:documentation>
+                      <xs:appinfo>
+                        <nc1ihm:Nom>Airtrack</nc1ihm:Nom>
+                        <nc1ihm:Nom xml:lang="en">Airtrack</nc1ihm:Nom>
+                      </xs:appinfo>
+                    </xs:annotation>
+                  </xs:element>
+                  <xs:element name="aorbit" type="nc1location:AorbitType">
+                    <xs:annotation>
+                      <xs:documentation>Hippodrome.</xs:documentation>
+                      <xs:documentation xml:lang="en">Orbit.</xs:documentation>
+                      <xs:appinfo>
+                        <nc1ihm:Nom>Hippodrome</nc1ihm:Nom>
+                        <nc1ihm:Nom xml:lang="en">Orbit</nc1ihm:Nom>
+                      </xs:appinfo>
+                    </xs:annotation>
+                  </xs:element>
+                </xs:choice>
+                <xs:element name="levels" type="nc1acm:LevelsType">
+                  <xs:annotation>
+                    <xs:documentation>Niveaux d’altitude minimal et maximal.</xs:documentation>
+                    <xs:documentation xml:lang="en">Min and max altitude levels.</xs:documentation>
+                    <xs:appinfo>
+                      <nc1ihm:Nom>Niveaux</nc1ihm:Nom>
+                      <nc1ihm:Nom xml:lang="en">Levels</nc1ihm:Nom>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:element>
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="AirtrackSegmentType">
+    <xs:annotation>
+      <xs:documentation>Segment d’une route aérienne.</xs:documentation>
+      <xs:documentation xml:lang="en">Route segment.</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="number" type="nc1common:Int1To99Type">
+        <xs:annotation>
+          <xs:documentation>Numéro du segment.</xs:documentation>
+          <xs:documentation xml:lang="en">Segment number.</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Numéro</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">Number</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="startPoint" type="nc1location:PointType">
+        <xs:annotation>
+          <xs:documentation>Point de départ du segment.</xs:documentation>
+          <xs:documentation xml:lang="en">Segment start point.</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Point de départ</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">Start point</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="endPoint" type="nc1location:PointType">
+        <xs:annotation>
+          <xs:documentation>Point d’arrivée du segment.</xs:documentation>
+          <xs:documentation xml:lang="en">Segment end point.</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Point d’arrivée</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">End point</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="width" type="nc1common:Decimal0To999999Type">
+        <xs:annotation>
+          <xs:documentation>Largeur du segment (mètres).</xs:documentation>
+          <xs:documentation xml:lang="en">Segment width (meters).</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Largeur</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">Width</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="minLevel" type="nc1common:Int0To999Type">
+        <xs:annotation>
+          <xs:documentation>Niveau d’altitude minimal (centaine de pieds).</xs:documentation>
+          <xs:documentation xml:lang="en">Min altitude level (100s ft.).</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Niveau minimal</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">Min level</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="minLevelReference" type="nc1common:LevelReferenceCode">
+        <xs:annotation>
+          <xs:documentation>Référence d’altitude associée au niveau minimal.</xs:documentation>
+          <xs:documentation xml:lang="en">Min level altitude reference.</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Référence du niveau minimal</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">Min level reference</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="maxLevel" type="nc1common:Int0To999Type">
+        <xs:annotation>
+          <xs:documentation>Niveau d’altitude maximal (centaine de pieds).</xs:documentation>
+          <xs:documentation xml:lang="en">Max altitude level (100s ft.).</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Niveau maximal</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">Max level</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="maxLevelReference" type="nc1common:LevelReferenceCode">
+        <xs:annotation>
+          <xs:documentation>Référence d’altitude associée au niveau maximal.</xs:documentation>
+          <xs:documentation xml:lang="en">Max level altitude reference.</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Référence du niveau maximal</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">Max level reference</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="AirtrackType">
+    <xs:annotation>
+      <xs:documentation>Ensemble de segments de route aérienne.</xs:documentation>
+      <xs:documentation xml:lang="en">Entire air route segments.</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" name="segment" type="nc1acm:AirtrackSegmentType">
+        <xs:annotation>
+          <xs:documentation>Segment de route aérienne.</xs:documentation>
+          <xs:documentation xml:lang="en">Air route segment.</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Segment</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">Segment</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ControlAuthorityType">
+    <xs:annotation>
+      <xs:documentation>Autorité responsable de la gestion d’une zone aérienne.</xs:documentation>
+      <xs:documentation xml:lang="en">ACM control authority.</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="name" type="nc1common:Text1To20XType">
+        <xs:annotation>
+          <xs:documentation>Nom de l’autorité.</xs:documentation>
+          <xs:documentation xml:lang="en">Authority name.</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Nom</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">name</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:choice>
+        <xs:element name="frequency" type="nc1common:Decimal0To9999999999Type">
+          <xs:annotation>
+            <xs:documentation>Fréquence radio (kHz).</xs:documentation>
+            <xs:documentation xml:lang="en">Radio frequency (kHz).</xs:documentation>
+            <xs:appinfo>
+              <nc1ihm:Nom>Fréquence</nc1ihm:Nom>
+              <nc1ihm:Nom xml:lang="en">Frequency</nc1ihm:Nom>
+            </xs:appinfo>
+          </xs:annotation>
+        </xs:element>
+        <xs:element name="frequencyDesignator" type="nc1common:Text1To8ANType">
+          <xs:annotation>
+            <xs:documentation>Désignateur de la fréquence radio (ex : « TAD45 »).</xs:documentation>
+            <xs:documentation xml:lang="en">Radiofrequency designator.</xs:documentation>
+            <xs:appinfo>
+              <nc1ihm:Nom>Désignateur de fréquence</nc1ihm:Nom>
+              <nc1ihm:Nom xml:lang="en">Frequency designator</nc1ihm:Nom>
+            </xs:appinfo>
+          </xs:annotation>
+        </xs:element>
+      </xs:choice>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ControlPointType">
+    <xs:annotation>
+      <xs:documentation>Point de contrôle associé à une zone aérienne.</xs:documentation>
+      <xs:documentation xml:lang="en">Control point associated to an ACM .</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" name="name" type="nc1common:Text1To20XType">
+        <xs:annotation>
+          <xs:documentation>Nom du point de contrôle.</xs:documentation>
+          <xs:documentation xml:lang="en">Name of the control point.</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Nom</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">name</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="type" type="nc1acm:ControlPointTypeCode">
+        <xs:annotation>
+          <xs:documentation>Type du point de contrôle.</xs:documentation>
+          <xs:documentation xml:lang="en">Control point type.</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Type</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">Type</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="location" type="nc1location:PointType">
+        <xs:annotation>
+          <xs:documentation>Localisation du point de contrôle.</xs:documentation>
+          <xs:documentation xml:lang="en">Control point location.</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Localisation</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">Location</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="levels" type="nc1acm:LevelsType">
+        <xs:annotation>
+          <xs:documentation>Niveaux d’altitude minimal et maximal.</xs:documentation>
+          <xs:documentation xml:lang="en">Min and max altitude levels.</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Niveaux</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">Levels</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:simpleType name="ControlPointTypeCode">
+    <xs:annotation>
+      <xs:appinfo>
+        <nc1dico:source xmlns:nc1dico="urn:fra:nc1:dictionnaires">AdatP-3 BL11 1362/005</nc1dico:source>
+      </xs:appinfo>
+      <xs:documentation></xs:documentation>
+      <xs:documentation xml:lang="en"></xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:integer" />
+  </xs:simpleType>
+  <xs:complexType name="CorridorType">
+    <xs:annotation>
+      <xs:documentation>Corridor.</xs:documentation>
+      <xs:documentation xml:lang="en">Corridor.</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" minOccurs="2" name="point" type="nc1location:PointType">
+        <xs:annotation>
+          <xs:documentation>Point de l'âme du corridor. Le premier point de la liste est le point de départ du corridor, le dernier point de la liste est le point d'arrivée du corridor.</xs:documentation>
+          <xs:documentation xml:lang="en">Point of the centreline of the corridor. The first point is the corridor's starting point, the last point is the arrival point.</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Point</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">Point</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="width" type="nc1common:Decimal0To999999Type">
+        <xs:annotation>
+          <xs:documentation>Largeur du corridor (mètres).</xs:documentation>
+          <xs:documentation xml:lang="en">Width of the corridor.</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Largeur</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">Width</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="LevelsType">
+    <xs:annotation>
+      <xs:documentation>Niveaux d’altitude minimal et maximal.</xs:documentation>
+      <xs:documentation xml:lang="en">Min and max altitude levels.</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="minLevel" type="nc1common:Int0To999Type">
+        <xs:annotation>
+          <xs:documentation>Niveau d’altitude minimal (centaine de pieds).</xs:documentation>
+          <xs:documentation xml:lang="en">Min altitude level (100s ft.).</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Niveau minimal</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">Min level</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="minLevelReference" type="nc1common:LevelReferenceCode">
+        <xs:annotation>
+          <xs:documentation>Référence d’altitude associée au niveau minimal.</xs:documentation>
+          <xs:documentation xml:lang="en">Min level altitude reference.</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Référence du niveau minimal</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">Min level reference</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="maxLevel" type="nc1common:Int0To999Type">
+        <xs:annotation>
+          <xs:documentation>Niveau d’altitude maximal (centaine de pieds).</xs:documentation>
+          <xs:documentation xml:lang="en">Max altitude level (100s ft.).</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Niveau maximal</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">Max level</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="maxLevelReference" type="nc1common:LevelReferenceCode">
+        <xs:annotation>
+          <xs:documentation>Référence d’altitude associée au niveau maximal.</xs:documentation>
+          <xs:documentation xml:lang="en">Max level altitude reference.</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Référence du niveau maximal</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">Max level reference</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

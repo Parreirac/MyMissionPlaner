@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<cva:ContextValueAssociation xmlns:cva="http://docs.oasis-open.org/codelist/ns/ContextValueAssociation/1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="urn:fra:nc1:objet:iffprocedure" queryBinding="xslt2" xmlns:nc1iffprocedure="urn:fra:nc1:objet:iffprocedure">
+  <!-- NC1 V.9.0.0 -->
+  <ValueLists>
+    <ValueList xml:id="nc1objcom-ActivationStatusCode" uri="../Dictionnaires/ActivationStatusCode.gc" />
+    <ValueList xml:id="nc1objcom-IsFullCode" uri="../Dictionnaires/IsFullCode.gc" />
+    <ValueList xml:id="nc1iffprocedure-ShoradIffOriginatingAuthorityCode" uri="../Dictionnaires/ShoradIffOriginatingAuthorityCode.gc" />
+    <ValueList xml:id="nc1iffprocedure-IffModeCode" uri="../Dictionnaires/IffModeCode.gc" />
+    <ValueList xml:id="nc1iffprocedure-CmbModeCode" uri="../Dictionnaires/CmbModeCode.gc" />
+  </ValueLists>
+  <Contexts>
+    <Context address="/nc1iffprocedure:NC1_IffProcedure/@activationStatus" values="nc1objcom-ActivationStatusCode" />
+    <Context address="/nc1iffprocedure:NC1_IffProcedure/@isFull" values="nc1objcom-IsFullCode" />
+    <Context address="/nc1iffprocedure:NC1_IffProcedure/tacticalData/shoradIffOriginatingAuthority" values="nc1iffprocedure-ShoradIffOriginatingAuthorityCode" />
+    <Context address="/nc1iffprocedure:NC1_IffProcedure/tacticalData/iffMode/iffMode" values="nc1iffprocedure-IffModeCode" />
+    <Context address="/nc1iffprocedure:NC1_IffProcedure/tacticalData/cmbMode/cmbMode" values="nc1iffprocedure-CmbModeCode" />
+    <Context address="/nc1iffprocedure:NC1_IffProcedure/tacticalData/cnxModes/cnxMode" values="nc1iffprocedure-IffModeCode" />
+  </Contexts>
+</cva:ContextValueAssociation>

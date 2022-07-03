@@ -1,0 +1,195 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<gc:CodeList xmlns:nc1dico="urn:fra:nc1:dictionnaires" xmlns:gc="http://docs.oasis-open.org/codelist/ns/genericode/1.0/">
+  <Annotation>
+    <Description>
+      <nc1dico:description>INDIQUE UN VOLUME (UNE QUANTITE AU SENS NATURE - VOLUME -ATTITUDE) POUR DIFFERENTES APPLICATIONS (EX: VOLUME D'UN GROUPE D'INDIVIDUS)</nc1dico:description>
+      <nc1dico:description xml:lang="en">Indicate a volume (a quantity in the kind - Volume - attitude) for various applications (Ex: volume of a group of individuals)</nc1dico:description>
+    </Description>
+    <AppInfo>
+      <nc1dico:source>SFTT 3.4.8</nc1dico:source>
+      <nc1dico:derogation>VOLUME APPROXIMATIF</nc1dico:derogation>
+    </AppInfo>
+  </Annotation>
+  <Identification>
+    <ShortName>L104_1Code</ShortName>
+    <Version>9.0.0</Version>
+    <CanonicalUri>urn:fra:nc1:common:sicsdicos:L104_1Code</CanonicalUri>
+    <CanonicalVersionUri>urn:fra:nc1:common:sicsdicos:L104_1Code:9.0.0</CanonicalVersionUri>
+  </Identification>
+  <ColumnSet DatatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes">
+    <Column Id="code" Use="required">
+      <ShortName>Code</ShortName>
+      <Data Type="int" />
+    </Column>
+    <Column Id="short" Use="required">
+      <ShortName>Short</ShortName>
+      <Data Type="string" />
+    </Column>
+    <Column Id="long" Use="optional">
+      <ShortName>Long</ShortName>
+      <Data Type="string" />
+    </Column>
+    <Column Id="short-en" Use="optional">
+      <ShortName>Short anglais</ShortName>
+      <Data Type="string" />
+    </Column>
+    <Column Id="long-en" Use="optional">
+      <ShortName>Long anglais</ShortName>
+      <Data Type="string" />
+    </Column>
+    <Column Id="parent" Use="optional">
+      <ShortName>Parent</ShortName>
+      <Data Type="int" />
+    </Column>
+    <Column Id="codeSymbole" Use="optional">
+      <ShortName>Code Symbole</ShortName>
+      <Data Type="string" />
+    </Column>
+    <Column Id="codeHierarchique" Use="optional">
+      <ShortName>Code Hierarchique</ShortName>
+      <Data Type="string" />
+    </Column>
+    <Key Id="codeKey">
+      <ShortName>CodeKey</ShortName>
+      <ColumnRef Ref="code" />
+    </Key>
+  </ColumnSet>
+  <SimpleCodeList>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>0</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>0</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>0</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>0</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>0</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>1</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>1 A  5</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>1 A  5</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>1 TO  5</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>1 TO  5</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>2</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>6 A 10</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>6 A 10</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>6 TO 10</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>6 TO 10</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>3</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>&gt;10 ET &lt;=30</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>&gt;10 ET &lt;=30</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>&gt;10 AND &lt;=30</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>&gt;10 AND &lt;=30</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>4</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>&gt;30 ET &lt;=50</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>&gt;30 ET &lt;=50</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>&gt;30 AND &lt;=50</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>&gt;30 AND &lt;=50</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>5</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>&gt;50 ET &lt;=100</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>&gt;50 ET &lt;=100</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>&gt;50 AND &lt;=100</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>&gt;50 AND &lt;=100</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>6</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>&gt;100 ET &lt;= 500</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>&gt;100 ET &lt;= 500</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>&gt;100 AND &lt;= 500</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>&gt;100 AND &lt;= 500</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>7</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>&gt;500</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>&gt;500</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>&gt;500</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>&gt;500</SimpleValue>
+      </Value>
+    </Row>
+  </SimpleCodeList>
+</gc:CodeList>

@@ -1,0 +1,237 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema targetNamespace="urn:fra:nc1:message:opordlog" xmlns:nc1ihm="urn:fra:nc1:IHM" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:nc1opordlog="urn:fra:nc1:message:opordlog" xmlns:nc1common="urn:fra:nc1:common:attribute" xmlns:nc1msgcom="urn:fra:nc1:common:message" xmlns:nc1opord="urn:fra:nc1:message:opord">
+  <!-- NC1 V.9.0.0 -->
+  <xs:import namespace="urn:fra:nc1:common:attribute" schemaLocation="../Commun/Common.xsd" />
+  <xs:import namespace="urn:fra:nc1:common:message" schemaLocation="../Commun/Message.xsd" />
+  <xs:import namespace="urn:fra:nc1:message:opord" schemaLocation="NC1_OPORD.xsd" />
+  <xs:element name="NC1_OPORD-LOG">
+    <xs:annotation>
+      <xs:documentation>Le message NC1_OPORD-LOG sert à transmettre les ordres du chef aux commandants des unités de soutien logistique et à informer les unités de combat du soutien qui leur sera fourni par les unités administratives et logistiques. Il ne s'agit toutefois pas d'une instruction technique adressée aux unités administratives et logistiques.</xs:documentation>
+      <xs:documentation xml:lang="en">The NC1_OPORD-LOG message serves to pass on the orders of the leader to commanders of support units logistics and to inform the combat units of the support which will be supplied to them by the administrative and logistic units. It is not however a technical instruction sent to the administrative and logistic units.</xs:documentation>
+      <xs:appinfo>
+        <nc1:type xmlns:nc1="urn:fra:nc1">Message</nc1:type>
+        <nc1ihm:Nom>Annexe administration/logistique</nc1ihm:Nom>
+        <nc1ihm:Nom xml:lang="en">Administration and logistic support annex</nc1ihm:Nom>
+        <nc1:MessH xmlns:nc1="urn:fra:nc1">N/A</nc1:MessH>
+        <nc1:MessADatP3 xmlns:nc1="urn:fra:nc1">N/A</nc1:MessADatP3>
+        <nc1:LastNC1ModifyVersion xmlns:nc1="urn:fra:nc1">9.0.0</nc1:LastNC1ModifyVersion>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:complexContent>
+        <xs:extension base="nc1msgcom:BaseMessageType">
+          <xs:sequence>
+            <xs:element minOccurs="0" name="_1_situation" type="nc1msgcom:MixedAnyType">
+              <xs:annotation>
+                <xs:documentation>Situation.</xs:documentation>
+                <xs:documentation xml:lang="en">Situation.</xs:documentation>
+                <xs:appinfo>
+                  <nc1ihm:Nom>1 - Situation</nc1ihm:Nom>
+                  <nc1ihm:Nom xml:lang="en">1 - Situation</nc1ihm:Nom>
+                </xs:appinfo>
+              </xs:annotation>
+            </xs:element>
+            <xs:element minOccurs="0" name="_2_mission" type="nc1msgcom:MixedAnyType">
+              <xs:annotation>
+                <xs:documentation>Mission des unités de soutien logistique.</xs:documentation>
+                <xs:documentation xml:lang="en">Logistic units mission.</xs:documentation>
+                <xs:appinfo>
+                  <nc1ihm:Nom>2 - Mission</nc1ihm:Nom>
+                  <nc1ihm:Nom xml:lang="en">2 - Mission</nc1ihm:Nom>
+                </xs:appinfo>
+              </xs:annotation>
+            </xs:element>
+            <xs:element minOccurs="0" name="_3_execution" type="nc1msgcom:MixedAnyType">
+              <xs:annotation>
+                <xs:documentation>Exécution.</xs:documentation>
+                <xs:documentation xml:lang="en">Execution.</xs:documentation>
+                <xs:appinfo>
+                  <nc1ihm:Nom>3 - Exécution</nc1ihm:Nom>
+                  <nc1ihm:Nom xml:lang="en">3 - Execution</nc1ihm:Nom>
+                </xs:appinfo>
+              </xs:annotation>
+            </xs:element>
+            <xs:element minOccurs="0" name="_4_administrativeAndLogisticsServices">
+              <xs:annotation>
+                <xs:documentation>Administration et logistique.</xs:documentation>
+                <xs:documentation xml:lang="en">Administration and logistics.</xs:documentation>
+                <xs:appinfo>
+                  <nc1ihm:Nom>4 - Administration et logistique</nc1ihm:Nom>
+                  <nc1ihm:Nom xml:lang="en">4 - Administration and logistics</nc1ihm:Nom>
+                </xs:appinfo>
+              </xs:annotation>
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element minOccurs="0" name="A_equipmentAndServices">
+                    <xs:annotation>
+                      <xs:documentation>Matériel et services.</xs:documentation>
+                      <xs:documentation xml:lang="en">Equipment and services.</xs:documentation>
+                      <xs:appinfo>
+                        <nc1ihm:Nom>A - Matériel et services</nc1ihm:Nom>
+                        <nc1ihm:Nom xml:lang="en">A - Equipment and services</nc1ihm:Nom>
+                      </xs:appinfo>
+                    </xs:annotation>
+                    <xs:complexType>
+                      <xs:sequence>
+                        <xs:element minOccurs="0" name="supply" type="nc1msgcom:MixedAnyType">
+                          <xs:annotation>
+                            <xs:documentation>Ravitaillement.</xs:documentation>
+                            <xs:documentation xml:lang="en">Fuelling.</xs:documentation>
+                            <xs:appinfo>
+                              <nc1ihm:Nom>Ravitaillement</nc1ihm:Nom>
+                              <nc1ihm:Nom xml:lang="en">Fuelling</nc1ihm:Nom>
+                            </xs:appinfo>
+                          </xs:annotation>
+                        </xs:element>
+                        <xs:element minOccurs="0" name="transports" type="nc1msgcom:MixedAnyType">
+                          <xs:annotation>
+                            <xs:documentation>Transports.</xs:documentation>
+                            <xs:documentation xml:lang="en">Transports.</xs:documentation>
+                            <xs:appinfo>
+                              <nc1ihm:Nom>Transports</nc1ihm:Nom>
+                              <nc1ihm:Nom xml:lang="en">Transports</nc1ihm:Nom>
+                            </xs:appinfo>
+                          </xs:annotation>
+                        </xs:element>
+                        <xs:element minOccurs="0" name="services" type="nc1msgcom:MixedAnyType">
+                          <xs:annotation>
+                            <xs:documentation>Services.</xs:documentation>
+                            <xs:documentation xml:lang="en">Services.</xs:documentation>
+                            <xs:appinfo>
+                              <nc1ihm:Nom>Services</nc1ihm:Nom>
+                              <nc1ihm:Nom xml:lang="en">Services</nc1ihm:Nom>
+                            </xs:appinfo>
+                          </xs:annotation>
+                        </xs:element>
+                        <xs:element minOccurs="0" name="workforce" type="nc1msgcom:MixedAnyType">
+                          <xs:annotation>
+                            <xs:documentation>Main d'œuvre.</xs:documentation>
+                            <xs:documentation xml:lang="en">Workforce.</xs:documentation>
+                            <xs:appinfo>
+                              <nc1ihm:Nom>Main d'œuvre</nc1ihm:Nom>
+                              <nc1ihm:Nom xml:lang="en">Workforce</nc1ihm:Nom>
+                            </xs:appinfo>
+                          </xs:annotation>
+                        </xs:element>
+                        <xs:element minOccurs="0" name="hygieneAndSafety" type="nc1common:LongTextType">
+                          <xs:annotation>
+                            <xs:documentation>Hygiène et sécurité en opérations.</xs:documentation>
+                            <xs:documentation xml:lang="en">Hygiene and safety during operations.</xs:documentation>
+                            <xs:appinfo>
+                              <nc1ihm:Nom>Hygiène et sécurité</nc1ihm:Nom>
+                              <nc1ihm:Nom xml:lang="en">Hygiene and safety</nc1ihm:Nom>
+                            </xs:appinfo>
+                          </xs:annotation>
+                        </xs:element>
+                        <xs:element minOccurs="0" name="postOffice" type="nc1msgcom:MixedAnyType">
+                          <xs:annotation>
+                            <xs:documentation>Poste aux armées.</xs:documentation>
+                            <xs:documentation xml:lang="en">Post office.</xs:documentation>
+                            <xs:appinfo>
+                              <nc1ihm:Nom>Poste aux armées</nc1ihm:Nom>
+                              <nc1ihm:Nom xml:lang="en">Post office</nc1ihm:Nom>
+                            </xs:appinfo>
+                          </xs:annotation>
+                        </xs:element>
+                        <xs:element minOccurs="0" name="maintenance" type="nc1common:LongTextType">
+                          <xs:annotation>
+                            <xs:documentation>Entretien.</xs:documentation>
+                            <xs:documentation xml:lang="en">Maintenance.</xs:documentation>
+                            <xs:appinfo>
+                              <nc1ihm:Nom>Entretien</nc1ihm:Nom>
+                              <nc1ihm:Nom xml:lang="en">Maintenance</nc1ihm:Nom>
+                            </xs:appinfo>
+                          </xs:annotation>
+                        </xs:element>
+                      </xs:sequence>
+                    </xs:complexType>
+                  </xs:element>
+                  <xs:element minOccurs="0" name="B_medEvacuationAndTreatment" type="nc1msgcom:MixedAnyType">
+                    <xs:annotation>
+                      <xs:documentation>Evacuation sanitaire et traitement médical.</xs:documentation>
+                      <xs:documentation xml:lang="en">health and medical treatment Evacuation.</xs:documentation>
+                      <xs:appinfo>
+                        <nc1ihm:Nom>B - Evacuation sanitaire et traitement médical</nc1ihm:Nom>
+                        <nc1ihm:Nom xml:lang="en">B - Med evacuation and treatment</nc1ihm:Nom>
+                      </xs:appinfo>
+                    </xs:annotation>
+                  </xs:element>
+                  <xs:element minOccurs="0" name="C_staff" type="nc1msgcom:MixedAnyType">
+                    <xs:annotation>
+                      <xs:documentation>Personnel.</xs:documentation>
+                      <xs:documentation xml:lang="en">Personnel.</xs:documentation>
+                      <xs:appinfo>
+                        <nc1ihm:Nom>C - Personnel</nc1ihm:Nom>
+                        <nc1ihm:Nom xml:lang="en">C - Staff</nc1ihm:Nom>
+                      </xs:appinfo>
+                    </xs:annotation>
+                  </xs:element>
+                  <xs:element minOccurs="0" name="D_foreignAndHostNationSupport" type="nc1msgcom:MixedAnyType">
+                    <xs:annotation>
+                      <xs:documentation>Soutien de la nation étrangère et de la nation hôte.</xs:documentation>
+                      <xs:documentation xml:lang="en">Foreign and host nation support.</xs:documentation>
+                      <xs:appinfo>
+                        <nc1ihm:Nom>D - Soutien de la nation étrangère et de la nation hôte</nc1ihm:Nom>
+                        <nc1ihm:Nom xml:lang="en">D - Foreign and host nation support</nc1ihm:Nom>
+                      </xs:appinfo>
+                    </xs:annotation>
+                  </xs:element>
+                  <xs:element minOccurs="0" name="E_miscellaneous" type="nc1msgcom:MixedAnyType">
+                    <xs:annotation>
+                      <xs:documentation>Divers.</xs:documentation>
+                      <xs:documentation xml:lang="en">Miscellaneous.</xs:documentation>
+                      <xs:appinfo>
+                        <nc1ihm:Nom>E - Divers</nc1ihm:Nom>
+                        <nc1ihm:Nom xml:lang="en">E - Miscellaneous</nc1ihm:Nom>
+                      </xs:appinfo>
+                    </xs:annotation>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element minOccurs="0" name="_5_commandAndTransmissions" type="nc1msgcom:MixedAnyType">
+              <xs:annotation>
+                <xs:documentation>Commandement et transmissions.</xs:documentation>
+                <xs:documentation xml:lang="en">Command and transmissions.</xs:documentation>
+                <xs:appinfo>
+                  <nc1ihm:Nom>5 - Commandement et transmissions</nc1ihm:Nom>
+                  <nc1ihm:Nom xml:lang="en">5 - Command and transmissions</nc1ihm:Nom>
+                </xs:appinfo>
+              </xs:annotation>
+            </xs:element>
+            <xs:element minOccurs="0" name="acknowledgement" type="xs:boolean">
+              <xs:annotation>
+                <xs:documentation>Demande d’aperçu.</xs:documentation>
+                <xs:documentation xml:lang="en">Acknowledgement request.</xs:documentation>
+                <xs:appinfo>
+                  <nc1ihm:Nom>Demande d’aperçu</nc1ihm:Nom>
+                  <nc1ihm:Nom xml:lang="en">Acknowledgement request</nc1ihm:Nom>
+                </xs:appinfo>
+              </xs:annotation>
+            </xs:element>
+            <xs:element minOccurs="0" name="comment" type="nc1msgcom:CommentSectionType">
+              <xs:annotation>
+                <xs:documentation>Commentaire en texte libre.</xs:documentation>
+                <xs:documentation xml:lang="en">free text comment.</xs:documentation>
+                <xs:appinfo>
+                  <nc1ihm:Nom>Commentaire</nc1ihm:Nom>
+                  <nc1ihm:Nom xml:lang="en">comment</nc1ihm:Nom>
+                </xs:appinfo>
+              </xs:annotation>
+            </xs:element>
+            <xs:element minOccurs="0" name="signature" type="nc1opord:SignatureType">
+              <xs:annotation>
+                <xs:documentation>Attache de signature.</xs:documentation>
+                <xs:documentation xml:lang="en">Signature block.</xs:documentation>
+                <xs:appinfo>
+                  <nc1ihm:Nom>Signature</nc1ihm:Nom>
+                  <nc1ihm:Nom xml:lang="en">Signature</nc1ihm:Nom>
+                </xs:appinfo>
+              </xs:annotation>
+            </xs:element>
+          </xs:sequence>
+        </xs:extension>
+      </xs:complexContent>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

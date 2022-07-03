@@ -1,0 +1,560 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema targetNamespace="urn:fra:nc1:objet:meteo" xmlns:nc1ihm="urn:fra:nc1:IHM" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:nc1meteo="urn:fra:nc1:objet:meteo" xmlns:nc1common="urn:fra:nc1:common:attribute" xmlns:nc1location="urn:fra:nc1:common:location" xmlns:nc1objcom="urn:fra:nc1:common:object" xmlns:nc1sicsdicos="urn:fra:nc1:common:sicsdicos">
+  <!-- NC1 V.9.0.0 -->
+  <xs:import namespace="urn:fra:nc1:common:attribute" schemaLocation="../Commun/Common.xsd" />
+  <xs:import namespace="urn:fra:nc1:common:location" schemaLocation="../Commun/Location.xsd" />
+  <xs:import namespace="urn:fra:nc1:common:object" schemaLocation="../Commun/Object.xsd" />
+  <xs:import namespace="urn:fra:nc1:common:sicsdicos" schemaLocation="../Commun/SICS_Dictionaries.xsd" />
+  <xs:element name="NC1_Meteo" type="nc1meteo:MeteoType">
+    <xs:annotation>
+      <xs:documentation>L’objet NC1_Meteo est correspond à une observation ou une prévision météo.</xs:documentation>
+      <xs:documentation xml:lang="en">The object NC1_Meteo is corresponds to an observation or a meteo forecast.</xs:documentation>
+      <xs:appinfo>
+        <nc1:type xmlns:nc1="urn:fra:nc1">Objet</nc1:type>
+        <nc1ihm:Nom>Météorologie</nc1ihm:Nom>
+        <nc1ihm:Nom xml:lang="en">Meteorology</nc1ihm:Nom>
+        <nc1:MessH xmlns:nc1="urn:fra:nc1">Message H7.7 Meteo</nc1:MessH>
+        <nc1:MessADatP3 xmlns:nc1="urn:fra:nc1">Sets YANKEE – ZULU</nc1:MessADatP3>
+        <nc1:LastNC1ModifyVersion xmlns:nc1="urn:fra:nc1">9.0.0</nc1:LastNC1ModifyVersion>
+      </xs:appinfo>
+    </xs:annotation>
+  </xs:element>
+  <xs:simpleType name="AltitudeZoneType">
+    <xs:annotation>
+      <xs:documentation>Code d’une tranche d’altitude, de 0 à 36, selon le STANAG 4082.</xs:documentation>
+      <xs:documentation xml:lang="en">Altitude zone expressed as a STANAG 4082 compliant number between 0 and 36.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:int">
+      <xs:maxInclusive value="36" />
+      <xs:minInclusive value="0" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:complexType name="MeteoType">
+    <xs:annotation>
+      <xs:documentation>L’objet NC1_Meteo est conforme à la doctrine. Il correspond à une observation ou une prévision météo, selon que son état de planification est respectivement Présent ou Planifié (attribut symbolCode).</xs:documentation>
+      <xs:documentation xml:lang="en">The NC1_meteo object complies with the doctrine. It corresponds to a weather observation or forecast, according to the planification status Present or Planned of the symbol code.</xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="nc1objcom:LocalisedObjectType">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="tacticalData">
+            <xs:annotation>
+              <xs:documentation>Données tactiques de l’objet météo.</xs:documentation>
+              <xs:documentation xml:lang="en">Meteo object tactical data.</xs:documentation>
+              <xs:appinfo>
+                <nc1ihm:Nom>Données tactiques</nc1ihm:Nom>
+                <nc1ihm:Nom xml:lang="en">tactical datas</nc1ihm:Nom>
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element minOccurs="0" name="name" type="nc1common:ShortTextObjectType">
+                  <xs:annotation>
+                    <xs:documentation>Nom de l’objet météo affiché sur la cartographie.</xs:documentation>
+                    <xs:documentation xml:lang="en">Meteo object displayed name.</xs:documentation>
+                    <xs:appinfo>
+                      <nc1ihm:Nom>Nom</nc1ihm:Nom>
+                      <nc1ihm:Nom xml:lang="en">name</nc1ihm:Nom>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:element>
+                <xs:element name="symbolCode" type="nc1common:SymbolCodeType">
+                  <xs:annotation>
+                    <xs:documentation>Code contenant les informations de symbologie, d'identité (AMI, ENI, etc.), de nationalité, d'état de planification.</xs:documentation>
+                    <xs:documentation xml:lang="en">Code specifying information about symbology, identity (Friend, enemy, …), nationality, planification status.</xs:documentation>
+                    <xs:appinfo>
+                      <nc1ihm:Nom>Code du symbole</nc1ihm:Nom>
+                      <nc1ihm:Nom xml:lang="en">Symbol code</nc1ihm:Nom>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:element>
+                <xs:element minOccurs="0" name="probabilityRatio" type="nc1common:RatioType">
+                  <xs:annotation>
+                    <xs:documentation>Probabilité de réalisation du phénomène météo, dans le cas où l’objet NC1_Meteo représente une prévision météo.</xs:documentation>
+                    <xs:documentation xml:lang="en">Probability of the meteorological phenomena to occur, when the NC1_Meteo object represents a weather forecasting.</xs:documentation>
+                    <xs:appinfo>
+                      <nc1ihm:Nom>Probabilité</nc1ihm:Nom>
+                      <nc1ihm:Nom xml:lang="en">Probability</nc1ihm:Nom>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:element>
+                <xs:element minOccurs="0" name="isRainy" type="xs:boolean">
+                  <xs:annotation>
+                    <xs:documentation>Indicateur de pluie (=1 s’il pleut).</xs:documentation>
+                    <xs:documentation xml:lang="en">Rain indicator (1=raining).</xs:documentation>
+                    <xs:appinfo>
+                      <nc1ihm:Nom>Pluie</nc1ihm:Nom>
+                      <nc1ihm:Nom xml:lang="en">Rain</nc1ihm:Nom>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:element>
+                <xs:element minOccurs="0" name="isSnowy" type="xs:boolean">
+                  <xs:annotation>
+                    <xs:documentation>Indicateur de neige (=1 s’il neige).</xs:documentation>
+                    <xs:documentation xml:lang="en">Snow indicator (= 1 if snow).</xs:documentation>
+                    <xs:appinfo>
+                      <nc1ihm:Nom>Neige</nc1ihm:Nom>
+                      <nc1ihm:Nom xml:lang="en">Snow</nc1ihm:Nom>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:element>
+                <xs:element minOccurs="0" name="isFoggy" type="xs:boolean">
+                  <xs:annotation>
+                    <xs:documentation>Indicateur de brouillard (=1 si présence de brouillard).</xs:documentation>
+                    <xs:documentation xml:lang="en">Fog indicator (1=foggy).</xs:documentation>
+                    <xs:appinfo>
+                      <nc1ihm:Nom>Brouillard</nc1ihm:Nom>
+                      <nc1ihm:Nom xml:lang="en">Fog</nc1ihm:Nom>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:element>
+                <xs:element minOccurs="0" name="isCloudy" type="xs:boolean">
+                  <xs:annotation>
+                    <xs:documentation>Indicateur de présence de nuages (=1 si temps nuageux).</xs:documentation>
+                    <xs:documentation xml:lang="en">Cloud indicator (1=cloudy).</xs:documentation>
+                    <xs:appinfo>
+                      <nc1ihm:Nom>Nuages</nc1ihm:Nom>
+                      <nc1ihm:Nom xml:lang="en">Clouds</nc1ihm:Nom>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:element>
+                <xs:element minOccurs="0" name="url" type="nc1common:MediumTextObjectType">
+                  <xs:annotation>
+                    <xs:documentation>Lien vers un fichier associé à l’objet.</xs:documentation>
+                    <xs:documentation xml:lang="en">Link to a file associated with the object.</xs:documentation>
+                    <xs:appinfo>
+                      <nc1ihm:Nom>Url</nc1ihm:Nom>
+                      <nc1ihm:Nom xml:lang="en">url</nc1ihm:Nom>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:element>
+                <xs:element minOccurs="0" name="comment" type="nc1common:LongTextObjectType">
+                  <xs:annotation>
+                    <xs:documentation>Commentaire en texte libre.</xs:documentation>
+                    <xs:documentation xml:lang="en">free text comment.</xs:documentation>
+                    <xs:appinfo>
+                      <nc1ihm:Nom>Commentaire</nc1ihm:Nom>
+                      <nc1ihm:Nom xml:lang="en">comment</nc1ihm:Nom>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:element>
+                <xs:element minOccurs="0" name="extVersion" type="nc1common:ExtVersType">
+                  <xs:annotation>
+                    <xs:documentation>Extension pour versions suivantes compatibles.</xs:documentation>
+                    <xs:documentation xml:lang="en">Extension for following compatible versions.</xs:documentation>
+                    <xs:appinfo>
+                      <nc1ihm:Nom>Extension de version</nc1ihm:Nom>
+                      <nc1ihm:Nom xml:lang="en">version extension</nc1ihm:Nom>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:element>
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+          <xs:element minOccurs="0" name="atmosphere">
+            <xs:annotation>
+              <xs:documentation>Données sur l’atmosphère.</xs:documentation>
+              <xs:documentation xml:lang="en">Atmosphere data.</xs:documentation>
+              <xs:appinfo>
+                <nc1ihm:Nom>Atmosphère</nc1ihm:Nom>
+                <nc1ihm:Nom xml:lang="en">Atmosphere</nc1ihm:Nom>
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element minOccurs="0" name="temperature" type="nc1common:IntMinus63To63Type">
+                  <xs:annotation>
+                    <xs:documentation>Température (degrés Celsius).</xs:documentation>
+                    <xs:documentation xml:lang="en">Temperature.</xs:documentation>
+                    <xs:appinfo>
+                      <nc1ihm:Nom>Température</nc1ihm:Nom>
+                      <nc1ihm:Nom xml:lang="en">Temperature</nc1ihm:Nom>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:element>
+                <xs:element minOccurs="0" name="temperatureGradient" type="nc1sicsdicos:L165_6Code">
+                  <xs:annotation>
+                    <xs:documentation>Type de gradient de température (ex : « STABLE »).</xs:documentation>
+                    <xs:documentation xml:lang="en">"Temperature gradient type (e.g. ""STABLE"")".</xs:documentation>
+                    <xs:appinfo>
+                      <nc1ihm:Nom>Gradient</nc1ihm:Nom>
+                      <nc1ihm:Nom xml:lang="en">Gradient</nc1ihm:Nom>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:element>
+                <xs:element minOccurs="0" name="pressureQuantity" type="nc1common:Int887To1140Type">
+                  <xs:annotation>
+                    <xs:documentation>Pression atmosphérique (QFE) (hPa).</xs:documentation>
+                    <xs:documentation xml:lang="en">Atmospheric pressure (QFE).</xs:documentation>
+                    <xs:appinfo>
+                      <nc1ihm:Nom>Pression atmosphérique</nc1ihm:Nom>
+                      <nc1ihm:Nom xml:lang="en">Atmospheric pressure</nc1ihm:Nom>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:element>
+                <xs:element minOccurs="0" name="humidityRatio" type="nc1common:RatioType">
+                  <xs:annotation>
+                    <xs:documentation>Taux d’humidité de l’air.</xs:documentation>
+                    <xs:documentation xml:lang="en">Ratio of humidity in the air.</xs:documentation>
+                    <xs:appinfo>
+                      <nc1ihm:Nom>Taux d’humidité</nc1ihm:Nom>
+                      <nc1ihm:Nom xml:lang="en">Humidity ratio</nc1ihm:Nom>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:element>
+                <xs:element minOccurs="0" name="extVersion" type="nc1common:ExtVersType">
+                  <xs:annotation>
+                    <xs:documentation>Extension pour versions suivantes compatibles</xs:documentation>
+                    <xs:documentation xml:lang="en">Extension for following compatible versions.</xs:documentation>
+                    <xs:appinfo>
+                      <nc1ihm:Nom>Extension de version</nc1ihm:Nom>
+                      <nc1ihm:Nom xml:lang="en">version extension</nc1ihm:Nom>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:element>
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+          <xs:element maxOccurs="unbounded" minOccurs="0" name="cloudCover">
+            <xs:annotation>
+              <xs:documentation>Données sur la couverture nuageuse.</xs:documentation>
+              <xs:documentation xml:lang="en">Cloud cover data.</xs:documentation>
+              <xs:appinfo>
+                <nc1ihm:Nom>Couverture nuageuse</nc1ihm:Nom>
+                <nc1ihm:Nom xml:lang="en">Cloud cover data</nc1ihm:Nom>
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="altitudeZone" type="nc1meteo:AltitudeZoneType">
+                  <xs:annotation>
+                    <xs:documentation>Tranche d’altitude de la couverture nuageuse, de 0 à 36 (STANAG 4082).</xs:documentation>
+                    <xs:documentation xml:lang="en">Cloud cover altitude band, from 0 to 36 (STANAG 4082).</xs:documentation>
+                    <xs:appinfo>
+                      <nc1ihm:Nom>Zone d’altitude</nc1ihm:Nom>
+                      <nc1ihm:Nom xml:lang="en">Altitude zone</nc1ihm:Nom>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:element>
+                <xs:element minOccurs="0" name="category" type="nc1sicsdicos:L165_9Code">
+                  <xs:annotation>
+                    <xs:documentation>Type de la couverture nuageuse.</xs:documentation>
+                    <xs:documentation xml:lang="en">Cloud cover category.</xs:documentation>
+                    <xs:appinfo>
+                      <nc1ihm:Nom>Type</nc1ihm:Nom>
+                      <nc1ihm:Nom xml:lang="en">Type</nc1ihm:Nom>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:element>
+                <xs:element minOccurs="0" name="averageCoverage" type="nc1sicsdicos:L165_10Code">
+                  <xs:annotation>
+                    <xs:documentation>Caractérisation de la couverture nuageuse moyenne (ex : « 3/8 »).</xs:documentation>
+                    <xs:documentation xml:lang="en">"Characterization of the average cloud cover (e.g. ""3/8"")".</xs:documentation>
+                    <xs:appinfo>
+                      <nc1ihm:Nom>Caractérisation</nc1ihm:Nom>
+                      <nc1ihm:Nom xml:lang="en">Characterization</nc1ihm:Nom>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:element>
+                <xs:element minOccurs="0" name="extVersion" type="nc1common:ExtVersType">
+                  <xs:annotation>
+                    <xs:documentation>Extension pour versions suivantes compatibles.</xs:documentation>
+                    <xs:documentation xml:lang="en">Extension for following compatible versions.</xs:documentation>
+                    <xs:appinfo>
+                      <nc1ihm:Nom>Extension de version</nc1ihm:Nom>
+                      <nc1ihm:Nom xml:lang="en">version extension</nc1ihm:Nom>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:element>
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+          <xs:element maxOccurs="unbounded" minOccurs="0" name="wind">
+            <xs:annotation>
+              <xs:documentation>Données de vent.</xs:documentation>
+              <xs:documentation xml:lang="en">Wind data.</xs:documentation>
+              <xs:appinfo>
+                <nc1ihm:Nom>Vent</nc1ihm:Nom>
+                <nc1ihm:Nom xml:lang="en">Wind</nc1ihm:Nom>
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element minOccurs="0" name="altitudeZone" type="nc1meteo:AltitudeZoneType">
+                  <xs:annotation>
+                    <xs:documentation>Tranche d’altitude considérée, de 0 à 36 (STANAG 4082).</xs:documentation>
+                    <xs:documentation xml:lang="en">Considered altitude band, from 0 to 36 (STANAG 4082).</xs:documentation>
+                    <xs:appinfo>
+                      <nc1ihm:Nom>Zone d’altitude</nc1ihm:Nom>
+                      <nc1ihm:Nom xml:lang="en">Altitude zone</nc1ihm:Nom>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:element>
+                <xs:element minOccurs="0" name="category" type="nc1sicsdicos:L165_11Code">
+                  <xs:annotation>
+                    <xs:documentation>Catégorie de vent.</xs:documentation>
+                    <xs:documentation xml:lang="en">Wind category.</xs:documentation>
+                    <xs:appinfo>
+                      <nc1ihm:Nom>Catégorie</nc1ihm:Nom>
+                      <nc1ihm:Nom xml:lang="en">Category</nc1ihm:Nom>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:element>
+                <xs:element minOccurs="0" name="airStabilityCategory" type="nc1sicsdicos:L165_12Code">
+                  <xs:annotation>
+                    <xs:documentation>Catégorie de stabilité de l’air.</xs:documentation>
+                    <xs:documentation xml:lang="en">Wind air stability category.</xs:documentation>
+                    <xs:appinfo>
+                      <nc1ihm:Nom>Stabilité de l’air</nc1ihm:Nom>
+                      <nc1ihm:Nom xml:lang="en">Wind air stability</nc1ihm:Nom>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:element>
+                <xs:element minOccurs="0" name="windDirection" type="nc1common:AngleType">
+                  <xs:annotation>
+                    <xs:documentation>Direction d’où vient le vent.</xs:documentation>
+                    <xs:documentation xml:lang="en">Direction from which the wind originates.</xs:documentation>
+                    <xs:appinfo>
+                      <nc1ihm:Nom>Direction</nc1ihm:Nom>
+                      <nc1ihm:Nom xml:lang="en">Direction</nc1ihm:Nom>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:element>
+                <xs:element minOccurs="0" name="speed" type="nc1common:SpeedType">
+                  <xs:annotation>
+                    <xs:documentation>Vitesse du vent.</xs:documentation>
+                    <xs:documentation xml:lang="en">Wind speed.</xs:documentation>
+                    <xs:appinfo>
+                      <nc1ihm:Nom>Vitesse</nc1ihm:Nom>
+                      <nc1ihm:Nom xml:lang="en">Speed</nc1ihm:Nom>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:element>
+                <xs:element minOccurs="0" name="extVersion" type="nc1common:ExtVersType">
+                  <xs:annotation>
+                    <xs:documentation>Extension pour versions suivantes compatibles.</xs:documentation>
+                    <xs:documentation xml:lang="en">Extension for following compatible versions.</xs:documentation>
+                    <xs:appinfo>
+                      <nc1ihm:Nom>Extension de version</nc1ihm:Nom>
+                      <nc1ihm:Nom xml:lang="en">version extension</nc1ihm:Nom>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:element>
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+          <xs:element maxOccurs="unbounded" minOccurs="0" name="visibility">
+            <xs:annotation>
+              <xs:documentation>Données de visibilité.</xs:documentation>
+              <xs:documentation xml:lang="en">Visibility data.</xs:documentation>
+              <xs:appinfo>
+                <nc1ihm:Nom>Visibilité</nc1ihm:Nom>
+                <nc1ihm:Nom xml:lang="en">Visibility</nc1ihm:Nom>
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="direction" type="nc1common:AngleType">
+                  <xs:annotation>
+                    <xs:documentation>Direction de la visibilité.</xs:documentation>
+                    <xs:documentation xml:lang="en">Visibility direction.</xs:documentation>
+                    <xs:appinfo>
+                      <nc1ihm:Nom>Direction</nc1ihm:Nom>
+                      <nc1ihm:Nom xml:lang="en">Direction</nc1ihm:Nom>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:element>
+                <xs:element minOccurs="0" name="horizontalDistance" type="nc1common:Int0To25000Type">
+                  <xs:annotation>
+                    <xs:documentation>Distance de visibilité horizontale.</xs:documentation>
+                    <xs:documentation xml:lang="en">Horizontal visibility distance.</xs:documentation>
+                    <xs:appinfo>
+                      <nc1ihm:Nom>Visibilité horizontale</nc1ihm:Nom>
+                      <nc1ihm:Nom xml:lang="en">Horizontal visibility</nc1ihm:Nom>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:element>
+                <xs:element minOccurs="0" name="verticalDistance" type="nc1common:Int0To25000Type">
+                  <xs:annotation>
+                    <xs:documentation>Distance de visibilité verticale.</xs:documentation>
+                    <xs:documentation xml:lang="en">Vertical visibility distance.</xs:documentation>
+                    <xs:appinfo>
+                      <nc1ihm:Nom>Visibilité verticale</nc1ihm:Nom>
+                      <nc1ihm:Nom xml:lang="en">Vertical visibility</nc1ihm:Nom>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:element>
+                <xs:element minOccurs="0" name="category" type="nc1sicsdicos:L165_7Code">
+                  <xs:annotation>
+                    <xs:documentation>Catégorie de visibilité (ex : « BLOWING SNOW »).</xs:documentation>
+                    <xs:documentation xml:lang="en">"Visibility category (e.g. ""BLOWING SNOW"")".</xs:documentation>
+                    <xs:appinfo>
+                      <nc1ihm:Nom>Catégorie</nc1ihm:Nom>
+                      <nc1ihm:Nom xml:lang="en">Category</nc1ihm:Nom>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:element>
+                <xs:element minOccurs="0" name="extVersion" type="nc1common:ExtVersType">
+                  <xs:annotation>
+                    <xs:documentation>Extension pour versions suivantes compatibles.</xs:documentation>
+                    <xs:documentation xml:lang="en">Extension for following compatible versions.</xs:documentation>
+                    <xs:appinfo>
+                      <nc1ihm:Nom>Extension de version</nc1ihm:Nom>
+                      <nc1ihm:Nom xml:lang="en">version extension</nc1ihm:Nom>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:element>
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+          <xs:element minOccurs="0" name="location">
+            <xs:annotation>
+              <xs:documentation>Localisation.</xs:documentation>
+              <xs:documentation xml:lang="en">Location.</xs:documentation>
+              <xs:appinfo>
+                <nc1ihm:Nom>Localisation</nc1ihm:Nom>
+                <nc1ihm:Nom xml:lang="en">Location</nc1ihm:Nom>
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element minOccurs="0" name="name" type="nc1common:Text1To30ObjectType">
+                  <xs:annotation>
+                    <xs:documentation>Nom de baptême donné par l'opérateur à la localisation. Par exemple un nom de ville ou de lieu.</xs:documentation>
+                    <xs:documentation xml:lang="en">Name assigned to the location, e.g. city or place name.</xs:documentation>
+                    <xs:appinfo>
+                      <nc1ihm:Nom>Nom</nc1ihm:Nom>
+                      <nc1ihm:Nom xml:lang="en">name</nc1ihm:Nom>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:element>
+                <xs:choice>
+                  <xs:element name="point" type="nc1location:PointType">
+                    <xs:annotation>
+                      <xs:documentation>Point localisé.</xs:documentation>
+                      <xs:documentation xml:lang="en">Geolocalized point.</xs:documentation>
+                      <xs:appinfo>
+                        <nc1ihm:Nom>Point</nc1ihm:Nom>
+                        <nc1ihm:Nom xml:lang="en">Point</nc1ihm:Nom>
+                      </xs:appinfo>
+                    </xs:annotation>
+                  </xs:element>
+                  <xs:element name="multipoint" type="nc1location:MultipointType">
+                    <xs:annotation>
+                      <xs:documentation>Liste de points.</xs:documentation>
+                      <xs:documentation xml:lang="en">List of points.</xs:documentation>
+                      <xs:appinfo>
+                        <nc1ihm:Nom>Multipoint</nc1ihm:Nom>
+                        <nc1ihm:Nom xml:lang="en">Multipoint</nc1ihm:Nom>
+                      </xs:appinfo>
+                    </xs:annotation>
+                  </xs:element>
+                  <xs:element name="polyline" type="nc1location:PolylineType">
+                    <xs:annotation>
+                      <xs:documentation>Ligne brisée orientée, sans largeur.</xs:documentation>
+                      <xs:documentation xml:lang="en">Width less oriented polyline.</xs:documentation>
+                      <xs:appinfo>
+                        <nc1ihm:Nom>Polyligne</nc1ihm:Nom>
+                        <nc1ihm:Nom xml:lang="en">Polyline</nc1ihm:Nom>
+                      </xs:appinfo>
+                    </xs:annotation>
+                  </xs:element>
+                  <xs:element name="polygon" type="nc1location:PolygonType">
+                    <xs:annotation>
+                      <xs:documentation>Polygone, ou ligne brisée fermée.</xs:documentation>
+                      <xs:documentation xml:lang="en">Polygon, or closed polyline.</xs:documentation>
+                      <xs:appinfo>
+                        <nc1ihm:Nom>Polygone</nc1ihm:Nom>
+                        <nc1ihm:Nom xml:lang="en">Polygon</nc1ihm:Nom>
+                      </xs:appinfo>
+                    </xs:annotation>
+                  </xs:element>
+                  <xs:element name="circle" type="nc1location:CircleType">
+                    <xs:annotation>
+                      <xs:documentation>Cercle.</xs:documentation>
+                      <xs:documentation xml:lang="en">Circle.</xs:documentation>
+                      <xs:appinfo>
+                        <nc1ihm:Nom>Cercle</nc1ihm:Nom>
+                        <nc1ihm:Nom xml:lang="en">Circle</nc1ihm:Nom>
+                      </xs:appinfo>
+                    </xs:annotation>
+                  </xs:element>
+                  <xs:element name="ellipse" type="nc1location:EllipseType">
+                    <xs:annotation>
+                      <xs:documentation>Ellipse.</xs:documentation>
+                      <xs:documentation xml:lang="en">Ellipse.</xs:documentation>
+                      <xs:appinfo>
+                        <nc1ihm:Nom>Ellipse</nc1ihm:Nom>
+                        <nc1ihm:Nom xml:lang="en">Ellipse</nc1ihm:Nom>
+                      </xs:appinfo>
+                    </xs:annotation>
+                  </xs:element>
+                  <xs:element name="arcband" type="nc1location:ArcbandType">
+                    <xs:annotation>
+                      <xs:documentation>Radarc ou segment d’anneau.</xs:documentation>
+                      <xs:documentation xml:lang="en">Arcband, or 4 points sector.</xs:documentation>
+                      <xs:appinfo>
+                        <nc1ihm:Nom>Radarc</nc1ihm:Nom>
+                        <nc1ihm:Nom xml:lang="en">Arcband</nc1ihm:Nom>
+                      </xs:appinfo>
+                    </xs:annotation>
+                  </xs:element>
+                </xs:choice>
+                <xs:element minOccurs="0" name="speed" type="nc1common:SpeedType">
+                  <xs:annotation>
+                    <xs:documentation>Vitesse au sol de la localisation.</xs:documentation>
+                    <xs:documentation xml:lang="en">Location ground speed.</xs:documentation>
+                    <xs:appinfo>
+                      <nc1ihm:Nom>Vitesse</nc1ihm:Nom>
+                      <nc1ihm:Nom xml:lang="en">Speed</nc1ihm:Nom>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:element>
+                <xs:element minOccurs="0" name="course" type="nc1common:AngleType">
+                  <xs:annotation>
+                    <xs:documentation>Direction du vecteur vitesse.</xs:documentation>
+                    <xs:documentation xml:lang="en">Rotation angle of the speed vector from the geographical North.</xs:documentation>
+                    <xs:appinfo>
+                      <nc1ihm:Nom>Direction</nc1ihm:Nom>
+                      <nc1ihm:Nom xml:lang="en">Direction</nc1ihm:Nom>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:element>
+                <xs:element minOccurs="0" name="datetime" type="xs:dateTime">
+                  <xs:annotation>
+                    <xs:documentation>Horodatage du relevé de position sur le terrain. Par défaut, l'heure de saisie dans le système.</xs:documentation>
+                    <xs:documentation xml:lang="en">Field position report time. By default, time of the input in the system.</xs:documentation>
+                    <xs:appinfo>
+                      <nc1ihm:Nom>Horodatage</nc1ihm:Nom>
+                      <nc1ihm:Nom xml:lang="en">Timestamp</nc1ihm:Nom>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:element>
+                <xs:element maxOccurs="unbounded" minOccurs="0" name="validityPeriod" type="nc1common:PeriodType">
+                  <xs:annotation>
+                    <xs:documentation>Période de validité.</xs:documentation>
+                    <xs:documentation xml:lang="en">Validity period.</xs:documentation>
+                    <xs:appinfo>
+                      <nc1ihm:Nom>Période de validité</nc1ihm:Nom>
+                      <nc1ihm:Nom xml:lang="en">Validity period</nc1ihm:Nom>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:element>
+                <xs:element minOccurs="0" name="quality" type="nc1sicsdicos:L117_5Code">
+                  <xs:annotation>
+                    <xs:documentation>Qualité de la mesure de la localisation.</xs:documentation>
+                    <xs:documentation xml:lang="en">Location measurement quality.</xs:documentation>
+                    <xs:appinfo>
+                      <nc1ihm:Nom>Qualité</nc1ihm:Nom>
+                      <nc1ihm:Nom xml:lang="en">Quality</nc1ihm:Nom>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:element>
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+</xs:schema>

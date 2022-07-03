@@ -1,0 +1,404 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<gc:CodeList xmlns:nc1dico="urn:fra:nc1:dictionnaires" xmlns:gc="http://docs.oasis-open.org/codelist/ns/genericode/1.0/">
+  <Annotation>
+    <Description>
+      <nc1dico:description>PERMET DE QUALIFIER UN OBSTACLE. REFERENCE LIST_AC DU STANAG 2430.
+DICO STAT 118</nc1dico:description>
+      <nc1dico:description xml:lang="en">Used to describe an obstacle. LIST_AC reference STANAG 2430. (STAT dictionary 118)</nc1dico:description>
+    </Description>
+    <AppInfo>
+      <nc1dico:source>SFTT 3.4.8</nc1dico:source>
+      <nc1dico:derogation>ETAT D'ACHEVEMENT</nc1dico:derogation>
+    </AppInfo>
+  </Annotation>
+  <Identification>
+    <ShortName>L114_16Code</ShortName>
+    <Version>9.0.0</Version>
+    <CanonicalUri>urn:fra:nc1:common:sicsdicos:L114_16Code</CanonicalUri>
+    <CanonicalVersionUri>urn:fra:nc1:common:sicsdicos:L114_16Code:9.0.0</CanonicalVersionUri>
+  </Identification>
+  <ColumnSet DatatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes">
+    <Column Id="code" Use="required">
+      <ShortName>Code</ShortName>
+      <Data Type="int" />
+    </Column>
+    <Column Id="short" Use="required">
+      <ShortName>Short</ShortName>
+      <Data Type="string" />
+    </Column>
+    <Column Id="long" Use="optional">
+      <ShortName>Long</ShortName>
+      <Data Type="string" />
+    </Column>
+    <Column Id="short-en" Use="optional">
+      <ShortName>Short anglais</ShortName>
+      <Data Type="string" />
+    </Column>
+    <Column Id="long-en" Use="optional">
+      <ShortName>Long anglais</ShortName>
+      <Data Type="string" />
+    </Column>
+    <Column Id="parent" Use="optional">
+      <ShortName>Parent</ShortName>
+      <Data Type="int" />
+    </Column>
+    <Column Id="codeSymbole" Use="optional">
+      <ShortName>Code Symbole</ShortName>
+      <Data Type="string" />
+    </Column>
+    <Column Id="codeHierarchique" Use="optional">
+      <ShortName>Code Hierarchique</ShortName>
+      <Data Type="string" />
+    </Column>
+    <Key Id="codeKey">
+      <ShortName>CodeKey</ShortName>
+      <ColumnRef Ref="code" />
+    </Key>
+  </ColumnSet>
+  <SimpleCodeList>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>0</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>-</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>NO STATEMENT</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>-</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>NO STATEMENT</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>1</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>PLANIF MANOEUVRE</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>ORDONNE/PLANIFIE DE MANOEUVRE</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>PLR</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>ORDERED/PLANNED RESERVE</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeHierarchique">
+        <SimpleValue>A</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>2</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>PLANIF PRELIM.</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>ORDONNE/PLANIFIE PRELIMINAIRE</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>PLP</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>ORDERED/PLANIFIED PRELIMINARY</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeHierarchique">
+        <SimpleValue>A</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>3</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>PROPOSE</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>PROPOSE</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>PRO</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>PROPOSED</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeHierarchique">
+        <SimpleValue>A</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>4</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>PROP COMPLEMT</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>PROPOSE COMPLEMENTAIRE</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>PROCOMP</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>ADDITIONAL PROPOSED</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeHierarchique">
+        <SimpleValue>A</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>5</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>NETTOYE</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>NETTOYE</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>CLR</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>CLEARED</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeHierarchique">
+        <SimpleValue>P</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>6</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>ANNULE</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>ANNULE</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>CAN</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>CANCELLED</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeHierarchique">
+        <SimpleValue>P</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>7</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>PLANIF MAN. 25%</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>ORDONNE/PLANIFIE DE MANOEUVRE - ETAT AVANCEMENT 25%</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>PLR25</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>ORDERED/PLANNED RESERVE - PROGRESS STATUS 25%</SimpleValue>
+      </Value>
+      <Value ColumnRef="parent">
+        <SimpleValue>1</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeHierarchique">
+        <SimpleValue>P</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>8</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>PLANIF MAN. 50%</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>ORDONNE/PLANIFIE DE MANOEUVRE - ETAT AVANCEMENT 50%</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>PLR50</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>ORDERED/PLANNED RESERVE - PROGRESS STATUS 50%</SimpleValue>
+      </Value>
+      <Value ColumnRef="parent">
+        <SimpleValue>1</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeHierarchique">
+        <SimpleValue>P</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>9</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>PLANIF MAN. 75%</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>ORDONNE/PLANIFIE DE MANOEUVRE - ETAT AVANCEMENT 75%</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>PLR75</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>ORDERED/PLANNED RESERVE - PROGRESS STATUS 75%</SimpleValue>
+      </Value>
+      <Value ColumnRef="parent">
+        <SimpleValue>1</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeHierarchique">
+        <SimpleValue>P</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>10</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>PREPA EXECUTION</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>PREPARE POUR EXECUTION</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>IMP</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>PREPARED FOR EXECUTION</SimpleValue>
+      </Value>
+      <Value ColumnRef="parent">
+        <SimpleValue>1</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeHierarchique">
+        <SimpleValue>P</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>11</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>MAN. REALISE</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>ORDONNE/PLANIFIE DE MANOEUVRE REALISE</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>EXEPLR</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>PLR EXECUTED</SimpleValue>
+      </Value>
+      <Value ColumnRef="parent">
+        <SimpleValue>1</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeHierarchique">
+        <SimpleValue>P</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>12</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>PLAN PRELIM. 25%</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>ORDONNE/PLANIFIE PRELIMINAIRE - ETAT AVANCEMENT 25%</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>PLP25</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>ORDERED/PLANIFIED PRELIMINARY - PROGRESS STATUS 25%</SimpleValue>
+      </Value>
+      <Value ColumnRef="parent">
+        <SimpleValue>2</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeHierarchique">
+        <SimpleValue>P</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>13</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>PLAN PRELIM. 50%</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>ORDONNE/PLANIFIE PRELIMINAIRE - ETAT AVANCEMENT 50%</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>PLP50</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>ORDERED/PLANIFIED PRELIMINARY - PROGRESS STATUS 50%</SimpleValue>
+      </Value>
+      <Value ColumnRef="parent">
+        <SimpleValue>2</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeHierarchique">
+        <SimpleValue>P</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>14</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>PLAN PRELIM. 75%</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>ORDONNE/PLANIFIE PRELIMINAIRE - ETAT AVANCEMENT 75%</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>PLP75</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>ORDERED/PLANIFIED PRELIMINARY - PROGRESS STATUS 75%</SimpleValue>
+      </Value>
+      <Value ColumnRef="parent">
+        <SimpleValue>2</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeHierarchique">
+        <SimpleValue>P</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>15</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>PRELIM. REALISE</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>ORDONNE/PLANIFIE PRELIMINAIRE - REALISE</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>EXEPLP</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>PLP EXECUTED</SimpleValue>
+      </Value>
+      <Value ColumnRef="parent">
+        <SimpleValue>2</SimpleValue>
+      </Value>
+      <Value ColumnRef="codeHierarchique">
+        <SimpleValue>P</SimpleValue>
+      </Value>
+    </Row>
+  </SimpleCodeList>
+</gc:CodeList>

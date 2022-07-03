@@ -1,0 +1,216 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema targetNamespace="urn:fra:nc1:objet:roe" xmlns:nc1ihm="urn:fra:nc1:IHM" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:nc1roe="urn:fra:nc1:objet:roe" xmlns:nc1common="urn:fra:nc1:common:attribute" xmlns:nc1objcom="urn:fra:nc1:common:object">
+  <!-- NC1 V.9.0.0 -->
+  <xs:import namespace="urn:fra:nc1:common:attribute" schemaLocation="../Commun/Common.xsd" />
+  <xs:import namespace="urn:fra:nc1:common:object" schemaLocation="../Commun/Object.xsd" />
+  <xs:element name="NC1_Roe" type="nc1roe:RoeType">
+    <xs:annotation>
+      <xs:documentation>L’objet NC1_Roe représente une règle d’engagement choisie à l’intention d’une force à laquelle a été confiée un rôle particulier ou une opération particulière dans un cadre espace-temps défini.</xs:documentation>
+      <xs:documentation xml:lang="en">The NC1_Roe represents a rule of engagement chosen for a force tasked with a specific role or operation in a defined space-time framework.</xs:documentation>
+      <xs:appinfo>
+        <nc1:type xmlns:nc1="urn:fra:nc1">Objet</nc1:type>
+        <nc1ihm:Nom>Règles d’Engagement</nc1ihm:Nom>
+        <nc1ihm:Nom xml:lang="en">Rules Of Engagement</nc1ihm:Nom>
+        <nc1:MessH xmlns:nc1="urn:fra:nc1">Message H1.6 WpnCtrl</nc1:MessH>
+        <nc1:MessADatP3 xmlns:nc1="urn:fra:nc1">Sets ROEDENY, ROECANX, ROEVETO et ROEAPPR</nc1:MessADatP3>
+        <nc1:LastNC1ModifyVersion xmlns:nc1="urn:fra:nc1">9.0.0</nc1:LastNC1ModifyVersion>
+      </xs:appinfo>
+    </xs:annotation>
+  </xs:element>
+  <xs:complexType name="AuthorizedOrganisationsType">
+    <xs:annotation>
+      <xs:documentation>Organisations autorisées à mettre en œuvre une ROE.</xs:documentation>
+      <xs:documentation xml:lang="en">Organisations authorized to implement a ROE.</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:choice>
+        <xs:element name="taskOrganizationCommander" type="nc1common:Text1To20XType">
+          <xs:annotation>
+            <xs:documentation>Commandement de la force.</xs:documentation>
+            <xs:documentation xml:lang="en">Task organization commander.</xs:documentation>
+            <xs:appinfo>
+              <nc1ihm:Nom>Commandement de la force</nc1ihm:Nom>
+              <nc1ihm:Nom xml:lang="en">Task organization commander</nc1ihm:Nom>
+            </xs:appinfo>
+          </xs:annotation>
+        </xs:element>
+        <xs:element name="natoMajorSubordinateCommander" type="nc1roe:NatoMajorSubordinateCommanderCode">
+          <xs:annotation>
+            <xs:documentation>Commandement OTAN.</xs:documentation>
+            <xs:documentation xml:lang="en">NATO Command.</xs:documentation>
+            <xs:appinfo>
+              <nc1ihm:Nom>Commandement OTAN</nc1ihm:Nom>
+              <nc1ihm:Nom xml:lang="en">NATO Command</nc1ihm:Nom>
+            </xs:appinfo>
+          </xs:annotation>
+        </xs:element>
+        <xs:element name="commandIdentifier" type="nc1common:Text1To20XType">
+          <xs:annotation>
+            <xs:documentation>Commandement.</xs:documentation>
+            <xs:documentation xml:lang="en">Command.</xs:documentation>
+            <xs:appinfo>
+              <nc1ihm:Nom>Commandement</nc1ihm:Nom>
+              <nc1ihm:Nom xml:lang="en">Command</nc1ihm:Nom>
+            </xs:appinfo>
+          </xs:annotation>
+        </xs:element>
+      </xs:choice>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:simpleType name="NatoMajorSubordinateCommanderCode">
+    <xs:annotation>
+      <xs:appinfo>
+        <nc1dico:source xmlns:nc1dico="urn:fra:nc1:dictionnaires">ADatP-3 BL11 1515/015</nc1dico:source>
+      </xs:appinfo>
+      <xs:documentation></xs:documentation>
+      <xs:documentation xml:lang="en"></xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:integer" />
+  </xs:simpleType>
+  <xs:simpleType name="PpiCodeCode">
+    <xs:annotation>
+      <xs:appinfo>
+        <nc1dico:source xmlns:nc1dico="urn:fra:nc1:dictionnaires">ADatP-3 BL11 1285/038</nc1dico:source>
+      </xs:appinfo>
+      <xs:documentation></xs:documentation>
+      <xs:documentation xml:lang="en"></xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:integer" />
+  </xs:simpleType>
+  <xs:complexType name="PpiCodeType">
+    <xs:annotation>
+      <xs:documentation>Indicateur politique.</xs:documentation>
+      <xs:documentation xml:lang="en">Political indicator.</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:choice>
+        <xs:element name="ppiCode" type="nc1roe:PpiCodeCode">
+          <xs:annotation>
+            <xs:documentation>Indicateur politique (ex : « XRAY »).</xs:documentation>
+            <xs:documentation xml:lang="en">"political indicator (e.g. ""XRAY"")".</xs:documentation>
+            <xs:appinfo>
+              <nc1ihm:Nom>Indicateur politique</nc1ihm:Nom>
+              <nc1ihm:Nom xml:lang="en">Political indicator</nc1ihm:Nom>
+            </xs:appinfo>
+          </xs:annotation>
+        </xs:element>
+        <xs:element name="ppiExerciseCode" type="nc1common:Text4To8AType">
+          <xs:annotation>
+            <xs:documentation>Indicateur politique en exercice.</xs:documentation>
+            <xs:documentation xml:lang="en">Exercise political indicator.</xs:documentation>
+            <xs:appinfo>
+              <nc1ihm:Nom>Indicateur politique, exercice</nc1ihm:Nom>
+              <nc1ihm:Nom xml:lang="en">Ppi exercise code</nc1ihm:Nom>
+            </xs:appinfo>
+          </xs:annotation>
+        </xs:element>
+      </xs:choice>
+      <xs:element minOccurs="0" name="ppiGuidance" type="nc1common:WideTextObjectType">
+        <xs:annotation>
+          <xs:documentation>Instructions relatives à l’indicateur politique.</xs:documentation>
+          <xs:documentation xml:lang="en">Instructions for political indicator.</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Instructions</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">Instructions</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="RoeType">
+    <xs:annotation>
+      <xs:documentation>L'objet NC1_Roe (Rules Of Engagement) représente une règle d'engament choisie à l'intention d'une force à laquelle a été confiée un rôle particulier ou une opération particulière dans un cadre espace-temps défini.</xs:documentation>
+      <xs:documentation xml:lang="en">The NC1_Roe object represents a rule of engagement defined for a force assigned with a dedicated role or operation in a specific time frame.</xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="nc1objcom:BaseObjectType">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="tacticalData">
+            <xs:annotation>
+              <xs:documentation>Données tactiques de la ROE.</xs:documentation>
+              <xs:documentation xml:lang="en">ROE tactical data.</xs:documentation>
+              <xs:appinfo>
+                <nc1ihm:Nom>Données tactiques</nc1ihm:Nom>
+                <nc1ihm:Nom xml:lang="en">tactical datas</nc1ihm:Nom>
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element maxOccurs="unbounded" minOccurs="1" name="authorizedOrganisations" type="nc1roe:AuthorizedOrganisationsType">
+                  <xs:annotation>
+                    <xs:documentation>Description en texte libre des organisations autorisées à mettre en œuvre la ROE.</xs:documentation>
+                    <xs:documentation xml:lang="en">free-text description of the organizations authorized to implement the ROE.</xs:documentation>
+                    <xs:appinfo>
+                      <nc1ihm:Nom>Organisations autorisées</nc1ihm:Nom>
+                      <nc1ihm:Nom xml:lang="en">Authorized organisations</nc1ihm:Nom>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:element>
+                <xs:element minOccurs="0" name="number" type="nc1common:Text3To6ANType">
+                  <xs:annotation>
+                    <xs:documentation>Numéro de la ROE associé si besoin au paragraphe précisant sa mise en œuvre (ex : « A123BC »).</xs:documentation>
+                    <xs:documentation xml:lang="en">"Number associated ROE if required in paragraph specifying its implementation (e.g. ""A123BC"")".</xs:documentation>
+                    <xs:appinfo>
+                      <nc1ihm:Nom>Numéro</nc1ihm:Nom>
+                      <nc1ihm:Nom xml:lang="en">Number</nc1ihm:Nom>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:element>
+                <xs:element name="text" type="nc1common:WideTextObjectType">
+                  <xs:annotation>
+                    <xs:documentation>Informations supplémentaires en texte libre.</xs:documentation>
+                    <xs:documentation xml:lang="en">Additional information (free text).</xs:documentation>
+                    <xs:appinfo>
+                      <nc1ihm:Nom>Description</nc1ihm:Nom>
+                      <nc1ihm:Nom xml:lang="en">Description</nc1ihm:Nom>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:element>
+                <xs:element maxOccurs="unbounded" minOccurs="0" name="canx" type="nc1common:Text3To6ANType">
+                  <xs:annotation>
+                    <xs:documentation>Numéro(s) de ou des ROE(s) annulée(s).</xs:documentation>
+                    <xs:documentation xml:lang="en">Number(s) of the cancelled ROE(s).</xs:documentation>
+                    <xs:appinfo>
+                      <nc1ihm:Nom>ROE annulée(s)</nc1ihm:Nom>
+                      <nc1ihm:Nom xml:lang="en">Cancelled ROE</nc1ihm:Nom>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:element>
+                <xs:element name="summary" type="nc1common:WideTextObjectType">
+                  <xs:annotation>
+                    <xs:documentation>Résumé des ROE en cours.</xs:documentation>
+                    <xs:documentation xml:lang="en">Applicable ROEs summary.</xs:documentation>
+                    <xs:appinfo>
+                      <nc1ihm:Nom>Résumé des ROE en cours</nc1ihm:Nom>
+                      <nc1ihm:Nom xml:lang="en">Applicable ROEs summary</nc1ihm:Nom>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:element>
+                <xs:element minOccurs="0" name="ppiCode" type="nc1roe:PpiCodeType">
+                  <xs:annotation>
+                    <xs:documentation>Indicateur politique (ex : « XRAY »).</xs:documentation>
+                    <xs:documentation xml:lang="en">"political indicator (e.g. ""XRAY"")".</xs:documentation>
+                    <xs:appinfo>
+                      <nc1ihm:Nom>Indicateur politique</nc1ihm:Nom>
+                      <nc1ihm:Nom xml:lang="en">Political indicator</nc1ihm:Nom>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:element>
+                <xs:element minOccurs="0" name="extVersion" type="nc1common:ExtVersType">
+                  <xs:annotation>
+                    <xs:documentation>Extension pour versions suivantes compatibles.</xs:documentation>
+                    <xs:documentation xml:lang="en">Extension for following compatible versions.</xs:documentation>
+                    <xs:appinfo>
+                      <nc1ihm:Nom>Extension de version</nc1ihm:Nom>
+                      <nc1ihm:Nom xml:lang="en">version extension</nc1ihm:Nom>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:element>
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+</xs:schema>

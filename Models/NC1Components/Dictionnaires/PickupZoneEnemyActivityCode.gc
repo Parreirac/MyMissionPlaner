@@ -1,0 +1,127 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<gc:CodeList xmlns:nc1dico="urn:fra:nc1:dictionnaires" xmlns:gc="http://docs.oasis-open.org/codelist/ns/genericode/1.0/">
+  <Annotation>
+    <Description>
+      <nc1dico:description></nc1dico:description>
+      <nc1dico:description xml:lang="en"></nc1dico:description>
+    </Description>
+    <AppInfo>
+      <nc1dico:source>STANAG 2087 Ed. 06</nc1dico:source>
+      <nc1dico:derogation>Dictionnaire des activités de l'ennemi dans la zone d'évacuation.</nc1dico:derogation>
+    </AppInfo>
+  </Annotation>
+  <Identification>
+    <ShortName>PickupZoneEnemyActivityCode</ShortName>
+    <Version>9.0.0</Version>
+    <CanonicalUri>urn:fra:nc1:message:medevac:PickupZoneEnemyActivityCode</CanonicalUri>
+    <CanonicalVersionUri>urn:fra:nc1:message:medevac:PickupZoneEnemyActivityCode:9.0.0</CanonicalVersionUri>
+  </Identification>
+  <ColumnSet DatatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes">
+    <Column Id="code" Use="required">
+      <ShortName>Code</ShortName>
+      <Data Type="int" />
+    </Column>
+    <Column Id="short" Use="required">
+      <ShortName>Short</ShortName>
+      <Data Type="string" />
+    </Column>
+    <Column Id="long" Use="optional">
+      <ShortName>Long</ShortName>
+      <Data Type="string" />
+    </Column>
+    <Column Id="short-en" Use="optional">
+      <ShortName>Short anglais</ShortName>
+      <Data Type="string" />
+    </Column>
+    <Column Id="long-en" Use="optional">
+      <ShortName>Long anglais</ShortName>
+      <Data Type="string" />
+    </Column>
+    <Column Id="parent" Use="optional">
+      <ShortName>Parent</ShortName>
+      <Data Type="int" />
+    </Column>
+    <Column Id="codeSymbole" Use="optional">
+      <ShortName>Code Symbole</ShortName>
+      <Data Type="string" />
+    </Column>
+    <Column Id="codeHierarchique" Use="optional">
+      <ShortName>Code Hierarchique</ShortName>
+      <Data Type="string" />
+    </Column>
+    <Key Id="codeKey">
+      <ShortName>CodeKey</ShortName>
+      <ColumnRef Ref="code" />
+    </Key>
+  </ColumnSet>
+  <SimpleCodeList>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>0</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>N - Pas ENI</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>Pas d'ennemi.</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>No enemy</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>No enemy detected in vicinity.</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>1</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>P - ENI possible</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>Ennemi possible.</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>Possible enemy</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>Possible enemy in vicinity.</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>2</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>E - ENI zone</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>Ennemi dans la zone.</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>Enemy in area</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>Enemy positively detected in vicinity.</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>3</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>X - Zone dangereuse</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>Zone de ramassage dangereuse.</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>HotPickupZone</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>Hazardous pickup Area.</SimpleValue>
+      </Value>
+    </Row>
+  </SimpleCodeList>
+</gc:CodeList>

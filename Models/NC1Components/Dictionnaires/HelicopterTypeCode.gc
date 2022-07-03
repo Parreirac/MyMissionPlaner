@@ -1,0 +1,2303 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<gc:CodeList xmlns:nc1dico="urn:fra:nc1:dictionnaires" xmlns:gc="http://docs.oasis-open.org/codelist/ns/genericode/1.0/">
+  <Annotation>
+    <Description>
+      <nc1dico:description>Dictionnaire des types d'hélicoptères</nc1dico:description>
+      <nc1dico:description xml:lang="en">Dictionary of helicopter types</nc1dico:description>
+    </Description>
+    <AppInfo>
+      <nc1dico:source>STAT 187</nc1dico:source>
+      <nc1dico:derogation></nc1dico:derogation>
+    </AppInfo>
+  </Annotation>
+  <Identification>
+    <ShortName>HelicopterTypeCode</ShortName>
+    <Version>9.0.0</Version>
+    <CanonicalUri>urn:fra:nc1:message:helopsum:HelicopterTypeCode</CanonicalUri>
+    <CanonicalVersionUri>urn:fra:nc1:message:helopsum:HelicopterTypeCode:9.0.0</CanonicalVersionUri>
+  </Identification>
+  <ColumnSet DatatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes">
+    <Column Id="code" Use="required">
+      <ShortName>Code</ShortName>
+      <Data Type="int" />
+    </Column>
+    <Column Id="short" Use="required">
+      <ShortName>Short</ShortName>
+      <Data Type="string" />
+    </Column>
+    <Column Id="long" Use="optional">
+      <ShortName>Long</ShortName>
+      <Data Type="string" />
+    </Column>
+    <Column Id="short-en" Use="optional">
+      <ShortName>Short anglais</ShortName>
+      <Data Type="string" />
+    </Column>
+    <Column Id="long-en" Use="optional">
+      <ShortName>Long anglais</ShortName>
+      <Data Type="string" />
+    </Column>
+    <Column Id="parent" Use="optional">
+      <ShortName>Parent</ShortName>
+      <Data Type="int" />
+    </Column>
+    <Column Id="codeSymbole" Use="optional">
+      <ShortName>Code Symbole</ShortName>
+      <Data Type="string" />
+    </Column>
+    <Column Id="codeHierarchique" Use="optional">
+      <ShortName>Code Hierarchique</ShortName>
+      <Data Type="string" />
+    </Column>
+    <Key Id="codeKey">
+      <ShortName>CodeKey</ShortName>
+      <ColumnRef Ref="code" />
+    </Key>
+  </ColumnSet>
+  <SimpleCodeList>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>0</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>A103</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>A-103 ALOUETTE III</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>1</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>A109A</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>A-109 AGUSTA / HIRUNDA</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>2</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>A12919</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>A-129-19 MANGUSTA</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>3</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>A132</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>A-132 TANGARA</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>4</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>A212A</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>AB-212 ASW AGUSTA-BELL</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>5</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>AATCP</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>Hélicoptère AATCP</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>6</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>AB204</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>AB-204 AGUSTA-BELL HELICOPTER</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>7</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>AB205</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>AB-205 AGUSTA BELL / UH-LHP HUEY II</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>8</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>AB206</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>AB-206 AGUSTA BELL</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>9</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>AB212</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>AB-212 AGUSTA BELL</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>10</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>AB214</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>AB-214 AGUSTA-BELL</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>11</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>AB222</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>AB-222 AGUSTA-BELL</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>12</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>AB412</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>AB-412 AGUSTA-BELL</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>13</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>AB47</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>AB-47 AGUSTA BELL</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>14</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>AH1</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>AH-1 HUEY COBRA</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>15</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>AH1W</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>AH-1W HUEY COBRA / / SUPER COBRA</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>16</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>AH64</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>*</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>17</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>AH70</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>AH-70 BLACKHAWK</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>18</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>AHMK1</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>AHMK-1 LYNX</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>19</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>AHMK5</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>AHMK-5 LYNX</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>20</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>AHMK7</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>AHMK-7 LYNX</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>21</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>AHMK9</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>AHMK-9 BATTLEFIELD LYNX</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>22</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>ALAT</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>Hélicoptère ALAT</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>23</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>ALII</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>ALOUETTE II</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>24</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>ALIII</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>ALOUETTE III</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>25</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>ALO</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>ALOUETTE</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>26</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>ALOSE</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>ALOUETTE SE 3130</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>27</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>AS332</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>AS-332 SUPER PUMA</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>28</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>AS350</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>AS-350 ECUREUIL</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>29</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>AS366G</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>AS-366G DOLPHIN II</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>30</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>AS532</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>AS-532 COUGAR</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>31</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>AS5322</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>AS-532 MK II SUPER PUMA</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>32</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>AS532C</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>AS-532 CS SUPER PUMA</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>33</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>AS565A</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>AS-565AA PANTHER</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>34</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>AS61</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>AS-61 SIKORSKY</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>35</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>ATTAQUE</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>Hélicoptère d'attaque</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>36</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>AUH76</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>AUH-76 AGUSTA-BELL</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>37</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>Autre</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>Hélicoptère Autre</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>38</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>BO105</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>BO-105 MBB / NURTANIO</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>39</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>BO106</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>BO-106</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>40</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>BO115</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>BO-115</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>41</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>CGHTT</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>Cougar HTT (hélico transport tactique)</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>42</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>CGHZ</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>Cougar Horizon</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>43</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>CH47B</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>CH-47B CHINOOK</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>44</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>CH53</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>CH-53 SEA STALLION</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>45</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>CMMK1</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>COMMANDO MK-1</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>46</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>CMMK2</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>COMMANDO MK-2</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>47</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>CMMK2E</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>COMMANDO MK-2E</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>48</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>CMMK3</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>COMMANDO MK-3</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>49</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>CMMK4</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>COMMANDO MK-4</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>50</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>CRV</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>Caravan 2 (avion)</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>51</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>CSAR</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>Hélicoptère CSAR</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>52</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>CV22A</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>CV-22A OSPREY</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>53</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>DPN</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>DAUPHIN</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>54</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>ECURE</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>ECUREUIL</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>55</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>EH1</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>EH-1 IROQUOIS</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>56</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>EH101</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>EH-101 MERLIN</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>57</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>EH60</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>EH-60 BLACKHAWK</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>58</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>EH60C</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>EH-60C BLACKHAWK</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>59</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>FENNEC</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>FENNEC</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>60</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>FRELON</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>SUPER FRELON</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>61</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>GAATCP</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>Gaz AATCP</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>62</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>GAZCAN</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>Gaz Canon</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>63</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>GAZCDT</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>Gaz CDT (commandement)</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>64</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>GAZH</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>Gaz HOT ou Gaz HA (helico d'attaque)</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>65</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>GAZLIS</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>Gaz LISSE</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>66</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>H300</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>H-300</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>67</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>H5</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>H-5/MI-8 HARBEN</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>68</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>H76</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>H-76 EAGLE</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>69</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>H76N</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>H-76N EAGLE</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>70</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>HAP</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>Hélicoptère appui protection (HAP)</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>71</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>HAR</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>MI-1 HARE</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>72</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>HAR10</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>HAR-10 WHIRLWIND</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>73</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>HARNK3</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>HAR-MK3 SEA KING</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>74</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>HASMK2</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>HAS-MK2 SEA KING</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>75</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>HASMK3</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>HAS-MK3 LYNX</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>76</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>HASMK5</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>HAS-MK5 SEA KING</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>77</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>HASMK6</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>HAS-MK6 SEA KING</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>78</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>HASMK8</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>HAS-MK8 SUPER LYNX</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>79</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>HAZ</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>MI-14 HAZE</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>80</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>HAZC</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>HAZE C MI-14 PS</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>81</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>HB315B</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>HB-315B GAVIAO</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>82</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>HB350</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>HB-350 ESQUILLO</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>83</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>HB350B</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>HB-350B ESQUILLO</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>84</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>HC2</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>Hélicoptère C2 (HC2)</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>85</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>HCC412</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>HCC-412 WHIRLWIND</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>86</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>HCMK4</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>HC-MK4 SEA KING</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>87</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>HD21</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>HD-21 SUPER PUMA</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>88</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>HEN</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>HEN</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>89</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>HER</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>HERMET MI-34</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>90</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>HH1H</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>HH-1H IROQUOIS</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>91</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>HH2</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>HH-2 SEA SPRITE</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>92</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>HH3</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>HH-3</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>93</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>HH46</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>HH-46 SEA KNIGHT</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>94</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>HH53</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>HH-53 SUPER JOLLY GREEN GIANT</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>95</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>HH60</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>HH-60 NIGHTHAWK</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>96</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>HH60J</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>HH-60J JAYWAWK</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>97</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>HH65A</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>HH-65A DOLPHIN II</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>98</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>HIN</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>MI-24 HIND</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>99</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>HINF</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>MI-24 P HIND F</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>100</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>HING1</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>HIND G1 MI-24 W</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>101</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>HING2</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>MI-24 K HIND G-2</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>102</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>HIP</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>MI-8 HIP</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>103</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>HIPH</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>MI-17 HIP H</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>104</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>HIPK17</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>MI-17 HIP K</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>105</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>HKM</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>KA-XX HOKUM</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>106</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>HKP10</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>HKP-10 SUPER PUMA</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>107</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>HKP2</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>HKP-2 ALOUETTE</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>108</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>HKP3</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>HKP-3 IROQUOIS</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>109</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>HLX</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>KA-7 HELIX</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>110</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>HND</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>MI-4 HOUND</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>111</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>HOD</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>KA-26 HOODLUM</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>112</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>HODB</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>KA-136 HOODLUM B</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>113</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>HOG</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>HOG</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>114</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>HOK</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>MI-6 HOOK</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>115</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>HOP</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>MI-2 HOPLITE</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>116</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>HOR</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>KA-25 HORMONE</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>117</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>HORIZON</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>Hélicoptère HORIZON</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>118</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>HRK</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>MI-10 HARKE</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>119</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>HTMK2</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>HT-MK-2 GAZELLE</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>120</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>HU5</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>HU-5 WESSEX</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>121</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>HVC</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>MI-28 HAVOC</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>122</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>HVCA</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>MI-28 HAVOC A</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>123</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>INCONNU</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>Hélicoptère de type inconnu</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>124</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>KV107</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>KV-107 II A SERIES</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>125</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>Logistique</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>Hélicoptère logistique (RAV/MEC/SAN)</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>126</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>LYNX</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>LYNX</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>127</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>MANOEUVRE</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>Hélicoptère de manoeuvre</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>128</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>MH53E</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>MH-53E PAVELOW III</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>129</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>MH53J</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>MH-53J PAVELOW III</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>130</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>MH60G</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>MH-60G PAVE HAWK</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>131</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>MI38</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>MI-38</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>132</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>MK4</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>MK-4 LYNX</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>133</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>MK42</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>MK-42 SEA KING</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>134</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>MK48</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>MK-48 SEA KING</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>135</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>MKADV</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>MK-ADV SEA KING</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>136</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>MV22</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>MV-22 OSPREY</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>137</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>NUH1E</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>NUH-1E IROQUOIS</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>138</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>OH13</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>OH-13 SIOUX</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>139</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>PC</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>Hélicoptère PC</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>140</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>PLTUS</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>Pilatus (avion)</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>141</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>PMHTT</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>Puma HTT (hélico transport tactique)</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>142</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>RECO</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>Hélicoptère de reconnaissance</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>143</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>S61A</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>S-61A SIKORSKY</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>144</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>S65</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>S-65</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>145</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>S70</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>S-70 SIKORSKY</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>146</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>S70A1L</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>S-70 A-1L DESERT HAWK</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>147</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>S76</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>S-76 SIKORSKY SPIRIT</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>148</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>S76MK2</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>S-76MK2 SIKORSKY</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>149</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>SA315B</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>SA-315B LAMA / CHEETAH / GAVIAO</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>150</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>SA316</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>SA-316 ALOUETTE III</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>151</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>SA318</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>SA-318 ALOUETTE II</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>152</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>SA319</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>SA-319 ALOUETTE III</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>153</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>SA321</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>SA-321 SUPER FRELON</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>154</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>SA330</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>SA-330 PUMA</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>155</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>SA332</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>SA-332 SUPER PUMA</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>156</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>SA341</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>SA-341 GAZELLE</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>157</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>SA342</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>SA-342 GAZELLE</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>158</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>SA350E</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>SA-350E ECUREUIL</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>159</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>SA360</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>SA-360 DAUPHIN</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>160</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>SA365</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>SA-365 DAUPHIN II</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>161</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>SA365M</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>SA-365M PANTHER</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>162</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>SE313B</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>SE-313B ALOUETTE II</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>163</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>SH14</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>SH-14 LYNX</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>164</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>SH2</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>SH-2 SEASPRITE</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>165</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>SH3</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>SH-3 SEA KING</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>166</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>SH34</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>SH-34 SEABAT</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>167</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>SH3A</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>SH-3A SEA KING</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>168</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>SH5</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>SH-5</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>169</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>SH60</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>SH-60 SEA HAWK</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>170</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>SKA</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>SEA KING ASSAULT</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>171</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>TBM</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>TBM 700 (avion)</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>172</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>TGATQ</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>Tigre HA (hélico d'attaque)</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>173</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>TGHAP</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>Tigre HAP</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>174</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>TH1</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>TH-1 IROQUOIS</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>175</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>TH13</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>TH-13 SIOUX</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>176</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>TH1F</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>TH-1F IROQUOIS</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>177</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>TH1L</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>TH-1L IROQUOIS</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>178</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>TH55</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>TH-55 OSAGE</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>179</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>TH57</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>TH-57 SEA RANGER</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>180</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>Tous</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>Tous les hélicoptères</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>181</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>UH1</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>UH-1 IROQUOIS</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>182</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>UH12</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>UH-12 HILLER</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>183</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>UH14A</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>UH-14A LYNX</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>184</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>UH19</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>UH-19 CHICKASAW</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>185</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>UH1B</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>UH-1B IROQUOIS</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>186</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>UH2</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>UH-2 SEASPRITE</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>187</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>UH3A</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>UH-3A SEA KING</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>188</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>UH46</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>UH-46 SEA KNIGHT</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>189</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>UH60</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>UH-60 BLACKHAWK</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>190</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>UHMK88</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>UH MK-88 LYNX</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>191</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>UNK</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>UNKNOWN</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>192</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>V234</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>VERTOL V-234</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>193</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>VH3</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>VH-3 SEA KING</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>194</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>VH34D</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>VH-34D SEAHORSE</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>195</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>VH3A</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>VH-3A SEA KING</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>196</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>VH3D</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>VH-3D SEA KING</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>197</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>VVATQ</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>Viviane HOT ou Viviane HA (helico d'attaque)</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>198</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>VVRECO</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>Viviane HR (hélico de reco)</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>199</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>WG13</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>WG-13 LYNX MK-4FR</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>200</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>Z5</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>MI-4/Z5 HOUND</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>201</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>Z6</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>HIP Z-6</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>202</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>Z8</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>SUPER FRELON Z-8</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>203</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>Z9</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>DAUPHIN Z-9</SimpleValue>
+      </Value>
+    </Row>
+  </SimpleCodeList>
+</gc:CodeList>

@@ -1,0 +1,102 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema targetNamespace="urn:fra:nc1:message:callforfire" xmlns:nc1ihm="urn:fra:nc1:IHM" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:nc1cff="urn:fra:nc1:message:callforfire" xmlns:nc1location="urn:fra:nc1:common:location" xmlns:nc1msgcom="urn:fra:nc1:common:message" xmlns:nc1sicsdicos="urn:fra:nc1:common:sicsdicos" xmlns:nc1fire="urn:fra:nc1:objet:fire">
+  <!-- NC1 V.9.0.0 -->
+  <xs:import namespace="urn:fra:nc1:common:location" schemaLocation="../Commun/Location.xsd" />
+  <xs:import namespace="urn:fra:nc1:common:message" schemaLocation="../Commun/Message.xsd" />
+  <xs:import namespace="urn:fra:nc1:common:sicsdicos" schemaLocation="../Commun/SICS_Dictionaries.xsd" />
+  <xs:import namespace="urn:fra:nc1:objet:fire" schemaLocation="../Objet/NC1_Fire.xsd" />
+  <xs:element name="NC1_CallForFire">
+    <xs:annotation>
+      <xs:documentation>Le message NC1_CallForFire est utilisé pour demander un tir,  proposer un tir ou ordonner un tir.</xs:documentation>
+      <xs:documentation xml:lang="en">The NC1_CallForFire message is used to request a fire, suggest a fire or a order a fire.</xs:documentation>
+      <xs:appinfo>
+        <nc1:type xmlns:nc1="urn:fra:nc1">Message</nc1:type>
+        <nc1ihm:Nom>Demande d’appui feu</nc1ihm:Nom>
+        <nc1ihm:Nom xml:lang="en">Fire Management / Call For Fire</nc1ihm:Nom>
+        <nc1:MessH xmlns:nc1="urn:fra:nc1">N/A</nc1:MessH>
+        <nc1:MessADatP3 xmlns:nc1="urn:fra:nc1">FM.CFF</nc1:MessADatP3>
+        <nc1:LastNC1ModifyVersion xmlns:nc1="urn:fra:nc1">9.0.0</nc1:LastNC1ModifyVersion>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:complexContent>
+        <xs:extension base="nc1msgcom:BaseMessageType">
+          <xs:sequence>
+            <xs:element name="fireRequested">
+              <xs:annotation>
+                <xs:documentation>Tir demandé.</xs:documentation>
+                <xs:documentation xml:lang="en">Fire requested.</xs:documentation>
+                <xs:appinfo>
+                  <nc1ihm:Nom>Tir demandé</nc1ihm:Nom>
+                  <nc1ihm:Nom xml:lang="en">Fire requested</nc1ihm:Nom>
+                </xs:appinfo>
+              </xs:annotation>
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="fire" type="nc1fire:FireType">
+                    <xs:annotation>
+                      <xs:documentation>Tir.</xs:documentation>
+                      <xs:documentation xml:lang="en">Fire.</xs:documentation>
+                      <xs:appinfo>
+                        <nc1ihm:Nom>Tir</nc1ihm:Nom>
+                        <nc1ihm:Nom xml:lang="en">Fire</nc1ihm:Nom>
+                      </xs:appinfo>
+                    </xs:annotation>
+                  </xs:element>
+                  <xs:element minOccurs="0" name="priority" type="nc1sicsdicos:L114_29Code">
+                    <xs:annotation>
+                      <xs:documentation>Priorité associée au tir.</xs:documentation>
+                      <xs:documentation xml:lang="en">Fire priority.</xs:documentation>
+                      <xs:appinfo>
+                        <nc1ihm:Nom>Priorité</nc1ihm:Nom>
+                        <nc1ihm:Nom xml:lang="en">priority</nc1ihm:Nom>
+                      </xs:appinfo>
+                    </xs:annotation>
+                  </xs:element>
+                  <xs:element minOccurs="0" name="security" type="nc1cff:SecurityType">
+                    <xs:annotation>
+                      <xs:documentation>Sécurité 2D des forces amies.</xs:documentation>
+                      <xs:documentation xml:lang="en">Own forces 2D security.</xs:documentation>
+                      <xs:appinfo>
+                        <nc1ihm:Nom>Sécurité 2D AMI</nc1ihm:Nom>
+                        <nc1ihm:Nom xml:lang="en">Own forces 2D security</nc1ihm:Nom>
+                      </xs:appinfo>
+                    </xs:annotation>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+          </xs:sequence>
+        </xs:extension>
+      </xs:complexContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="SecurityType">
+    <xs:annotation>
+      <xs:documentation>Sécurité 2D des forces amies lors d'un tir d'artillerie.</xs:documentation>
+      <xs:documentation xml:lang="en">Own forces 2D security during an artillery fire.</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="point" type="nc1location:Point2DType">
+        <xs:annotation>
+          <xs:documentation>Point localisé 2D.</xs:documentation>
+          <xs:documentation xml:lang="en">2D localized point.</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Point</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">Point</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="protectionLevel" type="nc1sicsdicos:L114_24Code">
+        <xs:annotation>
+          <xs:documentation>Niveau de protection.</xs:documentation>
+          <xs:documentation xml:lang="en">Protection level.</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Niveau de protection</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">Protection level</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

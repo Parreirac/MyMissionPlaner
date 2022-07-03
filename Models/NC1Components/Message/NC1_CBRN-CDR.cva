@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<cva:ContextValueAssociation xmlns:cva="http://docs.oasis-open.org/codelist/ns/ContextValueAssociation/1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="urn:fra:nc1:message:cbrncdr" queryBinding="xslt2" xmlns:nc1cbrncdr="urn:fra:nc1:message:cbrncdr">
+  <!-- NC1 V.9.0.0 -->
+  <ValueLists>
+    <ValueList xml:id="nc1msgcom-ClassificationCode" uri="../Dictionnaires/ClassificationCode.gc" />
+    <ValueList xml:id="nc1msgcom-UrgencyLevelCode" uri="../Dictionnaires/UrgencyLevelCode.gc" />
+    <ValueList xml:id="nc1cbrn-AirStabilityCategoryCode" uri="../Dictionnaires/AirStabilityCategoryCode.gc" />
+    <ValueList xml:id="nc1cbrn-RelativeHumidityRangeCode" uri="../Dictionnaires/RelativeHumidityRangeCode.gc" />
+    <ValueList xml:id="nc1cbrn-SignificantWeatherPhenomenaCode" uri="../Dictionnaires/SignificantWeatherPhenomenaCode.gc" />
+    <ValueList xml:id="nc1cbrn-CloudCoverageCode" uri="../Dictionnaires/CloudCoverageCode.gc" />
+  </ValueLists>
+  <Contexts>
+    <Context address="/nc1cbrncdr:NC1_CBRN-CDR/@classification" values="nc1msgcom-ClassificationCode" />
+    <Context address="/nc1cbrncdr:NC1_CBRN-CDR/@urgencyLevel" values="nc1msgcom-UrgencyLevelCode" />
+    <Context address="/nc1cbrncdr:NC1_CBRN-CDR/whiskeym/airStabilityCategory" values="nc1cbrn-AirStabilityCategoryCode" />
+    <Context address="/nc1cbrncdr:NC1_CBRN-CDR/whiskeym/relativeHumidity" values="nc1cbrn-RelativeHumidityRangeCode" />
+    <Context address="/nc1cbrncdr:NC1_CBRN-CDR/whiskeym/significantWeatherPhenomena" values="nc1cbrn-SignificantWeatherPhenomenaCode" />
+    <Context address="/nc1cbrncdr:NC1_CBRN-CDR/whiskeym/cloudCoverage" values="nc1cbrn-CloudCoverageCode" />
+    <Context address="/nc1cbrncdr:NC1_CBRN-CDR/xraym/airStabilityCategory" values="nc1cbrn-AirStabilityCategoryCode" />
+    <Context address="/nc1cbrncdr:NC1_CBRN-CDR/xraym/relativeHumidity" values="nc1cbrn-RelativeHumidityRangeCode" />
+    <Context address="/nc1cbrncdr:NC1_CBRN-CDR/xraym/significantWeatherPhenomena" values="nc1cbrn-SignificantWeatherPhenomenaCode" />
+    <Context address="/nc1cbrncdr:NC1_CBRN-CDR/xraym/cloudCoverage" values="nc1cbrn-CloudCoverageCode" />
+    <Context address="/nc1cbrncdr:NC1_CBRN-CDR/yankeem/airStabilityCategory" values="nc1cbrn-AirStabilityCategoryCode" />
+    <Context address="/nc1cbrncdr:NC1_CBRN-CDR/yankeem/relativeHumidity" values="nc1cbrn-RelativeHumidityRangeCode" />
+    <Context address="/nc1cbrncdr:NC1_CBRN-CDR/yankeem/significantWeatherPhenomena" values="nc1cbrn-SignificantWeatherPhenomenaCode" />
+    <Context address="/nc1cbrncdr:NC1_CBRN-CDR/yankeem/cloudCoverage" values="nc1cbrn-CloudCoverageCode" />
+  </Contexts>
+</cva:ContextValueAssociation>

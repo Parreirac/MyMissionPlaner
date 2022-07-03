@@ -1,0 +1,103 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema targetNamespace="urn:fra:nc1:message:eventrep" xmlns:nc1ihm="urn:fra:nc1:IHM" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:nc1eventrep="urn:fra:nc1:message:eventrep" xmlns:nc1common="urn:fra:nc1:common:attribute" xmlns:nc1msgcom="urn:fra:nc1:common:message" xmlns:nc1event="urn:fra:nc1:objet:event">
+  <!-- NC1 V.9.0.0 -->
+  <xs:import namespace="urn:fra:nc1:common:attribute" schemaLocation="../Commun/Common.xsd" />
+  <xs:import namespace="urn:fra:nc1:common:message" schemaLocation="../Commun/Message.xsd" />
+  <xs:import namespace="urn:fra:nc1:objet:event" schemaLocation="../Objet/NC1_Event.xsd" />
+  <xs:element name="NC1_EVENTREP">
+    <xs:annotation>
+      <xs:documentation>Le message NC1_EVENTREP est utilisé pour véhiculer toute information portant sur un ou plusieurs événements pouvant influer sur des opérations de maintien de la paix. Les informations véhiculées par le message NC1_EVENTREP sont sans caractère d’urgence, mais elles sont importantes et elles peuvent influer sur les opérations.</xs:documentation>
+      <xs:documentation xml:lang="en">The NC1_EVENTREP message is used to convey any information related to one or several events that might affect peacekeeping operations. Information conveyed by the NC1_EVENTREP message don't require urgency , but they are important and might affect operations.</xs:documentation>
+      <xs:appinfo>
+        <nc1:type xmlns:nc1="urn:fra:nc1">Message</nc1:type>
+        <nc1ihm:Nom>Compte rendu d’événement</nc1ihm:Nom>
+        <nc1ihm:Nom xml:lang="en">Event Report</nc1ihm:Nom>
+        <nc1:MessH xmlns:nc1="urn:fra:nc1">N/A</nc1:MessH>
+        <nc1:MessADatP3 xmlns:nc1="urn:fra:nc1">EVENTREP / INCREP / INCSPOTREP</nc1:MessADatP3>
+        <nc1:LastNC1ModifyVersion xmlns:nc1="urn:fra:nc1">9.0.0</nc1:LastNC1ModifyVersion>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:complexContent>
+        <xs:extension base="nc1msgcom:BaseMessageType">
+          <xs:sequence>
+            <xs:element maxOccurs="unbounded" name="eventReport">
+              <xs:annotation>
+                <xs:documentation>Compte rendu d’événement.</xs:documentation>
+                <xs:documentation xml:lang="en">Event Report.</xs:documentation>
+                <xs:appinfo>
+                  <nc1ihm:Nom>CR d’évènement</nc1ihm:Nom>
+                  <nc1ihm:Nom xml:lang="en">Event report</nc1ihm:Nom>
+                </xs:appinfo>
+              </xs:annotation>
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="type" type="nc1eventrep:EventReportTypeCode">
+                    <xs:annotation>
+                      <xs:documentation>Type de compte rendu (ex : « EVENTREP »).</xs:documentation>
+                      <xs:documentation xml:lang="en">"Type of report (e.g. ""EVENTREP"")".</xs:documentation>
+                      <xs:appinfo>
+                        <nc1ihm:Nom>Type</nc1ihm:Nom>
+                        <nc1ihm:Nom xml:lang="en">Type</nc1ihm:Nom>
+                      </xs:appinfo>
+                    </xs:annotation>
+                  </xs:element>
+                  <xs:element name="purposeOfReport" type="nc1common:WideTextType">
+                    <xs:annotation>
+                      <xs:documentation>Sujet du compte rendu d’événement, en texte libre.</xs:documentation>
+                      <xs:documentation xml:lang="en">Purpose of the report (free text).</xs:documentation>
+                      <xs:appinfo>
+                        <nc1ihm:Nom>Sujet</nc1ihm:Nom>
+                        <nc1ihm:Nom xml:lang="en">Subject</nc1ihm:Nom>
+                      </xs:appinfo>
+                    </xs:annotation>
+                  </xs:element>
+                  <xs:element name="event" type="nc1event:EventType">
+                    <xs:annotation>
+                      <xs:documentation>Evénement rapporté.</xs:documentation>
+                      <xs:documentation xml:lang="en">Reported event.</xs:documentation>
+                      <xs:appinfo>
+                        <nc1ihm:Nom>Evénement</nc1ihm:Nom>
+                        <nc1ihm:Nom xml:lang="en">Event</nc1ihm:Nom>
+                      </xs:appinfo>
+                    </xs:annotation>
+                  </xs:element>
+                  <xs:element name="relatedSituation" type="nc1msgcom:MixedAnyType">
+                    <xs:annotation>
+                      <xs:documentation>Situation associée à l’événement.</xs:documentation>
+                      <xs:documentation xml:lang="en">Situation related to the event.</xs:documentation>
+                      <xs:appinfo>
+                        <nc1ihm:Nom>Situation</nc1ihm:Nom>
+                        <nc1ihm:Nom xml:lang="en">Situation</nc1ihm:Nom>
+                      </xs:appinfo>
+                    </xs:annotation>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element minOccurs="0" name="comment" type="nc1msgcom:CommentSectionType">
+              <xs:annotation>
+                <xs:documentation>Commentaire en texte libre.</xs:documentation>
+                <xs:documentation xml:lang="en">free text comment.</xs:documentation>
+                <xs:appinfo>
+                  <nc1ihm:Nom>Commentaire</nc1ihm:Nom>
+                  <nc1ihm:Nom xml:lang="en">comment</nc1ihm:Nom>
+                </xs:appinfo>
+              </xs:annotation>
+            </xs:element>
+          </xs:sequence>
+        </xs:extension>
+      </xs:complexContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:simpleType name="EventReportTypeCode">
+    <xs:annotation>
+      <xs:appinfo>
+        <nc1dico:source xmlns:nc1dico="urn:fra:nc1:dictionnaires">NC1</nc1dico:source>
+      </xs:appinfo>
+      <xs:documentation></xs:documentation>
+      <xs:documentation xml:lang="en"></xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:integer" />
+  </xs:simpleType>
+</xs:schema>

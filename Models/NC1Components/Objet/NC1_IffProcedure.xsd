@@ -1,0 +1,350 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema targetNamespace="urn:fra:nc1:objet:iffprocedure" xmlns:nc1ihm="urn:fra:nc1:IHM" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:nc1iffprocedure="urn:fra:nc1:objet:iffprocedure" xmlns:nc1common="urn:fra:nc1:common:attribute" xmlns:nc1location="urn:fra:nc1:common:location" xmlns:nc1objcom="urn:fra:nc1:common:object">
+  <!-- NC1 V.9.0.0 -->
+  <xs:import namespace="urn:fra:nc1:common:attribute" schemaLocation="../Commun/Common.xsd" />
+  <xs:import namespace="urn:fra:nc1:common:location" schemaLocation="../Commun/Location.xsd" />
+  <xs:import namespace="urn:fra:nc1:common:object" schemaLocation="../Commun/Object.xsd" />
+  <xs:element name="NC1_IffProcedure" type="nc1iffprocedure:IffProcedureType">
+    <xs:annotation>
+      <xs:documentation>L’objet NC1_IffProcedure permet la diffusion des modes et codes IFF valides sur un théâtre donné et leur distribution aux unités 3D.</xs:documentation>
+      <xs:documentation xml:lang="en">The object NC1_IffProcedure allows the distribution of the modes and code valid IFF on a given theater and their distribution in the 3D units.</xs:documentation>
+      <xs:appinfo>
+        <nc1:type xmlns:nc1="urn:fra:nc1">Objet</nc1:type>
+        <nc1ihm:Nom>Procédure IFF</nc1ihm:Nom>
+        <nc1ihm:Nom xml:lang="en">IFF Procedure</nc1ihm:Nom>
+        <nc1:MessH xmlns:nc1="urn:fra:nc1">N/A</nc1:MessH>
+        <nc1:MessADatP3 xmlns:nc1="urn:fra:nc1">IFFPROD</nc1:MessADatP3>
+        <nc1:LastNC1ModifyVersion xmlns:nc1="urn:fra:nc1">9.0.0</nc1:LastNC1ModifyVersion>
+      </xs:appinfo>
+    </xs:annotation>
+  </xs:element>
+  <xs:simpleType name="CmbModeCode">
+    <xs:annotation>
+      <xs:appinfo>
+        <nc1dico:source xmlns:nc1dico="urn:fra:nc1:dictionnaires">ADatP-3 BL11 1302/003</nc1dico:source>
+      </xs:appinfo>
+      <xs:documentation></xs:documentation>
+      <xs:documentation xml:lang="en"></xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:integer" />
+  </xs:simpleType>
+  <xs:complexType name="CmbModeType">
+    <xs:annotation>
+      <xs:documentation>Mode IFF combiné.</xs:documentation>
+      <xs:documentation xml:lang="en">Combined IFF mode.</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="period" type="nc1common:PeriodType">
+        <xs:annotation>
+          <xs:documentation>Période considérée.</xs:documentation>
+          <xs:documentation xml:lang="en">Applicable period.</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Période</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">Period</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="cmbMode" type="nc1iffprocedure:CmbModeCode">
+        <xs:annotation>
+          <xs:documentation>Mode IFF combiné.</xs:documentation>
+          <xs:documentation xml:lang="en">Combined IFF mode.</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Mode IFF combiné</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">Combined IFF mode</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="CnxCodesType">
+    <xs:annotation>
+      <xs:documentation>Codes IFF/SIF annulés.</xs:documentation>
+      <xs:documentation xml:lang="en">Cancelled IFF/SIF codes.</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="datetime" type="xs:dateTime">
+        <xs:annotation>
+          <xs:documentation>Horodatage considéré.</xs:documentation>
+          <xs:documentation xml:lang="en">Considered timestamp.</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Horodatage</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">Timestamp</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element maxOccurs="unbounded" name="cnxCode" type="nc1iffprocedure:IffSifCodeType">
+        <xs:annotation>
+          <xs:documentation>Code IFF/SIF annulé.</xs:documentation>
+          <xs:documentation xml:lang="en">Cancelled IFF/SIF code.</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Code IFF/SIF annulé</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">Cancelled IFF/SIF code</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="CnxModesType">
+    <xs:annotation>
+      <xs:documentation>Modes IFF annulés.</xs:documentation>
+      <xs:documentation xml:lang="en">Cancelled IFF modes.</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="datetime" type="xs:dateTime">
+        <xs:annotation>
+          <xs:documentation>Horodatage considéré.</xs:documentation>
+          <xs:documentation xml:lang="en">Considered timestamp.</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Horodatage</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">Timestamp</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element maxOccurs="unbounded" name="cnxMode" type="nc1iffprocedure:IffModeCode">
+        <xs:annotation>
+          <xs:documentation>Mode IFF annulé.</xs:documentation>
+          <xs:documentation xml:lang="en">Cancelled IFF mode.</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Mode IFF annulé</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">Cancelled IFF mode</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="IffCodesType">
+    <xs:annotation>
+      <xs:documentation>Codes IFF.</xs:documentation>
+      <xs:documentation xml:lang="en">IFF codes.</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="period" type="nc1common:PeriodType">
+        <xs:annotation>
+          <xs:documentation>Période considérée.</xs:documentation>
+          <xs:documentation xml:lang="en">Applicable period.</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Période</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">Period</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element maxOccurs="unbounded" name="iffSifCode" type="nc1iffprocedure:IffSifCodeType">
+        <xs:annotation>
+          <xs:documentation>Code IFF/SIF.</xs:documentation>
+          <xs:documentation xml:lang="en">IFF/SIF code.</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Code IFF/SIF</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">IFF/SIF code</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:simpleType name="IffModeCode">
+    <xs:annotation>
+      <xs:appinfo>
+        <nc1dico:source xmlns:nc1dico="urn:fra:nc1:dictionnaires">ADatP-3 BL11 1302/002</nc1dico:source>
+      </xs:appinfo>
+      <xs:documentation></xs:documentation>
+      <xs:documentation xml:lang="en"></xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:integer" />
+  </xs:simpleType>
+  <xs:complexType name="IffModeType">
+    <xs:annotation>
+      <xs:documentation>Mode IFF.</xs:documentation>
+      <xs:documentation xml:lang="en">IFF mode.</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="period" type="nc1common:PeriodType">
+        <xs:annotation>
+          <xs:documentation>Période considérée.</xs:documentation>
+          <xs:documentation xml:lang="en">Applicable period.</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Période</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">Period</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="iffMode" type="nc1iffprocedure:IffModeCode">
+        <xs:annotation>
+          <xs:documentation>Mode IFF.</xs:documentation>
+          <xs:documentation xml:lang="en">IFF mode.</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Mode IFF</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">IFF mode</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="IffProcedureTacticalDataType">
+    <xs:annotation>
+      <xs:documentation>Données sur la procédure IFF.</xs:documentation>
+      <xs:documentation xml:lang="en">Data on IFF procedure.</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" name="shoradIffOriginatingAuthority" type="nc1iffprocedure:ShoradIffOriginatingAuthorityCode">
+        <xs:annotation>
+          <xs:documentation>Autorité d’origine de l’allocation des codes IFF.</xs:documentation>
+          <xs:documentation xml:lang="en">Originating authority for allocation of the IFF codes.</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Autorité d’origine</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">Originating authority</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:choice>
+        <xs:element name="iffMode" type="nc1iffprocedure:IffModeType">
+          <xs:annotation>
+            <xs:documentation>Mode IFF.</xs:documentation>
+            <xs:documentation xml:lang="en">IFF mode.</xs:documentation>
+            <xs:appinfo>
+              <nc1ihm:Nom>Mode IFF</nc1ihm:Nom>
+              <nc1ihm:Nom xml:lang="en">IFF mode</nc1ihm:Nom>
+            </xs:appinfo>
+          </xs:annotation>
+        </xs:element>
+        <xs:element name="cmbMode" type="nc1iffprocedure:CmbModeType">
+          <xs:annotation>
+            <xs:documentation>Mode IFF combiné.</xs:documentation>
+            <xs:documentation xml:lang="en">Combined IFF mode.</xs:documentation>
+            <xs:appinfo>
+              <nc1ihm:Nom>Mode IFF combiné</nc1ihm:Nom>
+              <nc1ihm:Nom xml:lang="en">Combined IFF mode</nc1ihm:Nom>
+            </xs:appinfo>
+          </xs:annotation>
+        </xs:element>
+      </xs:choice>
+      <xs:element name="iffCodes" type="nc1iffprocedure:IffCodesType">
+        <xs:annotation>
+          <xs:documentation>Codes IFF.</xs:documentation>
+          <xs:documentation xml:lang="en">IFF codes.</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Codes IFF</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">IFF codes</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="cnxModes" type="nc1iffprocedure:CnxModesType">
+        <xs:annotation>
+          <xs:documentation>Modes IFF annulés.</xs:documentation>
+          <xs:documentation xml:lang="en">Cancelled IFF modes.</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Modes IFF annulés</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">Cancelled IFF modes</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="cnxCodes" type="nc1iffprocedure:CnxCodesType">
+        <xs:annotation>
+          <xs:documentation>Codes IFF annulés.</xs:documentation>
+          <xs:documentation xml:lang="en">Cancelled IFF codes.</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Codes IFF annulés</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">Cancelled IFF codes</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="changedDocuments" type="nc1common:WideTextObjectType">
+        <xs:annotation>
+          <xs:documentation>Description en texte libre des documents modifiés.</xs:documentation>
+          <xs:documentation xml:lang="en">Free-text description of the modified documents.</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Documents modifiés</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">Changed documents</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="extVersion" type="nc1common:ExtVersType">
+        <xs:annotation>
+          <xs:documentation>Extension pour versions suivantes compatibles.</xs:documentation>
+          <xs:documentation xml:lang="en">Extension for following compatible versions.</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Extension de version</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">version extension</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="IffProcedureType">
+    <xs:annotation>
+      <xs:documentation>La procédure IFF est le procédé employé par un individu ou une unité pour s’assurer du caractère ami ou ennemi, ou de l’identité d’un autre individu ou unité. La procédure IFF (Identification Friend or Foe) s'applique à l'identification AMI/ENI des mobiles aériens.</xs:documentation>
+      <xs:documentation xml:lang="en">The IFF procedure is the mean employed by an individual or a unit to check the friendly or enemy nature, or identity of another individual or unit. The IFF procedure applies to friend/enemy identification of aircraft.</xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="nc1objcom:LocalisedObjectType">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="tacticalData" type="nc1iffprocedure:IffProcedureTacticalDataType">
+            <xs:annotation>
+              <xs:documentation>Données tactiques de la procédure IFF.</xs:documentation>
+              <xs:documentation xml:lang="en">IFF procedure tactical data.</xs:documentation>
+              <xs:appinfo>
+                <nc1ihm:Nom>Données tactiques</nc1ihm:Nom>
+                <nc1ihm:Nom xml:lang="en">tactical datas</nc1ihm:Nom>
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:element>
+          <xs:element maxOccurs="unbounded" minOccurs="1" name="location">
+            <xs:annotation>
+              <xs:documentation>Zone effective.</xs:documentation>
+              <xs:documentation xml:lang="en">Effective zone.</xs:documentation>
+              <xs:appinfo>
+                <nc1ihm:Nom>Localisation</nc1ihm:Nom>
+                <nc1ihm:Nom xml:lang="en">Location</nc1ihm:Nom>
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:complexType>
+              <xs:sequence>
+                <xs:choice>
+                  <xs:element name="polygon" type="nc1location:PolygonType">
+                    <xs:annotation>
+                      <xs:documentation>Polygone, ou ligne brisée fermée.</xs:documentation>
+                      <xs:documentation xml:lang="en">Polygon, or closed polyline.</xs:documentation>
+                      <xs:appinfo>
+                        <nc1ihm:Nom>Polygone</nc1ihm:Nom>
+                        <nc1ihm:Nom xml:lang="en">Polygon</nc1ihm:Nom>
+                      </xs:appinfo>
+                    </xs:annotation>
+                  </xs:element>
+                  <xs:element name="description" type="nc1common:Text5To20ABNType">
+                    <xs:annotation>
+                      <xs:documentation>Description en texte libre de la zone effective.</xs:documentation>
+                      <xs:documentation xml:lang="en">Free text description.</xs:documentation>
+                      <xs:appinfo>
+                        <nc1ihm:Nom>Description</nc1ihm:Nom>
+                        <nc1ihm:Nom xml:lang="en">Description</nc1ihm:Nom>
+                      </xs:appinfo>
+                    </xs:annotation>
+                  </xs:element>
+                </xs:choice>
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:simpleType name="IffSifCodeType">
+    <xs:annotation>
+      <xs:documentation>Code IFF/SIF.</xs:documentation>
+      <xs:documentation xml:lang="en">IFF/SIF code.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:pattern value="[0-7][0-3][0-7]{4}" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="ShoradIffOriginatingAuthorityCode">
+    <xs:annotation>
+      <xs:appinfo>
+        <nc1dico:source xmlns:nc1dico="urn:fra:nc1:dictionnaires">STAT 361 (équivalent au dictionnaire ADatP-3 BL11 1028/024).</nc1dico:source>
+        <nc1ihm:description>Dictionnaire des autorités d'origine de l'allocation de code IFF.</nc1ihm:description>
+        <nc1ihm:description xml:lang="en">IFF codes allocating authorities dictionary.</nc1ihm:description>
+      </xs:appinfo>
+      <xs:documentation>Dictionnaire des autorités d'origine de l'allocation de code IFF.</xs:documentation>
+      <xs:documentation xml:lang="en">IFF codes allocating authorities dictionary.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:integer" />
+  </xs:simpleType>
+</xs:schema>

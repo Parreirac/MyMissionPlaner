@@ -1,0 +1,715 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema targetNamespace="urn:fra:nc1:message:medevac" xmlns:nc1ihm="urn:fra:nc1:IHM" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:nc1medevac="urn:fra:nc1:message:medevac" xmlns:nc1common="urn:fra:nc1:common:attribute" xmlns:nc1msgcom="urn:fra:nc1:common:message" xmlns:nc1tacpoint="urn:fra:nc1:objet:tacpoint" xmlns:nc1unit="urn:fra:nc1:objet:unit">
+  <!-- NC1 V.9.0.0 -->
+  <xs:import namespace="urn:fra:nc1:common:attribute" schemaLocation="../Commun/Common.xsd" />
+  <xs:import namespace="urn:fra:nc1:common:message" schemaLocation="../Commun/Message.xsd" />
+  <xs:import namespace="urn:fra:nc1:objet:tacpoint" schemaLocation="../Objet/NC1_TacPoint.xsd" />
+  <xs:import namespace="urn:fra:nc1:objet:unit" schemaLocation="../Objet/NC1_Unit.xsd" />
+  <xs:element name="NC1_MEDEVAC-NINE-LINE">
+    <xs:annotation>
+      <xs:documentation>Le message NC1_MEDEVAC-NINE-LINE est utilisé pour demander les moyens nécessaires pour évacuer le nombre et le type de blessés mentionnés.</xs:documentation>
+      <xs:documentation xml:lang="en">The NC1_MEDEVAC-NINE-LINE message is used to request the necessary means to evacuate the number and type of casualties mentioned.</xs:documentation>
+      <xs:appinfo>
+        <nc1:type xmlns:nc1="urn:fra:nc1">Message</nc1:type>
+        <nc1ihm:Nom>Demande d’évacuation sanitaire</nc1ihm:Nom>
+        <nc1ihm:Nom xml:lang="en">Medical evacuation</nc1ihm:Nom>
+        <nc1:MessH xmlns:nc1="urn:fra:nc1">N/A</nc1:MessH>
+        <nc1:MessADatP3 xmlns:nc1="urn:fra:nc1">N/A</nc1:MessADatP3>
+        <nc1:LastNC1ModifyVersion xmlns:nc1="urn:fra:nc1">9.0.0</nc1:LastNC1ModifyVersion>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:complexContent>
+        <xs:extension base="nc1msgcom:BaseMessageType">
+          <xs:sequence>
+            <xs:element name="medicalEvacuationRequest">
+              <xs:annotation>
+                <xs:documentation>Demande d’évacuation sanitaire.</xs:documentation>
+                <xs:documentation xml:lang="en">Medical evacuation.</xs:documentation>
+                <xs:appinfo>
+                  <nc1ihm:Nom>Demande d’évacuation sanitaire</nc1ihm:Nom>
+                  <nc1ihm:Nom xml:lang="en">Medical evacuation</nc1ihm:Nom>
+                </xs:appinfo>
+              </xs:annotation>
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="pickupPoint" type="nc1tacpoint:TacPointType">
+                    <xs:annotation>
+                      <xs:documentation>Point d’évacuation (LIGNE 1 du format 9-LINE).</xs:documentation>
+                      <xs:documentation xml:lang="en">Pickup point.</xs:documentation>
+                      <xs:appinfo>
+                        <nc1ihm:Nom>L1 - Point d’évacuation</nc1ihm:Nom>
+                        <nc1ihm:Nom xml:lang="en">Pickup point</nc1ihm:Nom>
+                      </xs:appinfo>
+                    </xs:annotation>
+                  </xs:element>
+                  <xs:element name="comData">
+                    <xs:annotation>
+                      <xs:documentation>Données de communication du demandeur (LIGNE 2 du format 9-LINE).</xs:documentation>
+                      <xs:documentation xml:lang="en">Communication data of the requester (LINE 2 f the 9-LINE format).</xs:documentation>
+                      <xs:appinfo>
+                        <nc1ihm:Nom>L2 - Données de communication</nc1ihm:Nom>
+                        <nc1ihm:Nom xml:lang="en">L2 - Communication data</nc1ihm:Nom>
+                      </xs:appinfo>
+                    </xs:annotation>
+                    <xs:complexType>
+                      <xs:sequence>
+                        <xs:element minOccurs="0" name="requestingUnitComData" type="nc1unit:UnitType">
+                          <xs:annotation>
+                            <xs:documentation>Données de communication de l’unité demandant l’évacuation.</xs:documentation>
+                            <xs:documentation xml:lang="en">Communication data of the unit requesting an evacuation.</xs:documentation>
+                            <xs:appinfo>
+                              <nc1ihm:Nom>Données de communication de l’unité demandeuse</nc1ihm:Nom>
+                              <nc1ihm:Nom xml:lang="en">Communication data of the requesting unit </nc1ihm:Nom>
+                            </xs:appinfo>
+                          </xs:annotation>
+                        </xs:element>
+                        <xs:element minOccurs="0" name="frequencyAndCallSign" type="nc1common:MediumTextType">
+                          <xs:annotation>
+                            <xs:documentation>Fréquence et indicatif radio du demandeur, dans le cas où le demandeur n’est pas connu dans l’Ordre de Bataille.</xs:documentation>
+                            <xs:documentation xml:lang="en">Frequency and callsign of the requester, when he doesn't appear in the Order of Battle.</xs:documentation>
+                            <xs:appinfo>
+                              <nc1ihm:Nom>Fréquence et indicatif</nc1ihm:Nom>
+                              <nc1ihm:Nom xml:lang="en">Frequency and callsign</nc1ihm:Nom>
+                            </xs:appinfo>
+                          </xs:annotation>
+                        </xs:element>
+                      </xs:sequence>
+                    </xs:complexType>
+                  </xs:element>
+                  <xs:element maxOccurs="1" name="injuredToEvacuatePerPriority" type="nc1medevac:InjuredToEvacuatePerPriorityType">
+                    <xs:annotation>
+                      <xs:documentation>Nombre de blessés à évacuer, par priorités (LIGNE 3 du format 9-LINE).</xs:documentation>
+                      <xs:documentation xml:lang="en">Number of injured to evacuate, per priority (line 3 of the 9-LINE format).</xs:documentation>
+                      <xs:appinfo>
+                        <nc1ihm:Nom>L3 - Nombre de blessés à évacuer, par priorités</nc1ihm:Nom>
+                        <nc1ihm:Nom xml:lang="en">L3 - Number of injured to be evacuated by priorities</nc1ihm:Nom>
+                      </xs:appinfo>
+                    </xs:annotation>
+                  </xs:element>
+                  <xs:element name="pickupZoneSpecialEquipments">
+                    <xs:annotation>
+                      <xs:documentation>Équipements particuliers nécessaires à l’évacuation (LIGNE 4 du format 9-LINE).</xs:documentation>
+                      <xs:documentation xml:lang="en">Special equipments needed for pickup (LINE 4 of the 9-LINE format).</xs:documentation>
+                      <xs:appinfo>
+                        <nc1ihm:Nom>L4 - Equipements particuliers</nc1ihm:Nom>
+                        <nc1ihm:Nom xml:lang="en">L4 - Specific equipments</nc1ihm:Nom>
+                      </xs:appinfo>
+                    </xs:annotation>
+                    <xs:complexType>
+                      <xs:sequence>
+                        <xs:element minOccurs="0" name="type" type="nc1medevac:PickupZoneSpecialEquipmentsType">
+                          <xs:annotation>
+                            <xs:documentation>Type d'équipement particulier nécessaire à l’évacuation (LIGNE 4 du format 9-LINE).</xs:documentation>
+                            <xs:documentation xml:lang="en">Medevac special equipment (9-LINE format LINE 4).</xs:documentation>
+                            <xs:appinfo>
+                              <nc1ihm:Nom>Type d'équipement</nc1ihm:Nom>
+                              <nc1ihm:Nom xml:lang="en">Equipment type</nc1ihm:Nom>
+                            </xs:appinfo>
+                          </xs:annotation>
+                        </xs:element>
+                        <xs:element minOccurs="0" name="description" type="nc1common:MediumTextType">
+                          <xs:annotation>
+                            <xs:documentation>Description en texte libre des équipements particuliers nécessaires à l’évacuation.</xs:documentation>
+                            <xs:documentation xml:lang="en">Free text description.</xs:documentation>
+                            <xs:appinfo>
+                              <nc1ihm:Nom>Description</nc1ihm:Nom>
+                              <nc1ihm:Nom xml:lang="en">Description</nc1ihm:Nom>
+                            </xs:appinfo>
+                          </xs:annotation>
+                        </xs:element>
+                      </xs:sequence>
+                    </xs:complexType>
+                  </xs:element>
+                  <xs:element minOccurs="0" name="patientToEvacuateStretcherOrWalking" type="nc1medevac:PatientToEvacuateStretcherOrWalkingType">
+                    <xs:annotation>
+                      <xs:documentation>Nombre de patients à évacuer, par type de position couché ou debout (LIGNE 5 du format 9-LINE).</xs:documentation>
+                      <xs:documentation xml:lang="en">Number of patients to evacuate, per position type, stretcher or walking (LINE 5 of the 9-LINE format).</xs:documentation>
+                      <xs:appinfo>
+                        <nc1ihm:Nom>L5 - Nombre de patients à évacuer, couchés ou debout</nc1ihm:Nom>
+                        <nc1ihm:Nom xml:lang="en">L5 - Number of patients to evacuate, lying or standing</nc1ihm:Nom>
+                      </xs:appinfo>
+                    </xs:annotation>
+                  </xs:element>
+                  <xs:element name="pickupZoneEnemyActivity" type="nc1medevac:PickupZoneEnemyActivityType">
+                    <xs:annotation>
+                      <xs:documentation>Activité de l’ennemi dans la zone d’évacuation (LIGNE 6 du 9-LINE).</xs:documentation>
+                      <xs:documentation xml:lang="en">Enemy activity in the pickup zone (LINE 6 of the 9-LINE format).</xs:documentation>
+                      <xs:appinfo>
+                        <nc1ihm:Nom>L6 - Activité de l’ennemi</nc1ihm:Nom>
+                        <nc1ihm:Nom xml:lang="en">L6 - Enemy activity</nc1ihm:Nom>
+                      </xs:appinfo>
+                    </xs:annotation>
+                  </xs:element>
+                  <xs:element minOccurs="0" name="pickupZoneMarking">
+                    <xs:annotation>
+                      <xs:documentation>Marquage utilisé pour délimiter la zone d’évacuation (LIGNE 7 du format 9-LINE).</xs:documentation>
+                      <xs:documentation xml:lang="en">Marking used for delineation of the pickup zone (LINE 7 of the 9-LINE format).</xs:documentation>
+                      <xs:appinfo>
+                        <nc1ihm:Nom>L7 - Marquage utilisé</nc1ihm:Nom>
+                        <nc1ihm:Nom xml:lang="en">L7 - Used marking</nc1ihm:Nom>
+                      </xs:appinfo>
+                    </xs:annotation>
+                    <xs:complexType>
+                      <xs:sequence>
+                        <xs:element minOccurs="0" name="method" type="nc1medevac:MarkingMethodType">
+                          <xs:annotation>
+                            <xs:documentation>Méthode de marquage utilisée (ex : « SMOKE »).</xs:documentation>
+                            <xs:documentation xml:lang="en">"Method used to mark the zone (e.g. ""SMOKE"")".</xs:documentation>
+                            <xs:appinfo>
+                              <nc1ihm:Nom>Méthode</nc1ihm:Nom>
+                              <nc1ihm:Nom xml:lang="en">Method</nc1ihm:Nom>
+                            </xs:appinfo>
+                          </xs:annotation>
+                        </xs:element>
+                        <xs:element minOccurs="0" name="methodDescription" type="nc1common:MediumTextType">
+                          <xs:annotation>
+                            <xs:documentation>Description en texte libre de la méthode de marquage utilisée.</xs:documentation>
+                            <xs:documentation xml:lang="en">Free-text description of the marking method.</xs:documentation>
+                            <xs:appinfo>
+                              <nc1ihm:Nom>Description de la méthode</nc1ihm:Nom>
+                              <nc1ihm:Nom xml:lang="en">Method description</nc1ihm:Nom>
+                            </xs:appinfo>
+                          </xs:annotation>
+                        </xs:element>
+                      </xs:sequence>
+                    </xs:complexType>
+                  </xs:element>
+                  <xs:element maxOccurs="6" minOccurs="0" name="patientToEvacuatePerGroup" type="nc1medevac:PatientToEvacuatePerGroupType">
+                    <xs:annotation>
+                      <xs:documentation>Nombre de patients à évacuer, par type d’appartenance (LIGNE 8 du format 9-LINE).</xs:documentation>
+                      <xs:documentation xml:lang="en">Number of patients to evacuate, per group type (LINE 8 of the 9-LINE format).</xs:documentation>
+                      <xs:appinfo>
+                        <nc1ihm:Nom>L8 - Nombre de patients à évacuer,  par appartenance</nc1ihm:Nom>
+                        <nc1ihm:Nom xml:lang="en">L8 - Number of patients to evacuate, per origin</nc1ihm:Nom>
+                      </xs:appinfo>
+                    </xs:annotation>
+                  </xs:element>
+                  <xs:element minOccurs="0" name="pickupZoneAdditionalInformation" type="nc1medevac:PickupZoneAdditionalInformationType">
+                    <xs:annotation>
+                      <xs:documentation>Informations supplémentaires sur la zone d’évacuation (LIGNE 9 du format 9-LINE).</xs:documentation>
+                      <xs:documentation xml:lang="en">Additional information on the pickup zone (LINE 9 of the 9-LINE format).</xs:documentation>
+                      <xs:appinfo>
+                        <nc1ihm:Nom>L9 - Informations supplémentaires</nc1ihm:Nom>
+                        <nc1ihm:Nom xml:lang="en">L9 - Additional information</nc1ihm:Nom>
+                      </xs:appinfo>
+                    </xs:annotation>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element minOccurs="0" name="comment" type="nc1common:WideTextType">
+              <xs:annotation>
+                <xs:documentation>Commentaire en texte libre.</xs:documentation>
+                <xs:documentation xml:lang="en">free text comment.</xs:documentation>
+                <xs:appinfo>
+                  <nc1ihm:Nom>Commentaire</nc1ihm:Nom>
+                  <nc1ihm:Nom xml:lang="en">comment</nc1ihm:Nom>
+                </xs:appinfo>
+              </xs:annotation>
+            </xs:element>
+          </xs:sequence>
+        </xs:extension>
+      </xs:complexContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="InjuredToEvacuatePerPriorityType">
+    <xs:annotation>
+      <xs:documentation>Nombre de blessés à évacuer, par priorité.</xs:documentation>
+      <xs:documentation xml:lang="en">Number of wounded to evacuate, per priority.</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="urgentNumber" type="nc1common:Int0To999Type">
+        <xs:annotation>
+          <xs:documentation>Nombre de blessés à évacuer en priorité A (URGENT soit 01h30).</xs:documentation>
+          <xs:documentation xml:lang="en">Number of A-priority wounded to evacuate (URGENT 01h30).</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>A - Urgent (01h30)</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">A number</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="priorityNumber" type="nc1common:Int0To999Type">
+        <xs:annotation>
+          <xs:documentation>Nombre de blessés à évacuer en priorité B (PRIORITAIRE soit 04h00).</xs:documentation>
+          <xs:documentation xml:lang="en">Number of B-priority wounded to evacuate (PRIORITY 04h00).</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>B - Prioritaire (04h00)</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">B number</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="routineNumber" type="nc1common:Int0To999Type">
+        <xs:annotation>
+          <xs:documentation>Nombre de blessés à évacuer en priorité C (ROUTINE soit 24h00).</xs:documentation>
+          <xs:documentation xml:lang="en">Number of C-priority wounded to evacuate (ROUTINE 24h00).</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>C - Routine (24h00)</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">C number</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="MarkingMethodType">
+    <xs:annotation>
+      <xs:documentation>Méthode de marquage.</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="pannels" type="xs:boolean">
+        <xs:annotation>
+          <xs:documentation>Cyalum ou panneau sol-air.</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>A - Panneau</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="pannelsComment" type="nc1common:MediumTextType">
+        <xs:annotation>
+          <xs:documentation>Commentaire pour panneau.</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>A - Commentaire</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="pyro" type="xs:boolean">
+        <xs:annotation>
+          <xs:documentation>Fusée éclairante.</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>B - Fusée éclairante</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="pyroComment" type="nc1common:MediumTextType">
+        <xs:annotation>
+          <xs:documentation>Commentaire pour fusée éclairante.</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>B - Commentaire</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="smoke" type="xs:boolean">
+        <xs:annotation>
+          <xs:documentation>Fumigène.</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>C - Fumigène</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="smokeComment" type="nc1common:MediumTextType">
+        <xs:annotation>
+          <xs:documentation>Commentaire pour fumigéne.</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>C - Commentaire</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="none" type="xs:boolean">
+        <xs:annotation>
+          <xs:documentation>Aucun marquage.</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>D - Rien</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="other" type="nc1common:MediumTextType">
+        <xs:annotation>
+          <xs:documentation>Autre</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>E - Autre</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="MISTType">
+    <xs:annotation>
+      <xs:documentation>Informations médicales complémentaires (M.I.S.T) sur un patient.</xs:documentation>
+      <xs:documentation xml:lang="en">Patient additional medical information (M.I.S.T.).</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" name="patientIndividualId" type="nc1common:Nc1ObjectRefType">
+        <xs:annotation>
+          <xs:documentation>Identifiant NC1 du patient (individu).</xs:documentation>
+          <xs:documentation xml:lang="en">NC1 ID of the patient.</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Identifiant du patient</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">Patient individual ID</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="patientDescription" type="nc1common:MediumTextType">
+        <xs:annotation>
+          <xs:documentation>Identification en texte libre du patient (grade, nom, prénom).</xs:documentation>
+          <xs:documentation xml:lang="en">Free text description of the patient.</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Description du patient</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">Patient description</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="M" type="nc1common:MediumTextType">
+        <xs:annotation>
+          <xs:documentation>Mécanisme de la blessure, et horodatage de la blessure (ex : « PERFORATION ARTERE FEMORALE A 12H04Z »).</xs:documentation>
+          <xs:documentation xml:lang="en">Mechanism of injury (and at what time if known).</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>M</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">M</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="I" type="nc1common:MediumTextType">
+        <xs:annotation>
+          <xs:documentation>Description de la blessure ou de la maladie.</xs:documentation>
+          <xs:documentation xml:lang="en">Injury or illness sustained.</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>I</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">I</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="S" type="nc1medevac:SType">
+        <xs:annotation>
+          <xs:documentation>Symptômes et signes vitaux.</xs:documentation>
+          <xs:documentation xml:lang="en">Symptoms and vital signs.</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>S</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">S</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="T" type="nc1common:MediumTextType">
+        <xs:annotation>
+          <xs:documentation>Traitement administré (ex : « GARROT à 12H05Z et MORPHINE »).</xs:documentation>
+          <xs:documentation xml:lang="en">Treatment given (e.g. Tourniquet and time applied, Morphine).</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>T</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">T</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="PatientGroupType">
+    <xs:annotation>
+      <xs:documentation>Groupe de patients.</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="militaryCoalition" type="nc1common:Int0To999Type">
+        <xs:annotation>
+          <xs:documentation>Militaires de la coalition.</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>A - Force coalition</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="civilianWithCoalition" type="nc1common:Int0To999Type">
+        <xs:annotation>
+          <xs:documentation>Civils avec les forces de la coalition.</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>B - Civils coalition</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="noCoalitionForces" type="nc1common:Int0To999Type">
+        <xs:annotation>
+          <xs:documentation>Forces de sécurité hors coalition</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>C - Militaires ami</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="noCoalitionCivilian" type="nc1common:Int0To999Type">
+        <xs:annotation>
+          <xs:documentation>Civil hors coalition.</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>D - Civils</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="opposingForces" type="nc1common:Int0To999Type">
+        <xs:annotation>
+          <xs:documentation>Forces adverses - PG - Détenus.</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>E - Prisonniers</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="child" type="nc1common:Int0To999Type">
+        <xs:annotation>
+          <xs:documentation>Enfants.</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>F - Enfants</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="PatientToEvacuatePerGroupType">
+    <xs:annotation>
+      <xs:documentation>Nombre de personnes à évacuer, par type d’appartenance.</xs:documentation>
+      <xs:documentation xml:lang="en">Number of persons to evacuate, per type of group.</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="type" type="nc1medevac:PatientGroupType">
+        <xs:annotation>
+          <xs:documentation>Type d’appartenance  (ex : « COALITION MILITARY »).</xs:documentation>
+          <xs:documentation xml:lang="en">"Membership type (ex. : ""COALITION MILITARY"")".</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Type</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">Type</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="number" type="nc1common:Int0To999Type">
+        <xs:annotation>
+          <xs:documentation>Nombre de personnes à évacuer.</xs:documentation>
+          <xs:documentation xml:lang="en">Number of persons to evacuate.</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Nombre</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">Number</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="PatientToEvacuateStretcherOrWalkingType">
+    <xs:annotation>
+      <xs:documentation>Nombre de patients à évacuer, par type de position couché ou debout.</xs:documentation>
+      <xs:documentation xml:lang="en">Number of patients to evacuate, per type of position laying or standing.</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="litterNumber" type="nc1common:Int0To999Type">
+        <xs:annotation>
+          <xs:documentation>Nombre de patients couchés à évacuer.</xs:documentation>
+          <xs:documentation xml:lang="en">Number of patients to evacuate with litter (stretcher).</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>L - Allongé</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">L number</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="ambulatoryNumber" type="nc1common:Int0To999Type">
+        <xs:annotation>
+          <xs:documentation>Nombre de patients assis en mesure de se déplacer à évacuer.</xs:documentation>
+          <xs:documentation xml:lang="en">Number of ambulatory (walking) patients to evacuate.</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>A - Assis</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">A number</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="escortsNumber" type="nc1common:Int0To999Type">
+        <xs:annotation>
+          <xs:documentation>Nombre d'accompagnants (obligatoire pour les enfants) à évacuer.</xs:documentation>
+          <xs:documentation xml:lang="en">Number of escorted patients to evacuate.</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>E - Accompagnant</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">E number</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="PickupZoneAdditionalInformationType">
+    <xs:annotation>
+      <xs:documentation>Informations supplémentaires sur une zone d’évacuation.</xs:documentation>
+      <xs:documentation xml:lang="en">Additional information  about a pickup zone.</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" name="helicopterPlot" type="nc1common:MediumTextType">
+        <xs:annotation>
+          <xs:documentation>Point(s) de poser hélicoptère.</xs:documentation>
+          <xs:documentation xml:lang="en">Helicopter plot(s).</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>A - Poser hélicoptère</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">Helicopter plot</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="ground" type="nc1common:MediumTextType">
+        <xs:annotation>
+          <xs:documentation>Description du terrain.</xs:documentation>
+          <xs:documentation xml:lang="en">Ground description.</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>B - Terrain</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">Field</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="obstacles" type="nc1common:MediumTextType">
+        <xs:annotation>
+          <xs:documentation>Présence d’obstacles dans la zone.</xs:documentation>
+          <xs:documentation xml:lang="en">Specifies if obstacles are present in the zone.</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>C - Obstacles</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">Obstacles</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="miscellaneous" type="nc1common:MediumTextType">
+        <xs:annotation>
+          <xs:documentation>Autres précisions sur la zone d'évacuation.</xs:documentation>
+          <xs:documentation xml:lang="en">Additional information about the pickup zone.</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>D - Autres</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">Other information</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:simpleType name="PickupZoneEnemyActivityCode">
+    <xs:annotation>
+      <xs:appinfo>
+        <nc1dico:source xmlns:nc1dico="urn:fra:nc1:dictionnaires">STANAG 2087 Ed. 06</nc1dico:source>
+        <nc1dico:derogation xmlns:nc1dico="urn:fra:nc1:dictionnaires">Dictionnaire des activités de l'ennemi dans la zone d'évacuation.</nc1dico:derogation>
+      </xs:appinfo>
+      <xs:documentation></xs:documentation>
+      <xs:documentation xml:lang="en"></xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:integer" />
+  </xs:simpleType>
+  <xs:complexType name="PickupZoneEnemyActivityType">
+    <xs:annotation>
+      <xs:documentation>Activité de l'ennemi dans la zone d'évacuation.</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="areaSecurity" type="nc1medevac:PickupZoneEnemyActivityCode">
+        <xs:annotation>
+          <xs:documentation>Sécurité dans la zone</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Sécurité zone</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="armedEscortRequired" type="xs:boolean">
+        <xs:annotation>
+          <xs:documentation>Escorte armée requise</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Escorte</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="aditionnalInformation" type="nc1common:MediumTextType">
+        <xs:annotation>
+          <xs:documentation>Informations complémentaires</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Complément</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:simpleType name="PickupZoneSpecialEquipmentsCode">
+    <xs:annotation>
+      <xs:appinfo>
+        <nc1dico:source xmlns:nc1dico="urn:fra:nc1:dictionnaires">STANAG 2087 Ed. 06</nc1dico:source>
+      </xs:appinfo>
+      <xs:documentation></xs:documentation>
+      <xs:documentation xml:lang="en"></xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:integer" />
+  </xs:simpleType>
+  <xs:complexType name="PickupZoneSpecialEquipmentsType">
+    <xs:annotation>
+      <xs:documentation>Type d'équipement particulier pour l'évacuation.</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="none" type="xs:boolean">
+        <xs:annotation>
+          <xs:documentation>Rien.</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>A - Rien</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="hoist" type="xs:boolean">
+        <xs:annotation>
+          <xs:documentation>Treuillage ou hélitreuillage.</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>B - Treuillage</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="extrication" type="xs:boolean">
+        <xs:annotation>
+          <xs:documentation>Moyen de désincarcération.</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>C - Désincarcération</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="ventilator" type="xs:boolean">
+        <xs:annotation>
+          <xs:documentation>Demande de respirateur.</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>D - Respirateur</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="other" type="nc1common:MediumTextType">
+        <xs:annotation>
+          <xs:documentation>Autre</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>E - Autre</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="SType">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="A-Airway" type="nc1common:MediumTextType">
+        <xs:annotation>
+          <xs:documentation>Ventilation.</xs:documentation>
+          <xs:documentation xml:lang="en">Airway.</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>A-Ventilation</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">A - Airway</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="B-BreathingRate" type="nc1common:MediumTextType">
+        <xs:annotation>
+          <xs:documentation>Rythme respiratoire.</xs:documentation>
+          <xs:documentation xml:lang="en">Breathing Rate.</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>B-Respiration</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">B-Breathing rate</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="C-PulseRate" type="nc1common:MediumTextType">
+        <xs:annotation>
+          <xs:documentation>Rythme cardiaque.</xs:documentation>
+          <xs:documentation xml:lang="en">Pulse rate.</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>C-Cœur</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">C-Heart</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="D-ConsciousOrInconscious" type="nc1common:MediumTextType">
+        <xs:annotation>
+          <xs:documentation>Conscient ou inconscient.</xs:documentation>
+          <xs:documentation xml:lang="en">Specifies if the patient is conscious or unconscious.</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>D-Conscient</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">D-Conscious</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="E-OtherSigns" type="nc1common:MediumTextType">
+        <xs:annotation>
+          <xs:documentation>Autres signes vitaux.</xs:documentation>
+          <xs:documentation xml:lang="en">Other vital signs.</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>E-Autres signes</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">E - Other signs</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

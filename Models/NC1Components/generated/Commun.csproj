@@ -1,0 +1,308 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+	<PropertyGroup>
+		<Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+		<Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+		<ProductVersion>14.0</ProductVersion>
+		<SchemaVersion>2.0</SchemaVersion>
+		<ProjectGuid>{60A15AAB-FE66-41B1-A410-B6C1DE56237D}</ProjectGuid>
+		<OutputType>Library</OutputType>
+		<AppDesignerFolder>Properties</AppDesignerFolder>
+		<RootNamespace>Commun</RootNamespace>
+		<AssemblyName>Commun</AssemblyName>
+		<TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+		<FileAlignment>512</FileAlignment>
+	</PropertyGroup>
+	<PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+		<DebugSymbols>true</DebugSymbols>
+		<DebugType>full</DebugType>
+		<Optimize>false</Optimize>
+		<OutputPath>bin\Debug\</OutputPath>
+		<DefineConstants>DEBUG;TRACE</DefineConstants>
+		<ErrorReport>prompt</ErrorReport>
+		<WarningLevel>4</WarningLevel>
+	</PropertyGroup>
+	<PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+		<DebugType>pdbonly</DebugType>
+		<Optimize>true</Optimize>
+		<OutputPath>bin\Release\</OutputPath>
+		<DefineConstants>TRACE</DefineConstants>
+		<ErrorReport>prompt</ErrorReport>
+		<WarningLevel>4</WarningLevel>
+	</PropertyGroup>
+	<ItemGroup>
+		<Reference Include="System" />
+		<Reference Include="System.Core" />
+		<Reference Include="System.Xml.Linq" />
+		<Reference Include="System.Data.DataSetExtensions" />
+		<Reference Include="Microsoft.Csharp" />
+		<Reference Include="System.Data" />
+		<Reference Include="System.Xml" />
+		<Reference Include="System.Data" />
+		<Reference Include="System.Xml" />
+		<Reference Include="xbrt">
+			<HintPath>C:\xbv270\csharp\xbrt.dll</HintPath>
+		</Reference>
+	</ItemGroup>
+	<ItemGroup>
+		<Compile Include="2DCoordinationMean.cs" />
+		<Compile Include="Common.cs" />
+		<Compile Include="SICS_Dictionaries.cs" />
+		<Compile Include="Object.cs" />
+		<Compile Include="Cbrn.cs" />
+		<Compile Include="Location.cs" />
+		<Compile Include="Communication.cs" />
+		<Compile Include="Ew.cs" />
+		<Compile Include="Message.cs" />
+		<Compile Include="NC1_3DRoute.cs" />
+		<Compile Include="NC1_AcmWez.cs" />
+		<Compile Include="NC1_AirParticipant.cs" />
+		<Compile Include="Logistics.cs" />
+		<Compile Include="Participant.cs" />
+		<Compile Include="NC1_AirTrack.cs" />
+		<Compile Include="Track.cs" />
+		<Compile Include="NC1_CbrnEvent.cs" />
+		<Compile Include="NC1_Convoy.cs" />
+		<Compile Include="NC1_Event.cs" />
+		<Compile Include="Health.cs" />
+		<Compile Include="NC1_Facility.cs" />
+		<Compile Include="NC1_Fire.cs" />
+		<Compile Include="NC1_FireObjective.cs" />
+		<Compile Include="NC1_FreeShape.cs" />
+		<Compile Include="NC1_GroundEntity.cs" />
+		<Compile Include="NC1_GroundParticipant.cs" />
+		<Compile Include="NC1_GroundTrack.cs" />
+		<Compile Include="NC1_IffProcedure.cs" />
+		<Compile Include="NC1_Individual.cs" />
+		<Compile Include="NC1_IntelRequirement.cs" />
+		<Compile Include="NC1_Meteo.cs" />
+		<Compile Include="NC1_Mission.cs" />
+		<Compile Include="NC1_MissionASA.cs" />
+		<Compile Include="NC1_MissionASS.cs" />
+		<Compile Include="NC1_Obstacle.cs" />
+		<Compile Include="NC1_Organisation.cs" />
+		<Compile Include="NC1_Reinforcement.cs" />
+		<Compile Include="NC1_Roe.cs" />
+		<Compile Include="NC1_Route.cs" />
+		<Compile Include="NC1_SeaParticipant.cs" />
+		<Compile Include="NC1_SeaTrack.cs" />
+		<Compile Include="NC1_TacArea.cs" />
+		<Compile Include="NC1_TacLine.cs" />
+		<Compile Include="NC1_TacPoint.cs" />
+		<Compile Include="NC1_Unit.cs" />
+		<Compile Include="NC1_AdmitExitRep.cs" />
+		<Compile Include="NC1_AnnulerTirInterdit.cs" />
+		<Compile Include="NC1_Apercu.cs" />
+		<Compile Include="NC1_Apercu3D.cs" />
+		<Compile Include="NC1_BARREP.cs" />
+		<Compile Include="NC1_BATRECEVACREQ.cs" />
+		<Compile Include="NC1_BDA.cs" />
+		<Compile Include="NC1_BFT.cs" />
+		<Compile Include="NC1_BOAP.cs" />
+		<Compile Include="NC1_TechnOAP.cs" />
+		<Compile Include="NC1_BarReq.cs" />
+		<Compile Include="NC1_CBRN-1-BIO.cs" />
+		<Compile Include="NC1_CBRN-1-CHEM.cs" />
+		<Compile Include="NC1_CBRN-3-BIO.cs" />
+		<Compile Include="NC1_CBRN-3-CHEM.cs" />
+		<Compile Include="NC1_CBRN-4-BIO.cs" />
+		<Compile Include="NC1_CBRN-4-CHEM.cs" />
+		<Compile Include="NC1_CBRN-5-BIO.cs" />
+		<Compile Include="NC1_CBRN-5-CHEM.cs" />
+		<Compile Include="NC1_CBRN-CDR.cs" />
+		<Compile Include="NC1_CBRN-SITREP.cs" />
+		<Compile Include="NC1_CCA-CARD.cs" />
+		<Compile Include="NC1_CallForFire.cs" />
+		<Compile Include="NC1_ConARep.cs" />
+		<Compile Include="NC1_ConOps.cs" />
+		<Compile Include="NC1_OPORD.cs" />
+		<Compile Include="NC1_CreationItsAts.cs" />
+		<Compile Include="NC1_DEPLOYREP.cs" />
+		<Compile Include="NC1_DemaLOrd.cs" />
+		<Compile Include="NC1_ENGRECCEORD.cs" />
+		<Compile Include="NC1_ENGRECCEREP.cs" />
+		<Compile Include="NC1_ENSITREP.cs" />
+		<Compile Include="NC1_EOINCREP.cs" />
+		<Compile Include="NC1_EVENTREP.cs" />
+		<Compile Include="NC1_EWMSNSUM.cs" />
+		<Compile Include="NC1_EWRTM.cs" />
+		<Compile Include="NC1_FinAlerteRaidEni.cs" />
+		<Compile Include="NC1_FireControl.cs" />
+		<Compile Include="NC1_FireReport.cs" />
+		<Compile Include="NC1_HELOPSUM.cs" />
+		<Compile Include="NC1_IGen.cs" />
+		<Compile Include="NC1_INTREP.cs" />
+		<Compile Include="NC1_INTREQ.cs" />
+		<Compile Include="NC1_INTSUM.cs" />
+		<Compile Include="NC1_InitMedRep.cs" />
+		<Compile Include="NC1_InitOdb.cs" />
+		<Compile Include="NC1_ListeEquipementsRessources.cs" />
+		<Compile Include="NC1_MEDEVAC-NINE-LINE.cs" />
+		<Compile Include="NC1_MatDem.cs" />
+		<Compile Include="NC1_MedSitRep.cs" />
+		<Compile Include="NC1_MessageLibre.cs" />
+		<Compile Include="NC1_MovOrder.cs" />
+		<Compile Include="NC1_OBSEXORD.cs" />
+		<Compile Include="NC1_OPORD-AIN.cs" />
+		<Compile Include="NC1_OPORD-ALAT.cs" />
+		<Compile Include="NC1_OPORD-GE.cs" />
+		<Compile Include="NC1_OPORD-GEN.cs" />
+		<Compile Include="NC1_OPORD-LOG.cs" />
+		<Compile Include="NC1_OPORD-MVT.cs" />
+		<Compile Include="NC1_OPORD-OPSEC.cs" />
+		<Compile Include="NC1_OPORD-RENS.cs" />
+		<Compile Include="NC1_OPORD-ROE.cs" />
+		<Compile Include="NC1_OPORD-SIC.cs" />
+		<Compile Include="NC1_OWNSITREP.cs" />
+		<Compile Include="NC1_ObjectiveList.cs" />
+		<Compile Include="NC1_PEMA.cs" />
+		<Compile Include="NC1_PRR.cs" />
+		<Compile Include="NC1_PlanDeVol.cs" />
+		<Compile Include="NC1_PropositionPlanObstacles.cs" />
+		<Compile Include="NC1_Request.cs" />
+		<Compile Include="NC1_STR.cs" />
+		<Compile Include="NC1_SitObst.cs" />
+		<Compile Include="NC1_StAcmConduite.cs" />
+		<Compile Include="NC1_SuppressionItsAts.cs" />
+		<Compile Include="NC1_TactOAP.cs" />
+		<Compile Include="NC1_TechReqInfo.cs" />
+		<Compile Include="NC1_TechStcUpdate.cs" />
+		<Compile Include="NC1_TirInterdit.cs" />
+		<Compile Include="Commun_Derivations.cs" />
+		<Compile Include="AnyType.cs" />
+		<None Include="C:\Users\tof\Desktop\tempo\NC1Components\Commun\2DCoordinationMean.xsd" />
+		<None Include="Common.xsd" />
+		<None Include="SICS_Dictionaries.xsd" />
+		<None Include="Object.xsd" />
+		<None Include="C:\Users\tof\Desktop\tempo\NC1Components\Commun\Cbrn.xsd" />
+		<None Include="Location.xsd" />
+		<None Include="C:\Users\tof\Desktop\tempo\NC1Components\Commun\Communication.xsd" />
+		<None Include="C:\Users\tof\Desktop\tempo\NC1Components\Commun\Ew.xsd" />
+		<None Include="Message.xsd" />
+		<None Include="..\Objet\NC1_3DRoute.xsd" />
+		<None Include="..\Objet\NC1_AcmWez.xsd" />
+		<None Include="..\Objet\NC1_AirParticipant.xsd" />
+		<None Include="..\Commun\Logistics.xsd" />
+		<None Include="..\Commun\Participant.xsd" />
+		<None Include="..\Objet\NC1_AirTrack.xsd" />
+		<None Include="..\Commun\Track.xsd" />
+		<None Include="..\Objet\NC1_CbrnEvent.xsd" />
+		<None Include="..\Objet\NC1_Convoy.xsd" />
+		<None Include="..\Objet\NC1_Event.xsd" />
+		<None Include="..\Commun\Health.xsd" />
+		<None Include="..\Objet\NC1_Facility.xsd" />
+		<None Include="..\Objet\NC1_Fire.xsd" />
+		<None Include="..\Objet\NC1_FireObjective.xsd" />
+		<None Include="..\Objet\NC1_FreeShape.xsd" />
+		<None Include="..\Objet\NC1_GroundEntity.xsd" />
+		<None Include="..\Objet\NC1_GroundParticipant.xsd" />
+		<None Include="..\Objet\NC1_GroundTrack.xsd" />
+		<None Include="..\Objet\NC1_IffProcedure.xsd" />
+		<None Include="..\Objet\NC1_Individual.xsd" />
+		<None Include="..\Objet\NC1_IntelRequirement.xsd" />
+		<None Include="..\Objet\NC1_Meteo.xsd" />
+		<None Include="..\Objet\NC1_Mission.xsd" />
+		<None Include="..\Objet\NC1_MissionASA.xsd" />
+		<None Include="..\Objet\NC1_MissionASS.xsd" />
+		<None Include="..\Objet\NC1_Obstacle.xsd" />
+		<None Include="..\Objet\NC1_Organisation.xsd" />
+		<None Include="..\Objet\NC1_Reinforcement.xsd" />
+		<None Include="..\Objet\NC1_Roe.xsd" />
+		<None Include="..\Objet\NC1_Route.xsd" />
+		<None Include="..\Objet\NC1_SeaParticipant.xsd" />
+		<None Include="..\Objet\NC1_SeaTrack.xsd" />
+		<None Include="..\Objet\NC1_TacArea.xsd" />
+		<None Include="..\Objet\NC1_TacLine.xsd" />
+		<None Include="..\Objet\NC1_TacPoint.xsd" />
+		<None Include="..\Objet\NC1_Unit.xsd" />
+		<None Include="C:\Users\tof\Desktop\tempo\NC1Components\Message\NC1_AdmitExitRep.xsd" />
+		<None Include="C:\Users\tof\Desktop\tempo\NC1Components\Message\NC1_AnnulerTirInterdit.xsd" />
+		<None Include="C:\Users\tof\Desktop\tempo\NC1Components\Message\NC1_Apercu.xsd" />
+		<None Include="C:\Users\tof\Desktop\tempo\NC1Components\Message\NC1_Apercu3D.xsd" />
+		<None Include="C:\Users\tof\Desktop\tempo\NC1Components\Message\NC1_BARREP.xsd" />
+		<None Include="C:\Users\tof\Desktop\tempo\NC1Components\Message\NC1_BATRECEVACREQ.xsd" />
+		<None Include="C:\Users\tof\Desktop\tempo\NC1Components\Message\NC1_BDA.xsd" />
+		<None Include="C:\Users\tof\Desktop\tempo\NC1Components\Message\NC1_BFT.xsd" />
+		<None Include="C:\Users\tof\Desktop\tempo\NC1Components\Message\NC1_BOAP.xsd" />
+		<None Include="C:\Users\tof\Desktop\tempo\NC1Components\Message\NC1_TechnOAP.xsd" />
+		<None Include="C:\Users\tof\Desktop\tempo\NC1Components\Message\NC1_BarReq.xsd" />
+		<None Include="C:\Users\tof\Desktop\tempo\NC1Components\Message\NC1_CBRN-1-BIO.xsd" />
+		<None Include="C:\Users\tof\Desktop\tempo\NC1Components\Message\NC1_CBRN-1-CHEM.xsd" />
+		<None Include="C:\Users\tof\Desktop\tempo\NC1Components\Message\NC1_CBRN-3-BIO.xsd" />
+		<None Include="C:\Users\tof\Desktop\tempo\NC1Components\Message\NC1_CBRN-3-CHEM.xsd" />
+		<None Include="C:\Users\tof\Desktop\tempo\NC1Components\Message\NC1_CBRN-4-BIO.xsd" />
+		<None Include="C:\Users\tof\Desktop\tempo\NC1Components\Message\NC1_CBRN-4-CHEM.xsd" />
+		<None Include="C:\Users\tof\Desktop\tempo\NC1Components\Message\NC1_CBRN-5-BIO.xsd" />
+		<None Include="C:\Users\tof\Desktop\tempo\NC1Components\Message\NC1_CBRN-5-CHEM.xsd" />
+		<None Include="C:\Users\tof\Desktop\tempo\NC1Components\Message\NC1_CBRN-CDR.xsd" />
+		<None Include="C:\Users\tof\Desktop\tempo\NC1Components\Message\NC1_CBRN-SITREP.xsd" />
+		<None Include="C:\Users\tof\Desktop\tempo\NC1Components\Message\NC1_CCA-CARD.xsd" />
+		<None Include="C:\Users\tof\Desktop\tempo\NC1Components\Message\NC1_CallForFire.xsd" />
+		<None Include="C:\Users\tof\Desktop\tempo\NC1Components\Message\NC1_ConARep.xsd" />
+		<None Include="C:\Users\tof\Desktop\tempo\NC1Components\Message\NC1_ConOps.xsd" />
+		<None Include="C:\Users\tof\Desktop\tempo\NC1Components\Message\NC1_OPORD.xsd" />
+		<None Include="C:\Users\tof\Desktop\tempo\NC1Components\Message\NC1_CreationItsAts.xsd" />
+		<None Include="C:\Users\tof\Desktop\tempo\NC1Components\Message\NC1_DEPLOYREP.xsd" />
+		<None Include="C:\Users\tof\Desktop\tempo\NC1Components\Message\NC1_DemaLOrd.xsd" />
+		<None Include="C:\Users\tof\Desktop\tempo\NC1Components\Message\NC1_ENGRECCEORD.xsd" />
+		<None Include="C:\Users\tof\Desktop\tempo\NC1Components\Message\NC1_ENGRECCEREP.xsd" />
+		<None Include="C:\Users\tof\Desktop\tempo\NC1Components\Message\NC1_ENSITREP.xsd" />
+		<None Include="C:\Users\tof\Desktop\tempo\NC1Components\Message\NC1_EOINCREP.xsd" />
+		<None Include="C:\Users\tof\Desktop\tempo\NC1Components\Message\NC1_EVENTREP.xsd" />
+		<None Include="C:\Users\tof\Desktop\tempo\NC1Components\Message\NC1_EWMSNSUM.xsd" />
+		<None Include="C:\Users\tof\Desktop\tempo\NC1Components\Message\NC1_EWRTM.xsd" />
+		<None Include="C:\Users\tof\Desktop\tempo\NC1Components\Message\NC1_FinAlerteRaidEni.xsd" />
+		<None Include="C:\Users\tof\Desktop\tempo\NC1Components\Message\NC1_FireControl.xsd" />
+		<None Include="C:\Users\tof\Desktop\tempo\NC1Components\Message\NC1_FireReport.xsd" />
+		<None Include="C:\Users\tof\Desktop\tempo\NC1Components\Message\NC1_HELOPSUM.xsd" />
+		<None Include="C:\Users\tof\Desktop\tempo\NC1Components\Message\NC1_IGen.xsd" />
+		<None Include="C:\Users\tof\Desktop\tempo\NC1Components\Message\NC1_INTREP.xsd" />
+		<None Include="C:\Users\tof\Desktop\tempo\NC1Components\Message\NC1_INTREQ.xsd" />
+		<None Include="C:\Users\tof\Desktop\tempo\NC1Components\Message\NC1_INTSUM.xsd" />
+		<None Include="C:\Users\tof\Desktop\tempo\NC1Components\Message\NC1_InitMedRep.xsd" />
+		<None Include="C:\Users\tof\Desktop\tempo\NC1Components\Message\NC1_InitOdb.xsd" />
+		<None Include="C:\Users\tof\Desktop\tempo\NC1Components\Message\NC1_ListeEquipementsRessources.xsd" />
+		<None Include="C:\Users\tof\Desktop\tempo\NC1Components\Message\NC1_MEDEVAC-NINE-LINE.xsd" />
+		<None Include="C:\Users\tof\Desktop\tempo\NC1Components\Message\NC1_MatDem.xsd" />
+		<None Include="C:\Users\tof\Desktop\tempo\NC1Components\Message\NC1_MedSitRep.xsd" />
+		<None Include="C:\Users\tof\Desktop\tempo\NC1Components\Message\NC1_MessageLibre.xsd" />
+		<None Include="C:\Users\tof\Desktop\tempo\NC1Components\Message\NC1_MovOrder.xsd" />
+		<None Include="C:\Users\tof\Desktop\tempo\NC1Components\Message\NC1_OBSEXORD.xsd" />
+		<None Include="C:\Users\tof\Desktop\tempo\NC1Components\Message\NC1_OPORD-AIN.xsd" />
+		<None Include="C:\Users\tof\Desktop\tempo\NC1Components\Message\NC1_OPORD-ALAT.xsd" />
+		<None Include="C:\Users\tof\Desktop\tempo\NC1Components\Message\NC1_OPORD-GE.xsd" />
+		<None Include="C:\Users\tof\Desktop\tempo\NC1Components\Message\NC1_OPORD-GEN.xsd" />
+		<None Include="C:\Users\tof\Desktop\tempo\NC1Components\Message\NC1_OPORD-LOG.xsd" />
+		<None Include="C:\Users\tof\Desktop\tempo\NC1Components\Message\NC1_OPORD-MVT.xsd" />
+		<None Include="C:\Users\tof\Desktop\tempo\NC1Components\Message\NC1_OPORD-OPSEC.xsd" />
+		<None Include="C:\Users\tof\Desktop\tempo\NC1Components\Message\NC1_OPORD-RENS.xsd" />
+		<None Include="C:\Users\tof\Desktop\tempo\NC1Components\Message\NC1_OPORD-ROE.xsd" />
+		<None Include="C:\Users\tof\Desktop\tempo\NC1Components\Message\NC1_OPORD-SIC.xsd" />
+		<None Include="C:\Users\tof\Desktop\tempo\NC1Components\Message\NC1_OWNSITREP.xsd" />
+		<None Include="C:\Users\tof\Desktop\tempo\NC1Components\Message\NC1_ObjectiveList.xsd" />
+		<None Include="C:\Users\tof\Desktop\tempo\NC1Components\Message\NC1_PEMA.xsd" />
+		<None Include="C:\Users\tof\Desktop\tempo\NC1Components\Message\NC1_PRR.xsd" />
+		<None Include="C:\Users\tof\Desktop\tempo\NC1Components\Message\NC1_PlanDeVol.xsd" />
+		<None Include="C:\Users\tof\Desktop\tempo\NC1Components\Message\NC1_PropositionPlanObstacles.xsd" />
+		<None Include="C:\Users\tof\Desktop\tempo\NC1Components\Message\NC1_Request.xsd" />
+		<None Include="C:\Users\tof\Desktop\tempo\NC1Components\Message\NC1_STR.xsd" />
+		<None Include="C:\Users\tof\Desktop\tempo\NC1Components\Message\NC1_SitObst.xsd" />
+		<None Include="C:\Users\tof\Desktop\tempo\NC1Components\Message\NC1_StAcmConduite.xsd" />
+		<None Include="C:\Users\tof\Desktop\tempo\NC1Components\Message\NC1_SuppressionItsAts.xsd" />
+		<None Include="C:\Users\tof\Desktop\tempo\NC1Components\Message\NC1_TactOAP.xsd" />
+		<None Include="C:\Users\tof\Desktop\tempo\NC1Components\Message_Service\NC1_TechReqInfo.xsd" />
+		<None Include="C:\Users\tof\Desktop\tempo\NC1Components\Message_Service\NC1_TechStcUpdate.xsd" />
+		<None Include="C:\Users\tof\Desktop\tempo\NC1Components\Message\NC1_TirInterdit.xsd" />
+	</ItemGroup>
+	<PropertyGroup>
+		<PreBuildEvent>C:\xbv270\bin\xbinder C:\Users\tof\Desktop\tempo\NC1Components\Commun\2DCoordinationMean.xsd  ..\..\Common.xsd  ..\..\SICS_Dictionaries.xsd  ..\..\Object.xsd  C:\Users\tof\Desktop\tempo\NC1Components\Commun\Cbrn.xsd  ..\..\Location.xsd  C:\Users\tof\Desktop\tempo\NC1Components\Commun\Communication.xsd  C:\Users\tof\Desktop\tempo\NC1Components\Commun\Ew.xsd  ..\..\Message.xsd  ..\Objet\NC1_3DRoute.xsd  ..\Objet\NC1_AcmWez.xsd  ..\Objet\NC1_AirParticipant.xsd  ..\Commun\Logistics.xsd  ..\Commun\Participant.xsd  ..\Objet\NC1_AirTrack.xsd  ..\Commun\Track.xsd  ..\Objet\NC1_CbrnEvent.xsd  ..\Objet\NC1_Convoy.xsd  ..\Objet\NC1_Event.xsd  ..\Commun\Health.xsd  ..\Objet\NC1_Facility.xsd  ..\Objet\NC1_Fire.xsd  ..\Objet\NC1_FireObjective.xsd  ..\Objet\NC1_FreeShape.xsd  ..\Objet\NC1_GroundEntity.xsd  ..\Objet\NC1_GroundParticipant.xsd  ..\Objet\NC1_GroundTrack.xsd  ..\Objet\NC1_IffProcedure.xsd  ..\Objet\NC1_Individual.xsd  ..\Objet\NC1_IntelRequirement.xsd  ..\Objet\NC1_Meteo.xsd  ..\Objet\NC1_Mission.xsd  ..\Objet\NC1_MissionASA.xsd  ..\Objet\NC1_MissionASS.xsd  ..\Objet\NC1_Obstacle.xsd  ..\Objet\NC1_Organisation.xsd  ..\Objet\NC1_Reinforcement.xsd  ..\Objet\NC1_Roe.xsd  ..\Objet\NC1_Route.xsd  ..\Objet\NC1_SeaParticipant.xsd  ..\Objet\NC1_SeaTrack.xsd  ..\Objet\NC1_TacArea.xsd  ..\Objet\NC1_TacLine.xsd  ..\Objet\NC1_TacPoint.xsd  ..\Objet\NC1_Unit.xsd  C:\Users\tof\Desktop\tempo\NC1Components\Message\NC1_AdmitExitRep.xsd  C:\Users\tof\Desktop\tempo\NC1Components\Message\NC1_AnnulerTirInterdit.xsd  C:\Users\tof\Desktop\tempo\NC1Components\Message\NC1_Apercu.xsd  C:\Users\tof\Desktop\tempo\NC1Components\Message\NC1_Apercu3D.xsd  C:\Users\tof\Desktop\tempo\NC1Components\Message\NC1_BARREP.xsd  C:\Users\tof\Desktop\tempo\NC1Components\Message\NC1_BATRECEVACREQ.xsd  C:\Users\tof\Desktop\tempo\NC1Components\Message\NC1_BDA.xsd  C:\Users\tof\Desktop\tempo\NC1Components\Message\NC1_BFT.xsd  C:\Users\tof\Desktop\tempo\NC1Components\Message\NC1_BOAP.xsd  C:\Users\tof\Desktop\tempo\NC1Components\Message\NC1_TechnOAP.xsd  C:\Users\tof\Desktop\tempo\NC1Components\Message\NC1_BarReq.xsd  C:\Users\tof\Desktop\tempo\NC1Components\Message\NC1_CBRN-1-BIO.xsd  C:\Users\tof\Desktop\tempo\NC1Components\Message\NC1_CBRN-1-CHEM.xsd  C:\Users\tof\Desktop\tempo\NC1Components\Message\NC1_CBRN-3-BIO.xsd  C:\Users\tof\Desktop\tempo\NC1Components\Message\NC1_CBRN-3-CHEM.xsd  C:\Users\tof\Desktop\tempo\NC1Components\Message\NC1_CBRN-4-BIO.xsd  C:\Users\tof\Desktop\tempo\NC1Components\Message\NC1_CBRN-4-CHEM.xsd  C:\Users\tof\Desktop\tempo\NC1Components\Message\NC1_CBRN-5-BIO.xsd  C:\Users\tof\Desktop\tempo\NC1Components\Message\NC1_CBRN-5-CHEM.xsd  C:\Users\tof\Desktop\tempo\NC1Components\Message\NC1_CBRN-CDR.xsd  C:\Users\tof\Desktop\tempo\NC1Components\Message\NC1_CBRN-SITREP.xsd  C:\Users\tof\Desktop\tempo\NC1Components\Message\NC1_CCA-CARD.xsd  C:\Users\tof\Desktop\tempo\NC1Components\Message\NC1_CallForFire.xsd  C:\Users\tof\Desktop\tempo\NC1Components\Message\NC1_ConARep.xsd  C:\Users\tof\Desktop\tempo\NC1Components\Message\NC1_ConOps.xsd  C:\Users\tof\Desktop\tempo\NC1Components\Message\NC1_OPORD.xsd  C:\Users\tof\Desktop\tempo\NC1Components\Message\NC1_CreationItsAts.xsd  C:\Users\tof\Desktop\tempo\NC1Components\Message\NC1_DEPLOYREP.xsd  C:\Users\tof\Desktop\tempo\NC1Components\Message\NC1_DemaLOrd.xsd  C:\Users\tof\Desktop\tempo\NC1Components\Message\NC1_ENGRECCEORD.xsd  C:\Users\tof\Desktop\tempo\NC1Components\Message\NC1_ENGRECCEREP.xsd  C:\Users\tof\Desktop\tempo\NC1Components\Message\NC1_ENSITREP.xsd  C:\Users\tof\Desktop\tempo\NC1Components\Message\NC1_EOINCREP.xsd  C:\Users\tof\Desktop\tempo\NC1Components\Message\NC1_EVENTREP.xsd  C:\Users\tof\Desktop\tempo\NC1Components\Message\NC1_EWMSNSUM.xsd  C:\Users\tof\Desktop\tempo\NC1Components\Message\NC1_EWRTM.xsd  C:\Users\tof\Desktop\tempo\NC1Components\Message\NC1_FinAlerteRaidEni.xsd  C:\Users\tof\Desktop\tempo\NC1Components\Message\NC1_FireControl.xsd  C:\Users\tof\Desktop\tempo\NC1Components\Message\NC1_FireReport.xsd  C:\Users\tof\Desktop\tempo\NC1Components\Message\NC1_HELOPSUM.xsd  C:\Users\tof\Desktop\tempo\NC1Components\Message\NC1_IGen.xsd  C:\Users\tof\Desktop\tempo\NC1Components\Message\NC1_INTREP.xsd  C:\Users\tof\Desktop\tempo\NC1Components\Message\NC1_INTREQ.xsd  C:\Users\tof\Desktop\tempo\NC1Components\Message\NC1_INTSUM.xsd  C:\Users\tof\Desktop\tempo\NC1Components\Message\NC1_InitMedRep.xsd  C:\Users\tof\Desktop\tempo\NC1Components\Message\NC1_InitOdb.xsd  C:\Users\tof\Desktop\tempo\NC1Components\Message\NC1_ListeEquipementsRessources.xsd  C:\Users\tof\Desktop\tempo\NC1Components\Message\NC1_MEDEVAC-NINE-LINE.xsd  C:\Users\tof\Desktop\tempo\NC1Components\Message\NC1_MatDem.xsd  C:\Users\tof\Desktop\tempo\NC1Components\Message\NC1_MedSitRep.xsd  C:\Users\tof\Desktop\tempo\NC1Components\Message\NC1_MessageLibre.xsd  C:\Users\tof\Desktop\tempo\NC1Components\Message\NC1_MovOrder.xsd  C:\Users\tof\Desktop\tempo\NC1Components\Message\NC1_OBSEXORD.xsd  C:\Users\tof\Desktop\tempo\NC1Components\Message\NC1_OPORD-AIN.xsd  C:\Users\tof\Desktop\tempo\NC1Components\Message\NC1_OPORD-ALAT.xsd  C:\Users\tof\Desktop\tempo\NC1Components\Message\NC1_OPORD-GE.xsd  C:\Users\tof\Desktop\tempo\NC1Components\Message\NC1_OPORD-GEN.xsd  C:\Users\tof\Desktop\tempo\NC1Components\Message\NC1_OPORD-LOG.xsd  C:\Users\tof\Desktop\tempo\NC1Components\Message\NC1_OPORD-MVT.xsd  C:\Users\tof\Desktop\tempo\NC1Components\Message\NC1_OPORD-OPSEC.xsd  C:\Users\tof\Desktop\tempo\NC1Components\Message\NC1_OPORD-RENS.xsd  C:\Users\tof\Desktop\tempo\NC1Components\Message\NC1_OPORD-ROE.xsd  C:\Users\tof\Desktop\tempo\NC1Components\Message\NC1_OPORD-SIC.xsd  C:\Users\tof\Desktop\tempo\NC1Components\Message\NC1_OWNSITREP.xsd  C:\Users\tof\Desktop\tempo\NC1Components\Message\NC1_ObjectiveList.xsd  C:\Users\tof\Desktop\tempo\NC1Components\Message\NC1_PEMA.xsd  C:\Users\tof\Desktop\tempo\NC1Components\Message\NC1_PRR.xsd  C:\Users\tof\Desktop\tempo\NC1Components\Message\NC1_PlanDeVol.xsd  C:\Users\tof\Desktop\tempo\NC1Components\Message\NC1_PropositionPlanObstacles.xsd  C:\Users\tof\Desktop\tempo\NC1Components\Message\NC1_Request.xsd  C:\Users\tof\Desktop\tempo\NC1Components\Message\NC1_STR.xsd  C:\Users\tof\Desktop\tempo\NC1Components\Message\NC1_SitObst.xsd  C:\Users\tof\Desktop\tempo\NC1Components\Message\NC1_StAcmConduite.xsd  C:\Users\tof\Desktop\tempo\NC1Components\Message\NC1_SuppressionItsAts.xsd  C:\Users\tof\Desktop\tempo\NC1Components\Message\NC1_TactOAP.xsd  C:\Users\tof\Desktop\tempo\NC1Components\Message_Service\NC1_TechReqInfo.xsd  C:\Users\tof\Desktop\tempo\NC1Components\Message_Service\NC1_TechStcUpdate.xsd  C:\Users\tof\Desktop\tempo\NC1Components\Message\NC1_TirInterdit.xsd  -csharp -xml -I C:\Users\tof\Desktop\tempo\NC1Components\Commun -I C:\Users\tof\Desktop\tempo\NC1Components\Message -I C:\Users\tof\Desktop\tempo\NC1Components\Message_Service -csfile *.cs -elemCasing lower -typeCasing upper -o ..\.. -csnsname Commun</PreBuildEvent>
+	</PropertyGroup>
+	<Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+	<!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+	     Other similar extension points exist, see Microsoft.Common.targets.
+	<Target Name="BeforeBuild">
+	</Target>
+	<Target Name="AfterBuild">
+	</Target>
+	-->
+</Project>

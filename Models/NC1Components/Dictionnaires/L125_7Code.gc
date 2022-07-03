@@ -1,0 +1,196 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<gc:CodeList xmlns:nc1dico="urn:fra:nc1:dictionnaires" xmlns:gc="http://docs.oasis-open.org/codelist/ns/genericode/1.0/">
+  <Annotation>
+    <Description>
+      <nc1dico:description>DESCRIPTION DE L'ETAT DE DISPONIBILITE D'UNE UNITE POUR ETRE OPERATIONNELLE
+DICO STAT 283</nc1dico:description>
+      <nc1dico:description xml:lang="en">Description of the state of readiness of a unit to be operational ((STAT dictionary 283)</nc1dico:description>
+    </Description>
+    <AppInfo>
+      <nc1dico:source>SFTT 3.4.8</nc1dico:source>
+      <nc1dico:derogation>ORGANISATIONSTATUSAVAILABILITYCODE</nc1dico:derogation>
+    </AppInfo>
+  </Annotation>
+  <Identification>
+    <ShortName>L125_7Code</ShortName>
+    <Version>9.0.0</Version>
+    <CanonicalUri>urn:fra:nc1:common:sicsdicos:L125_7Code</CanonicalUri>
+    <CanonicalVersionUri>urn:fra:nc1:common:sicsdicos:L125_7Code:9.0.0</CanonicalVersionUri>
+  </Identification>
+  <ColumnSet DatatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes">
+    <Column Id="code" Use="required">
+      <ShortName>Code</ShortName>
+      <Data Type="int" />
+    </Column>
+    <Column Id="short" Use="required">
+      <ShortName>Short</ShortName>
+      <Data Type="string" />
+    </Column>
+    <Column Id="long" Use="optional">
+      <ShortName>Long</ShortName>
+      <Data Type="string" />
+    </Column>
+    <Column Id="short-en" Use="optional">
+      <ShortName>Short anglais</ShortName>
+      <Data Type="string" />
+    </Column>
+    <Column Id="long-en" Use="optional">
+      <ShortName>Long anglais</ShortName>
+      <Data Type="string" />
+    </Column>
+    <Column Id="parent" Use="optional">
+      <ShortName>Parent</ShortName>
+      <Data Type="int" />
+    </Column>
+    <Column Id="codeSymbole" Use="optional">
+      <ShortName>Code Symbole</ShortName>
+      <Data Type="string" />
+    </Column>
+    <Column Id="codeHierarchique" Use="optional">
+      <ShortName>Code Hierarchique</ShortName>
+      <Data Type="string" />
+    </Column>
+    <Key Id="codeKey">
+      <ShortName>CodeKey</ShortName>
+      <ColumnRef Ref="code" />
+    </Key>
+  </ColumnSet>
+  <SimpleCodeList>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>0</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>-</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>NO STATEMENT</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>-</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>NO STATEMENT</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>1</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>APRES 30J</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>APRES 30 JOURS</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>AFT30D</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>AFTER 30 DAYS</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>2</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>ENTRE 16 ET 30J</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>ENTRE 16 ET 30 JOURS</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>BTW1630D</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>BETWEEN 16 AND 30 DAYS</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>3</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>ENTRE 48H ET 4J</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>ENTRE 48 HEURES ET 4 JOURS</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>BTW48H4D</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>BETWEEN 48 HOURS AND 4 DAYS</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>4</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>ENTRE 5 ET 15J</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>ENTRE 5 ET 15 JOURS</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>BTW515D</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>BETWEEN 5 AND 15 DAYS</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>5</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>INDISPONIBLE</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>INDISPONIBLE</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>NA</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>NOT AVAILABLE</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>6</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>DANS LES 24H</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>DANS LES 24 HEURES</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>WTN24H</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>WITHIN 24 HOURS</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>7</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>DANS LES 48H</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>DANS LES 48 HEURES</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>WTN48H</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>WITHIN 48 HOURS</SimpleValue>
+      </Value>
+    </Row>
+  </SimpleCodeList>
+</gc:CodeList>

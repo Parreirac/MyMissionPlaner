@@ -1,0 +1,127 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<gc:CodeList xmlns:nc1dico="urn:fra:nc1:dictionnaires" xmlns:gc="http://docs.oasis-open.org/codelist/ns/genericode/1.0/">
+  <Annotation>
+    <Description>
+      <nc1dico:description>PERMET DE DEFINIR UN NIVEAU DE CAPACITE OPERATIONNEL DANS LE DOMAINE DES EFFECTIFS, DES MATERIELS, DES RESSOURCES OU SUR LE PLAN GLOBAL. IL S'AGIT D'UN NIVEAU DE CAPACITE EXPRIME EN POURCENTAGE DE &lt;60% A &gt;90 D'UNE UNITE DANS LE BUT D'EVALUER SA CAPAOPS.</nc1dico:description>
+      <nc1dico:description xml:lang="en">Description of the potential of armament / ammunitions / foods / fuel of a unit to estimate its CAPAOPS.</nc1dico:description>
+    </Description>
+    <AppInfo>
+      <nc1dico:source>SFTT 3.4.8</nc1dico:source>
+      <nc1dico:derogation>CAPAOPS MATERIEL/ARMEMENT/MUNITIONS/CARBURANT/EFFECTIF</nc1dico:derogation>
+    </AppInfo>
+  </Annotation>
+  <Identification>
+    <ShortName>L125_17Code</ShortName>
+    <Version>9.0.0</Version>
+    <CanonicalUri>urn:fra:nc1:common:sicsdicos:L125_17Code</CanonicalUri>
+    <CanonicalVersionUri>urn:fra:nc1:common:sicsdicos:L125_17Code:9.0.0</CanonicalVersionUri>
+  </Identification>
+  <ColumnSet DatatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes">
+    <Column Id="code" Use="required">
+      <ShortName>Code</ShortName>
+      <Data Type="int" />
+    </Column>
+    <Column Id="short" Use="required">
+      <ShortName>Short</ShortName>
+      <Data Type="string" />
+    </Column>
+    <Column Id="long" Use="optional">
+      <ShortName>Long</ShortName>
+      <Data Type="string" />
+    </Column>
+    <Column Id="short-en" Use="optional">
+      <ShortName>Short anglais</ShortName>
+      <Data Type="string" />
+    </Column>
+    <Column Id="long-en" Use="optional">
+      <ShortName>Long anglais</ShortName>
+      <Data Type="string" />
+    </Column>
+    <Column Id="parent" Use="optional">
+      <ShortName>Parent</ShortName>
+      <Data Type="int" />
+    </Column>
+    <Column Id="codeSymbole" Use="optional">
+      <ShortName>Code Symbole</ShortName>
+      <Data Type="string" />
+    </Column>
+    <Column Id="codeHierarchique" Use="optional">
+      <ShortName>Code Hierarchique</ShortName>
+      <Data Type="string" />
+    </Column>
+    <Key Id="codeKey">
+      <ShortName>CodeKey</ShortName>
+      <ColumnRef Ref="code" />
+    </Key>
+  </ColumnSet>
+  <SimpleCodeList>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>0</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>&gt;90%</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>SUPERIEUR A 90%</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>&gt;90%</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>OVER 90%</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>1</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>75%..90%</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>75-90%</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>75%..90%</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>BETWEEN 75% AND 90%</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>2</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>60%..75%</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>60-75%</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>60%..75%</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>BETWEEN 60% AND 75%</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>3</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>&lt;60%</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>INFERIEUR A 60%</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>&lt;60%</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>BELOW 60%</SimpleValue>
+      </Value>
+    </Row>
+  </SimpleCodeList>
+</gc:CodeList>

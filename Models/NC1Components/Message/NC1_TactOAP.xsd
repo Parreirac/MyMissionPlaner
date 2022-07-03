@@ -1,0 +1,238 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema targetNamespace="urn:fra:nc1:message:tactoap" xmlns:nc1ihm="urn:fra:nc1:IHM" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:nc1tactoap="urn:fra:nc1:message:tactoap" xmlns:nc1common="urn:fra:nc1:common:attribute" xmlns:nc1msgcom="urn:fra:nc1:common:message">
+  <!-- NC1 V.9.0.0 -->
+  <xs:import namespace="urn:fra:nc1:common:attribute" schemaLocation="../Commun/Common.xsd" />
+  <xs:import namespace="urn:fra:nc1:common:message" schemaLocation="../Commun/Message.xsd" />
+  <xs:element name="NC1_TactOAP">
+    <xs:annotation>
+      <xs:documentation>Le message NC1_TactOAP sert à transmettre aux unités subordonnées l'ordre tactique particulier d'une opération aéroportée.</xs:documentation>
+      <xs:documentation xml:lang="en">The NC1_TactOAP message serves to transmit to the subordinated units the particular tactical order of an airborne operation.</xs:documentation>
+      <xs:appinfo>
+        <nc1:type xmlns:nc1="urn:fra:nc1">Message</nc1:type>
+        <nc1ihm:Nom>Ordre tactique pour une opération aéroportée</nc1ihm:Nom>
+        <nc1ihm:Nom xml:lang="en">Tactical order for airborne operation</nc1ihm:Nom>
+        <nc1:MessH xmlns:nc1="urn:fra:nc1">N/A</nc1:MessH>
+        <nc1:MessADatP3 xmlns:nc1="urn:fra:nc1">N/A</nc1:MessADatP3>
+        <nc1:LastNC1ModifyVersion xmlns:nc1="urn:fra:nc1">9.0.0</nc1:LastNC1ModifyVersion>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:complexContent>
+        <xs:extension base="nc1msgcom:BaseMessageType">
+          <xs:sequence>
+            <xs:element minOccurs="0" name="name" type="nc1common:ShortTextType">
+              <xs:annotation>
+                <xs:documentation>Nom de l'ordre tactique d'opération aéroportée.</xs:documentation>
+                <xs:documentation xml:lang="en">Airborne operation tactical order.</xs:documentation>
+                <xs:appinfo>
+                  <nc1ihm:Nom>Nom</nc1ihm:Nom>
+                  <nc1ihm:Nom xml:lang="en">name</nc1ihm:Nom>
+                </xs:appinfo>
+              </xs:annotation>
+            </xs:element>
+            <xs:element minOccurs="0" name="_1_situation">
+              <xs:annotation>
+                <xs:documentation>Situation.</xs:documentation>
+                <xs:documentation xml:lang="en">Situation.</xs:documentation>
+                <xs:appinfo>
+                  <nc1ihm:Nom>1 - Situation</nc1ihm:Nom>
+                  <nc1ihm:Nom xml:lang="en">1 - Situation</nc1ihm:Nom>
+                </xs:appinfo>
+              </xs:annotation>
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element minOccurs="0" name="A_enemySituation" type="nc1msgcom:MixedAnyType">
+                    <xs:annotation>
+                      <xs:documentation>Situation ennemie.</xs:documentation>
+                      <xs:documentation xml:lang="en">Enemy situation.</xs:documentation>
+                      <xs:appinfo>
+                        <nc1ihm:Nom>A - Situation ennemie</nc1ihm:Nom>
+                        <nc1ihm:Nom xml:lang="en">A - Enemy situation</nc1ihm:Nom>
+                      </xs:appinfo>
+                    </xs:annotation>
+                  </xs:element>
+                  <xs:element minOccurs="0" name="B_ownForcesSituation" type="nc1msgcom:MixedAnyType">
+                    <xs:annotation>
+                      <xs:documentation>Situation amie.</xs:documentation>
+                      <xs:documentation xml:lang="en">Friendly situation.</xs:documentation>
+                      <xs:appinfo>
+                        <nc1ihm:Nom>B - Situation amie</nc1ihm:Nom>
+                        <nc1ihm:Nom xml:lang="en">B - Own forces situation</nc1ihm:Nom>
+                      </xs:appinfo>
+                    </xs:annotation>
+                  </xs:element>
+                  <xs:element minOccurs="0" name="C_airSituation" type="nc1msgcom:MixedAnyType">
+                    <xs:annotation>
+                      <xs:documentation>Situation aérienne.</xs:documentation>
+                      <xs:documentation xml:lang="en">Air situation.</xs:documentation>
+                      <xs:appinfo>
+                        <nc1ihm:Nom>C - Situation aérienne</nc1ihm:Nom>
+                        <nc1ihm:Nom xml:lang="en">C - Air situation</nc1ihm:Nom>
+                      </xs:appinfo>
+                    </xs:annotation>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element minOccurs="0" name="_2_aim" type="nc1msgcom:MixedAnyType">
+              <xs:annotation>
+                <xs:documentation>But de l'opération aéroportée.</xs:documentation>
+                <xs:documentation xml:lang="en">Airborne operation purpose.</xs:documentation>
+                <xs:appinfo>
+                  <nc1ihm:Nom>2 - But</nc1ihm:Nom>
+                  <nc1ihm:Nom xml:lang="en">2 - Aim</nc1ihm:Nom>
+                </xs:appinfo>
+              </xs:annotation>
+            </xs:element>
+            <xs:element minOccurs="0" name="_3_missions">
+              <xs:annotation>
+                <xs:documentation>Missions.</xs:documentation>
+                <xs:documentation xml:lang="en">Missions.</xs:documentation>
+                <xs:appinfo>
+                  <nc1ihm:Nom>3 - Missions</nc1ihm:Nom>
+                  <nc1ihm:Nom xml:lang="en">3 - Missions</nc1ihm:Nom>
+                </xs:appinfo>
+              </xs:annotation>
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element minOccurs="0" name="A_airborneUnitsMission" type="nc1msgcom:MixedAnyType">
+                    <xs:annotation>
+                      <xs:documentation>Mission des troupes aéroportées.</xs:documentation>
+                      <xs:documentation xml:lang="en">Airborne units mission.</xs:documentation>
+                      <xs:appinfo>
+                        <nc1ihm:Nom>A - Mission TAP</nc1ihm:Nom>
+                        <nc1ihm:Nom xml:lang="en">A - Airborne mission</nc1ihm:Nom>
+                      </xs:appinfo>
+                    </xs:annotation>
+                  </xs:element>
+                  <xs:element minOccurs="0" name="B_transportCommandUnitMission" type="nc1msgcom:MixedAnyType">
+                    <xs:annotation>
+                      <xs:documentation>Mission du commandement du groupement de transport.</xs:documentation>
+                      <xs:documentation xml:lang="en">Transport command unit mission.</xs:documentation>
+                      <xs:appinfo>
+                        <nc1ihm:Nom>B - Mission du CGT</nc1ihm:Nom>
+                        <nc1ihm:Nom xml:lang="en">B - Transport command unit mission</nc1ihm:Nom>
+                      </xs:appinfo>
+                    </xs:annotation>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element minOccurs="0" name="_4_support">
+              <xs:annotation>
+                <xs:documentation>Appuis.</xs:documentation>
+                <xs:documentation xml:lang="en">Support.</xs:documentation>
+                <xs:appinfo>
+                  <nc1ihm:Nom>4 - Appuis</nc1ihm:Nom>
+                  <nc1ihm:Nom xml:lang="en">4 - Supports</nc1ihm:Nom>
+                </xs:appinfo>
+              </xs:annotation>
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element minOccurs="0" name="A_landingPeriod" type="nc1msgcom:MixedAnyType">
+                    <xs:annotation>
+                      <xs:documentation>Appuis durant la période de mise à terre.</xs:documentation>
+                      <xs:documentation xml:lang="en">Support during drop.</xs:documentation>
+                      <xs:appinfo>
+                        <nc1ihm:Nom>A - Mise à terre</nc1ihm:Nom>
+                        <nc1ihm:Nom xml:lang="en">A - Landing</nc1ihm:Nom>
+                      </xs:appinfo>
+                    </xs:annotation>
+                  </xs:element>
+                  <xs:element minOccurs="0" name="B_nextSupport" type="nc1msgcom:MixedAnyType">
+                    <xs:annotation>
+                      <xs:documentation>Soutien ultérieur.</xs:documentation>
+                      <xs:documentation xml:lang="en">Next support.</xs:documentation>
+                      <xs:appinfo>
+                        <nc1ihm:Nom>B - Soutien ultérieur</nc1ihm:Nom>
+                        <nc1ihm:Nom xml:lang="en">B - Next support</nc1ihm:Nom>
+                      </xs:appinfo>
+                    </xs:annotation>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element minOccurs="0" name="_5_logisticSupport">
+              <xs:annotation>
+                <xs:documentation>Logistique.</xs:documentation>
+                <xs:documentation xml:lang="en">Logistic support.</xs:documentation>
+                <xs:appinfo>
+                  <nc1ihm:Nom>5 - Logistique</nc1ihm:Nom>
+                  <nc1ihm:Nom xml:lang="en">5 - Logistics</nc1ihm:Nom>
+                </xs:appinfo>
+              </xs:annotation>
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element minOccurs="0" name="A_onHandHoldings" type="nc1msgcom:MixedAnyType">
+                    <xs:annotation>
+                      <xs:documentation>Dotations emportées.</xs:documentation>
+                      <xs:documentation xml:lang="en">Holdings.</xs:documentation>
+                      <xs:appinfo>
+                        <nc1ihm:Nom>A - Dotations emportées</nc1ihm:Nom>
+                        <nc1ihm:Nom xml:lang="en">A - Holdings</nc1ihm:Nom>
+                      </xs:appinfo>
+                    </xs:annotation>
+                  </xs:element>
+                  <xs:element minOccurs="0" name="B_nextSupport" type="nc1msgcom:MixedAnyType">
+                    <xs:annotation>
+                      <xs:documentation>Soutien ultérieur.</xs:documentation>
+                      <xs:documentation xml:lang="en">Next support.</xs:documentation>
+                      <xs:appinfo>
+                        <nc1ihm:Nom>B - Soutien ultérieur</nc1ihm:Nom>
+                        <nc1ihm:Nom xml:lang="en">B - Next support</nc1ihm:Nom>
+                      </xs:appinfo>
+                    </xs:annotation>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element minOccurs="0" name="_6_commandAndTransmissions">
+              <xs:annotation>
+                <xs:documentation>Commandement et liaisons.</xs:documentation>
+                <xs:documentation xml:lang="en">Command and transmissions.</xs:documentation>
+                <xs:appinfo>
+                  <nc1ihm:Nom>6 - Commandement et liaisons</nc1ihm:Nom>
+                  <nc1ihm:Nom xml:lang="en">6 - Command and transmissions</nc1ihm:Nom>
+                </xs:appinfo>
+              </xs:annotation>
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element minOccurs="0" name="A_afterLandingSubordination" type="nc1msgcom:MixedAnyType">
+                    <xs:annotation>
+                      <xs:documentation>Subordination des troupes aéroportées après mise à terre.</xs:documentation>
+                      <xs:documentation xml:lang="en">Subordination of airborne units after landing.</xs:documentation>
+                      <xs:appinfo>
+                        <nc1ihm:Nom>A - Subordination après mise à terre</nc1ihm:Nom>
+                        <nc1ihm:Nom xml:lang="en">A - After landing subordination</nc1ihm:Nom>
+                      </xs:appinfo>
+                    </xs:annotation>
+                  </xs:element>
+                  <xs:element minOccurs="0" name="B_transmissions" type="nc1common:LongTextType">
+                    <xs:annotation>
+                      <xs:documentation>Liaisons pendant, et après l'opération aéroportée (nature, nom, indicatif, fréquence, etc.).</xs:documentation>
+                      <xs:documentation xml:lang="en">Links during and after the airborne operation (type, name, code, frequency, etc.).</xs:documentation>
+                      <xs:appinfo>
+                        <nc1ihm:Nom>B - Liaisons</nc1ihm:Nom>
+                        <nc1ihm:Nom xml:lang="en">B - Transmissions</nc1ihm:Nom>
+                      </xs:appinfo>
+                    </xs:annotation>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element minOccurs="0" name="comment" type="nc1msgcom:CommentSectionType">
+              <xs:annotation>
+                <xs:documentation>Commentaire en texte libre.</xs:documentation>
+                <xs:documentation xml:lang="en">free text comment.</xs:documentation>
+                <xs:appinfo>
+                  <nc1ihm:Nom>Commentaire</nc1ihm:Nom>
+                  <nc1ihm:Nom xml:lang="en">comment</nc1ihm:Nom>
+                </xs:appinfo>
+              </xs:annotation>
+            </xs:element>
+          </xs:sequence>
+        </xs:extension>
+      </xs:complexContent>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

@@ -1,0 +1,4414 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<gc:CodeList xmlns:nc1dico="urn:fra:nc1:dictionnaires" xmlns:gc="http://docs.oasis-open.org/codelist/ns/genericode/1.0/">
+  <Annotation>
+    <Description>
+      <nc1dico:description>DECRIT LA NATIONALITE D'UN OBJET.
+CORRESPOND AU CHAMP NATIONALITE DU SYMBOLCODEID APP6 (CARACTERES 13 ET 14). LE FORMAT DU CODE SYMBOLE EST DEFINI DANS L’ANNEXE B DE LA NORME APP-6(B) . LE CODE COMPLET EST SUR 15 CARACTERES.
+FUSION DES LISTES NATIONS DANS STANAG 5516_ED6 P. 6390 A 6397 (COMPATIBLE APP6C TABLE A-8)
+CODES PAYS = SOIT REFERENCE FIPS 10-4, SOIT ISO 316653 ALPHA 2</nc1dico:description>
+      <nc1dico:description xml:lang="en">Described the nationality of an object. NATIONALITY of SymbolCodeID APP6 (bits 13 and 14) corresponds to the field. The format of the code symbol is defined in the appendix B of the standard APP-6 ( B ). The complete code is on 15 bits. Fusion of lists nations in STANAG 5516_Ed6 p. 6390 - 6397 (compatible APP6C Banks A-8)</nc1dico:description>
+    </Description>
+    <AppInfo>
+      <nc1dico:source>SFTT 3.4.8</nc1dico:source>
+      <nc1dico:derogation>NATIONALITE</nc1dico:derogation>
+    </AppInfo>
+  </Annotation>
+  <Identification>
+    <ShortName>L105_2Code</ShortName>
+    <Version>9.0.0</Version>
+    <CanonicalUri>urn:fra:nc1:common:sicsdicos:L105_2Code</CanonicalUri>
+    <CanonicalVersionUri>urn:fra:nc1:common:sicsdicos:L105_2Code:9.0.0</CanonicalVersionUri>
+  </Identification>
+  <ColumnSet DatatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes">
+    <Column Id="code" Use="required">
+      <ShortName>Code</ShortName>
+      <Data Type="int" />
+    </Column>
+    <Column Id="short" Use="required">
+      <ShortName>Short</ShortName>
+      <Data Type="string" />
+    </Column>
+    <Column Id="long" Use="optional">
+      <ShortName>Long</ShortName>
+      <Data Type="string" />
+    </Column>
+    <Column Id="short-en" Use="optional">
+      <ShortName>Short anglais</ShortName>
+      <Data Type="string" />
+    </Column>
+    <Column Id="long-en" Use="optional">
+      <ShortName>Long anglais</ShortName>
+      <Data Type="string" />
+    </Column>
+    <Column Id="parent" Use="optional">
+      <ShortName>Parent</ShortName>
+      <Data Type="int" />
+    </Column>
+    <Column Id="codeSymbole" Use="optional">
+      <ShortName>Code Symbole</ShortName>
+      <Data Type="string" />
+    </Column>
+    <Column Id="codeHierarchique" Use="optional">
+      <ShortName>Code Hierarchique</ShortName>
+      <Data Type="string" />
+    </Column>
+    <Key Id="codeKey">
+      <ShortName>CodeKey</ShortName>
+      <ColumnRef Ref="code" />
+    </Key>
+  </ColumnSet>
+  <SimpleCodeList>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>0</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>--</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>NO STATEMENT</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>-</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>NO STATEMENT</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>1</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>AF - AFGHANISTAN</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>AFGHANISTAN</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>AF - AFGHANISTAN</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>AFGHANISTAN</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>2</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>AL - ALBANIE</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>ALBANIE</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>AL - ALBANIE</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>ALBANIA</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>3</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>AG - ALGERIE</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>ALGERIE</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>AG - ALGERIE</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>ALGERIA</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>4</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>AQ - SAMOA US</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>SAMOA AMERICAINES</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>AQ - SAMOA US</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>AMERICAN SAMOA</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>5</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>AN - ANDORRE</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>ANDORRE</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>AN - ANDORRE</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>ANDORRA</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>6</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>AO - ANGOLA</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>ANGOLA</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>AO - ANGOLA</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>ANGOLA</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>7</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>AV - ANGUILLA</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>ANGUILLA</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>AV - ANGUILLA</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>ANGUILLA</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>8</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>AY - ANTARCTIQUE</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>ANTARCTIQUE</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>AY - ANTARCTIQUE</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>ANTARCTICA</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>9</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>AC - ANTIGUA</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>ANTIGUA ET BARBUDA</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>AC - ANTIGUA</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>ANTIGUA AND BARBUDA</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>10</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>AR - ARGENTINE</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>ARGENTINE</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>AR - ARGENTINE</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>ARGENTINA</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>11</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>AM - ARMENIE</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>ARMENIE</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>AM - ARMENIE</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>ARMENIA</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>12</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>AA - ARUBA</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>ARUBA</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>AA - ARUBA</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>ARUBA</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>13</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>AS - AUSTRALIE</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>AUSTRALIE</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>AS - AUSTRALIE</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>AUSTRALIA</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>14</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>AU - AUTRICHE</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>AUTRICHE</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>AU - AUTRICHE</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>AUSTRIA</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>15</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>AJ -AZERBAIDJAN</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>AZERBAIDJAN</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>AJ -AZERBAIDJAN</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>AZERBAIJAN</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>16</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>BF - BAHAMAS</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>BAHAMAS</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>BF - BAHAMAS</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>BAHAMAS</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>17</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>BA - BAHREIN</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>BAHREIN</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>BA - BAHREIN</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>BAHRAIN</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>18</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>BG - BANGLADESH</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>BANGLADESH</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>BG - BANGLADESH</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>BANGLADESH</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>19</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>BB - BARBADES</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>BARBADES</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>BB - BARBADES</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>BARBADOS</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>20</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>BO - BIELORUSSIE</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>BIELORUSSIE</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>BO - BIELORUSSIE</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>BELARUS</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>21</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>BE - BELGIQUE</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>BELGIQUE</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>BE - BELGIQUE</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>BELGIUM</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>22</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>BZ - BELIZE</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>BELIZE</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>BZ - BELIZE</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>BELIZE</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>23</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>BN - BENIN</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>BENIN</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>BN - BENIN</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>BENIN</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>24</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>BD - BERMUDES</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>BERMUDES</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>BD - BERMUDES</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>BERMUDA</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>25</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>BT - BHOUTAN</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>BHOUTAN</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>BT - BHOUTAN</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>BHUTAN</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>26</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>BL - BOLIVIE</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>BOLIVIE</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>BL - BOLIVIE</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>BOLIVIA</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>27</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>BK - BOSNIE-HERZ</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>BOSNIE-HERZEGOVINE</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>BK - BOSNIE-HERZ</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>BOSNIA AND HERZEGOVINA</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>28</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>BC - BOTSWANA</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>BOTSWANA</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>BC - BOTSWANA</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>BOTSWANA</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>29</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>BV - ILE BOUVET</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>ILE BOUVET</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>BV - ILE BOUVET</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>BOUVET ISLAND</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>30</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>BR - BRESIL</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>BRESIL</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>BR - BRESIL</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>BRAZIL</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>31</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>IO - T.UK OC.IND</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>TERRITOIRE BRITANNIQUE DE L'OCEAN INDIEN</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>IO - T.UK OC.IND</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>BRITISH INDIAN OCEAN TERRITORY</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>32</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>BX - BRUNEI</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>BRUNEI</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>BX - BRUNEI</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>BRUNEI DARUSSALAM</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>33</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>BU - BULGARIE</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>BULGARIE</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>BU - BULGARIE</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>BULGARIA</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>34</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>UV - BURK. FASO</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>BURKINA FASO</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>UV - BURK. FASO</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>BURKINA FASO</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>35</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>BY - BURUNDI</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>BURUNDI</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>BY - BURUNDI</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>BURUNDI</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>36</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>CB - CAMBODGE</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>CAMBODGE</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>CB - CAMBODGE</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>CAMBODIA</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>37</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>CM - CAMEROUN</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>CAMEROUN</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>CM - CAMEROUN</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>CAMEROON</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>38</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>CA - CANADA</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>CANADA</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>CA - CANADA</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>CANADA</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>39</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>CV - CAP VERT</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>CAP VERT</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>CV - CAP VERT</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>CAPE VERDE</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>40</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>CJ -ILES CAIMANS</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>ILES CAIMANS</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>CJ -ILES CAIMANS</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>CAYMAN ISLANDS</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>41</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>CT - RCA</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>REPUBLIQUE CENTRAFRICAINE</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>CT - RCA</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>CENTRAL AFRICAN REPUBLIC</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>42</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>CD - TCHAD</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>TCHAD</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>CD - TCHAD</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>CHAD</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>43</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>CI - CHILI</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>CHILI</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>CI - CHILI</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>CHILE</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>44</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>CH - CHINE</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>CHINE</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>CH - CHINE</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>CHINA</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>45</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>KT - I.CHRISTMAS</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>ILE CHRISTMAS</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>KT - I.CHRISTMAS</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>CHRISTMAS ISLAND</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>46</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>CK - ILES COCOS</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>ILES COCOS</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>CK - ILES COCOS</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>COCOS (KEELING) ISLANDS</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>47</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>CO - COLOMBIE</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>COLOMBIE</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>CO - COLOMBIE</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>COLOMBIA</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>48</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>CN - COMORES</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>COMORES</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>CN - COMORES</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>COMOROS</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>49</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>CF - CONGO</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>CONGO</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>CF - CONGO</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>CONGO</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>50</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>CG - RDC</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>REPUBLIQUE DEMOCRATIQUE DU CONGO</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>CG - RDC</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>CONGO (DEMOCRATIC REPUBLIC OF)</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>51</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>CW - ILES COOK</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>ILES COOK</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>CW - ILES COOK</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>COOK ISLANDS</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>52</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>CS - COSTA RICA</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>COSTA RICA</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>CS - COSTA RICA</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>COSTA RICA</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>53</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>IV - RCI</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>COTE D'IVOIRE</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>IV - RCI</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>IVORY COAST</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>54</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>HR - CROATIE</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>CROATIE</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>HR - CROATIE</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>CROATIA (HRVATSKA)</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>55</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>CU - CUBA</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>CUBA</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>CU - CUBA</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>CUBA</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>56</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>CY - CHYPRE</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>CHYPRE</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>CY - CHYPRE</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>CYPRUS</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>57</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>EZ - R. TCHEQUE</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>REPUBLIQUE TCHEQUE</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>EZ - R. TCHEQUE</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>CZECH REPUBLIC</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>58</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>DA - DANEMARK</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>DANEMARK</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>DA - DANEMARK</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>DENMARK</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>59</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>DJ - DJIBOUTI</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>DJIBOUTI</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>DJ - DJIBOUTI</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>DJIBOUTI</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>60</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>DO - DOMINIQUE</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>DOMINIQUE</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>DO - DOMINIQUE</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>DOMINICA</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>61</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>DR - R. DOMINIC</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>REPUBLIQUE DOMINICAINE</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>DR - R. DOMINIC</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>DOMINICAN REPUBLIC</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>62</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>EC - EQUATEUR</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>EQUATEUR</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>EC - EQUATEUR</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>ECUADOR</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>63</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>EG - EGYPTE</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>EGYPTE</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>EG - EGYPTE</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>EGYPT</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>64</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>ES - SALVADOR</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>SALVADOR</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>ES - SALVADOR</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>EL SALVADOR</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>65</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>EK - GUINEE EQ.</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>GUINEE EQUATORIALE</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>EK - GUINEE EQ.</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>EQUATORIAL GUINEA</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>66</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>ER - ERYTHREE</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>ERYTHREE</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>ER - ERYTHREE</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>ERITREA</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>67</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>EN - ESTONIE</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>ESTONIE</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>EN - ESTONIE</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>ESTONIA</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>68</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>ET - ETHIOPIE</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>ETHIOPIE</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>ET - ETHIOPIE</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>ETHIOPIA</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>69</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>FK - I. FALKLAND</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>ILES FALKLAND</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>FK - I. FALKLAND</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>FALKLAND ISLANDS</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>70</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>FO - ILES FEROE</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>ILES FEROE</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>FO - ILES FEROE</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>FAROE ISLANDS</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>71</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>FJ - FIDJI</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>FIDJI</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>FJ - FIDJI</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>FIJI</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>72</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>FI - FINLANDE</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>FINLANDE</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>FI - FINLANDE</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>FINLAND</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>73</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>FR - FRANCE</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>FRANCE</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>FR - FRANCE</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>FRANCE</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>74</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>FG - GUYANE FR</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>GUYANE FRANCAISE</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>FG - GUYANE FR</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>FRENCH GUIANA</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>75</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>FP -POLYNESIE FR</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>POLYNESIE FRANCAISE</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>FP -POLYNESIE FR</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>FRENCH POLYNESIA</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>76</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>FS - TAAF</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>TERRES AUSTRALES ET ANTARCTIQUES FRANCAISES</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>FS - TAAF</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>FRENCH SOUTHERN TERRITORIES</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>77</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>GB - GABON</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>GABON</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>GB - GABON</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>GABON</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>78</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>GA - GAMBIE</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>GAMBIE</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>GA - GAMBIE</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>GAMBIA</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>79</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>GG - GEORGIE</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>GEORGIE</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>GG - GEORGIE</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>GEORGIA</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>80</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>GM - ALLEMAGNE</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>ALLEMAGNE</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>GM - ALLEMAGNE</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>GERMANY</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>81</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>GH - GHANA</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>GHANA</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>GH - GHANA</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>GHANA</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>82</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>GI - GIBRALTAR</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>GIBRALTAR</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>GI - GIBRALTAR</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>GIBRALTAR</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>83</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>GR - GRECE</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>GRECE</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>GR - GRECE</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>GREECE</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>84</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>GL - GROENLAND</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>GROENLAND</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>GL - GROENLAND</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>GREENLAND</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>85</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>GJ - GRENADE</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>GRENADE</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>GJ - GRENADE</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>GRENADA</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>86</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>GP - GUADELOUPE</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>GUADELOUPE</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>GP - GUADELOUPE</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>GUADELOUPE</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>87</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>GQ - GUAM</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>GUAM</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>GQ - GUAM</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>GUAM</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>88</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>GT - GUATEMALA</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>GUATEMALA</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>GT - GUATEMALA</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>GUATEMALA</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>89</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>GV - GUINEE</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>GUINEE</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>GV - GUINEE</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>GUINEA</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>90</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>PU - GUINEE-BIS</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>GUINEE-BISSAU</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>PU - GUINEE-BIS</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>GUINEA-BISSAU</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>91</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>GY - GUYANE</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>GUYANE</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>GY - GUYANE</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>GUYANA</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>92</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>HA - HAITI</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>HAITI</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>HA - HAITI</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>HAITI</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>93</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>HM - ILES HEARD</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>ILES HEARD-ET-MACDONALD</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>HM - ILES HEARD</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>HEARD ISLAND AND MCDONALD ISLANDS</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>94</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>VT - VATICAN</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>ETAT DU VATICAN</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>VT - VATICAN</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>HOLY SEE (VATICAN STATE)</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>95</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>HO - HONDURAS</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>HONDURAS</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>HO - HONDURAS</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>HONDURAS</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>96</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>HK - HONG KONG</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>HONG KONG</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>HK - HONG KONG</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>HONG KONG</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>97</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>HU - HONGRIE</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>HONGRIE</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>HU - HONGRIE</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>HUNGARY</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>98</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>IC - ISLANDE</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>ISLANDE</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>IC - ISLANDE</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>ICELAND</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>99</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>IN - INDE</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>INDE</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>IN - INDE</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>INDIA</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>100</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>ID - INDONESIE</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>INDONESIE</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>ID - INDONESIE</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>INDONESIA</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>101</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>RC - CICR</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>COMITE INTERNATIONAL DE LA CROIX-ROUGE</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>RC - CICR</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>INTERNATIONAL RED CROSS</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>102</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>IR - IRAN</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>IRAN</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>IR - IRAN</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>IRAN</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>103</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>IZ - IRAK</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>IRAK</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>IZ - IRAK</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>IRAQ</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>104</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>EI - IRLANDE</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>IRLANDE</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>EI - IRLANDE</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>IRELAND</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>105</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>IS - ISRAEL</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>ISRAEL</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>IS - ISRAEL</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>ISRAEL</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>106</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>IT - ITALIE</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>ITALIE</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>IT - ITALIE</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>ITALY</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>107</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>JM - JAMAIQUE</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>JAMAIQUE</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>JM - JAMAIQUE</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>JAMAICA</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>108</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>JA - JAPON</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>JAPON</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>JA - JAPON</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>JAPAN</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>109</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>JO - JORDANIE</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>JORDANIE</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>JO - JORDANIE</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>JORDAN</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>110</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>KZ - KAZAKHSTAN</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>KAZAKHSTAN</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>KZ - KAZAKHSTAN</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>KAZAKHSTAN</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>111</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>KE - KENYA</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>KENYA</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>KE - KENYA</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>KENYA</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>112</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>KR - KIRIBATI</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>KIRIBATI</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>KR - KIRIBATI</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>KIRIBATI</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>113</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>KN - COREE NORD</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>COREE DU NORD</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>KN - COREE NORD</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>KOREA, DEMOCRATIC PEOPLE'S REPUBLIC OF</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>114</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>KS - COREE SUD</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>COREE DU SUD</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>KS - COREE SUD</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>KOREA, REPUBLIC OF</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>115</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>KU - KOWEIT</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>KOWEIT</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>KU - KOWEIT</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>KUWAIT</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>116</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>KG -KIRGHIZSTAN</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>KIRGHIZSTAN</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>KG -KIRGHIZSTAN</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>KYRGYZSTAN</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>117</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>LA - LAOS</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>LAOS</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>LA - LAOS</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>LAO PEOPLE'S DEMOCRATIC</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>118</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>LG - LETTONIE</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>LETTONIE</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>LG - LETTONIE</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>LATVIA</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>119</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>LE - LIBAN</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>LIBAN</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>LE - LIBAN</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>LEBANON</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>120</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>LT - LESOTHO</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>LESOTHO</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>LT - LESOTHO</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>LESOTHO</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>121</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>LI - LIBERIA</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>LIBERIA</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>LI - LIBERIA</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>LIBERIA</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>122</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>LY - LIBYE</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>LIBYE</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>LY - LIBYE</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>LIBYAN ARAB JAMAHIRIYA</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>123</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>LS - LIECHTENST.</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>LIECHTENSTEIN</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>LS - LIECHTENST.</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>LIECHTENSTEIN</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>124</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>LH - LITUANIE</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>LITUANIE</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>LH - LITUANIE</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>LITHUANIA</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>125</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>LU - LUXEMBOURG</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>LUXEMBOURG</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>LU - LUXEMBOURG</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>LUXEMBOURG</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>126</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>MC - MACAO</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>MACAO</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>MC - MACAO</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>MACAO</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>127</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>MK - MACEDOINE</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>MACEDOINE</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>MK - MACEDOINE</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>MACEDONIA</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>128</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>MA - MADAGASCAR</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>MADAGASCAR</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>MA - MADAGASCAR</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>MADAGASCAR</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>129</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>MI - MALAWI</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>MALAWI</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>MI - MALAWI</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>MALAWI</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>130</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>MY - MALAISIE</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>MALAISIE</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>MY - MALAISIE</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>MALAYSIA</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>131</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>MV - MALDIVES</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>MALDIVES</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>MV - MALDIVES</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>MALDIVES</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>132</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>ML - MALI</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>MALI</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>ML - MALI</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>MALI</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>133</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>MT - MALTE</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>MALTE</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>MT - MALTE</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>MALTA</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>134</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>RM - I. MARSHALL</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>ILES MARSHALL</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>RM - I. MARSHALL</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>MARSHALL ISLANDS</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>135</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>MB - MARTINIQUE</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>MARTINIQUE</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>MB - MARTINIQUE</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>MARTINIQUE</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>136</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>MR - MAURITANIE</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>MAURITANIE</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>MR - MAURITANIE</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>MAURITANIA</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>137</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>MP - MAURICE</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>MAURICE</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>MP - MAURICE</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>MAURITIUS</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>138</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>MF - MAYOTTE</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>MAYOTTE</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>MF - MAYOTTE</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>MAYOTTE</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>139</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>MX - MEXIQUE</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>MEXIQUE</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>MX - MEXIQUE</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>MEXICO</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>140</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>FM - MICRONESIE</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>MICRONESIE</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>FM - MICRONESIE</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>MICRONESIA</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>141</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>MD - MOLDAVIE</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>MOLDAVIE</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>MD - MOLDAVIE</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>MOLDOVA, REPUBLIC OF</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>142</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>MN - MONACO</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>MONACO</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>MN - MONACO</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>MONACO</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>143</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>MG - MONGOLIE</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>MONGOLIE</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>MG - MONGOLIE</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>MONGOLIA</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>144</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>MH - MONTSERRAT</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>MONTSERRAT</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>MH - MONTSERRAT</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>MONTSERRAT</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>145</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>MO - MAROC</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>MAROC</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>MO - MAROC</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>MOROCCO</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>146</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>MZ - MOZAMBIQUE</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>MOZAMBIQUE</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>MZ - MOZAMBIQUE</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>MOZAMBIQUE</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>147</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>BM - BIRMANIE</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>BIRMANIE</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>BM - BIRMANIE</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>MYANMAR</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>148</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>WA - NAMIBIE</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>NAMIBIE</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>WA - NAMIBIE</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>NAMIBIA</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>149</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>OA - OTAN</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>OTAN</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>OA - OTAN</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>NATO</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>150</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>NR - NAURU</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>NAURU</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>NR - NAURU</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>NAURU</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>151</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>NP - NEPAL</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>NEPAL</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>NP - NEPAL</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>NEPAL</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>152</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>NL - PAYS-BAS</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>PAYS-BAS</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>NL - PAYS-BAS</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>NETHERLANDS</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>153</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>NT - ANTILLES NL</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>ANTILLES NEERLANDAISES</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>NT - ANTILLES NL</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>NETHERLANDS ANTILLES</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>154</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>NC - N.CALEDONIE</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>NOUVELLE CALEDONIE</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>NC - N.CALEDONIE</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>NEW CALEDONIA</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>155</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>NZ - N.ZELANDE</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>NOUVELLE ZELAND</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>NZ - N.ZELANDE</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>NEW ZEALAND</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>156</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>NU - NICARAGUA</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>NICARAGUA</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>NU - NICARAGUA</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>NICARAGUA</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>157</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>NG - NIGER</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>NIGER</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>NG - NIGER</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>NIGER</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>158</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>NI - NIGERIA</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>NIGERIA</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>NI - NIGERIA</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>NIGERIA</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>159</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>NE - NIUE</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>NIUE</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>NE - NIUE</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>NIUE</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>160</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>NF - I. NORFOLK</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>ILE NORFOLK</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>NF - I. NORFOLK</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>NORFOLK ISLAND</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>161</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>CQ - I. MARIAN.</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>ILES MARIANNES DU NORD</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>CQ - I. MARIAN.</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>NORTHERN MARIANA ISLANDS</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>162</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>NO - NORVEGE</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>NORVEGE</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>NO - NORVEGE</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>NORWAY</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>163</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>MU - OMAN</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>OMAN</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>MU - OMAN</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>OMAN</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>164</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>PK - PAKISTAN</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>PAKISTAN</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>PK - PAKISTAN</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>PAKISTAN</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>165</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>PS - PALAOS</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>PALAOS</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>PS - PALAOS</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>PALAU</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>166</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>PM - PANAMA</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>PANAMA</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>PM - PANAMA</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>PANAMA</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>167</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>PP - PAPOUASIE</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>PAPOUASIE NOUVELLE GUINEE</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>PP - PAPOUASIE</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>PAPAU NEW GUINEA</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>168</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>PA - PARAGUAY</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>PARAGUAY</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>PA - PARAGUAY</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>PARAGUAY</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>169</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>PE - PEROU</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>PEROU</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>PE - PEROU</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>PERU</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>170</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>RP - PHILIPPINES</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>PHILIPPINES</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>RP - PHILIPPINES</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>PHILIPPINES</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>171</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>PC - I. PITCAIRN</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>ILES PITCAIRN</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>PC - I. PITCAIRN</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>PITCAIRN</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>172</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>PL - POLOGNE</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>POLOGNE</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>PL - POLOGNE</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>POLAND</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>173</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>PO - PORTUGAL</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>PORTUGAL</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>PO - PORTUGAL</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>PORTUGAL</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>174</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>RQ - PORTO RICO</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>PORTO RICO</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>RQ - PORTO RICO</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>PUERTO RICO</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>175</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>QA - QATAR</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>QATAR</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>QA - QATAR</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>QATAR</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>176</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>RE - REUNION</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>REUNION</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>RE - REUNION</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>REUNION</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>177</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>RO - ROUMANIE</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>ROUMANIE</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>RO - ROUMANIE</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>ROMANIA</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>178</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>RS - RUSSIE</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>RUSSIE</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>RS - RUSSIE</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>RUSSIAN FEDERATION</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>179</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>RW - RWANDA</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>RWANDA</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>RW - RWANDA</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>RWANDA</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>180</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>SH - STE HELENE</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>SAINT HELENE</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>SH - STE HELENE</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>SAINT HELENA</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>181</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>SC - ST CHRISTO.</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>SAINT-CHRISTOPHE-ET-NIEVES</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>SC - ST CHRISTO.</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>SAINT KITTS AND NEVIS</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>182</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>ST - STE LUCIE</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>SAINTE LUCIE</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>ST - STE LUCIE</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>SAINT LUCIA</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>183</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>SB - ST PIERRE</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>SAINT PIERRE ET MIQUELON</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>SB - ST PIERRE</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>SAINT PIERRE AND MIQUELON</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>184</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>VC - ST VINCENT</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>SAINT-VINCENT-ET-LES-GRENADINES</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>VC - ST VINCENT</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>SAINT VINCENT AND THE GRENADINES</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>185</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>WS - SAMOA</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>SAMOA</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>WS - SAMOA</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>SAMOA</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>186</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>SM - SAN MARIN</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>SAN MARIN</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>SM - SAN MARIN</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>SAN MARINO</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>187</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>TP - SAO TOME</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>SAO TOME ET PRINCIPE</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>TP - SAO TOME</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>SAO TOME AND PRINCIPE</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>188</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>SA - AR.SAOUDITE</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>ARABIE SAOUDITE</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>SA - AR.SAOUDITE</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>SAUDI ARABIA</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>189</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>SG - SENEGAL</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>SENEGAL</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>SG - SENEGAL</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>SENEGAL</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>190</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>RI - SERBIE</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>SERBIE</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>RI - SERBIE</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>SERBIA</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>191</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>SE - SEYCHELLES</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>SEYCHELLES</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>SE - SEYCHELLES</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>SEYCHELLES</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>192</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>SL - SIER. LEONE</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>SIERRA LEONE</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>SL - SIER. LEONE</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>SIERRA LEONE</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>193</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>SN - SINGAPOUR</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>SINGAPOUR</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>SN - SINGAPOUR</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>SINGAPORE</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>194</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>LO - SLOVAQUIE</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>SLOVAQUIE</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>LO - SLOVAQUIE</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>SLOVAKIA</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>195</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>SI - SLOVENIE</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>SLOVENIE</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>SI - SLOVENIE</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>SLOVENIA</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>196</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>BP - IL. SALOMON</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>ILES SALOMON</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>BP - IL. SALOMON</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>SOLOMON ISLANDS</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>197</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>SO - SOMALIE</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>SOMALIE</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>SO - SOMALIE</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>SOMALIA</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>198</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>SF - AFRIQUE SUD</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>AFRIQUE DU SUD</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>SF - AFRIQUE SUD</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>SOUTH AFRICA</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>199</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>SX - GEORGIE SUD</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>GEORGIE DU SUD-ET-LES ILES SANDWICH DU SUD</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>SX - GEORGIE SUD</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>SOUTH GEORGIA AND SOUTH SANDWICH ISLANDS</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>200</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>SP - ESPAGNE</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>ESPAGNE</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>SP - ESPAGNE</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>SPAIN</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>201</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>CE - SRI LANKA</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>SRI LANKA</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>CE - SRI LANKA</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>SRI LANKA</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>202</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>SU - SOUDAN</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>SOUDAN</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>SU - SOUDAN</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>SUDAN</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>203</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>NS - SURINAME</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>SURINAME</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>NS - SURINAME</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>SURINAME</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>204</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>JN - IL.SVALBARD</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>ILES DE SVALBARD ET JAN MAYEN</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>JN - IL.SVALBARD</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>SVALBARD AND JAN MAYEN ISLANDS</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>205</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>WZ - SWAZILAND</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>SWAZILAND</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>WZ - SWAZILAND</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>SWAZILAND</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>206</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>SW - SUEDE</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>SUEDE</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>SW - SUEDE</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>SWEDEN</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>207</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>SZ - SUISSE</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>SUISSE</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>SZ - SUISSE</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>SWITZERLAND</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>208</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>SY - SYRIE</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>SYRIE</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>SY - SYRIE</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>SYRIAN ARAB REPUBLIC</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>209</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>TW - TAIWAN</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>TAIWAN</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>TW - TAIWAN</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>TAIWAN</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>210</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>TI - TADJIKIST.</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>TADJIKISTAN</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>TI - TADJIKIST.</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>TAJIKISTAN</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>211</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>TZ - TANZANIE</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>TANZANIE</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>TZ - TANZANIE</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>TANZANIA</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>212</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>TH - THAILANDE</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>THAILANDE</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>TH - THAILANDE</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>THAILAND</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>213</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>TT - TIMOR OR.</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>TIMOR ORIENTAL</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>TT - TIMOR OR.</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>TIMOR-LESTE</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>214</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>TO - TOGO</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>TOGO</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>TO - TOGO</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>TOGO</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>215</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>TL - TOKELAOU</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>TOKELAOU</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>TL - TOKELAOU</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>TOKELAU</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>216</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>TN - TONGA</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>TONGA</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>TN - TONGA</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>TONGA</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>217</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>TD - TRIN TOBAGO</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>TRINITE ET TOBAGO</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>TD - TRIN TOBAGO</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>TRINIDAD AND TOBAGO</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>218</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>TS - TUNISIE</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>TUNISIE</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>TS - TUNISIE</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>TUNISIA</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>219</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>TU - TURQUIE</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>TURQUIE</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>TU - TURQUIE</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>TURKEY</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>220</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>TX - TURKMEN.</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>TURKMENISTAN</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>TX - TURKMEN.</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>TURKMENISTAN</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>221</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>TK - IL. TURQUES</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>ILES TURQUES-ET-CAIQUES</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>TK - IL. TURQUES</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>TURKS AND CAICOS ISLANDS</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>222</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>TV - TUVALU</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>TUVALU</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>TV - TUVALU</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>TUVALU</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>223</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>UG - OUGANDA</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>OUGANDA</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>UG - OUGANDA</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>UGANDA</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>224</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>UA - UKRAINE</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>UKRAINE</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>UA - UKRAINE</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>UKRAINE</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>225</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>AE - EAU</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>EMIRATS ARABES UNIS</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>AE - EAU</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>UNITED ARAB EMIRATES</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>226</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>UK - ROYAUME UNI</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>ROYAUME UNI</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>UK - ROYAUME UNI</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>UNITED KINGDOM</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>227</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>UN - ONU</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>NATIONS UNIES</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>UN - ONU</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>UNITED NATIONS</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>228</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>US - ETATS UNIS</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>ETATS UNIS</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>US - ETATS UNIS</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>UNITED STATES</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>229</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>UY - URUGUAY</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>URUGUAY</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>UY - URUGUAY</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>URUGUAY</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>230</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>UM - IL MIN. US</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>ILES MINEURES ELOIGNEES DES ETATS-UNIS</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>UM - IL MIN. US</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>US MINOR OUTLYING ISLANDS</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>231</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>UZ - OUZBEKISTAN</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>OUZBEKISTAN</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>UZ - OUZBEKISTAN</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>UZBEKISTAN</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>232</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>NH - VANUATU</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>VANUATU</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>NH - VANUATU</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>VANUATU</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>233</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>VE - VENEZUELA</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>VENEZUELA</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>VE - VENEZUELA</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>VENEZUELA</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>234</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>VN - VIETNAM</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>VIETNAM</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>VN - VIETNAM</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>VIETNAM</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>235</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>VI - IL.VIERG UK</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>ILES VIERGES BRITANIQUES</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>VI - IL.VIERG UK</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>VIRGIN ISLANDS, BRITISH</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>236</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>VQ - IL.VIERG US</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>ILES VIERGES US</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>VQ - IL.VIERG US</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>VIRGIN ISLANDS, US</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>237</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>WF - WALLIS FUT</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>ILES DE WALLIS ET FUTUNA</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>WF - WALLIS FUT</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>WALLIS AND FUTUNA ISLANDS</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>238</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>WI - SAHARA OCC</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>SAHARA OCCIDENTAL</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>WI - SAHARA OCC</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>WESTERN SAHARA</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>239</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>YM - YEMEN</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>YEMEN</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>YM - YEMEN</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>YEMEN</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>240</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>ZA - ZAMBIE</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>ZAMBIE</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>ZA - ZAMBIE</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>ZAMBIA</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>241</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>ZI - ZIMBABWE</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>ZIMBABWE</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>ZI - ZIMBABWE</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>ZIMBABWE</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>242</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>S1</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>SPECIFIQUE THEATRE 1</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>S1</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>SPECIFIC THEATER 1</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>243</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>S2</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>SPECIFIQUE THEATRE 2</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>S2</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>SPECIFIC THEATER 2</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>244</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>S3</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>SPECIFIQUE THEATRE 3</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>S3</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>SPECIFIC THEATER 3</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>245</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>S4</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>SPECIFIQUE THEATRE 4</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>S4</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>SPECIFIC THEATER 4</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>246</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>S5</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>SPECIFIQUE THEATRE 5</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>S5</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>SPECIFIC THEATER 5</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>247</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>S6</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>SPECIFIQUE THEATRE 6</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>S6</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>SPECIFIC THEATER 6</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>248</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>S7</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>SPECIFIQUE THEATRE 7</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>S7</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>SPECIFIC THEATER 7</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>249</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>S8</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>SPECIFIQUE THEATRE 8</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>S8</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>SPECIFIC THEATER 8</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>250</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>S9</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>SPECIFIQUE THEATRE 9</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>S9</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>SPECIFIC THEATER 9</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>251</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>MJ - MONTENEGRO</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>MONTENEGRO</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>MJ - MONTENEGRO</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>MONTENEGRO</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>252</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>KV - KOSOVO</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>KOSOVO</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>KV - KOSOVO</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>KOSOVO</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>253</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>ILLEGAL</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>ILLEGAL</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>ILLEGAL</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>ILLEGAL</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>254</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>ILLEGAL</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>ILLEGAL</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>ILLEGAL</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>ILLEGAL</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>255</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>ILLEGAL</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>ILLEGAL</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>ILLEGAL</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>ILLEGAL</SimpleValue>
+      </Value>
+    </Row>
+  </SimpleCodeList>
+</gc:CodeList>

@@ -1,0 +1,749 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema targetNamespace="urn:fra:nc1:objet:3droute" xmlns:nc1ihm="urn:fra:nc1:IHM" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:nc13droute="urn:fra:nc1:objet:3droute" xmlns:nc1common="urn:fra:nc1:common:attribute" xmlns:nc1location="urn:fra:nc1:common:location" xmlns:nc1objcom="urn:fra:nc1:common:object">
+  <!-- NC1 V.9.0.0 -->
+  <xs:import namespace="urn:fra:nc1:common:attribute" schemaLocation="../Commun/Common.xsd" />
+  <xs:import namespace="urn:fra:nc1:common:location" schemaLocation="../Commun/Location.xsd" />
+  <xs:import namespace="urn:fra:nc1:common:object" schemaLocation="../Commun/Object.xsd" />
+  <xs:element name="NC1_3DRoute" type="nc13droute:_3DRouteType">
+    <xs:annotation>
+      <xs:documentation>L’objet NC1_3DRoute est une suite de consignes datées comportant des points d'entrée et de sortie, des éléments sur le chargement/déchargement d'équipements, de ressources, de carburant ou de personnes.</xs:documentation>
+      <xs:documentation xml:lang="en">The object NC1_3DRoute is a continuation of dated instructions  containing points of entrance and exit, elements on the load / dumping of equipments, resources, fuel or people.</xs:documentation>
+      <xs:appinfo>
+        <nc1:type xmlns:nc1="urn:fra:nc1">Objet</nc1:type>
+        <nc1ihm:Nom>Itinéraire 3D</nc1ihm:Nom>
+        <nc1ihm:Nom xml:lang="en">3D route</nc1ihm:Nom>
+        <nc1:MessH xmlns:nc1="urn:fra:nc1">Message H7.2 Route</nc1:MessH>
+        <nc1:MessADatP3 xmlns:nc1="urn:fra:nc1">N/A</nc1:MessADatP3>
+        <nc1:LastNC1ModifyVersion xmlns:nc1="urn:fra:nc1">9.0.0</nc1:LastNC1ModifyVersion>
+      </xs:appinfo>
+    </xs:annotation>
+  </xs:element>
+  <xs:complexType name="_3DRoutePointType">
+    <xs:annotation>
+      <xs:documentation>Point d'un itinéraire 3D.</xs:documentation>
+      <xs:documentation xml:lang="en">3D route point.</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arrivalDatetime" type="xs:dateTime">
+        <xs:annotation>
+          <xs:documentation>Horodatage d'arrivée réelle sur le point.</xs:documentation>
+          <xs:documentation xml:lang="en">Actual arrival time.</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Horodatage d'arrivée</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">Arrival time</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="waitingDuration" type="nc1common:Duration1DayType">
+        <xs:annotation>
+          <xs:documentation>Durée de stationnement sur le point.</xs:documentation>
+          <xs:documentation xml:lang="en">Loiter time on point.</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Temps d'attente</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">Waiting duration</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="engineOut" type="xs:boolean">
+        <xs:annotation>
+          <xs:documentation>Etat moteur de l'hélicoptère sur le point.</xs:documentation>
+          <xs:documentation xml:lang="en">Engine status of the helicopter on the point.</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Moteur coupé</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">Engine off</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="engineOutDescription" type="nc1common:MediumTextObjectType">
+        <xs:annotation>
+          <xs:documentation>Description moteur coupé.</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Description moteur coupé</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="urgencyPoint" type="nc13droute:UrgencyPointType">
+        <xs:annotation>
+          <xs:documentation>Point de Poser d'Urgence, ou point de déroutement le plus proche.</xs:documentation>
+          <xs:documentation xml:lang="en">Emergency landing point or closest point of diversion.</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>PPU</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">PPU</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="timingInstructions" type="nc13droute:TimingInstructionsType">
+        <xs:annotation>
+          <xs:documentation>Consigne horaire associée au point (passer avant, passer après, etc.).</xs:documentation>
+          <xs:documentation xml:lang="en">schedule set associated with the point (go ahead, go after, etc.).</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Consigne horaire</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">Timing instructions</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="engagementPoint" type="xs:boolean">
+        <xs:annotation>
+          <xs:documentation>Indique si le point est un point d'engagement, ou non.</xs:documentation>
+          <xs:documentation xml:lang="en">Specify if the point is an engagement point or not.</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Point d'engagement</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">Engagement point</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="fuelResupply" type="nc1common:Int0To9999Type">
+        <xs:annotation>
+          <xs:documentation>Quantité de carburant ravitaillé sur le point (litres).</xs:documentation>
+          <xs:documentation xml:lang="en">Quantity of supplied fuel at point (litres).</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Carburant ravitaillé</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">Fuel resupply</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="unload" type="nc13droute:LoadUnloadType">
+        <xs:annotation>
+          <xs:documentation>Déchargement en équipage, équipement, fret, armement sur le point.</xs:documentation>
+          <xs:documentation xml:lang="en">Unloading crew, equipment, freight, weapons for the point.</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Déchargement</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">Unload</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="load" type="nc13droute:LoadUnloadType">
+        <xs:annotation>
+          <xs:documentation>Chargement en équipage, équipement, fret, armement sur le point.</xs:documentation>
+          <xs:documentation xml:lang="en">Loading crew, equipment, cargo, armament for the point.</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Chargement</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">Load</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="latitude" type="nc1location:LatitudeType">
+        <xs:annotation>
+          <xs:documentation>Latitude WSG84 du point (degrés décimaux).</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Latitude</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="longitude" type="nc1location:LongitudeType">
+        <xs:annotation>
+          <xs:documentation>Longitude WSG84 du point (degrés décimaux).</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Longitude</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="comment" type="nc1common:LongTextObjectType">
+        <xs:annotation>
+          <xs:documentation>Commentaire en texte libre.</xs:documentation>
+          <xs:documentation xml:lang="en">free text comment.</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Commentaire</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">comment</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="_3DRouteSegmentType">
+    <xs:annotation>
+      <xs:documentation>Tronçon d'un itinéraire 3D.</xs:documentation>
+      <xs:documentation xml:lang="en">Route segment.</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="number" type="nc1common:Int0To1000Type">
+        <xs:annotation>
+          <xs:documentation>Numéro d'ordre donné au tronçon.</xs:documentation>
+          <xs:documentation xml:lang="en">Route section assigned number.</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Numéro d'ordre</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">order number</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="endPoint" type="nc13droute:_3DRoutePointType">
+        <xs:annotation>
+          <xs:documentation>Point d'arrivée du tronçon.</xs:documentation>
+          <xs:documentation xml:lang="en">Segment end point.</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Point d'arrivée</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">End point</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="speed" type="nc1common:SpeedType">
+        <xs:annotation>
+          <xs:documentation>Vitesse à laquelle est parcouru le tronçon.</xs:documentation>
+          <xs:documentation xml:lang="en">Speed in segment.</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Vitesse</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">Speed</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="altitude" type="nc1location:AltitudeType">
+        <xs:annotation>
+          <xs:documentation>Altitude/Hauteur consigne à laquelle doit être parcouru le tronçon.</xs:documentation>
+          <xs:documentation xml:lang="en">Altitude / Height set that must be travelled the length (meters).</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Altitude</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">Altitude</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="altitudeReference" type="nc1common:LevelReferenceCode">
+        <xs:annotation>
+          <xs:documentation>Référence (AMSL, AGL ou FL) de l'altitude ou de la hauteur.</xs:documentation>
+          <xs:documentation xml:lang="en">Altitude or height reference (AMSL or AGL).</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Référence d'altitude</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">Altitude reference</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="width" type="nc1common:Decimal0To999999Type">
+        <xs:annotation>
+          <xs:documentation>Largeur de couloir du tronçon.</xs:documentation>
+          <xs:documentation xml:lang="en">Segment width.</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Largeur</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">Width</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="heading" type="nc1common:AngleType">
+        <xs:annotation>
+          <xs:documentation>Cap de passage au point d'arrivée.</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Cap</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="transitSpeed" type="nc1common:SpeedType">
+        <xs:annotation>
+          <xs:documentation>Vitesse de passage au point d'arrivée.</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Vitesse</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="transitMode" type="nc13droute:TransitModeCode">
+        <xs:annotation>
+          <xs:documentation>Mode de passage au point d'arrivée.</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Mode de passage</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="_3DRouteType">
+    <xs:annotation>
+      <xs:documentation>Suite de consignes datées comportant des points d'entrée et de sortie, des éléments sur le chargement/déchargement d'équipements, de ressources, de carburant ou de personnes.</xs:documentation>
+      <xs:documentation xml:lang="en">Following instructions dated having inlet and exit points, elements of the loading / unloading equipment, resources, fuel or people.</xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="nc1objcom:LocalisedObjectType">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="tacticalData">
+            <xs:annotation>
+              <xs:documentation>Données tactiques de l’itinéraire 3D.</xs:documentation>
+              <xs:documentation xml:lang="en">3D route tactical data.</xs:documentation>
+              <xs:appinfo>
+                <nc1ihm:Nom>Données tactiques</nc1ihm:Nom>
+                <nc1ihm:Nom xml:lang="en">tactical datas</nc1ihm:Nom>
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element minOccurs="0" name="name" type="nc1common:ShortTextObjectType">
+                  <xs:annotation>
+                    <xs:documentation>Nom de l’itinéraire 3D affiché sur la cartographie.</xs:documentation>
+                    <xs:documentation xml:lang="en">3D route displayed name.</xs:documentation>
+                    <xs:appinfo>
+                      <nc1ihm:Nom>Nom</nc1ihm:Nom>
+                      <nc1ihm:Nom xml:lang="en">name</nc1ihm:Nom>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:element>
+                <xs:element name="symbolCode" type="nc1common:SymbolCodeType">
+                  <xs:annotation>
+                    <xs:documentation>Code contenant les informations de symbologie, d'identité (AMI, ENI, etc.), de nationalité, d'état de planification.</xs:documentation>
+                    <xs:documentation xml:lang="en">Code specifying information about symbology, identity (Friend, enemy, …), nationality, planification status.</xs:documentation>
+                    <xs:appinfo>
+                      <nc1ihm:Nom>Code du symbole</nc1ihm:Nom>
+                      <nc1ihm:Nom xml:lang="en">Symbol code</nc1ihm:Nom>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:element>
+                <xs:element minOccurs="0" name="responsibleUnitId" type="nc1common:Nc1ObjectRefType">
+                  <xs:annotation>
+                    <xs:documentation>Identifiant unique de l’unité responsable de l'itinéraire 3D.</xs:documentation>
+                    <xs:documentation xml:lang="en">NC1 identifier of unit responsible of the 3D route.</xs:documentation>
+                    <xs:appinfo>
+                      <nc1ihm:Nom>Unité responsable</nc1ihm:Nom>
+                      <nc1ihm:Nom xml:lang="en">Responsible unit</nc1ihm:Nom>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:element>
+                <xs:element minOccurs="0" name="hKey" type="nc1common:Text1To3ANType">
+                  <xs:annotation>
+                    <xs:documentation>Identifiant H du chef de patrouille des hélicoptères concernés.</xs:documentation>
+                    <xs:documentation xml:lang="en">H ID of the patrol leader of the helicopters concerned.</xs:documentation>
+                    <xs:appinfo>
+                      <nc1ihm:Nom>Identifiant H</nc1ihm:Nom>
+                      <nc1ihm:Nom xml:lang="en">H ID</nc1ihm:Nom>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:element>
+                <xs:element minOccurs="0" name="participantKey" type="nc1common:Int0To16383Type">
+                  <xs:annotation>
+                    <xs:documentation>Clé participant du chef de patrouille des hélicoptères concernés.</xs:documentation>
+                    <xs:documentation xml:lang="en">Participant ID of the patrol leader helicopters concerned.</xs:documentation>
+                    <xs:appinfo>
+                      <nc1ihm:Nom>Clé participant</nc1ihm:Nom>
+                      <nc1ihm:Nom xml:lang="en">Participant key</nc1ihm:Nom>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:element>
+                <xs:element minOccurs="0" name="url" type="nc1common:MediumTextObjectType">
+                  <xs:annotation>
+                    <xs:documentation>Lien vers un fichier associé à l’objet.</xs:documentation>
+                    <xs:documentation xml:lang="en">Link to a file associated with the object.</xs:documentation>
+                    <xs:appinfo>
+                      <nc1ihm:Nom>Url</nc1ihm:Nom>
+                      <nc1ihm:Nom xml:lang="en">url</nc1ihm:Nom>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:element>
+                <xs:element minOccurs="0" name="comment" type="nc1common:LongTextObjectType">
+                  <xs:annotation>
+                    <xs:documentation>Commentaire en texte libre.</xs:documentation>
+                    <xs:documentation xml:lang="en">free text comment.</xs:documentation>
+                    <xs:appinfo>
+                      <nc1ihm:Nom>Commentaire</nc1ihm:Nom>
+                      <nc1ihm:Nom xml:lang="en">comment</nc1ihm:Nom>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:element>
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+          <xs:element minOccurs="0" name="location">
+            <xs:annotation>
+              <xs:documentation>Localisation de l’itinéraire 3D.</xs:documentation>
+              <xs:documentation xml:lang="en">3D route location.</xs:documentation>
+              <xs:appinfo>
+                <nc1ihm:Nom>Localisation</nc1ihm:Nom>
+                <nc1ihm:Nom xml:lang="en">Location</nc1ihm:Nom>
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="startPoint" type="nc13droute:_3DRoutePointType">
+                  <xs:annotation>
+                    <xs:documentation>Point de départ de l'itinéraire 3D.</xs:documentation>
+                    <xs:documentation xml:lang="en">3D route start point.</xs:documentation>
+                    <xs:appinfo>
+                      <nc1ihm:Nom>Point de départ</nc1ihm:Nom>
+                      <nc1ihm:Nom xml:lang="en">Start point</nc1ihm:Nom>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:element>
+                <xs:element maxOccurs="unbounded" name="segment" type="nc13droute:_3DRouteSegmentType">
+                  <xs:annotation>
+                    <xs:documentation>Tronçon de l'itinéraire 3D.</xs:documentation>
+                    <xs:documentation xml:lang="en">Route segment.</xs:documentation>
+                    <xs:appinfo>
+                      <nc1ihm:Nom>Tronçon</nc1ihm:Nom>
+                      <nc1ihm:Nom xml:lang="en">The definition of the NC1_Route object follows the doctrine. It is both a means of communication for an operational need, and a series of routes or paths segments to get from one point to another.</nc1ihm:Nom>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:element>
+                <xs:element minOccurs="0" name="wind" type="nc13droute:WindType">
+                  <xs:annotation>
+                    <xs:documentation>Vent.</xs:documentation>
+                    <xs:appinfo>
+                      <nc1ihm:Nom>Vent</nc1ihm:Nom>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:element>
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="AditionalTankType">
+    <xs:annotation>
+      <xs:documentation>Réservoir complémentaire.</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="description" type="nc1common:MediumTextObjectType">
+        <xs:annotation>
+          <xs:documentation>Description.</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Description</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="capacity" type="nc1common:Int0To9999Type">
+        <xs:annotation>
+          <xs:documentation>Capacité (en litres).</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Capacité</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="weight" type="nc1common:Decimal0To9999Type">
+        <xs:annotation>
+          <xs:documentation>Masse à vide en kg.</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Masse</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="CargoType">
+    <xs:annotation>
+      <xs:documentation>Frêt en soute.</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="description" type="nc1common:MediumTextObjectType">
+        <xs:annotation>
+          <xs:documentation>Description.</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Description</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="weight" type="nc1common:Decimal0To9999Type">
+        <xs:annotation>
+          <xs:documentation>Masse en kg.</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Masse</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="lever" type="nc1common:Decimal0To99Type">
+        <xs:annotation>
+          <xs:documentation>Levier.</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Levier</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="CrewType">
+    <xs:annotation>
+      <xs:documentation>Membre d'équipage</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="function" type="nc1common:MediumTextObjectType">
+        <xs:annotation>
+          <xs:documentation>Fonction.</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Fonction</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="name" type="nc1common:ShortTextObjectType">
+        <xs:annotation>
+          <xs:documentation>Nom.</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Nom</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="weight" type="nc1common:Decimal0To9999Type">
+        <xs:annotation>
+          <xs:documentation>Masse en kg.</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Masse</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="EquipmentType">
+    <xs:annotation>
+      <xs:documentation>Description, masse.</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="description" type="nc1common:MediumTextObjectType">
+        <xs:annotation>
+          <xs:documentation>Description.</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Description</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="weight" type="nc1common:Decimal0To9999Type">
+        <xs:annotation>
+          <xs:documentation>Masse en kg.</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Masse</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="LoadUnloadType">
+    <xs:annotation>
+      <xs:documentation>Chargement ou déchargement d'un porteur sur un point d'itinéraire 3D.</xs:documentation>
+      <xs:documentation xml:lang="en">Loading or unloading of a carrier on a 3D route point.</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="crew" type="nc13droute:CrewType">
+        <xs:annotation>
+          <xs:documentation>Membre d'équipage : description, nom, prénom, masse.</xs:documentation>
+          <xs:documentation xml:lang="en">Crew member: description, surname, first name, weight,  weight balance.</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Equipage</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">Crew</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="equipment" type="nc13droute:EquipmentType">
+        <xs:annotation>
+          <xs:documentation>Equipement : description, masse.</xs:documentation>
+          <xs:documentation xml:lang="en">Equipment: description, mass, lever.</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Equipement</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">Equipment</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="cargo" type="nc13droute:CargoType">
+        <xs:annotation>
+          <xs:documentation>Fret en soute : description, masse, levier.</xs:documentation>
+          <xs:documentation xml:lang="en">Cargo hold: description, mass, lever.</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Fret en soute</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">Cargo</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="weapon" type="nc13droute:WeaponType">
+        <xs:annotation>
+          <xs:documentation>Armement : description, nombre de munitions, masse.</xs:documentation>
+          <xs:documentation xml:lang="en">Weapons : description, number of ammunitions, weight, leverage.</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Armement</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">armament</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="additionalTank" type="nc13droute:AditionalTankType">
+        <xs:annotation>
+          <xs:documentation>Réservoir complémentaire : description, capacité, masse à vide.</xs:documentation>
+          <xs:documentation xml:lang="en">Additional tank.</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Réservoir complémentaire</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">Additional tank</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="slingLoadElement" type="nc13droute:EquipmentType">
+        <xs:annotation>
+          <xs:documentation>Elément voyageant sous élingue : description, masse.</xs:documentation>
+          <xs:documentation xml:lang="en">Element traveling sling: description, mass, lever.</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Transport sous élingue</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">Under-slung lift</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:simpleType name="SecuredSegmentCode">
+    <xs:annotation>
+      <xs:appinfo>
+        <nc1dico:source xmlns:nc1dico="urn:fra:nc1:dictionnaires">NC1</nc1dico:source>
+        <nc1ihm:description>Indique qu'un vol s'effectue en mode « vol sécurisé » au sein d'un couloir 3D.</nc1ihm:description>
+        <nc1ihm:description xml:lang="en">Indicate that a flight is made in mode « secure flight » within a 3D corridor.</nc1ihm:description>
+      </xs:appinfo>
+      <xs:documentation>Indique qu'un vol s'effectue en mode « vol sécurisé » au sein d'un couloir 3D.</xs:documentation>
+      <xs:documentation xml:lang="en">Indicate that a flight is made in mode « secure flight » within a 3D corridor.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:integer" />
+  </xs:simpleType>
+  <xs:complexType name="TimingInstructionsType">
+    <xs:annotation>
+      <xs:documentation>Consigne horaire d'arrivée ou de passage sur un point d'itinéraire 3D.</xs:documentation>
+      <xs:documentation xml:lang="en">schedule set arrival or passage over a 3D route point.</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="type" type="nc13droute:TimingInstructionsTypeCode">
+        <xs:annotation>
+          <xs:documentation>Type de consigne horaire.</xs:documentation>
+          <xs:documentation xml:lang="en">Set schedule type.</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Type de consigne</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">Instruction type</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="startDatetime" type="xs:dateTime">
+        <xs:annotation>
+          <xs:documentation>Horodatage de début de la période.</xs:documentation>
+          <xs:documentation xml:lang="en">Period or time stamp associated with the timetable set.</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Horodatage de début</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">Period or datetime</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="endDatetime" type="xs:dateTime">
+        <xs:annotation>
+          <xs:documentation>Horodatage de fin de la période.</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Horodatage de fin</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:simpleType name="TimingInstructionsTypeCode">
+    <xs:annotation>
+      <xs:appinfo>
+        <nc1dico:source xmlns:nc1dico="urn:fra:nc1:dictionnaires">NC1</nc1dico:source>
+        <nc1ihm:description>Type de consigne horaire d'arrivée ou de passage sur un point d'itinéraire 3D.</nc1ihm:description>
+        <nc1ihm:description xml:lang="en">Type of hourly instruction of arrival or passage on a point of 3D route.</nc1ihm:description>
+      </xs:appinfo>
+      <xs:documentation>Type de consigne horaire d'arrivée ou de passage sur un point d'itinéraire 3D.</xs:documentation>
+      <xs:documentation xml:lang="en">Type of hourly instruction of arrival or passage on a point of 3D route.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:integer" />
+  </xs:simpleType>
+  <xs:simpleType name="TransitModeCode">
+    <xs:annotation>
+      <xs:appinfo>
+        <nc1dico:source xmlns:nc1dico="urn:fra:nc1:dictionnaires">NC1</nc1dico:source>
+      </xs:appinfo>
+      <xs:documentation></xs:documentation>
+      <xs:documentation xml:lang="en"></xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:integer" />
+  </xs:simpleType>
+  <xs:complexType name="UrgencyPointType">
+    <xs:annotation>
+      <xs:documentation>Point de Poser d'Urgence, ou point de déroutement le plus proche d'un point d'itinéraire 3D.</xs:documentation>
+      <xs:documentation xml:lang="en">Emergency landing point or closest point of diversion of a 3D route.</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" name="name" type="nc1common:ShortTextObjectType">
+        <xs:annotation>
+          <xs:documentation>Nom du point de poser d'urgence.</xs:documentation>
+          <xs:documentation xml:lang="en">Emergency landing point name.</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Nom</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">name</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="latitude" type="nc1location:LatitudeType">
+        <xs:annotation>
+          <xs:documentation>Latitude WGS84 du point de poser d'urgence (degrés décimaux).</xs:documentation>
+          <xs:documentation xml:lang="en">Emergency landing point WGS84 latitude (decimal degrees).</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Latitude</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">Latitude</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="longitude" type="nc1location:LongitudeType">
+        <xs:annotation>
+          <xs:documentation>Longitude WGS84 du point de poser d'urgence (degrés décimaux).</xs:documentation>
+          <xs:documentation xml:lang="en">Emergency landing point WGS84 longitude (decimal degrees).</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Longitude</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">Longitude</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="type" type="nc1common:ShortTextObjectType">
+        <xs:annotation>
+          <xs:documentation>Type du point de poser d'urgence.</xs:documentation>
+          <xs:documentation xml:lang="en">Emergency landing point type.</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Type</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">Type</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="arrivalSpeed" type="nc1common:SpeedType">
+        <xs:annotation>
+          <xs:documentation>Vitesse du porteur pour rejoindre le point de poser d'urgence.</xs:documentation>
+          <xs:documentation xml:lang="en">Speed to reach emergency landing point.</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Vitesse de rejointe</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">Arrival speed</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="WeaponType">
+    <xs:annotation>
+      <xs:documentation>Armement.</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="description" type="nc1common:MediumTextObjectType">
+        <xs:annotation>
+          <xs:documentation>Description.</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Description</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="munitionCount" type="nc1common:Int0To9999Type">
+        <xs:annotation>
+          <xs:documentation>Nombre de munitions.</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Nombre de munitions</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="weight" type="nc1common:Decimal0To9999Type">
+        <xs:annotation>
+          <xs:documentation>Masse en kg.</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Masse</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="WindType">
+    <xs:annotation>
+      <xs:documentation>Provenance du vent.</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="windDirection" type="nc1common:AngleType">
+        <xs:annotation>
+          <xs:documentation>Provenance du vent.</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Provenance</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="windSpeed" type="nc1common:SpeedType">
+        <xs:annotation>
+          <xs:documentation>Vitesse du vent.</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Vitesse</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

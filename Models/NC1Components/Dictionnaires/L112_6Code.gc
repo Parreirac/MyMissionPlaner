@@ -1,0 +1,332 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<gc:CodeList xmlns:nc1dico="urn:fra:nc1:dictionnaires" xmlns:gc="http://docs.oasis-open.org/codelist/ns/genericode/1.0/">
+  <Annotation>
+    <Description>
+      <nc1dico:description>INDIQUE LL'ATTITUDE D'UN INDIVIDU, NOTAMMENT DANS LE CADRE D'UNE OBSERVATION
+(REPRESENTE L'EQUIVALENT DE L'ATTRIBUT ACTIVITE DES AUTRES PISTES)</nc1dico:description>
+      <nc1dico:description xml:lang="en">Indicates the behaviour of an individual, particularly in the context of an observation (is equivalent to the attribute ACTIVITY of the other tracks)</nc1dico:description>
+    </Description>
+    <AppInfo>
+      <nc1dico:source>SFTT 3.4.8</nc1dico:source>
+      <nc1dico:derogation>ATTITUDE INDIVIDU</nc1dico:derogation>
+    </AppInfo>
+  </Annotation>
+  <Identification>
+    <ShortName>L112_6Code</ShortName>
+    <Version>9.0.0</Version>
+    <CanonicalUri>urn:fra:nc1:common:sicsdicos:L112_6Code</CanonicalUri>
+    <CanonicalVersionUri>urn:fra:nc1:common:sicsdicos:L112_6Code:9.0.0</CanonicalVersionUri>
+  </Identification>
+  <ColumnSet DatatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes">
+    <Column Id="code" Use="required">
+      <ShortName>Code</ShortName>
+      <Data Type="int" />
+    </Column>
+    <Column Id="short" Use="required">
+      <ShortName>Short</ShortName>
+      <Data Type="string" />
+    </Column>
+    <Column Id="long" Use="optional">
+      <ShortName>Long</ShortName>
+      <Data Type="string" />
+    </Column>
+    <Column Id="short-en" Use="optional">
+      <ShortName>Short anglais</ShortName>
+      <Data Type="string" />
+    </Column>
+    <Column Id="long-en" Use="optional">
+      <ShortName>Long anglais</ShortName>
+      <Data Type="string" />
+    </Column>
+    <Column Id="parent" Use="optional">
+      <ShortName>Parent</ShortName>
+      <Data Type="int" />
+    </Column>
+    <Column Id="codeSymbole" Use="optional">
+      <ShortName>Code Symbole</ShortName>
+      <Data Type="string" />
+    </Column>
+    <Column Id="codeHierarchique" Use="optional">
+      <ShortName>Code Hierarchique</ShortName>
+      <Data Type="string" />
+    </Column>
+    <Key Id="codeKey">
+      <ShortName>CodeKey</ShortName>
+      <ColumnRef Ref="code" />
+    </Key>
+  </ColumnSet>
+  <SimpleCodeList>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>0</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>-</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>NO STATEMENT</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>-</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>NO STATEMENT</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>1</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>DEPLACEMENT</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>ACTION DE DEPLACEMENT (FAIRE MOUVEMENT, SE DEPLACER,SE RETIRER)</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>MVT</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>MOVEMENT</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>2</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>OFFENSIVE</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>ACTION OFFENSIVE (ATTAQUE/HARCELEMENT/TIR)</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>OFF</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>OFFENCE/FIRE ACTION</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>3</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>AGRESSIVE</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>ACTION AGRESSIVE OU MENACANTE DE PRISE A PARTI/TIR/AGRESSION VERBALE OU PHYSIQUE/OPPOSITION</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>THEACT</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>THREATENED ACTION</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>4</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>CONTRE MOBILITE</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>ACTION DE LIMITATION DE LA MOBILITE DE LA FORCE (NEUTRALISATION/OBSTACLE/CHECKPOINT)</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>COUNTMOB</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>COUNTER MOBILITY</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>5</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>SOUTIEN</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>ACTION DE SOUTIEN (REMISE EN CONDITION/REPARATION/RECOMPLETEMENT/APPROVISIONNEMENT/REPOS)</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>MAINT</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>MAINTENANCE/SUPPLY ACTION</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>6</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>APPUI GE</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>ACTION D'APPUI ELECTRONIQUE (BROUILLAGE/CONTROLE DES EMISSIONS/DETECTION/ACQUISITION/INTERCEPTION)</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>WARFARE</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>WARFARE ACTION</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>7</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>RENS</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>ACTION DE RECHERCHE DE RENSEIGNEMENTS (SURVEILLANCE/DETECTION/REPERAGE/IDENTIFICATION VISUELLE/RECONNAISSANCE)</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>INTEL</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>INTELLIGENCE ACTION</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>8</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>FRANCHISSEMENT</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>ACTION DE FRANCHISSEMENT (INFILTRATION/INTRUSION)</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>CROSS</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>CROSSING ACTION</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>9</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>DEFENSIVE</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>ACTION DEFENSIVE  (INSTALLATION/MISE A POSTE/COUVERTURE/APPUI)</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>DEF</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>DEFENCE/SUPPORT ACTION</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>10</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>DEPLOIEMENT</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>ACTION DE DEPLOIEMENT (INSTALLATION CAMPEMENT/SITTING/REGROUPEMENT/CONSTRUCTION)</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>DEPLOY</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>DEPLOYMENT/INSTALLATION ACTION</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>11</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>ASSISTANCE</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>ACTION D'ASSISTANCE (SECOURS/SAUVETAGE)</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>RESC</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>RESCUE ACTION</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>12</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>PASSIVE</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>ACTION PASSIVE</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>STANDBY</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>STAND-BY/NO  ACTION</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>13</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>AUTRE</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>AUTRE ACTION</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>OTHER</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>MISCELLANEOUS ACTION</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>14</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>ILLEGAL</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>ILLEGAL</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>ILLEGAL</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>ILLEGAL</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>15</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>ILLEGAL</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>ILLEGAL</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>ILLEGAL</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>ILLEGAL</SimpleValue>
+      </Value>
+    </Row>
+  </SimpleCodeList>
+</gc:CodeList>

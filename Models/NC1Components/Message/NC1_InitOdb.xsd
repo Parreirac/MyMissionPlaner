@@ -1,0 +1,514 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema targetNamespace="urn:fra:nc1:message:initodb" xmlns:nc1ihm="urn:fra:nc1:IHM" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:nc1initodb="urn:fra:nc1:message:initodb" xmlns:nc1common="urn:fra:nc1:common:attribute" xmlns:nc1msgcom="urn:fra:nc1:common:message" xmlns:nc1sicsdicos="urn:fra:nc1:common:sicsdicos" xmlns:nc1unit="urn:fra:nc1:objet:unit">
+  <!-- NC1 V.9.0.0 -->
+  <xs:import namespace="urn:fra:nc1:common:attribute" schemaLocation="../Commun/Common.xsd" />
+  <xs:import namespace="urn:fra:nc1:common:message" schemaLocation="../Commun/Message.xsd" />
+  <xs:import namespace="urn:fra:nc1:common:sicsdicos" schemaLocation="../Commun/SICS_Dictionaries.xsd" />
+  <xs:import namespace="urn:fra:nc1:objet:unit" schemaLocation="../Objet/NC1_Unit.xsd" />
+  <xs:element name="NC1_InitOdb">
+    <xs:annotation>
+      <xs:documentation>Le message NC1_InitOdb est utilisé pour initialiser les SIOCs et l’OPL en transmettant avec l’ordre de bataille les données sur les forces, les dotations en équipements, les dotations en ressources et les dotations en effectifs.</xs:documentation>
+      <xs:documentation xml:lang="en">The NC1_InitOdb message is used to initialize the SIOCs and the OPL by passing on with the battle order the data on the strengths, the subsidies in equipment, the subsidies in resources and staffing.</xs:documentation>
+      <xs:appinfo>
+        <nc1:type xmlns:nc1="urn:fra:nc1">Message</nc1:type>
+        <nc1ihm:Nom>Initialisation de l’Ordre de Bataille et des dotations associées</nc1ihm:Nom>
+        <nc1ihm:Nom xml:lang="en">Order Of Battle and related data initialization</nc1ihm:Nom>
+        <nc1:MessH xmlns:nc1="urn:fra:nc1">N/A</nc1:MessH>
+        <nc1:MessADatP3 xmlns:nc1="urn:fra:nc1">N/A</nc1:MessADatP3>
+        <nc1:LastNC1ModifyVersion xmlns:nc1="urn:fra:nc1">9.0.0</nc1:LastNC1ModifyVersion>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:complexContent>
+        <xs:extension base="nc1msgcom:BaseMessageType">
+          <xs:sequence>
+            <xs:element minOccurs="0" name="operationName" type="nc1common:Text1To50Type">
+              <xs:annotation>
+                <xs:documentation>Nom de l'opération.</xs:documentation>
+                <xs:documentation xml:lang="en">Name of the operation.</xs:documentation>
+                <xs:appinfo>
+                  <nc1ihm:Nom>Nom de l'opération</nc1ihm:Nom>
+                  <nc1ihm:Nom xml:lang="en">Name of the operation</nc1ihm:Nom>
+                </xs:appinfo>
+              </xs:annotation>
+            </xs:element>
+            <xs:element maxOccurs="unbounded" minOccurs="0" name="forces">
+              <xs:annotation>
+                <xs:documentation>Données sur les forces.</xs:documentation>
+                <xs:documentation xml:lang="en">Forces data.</xs:documentation>
+                <xs:appinfo>
+                  <nc1ihm:Nom>Forces</nc1ihm:Nom>
+                  <nc1ihm:Nom xml:lang="en">Forces</nc1ihm:Nom>
+                </xs:appinfo>
+              </xs:annotation>
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="unitId" type="nc1common:Nc1ObjectRefType">
+                    <xs:annotation>
+                      <xs:documentation>Identifiant NC1 de l'unité.</xs:documentation>
+                      <xs:documentation xml:lang="en">NC1 ID of the unit.</xs:documentation>
+                      <xs:appinfo>
+                        <nc1ihm:Nom>Identifiant de l'unité</nc1ihm:Nom>
+                        <nc1ihm:Nom xml:lang="en">Unit ID</nc1ihm:Nom>
+                      </xs:appinfo>
+                    </xs:annotation>
+                  </xs:element>
+                  <xs:element name="orbatName" type="nc1common:Text1To15ANSType">
+                    <xs:annotation>
+                      <xs:documentation>Nom OdB (Ordre de Bataille) de l’unité.</xs:documentation>
+                      <xs:documentation xml:lang="en">OdB (Order of Battle) unit name.</xs:documentation>
+                      <xs:appinfo>
+                        <nc1ihm:Nom>Nom OdB</nc1ihm:Nom>
+                        <nc1ihm:Nom xml:lang="en">Name</nc1ihm:Nom>
+                      </xs:appinfo>
+                    </xs:annotation>
+                  </xs:element>
+                  <xs:element minOccurs="0" name="orbatNameDescription" type="nc1common:Text1To50Type">
+                    <xs:annotation>
+                      <xs:documentation>Description complémentaire du nom OdB.</xs:documentation>
+                      <xs:documentation xml:lang="en">Orbat name additional description.</xs:documentation>
+                      <xs:appinfo>
+                        <nc1ihm:Nom>Description complémentaire</nc1ihm:Nom>
+                        <nc1ihm:Nom xml:lang="en">Additional description</nc1ihm:Nom>
+                      </xs:appinfo>
+                    </xs:annotation>
+                  </xs:element>
+                  <xs:element name="symbolCode" type="nc1common:SymbolCodeType">
+                    <xs:annotation>
+                      <xs:documentation>Code symbole APP-6(B) complet de l’unité.</xs:documentation>
+                      <xs:documentation xml:lang="en">Code specifying information about symbology, identity (Friend, enemy, …), nationality, planification status.</xs:documentation>
+                      <xs:appinfo>
+                        <nc1ihm:Nom>Code symbole</nc1ihm:Nom>
+                        <nc1ihm:Nom xml:lang="en">Symbol code</nc1ihm:Nom>
+                      </xs:appinfo>
+                    </xs:annotation>
+                  </xs:element>
+                  <xs:element minOccurs="0" name="frSpecificSymbol" type="nc1unit:UnitFrSpecificCode">
+                    <xs:annotation>
+                      <xs:documentation>Indicateur de spécificité française pour le code symbole et sa représentation graphique.</xs:documentation>
+                      <xs:documentation xml:lang="en">French specificity indicator for the symbol code and its graphic representation.</xs:documentation>
+                      <xs:appinfo>
+                        <nc1ihm:Nom>Spécialisation Fr du code symbole</nc1ihm:Nom>
+                        <nc1ihm:Nom xml:lang="en">Fr specific symbol</nc1ihm:Nom>
+                      </xs:appinfo>
+                    </xs:annotation>
+                  </xs:element>
+                  <xs:element minOccurs="0" name="modifier" type="nc1common:ShortTextObjectType">
+                    <xs:annotation>
+                      <xs:documentation>Modifieur du code symbole, précisant une sous-spécialité de l’unité (ex : « MONTAGNE » pour une unité d’infanterie de montagne).</xs:documentation>
+                      <xs:documentation xml:lang="en">"If the facility is a medical facility: symbol code modifier (e.g. ""ROLE 1"")".</xs:documentation>
+                      <xs:appinfo>
+                        <nc1ihm:Nom>Modifieur</nc1ihm:Nom>
+                        <nc1ihm:Nom xml:lang="en">Modifier</nc1ihm:Nom>
+                      </xs:appinfo>
+                    </xs:annotation>
+                  </xs:element>
+                  <xs:element minOccurs="0" name="commandAndControlRole" type="nc1sicsdicos:L110_30Code">
+                    <xs:annotation>
+                      <xs:documentation>Si l'unité est un PC, fonction du PC.</xs:documentation>
+                      <xs:documentation xml:lang="en">"Command and control role when the unit is a command post (e.g. ""TACTCP"")".</xs:documentation>
+                      <xs:appinfo>
+                        <nc1ihm:Nom>Type de PC</nc1ihm:Nom>
+                        <nc1ihm:Nom xml:lang="en">Command and control role</nc1ihm:Nom>
+                      </xs:appinfo>
+                    </xs:annotation>
+                  </xs:element>
+                  <xs:element minOccurs="0" name="idOps" type="nc1initodb:IdOpsType">
+                    <xs:annotation>
+                      <xs:documentation>Indicatif opérationnel de l'unité.</xs:documentation>
+                      <xs:documentation xml:lang="en">Operational callsign of the unit.</xs:documentation>
+                      <xs:appinfo>
+                        <nc1ihm:Nom>Indicatif opérationnel</nc1ihm:Nom>
+                        <nc1ihm:Nom xml:lang="en">Operational callsign</nc1ihm:Nom>
+                      </xs:appinfo>
+                    </xs:annotation>
+                  </xs:element>
+                  <xs:element minOccurs="0" name="superiorUnitId" type="nc1common:Nc1ObjectRefType">
+                    <xs:annotation>
+                      <xs:documentation>Identifiant NC1 de l'unité supérieure organique.</xs:documentation>
+                      <xs:documentation xml:lang="en">NC1 ID of the organic upper unit.</xs:documentation>
+                      <xs:appinfo>
+                        <nc1ihm:Nom>Identifiant de l'unité supérieure</nc1ihm:Nom>
+                        <nc1ihm:Nom xml:lang="en">Superior unit ID</nc1ihm:Nom>
+                      </xs:appinfo>
+                    </xs:annotation>
+                  </xs:element>
+                  <xs:element minOccurs="0" name="dbmFId" type="xs:integer">
+                    <xs:annotation>
+                      <xs:documentation>Identifiant DBM de l'unité.</xs:documentation>
+                      <xs:documentation xml:lang="en">Unit DBM ID.</xs:documentation>
+                      <xs:appinfo>
+                        <nc1ihm:Nom>Identifiant DBM</nc1ihm:Nom>
+                        <nc1ihm:Nom xml:lang="en">DBM ID</nc1ihm:Nom>
+                      </xs:appinfo>
+                    </xs:annotation>
+                  </xs:element>
+                  <xs:element minOccurs="0" name="stnl16" type="nc1common:Stnl16Type">
+                    <xs:annotation>
+                      <xs:documentation>Identifiant Source Track Number utilisé par la liaison 16.</xs:documentation>
+                      <xs:documentation xml:lang="en">L16 Track Number.</xs:documentation>
+                      <xs:appinfo>
+                        <nc1ihm:Nom>Identifiant STN L16</nc1ihm:Nom>
+                        <nc1ihm:Nom xml:lang="en">L16 Track Number</nc1ihm:Nom>
+                      </xs:appinfo>
+                    </xs:annotation>
+                  </xs:element>
+                  <xs:element minOccurs="0" name="jreId" type="nc1common:Tnl16Type">
+                    <xs:annotation>
+                      <xs:documentation>Identifiant Joint Range Extension utilisé par la messagerie J.</xs:documentation>
+                      <xs:documentation xml:lang="en">JRE ID.</xs:documentation>
+                      <xs:appinfo>
+                        <nc1ihm:Nom>Identifiant JRE</nc1ihm:Nom>
+                        <nc1ihm:Nom xml:lang="en">JRE ID</nc1ihm:Nom>
+                      </xs:appinfo>
+                    </xs:annotation>
+                  </xs:element>
+                  <xs:element minOccurs="0" name="eirn" type="nc1common:EirnType">
+                    <xs:annotation>
+                      <xs:documentation>Identifiant Entity Id Reference Number utilisé par la messagerie VMF.</xs:documentation>
+                      <xs:documentation xml:lang="en">EISN ID.</xs:documentation>
+                      <xs:appinfo>
+                        <nc1ihm:Nom>Identifiant EIRN</nc1ihm:Nom>
+                        <nc1ihm:Nom xml:lang="en">eirn id</nc1ihm:Nom>
+                      </xs:appinfo>
+                    </xs:annotation>
+                  </xs:element>
+                  <xs:element minOccurs="0" name="nffiSystemId" type="nc1common:MediumTextObjectType">
+                    <xs:annotation>
+                      <xs:documentation>Identifiant système NFFI.</xs:documentation>
+                      <xs:documentation xml:lang="en">NFFI system ID.</xs:documentation>
+                      <xs:appinfo>
+                        <nc1ihm:Nom>Identifiant système NFFI</nc1ihm:Nom>
+                        <nc1ihm:Nom xml:lang="en">NFFI system ID</nc1ihm:Nom>
+                      </xs:appinfo>
+                    </xs:annotation>
+                  </xs:element>
+                  <xs:element minOccurs="0" name="nffiTransponderId" type="nc1common:ShortTextObjectType">
+                    <xs:annotation>
+                      <xs:documentation>Identifiant transpondeur NFFI.</xs:documentation>
+                      <xs:documentation xml:lang="en">NFFI transponder ID.</xs:documentation>
+                      <xs:appinfo>
+                        <nc1ihm:Nom>Identifiant transpondeur NFFI</nc1ihm:Nom>
+                        <nc1ihm:Nom xml:lang="en">NFFI transponder ID</nc1ihm:Nom>
+                      </xs:appinfo>
+                    </xs:annotation>
+                  </xs:element>
+                  <xs:element minOccurs="0" name="ascaId" type="nc1initodb:IdAscaType">
+                    <xs:annotation>
+                      <xs:documentation>Identifiant ASCA.</xs:documentation>
+                      <xs:documentation xml:lang="en">ASCA ID.</xs:documentation>
+                      <xs:appinfo>
+                        <nc1ihm:Nom>Identifiant ASCA</nc1ihm:Nom>
+                        <nc1ihm:Nom xml:lang="en">ASCA ID</nc1ihm:Nom>
+                      </xs:appinfo>
+                    </xs:annotation>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element maxOccurs="unbounded" minOccurs="0" name="equipmentsHoldings">
+              <xs:annotation>
+                <xs:documentation>Données sur les dotations en équipements.</xs:documentation>
+                <xs:documentation xml:lang="en">Equipments holdings.</xs:documentation>
+                <xs:appinfo>
+                  <nc1ihm:Nom>Dotations en équipements</nc1ihm:Nom>
+                  <nc1ihm:Nom xml:lang="en">Equipments holdings</nc1ihm:Nom>
+                </xs:appinfo>
+              </xs:annotation>
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="unitId" type="nc1common:Nc1ObjectRefType">
+                    <xs:annotation>
+                      <xs:documentation>Identifiant NC1 de l'unité dotée.</xs:documentation>
+                      <xs:documentation xml:lang="en">NC1 ID of the unit.</xs:documentation>
+                      <xs:appinfo>
+                        <nc1ihm:Nom>Identifiant de l'unité</nc1ihm:Nom>
+                        <nc1ihm:Nom xml:lang="en">Unit ID</nc1ihm:Nom>
+                      </xs:appinfo>
+                    </xs:annotation>
+                  </xs:element>
+                  <xs:element name="nicCode" type="nc1common:NicCodeType">
+                    <xs:annotation>
+                      <xs:documentation>Code NIC (National Item Code) de l'équipement en dotation.</xs:documentation>
+                      <xs:documentation xml:lang="en">NIC (National Item Code) of the allocated equipment.</xs:documentation>
+                      <xs:appinfo>
+                        <nc1ihm:Nom>Code NIC</nc1ihm:Nom>
+                        <nc1ihm:Nom xml:lang="en">NIC code</nc1ihm:Nom>
+                      </xs:appinfo>
+                    </xs:annotation>
+                  </xs:element>
+                  <xs:element name="theoreticalQuantity" type="nc1common:Int0To2147483647Type">
+                    <xs:annotation>
+                      <xs:documentation>Quantité théorique de l'équipement en dotation.</xs:documentation>
+                      <xs:documentation xml:lang="en">Theoretical quantity of allocated equipment.</xs:documentation>
+                      <xs:appinfo>
+                        <nc1ihm:Nom>Quantité théorique</nc1ihm:Nom>
+                        <nc1ihm:Nom xml:lang="en">Theoretical quantity</nc1ihm:Nom>
+                      </xs:appinfo>
+                    </xs:annotation>
+                  </xs:element>
+                  <xs:element minOccurs="0" name="holdingQuantity" type="nc1common:Int0To2147483647Type">
+                    <xs:annotation>
+                      <xs:documentation>Quantité allouée de l'équipement en dotation.</xs:documentation>
+                      <xs:appinfo>
+                        <nc1ihm:Nom>Quantité allouée</nc1ihm:Nom>
+                      </xs:appinfo>
+                    </xs:annotation>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element maxOccurs="unbounded" minOccurs="0" name="resourcesHoldings">
+              <xs:annotation>
+                <xs:documentation>Données sur les dotations en ressources.</xs:documentation>
+                <xs:documentation xml:lang="en">Resources holdings.</xs:documentation>
+                <xs:appinfo>
+                  <nc1ihm:Nom>Dotations en ressources</nc1ihm:Nom>
+                  <nc1ihm:Nom xml:lang="en">Resources holdings</nc1ihm:Nom>
+                </xs:appinfo>
+              </xs:annotation>
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="unitId" type="nc1common:Nc1ObjectRefType">
+                    <xs:annotation>
+                      <xs:documentation>Identifiant NC1 de l'unité dotée.</xs:documentation>
+                      <xs:documentation xml:lang="en">NC1 ID of the unit.</xs:documentation>
+                      <xs:appinfo>
+                        <nc1ihm:Nom>Identifiant de l'unité</nc1ihm:Nom>
+                        <nc1ihm:Nom xml:lang="en">Unit ID</nc1ihm:Nom>
+                      </xs:appinfo>
+                    </xs:annotation>
+                  </xs:element>
+                  <xs:element name="nicCode" type="nc1common:NicCodeType">
+                    <xs:annotation>
+                      <xs:documentation>Code NIC (National Item Code) de la ressource en dotation.</xs:documentation>
+                      <xs:documentation xml:lang="en">NIC (National Item Code) of the allocated resource.</xs:documentation>
+                      <xs:appinfo>
+                        <nc1ihm:Nom>Code NIC</nc1ihm:Nom>
+                        <nc1ihm:Nom xml:lang="en">NIC code</nc1ihm:Nom>
+                      </xs:appinfo>
+                    </xs:annotation>
+                  </xs:element>
+                  <xs:element name="theoreticalQuantity" type="nc1common:Int0To2147483647Type">
+                    <xs:annotation>
+                      <xs:documentation>Quantité théorique de la ressource en dotation.</xs:documentation>
+                      <xs:documentation xml:lang="en">Theoretical quantity of the holding.</xs:documentation>
+                      <xs:appinfo>
+                        <nc1ihm:Nom>Quantité théorique</nc1ihm:Nom>
+                        <nc1ihm:Nom xml:lang="en">Theoretical quantity</nc1ihm:Nom>
+                      </xs:appinfo>
+                    </xs:annotation>
+                  </xs:element>
+                  <xs:element name="holdingQuantity" type="nc1common:Int0To2147483647Type">
+                    <xs:annotation>
+                      <xs:documentation>Quantité allouée de la ressource en dotation.</xs:documentation>
+                      <xs:documentation xml:lang="en">Theoretical quantity of the holding.</xs:documentation>
+                      <xs:appinfo>
+                        <nc1ihm:Nom>Quantité allouée</nc1ihm:Nom>
+                        <nc1ihm:Nom xml:lang="en">Allocated quantity</nc1ihm:Nom>
+                      </xs:appinfo>
+                    </xs:annotation>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element maxOccurs="unbounded" minOccurs="0" name="staffHoldings">
+              <xs:annotation>
+                <xs:documentation>Données sur les dotations en effectifs.</xs:documentation>
+                <xs:documentation xml:lang="en">Staff holdings.</xs:documentation>
+                <xs:appinfo>
+                  <nc1ihm:Nom>Dotations en effectifs</nc1ihm:Nom>
+                  <nc1ihm:Nom xml:lang="en">Staff holdings</nc1ihm:Nom>
+                </xs:appinfo>
+              </xs:annotation>
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="unitId" type="nc1common:Nc1ObjectRefType">
+                    <xs:annotation>
+                      <xs:documentation>Identifiant NC1 de l'unité dotée.</xs:documentation>
+                      <xs:documentation xml:lang="en">NC1 ID of the unit.</xs:documentation>
+                      <xs:appinfo>
+                        <nc1ihm:Nom>Identifiant de l'unité</nc1ihm:Nom>
+                        <nc1ihm:Nom xml:lang="en">Unit ID</nc1ihm:Nom>
+                      </xs:appinfo>
+                    </xs:annotation>
+                  </xs:element>
+                  <xs:element name="officersCount" type="nc1common:Int0To2147483647Type">
+                    <xs:annotation>
+                      <xs:documentation>Nombre d'officiers en dotation théorique de l'unité.</xs:documentation>
+                      <xs:documentation xml:lang="en">Theoretical number of officers staffing the unit.</xs:documentation>
+                      <xs:appinfo>
+                        <nc1ihm:Nom>Officiers</nc1ihm:Nom>
+                        <nc1ihm:Nom xml:lang="en">Officers</nc1ihm:Nom>
+                      </xs:appinfo>
+                    </xs:annotation>
+                  </xs:element>
+                  <xs:element name="ncoCount" type="nc1common:Int0To2147483647Type">
+                    <xs:annotation>
+                      <xs:documentation>Nombre de sous-officiers en dotation théorique de l'unité.</xs:documentation>
+                      <xs:documentation xml:lang="en">Total number of NCOs part of the escort (not counted in the convoy).</xs:documentation>
+                      <xs:appinfo>
+                        <nc1ihm:Nom>Sous-officiers</nc1ihm:Nom>
+                        <nc1ihm:Nom xml:lang="en">NCOs</nc1ihm:Nom>
+                      </xs:appinfo>
+                    </xs:annotation>
+                  </xs:element>
+                  <xs:element name="privatesCount" type="nc1common:Int0To2147483647Type">
+                    <xs:annotation>
+                      <xs:documentation>Nombre de militaires du rang en dotation théorique de l'unité.</xs:documentation>
+                      <xs:documentation xml:lang="en">Theoretical number of privates staffing the unit.</xs:documentation>
+                      <xs:appinfo>
+                        <nc1ihm:Nom>Militaires du rang</nc1ihm:Nom>
+                        <nc1ihm:Nom xml:lang="en">Privates</nc1ihm:Nom>
+                      </xs:appinfo>
+                    </xs:annotation>
+                  </xs:element>
+                  <xs:element name="totalCount" type="nc1common:Int0To2147483647Type">
+                    <xs:annotation>
+                      <xs:documentation>Effectif total de l'unité.</xs:documentation>
+                      <xs:documentation xml:lang="en">Unit strength.</xs:documentation>
+                      <xs:appinfo>
+                        <nc1ihm:Nom>Total</nc1ihm:Nom>
+                        <nc1ihm:Nom xml:lang="en">Total</nc1ihm:Nom>
+                      </xs:appinfo>
+                    </xs:annotation>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element minOccurs="0" name="comment" type="nc1msgcom:CommentSectionType">
+              <xs:annotation>
+                <xs:documentation>Commentaire en texte libre.</xs:documentation>
+                <xs:documentation xml:lang="en">free text comment.</xs:documentation>
+                <xs:appinfo>
+                  <nc1ihm:Nom>Commentaire</nc1ihm:Nom>
+                  <nc1ihm:Nom xml:lang="en">comment</nc1ihm:Nom>
+                </xs:appinfo>
+              </xs:annotation>
+            </xs:element>
+          </xs:sequence>
+        </xs:extension>
+      </xs:complexContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:simpleType name="EquipmentCategoryCode">
+    <xs:annotation>
+      <xs:appinfo>
+        <nc1dico:source xmlns:nc1dico="urn:fra:nc1:dictionnaires">DBM</nc1dico:source>
+      </xs:appinfo>
+      <xs:documentation></xs:documentation>
+      <xs:documentation xml:lang="en"></xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:integer" />
+  </xs:simpleType>
+  <xs:simpleType name="FuelCategoryCode">
+    <xs:annotation>
+      <xs:appinfo>
+        <nc1dico:source xmlns:nc1dico="urn:fra:nc1:dictionnaires">DBM</nc1dico:source>
+      </xs:appinfo>
+      <xs:documentation></xs:documentation>
+      <xs:documentation xml:lang="en"></xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:integer" />
+  </xs:simpleType>
+  <xs:simpleType name="FuelThresholdCode">
+    <xs:annotation>
+      <xs:appinfo>
+        <nc1dico:source xmlns:nc1dico="urn:fra:nc1:dictionnaires">DBM</nc1dico:source>
+      </xs:appinfo>
+      <xs:documentation></xs:documentation>
+      <xs:documentation xml:lang="en"></xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:integer" />
+  </xs:simpleType>
+  <xs:simpleType name="IdAscaType">
+    <xs:annotation>
+      <xs:documentation>Identifiant ASCA.</xs:documentation>
+      <xs:documentation xml:lang="en">ASCA ID.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:pattern value="([A-Z0-9 ]\.){3}([A-Z0-9 ]){3}\.([A-Z0-9 ]){3}" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="IdOpsType">
+    <xs:annotation>
+      <xs:documentation>Indicatif opérationnel d’une unité.</xs:documentation>
+      <xs:documentation xml:lang="en">Operational callsign of a unit.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="nc1common:AlphaNumStringType">
+      <xs:maxLength value="4" />
+      <xs:minLength value="1" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="NnoCodeType">
+    <xs:annotation>
+      <xs:documentation>Code NNO (Numéro de Nomenclature OTAN) d’un équipement.</xs:documentation>
+      <xs:documentation xml:lang="en">NNO code (Numéro de Nomenclature OTAN) of an equipment.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:maxLength value="13" />
+      <xs:minLength value="1" />
+      <xs:pattern value="[0-9]*" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="PackagingTypeCode">
+    <xs:annotation>
+      <xs:appinfo>
+        <nc1dico:source xmlns:nc1dico="urn:fra:nc1:dictionnaires">DBM</nc1dico:source>
+      </xs:appinfo>
+      <xs:documentation></xs:documentation>
+      <xs:documentation xml:lang="en"></xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:integer" />
+  </xs:simpleType>
+  <xs:simpleType name="RangeTypeCode">
+    <xs:annotation>
+      <xs:appinfo>
+        <nc1dico:source xmlns:nc1dico="urn:fra:nc1:dictionnaires">DBM</nc1dico:source>
+      </xs:appinfo>
+      <xs:documentation></xs:documentation>
+      <xs:documentation xml:lang="en"></xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:integer" />
+  </xs:simpleType>
+  <xs:simpleType name="RessourceTypeCode">
+    <xs:annotation>
+      <xs:appinfo>
+        <nc1dico:source xmlns:nc1dico="urn:fra:nc1:dictionnaires">DBM</nc1dico:source>
+      </xs:appinfo>
+      <xs:documentation></xs:documentation>
+      <xs:documentation xml:lang="en"></xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:integer" />
+  </xs:simpleType>
+  <xs:simpleType name="RicCodeType">
+    <xs:annotation>
+      <xs:documentation>Code RIC (Reportable Item Code) d’un équipement.</xs:documentation>
+      <xs:documentation xml:lang="en">RIC code (Reportable Item Code) of an equipment.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="nc1common:AlphaNumStringType">
+      <xs:maxLength value="6" />
+      <xs:minLength value="1" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="SupplyClassCode">
+    <xs:annotation>
+      <xs:appinfo>
+        <nc1dico:source xmlns:nc1dico="urn:fra:nc1:dictionnaires">DBM</nc1dico:source>
+      </xs:appinfo>
+      <xs:documentation></xs:documentation>
+      <xs:documentation xml:lang="en"></xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:integer" />
+  </xs:simpleType>
+  <xs:simpleType name="UnitOfMeasurementCode">
+    <xs:annotation>
+      <xs:appinfo>
+        <nc1dico:source xmlns:nc1dico="urn:fra:nc1:dictionnaires">DBM</nc1dico:source>
+      </xs:appinfo>
+      <xs:documentation></xs:documentation>
+      <xs:documentation xml:lang="en"></xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:integer" />
+  </xs:simpleType>
+</xs:schema>

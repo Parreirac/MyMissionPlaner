@@ -1,0 +1,410 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema targetNamespace="urn:fra:nc1:message:eoincrep" xmlns:nc1ihm="urn:fra:nc1:IHM" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:nc1eoincrep="urn:fra:nc1:message:eoincrep" xmlns:nc1common="urn:fra:nc1:common:attribute" xmlns:nc1location="urn:fra:nc1:common:location" xmlns:nc1msgcom="urn:fra:nc1:common:message" xmlns:nc1route="urn:fra:nc1:objet:route" xmlns:nc1tacpoint="urn:fra:nc1:objet:tacpoint" xmlns:nc1unit="urn:fra:nc1:objet:unit">
+  <!-- NC1 V.9.0.0 -->
+  <xs:import namespace="urn:fra:nc1:common:attribute" schemaLocation="../Commun/Common.xsd" />
+  <xs:import namespace="urn:fra:nc1:common:location" schemaLocation="../Commun/Location.xsd" />
+  <xs:import namespace="urn:fra:nc1:common:message" schemaLocation="../Commun/Message.xsd" />
+  <xs:import namespace="urn:fra:nc1:objet:route" schemaLocation="../Objet/NC1_Route.xsd" />
+  <xs:import namespace="urn:fra:nc1:objet:tacpoint" schemaLocation="../Objet/NC1_TacPoint.xsd" />
+  <xs:import namespace="urn:fra:nc1:objet:unit" schemaLocation="../Objet/NC1_Unit.xsd" />
+  <xs:element name="NC1_EOINCREP">
+    <xs:annotation>
+      <xs:documentation>Le message NC1_EOINCREP est utilisé pour rendre compte d'un incident relatif à un engin explosif ou à une munition non explosée.</xs:documentation>
+      <xs:documentation xml:lang="en">The NC1_EOINCREP message is used to report an incident linked to an IED or unexploded ordnance shape.</xs:documentation>
+      <xs:appinfo>
+        <nc1:type xmlns:nc1="urn:fra:nc1">Message</nc1:type>
+        <nc1ihm:Nom>Compte rendu d'incident d'une munition non explosée</nc1ihm:Nom>
+        <nc1ihm:Nom xml:lang="en">Explosive ordnance incident report</nc1ihm:Nom>
+        <nc1:MessH xmlns:nc1="urn:fra:nc1">N/A</nc1:MessH>
+        <nc1:MessADatP3 xmlns:nc1="urn:fra:nc1">N/A</nc1:MessADatP3>
+        <nc1:LastNC1ModifyVersion xmlns:nc1="urn:fra:nc1">9.0.0</nc1:LastNC1ModifyVersion>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:complexContent>
+        <xs:extension base="nc1msgcom:BaseMessageType">
+          <xs:sequence>
+            <xs:element name="_1_datetime" type="xs:dateTime">
+              <xs:annotation>
+                <xs:documentation>LIGNE 1 : horodatage.</xs:documentation>
+                <xs:documentation xml:lang="en">LINE 1 : datetime.</xs:documentation>
+                <xs:appinfo>
+                  <nc1ihm:Nom>Horodatage</nc1ihm:Nom>
+                  <nc1ihm:Nom xml:lang="en">Timestamp</nc1ihm:Nom>
+                </xs:appinfo>
+              </xs:annotation>
+            </xs:element>
+            <xs:element name="_2_reportingUnit">
+              <xs:annotation>
+                <xs:documentation>LIGNE 2 : unité rendant compte de l'incident.</xs:documentation>
+                <xs:documentation xml:lang="en">LINE 2 :  unit reporting the event.</xs:documentation>
+                <xs:appinfo>
+                  <nc1ihm:Nom>Unité rendant compte</nc1ihm:Nom>
+                  <nc1ihm:Nom xml:lang="en">Reporting unit</nc1ihm:Nom>
+                </xs:appinfo>
+              </xs:annotation>
+              <xs:complexType>
+                <xs:choice>
+                  <xs:element name="reportingUnitId" type="nc1common:Nc1ObjectRefType">
+                    <xs:annotation>
+                      <xs:documentation>Identifiant unique NC1 de l'unité rendant compte.</xs:documentation>
+                      <xs:documentation xml:lang="en">NC1 ID of the reporting unit.</xs:documentation>
+                      <xs:appinfo>
+                        <nc1ihm:Nom>Identifiant unique NC1</nc1ihm:Nom>
+                        <nc1ihm:Nom xml:lang="en">NC1 ID</nc1ihm:Nom>
+                      </xs:appinfo>
+                    </xs:annotation>
+                  </xs:element>
+                  <xs:element name="reportingUnitDescription" type="nc1common:MediumTextType">
+                    <xs:annotation>
+                      <xs:documentation>Description en texte libre de l'unité rendant compte.</xs:documentation>
+                      <xs:documentation xml:lang="en">Free text description of the reporting unit.</xs:documentation>
+                      <xs:appinfo>
+                        <nc1ihm:Nom>Description en texte libre</nc1ihm:Nom>
+                        <nc1ihm:Nom xml:lang="en">Free text description</nc1ihm:Nom>
+                      </xs:appinfo>
+                    </xs:annotation>
+                  </xs:element>
+                </xs:choice>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="_3_EOTypeAndDescription">
+              <xs:annotation>
+                <xs:documentation>LIGNE 3 : type et description de l'engin explosif ou de la munition non explosée.</xs:documentation>
+                <xs:documentation xml:lang="en">LINE 3: type and description of the IED or UXO.</xs:documentation>
+                <xs:appinfo>
+                  <nc1ihm:Nom>Type et description de l'explosif</nc1ihm:Nom>
+                  <nc1ihm:Nom xml:lang="en">Explosive ordnance type and description</nc1ihm:Nom>
+                </xs:appinfo>
+              </xs:annotation>
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="type">
+                    <xs:annotation>
+                      <xs:documentation>Type d'engin explosif ou de munition non explosée.</xs:documentation>
+                      <xs:documentation xml:lang="en">IED or unexploded ordnance type.</xs:documentation>
+                      <xs:appinfo>
+                        <nc1ihm:Nom>Type</nc1ihm:Nom>
+                        <nc1ihm:Nom xml:lang="en">Type</nc1ihm:Nom>
+                      </xs:appinfo>
+                    </xs:annotation>
+                    <xs:complexType>
+                      <xs:choice>
+                        <xs:element name="IEDType" type="nc1eoincrep:IEDTypeCode">
+                          <xs:annotation>
+                            <xs:documentation>Type d'engin explosif (ex : "RCIED").</xs:documentation>
+                            <xs:documentation xml:lang="en">Type of explosive device (ex: "RCIED").</xs:documentation>
+                            <xs:appinfo>
+                              <nc1ihm:Nom>Type d'engin explosif</nc1ihm:Nom>
+                              <nc1ihm:Nom xml:lang="en">IED type</nc1ihm:Nom>
+                            </xs:appinfo>
+                          </xs:annotation>
+                        </xs:element>
+                        <xs:element name="UXOType" type="nc1eoincrep:UXOTypeCode">
+                          <xs:annotation>
+                            <xs:documentation>Type de munition non explosée.</xs:documentation>
+                            <xs:documentation xml:lang="en">Unexploded ordnance type.</xs:documentation>
+                            <xs:appinfo>
+                              <nc1ihm:Nom>Type de munition non explosée</nc1ihm:Nom>
+                              <nc1ihm:Nom xml:lang="en">Unexploded ordnance type</nc1ihm:Nom>
+                            </xs:appinfo>
+                          </xs:annotation>
+                        </xs:element>
+                      </xs:choice>
+                    </xs:complexType>
+                  </xs:element>
+                  <xs:element name="emplacement" type="nc1eoincrep:EOEmplacementCode">
+                    <xs:annotation>
+                      <xs:documentation>Caractérisation de l'emplacement de l'engin explosif ou de la munition non explosée.</xs:documentation>
+                      <xs:documentation xml:lang="en">Characterization of the location of the IED or UXO.</xs:documentation>
+                      <xs:appinfo>
+                        <nc1ihm:Nom>Emplacement</nc1ihm:Nom>
+                        <nc1ihm:Nom xml:lang="en">Location</nc1ihm:Nom>
+                      </xs:appinfo>
+                    </xs:annotation>
+                  </xs:element>
+                  <xs:element name="shape" type="nc1eoincrep:EOShapeCode">
+                    <xs:annotation>
+                      <xs:documentation>Forme de l'engin explosif ou de la munition non explosée.</xs:documentation>
+                      <xs:documentation xml:lang="en">IED or unexploded ordnance shape.</xs:documentation>
+                      <xs:appinfo>
+                        <nc1ihm:Nom>Forme</nc1ihm:Nom>
+                        <nc1ihm:Nom xml:lang="en">Shape</nc1ihm:Nom>
+                      </xs:appinfo>
+                    </xs:annotation>
+                  </xs:element>
+                  <xs:element name="colour" type="nc1eoincrep:EOColourCode">
+                    <xs:annotation>
+                      <xs:documentation>Couleur de l'engin explosif ou de la munition non explosée.</xs:documentation>
+                      <xs:documentation xml:lang="en">IED or unexploded ordnance colour.</xs:documentation>
+                      <xs:appinfo>
+                        <nc1ihm:Nom>Couleur</nc1ihm:Nom>
+                        <nc1ihm:Nom xml:lang="en">Colour</nc1ihm:Nom>
+                      </xs:appinfo>
+                    </xs:annotation>
+                  </xs:element>
+                  <xs:element minOccurs="0" name="description" type="nc1common:MediumTextType">
+                    <xs:annotation>
+                      <xs:documentation>Description en texte libre de l'engin explosif ou de la munition non explosée.</xs:documentation>
+                      <xs:documentation xml:lang="en">Free text description.</xs:documentation>
+                      <xs:appinfo>
+                        <nc1ihm:Nom>Description en texte libre</nc1ihm:Nom>
+                        <nc1ihm:Nom xml:lang="en">Free text description</nc1ihm:Nom>
+                      </xs:appinfo>
+                    </xs:annotation>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="_4_EOLocation" type="nc1location:PointType">
+              <xs:annotation>
+                <xs:documentation>LIGNE 4 : localisation de l'engin explosif ou de la munition non explosée.</xs:documentation>
+                <xs:documentation xml:lang="en">LINE 4: location of the explosive device or unexploded ordnance.</xs:documentation>
+                <xs:appinfo>
+                  <nc1ihm:Nom>Localisation de l'explosif</nc1ihm:Nom>
+                  <nc1ihm:Nom xml:lang="en">EO location</nc1ihm:Nom>
+                </xs:appinfo>
+              </xs:annotation>
+            </xs:element>
+            <xs:element name="_5_LULocation">
+              <xs:annotation>
+                <xs:documentation>LIGNE 5 : point et itinéraire de rendez-vous avec l'unité rendant compte.</xs:documentation>
+                <xs:documentation xml:lang="en">LINE 5: rendezvous point and route with the reporting unit.</xs:documentation>
+                <xs:appinfo>
+                  <nc1ihm:Nom>Rendez-vous</nc1ihm:Nom>
+                  <nc1ihm:Nom xml:lang="en">Rendezvous</nc1ihm:Nom>
+                </xs:appinfo>
+              </xs:annotation>
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="RVPoint">
+                    <xs:annotation>
+                      <xs:documentation>Point de rendez-vous avec l'unité rendant compte.</xs:documentation>
+                      <xs:documentation xml:lang="en">Point of rendezvous with reporting unit.</xs:documentation>
+                      <xs:appinfo>
+                        <nc1ihm:Nom>Point de rendez-vous</nc1ihm:Nom>
+                        <nc1ihm:Nom xml:lang="en">Appointment Location</nc1ihm:Nom>
+                      </xs:appinfo>
+                    </xs:annotation>
+                    <xs:complexType>
+                      <xs:choice>
+                        <xs:element name="tacticalPoint" type="nc1tacpoint:TacPointType">
+                          <xs:annotation>
+                            <xs:documentation>Point tactique.</xs:documentation>
+                            <xs:documentation xml:lang="en">Tactical point.</xs:documentation>
+                            <xs:appinfo>
+                              <nc1ihm:Nom>Point tactique</nc1ihm:Nom>
+                              <nc1ihm:Nom xml:lang="en">Tactical point</nc1ihm:Nom>
+                            </xs:appinfo>
+                          </xs:annotation>
+                        </xs:element>
+                        <xs:element name="point" type="nc1location:PointType">
+                          <xs:annotation>
+                            <xs:documentation>Point géographique.</xs:documentation>
+                            <xs:documentation xml:lang="en">Geographical point.</xs:documentation>
+                            <xs:appinfo>
+                              <nc1ihm:Nom>Point géographique</nc1ihm:Nom>
+                              <nc1ihm:Nom xml:lang="en">Geographical point</nc1ihm:Nom>
+                            </xs:appinfo>
+                          </xs:annotation>
+                        </xs:element>
+                        <xs:element name="unitLocation" type="nc1unit:UnitType">
+                          <xs:annotation>
+                            <xs:documentation>Localisation d'une unité amie.</xs:documentation>
+                            <xs:documentation xml:lang="en">Location of a friend unit.</xs:documentation>
+                            <xs:appinfo>
+                              <nc1ihm:Nom>Localisation d'une unité</nc1ihm:Nom>
+                              <nc1ihm:Nom xml:lang="en">Location of a unit</nc1ihm:Nom>
+                            </xs:appinfo>
+                          </xs:annotation>
+                        </xs:element>
+                      </xs:choice>
+                    </xs:complexType>
+                  </xs:element>
+                  <xs:element minOccurs="0" name="safeRouteToRV" type="nc1route:RouteType">
+                    <xs:annotation>
+                      <xs:documentation>Itinéraire de sûreté menant au point de rendez-vous.</xs:documentation>
+                      <xs:documentation xml:lang="en">Safe route to rendezvous point.</xs:documentation>
+                      <xs:appinfo>
+                        <nc1ihm:Nom>Itinéraire de sûreté</nc1ihm:Nom>
+                        <nc1ihm:Nom xml:lang="en">Safe route</nc1ihm:Nom>
+                      </xs:appinfo>
+                    </xs:annotation>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="_6_comData" type="nc1unit:UnitType">
+              <xs:annotation>
+                <xs:documentation>LIGNE 6 : données de communication.</xs:documentation>
+                <xs:documentation xml:lang="en">LINE 6: com data.</xs:documentation>
+                <xs:appinfo>
+                  <nc1ihm:Nom>Données de communication</nc1ihm:Nom>
+                  <nc1ihm:Nom xml:lang="en">Communication data</nc1ihm:Nom>
+                </xs:appinfo>
+              </xs:annotation>
+            </xs:element>
+            <xs:element name="_7_tacticalSituation">
+              <xs:annotation>
+                <xs:documentation>LIGNE 7 : situation tactique.</xs:documentation>
+                <xs:documentation xml:lang="en">LINE 7 : tactical situation.</xs:documentation>
+                <xs:appinfo>
+                  <nc1ihm:Nom>Situation tactique</nc1ihm:Nom>
+                  <nc1ihm:Nom xml:lang="en">Tactical situation</nc1ihm:Nom>
+                </xs:appinfo>
+              </xs:annotation>
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element minOccurs="0" name="effectOnOperation" type="nc1eoincrep:EffectOnOperationCode">
+                    <xs:annotation>
+                      <xs:documentation>Effet sur la manoeuvre produit par l'incident.</xs:documentation>
+                      <xs:documentation xml:lang="en">Effect on operation produced by the event.</xs:documentation>
+                      <xs:appinfo>
+                        <nc1ihm:Nom>Effet sur la manoeuvre</nc1ihm:Nom>
+                        <nc1ihm:Nom xml:lang="en">Effect on operation</nc1ihm:Nom>
+                      </xs:appinfo>
+                    </xs:annotation>
+                  </xs:element>
+                  <xs:element minOccurs="0" name="description" type="nc1common:MediumTextType">
+                    <xs:annotation>
+                      <xs:documentation>Description en texte libre de la menace courante et de l'environnement.</xs:documentation>
+                      <xs:documentation xml:lang="en">Free text description.</xs:documentation>
+                      <xs:appinfo>
+                        <nc1ihm:Nom>Description</nc1ihm:Nom>
+                        <nc1ihm:Nom xml:lang="en">Description</nc1ihm:Nom>
+                      </xs:appinfo>
+                    </xs:annotation>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="_8_collateralDamage" type="nc1common:MediumTextType">
+              <xs:annotation>
+                <xs:documentation>LIGNE 8 : description des dommages collatéraux ou des dommages collatéraux potentiels.</xs:documentation>
+                <xs:documentation xml:lang="en">LINE 8: current or potential collateral damages description.</xs:documentation>
+                <xs:appinfo>
+                  <nc1ihm:Nom>Dommages collatéraux</nc1ihm:Nom>
+                  <nc1ihm:Nom xml:lang="en">Collateral damage</nc1ihm:Nom>
+                </xs:appinfo>
+              </xs:annotation>
+            </xs:element>
+            <xs:element name="_9_protectiveActions" type="nc1common:MediumTextType">
+              <xs:annotation>
+                <xs:documentation>LIGNE 9 : description des mesures de protections mises en place (ex : marquage).</xs:documentation>
+                <xs:documentation xml:lang="en">ONLINE 9: Description of protection measures in place (e.g. marking).</xs:documentation>
+                <xs:appinfo>
+                  <nc1ihm:Nom>Mesures de protection</nc1ihm:Nom>
+                  <nc1ihm:Nom xml:lang="en">EW protection measures</nc1ihm:Nom>
+                </xs:appinfo>
+              </xs:annotation>
+            </xs:element>
+            <xs:element name="_10_priority" type="nc1eoincrep:EOIncidentPriorityCode">
+              <xs:annotation>
+                <xs:documentation>LIGNE 10 : priorité donnée à l'incident.</xs:documentation>
+                <xs:documentation xml:lang="en">LINE 10: priority given to the incident.</xs:documentation>
+                <xs:appinfo>
+                  <nc1ihm:Nom>Priorité</nc1ihm:Nom>
+                  <nc1ihm:Nom xml:lang="en">priority</nc1ihm:Nom>
+                </xs:appinfo>
+              </xs:annotation>
+            </xs:element>
+            <xs:element minOccurs="0" name="comment" type="nc1msgcom:CommentSectionType">
+              <xs:annotation>
+                <xs:documentation>Commentaire en texte libre.</xs:documentation>
+                <xs:documentation xml:lang="en">free text comment.</xs:documentation>
+                <xs:appinfo>
+                  <nc1ihm:Nom>Commentaire</nc1ihm:Nom>
+                  <nc1ihm:Nom xml:lang="en">comment</nc1ihm:Nom>
+                </xs:appinfo>
+              </xs:annotation>
+            </xs:element>
+          </xs:sequence>
+        </xs:extension>
+      </xs:complexContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:simpleType name="EffectOnOperationCode">
+    <xs:annotation>
+      <xs:appinfo>
+        <nc1dico:source xmlns:nc1dico="urn:fra:nc1:dictionnaires">List E01 de l'EOD-0100</nc1dico:source>
+        <nc1ihm:description>Catégorie d'effet sur la manoeuvre produit par un incident relatif à engin explosif ou d'une munition non explosée.</nc1ihm:description>
+        <nc1ihm:description xml:lang="en">Category of the effect on the manoeuvre produced by an incident involving explosive devices or unexploded ordnance.</nc1ihm:description>
+      </xs:appinfo>
+      <xs:documentation>Catégorie d'effet sur la manoeuvre produit par un incident relatif à engin explosif ou d'une munition non explosée.</xs:documentation>
+      <xs:documentation xml:lang="en">Category of the effect on the manoeuvre produced by an incident involving explosive devices or unexploded ordnance.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:integer" />
+  </xs:simpleType>
+  <xs:simpleType name="EOColourCode">
+    <xs:annotation>
+      <xs:appinfo>
+        <nc1dico:source xmlns:nc1dico="urn:fra:nc1:dictionnaires">List C10 de l'EOD-0100</nc1dico:source>
+        <nc1ihm:description>Couleur d'un engin explosif ou d'une munition non explosée.</nc1ihm:description>
+        <nc1ihm:description xml:lang="en">Colour of an explosive device or unexploded ordnance.</nc1ihm:description>
+      </xs:appinfo>
+      <xs:documentation>Couleur d'un engin explosif ou d'une munition non explosée.</xs:documentation>
+      <xs:documentation xml:lang="en">Colour of an explosive device or unexploded ordnance.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:integer" />
+  </xs:simpleType>
+  <xs:simpleType name="EOEmplacementCode">
+    <xs:annotation>
+      <xs:appinfo>
+        <nc1dico:source xmlns:nc1dico="urn:fra:nc1:dictionnaires">List C08 de l'EOD-0100</nc1dico:source>
+        <nc1ihm:description>Caractérisation de l'emplacement d'un engin explosif ou d'une munition non explosée.</nc1ihm:description>
+        <nc1ihm:description xml:lang="en">Characterization of the location of an IED or UXO.</nc1ihm:description>
+      </xs:appinfo>
+      <xs:documentation>Caractérisation de l'emplacement d'un engin explosif ou d'une munition non explosée.</xs:documentation>
+      <xs:documentation xml:lang="en">Characterization of the location of an IED or UXO.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:integer" />
+  </xs:simpleType>
+  <xs:simpleType name="EOIncidentPriorityCode">
+    <xs:annotation>
+      <xs:appinfo>
+        <nc1dico:source xmlns:nc1dico="urn:fra:nc1:dictionnaires">List C02 de l'EOD-0100</nc1dico:source>
+        <nc1ihm:description>Priorité d'un incident relatif à un engin explosif ou à une munition non explosée, renseignée par l'unité rendant compte.</nc1ihm:description>
+        <nc1ihm:description xml:lang="en">Priority of an incident involving an explosive device or UXO, informed by the unit reporting.</nc1ihm:description>
+      </xs:appinfo>
+      <xs:documentation>Priorité d'un incident relatif à un engin explosif ou à une munition non explosée, renseignée par l'unité rendant compte.</xs:documentation>
+      <xs:documentation xml:lang="en">Priority of an incident involving an explosive device or UXO, informed by the unit reporting.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:integer" />
+  </xs:simpleType>
+  <xs:simpleType name="EOShapeCode">
+    <xs:annotation>
+      <xs:appinfo>
+        <nc1dico:source xmlns:nc1dico="urn:fra:nc1:dictionnaires">List C09 de l'EOD-0100</nc1dico:source>
+        <nc1ihm:description>Forme d'un engin explosif ou d'une munition non explosée.</nc1ihm:description>
+        <nc1ihm:description xml:lang="en">IED or unexploded ordnance shape.</nc1ihm:description>
+      </xs:appinfo>
+      <xs:documentation>Forme d'un engin explosif ou d'une munition non explosée.</xs:documentation>
+      <xs:documentation xml:lang="en">IED or unexploded ordnance shape.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:integer" />
+  </xs:simpleType>
+  <xs:simpleType name="IEDTypeCode">
+    <xs:annotation>
+      <xs:appinfo>
+        <nc1dico:source xmlns:nc1dico="urn:fra:nc1:dictionnaires">List C07 de l'EOD-0100</nc1dico:source>
+        <nc1ihm:description>Type d'engin explosif.</nc1ihm:description>
+        <nc1ihm:description xml:lang="en">IED type.</nc1ihm:description>
+      </xs:appinfo>
+      <xs:documentation>Type d'engin explosif.</xs:documentation>
+      <xs:documentation xml:lang="en">IED type.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:integer" />
+  </xs:simpleType>
+  <xs:simpleType name="UXOTypeCode">
+    <xs:annotation>
+      <xs:appinfo>
+        <nc1dico:source xmlns:nc1dico="urn:fra:nc1:dictionnaires">List C06 de l'EOD-0100</nc1dico:source>
+        <nc1ihm:description>Type de munition non explosée.</nc1ihm:description>
+        <nc1ihm:description xml:lang="en">Unexploded ordnance type.</nc1ihm:description>
+      </xs:appinfo>
+      <xs:documentation>Type de munition non explosée.</xs:documentation>
+      <xs:documentation xml:lang="en">Unexploded ordnance type.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:integer" />
+  </xs:simpleType>
+</xs:schema>

@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<cva:ContextValueAssociation xmlns:cva="http://docs.oasis-open.org/codelist/ns/ContextValueAssociation/1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="urn:fra:nc1:objet:roe" queryBinding="xslt2" xmlns:nc1roe="urn:fra:nc1:objet:roe">
+  <!-- NC1 V.9.0.0 -->
+  <ValueLists>
+    <ValueList xml:id="nc1objcom-ActivationStatusCode" uri="../Dictionnaires/ActivationStatusCode.gc" />
+    <ValueList xml:id="nc1objcom-IsFullCode" uri="../Dictionnaires/IsFullCode.gc" />
+    <ValueList xml:id="nc1roe-NatoMajorSubordinateCommanderCode" uri="../Dictionnaires/NatoMajorSubordinateCommanderCode.gc" />
+    <ValueList xml:id="nc1roe-PpiCodeCode" uri="../Dictionnaires/PpiCodeCode.gc" />
+  </ValueLists>
+  <Contexts>
+    <Context address="/nc1roe:NC1_Roe/@activationStatus" values="nc1objcom-ActivationStatusCode" />
+    <Context address="/nc1roe:NC1_Roe/@isFull" values="nc1objcom-IsFullCode" />
+    <Context address="/nc1roe:NC1_Roe/tacticalData/authorizedOrganisations/natoMajorSubordinateCommander" values="nc1roe-NatoMajorSubordinateCommanderCode" />
+    <Context address="/nc1roe:NC1_Roe/tacticalData/ppiCode/ppiCode" values="nc1roe-PpiCodeCode" />
+  </Contexts>
+</cva:ContextValueAssociation>

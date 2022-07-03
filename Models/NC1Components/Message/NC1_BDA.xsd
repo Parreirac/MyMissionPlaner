@@ -1,0 +1,179 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema targetNamespace="urn:fra:nc1:message:bda" xmlns:nc1ihm="urn:fra:nc1:IHM" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:nc1bda="urn:fra:nc1:message:bda" xmlns:nc1common="urn:fra:nc1:common:attribute" xmlns:nc1msgcom="urn:fra:nc1:common:message" xmlns:nc1sicsdicos="urn:fra:nc1:common:sicsdicos">
+  <!-- NC1 V.9.0.0 -->
+  <xs:import namespace="urn:fra:nc1:common:attribute" schemaLocation="../Commun/Common.xsd" />
+  <xs:import namespace="urn:fra:nc1:common:message" schemaLocation="../Commun/Message.xsd" />
+  <xs:import namespace="urn:fra:nc1:common:sicsdicos" schemaLocation="../Commun/SICS_Dictionaries.xsd" />
+  <xs:element name="NC1_BDA">
+    <xs:annotation>
+      <xs:documentation>Le message NC1_BDA est utilisé pour rendre compte des dommages causés par un tir.</xs:documentation>
+      <xs:documentation xml:lang="en">The NC1_BDA message is used to report the damage caused by a fire.</xs:documentation>
+      <xs:appinfo>
+        <nc1:type xmlns:nc1="urn:fra:nc1">Message</nc1:type>
+        <nc1ihm:Nom>Compte rendu des dommages d’un tir</nc1ihm:Nom>
+        <nc1ihm:Nom xml:lang="en">Battle Damage Assessment</nc1ihm:Nom>
+        <nc1:MessH xmlns:nc1="urn:fra:nc1">N/A</nc1:MessH>
+        <nc1:MessADatP3 xmlns:nc1="urn:fra:nc1">N/A</nc1:MessADatP3>
+        <nc1:LastNC1ModifyVersion xmlns:nc1="urn:fra:nc1">9.0.0</nc1:LastNC1ModifyVersion>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:complexContent>
+        <xs:extension base="nc1msgcom:BaseMessageType">
+          <xs:sequence>
+            <xs:element name="battleDamageAssessment">
+              <xs:annotation>
+                <xs:documentation>Compte rendu des dommages causés par un tir.</xs:documentation>
+                <xs:documentation xml:lang="en">Battle damage assessment.</xs:documentation>
+                <xs:appinfo>
+                  <nc1ihm:Nom>Compte rendu</nc1ihm:Nom>
+                  <nc1ihm:Nom xml:lang="en">Report</nc1ihm:Nom>
+                </xs:appinfo>
+              </xs:annotation>
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element minOccurs="0" name="fireReference">
+                    <xs:annotation>
+                      <xs:documentation>Référence du tir dont les dommages sont évalués.</xs:documentation>
+                      <xs:documentation xml:lang="en">Reference of the fire for which damages are assessed.</xs:documentation>
+                      <xs:appinfo>
+                        <nc1ihm:Nom>Référence du tir</nc1ihm:Nom>
+                        <nc1ihm:Nom xml:lang="en">Fire reference</nc1ihm:Nom>
+                      </xs:appinfo>
+                    </xs:annotation>
+                    <xs:complexType>
+                      <xs:choice>
+                        <xs:element minOccurs="0" name="fireId" type="nc1common:Nc1ObjectRefType">
+                          <xs:annotation>
+                            <xs:documentation>Identifiant unique du tir dont les dommages sont évalués.</xs:documentation>
+                            <xs:documentation xml:lang="en">Id of the fire for which damages are assessed.</xs:documentation>
+                            <xs:appinfo>
+                              <nc1ihm:Nom>Tir</nc1ihm:Nom>
+                              <nc1ihm:Nom xml:lang="en">Fire</nc1ihm:Nom>
+                            </xs:appinfo>
+                          </xs:annotation>
+                        </xs:element>
+                        <xs:element minOccurs="0" name="fireTno" type="nc1common:TnoType">
+                          <xs:annotation>
+                            <xs:documentation>Numéro TNO du tir dont les dommages sont évalués.</xs:documentation>
+                            <xs:documentation xml:lang="en">TNO of the fire for which damages are assessed.</xs:documentation>
+                            <xs:appinfo>
+                              <nc1ihm:Nom>Numéro du tir</nc1ihm:Nom>
+                              <nc1ihm:Nom xml:lang="en">Fire number</nc1ihm:Nom>
+                            </xs:appinfo>
+                          </xs:annotation>
+                        </xs:element>
+                      </xs:choice>
+                    </xs:complexType>
+                  </xs:element>
+                  <xs:element minOccurs="0" name="fireObjectiveReference">
+                    <xs:annotation>
+                      <xs:documentation>Référence de l'objectif feux associé au tir dont les dommages sont évalués.</xs:documentation>
+                      <xs:documentation xml:lang="en">Reference of the fire objective associated to the fire for which damages are assessed.</xs:documentation>
+                      <xs:appinfo>
+                        <nc1ihm:Nom>Référence de l'objectif feux</nc1ihm:Nom>
+                        <nc1ihm:Nom xml:lang="en">Fire objective reference</nc1ihm:Nom>
+                      </xs:appinfo>
+                    </xs:annotation>
+                    <xs:complexType>
+                      <xs:choice>
+                        <xs:element minOccurs="0" name="fireObjectiveId" type="nc1common:Nc1ObjectRefType">
+                          <xs:annotation>
+                            <xs:documentation>Identifiant unique de l'objectif feux associé au tir dont les dommages sont évalués.</xs:documentation>
+                            <xs:documentation xml:lang="en">Id of the fire objective associated to the fire for which damages are assessed.</xs:documentation>
+                            <xs:appinfo>
+                              <nc1ihm:Nom>Objectif feux</nc1ihm:Nom>
+                              <nc1ihm:Nom xml:lang="en">Fire objective</nc1ihm:Nom>
+                            </xs:appinfo>
+                          </xs:annotation>
+                        </xs:element>
+                        <xs:element minOccurs="0" name="fireObjectiveTno" type="nc1common:TnoType">
+                          <xs:annotation>
+                            <xs:documentation>Numéro TNO de l'objectif feux associé au tir dont les dommages sont évalués.</xs:documentation>
+                            <xs:documentation xml:lang="en">TNO of the fire objective associated to the fire for which damages are assessed.</xs:documentation>
+                            <xs:appinfo>
+                              <nc1ihm:Nom>Numéro d'objectif feux</nc1ihm:Nom>
+                              <nc1ihm:Nom xml:lang="en">Fire objective TNO</nc1ihm:Nom>
+                            </xs:appinfo>
+                          </xs:annotation>
+                        </xs:element>
+                      </xs:choice>
+                    </xs:complexType>
+                  </xs:element>
+                  <xs:element name="damage" type="nc1sicsdicos:L114_37Code">
+                    <xs:annotation>
+                      <xs:documentation>Dommages causés par le tir.</xs:documentation>
+                      <xs:documentation xml:lang="en">Battle damage assessment.</xs:documentation>
+                      <xs:appinfo>
+                        <nc1ihm:Nom>Dommages</nc1ihm:Nom>
+                        <nc1ihm:Nom xml:lang="en">Damage</nc1ihm:Nom>
+                      </xs:appinfo>
+                    </xs:annotation>
+                  </xs:element>
+                  <xs:element minOccurs="0" name="damageDescription" type="nc1common:MediumTextType">
+                    <xs:annotation>
+                      <xs:documentation>Description des dommages causés par le tir.</xs:documentation>
+                      <xs:documentation xml:lang="en">Description of damage caused by firing.</xs:documentation>
+                      <xs:appinfo>
+                        <nc1ihm:Nom>Description des dommages</nc1ihm:Nom>
+                        <nc1ihm:Nom xml:lang="en">Damage description</nc1ihm:Nom>
+                      </xs:appinfo>
+                    </xs:annotation>
+                  </xs:element>
+                  <xs:element minOccurs="0" name="source" type="nc1bda:SourceType">
+                    <xs:annotation>
+                      <xs:documentation>Source du constat des dommages causés par le tir.</xs:documentation>
+                      <xs:documentation xml:lang="en">Source of the report of the damages caused by a shot.</xs:documentation>
+                      <xs:appinfo>
+                        <nc1ihm:Nom>Source du constat</nc1ihm:Nom>
+                        <nc1ihm:Nom xml:lang="en">Source of the report</nc1ihm:Nom>
+                      </xs:appinfo>
+                    </xs:annotation>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element minOccurs="0" name="comment" type="nc1msgcom:CommentSectionType">
+              <xs:annotation>
+                <xs:documentation>Commentaire en texte libre.</xs:documentation>
+                <xs:documentation xml:lang="en">free text comment.</xs:documentation>
+                <xs:appinfo>
+                  <nc1ihm:Nom>Commentaire</nc1ihm:Nom>
+                  <nc1ihm:Nom xml:lang="en">comment</nc1ihm:Nom>
+                </xs:appinfo>
+              </xs:annotation>
+            </xs:element>
+          </xs:sequence>
+        </xs:extension>
+      </xs:complexContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="SourceType">
+    <xs:annotation>
+      <xs:documentation>Source du constat des dommages créés par un tir d'artillerie.</xs:documentation>
+      <xs:documentation xml:lang="en">Source of the report of the damages caused by a fire.</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" name="observerId" type="nc1common:Nc1ObjectRefType">
+        <xs:annotation>
+          <xs:documentation>Identifiant unique de l'observateur des dommages causés.</xs:documentation>
+          <xs:documentation xml:lang="en">NC1 ID of the observer for damages.</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Observateur</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">Observer</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="description" type="nc1common:MediumTextType">
+        <xs:annotation>
+          <xs:documentation>Description complémentaire de la source en texte libre.</xs:documentation>
+          <xs:documentation xml:lang="en">Free text description.</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Description complémentaire</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">Additional description</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

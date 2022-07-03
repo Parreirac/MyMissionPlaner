@@ -1,0 +1,309 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema targetNamespace="urn:fra:nc1:message:opordgen" xmlns:nc1ihm="urn:fra:nc1:IHM" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:nc1opordgen="urn:fra:nc1:message:opordgen" xmlns:nc1common="urn:fra:nc1:common:attribute" xmlns:nc1msgcom="urn:fra:nc1:common:message" xmlns:nc1opord="urn:fra:nc1:message:opord">
+  <!-- NC1 V.9.0.0 -->
+  <xs:import namespace="urn:fra:nc1:common:attribute" schemaLocation="../Commun/Common.xsd" />
+  <xs:import namespace="urn:fra:nc1:common:message" schemaLocation="../Commun/Message.xsd" />
+  <xs:import namespace="urn:fra:nc1:message:opord" schemaLocation="NC1_OPORD.xsd" />
+  <xs:element name="NC1_OPORD-GEN">
+    <xs:annotation>
+      <xs:documentation>Le message NC1_OPORD-GEN sert à transmettre les ordres au génie et à informer les unités bénéficiaires de l'appui qui leur sera donné par le Génie.</xs:documentation>
+      <xs:documentation xml:lang="en">The NC1_OPORD-GEN message serves to transmit the orders in the engineering and to inform the profitable units of the support which will be given to them by the Engineering.</xs:documentation>
+      <xs:appinfo>
+        <nc1:type xmlns:nc1="urn:fra:nc1">Message</nc1:type>
+        <nc1ihm:Nom>Annexe Génie</nc1ihm:Nom>
+        <nc1ihm:Nom xml:lang="en">Engineer annex</nc1ihm:Nom>
+        <nc1:MessH xmlns:nc1="urn:fra:nc1">N/A</nc1:MessH>
+        <nc1:MessADatP3 xmlns:nc1="urn:fra:nc1">N/A</nc1:MessADatP3>
+        <nc1:LastNC1ModifyVersion xmlns:nc1="urn:fra:nc1">9.0.0</nc1:LastNC1ModifyVersion>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:complexContent>
+        <xs:extension base="nc1msgcom:BaseMessageType">
+          <xs:sequence>
+            <xs:element minOccurs="0" name="_1_situation" type="nc1msgcom:MixedAnyType">
+              <xs:annotation>
+                <xs:documentation>Situation.</xs:documentation>
+                <xs:documentation xml:lang="en">Situation.</xs:documentation>
+                <xs:appinfo>
+                  <nc1ihm:Nom>1 - Situation</nc1ihm:Nom>
+                  <nc1ihm:Nom xml:lang="en">1 - Situation</nc1ihm:Nom>
+                </xs:appinfo>
+              </xs:annotation>
+            </xs:element>
+            <xs:element minOccurs="0" name="_2_missions" type="nc1msgcom:MixedAnyType">
+              <xs:annotation>
+                <xs:documentation>Missions.</xs:documentation>
+                <xs:documentation xml:lang="en">Missions.</xs:documentation>
+                <xs:appinfo>
+                  <nc1ihm:Nom>2 - Missions</nc1ihm:Nom>
+                  <nc1ihm:Nom xml:lang="en">2 - Missions</nc1ihm:Nom>
+                </xs:appinfo>
+              </xs:annotation>
+            </xs:element>
+            <xs:element minOccurs="0" name="_3_execution">
+              <xs:annotation>
+                <xs:documentation>Exécution.</xs:documentation>
+                <xs:documentation xml:lang="en">Execution.</xs:documentation>
+                <xs:appinfo>
+                  <nc1ihm:Nom>3 - Exécution</nc1ihm:Nom>
+                  <nc1ihm:Nom xml:lang="en">3 - Execution</nc1ihm:Nom>
+                </xs:appinfo>
+              </xs:annotation>
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element minOccurs="0" name="A_engineerOperationsPlan">
+                    <xs:annotation>
+                      <xs:documentation>Plan des opérations du génie.</xs:documentation>
+                      <xs:documentation xml:lang="en">Engineer operations plan.</xs:documentation>
+                      <xs:appinfo>
+                        <nc1ihm:Nom>A - Plan des opérations</nc1ihm:Nom>
+                        <nc1ihm:Nom xml:lang="en">A - Operations plan</nc1ihm:Nom>
+                      </xs:appinfo>
+                    </xs:annotation>
+                    <xs:complexType>
+                      <xs:sequence>
+                        <xs:element minOccurs="0" name="A1_maneuverIdea" type="nc1msgcom:MixedAnyType">
+                          <xs:annotation>
+                            <xs:documentation>Idée de manoeuvre à la base du plan de manoeuvre.</xs:documentation>
+                            <xs:documentation xml:lang="en">Idea for manoeuvre at the base of the operating plan.</xs:documentation>
+                            <xs:appinfo>
+                              <nc1ihm:Nom>A1 - Idée de manoeuvre</nc1ihm:Nom>
+                              <nc1ihm:Nom xml:lang="en">A1 - Manoeuvre idea</nc1ihm:Nom>
+                            </xs:appinfo>
+                          </xs:annotation>
+                        </xs:element>
+                        <xs:element minOccurs="0" name="A2_mainEffort" type="nc1msgcom:MixedAnyType">
+                          <xs:annotation>
+                            <xs:documentation>Effort principal du génie.</xs:documentation>
+                            <xs:documentation xml:lang="en">Engineer main effort.</xs:documentation>
+                            <xs:appinfo>
+                              <nc1ihm:Nom>A2 - Effort principal</nc1ihm:Nom>
+                              <nc1ihm:Nom xml:lang="en">A2 - Main effort</nc1ihm:Nom>
+                            </xs:appinfo>
+                          </xs:annotation>
+                        </xs:element>
+                        <xs:element minOccurs="0" name="A3_engineerSupport" type="nc1msgcom:MixedAnyType">
+                          <xs:annotation>
+                            <xs:documentation>Appui du génie au combat rapproché.</xs:documentation>
+                            <xs:documentation xml:lang="en">Engineer support to close combat.</xs:documentation>
+                            <xs:appinfo>
+                              <nc1ihm:Nom>A3 - Appui au combat rapproché</nc1ihm:Nom>
+                              <nc1ihm:Nom xml:lang="en">A3 - Close combat support</nc1ihm:Nom>
+                            </xs:appinfo>
+                          </xs:annotation>
+                        </xs:element>
+                        <xs:element minOccurs="0" name="A4_supportMissions">
+                          <xs:annotation>
+                            <xs:documentation>Missions au niveau de la division en soutien de la Brigade.</xs:documentation>
+                            <xs:documentation xml:lang="en">Missions at the Brigade Support division.</xs:documentation>
+                            <xs:appinfo>
+                              <nc1ihm:Nom>A4 - Missions en soutien de la Brigade</nc1ihm:Nom>
+                              <nc1ihm:Nom xml:lang="en">A4 - Support missions</nc1ihm:Nom>
+                            </xs:appinfo>
+                          </xs:annotation>
+                          <xs:complexType>
+                            <xs:sequence>
+                              <xs:element minOccurs="0" name="obstaclesAndWorks" type="nc1opord:obstaclesAndWorksType">
+                                <xs:annotation>
+                                  <xs:documentation>Obstacles et ouvrages du génie.</xs:documentation>
+                                  <xs:documentation xml:lang="en">Engineering obstacles and works.</xs:documentation>
+                                  <xs:appinfo>
+                                    <nc1ihm:Nom>Obstacles et ouvrages</nc1ihm:Nom>
+                                    <nc1ihm:Nom xml:lang="en">Obstacles and permanent structures</nc1ihm:Nom>
+                                  </xs:appinfo>
+                                </xs:annotation>
+                              </xs:element>
+                              <xs:element minOccurs="0" name="objectives" type="nc1msgcom:MixedAnyType">
+                                <xs:annotation>
+                                  <xs:documentation>Objectifs liés à la manoeuvre.</xs:documentation>
+                                  <xs:documentation xml:lang="en">Objectives associated with the manoeuvre.</xs:documentation>
+                                  <xs:appinfo>
+                                    <nc1ihm:Nom>Objectifs</nc1ihm:Nom>
+                                    <nc1ihm:Nom xml:lang="en">objectives</nc1ihm:Nom>
+                                  </xs:appinfo>
+                                </xs:annotation>
+                              </xs:element>
+                            </xs:sequence>
+                          </xs:complexType>
+                        </xs:element>
+                      </xs:sequence>
+                    </xs:complexType>
+                  </xs:element>
+                  <xs:element minOccurs="0" name="B_engineerMissions">
+                    <xs:annotation>
+                      <xs:documentation>Missions Génie confiées aux unités subordonnées.</xs:documentation>
+                      <xs:documentation xml:lang="en">Subordinates engineer missions.</xs:documentation>
+                      <xs:appinfo>
+                        <nc1ihm:Nom>B - Missions Génie</nc1ihm:Nom>
+                        <nc1ihm:Nom xml:lang="en">B - Engineer missions</nc1ihm:Nom>
+                      </xs:appinfo>
+                    </xs:annotation>
+                    <xs:complexType>
+                      <xs:sequence>
+                        <xs:element name="B1_engineerLevelMissions" type="nc1msgcom:MixedAnyType">
+                          <xs:annotation>
+                            <xs:documentation>Missions à l'échelon du génie.</xs:documentation>
+                            <xs:documentation xml:lang="en">Engineer level missions.</xs:documentation>
+                            <xs:appinfo>
+                              <nc1ihm:Nom>B1 - Missions à l'échelon du génie</nc1ihm:Nom>
+                              <nc1ihm:Nom xml:lang="en">B1 - Engineer level missions</nc1ihm:Nom>
+                            </xs:appinfo>
+                          </xs:annotation>
+                        </xs:element>
+                        <xs:element name="B2_brigadeLevelMissions" type="nc1msgcom:MixedAnyType">
+                          <xs:annotation>
+                            <xs:documentation>Missions à l'échelon de la brigade attribuées à des éléments du génie.</xs:documentation>
+                            <xs:documentation xml:lang="en">Missions to the level of brigade assigned to engineering elements.</xs:documentation>
+                            <xs:appinfo>
+                              <nc1ihm:Nom>B2 - Missions à l'échelon de la brigade</nc1ihm:Nom>
+                              <nc1ihm:Nom xml:lang="en">B2 - Brigade level missions</nc1ihm:Nom>
+                            </xs:appinfo>
+                          </xs:annotation>
+                        </xs:element>
+                      </xs:sequence>
+                    </xs:complexType>
+                  </xs:element>
+                  <xs:element minOccurs="0" name="C_coordinationMeans">
+                    <xs:annotation>
+                      <xs:documentation>Instructions de coordination.</xs:documentation>
+                      <xs:documentation xml:lang="en">2D coordination means.</xs:documentation>
+                      <xs:appinfo>
+                        <nc1ihm:Nom>C - Instructions de coordination</nc1ihm:Nom>
+                        <nc1ihm:Nom xml:lang="en">C - Coordination instructions</nc1ihm:Nom>
+                      </xs:appinfo>
+                    </xs:annotation>
+                    <xs:complexType>
+                      <xs:sequence>
+                        <xs:element minOccurs="0" name="C1_overview" type="nc1common:LongTextType">
+                          <xs:annotation>
+                            <xs:documentation>Généralités.</xs:documentation>
+                            <xs:documentation xml:lang="en">General points.</xs:documentation>
+                            <xs:appinfo>
+                              <nc1ihm:Nom>C1 - Généralités</nc1ihm:Nom>
+                              <nc1ihm:Nom xml:lang="en">C1 - Overview</nc1ihm:Nom>
+                            </xs:appinfo>
+                          </xs:annotation>
+                        </xs:element>
+                        <xs:element minOccurs="0" name="C2_obstaclesPlanCoordination" type="nc1msgcom:MixedAnyType">
+                          <xs:annotation>
+                            <xs:documentation>Coordination des plans d'obstacles / barrages.</xs:documentation>
+                            <xs:documentation xml:lang="en">Obstacles plan coordination.</xs:documentation>
+                            <xs:appinfo>
+                              <nc1ihm:Nom>C2 - Plan d'obstacles / barrages</nc1ihm:Nom>
+                              <nc1ihm:Nom xml:lang="en">C2 - Obstacles plan coordination</nc1ihm:Nom>
+                            </xs:appinfo>
+                          </xs:annotation>
+                        </xs:element>
+                        <xs:element minOccurs="0" name="C3_defensiveWork" type="nc1opord:obstaclesAndWorksType">
+                          <xs:annotation>
+                            <xs:documentation>Ouvrages défensifs.</xs:documentation>
+                            <xs:documentation xml:lang="en">Defensive structure.</xs:documentation>
+                            <xs:appinfo>
+                              <nc1ihm:Nom>C3 - Ouvrages défensifs</nc1ihm:Nom>
+                              <nc1ihm:Nom xml:lang="en">C3 - Defensive work</nc1ihm:Nom>
+                            </xs:appinfo>
+                          </xs:annotation>
+                        </xs:element>
+                        <xs:element minOccurs="0" name="C4_routes" type="nc1msgcom:MixedAnyType">
+                          <xs:annotation>
+                            <xs:documentation>Entretien des itinéraires.</xs:documentation>
+                            <xs:documentation xml:lang="en">Maintenance routes.</xs:documentation>
+                            <xs:appinfo>
+                              <nc1ihm:Nom>C4 - Itinéraires</nc1ihm:Nom>
+                              <nc1ihm:Nom xml:lang="en">C4 - Routes</nc1ihm:Nom>
+                            </xs:appinfo>
+                          </xs:annotation>
+                        </xs:element>
+                        <xs:element minOccurs="0" name="C5_refuelingPoints" type="nc1msgcom:MixedAnyType">
+                          <xs:annotation>
+                            <xs:documentation>Points de ravitaillement du génie.</xs:documentation>
+                            <xs:documentation xml:lang="en">Engineer refuelling points.</xs:documentation>
+                            <xs:appinfo>
+                              <nc1ihm:Nom>C5 - Points de ravitaillement</nc1ihm:Nom>
+                              <nc1ihm:Nom xml:lang="en">C5 - Refueling points</nc1ihm:Nom>
+                            </xs:appinfo>
+                          </xs:annotation>
+                        </xs:element>
+                        <xs:element minOccurs="0" name="C6_interdictionMeasures" type="nc1msgcom:MixedAnyType">
+                          <xs:annotation>
+                            <xs:documentation>Mesures d'interdiction.</xs:documentation>
+                            <xs:documentation xml:lang="en">Interdiction measures.</xs:documentation>
+                            <xs:appinfo>
+                              <nc1ihm:Nom>C6 - Mesures d'interdiction</nc1ihm:Nom>
+                              <nc1ihm:Nom xml:lang="en">C6 - Interdiction measures</nc1ihm:Nom>
+                            </xs:appinfo>
+                          </xs:annotation>
+                        </xs:element>
+                        <xs:element minOccurs="0" name="C7_hostNationCoordination" type="nc1msgcom:MixedAnyType">
+                          <xs:annotation>
+                            <xs:documentation>Coordination avec la nation hôte.</xs:documentation>
+                            <xs:documentation xml:lang="en">Host nation coordination.</xs:documentation>
+                            <xs:appinfo>
+                              <nc1ihm:Nom>C7 - Coordination avec la nation hôte</nc1ihm:Nom>
+                              <nc1ihm:Nom xml:lang="en">C7 - Host nation coordination</nc1ihm:Nom>
+                            </xs:appinfo>
+                          </xs:annotation>
+                        </xs:element>
+                      </xs:sequence>
+                    </xs:complexType>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element minOccurs="0" name="_4_administrativeAndLogisticsServices" type="nc1msgcom:MixedAnyType">
+              <xs:annotation>
+                <xs:documentation>Administration et logistique.</xs:documentation>
+                <xs:documentation xml:lang="en">Administration and logistics.</xs:documentation>
+                <xs:appinfo>
+                  <nc1ihm:Nom>4 - Administration et logistique</nc1ihm:Nom>
+                  <nc1ihm:Nom xml:lang="en">4 - Administration and logistics</nc1ihm:Nom>
+                </xs:appinfo>
+              </xs:annotation>
+            </xs:element>
+            <xs:element minOccurs="0" name="_5_commandAndTransmissions" type="nc1msgcom:MixedAnyType">
+              <xs:annotation>
+                <xs:documentation>Commandement et transmissions.</xs:documentation>
+                <xs:documentation xml:lang="en">Command and transmissions.</xs:documentation>
+                <xs:appinfo>
+                  <nc1ihm:Nom>5 - Commandement et transmissions</nc1ihm:Nom>
+                  <nc1ihm:Nom xml:lang="en">5 - Command and transmissions</nc1ihm:Nom>
+                </xs:appinfo>
+              </xs:annotation>
+            </xs:element>
+            <xs:element minOccurs="0" name="acknowledgement" type="xs:boolean">
+              <xs:annotation>
+                <xs:documentation>Demande d’aperçu.</xs:documentation>
+                <xs:documentation xml:lang="en">Acknowledgement request.</xs:documentation>
+                <xs:appinfo>
+                  <nc1ihm:Nom>Demande d’aperçu</nc1ihm:Nom>
+                  <nc1ihm:Nom xml:lang="en">Acknowledgement request</nc1ihm:Nom>
+                </xs:appinfo>
+              </xs:annotation>
+            </xs:element>
+            <xs:element minOccurs="0" name="comment" type="nc1msgcom:CommentSectionType">
+              <xs:annotation>
+                <xs:documentation>Commentaire en texte libre.</xs:documentation>
+                <xs:documentation xml:lang="en">free text comment.</xs:documentation>
+                <xs:appinfo>
+                  <nc1ihm:Nom>Commentaire</nc1ihm:Nom>
+                  <nc1ihm:Nom xml:lang="en">comment</nc1ihm:Nom>
+                </xs:appinfo>
+              </xs:annotation>
+            </xs:element>
+            <xs:element minOccurs="0" name="signature" type="nc1opord:SignatureType">
+              <xs:annotation>
+                <xs:documentation>Attache de signature.</xs:documentation>
+                <xs:documentation xml:lang="en">Signature block.</xs:documentation>
+                <xs:appinfo>
+                  <nc1ihm:Nom>Signature</nc1ihm:Nom>
+                  <nc1ihm:Nom xml:lang="en">Signature</nc1ihm:Nom>
+                </xs:appinfo>
+              </xs:annotation>
+            </xs:element>
+          </xs:sequence>
+        </xs:extension>
+      </xs:complexContent>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

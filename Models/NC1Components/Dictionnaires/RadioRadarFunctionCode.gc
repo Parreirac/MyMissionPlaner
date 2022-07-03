@@ -1,0 +1,1280 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<gc:CodeList xmlns:nc1dico="urn:fra:nc1:dictionnaires" xmlns:gc="http://docs.oasis-open.org/codelist/ns/genericode/1.0/">
+  <Annotation>
+    <Description>
+      <nc1dico:description>Fonction d'une station radio ou radar.</nc1dico:description>
+      <nc1dico:description xml:lang="en">Function of a radio station or a radar tracking station.</nc1dico:description>
+    </Description>
+    <AppInfo>
+      <nc1dico:source>ADatP-3 BL14 1471/1</nc1dico:source>
+      <nc1dico:derogation></nc1dico:derogation>
+    </AppInfo>
+  </Annotation>
+  <Identification>
+    <ShortName>RadioRadarFunctionCode</ShortName>
+    <Version>9.0.0</Version>
+    <CanonicalUri>urn:fra:nc1:common:ew:RadioRadarFunctionCode</CanonicalUri>
+    <CanonicalVersionUri>urn:fra:nc1:common:ew:RadioRadarFunctionCode:9.0.0</CanonicalVersionUri>
+  </Identification>
+  <ColumnSet DatatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes">
+    <Column Id="code" Use="required">
+      <ShortName>Code</ShortName>
+      <Data Type="int" />
+    </Column>
+    <Column Id="short" Use="required">
+      <ShortName>Short</ShortName>
+      <Data Type="string" />
+    </Column>
+    <Column Id="long" Use="optional">
+      <ShortName>Long</ShortName>
+      <Data Type="string" />
+    </Column>
+    <Column Id="short-en" Use="optional">
+      <ShortName>Short anglais</ShortName>
+      <Data Type="string" />
+    </Column>
+    <Column Id="long-en" Use="optional">
+      <ShortName>Long anglais</ShortName>
+      <Data Type="string" />
+    </Column>
+    <Column Id="parent" Use="optional">
+      <ShortName>Parent</ShortName>
+      <Data Type="int" />
+    </Column>
+    <Column Id="codeSymbole" Use="optional">
+      <ShortName>Code Symbole</ShortName>
+      <Data Type="string" />
+    </Column>
+    <Column Id="codeHierarchique" Use="optional">
+      <ShortName>Code Hierarchique</ShortName>
+      <Data Type="string" />
+    </Column>
+    <Key Id="codeKey">
+      <ShortName>CodeKey</ShortName>
+      <ColumnRef Ref="code" />
+    </Key>
+  </ColumnSet>
+  <SimpleCodeList>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>0</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>AA</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>ANTI-AIRCRAFT FIRE CONTROL</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>1</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>AB</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>AIRBORNE SEARCH AND BOMBING</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>2</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>AC</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>AIR SEARCH</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>3</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>AE</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>AIRBORNE EARLY WARNING</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>4</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>AF</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>AIRBORNE FIRE CONTROL</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>5</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>AG</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>AIRCRAFT GUN LAYING (PLANE TO PLANE)</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>6</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>AI</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>AIRBORNE INTERCEPT</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>7</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>AL</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>ALTIMETER</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>8</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>AM</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>AIRBORNE RECONNAISSANCE AND MAPPING</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>9</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>AQ</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>ACQUISITION</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>10</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>AR</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>AIRBORNE RANGE ONLY</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>11</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>AS</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>ATMOSPHERIC SOUNDING</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>12</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>AT</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>AIR TRAFFIC CONTROL</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>13</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>BC</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>BROADCAST</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>14</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>BM</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>BOMBING</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>15</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>BN</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>BEACON/TRANSPONDER</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>16</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>BO</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>BOMBING THROUGH OVERCAST</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>17</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>BS</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>BATTLEFIELD SURVEILLANCE</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>18</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>BT</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>BALLOON TRACKER</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>19</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>CA</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>CARRIER CONTROL APPROACH</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>20</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>CB</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>COUNTER MORTAR/COUNTER BATTERY</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>21</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>CI</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>CARRIER OR SHIP CONTROLLED INTERCEPT</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>22</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>CM</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>COMMUNICATIONS</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>23</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>CR</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>COMMUNICATIONS RECEIVER</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>24</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>CS</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>COASTAL SURVEILLANCE</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>25</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>DC</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>DRONE CONTROL</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>26</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>DF</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>DIRECTION FINDING</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>27</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>DM</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>DISTANCE MEASURING EQUIPMENT</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>28</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>DT</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>DATA TRANSMISSION</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>29</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>DU</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>DUMMY SITE</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>30</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>EA</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>ELECTRONICS ATTACK</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>31</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>EM</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>ELECTROMAGNETIC SENSOR</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>32</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>ES</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>EARTH SURVEILLANCE</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>33</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>ET</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>EARLY WARNING/TARGET ACQUISITION</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>34</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>EW</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>EARLY WARNING</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>35</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>FC</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>FIRE CONTROL</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>36</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>FS</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>FREQUENCY STANDARD</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>37</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>GA</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>GROUND CONTROLLED APPROACH</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>38</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>GB</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>GUN LAYING BEACON</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>39</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>GI</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>GROUND CONTROLLED INTERCEPT</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>40</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>GL</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>GUN LAYING</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>41</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>GM</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>GUIDED MISSILE</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>42</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>GP</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>GLIDE PATH</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>43</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>GS</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>GROUND SPEED INDICATOR</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>44</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>GU</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>GUIDANCE</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>45</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>GX</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>GROUND CONTROL APPROACH (SURVEILLANCE ONLY)</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>46</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>HF</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>HEIGHT FINDER</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>47</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>HS</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>HARBOUR SURVEILLANCE</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>48</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>ID</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>INTRUSION DETECTOR ALARM</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>49</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>IF</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>IDENTIFICATION, FRIEND OR FOE</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>50</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>IL</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>INSTRUMENT LANDING SYSTEM</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>51</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>IM</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>TARGET ILLUMINATOR</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>52</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>IS</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>IONOSPHERIC SOUNDING</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>53</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>JM</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>JAMMER</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>54</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>LA</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>LOW ANGLE FIRE CONTROL GUN LAYING</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>55</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>LN</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>LORAN</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>56</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>LO</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>LOCALIZER</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>57</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>MA</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>MISSILE ACQUISITION</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>58</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>MB</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>MARKER BEACON</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>59</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>MC</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>MISSILE CONTROL</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>60</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>ME</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>METEOROLOGICAL</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>61</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>MG</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>MISSILE GUIDANCE</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>62</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>MH</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>MISSILE HOMING</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>63</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>MP</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>MARSHALLING POINT FOR COMMUNICATIONS EQUIPMENT</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>64</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>MR</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>MICROWAVE RELAY</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>65</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>MT</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>MISSILE TRACKING</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>66</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>NA</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>NAVIGATIONAL</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>67</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>NW</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>NAVIGATIONAL/WEATHER AVOIDANCE</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>68</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>OT</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>OTHER</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>69</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>PA</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>PRECISION APPROACH</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>70</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>PD</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>PASSIVE DETECTION</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>71</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>PI</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>PROJECTILE INTERCEPT</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>72</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>PL</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>PERSONNEL DETECTION</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>73</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>PR</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>PASSIVE RANGING</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>74</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>PW</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>PROXIMITY WARNING RADAR</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>75</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>RA</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>RADAR DATA</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>76</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>RD</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>RADAR DECOY</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>77</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>RI</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>RANGE INSTRUMENTATION</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>78</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>RO</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>RANGE ONLY</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>79</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>RR</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>RADIO RELAY</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>80</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>RS</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>RADIO OR RADIOSONDE</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>81</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>SA</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>SATELLITE TRACKER</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>82</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>SB</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>SONOBUOY</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>83</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>SC</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>SATELLITE COMMUNICATIONS</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>84</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>SE</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>SURFACE SEARCH/EARLY WARNING</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>85</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>SF</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>SURFACE FIRE CONTROL</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>86</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>SH</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>SEARCH/HEIGHT FINDER</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>87</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>SL</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>SEARCHLIGHT CONTROL</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>88</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>SO</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>SONAR</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>89</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>SP</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>SPACE</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>90</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>SR</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>SEISMIC SENSOR</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>91</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>SS</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>SURFACE SEARCH</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>92</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>ST</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>SHELL TRACKING</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>93</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>SX</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>SELECTIVE IDENTIFICATION FEATURE (SIF) TRANSPONDER</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>94</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>SY</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>SENSOR RELAY</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>95</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>TA</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>TARGET ACQUISITION</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>96</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>TC</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>TAIL FIRE CONTROL</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>97</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>TM</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>TELEMETERING</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>98</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>TR</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>TRANSMITTER/RECEIVER</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>99</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>TS</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>TROPOSCATTER</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>100</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>TT</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>TARGET TRACKING</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>101</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>TV</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>TELEVISION</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>102</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>TW</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>TAIL WARNING</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>103</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>TY</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>TELETYPE</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>104</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>UN</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>UNKNOWN</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>105</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>VA</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>VIDEO DATA</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>106</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>VD</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>VEHICLE DETECTOR</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>107</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>VR</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>VEHICLE MONITORING</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>108</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>VT</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>PROXIMITY FUSE</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>109</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>WX</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>WEATHER</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>110</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>XP</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>EXPERIMENTAL/TRAINER</SimpleValue>
+      </Value>
+    </Row>
+  </SimpleCodeList>
+</gc:CodeList>

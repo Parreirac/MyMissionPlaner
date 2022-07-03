@@ -1,0 +1,450 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<gc:CodeList xmlns:nc1dico="urn:fra:nc1:dictionnaires" xmlns:gc="http://docs.oasis-open.org/codelist/ns/genericode/1.0/">
+  <Annotation>
+    <Description>
+      <nc1dico:description>INTITULE DE TYPE DE MISSION TACTIQUE POUR LES FEUX</nc1dico:description>
+      <nc1dico:description xml:lang="en">Title of type of tactical mission for Fires</nc1dico:description>
+    </Description>
+    <AppInfo>
+      <nc1dico:source>SFTT 3.4.8</nc1dico:source>
+      <nc1dico:derogation>TYPE MISSION APPUI FEUX</nc1dico:derogation>
+    </AppInfo>
+  </Annotation>
+  <Identification>
+    <ShortName>L114_8Code</ShortName>
+    <Version>9.0.0</Version>
+    <CanonicalUri>urn:fra:nc1:common:sicsdicos:L114_8Code</CanonicalUri>
+    <CanonicalVersionUri>urn:fra:nc1:common:sicsdicos:L114_8Code:9.0.0</CanonicalVersionUri>
+  </Identification>
+  <ColumnSet DatatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes">
+    <Column Id="code" Use="required">
+      <ShortName>Code</ShortName>
+      <Data Type="int" />
+    </Column>
+    <Column Id="short" Use="required">
+      <ShortName>Short</ShortName>
+      <Data Type="string" />
+    </Column>
+    <Column Id="long" Use="optional">
+      <ShortName>Long</ShortName>
+      <Data Type="string" />
+    </Column>
+    <Column Id="short-en" Use="optional">
+      <ShortName>Short anglais</ShortName>
+      <Data Type="string" />
+    </Column>
+    <Column Id="long-en" Use="optional">
+      <ShortName>Long anglais</ShortName>
+      <Data Type="string" />
+    </Column>
+    <Column Id="parent" Use="optional">
+      <ShortName>Parent</ShortName>
+      <Data Type="int" />
+    </Column>
+    <Column Id="codeSymbole" Use="optional">
+      <ShortName>Code Symbole</ShortName>
+      <Data Type="string" />
+    </Column>
+    <Column Id="codeHierarchique" Use="optional">
+      <ShortName>Code Hierarchique</ShortName>
+      <Data Type="string" />
+    </Column>
+    <Key Id="codeKey">
+      <ShortName>CodeKey</ShortName>
+      <ColumnRef Ref="code" />
+    </Key>
+  </ColumnSet>
+  <SimpleCodeList>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>0</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>NEUT</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>NEUTRALISER</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>NEUT</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>NEUTALIZE</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>1</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>DEST</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>DETRUIRE</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>DEST</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>DESTROY</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>2</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>CANAL</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>CANALISER</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>CANAL</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>CANALIZE</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>3</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>CONCENT</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>CONCENTRER</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>CONCENT</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>CONCENTRATE</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>4</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>INTERD</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>INTERDIRE</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>DENY</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>DENY</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>5</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>HARASS</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>HARCELER</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>HARASS</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>HARASS</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>6</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>ARR</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>ARRETER</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>STOP</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>STOP</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>7</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>ILL</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>ECLAIRER (ILLUMINER)</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>ILLU</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>ILLUMINATING</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>8</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>AVVISIB</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>AVEUGLER DANS LE VISIBLE</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>BLIND IN VISIBLE</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>BLINDING</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>9</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>AVIR</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>AVEUGLER DANS L'I.R</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>FLARE</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>FLARE</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>10</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>AVMM</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>AVEUGLER DANS LE MILLIMETRIQUE</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>BLIND 100PC</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>BLIND 100 % ACCURATE</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>11</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>AUTRE</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>AUTRE</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>OTHER</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>OTHER</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>12</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>DISSOC</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>DISSOCIER</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>DISSO</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>DISSOCIATE</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>13</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>RENS</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>RENSEIGNER</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>COLINFO</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>COLLECT INFORMATIONS</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>14</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>AVG</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>AVEUGLER</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>BLIND</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>BLIND</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>15</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>INTIM</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>INTIMIDER</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>INTIM</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>INTIMIDATE</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>16</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>AVERT</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>AVERTIR</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>WARN</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>WARN</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>17</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>DISLOQ</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>DISLOQUER</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>BREAKUP</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>BREAK UP</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>18</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>DISSUAD</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>DISSUADER</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>DISSUADE</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>DISSUADE</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>19</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>ENGAG</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>ENGAGER</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>ENGAGE</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>ENGAGE</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>20</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>CLOIS</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>CLOISONNER</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>DIVIDEUP</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>DIVIDE UP</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>21</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>ACQOBJ</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>ACQUERIR OBJECTIF</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>ACQOBJ</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>AQUIRE AN OBJECTIVE</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>22</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>CBATT</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>APPUYER EN CONTRE-BATTERIE</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>SUPCBATT</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>SUPPORT ON COUNTER BATTERY</SimpleValue>
+      </Value>
+    </Row>
+  </SimpleCodeList>
+</gc:CodeList>

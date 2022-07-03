@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<cva:ContextValueAssociation xmlns:cva="http://docs.oasis-open.org/codelist/ns/ContextValueAssociation/1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="urn:fra:nc1:objet:mission" queryBinding="xslt2" xmlns:nc1mission="urn:fra:nc1:objet:mission">
+  <!-- NC1 V.9.0.0 -->
+  <ValueLists>
+    <ValueList xml:id="nc1objcom-ActivationStatusCode" uri="../Dictionnaires/ActivationStatusCode.gc" />
+    <ValueList xml:id="nc1objcom-IsFullCode" uri="../Dictionnaires/IsFullCode.gc" />
+    <ValueList xml:id="nc1sicsdicos-L114_9Code" uri="../Dictionnaires/L114_9Code.gc" />
+    <ValueList xml:id="nc1sicsdicos-L111_14Code" uri="../Dictionnaires/L111_14Code.gc" />
+    <ValueList xml:id="nc1mission-MissionSymbolCode" uri="../Dictionnaires/MissionSymbolCode.gc" />
+    <ValueList xml:id="nc1mission-MissionFrSpecificCode" uri="../Dictionnaires/MissionFrSpecificCode.gc" />
+    <ValueList xml:id="nc1sicsdicos-L114_8Code" uri="../Dictionnaires/L114_8Code.gc" />
+    <ValueList xml:id="nc1sicsdicos-L114_13Code" uri="../Dictionnaires/L114_13Code.gc" />
+    <ValueList xml:id="nc1sicsdicos-L114_10Code" uri="../Dictionnaires/L114_10Code.gc" />
+    <ValueList xml:id="nc1sicsdicos-L114_11Code" uri="../Dictionnaires/L114_11Code.gc" />
+    <ValueList xml:id="nc1sicsdicos-L114_12Code" uri="../Dictionnaires/L114_12Code.gc" />
+    <ValueList xml:id="nc1sicsdicos-L114_14Code" uri="../Dictionnaires/L114_14Code.gc" />
+    <ValueList xml:id="nc1sicsdicos-L125_18Code" uri="../Dictionnaires/L125_18Code.gc" />
+  </ValueLists>
+  <Contexts>
+    <Context address="/nc1mission:NC1_Mission/@activationStatus" values="nc1objcom-ActivationStatusCode" />
+    <Context address="/nc1mission:NC1_Mission/@isFull" values="nc1objcom-IsFullCode" />
+    <Context address="/nc1mission:NC1_Mission/tacticalData/category" values="nc1sicsdicos-L114_9Code" />
+    <Context address="/nc1mission:NC1_Mission/tacticalData/missionDescription/dateTime/qualifier" values="nc1sicsdicos-L111_14Code" />
+    <Context address="/nc1mission:NC1_Mission/tacticalData/actionTask/type" values="nc1mission-MissionSymbolCode" />
+    <Context address="/nc1mission:NC1_Mission/tacticalData/actionTask/frSpecificSymbol" values="nc1mission-MissionFrSpecificCode" />
+    <Context address="/nc1mission:NC1_Mission/tacticalData/actionTask/dateTime/qualifier" values="nc1sicsdicos-L111_14Code" />
+    <Context address="/nc1mission:NC1_Mission/tacticalData/supportMission/type" values="nc1sicsdicos-L114_8Code" />
+    <Context address="/nc1mission:NC1_Mission/tacticalData/supportMission/dateTime/qualifier" values="nc1sicsdicos-L111_14Code" />
+    <Context address="/nc1mission:NC1_Mission/tacticalData/priority" values="nc1sicsdicos-L114_13Code" />
+    <Context address="/nc1mission:NC1_Mission/tacticalData/tacticalPhase" values="nc1sicsdicos-L114_10Code" />
+    <Context address="/nc1mission:NC1_Mission/tacticalData/effectToBeObtained/type" values="nc1sicsdicos-L114_11Code" />
+    <Context address="/nc1mission:NC1_Mission/tacticalData/effectToBeObtained/severity" values="nc1sicsdicos-L114_12Code" />
+    <Context address="/nc1mission:NC1_Mission/tacticalData/actionProbability" values="nc1sicsdicos-L114_14Code" />
+    <Context address="/nc1mission:NC1_Mission/tacticalData/progressStatus" values="nc1sicsdicos-L125_18Code" />
+  </Contexts>
+</cva:ContextValueAssociation>

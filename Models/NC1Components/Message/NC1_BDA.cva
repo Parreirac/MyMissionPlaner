@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<cva:ContextValueAssociation xmlns:cva="http://docs.oasis-open.org/codelist/ns/ContextValueAssociation/1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="urn:fra:nc1:message:bda" queryBinding="xslt2" xmlns:nc1bda="urn:fra:nc1:message:bda">
+  <!-- NC1 V.9.0.0 -->
+  <ValueLists>
+    <ValueList xml:id="nc1msgcom-ClassificationCode" uri="../Dictionnaires/ClassificationCode.gc" />
+    <ValueList xml:id="nc1msgcom-UrgencyLevelCode" uri="../Dictionnaires/UrgencyLevelCode.gc" />
+    <ValueList xml:id="nc1sicsdicos-L114_37Code" uri="../Dictionnaires/L114_37Code.gc" />
+  </ValueLists>
+  <Contexts>
+    <Context address="/nc1bda:NC1_BDA/@classification" values="nc1msgcom-ClassificationCode" />
+    <Context address="/nc1bda:NC1_BDA/@urgencyLevel" values="nc1msgcom-UrgencyLevelCode" />
+    <Context address="/nc1bda:NC1_BDA/battleDamageAssessment/damage" values="nc1sicsdicos-L114_37Code" />
+  </Contexts>
+</cva:ContextValueAssociation>

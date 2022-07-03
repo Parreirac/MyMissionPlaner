@@ -1,0 +1,2116 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<gc:CodeList xmlns:nc1dico="urn:fra:nc1:dictionnaires" xmlns:gc="http://docs.oasis-open.org/codelist/ns/genericode/1.0/">
+  <Annotation>
+    <Description>
+      <nc1dico:description></nc1dico:description>
+      <nc1dico:description xml:lang="en"></nc1dico:description>
+    </Description>
+    <AppInfo>
+      <nc1dico:source>DBM</nc1dico:source>
+      <nc1dico:derogation></nc1dico:derogation>
+    </AppInfo>
+  </Annotation>
+  <Identification>
+    <ShortName>UnitOfMeasurementCode</ShortName>
+    <Version>9.0.0</Version>
+    <CanonicalUri>urn:fra:nc1:message:initodb:UnitOfMeasurementCode</CanonicalUri>
+    <CanonicalVersionUri>urn:fra:nc1:message:initodb:UnitOfMeasurementCode:9.0.0</CanonicalVersionUri>
+  </Identification>
+  <ColumnSet DatatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes">
+    <Column Id="code" Use="required">
+      <ShortName>Code</ShortName>
+      <Data Type="int" />
+    </Column>
+    <Column Id="short" Use="required">
+      <ShortName>Short</ShortName>
+      <Data Type="string" />
+    </Column>
+    <Column Id="long" Use="optional">
+      <ShortName>Long</ShortName>
+      <Data Type="string" />
+    </Column>
+    <Column Id="short-en" Use="optional">
+      <ShortName>Short anglais</ShortName>
+      <Data Type="string" />
+    </Column>
+    <Column Id="long-en" Use="optional">
+      <ShortName>Long anglais</ShortName>
+      <Data Type="string" />
+    </Column>
+    <Column Id="parent" Use="optional">
+      <ShortName>Parent</ShortName>
+      <Data Type="int" />
+    </Column>
+    <Column Id="codeSymbole" Use="optional">
+      <ShortName>Code Symbole</ShortName>
+      <Data Type="string" />
+    </Column>
+    <Column Id="codeHierarchique" Use="optional">
+      <ShortName>Code Hierarchique</ShortName>
+      <Data Type="string" />
+    </Column>
+    <Key Id="codeKey">
+      <ShortName>CodeKey</ShortName>
+      <ColumnRef Ref="code" />
+    </Key>
+  </ColumnSet>
+  <SimpleCodeList>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>0</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>INDEFINI</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>INDEFINI</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>1</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>AM</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>Ampoule</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>2</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>AT</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>Assortment</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>3</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>AY</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>Assembly</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>4</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>BA</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>Ball</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>5</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>BC</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>Block</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>6</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>BD</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>Bundle</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>7</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>BE</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>Bale</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>8</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>BF</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>Board Foot</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>9</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>BG</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>Bag</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>10</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>BH</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>Bunch</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>11</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>BI</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>Brick</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>12</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>BK</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>Book</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>13</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>BL</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>Barrel</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>14</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>BO</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>Bolt</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>15</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>BQ</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>Briquet</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>16</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>BR</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>Bar</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>17</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>BT</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>Bottle</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>18</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>BU</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>Bushel</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>19</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>BX</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>Box</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>20</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>CA</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>Cartridge</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>21</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>CB</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>Carboy</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>22</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>CC</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>Cubic Centimetre</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>23</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>CD</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>Cubic Yard</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>24</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>CE</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>Cone</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>25</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>CF</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>Cubic Foot</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>26</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>CG</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>Centigram</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>27</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>CH</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>Chest</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>28</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>CI</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>Cubic Inch</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>29</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>CK</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>Cake</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>30</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>CL</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>Coil</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>31</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>CM</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>Centimetre</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>32</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>CN</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>Can</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>33</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>CO</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>Container</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>34</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>CP</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>Capsule</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>35</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>CR</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>Crate</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>36</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>CS</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>Case</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>37</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>CT</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>Carton</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>38</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>CU</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>Curie</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>39</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>CX</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>Canister</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>40</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>CY</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>Cylinder</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>41</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>CZ</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>Cubic Metre</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>42</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>DC</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>Decagram</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>43</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>DE</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>Decimetre</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>44</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>DG</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>Decigram</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>45</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>DH</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>Half Dozen</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>46</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>DI</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>Dispenser</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>47</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>DL</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>Decilitre</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>48</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>DM</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>Dram</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>49</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>DR</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>Drum</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>50</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>DS</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>Dose</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>51</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>DW</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>Penneyweight</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>52</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>DZ</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>Dozen</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>53</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>EA</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>Each</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>54</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>EN</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>Envelope</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>55</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>EX</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>Exposure</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>56</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>FD</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>Fold</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>57</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>FL</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>Flask</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>58</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>FO</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>Font</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>59</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>FR</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>Frame</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>60</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>FT</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>Foot</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>61</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>GB</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>Gallon Imperial</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>62</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>GG</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>Great Gross</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>63</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>GI</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>Gill</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>64</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>GL</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>Gallon</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>65</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>GM</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>Gram</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>66</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>GN</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>Grain</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>67</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>GP</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>Group</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>68</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>GR</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>Gross</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>69</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>GS</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>Glass</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>70</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>HD</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>Hundred</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>71</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>HE</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>Head</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>72</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>HF</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>Hundred Feet</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>73</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>HG</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>Half-Gross</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>74</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>HH</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>Hogshead</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>75</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>HI</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>Hide</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>76</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>HK</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>Hank</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>77</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>HP</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>Hundred Pounds</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>78</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>HS</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>Hundred Square Feet</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>79</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>HW</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>Hundred Weight</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>80</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>HY</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>Hundred Yards</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>81</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>IG</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>Ingot</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>82</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>II</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>Two</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>83</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>IN</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>Inch</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>84</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>IV</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>Four</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>85</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>JG</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>Jug</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>86</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>JR</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>Jar</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>87</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>KD</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>Kord</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>88</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>KE</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>Keg</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>89</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>KG</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>Kilogram</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>90</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>KK</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>Chain</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>91</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>KM</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>Kilometre</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>92</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>KR</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>Carat</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>93</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>KS</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>Cask</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>94</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>KT</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>Kit</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>95</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>KW</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>Kilowatthours</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>96</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>LB</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>Pound</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>97</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>LF</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>Linear Foot</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>98</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>LG</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>Length</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>99</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>LI</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>Litre</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>100</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>LK</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>Link</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>101</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>LL</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>Fifty</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>102</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>LO</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>Lot</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>103</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>LT</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>Long Ton</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>104</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>LY</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>Linear Yard</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>105</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>MA</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>Magazine</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>106</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>MB</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>Thousand Barrels</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>107</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>MC</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>Thousand Cubic Feet</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>108</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>ME</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>Meal</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>109</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>MF</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>Thousand Feet</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>110</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>MG</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>Milligram</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>111</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>MI</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>Mile</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>112</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>ML</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>Millilitre</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>113</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>MM</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>Millimetre</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>114</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>MR</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>Metre</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>115</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>MX</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>Thousand</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>116</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>NT</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>Net Ton</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>117</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>OT</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>Outfit</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>118</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>OZ</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>Ounce</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>119</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>PA</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>Paper</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>120</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>PC</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>Piece</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>121</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>PD</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>Pad</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>122</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>PE</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>Peck</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>123</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>PG</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>Package</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>124</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>PH</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>Half Pound</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>125</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>PI</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>Pillow</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>126</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>PK</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>Pack</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>127</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>PM</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>Plate</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>128</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>PN</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>Panel</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>129</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>PO</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>Pouch</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>130</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>PR</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>Pair</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>131</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>PT</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>Pint</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>132</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>PX</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>Pellet</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>133</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>PY</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>Pyramid</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>134</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>PZ</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>Packet</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>135</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>QI</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>Quart Imperial</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>136</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>QR</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>Quire</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>137</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>QT</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>Quart</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>138</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>RA</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>Ration</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>139</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>RD</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>Round</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>140</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>RL</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>Reel</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>141</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>RM</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>Ream</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>142</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>RN</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>Ribbon</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>143</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>RO</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>Roll</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>144</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>SA</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>Sack</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>145</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>SB</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>Slab</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>146</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>SC</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>Section</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>147</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>SD</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>Skid</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>148</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>SE</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>Set</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>149</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>SF</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>Square Foot</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>150</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>SG</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>Syringe</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>151</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>SH</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>Sheet</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>152</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>SI</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>Square Inch</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>153</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>SK</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>Skein</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>154</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>SL</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>Spool</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>155</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>SM</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>Square Metre</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>156</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>SO</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>Shot</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>157</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>SP</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>Strip</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>158</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>SQ</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>Square</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>159</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>SR</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>Shaker</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>160</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>SS</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>Stack</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>161</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>ST</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>Short Ton</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>162</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>SU</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>Suit</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>163</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>SV</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>Sleeve</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>164</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>SX</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>Stick</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>165</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>SY</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>Square Yard</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>166</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>SZ</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>Stock</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>167</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>TB</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>Tub</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>168</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>TI</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>Tin</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>169</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>TL</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>Ten Barrels</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>170</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>TN</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>Ton</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>171</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>TO</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>Troy ounce</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>172</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>TP</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>Tape</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>173</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>TR</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>Thousand Rounds</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>174</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>TT</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>Tablet</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>175</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>TU</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>Tube</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>176</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>UN</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>Unit</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>177</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>US</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>USP Unit</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>178</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>VC</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>Five Hundred</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>179</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>VI</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>Vial</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>180</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>VM</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>Five Thousand</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>181</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>VX</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>Five</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>182</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>WF</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>Wafer</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>183</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>WG</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>Wine Gallon</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>184</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>XV</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>Fifteen</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>185</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>XX</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>Ten</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>186</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>YD</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>Yard</SimpleValue>
+      </Value>
+    </Row>
+  </SimpleCodeList>
+</gc:CodeList>

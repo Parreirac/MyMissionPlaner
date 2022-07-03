@@ -1,0 +1,331 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<gc:CodeList xmlns:nc1dico="urn:fra:nc1:dictionnaires" xmlns:gc="http://docs.oasis-open.org/codelist/ns/genericode/1.0/">
+  <Annotation>
+    <Description>
+      <nc1dico:description>INDIQUE LE NOMBRE DE PERSONNEL (HORS EQUIPAGE) A BORD D'UN VEHICULE, AERONEF OU BATEAU, MAIS EGALEMENT, S'IL EST EN MODE TRANSPORT DE FRET, LE FAIT QU'IL SOIT CHARGE OU NON ET, ENFIN, SI LE VEHICULE N'EST NI EN MODE TRANSPORT PERSONNEL NI DE FRET, S'IL EST EN MODE RENSEIGNEMENT (CAS DES DRONES OU D'UNE GAZELLE VIVIANE PAR EXEMPLE).</nc1dico:description>
+      <nc1dico:description xml:lang="en">Specify the number of staff on board (except crew) in a vehicle, an aircraft or a boat but also, if it is in mode transport of freight, the fact that it is loaded or not and, finally, if the vehicle is or in mode personal transport or of freight, if it is in mode piece of information (case of drones or gazelle Viviane for example)</nc1dico:description>
+    </Description>
+    <AppInfo>
+      <nc1dico:source>SFTT 3.4.8</nc1dico:source>
+      <nc1dico:derogation>INDICATEUR DE CHARGE A BORD</nc1dico:derogation>
+    </AppInfo>
+  </Annotation>
+  <Identification>
+    <ShortName>L104_16Code</ShortName>
+    <Version>9.0.0</Version>
+    <CanonicalUri>urn:fra:nc1:common:sicsdicos:L104_16Code</CanonicalUri>
+    <CanonicalVersionUri>urn:fra:nc1:common:sicsdicos:L104_16Code:9.0.0</CanonicalVersionUri>
+  </Identification>
+  <ColumnSet DatatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes">
+    <Column Id="code" Use="required">
+      <ShortName>Code</ShortName>
+      <Data Type="int" />
+    </Column>
+    <Column Id="short" Use="required">
+      <ShortName>Short</ShortName>
+      <Data Type="string" />
+    </Column>
+    <Column Id="long" Use="optional">
+      <ShortName>Long</ShortName>
+      <Data Type="string" />
+    </Column>
+    <Column Id="short-en" Use="optional">
+      <ShortName>Short anglais</ShortName>
+      <Data Type="string" />
+    </Column>
+    <Column Id="long-en" Use="optional">
+      <ShortName>Long anglais</ShortName>
+      <Data Type="string" />
+    </Column>
+    <Column Id="parent" Use="optional">
+      <ShortName>Parent</ShortName>
+      <Data Type="int" />
+    </Column>
+    <Column Id="codeSymbole" Use="optional">
+      <ShortName>Code Symbole</ShortName>
+      <Data Type="string" />
+    </Column>
+    <Column Id="codeHierarchique" Use="optional">
+      <ShortName>Code Hierarchique</ShortName>
+      <Data Type="string" />
+    </Column>
+    <Key Id="codeKey">
+      <ShortName>CodeKey</ShortName>
+      <ColumnRef Ref="code" />
+    </Key>
+  </ColumnSet>
+  <SimpleCodeList>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>0</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>0</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>0 (UNIQUEMENT EQUIPAGE)</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>0</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>0 (ONLY CREW)</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>1</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>1</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>1 (TRANSPORT PERSONNEL)</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>1</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>1 (PERSONNAL TRANSPORT)</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>2</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>2</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>2</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>2</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>2</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>3</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>3</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>3</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>3</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>3</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>4</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>4</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>4</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>4</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>4</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>5</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>5</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>5</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>5</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>5</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>6</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>6</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>6</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>6</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>6</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>7</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>7</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>7</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>7</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>7</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>8</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>8</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>8</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>8</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>8</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>9</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>9</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>9</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>9</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>9</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>10</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>10</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>10</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>10</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>10</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>11</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>11</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>11</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>11</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>11</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>12</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>12</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>12</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>12</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>12</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>13</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>FRET</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>TRANSPORT FRET : EN CHARGE (TRANSPORT FRET)</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>FRET</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>FILLED FREIGHT (FREIGHT TRANSPORT)</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>14</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>PAS DE FRET</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>TRANSPORT FRET : SANS CHARGE (TRANSPORT FRET)</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>NOFRET</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>EMPTY FREIGHT (FREIGHT TRANSPORT)</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>15</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>RENSEIGNEMENT</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>MODE RENSEIGNEMENT OU AUTRE (PAS EN MODE TRANSPORT)</SimpleValue>
+      </Value>
+      <Value ColumnRef="short-en">
+        <SimpleValue>RENS</SimpleValue>
+      </Value>
+      <Value ColumnRef="long-en">
+        <SimpleValue>INFORMATION OR OTHER MODE (NO TRANSPORT MODE)</SimpleValue>
+      </Value>
+    </Row>
+  </SimpleCodeList>
+</gc:CodeList>

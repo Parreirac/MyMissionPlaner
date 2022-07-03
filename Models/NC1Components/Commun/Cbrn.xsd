@@ -1,0 +1,1782 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema targetNamespace="urn:fra:nc1:common:cbrn" xmlns:nc1ihm="urn:fra:nc1:IHM" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:nc1cbrn="urn:fra:nc1:common:cbrn" xmlns:nc1common="urn:fra:nc1:common:attribute" xmlns:nc1location="urn:fra:nc1:common:location">
+  <!-- NC1 V.9.0.0 -->
+  <xs:import namespace="urn:fra:nc1:common:attribute" schemaLocation="Common.xsd" />
+  <xs:import namespace="urn:fra:nc1:common:location" schemaLocation="Location.xsd" />
+  <xs:simpleType name="AirStabilityCategoryCode">
+    <xs:annotation>
+      <xs:appinfo>
+        <nc1dico:source xmlns:nc1dico="urn:fra:nc1:dictionnaires">ADatP-3 BL14 1313/1</nc1dico:source>
+        <nc1ihm:description>Catégories de stabilité de l'air.</nc1ihm:description>
+        <nc1ihm:description xml:lang="en">Air stability categories.</nc1ihm:description>
+      </xs:appinfo>
+      <xs:documentation>Catégories de stabilité de l'air.</xs:documentation>
+      <xs:documentation xml:lang="en">Air stability categories.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:integer" />
+  </xs:simpleType>
+  <xs:complexType name="AlfaType">
+    <xs:annotation>
+      <xs:documentation>Numéro de l'événement NRBC.</xs:documentation>
+      <xs:documentation xml:lang="en">CBRN event number.</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="locationCode" type="nc1common:Text2To3ANType">
+        <xs:annotation>
+          <xs:documentation>Code de localisation géographique de l'événement NRBC (pays ou centre de contrôle de la zone).</xs:documentation>
+          <xs:documentation xml:lang="en">CBRN event location code (country or area control centre).</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Code de localisation</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">Location code</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:choice>
+        <xs:element name="unitId" type="nc1common:Nc1ObjectRefType">
+          <xs:annotation>
+            <xs:documentation>Identifiant unique NC1 de l'unité émettrice du message.</xs:documentation>
+            <xs:documentation xml:lang="en">NC1 ID of the transmitter unit of the message.</xs:documentation>
+            <xs:appinfo>
+              <nc1ihm:Nom>Identifiant de l'unité</nc1ihm:Nom>
+              <nc1ihm:Nom xml:lang="en">Unit ID</nc1ihm:Nom>
+            </xs:appinfo>
+          </xs:annotation>
+        </xs:element>
+        <xs:element name="unitIdentification" type="nc1common:Text1To9ABNSType">
+          <xs:annotation>
+            <xs:documentation>Autre moyen d'identification de l'unité (exemple : code UIC) pour une unité non NC1.</xs:documentation>
+            <xs:documentation xml:lang="en">Other unit identification (e.g. UIC code) for a non-NC1 compliant unit.</xs:documentation>
+            <xs:appinfo>
+              <nc1ihm:Nom>Identification de l'unité</nc1ihm:Nom>
+              <nc1ihm:Nom xml:lang="en">Unit identification</nc1ihm:Nom>
+            </xs:appinfo>
+          </xs:annotation>
+        </xs:element>
+      </xs:choice>
+      <xs:element name="sequenceNumber" type="nc1common:Text1To10ABNSType">
+        <xs:annotation>
+          <xs:documentation>Numéro chronologique associé à l'événement NRBC.</xs:documentation>
+          <xs:documentation xml:lang="en">Sequence number for the CBRN event.</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Numéro chronologique</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">Sequence number</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="incidentType" type="nc1cbrn:IncidentTypeCode">
+        <xs:annotation>
+          <xs:documentation>Type d'événement NRBC.</xs:documentation>
+          <xs:documentation xml:lang="en">CBRN event type.</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Type d'événement</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">Incident type</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="AreamType">
+    <xs:annotation>
+      <xs:documentation>Nom d'une zone de validité.</xs:documentation>
+      <xs:documentation xml:lang="en">Validity area name.</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="validityAreaName" type="nc1common:Text1To30ABNSType">
+        <xs:annotation>
+          <xs:documentation>Nom de la zone de validité.</xs:documentation>
+          <xs:documentation xml:lang="en">Validity area name.</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Nom</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">name</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="BravoType">
+    <xs:annotation>
+      <xs:documentation>Localisation de l'observateur d'un événement NRBC, et direction de l'événement.</xs:documentation>
+      <xs:documentation xml:lang="en">CBRN event spotter location and event direction.</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="location">
+        <xs:annotation>
+          <xs:documentation>Localisation de l'événement.</xs:documentation>
+          <xs:documentation xml:lang="en">Event location.</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Localisation</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">Location</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+        <xs:complexType>
+          <xs:choice>
+            <xs:element name="point" type="nc1location:PointType">
+              <xs:annotation>
+                <xs:documentation>Point géographique.</xs:documentation>
+                <xs:documentation xml:lang="en">Geographical point.</xs:documentation>
+                <xs:appinfo>
+                  <nc1ihm:Nom>Point</nc1ihm:Nom>
+                  <nc1ihm:Nom xml:lang="en">Point</nc1ihm:Nom>
+                </xs:appinfo>
+              </xs:annotation>
+            </xs:element>
+            <xs:element name="placeName" type="nc1common:Text1To30ABNSType">
+              <xs:annotation>
+                <xs:documentation>Toponyme, par exemple un nom de ville ou de lieu.</xs:documentation>
+                <xs:documentation xml:lang="en">Toponym, e.g. city or place name.</xs:documentation>
+                <xs:appinfo>
+                  <nc1ihm:Nom>Toponyme</nc1ihm:Nom>
+                  <nc1ihm:Nom xml:lang="en">Toponym</nc1ihm:Nom>
+                </xs:appinfo>
+              </xs:annotation>
+            </xs:element>
+          </xs:choice>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="direction" type="nc1common:AngleType">
+        <xs:annotation>
+          <xs:documentation>Direction de l'événement, du point de vue de l'observateur.</xs:documentation>
+          <xs:documentation xml:lang="en">Direction of the event, from the spotter.</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Direction</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">Direction</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:simpleType name="CloudCoverageCode">
+    <xs:annotation>
+      <xs:appinfo>
+        <nc1dico:source xmlns:nc1dico="urn:fra:nc1:dictionnaires">ADatP-3 BL14 1328/1</nc1dico:source>
+        <nc1ihm:description>Degrés de couverture nuageuse.</nc1ihm:description>
+        <nc1ihm:description xml:lang="en">Degree of cloud layer.</nc1ihm:description>
+      </xs:appinfo>
+      <xs:documentation>Degrés de couverture nuageuse.</xs:documentation>
+      <xs:documentation xml:lang="en">Degree of cloud layer.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:integer" />
+  </xs:simpleType>
+  <xs:simpleType name="ContainerTypeCode">
+    <xs:annotation>
+      <xs:appinfo>
+        <nc1dico:source xmlns:nc1dico="urn:fra:nc1:dictionnaires">STAT dictionnaire 77
+ADatP-3 BL14 1190/3</nc1dico:source>
+        <nc1ihm:description>Système, ou moyen de diffusion d'un agent NRBC.</nc1ihm:description>
+        <nc1ihm:description xml:lang="en">CBRN agent delivery system or medium.</nc1ihm:description>
+      </xs:appinfo>
+      <xs:documentation>Système, ou moyen de diffusion d'un agent NRBC.</xs:documentation>
+      <xs:documentation xml:lang="en">CBRN agent delivery system or medium.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:integer" />
+  </xs:simpleType>
+  <xs:simpleType name="DeliverySystemTypeCode">
+    <xs:annotation>
+      <xs:appinfo>
+        <nc1dico:source xmlns:nc1dico="urn:fra:nc1:dictionnaires">ADatP-3 BL14 1737/1</nc1dico:source>
+        <nc1ihm:description>Système, ou moyen de diffusion d'un agent NRBC.</nc1ihm:description>
+        <nc1ihm:description xml:lang="en">CBRN agent delivery system or medium.</nc1ihm:description>
+      </xs:appinfo>
+      <xs:documentation>Système, ou moyen de diffusion d'un agent NRBC.</xs:documentation>
+      <xs:documentation xml:lang="en">CBRN agent delivery system or medium.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:integer" />
+  </xs:simpleType>
+  <xs:complexType name="DeltaType">
+    <xs:annotation>
+      <xs:documentation>Horodatages de début et de fin d'un événement NRBC.</xs:documentation>
+      <xs:documentation xml:lang="en">CBRN event start and end timestamps.</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="startDatetime" type="xs:dateTime">
+        <xs:annotation>
+          <xs:documentation>Horodatage de début de l'événement.</xs:documentation>
+          <xs:documentation xml:lang="en">Event start datetime.</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Horodatage de début</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">Period start timestamp</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="endDatetime" type="xs:dateTime">
+        <xs:annotation>
+          <xs:documentation>Horodatage de fin de l'événement.</xs:documentation>
+          <xs:documentation xml:lang="en">Event end datetime.</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Horodatage de fin</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">Period end  timestamp</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:simpleType name="DetectionConfidenceLevelCode">
+    <xs:annotation>
+      <xs:appinfo>
+        <nc1dico:source xmlns:nc1dico="urn:fra:nc1:dictionnaires">ADatP-3 BL14 1123/15</nc1dico:source>
+        <nc1ihm:description>Niveau d'assurance dans une détection.</nc1ihm:description>
+        <nc1ihm:description xml:lang="en">Detection confidence level.</nc1ihm:description>
+      </xs:appinfo>
+      <xs:documentation>Niveau d'assurance dans une détection.</xs:documentation>
+      <xs:documentation xml:lang="en">Detection confidence level.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:integer" />
+  </xs:simpleType>
+  <xs:simpleType name="DetectionMeanTypeCode">
+    <xs:annotation>
+      <xs:appinfo>
+        <nc1dico:source xmlns:nc1dico="urn:fra:nc1:dictionnaires">ADatP-3 BL14 1736/3
+STAT dictionnaire 73</nc1dico:source>
+        <nc1ihm:description>Types de moyen de détection et d'identification d'un agent NRBC.</nc1ihm:description>
+        <nc1ihm:description xml:lang="en">Type of means of detection and identification of an agent NRBC.</nc1ihm:description>
+      </xs:appinfo>
+      <xs:documentation>Types de moyen de détection et d'identification d'un agent NRBC.</xs:documentation>
+      <xs:documentation xml:lang="en">Type of means of detection and identification of an agent NRBC.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:integer" />
+  </xs:simpleType>
+  <xs:simpleType name="DetectionTypeCode">
+    <xs:annotation>
+      <xs:appinfo>
+        <nc1dico:source xmlns:nc1dico="urn:fra:nc1:dictionnaires">ADatP-3 BL14 1736/1</nc1dico:source>
+        <nc1ihm:description>Type de système de détection d'un agent NRBC.</nc1ihm:description>
+        <nc1ihm:description xml:lang="en">CBRN detection system type.</nc1ihm:description>
+      </xs:appinfo>
+      <xs:documentation>Type de système de détection d'un agent NRBC.</xs:documentation>
+      <xs:documentation xml:lang="en">CBRN detection system type.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:integer" />
+  </xs:simpleType>
+  <xs:complexType name="FoxtrotType">
+    <xs:annotation>
+      <xs:documentation>Localisation d'un événement NRBC.</xs:documentation>
+      <xs:documentation xml:lang="en">Location of a CBRN event.</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element maxOccurs="6" name="incidentLocation">
+        <xs:annotation>
+          <xs:documentation>Localisation de l'événement, réelle ou estimée.</xs:documentation>
+          <xs:documentation xml:lang="en">Incident current or estimated location.</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Localisation réelle ou estimée</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">Actual or estimated location</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="location">
+              <xs:annotation>
+                <xs:documentation>Localisation de l'événement.</xs:documentation>
+                <xs:documentation xml:lang="en">Event location.</xs:documentation>
+                <xs:appinfo>
+                  <nc1ihm:Nom>Localisation</nc1ihm:Nom>
+                  <nc1ihm:Nom xml:lang="en">Location</nc1ihm:Nom>
+                </xs:appinfo>
+              </xs:annotation>
+              <xs:complexType>
+                <xs:choice>
+                  <xs:element name="point" type="nc1location:PointType">
+                    <xs:annotation>
+                      <xs:documentation>Point géographique.</xs:documentation>
+                      <xs:documentation xml:lang="en">Geographical point.</xs:documentation>
+                      <xs:appinfo>
+                        <nc1ihm:Nom>Point</nc1ihm:Nom>
+                        <nc1ihm:Nom xml:lang="en">Point</nc1ihm:Nom>
+                      </xs:appinfo>
+                    </xs:annotation>
+                  </xs:element>
+                  <xs:element name="placeName" type="nc1common:Text1To54ABNSType">
+                    <xs:annotation>
+                      <xs:documentation>Toponyme, par exemple un nom de ville ou de lieu.</xs:documentation>
+                      <xs:documentation xml:lang="en">Toponym, e.g. city or place name.</xs:documentation>
+                      <xs:appinfo>
+                        <nc1ihm:Nom>Toponyme</nc1ihm:Nom>
+                        <nc1ihm:Nom xml:lang="en">Toponym</nc1ihm:Nom>
+                      </xs:appinfo>
+                    </xs:annotation>
+                  </xs:element>
+                </xs:choice>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="locationQualifier" type="nc1cbrn:LocationQualifierCode">
+              <xs:annotation>
+                <xs:documentation>Indique si la localisation est réelle ou estimée.</xs:documentation>
+                <xs:documentation xml:lang="en">Specify if the location is current or estimated.</xs:documentation>
+                <xs:appinfo>
+                  <nc1ihm:Nom>Réelle ou estimée</nc1ihm:Nom>
+                  <nc1ihm:Nom xml:lang="en">Current or estimated</nc1ihm:Nom>
+                </xs:appinfo>
+              </xs:annotation>
+            </xs:element>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:simpleType name="GenericAlarmResultCode">
+    <xs:annotation>
+      <xs:appinfo>
+        <nc1dico:source xmlns:nc1dico="urn:fra:nc1:dictionnaires">ADatP-3 BL14 1088/3</nc1dico:source>
+        <nc1ihm:description>Résultat d'alerte capteur.</nc1ihm:description>
+        <nc1ihm:description xml:lang="en">Result of alert sensor.</nc1ihm:description>
+      </xs:appinfo>
+      <xs:documentation>Résultat d'alerte capteur.</xs:documentation>
+      <xs:documentation xml:lang="en">Result of alert sensor.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:integer" />
+  </xs:simpleType>
+  <xs:complexType name="GolfType">
+    <xs:annotation>
+      <xs:documentation>Quantité et mode de diffusion d'un agent NRBC.</xs:documentation>
+      <xs:documentation xml:lang="en">CBRN agent quantity and release mode.</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="incidentQualification" type="nc1cbrn:IncidentQualificationCode">
+        <xs:annotation>
+          <xs:documentation>Qualification de l'événement NRBC (suspecté ou observé).</xs:documentation>
+          <xs:documentation xml:lang="en">Suspected or observed CBRN event qualification.</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Qualification de l'événement</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">Incident qualification</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="deliverySystem" type="nc1cbrn:DeliverySystemTypeCode">
+        <xs:annotation>
+          <xs:documentation>Système, ou moyen de diffusion de l'agent NRBC.</xs:documentation>
+          <xs:documentation xml:lang="en">CBRN agent delivery system or medium.</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Système de diffusion</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">Delivery system</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="deliverySystemsCount" type="nc1common:Int1To999Type">
+        <xs:annotation>
+          <xs:documentation>Nombre de systèmes de diffusion.</xs:documentation>
+          <xs:documentation xml:lang="en">Number of delivery systems.</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Nombre de systèmes</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">Number of systems</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="substanceContainerType" type="nc1cbrn:ContainerTypeCode">
+        <xs:annotation>
+          <xs:documentation>Vecteur de diffusion de l'agent NRBC.</xs:documentation>
+          <xs:documentation xml:lang="en">CBRN agent delivery vehicle.</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Vecteur de diffusion</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">Delivery vehicle</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:choice>
+        <xs:element name="substanceContainerCount" type="nc1common:Int1To999Type">
+          <xs:annotation>
+            <xs:documentation>Nombre de vecteurs de l'agent NRBC.</xs:documentation>
+            <xs:documentation xml:lang="en">Number of CBRN agent delivery vehicles.</xs:documentation>
+            <xs:appinfo>
+              <nc1ihm:Nom>Nombre de vecteurs</nc1ihm:Nom>
+              <nc1ihm:Nom xml:lang="en">Number of vectors</nc1ihm:Nom>
+            </xs:appinfo>
+          </xs:annotation>
+        </xs:element>
+        <xs:element name="totalReleaseQuantity" type="nc1common:Int1To999999Type">
+          <xs:annotation>
+            <xs:documentation>Masse totale d'agent NRBC diffusée (kg).</xs:documentation>
+            <xs:documentation xml:lang="en">Total CBRN agent release weight (kg).</xs:documentation>
+            <xs:appinfo>
+              <nc1ihm:Nom>Quantité d'agent</nc1ihm:Nom>
+              <nc1ihm:Nom xml:lang="en">Quantity of agent</nc1ihm:Nom>
+            </xs:appinfo>
+          </xs:annotation>
+        </xs:element>
+        <xs:element name="sizeOfRelease" type="nc1cbrn:SizeOfReleaseCode">
+          <xs:annotation>
+            <xs:documentation>Echelle de diffusion de l'agent NRBC.</xs:documentation>
+            <xs:documentation xml:lang="en">CBRN agent size of release.</xs:documentation>
+            <xs:appinfo>
+              <nc1ihm:Nom>Echelle de diffusion</nc1ihm:Nom>
+              <nc1ihm:Nom xml:lang="en">Release scale</nc1ihm:Nom>
+            </xs:appinfo>
+          </xs:annotation>
+        </xs:element>
+      </xs:choice>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="HazardLevelType">
+    <xs:annotation>
+      <xs:documentation>Niveau de danger associé à un événement NRBC.</xs:documentation>
+      <xs:documentation xml:lang="en">Hazard level associated to a CBRN event.</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="hazardType" type="nc1cbrn:HazardTypeCode">
+        <xs:annotation>
+          <xs:documentation>Type de danger.</xs:documentation>
+          <xs:documentation xml:lang="en">Hazard type.</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Type de danger</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">Hazard type</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="probability" type="nc1common:RatioType">
+        <xs:annotation>
+          <xs:documentation>Probabilité associée au type de danger.</xs:documentation>
+          <xs:documentation xml:lang="en">Probability associated to hazard type.</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Probabilité</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">Probability</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:simpleType name="HazardTypeCode">
+    <xs:annotation>
+      <xs:appinfo>
+        <nc1dico:source xmlns:nc1dico="urn:fra:nc1:dictionnaires">ADatP-3 1744/1</nc1dico:source>
+        <nc1ihm:description>Type de danger associé à un événement NRBC.</nc1ihm:description>
+        <nc1ihm:description xml:lang="en">Type of danger associated to a CBRN event.</nc1ihm:description>
+      </xs:appinfo>
+      <xs:documentation>Type de danger associé à un événement NRBC.</xs:documentation>
+      <xs:documentation xml:lang="en">Type of danger associated to a CBRN event.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:integer" />
+  </xs:simpleType>
+  <xs:simpleType name="IncidentDescriptionCode">
+    <xs:annotation>
+      <xs:appinfo>
+        <nc1dico:source xmlns:nc1dico="urn:fra:nc1:dictionnaires">ADatP-3 BL14 1724/4</nc1dico:source>
+        <nc1ihm:description>Description d'un événement chimique, biologique, ou radiologique.</nc1ihm:description>
+        <nc1ihm:description xml:lang="en">Description of a chemical, biological event, or radiological.</nc1ihm:description>
+      </xs:appinfo>
+      <xs:documentation>Description d'un événement chimique, biologique, ou radiologique.</xs:documentation>
+      <xs:documentation xml:lang="en">Description of a chemical, biological event, or radiological.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:integer" />
+  </xs:simpleType>
+  <xs:simpleType name="IncidentQualificationCode">
+    <xs:annotation>
+      <xs:appinfo>
+        <nc1dico:source xmlns:nc1dico="urn:fra:nc1:dictionnaires">ADatP-3 BL14 1312/1</nc1dico:source>
+        <nc1ihm:description>Qualification d'un événement NRBC.</nc1ihm:description>
+        <nc1ihm:description xml:lang="en">CBRN event qualification.</nc1ihm:description>
+      </xs:appinfo>
+      <xs:documentation>Qualification d'un événement NRBC.</xs:documentation>
+      <xs:documentation xml:lang="en">CBRN event qualification.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:integer" />
+  </xs:simpleType>
+  <xs:simpleType name="IncidentStatusCode">
+    <xs:annotation>
+      <xs:appinfo>
+        <nc1dico:source xmlns:nc1dico="urn:fra:nc1:dictionnaires">ADatP-3 BL14 1724/3</nc1dico:source>
+        <nc1ihm:description>Etat d'un événement chimique, biologique, ou radiologique.</nc1ihm:description>
+        <nc1ihm:description xml:lang="en">CBRN event status.</nc1ihm:description>
+      </xs:appinfo>
+      <xs:documentation>Etat d'un événement chimique, biologique, ou radiologique.</xs:documentation>
+      <xs:documentation xml:lang="en">CBRN event status.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:integer" />
+  </xs:simpleType>
+  <xs:simpleType name="IncidentTypeCode">
+    <xs:annotation>
+      <xs:appinfo>
+        <nc1dico:source xmlns:nc1dico="urn:fra:nc1:dictionnaires">ADatP-3 BL14 1211/10</nc1dico:source>
+        <nc1ihm:description>Type d'événement NRBC.</nc1ihm:description>
+        <nc1ihm:description xml:lang="en">CBRN event type.</nc1ihm:description>
+      </xs:appinfo>
+      <xs:documentation>Type d'événement NRBC.</xs:documentation>
+      <xs:documentation xml:lang="en">CBRN event type.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:integer" />
+  </xs:simpleType>
+  <xs:complexType name="IndiabType">
+    <xs:annotation>
+      <xs:documentation>Probabilités associées à la diffusion d'un agent biologique.</xs:documentation>
+      <xs:documentation xml:lang="en">Biological agent release probability.</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:choice minOccurs="0">
+        <xs:element minOccurs="0" name="releaseHeightProbability" type="nc1common:RatioType">
+          <xs:annotation>
+            <xs:documentation>Probabilité associée à l'estimation de la hauteur de diffusion de l'agent biologique.</xs:documentation>
+            <xs:documentation xml:lang="en">Biological agent release height probability.</xs:documentation>
+            <xs:appinfo>
+              <nc1ihm:Nom>Hauteur de diffusion</nc1ihm:Nom>
+              <nc1ihm:Nom xml:lang="en">Dissemination height</nc1ihm:Nom>
+            </xs:appinfo>
+          </xs:annotation>
+        </xs:element>
+        <xs:element minOccurs="0" name="minReleaseHeight" type="nc1common:Int1To99999Type">
+          <xs:annotation>
+            <xs:documentation>Hauteur minimale estimée de diffusion de l'agent biologique (mètres).</xs:documentation>
+            <xs:documentation xml:lang="en">Estimated biological agent release min height (meters).</xs:documentation>
+            <xs:appinfo>
+              <nc1ihm:Nom>Hauteur de diffusion minimale</nc1ihm:Nom>
+              <nc1ihm:Nom xml:lang="en">Min release height</nc1ihm:Nom>
+            </xs:appinfo>
+          </xs:annotation>
+        </xs:element>
+        <xs:element minOccurs="0" name="maxReleaseHeight" type="nc1common:Int1To99999Type">
+          <xs:annotation>
+            <xs:documentation>Hauteur maximale estimée de diffusion de l'agent biologique (mètres).</xs:documentation>
+            <xs:documentation xml:lang="en">Estimated biological agent release max height (meters).</xs:documentation>
+            <xs:appinfo>
+              <nc1ihm:Nom>Hauteur de diffusion maximale</nc1ihm:Nom>
+              <nc1ihm:Nom xml:lang="en">Max release height</nc1ihm:Nom>
+            </xs:appinfo>
+          </xs:annotation>
+        </xs:element>
+        <xs:element minOccurs="0" name="releaseHeightAccuracy" type="nc1common:Int1To99999Type">
+          <xs:annotation>
+            <xs:documentation>Plage de précision associée à la hauteur de diffusion estimée de l'agent biologique.</xs:documentation>
+            <xs:documentation xml:lang="en">Biological agent dissemination height accuracy range.</xs:documentation>
+            <xs:appinfo>
+              <nc1ihm:Nom>Plage de précision</nc1ihm:Nom>
+              <nc1ihm:Nom xml:lang="en">Accuracy range</nc1ihm:Nom>
+            </xs:appinfo>
+          </xs:annotation>
+        </xs:element>
+      </xs:choice>
+      <xs:choice minOccurs="0">
+        <xs:element minOccurs="0" name="substanceTypeProbability" type="nc1common:RatioType">
+          <xs:annotation>
+            <xs:documentation>Probabilité associée à l'identification du type d'agent biologique.</xs:documentation>
+            <xs:documentation xml:lang="en">Biological agent type identification probability.</xs:documentation>
+            <xs:appinfo>
+              <nc1ihm:Nom>Type d'agent</nc1ihm:Nom>
+              <nc1ihm:Nom xml:lang="en">Agent type</nc1ihm:Nom>
+            </xs:appinfo>
+          </xs:annotation>
+        </xs:element>
+        <xs:element minOccurs="0" name="substanceNameProbability" type="nc1common:RatioType">
+          <xs:annotation>
+            <xs:documentation>Probabilité associée à l'identification de l'agent biologique.</xs:documentation>
+            <xs:documentation xml:lang="en">Biological agent identification probability.</xs:documentation>
+            <xs:appinfo>
+              <nc1ihm:Nom>Nom de l'agent</nc1ihm:Nom>
+              <nc1ihm:Nom xml:lang="en">Agent name</nc1ihm:Nom>
+            </xs:appinfo>
+          </xs:annotation>
+        </xs:element>
+      </xs:choice>
+      <xs:element minOccurs="0" name="persistencyProbability" type="nc1common:RatioType">
+        <xs:annotation>
+          <xs:documentation>Probabilité associée à l'estimation de la persistance de l'agent biologique.</xs:documentation>
+          <xs:documentation xml:lang="en">Biological agent persistency estimation probability.</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Persistance</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">Persistency</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="sampleIdentificationConfidenceLevel" type="nc1cbrn:SampleIdentificationConfidenceLevelCode">
+        <xs:annotation>
+          <xs:documentation>Niveau d'assurance associé à l'identification de l'échantillon NRBC.</xs:documentation>
+          <xs:documentation xml:lang="en">Sample identification confidence level.</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Niveau d'assurance</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">Confidence level</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="IndiacType">
+    <xs:annotation>
+      <xs:documentation>Probabilités associées à la diffusion d'un agent chimique.
+</xs:documentation>
+      <xs:documentation xml:lang="en">Chemical agent release probability.
+</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:choice minOccurs="0">
+        <xs:element minOccurs="0" name="releaseHeightProbability" type="nc1common:RatioType">
+          <xs:annotation>
+            <xs:documentation>Probabilité associée à l'estimation de la hauteur de diffusion de l'agent chimique.</xs:documentation>
+            <xs:documentation xml:lang="en">Chemical agent release height probability.</xs:documentation>
+            <xs:appinfo>
+              <nc1ihm:Nom>Hauteur de diffusion</nc1ihm:Nom>
+              <nc1ihm:Nom xml:lang="en">Dissemination height</nc1ihm:Nom>
+            </xs:appinfo>
+          </xs:annotation>
+        </xs:element>
+        <xs:element minOccurs="0" name="minReleaseHeight" type="nc1common:Int1To99999Type">
+          <xs:annotation>
+            <xs:documentation>Hauteur minimale estimée de diffusion de l'agent chimique (mètres).</xs:documentation>
+            <xs:documentation xml:lang="en">Estimated chemical agent release min height (meters).</xs:documentation>
+            <xs:appinfo>
+              <nc1ihm:Nom>Hauteur de diffusion minimale</nc1ihm:Nom>
+              <nc1ihm:Nom xml:lang="en">Min release height</nc1ihm:Nom>
+            </xs:appinfo>
+          </xs:annotation>
+        </xs:element>
+        <xs:element minOccurs="0" name="maxReleaseHeight" type="nc1common:Int1To99999Type">
+          <xs:annotation>
+            <xs:documentation>Hauteur maximale estimée de diffusion de l'agent chimique (mètres).</xs:documentation>
+            <xs:documentation xml:lang="en">Estimated chemical agent release max height (meters).</xs:documentation>
+            <xs:appinfo>
+              <nc1ihm:Nom>Hauteur de diffusion maximale</nc1ihm:Nom>
+              <nc1ihm:Nom xml:lang="en">Max release height</nc1ihm:Nom>
+            </xs:appinfo>
+          </xs:annotation>
+        </xs:element>
+        <xs:element minOccurs="0" name="releaseHeightAccuracy" type="nc1common:Int1To99999Type">
+          <xs:annotation>
+            <xs:documentation>Plage de précision associée à la hauteur de diffusion estimée de l'agent chimique.</xs:documentation>
+            <xs:documentation xml:lang="en">Chemical agent dissemination height accuracy range.</xs:documentation>
+            <xs:appinfo>
+              <nc1ihm:Nom>Plage de précision</nc1ihm:Nom>
+              <nc1ihm:Nom xml:lang="en">Accuracy range</nc1ihm:Nom>
+            </xs:appinfo>
+          </xs:annotation>
+        </xs:element>
+      </xs:choice>
+      <xs:choice minOccurs="0">
+        <xs:element minOccurs="0" name="substanceTypeProbability" type="nc1common:RatioType">
+          <xs:annotation>
+            <xs:documentation>Probabilité associée à l'identification du type d'agent chimique.</xs:documentation>
+            <xs:documentation xml:lang="en">Chemical agent type identification probability.</xs:documentation>
+            <xs:appinfo>
+              <nc1ihm:Nom>Type d'agent</nc1ihm:Nom>
+              <nc1ihm:Nom xml:lang="en">Agent type</nc1ihm:Nom>
+            </xs:appinfo>
+          </xs:annotation>
+        </xs:element>
+        <xs:element minOccurs="0" name="substanceNameProbability" type="nc1common:RatioType">
+          <xs:annotation>
+            <xs:documentation>Probabilité associée à l'identification de l'agent chimique.</xs:documentation>
+            <xs:documentation xml:lang="en">Chemical agent identification probability.</xs:documentation>
+            <xs:appinfo>
+              <nc1ihm:Nom>Nom de l'agent</nc1ihm:Nom>
+              <nc1ihm:Nom xml:lang="en">Agent name</nc1ihm:Nom>
+            </xs:appinfo>
+          </xs:annotation>
+        </xs:element>
+        <xs:element minOccurs="0" name="substanceUnnaProbability" type="nc1common:RatioType">
+          <xs:annotation>
+            <xs:documentation>Probabilité associée à l'identification STANAG 2909 de l'agent chimique.</xs:documentation>
+            <xs:documentation xml:lang="en">Chemical agent type STANAG 2909 identification probability.</xs:documentation>
+            <xs:appinfo>
+              <nc1ihm:Nom>Identification OTAN</nc1ihm:Nom>
+              <nc1ihm:Nom xml:lang="en">NATO identification</nc1ihm:Nom>
+            </xs:appinfo>
+          </xs:annotation>
+        </xs:element>
+      </xs:choice>
+      <xs:element minOccurs="0" name="persistencyProbability" type="nc1common:RatioType">
+        <xs:annotation>
+          <xs:documentation>Probabilité associée à l'estimation de la persistance de l'agent chimique.</xs:documentation>
+          <xs:documentation xml:lang="en">Chemical agent persistency estimation probability.</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Persistance</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">Persistency</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="sampleIdentificationConfidenceLevel" type="nc1cbrn:SampleIdentificationConfidenceLevelCode">
+        <xs:annotation>
+          <xs:documentation>Niveau d'assurance associé à l'identification de l'échantillon NRBC.</xs:documentation>
+          <xs:documentation xml:lang="en">Sample identification confidence level.</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Niveau d'assurance</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">Confidence level</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="IndiaType">
+    <xs:annotation>
+      <xs:documentation>Caractéristiques de la diffusion d'un agent NRBC.</xs:documentation>
+      <xs:documentation xml:lang="en">CBRN agent release characteristics.</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:choice>
+        <xs:element name="releaseType" type="nc1cbrn:ReleaseTypeCode">
+          <xs:annotation>
+            <xs:documentation>Type de diffusion de l'agent NRBC.</xs:documentation>
+            <xs:documentation xml:lang="en">CBRN agent release type.</xs:documentation>
+            <xs:appinfo>
+              <nc1ihm:Nom>Type de diffusion</nc1ihm:Nom>
+              <nc1ihm:Nom xml:lang="en">Type of release</nc1ihm:Nom>
+            </xs:appinfo>
+          </xs:annotation>
+        </xs:element>
+        <xs:element name="releaseHeight" type="nc1common:Int1To99999Type">
+          <xs:annotation>
+            <xs:documentation>Hauteur de diffusion de l'agent NRBC.</xs:documentation>
+            <xs:documentation xml:lang="en">CBRN agent release height.</xs:documentation>
+            <xs:appinfo>
+              <nc1ihm:Nom>Hauteur de diffusion</nc1ihm:Nom>
+              <nc1ihm:Nom xml:lang="en">Dissemination height</nc1ihm:Nom>
+            </xs:appinfo>
+          </xs:annotation>
+        </xs:element>
+      </xs:choice>
+      <xs:choice minOccurs="0">
+        <xs:element minOccurs="0" name="substanceType" type="nc1cbrn:SubstanceTypeCode">
+          <xs:annotation>
+            <xs:documentation>Type de l'agent NRBC.</xs:documentation>
+            <xs:documentation xml:lang="en">CBRN agent type.</xs:documentation>
+            <xs:appinfo>
+              <nc1ihm:Nom>Type d'agent</nc1ihm:Nom>
+              <nc1ihm:Nom xml:lang="en">Agent type</nc1ihm:Nom>
+            </xs:appinfo>
+          </xs:annotation>
+        </xs:element>
+        <xs:element minOccurs="0" name="substanceName" type="nc1cbrn:SubstanceNameCode">
+          <xs:annotation>
+            <xs:documentation>Nom de l'agent NRBC.</xs:documentation>
+            <xs:documentation xml:lang="en">Substance name.</xs:documentation>
+            <xs:appinfo>
+              <nc1ihm:Nom>Nom de l'agent</nc1ihm:Nom>
+              <nc1ihm:Nom xml:lang="en">Agent name</nc1ihm:Nom>
+            </xs:appinfo>
+          </xs:annotation>
+        </xs:element>
+        <xs:element minOccurs="0" name="unnaIdentificationNumber" type="nc1common:Int0To9999Type">
+          <xs:annotation>
+            <xs:documentation>Identification de l'agent NRBC conformément au STANAG 2909.</xs:documentation>
+            <xs:documentation xml:lang="en">CBRN agent STANAG 2909 identifier.</xs:documentation>
+            <xs:appinfo>
+              <nc1ihm:Nom>Identification OTAN</nc1ihm:Nom>
+              <nc1ihm:Nom xml:lang="en">NATO identification</nc1ihm:Nom>
+            </xs:appinfo>
+          </xs:annotation>
+        </xs:element>
+      </xs:choice>
+      <xs:element minOccurs="0" name="persistencyType" type="nc1cbrn:PersistencyTypeCode">
+        <xs:annotation>
+          <xs:documentation>Type de persistance de l'agent NRBC.</xs:documentation>
+          <xs:documentation xml:lang="en">CBRN agent persistency type.</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Persistance</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">Persistency</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="detectionType" type="nc1cbrn:DetectionTypeCode">
+        <xs:annotation>
+          <xs:documentation>Type de système de détection de l'agent NRBC.</xs:documentation>
+          <xs:documentation xml:lang="en">CBRN detection system type.</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Type de détection</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">Detection type</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="confidenceLevel" type="nc1cbrn:DetectionConfidenceLevelCode">
+        <xs:annotation>
+          <xs:documentation>Niveau d'assurance dans la détection d'un événement NRBC.</xs:documentation>
+          <xs:documentation xml:lang="en">CBRN event detection confidence level.</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Niveau d'assurance</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">Confidence level</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:simpleType name="LocationQualifierCode">
+    <xs:annotation>
+      <xs:appinfo>
+        <nc1dico:source xmlns:nc1dico="urn:fra:nc1:dictionnaires">ADatP-3 BL14 dictionnaires 1118/1 et 1118/6</nc1dico:source>
+        <nc1ihm:description>Indique si la localisation d'un événement NRBC est réelle ou estimée.</nc1ihm:description>
+        <nc1ihm:description xml:lang="en">Specifies if the CBRN event location is current or estimated.</nc1ihm:description>
+      </xs:appinfo>
+      <xs:documentation>Indique si la localisation d'un événement NRBC est réelle ou estimée.</xs:documentation>
+      <xs:documentation xml:lang="en">Specifies if the CBRN event location is current or estimated.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:integer" />
+  </xs:simpleType>
+  <xs:complexType name="MikerType">
+    <xs:annotation>
+      <xs:documentation>Description et état d'un événement chimique, biologique, ou radiologique.</xs:documentation>
+      <xs:documentation xml:lang="en">Chemical, biological or radiological event description and status.</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="incidentDescription" type="nc1cbrn:IncidentDescriptionCode">
+        <xs:annotation>
+          <xs:documentation>Description de l'événement chimique, biologique, ou radiologique.</xs:documentation>
+          <xs:documentation xml:lang="en">Description of the chemical, biological, or radiological event.</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Description de l'événement</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">Incident description</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="incidentStatus" type="nc1cbrn:IncidentStatusCode">
+        <xs:annotation>
+          <xs:documentation>Etat de l'événement chimique, biologique, ou radiologique.</xs:documentation>
+          <xs:documentation xml:lang="en">State of the chemical, biological, or radiological event.</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Etat de l'événement</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">Incident status</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="OscarType">
+    <xs:annotation>
+      <xs:documentation>Horodatage des lignes de contour estimées d'un événement NRBC.</xs:documentation>
+      <xs:documentation xml:lang="en">Datetime of the estimated area outlines of a CBRN event.</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="estimatedContourLinesDatetime" type="xs:dateTime">
+        <xs:annotation>
+          <xs:documentation>Horodatage des lignes de contour estimées.</xs:documentation>
+          <xs:documentation xml:lang="en">Timestamp of estimated shape lines.</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Horodatage</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">Timestamp</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="PapaaType">
+    <xs:annotation>
+      <xs:documentation>Zones de diffusion et zone de danger associées à un agent NRBC.</xs:documentation>
+      <xs:documentation xml:lang="en">Release areas and hazard area associated to a CBRN event.</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="releaseAreaRadius" type="nc1common:Int0To999999Type">
+        <xs:annotation>
+          <xs:documentation>Rayon de la zone de diffusion (mètres).</xs:documentation>
+          <xs:documentation xml:lang="en">Release area radius (meters).</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Rayon de diffusion</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">Release area radius</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="releaseAreaMinDuration" type="xs:duration">
+        <xs:annotation>
+          <xs:documentation>Durée minimale du danger dans la zone de diffusion.</xs:documentation>
+          <xs:documentation xml:lang="en">Minimum duration of the hazard within the release area.</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Durée minimale</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">Minimum duration</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="releaseAreaCalculatedDuration" type="xs:duration">
+        <xs:annotation>
+          <xs:documentation>Durée estimée du danger dans la zone de diffusion.</xs:documentation>
+          <xs:documentation xml:lang="en">Estimated hazard duration within the release area.</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Durée estimée</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">Estimated duration</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="hazardAreaDistance" type="nc1common:Int0To999999Type">
+        <xs:annotation>
+          <xs:documentation>Etendue de la zone de danger (mètres).</xs:documentation>
+          <xs:documentation xml:lang="en">Hazard area extent (meters).</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Etendue</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">Extent</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="hazardAreaMinDuration" type="xs:duration">
+        <xs:annotation>
+          <xs:documentation>Durée minimale du danger dans la zone de danger.</xs:documentation>
+          <xs:documentation xml:lang="en">Minimum duration of the hazard within the hazard area.</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Durée minimale du danger</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">Hazard minimum duration</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="hazardAreaCalculatedDuration" type="xs:duration">
+        <xs:annotation>
+          <xs:documentation>Durée estimée du danger dans la zone de danger.</xs:documentation>
+          <xs:documentation xml:lang="en">Estimated hazard duration within the hazard area.</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Durée estimée du danger</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">Hazard estimated duration</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="PapaxType">
+    <xs:annotation>
+      <xs:documentation>Localisation de la zone de danger pour une période météo de deux heures donnée.</xs:documentation>
+      <xs:documentation xml:lang="en">Location of the danger zone for a given weather two-hour period.</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="startDatetime" type="xs:dateTime">
+        <xs:annotation>
+          <xs:documentation>Horodatage de début de la période météo.</xs:documentation>
+          <xs:documentation xml:lang="en">Weather period start timestamp.</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Horodatage de début</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">Period start timestamp</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element maxOccurs="20" name="hazardAreaPoint" type="nc1location:PointType">
+        <xs:annotation>
+          <xs:documentation>Point de la zone de danger correspondant à la période météo.</xs:documentation>
+          <xs:documentation xml:lang="en">Point of the hazard area corresponding to the weather period.</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Point de la zone de danger</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">Hazard area point</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:simpleType name="PersistencyTypeCode">
+    <xs:annotation>
+      <xs:appinfo>
+        <nc1dico:source xmlns:nc1dico="urn:fra:nc1:dictionnaires">ADatP-3 BL14 1531/2</nc1dico:source>
+        <nc1ihm:description>Type de persistence d'un agent NRBC.</nc1ihm:description>
+        <nc1ihm:description xml:lang="en">CBRN agent persistency type.</nc1ihm:description>
+      </xs:appinfo>
+      <xs:documentation>Type de persistence d'un agent NRBC.</xs:documentation>
+      <xs:documentation xml:lang="en">CBRN agent persistency type.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:integer" />
+  </xs:simpleType>
+  <xs:complexType name="QuebecType">
+    <xs:annotation>
+      <xs:documentation>Localisation et caractérisation d'une détection NRBC.</xs:documentation>
+      <xs:documentation xml:lang="en">Location and characterisation of a CBRN detection.</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="detectionLocation" type="nc1location:PointType">
+        <xs:annotation>
+          <xs:documentation>Localisation de la détection ou de l'échantillonnage NRBC.</xs:documentation>
+          <xs:documentation xml:lang="en">Location of the CBRN detection or sampling.</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Localisation</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">Location</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="sampleType" type="nc1cbrn:SampleTypeCode">
+        <xs:annotation>
+          <xs:documentation>Type d'échantillon NRBC.</xs:documentation>
+          <xs:documentation xml:lang="en">CBRN sample type.</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Type d'échantillon</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">Sample type</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="detectionType" type="nc1cbrn:DetectionTypeCode">
+        <xs:annotation>
+          <xs:documentation>Type de système de détection de l'agent NRBC.</xs:documentation>
+          <xs:documentation xml:lang="en">CBRN detection system type.</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Type de détection</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">Detection type</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="detectionMeanType" type="nc1cbrn:DetectionMeanTypeCode">
+        <xs:annotation>
+          <xs:documentation>Type de moyen de détection et d'identification de l'agent NRBC.</xs:documentation>
+          <xs:documentation xml:lang="en">CBRN detection and identification mean type.</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Moyen de détection</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">Detection mean</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="measurementHeight" type="nc1common:Int0To99999Type">
+        <xs:annotation>
+          <xs:documentation>Hauteur de la mesure NRBC, au-dessus du sol (mètres).</xs:documentation>
+          <xs:documentation xml:lang="en">CBRN measurement height above ground (meters).</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Hauteur de mesure</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">Measurement height</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="distanceToCloud" type="nc1common:Int1To99999Type">
+        <xs:annotation>
+          <xs:documentation>Distance entre l'observateur et le nuage (mètres).</xs:documentation>
+          <xs:documentation xml:lang="en">Observer to cloud distance.</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Distance au nuage</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">Distance to cloud</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="leftRadialLine" type="nc1common:AngleType">
+        <xs:annotation>
+          <xs:documentation>Limite gauche de l'observation.</xs:documentation>
+          <xs:documentation xml:lang="en">Sighting left limit.</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Limite gauche</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">Left limit</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="rightRadialLine" type="nc1common:AngleType">
+        <xs:annotation>
+          <xs:documentation>Limite droite de l'observation.</xs:documentation>
+          <xs:documentation xml:lang="en">Sighting right limit.</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Limite droite</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">Right limit</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="cloudTopAngle" type="nc1common:ElevationAngleType">
+        <xs:annotation>
+          <xs:documentation>Angle d'élévation du haut du nuage.</xs:documentation>
+          <xs:documentation xml:lang="en">the top of the cloud elevation angle.</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Haut du nuage</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">Cloud top</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="cloudBottomAngle" type="nc1common:ElevationAngleType">
+        <xs:annotation>
+          <xs:documentation>Angle d'élévation du bas du nuage.</xs:documentation>
+          <xs:documentation xml:lang="en">the bottom of the cloud elevation angle.</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Bas du nuage</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">Cloud bottom</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:simpleType name="RelativeHumidityRangeCode">
+    <xs:annotation>
+      <xs:appinfo>
+        <nc1dico:source xmlns:nc1dico="urn:fra:nc1:dictionnaires">ADatP-3 BL14 1315/1</nc1dico:source>
+        <nc1ihm:description>Plages d'humidité relative.</nc1ihm:description>
+        <nc1ihm:description xml:lang="en">Relative humidity range.</nc1ihm:description>
+      </xs:appinfo>
+      <xs:documentation>Plages d'humidité relative.</xs:documentation>
+      <xs:documentation xml:lang="en">Relative humidity range.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:integer" />
+  </xs:simpleType>
+  <xs:simpleType name="ReleaseTypeCode">
+    <xs:annotation>
+      <xs:appinfo>
+        <nc1dico:source xmlns:nc1dico="urn:fra:nc1:dictionnaires">STAT dictionnaire 338
+ADatP-3 BL14 1735/1</nc1dico:source>
+        <nc1ihm:description>Type de diffusion d'un agent NRBC.</nc1ihm:description>
+        <nc1ihm:description xml:lang="en">CBRN agent release type.</nc1ihm:description>
+      </xs:appinfo>
+      <xs:documentation>Type de diffusion d'un agent NRBC.</xs:documentation>
+      <xs:documentation xml:lang="en">CBRN agent release type.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:integer" />
+  </xs:simpleType>
+  <xs:complexType name="RomeoType">
+    <xs:annotation>
+      <xs:documentation>Niveau de contamination biologique ou chimique.</xs:documentation>
+      <xs:documentation xml:lang="en">Biological or chemical contamination level.</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" name="atmosphericParticleConcentrationQuantity" type="nc1common:Decimal0To99999999999999Type">
+        <xs:annotation>
+          <xs:documentation>Niveau de contamination chimique ou biologique de l’atmosphère (unité ACPL).</xs:documentation>
+          <xs:documentation xml:lang="en">Level of chemical or biological contamination of the atmosphere (ACPL unit).</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Contamination dans l'atmosphère</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">Atmosphere contamination</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="massFractionConcentrationQuantity" type="nc1common:Decimal0To99999999999999Type">
+        <xs:annotation>
+          <xs:documentation>Niveau de parts de l’agent chimique ou biologique pour un million de parts d'eau (unité PPM).</xs:documentation>
+          <xs:documentation xml:lang="en">Number of parts of the chemical or biological agent per one million of water parts (PPM unit).</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Concentration massique</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">Mass fraction concentration</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="surfaceDepositionQuantity" type="nc1common:Decimal0To99999999999999Type">
+        <xs:annotation>
+          <xs:documentation>Niveau de contamination chimique ou biologique par unité de surface (unité MGM2).</xs:documentation>
+          <xs:documentation xml:lang="en">Level of chemical or biological contamination per surface unit (MGM2 unit).</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Contamination en surface</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">Surface contamination</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="volumeConcentrationQuantity" type="nc1common:Decimal0To99999999999999Type">
+        <xs:annotation>
+          <xs:documentation>Niveau de contamination chimique ou biologique dans l’air ou l’eau, par unité de volume (unité MGM3).</xs:documentation>
+          <xs:documentation xml:lang="en">Level of chemical or biological contamination in air or water per volume unit (MGM3 unit).</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Contamination en volume</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">Volume contamination</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="concentrationTimeQuantity" type="nc1common:Decimal0To99999999999999Type">
+        <xs:annotation>
+          <xs:documentation>Concentration de l’agent biologique ou chimique multiplié par le temps d’exposition (unité MMM3).</xs:documentation>
+          <xs:documentation xml:lang="en">Concentration of the biological or chemical agent multiplied by the exposure time (unit mmm3).</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Concentration dans le temps</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">Concentration over time</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:simpleType name="SampleIdentificationConfidenceLevelCode">
+    <xs:annotation>
+      <xs:appinfo>
+        <nc1dico:source xmlns:nc1dico="urn:fra:nc1:dictionnaires">STAT dictionnaire 79
+ADatP-3 BL14 1123/1</nc1dico:source>
+        <nc1ihm:description>Niveau d'assurance associé à l'identification d'un échantillon NRBC.</nc1ihm:description>
+        <nc1ihm:description xml:lang="en">Sample identification confidence level.</nc1ihm:description>
+      </xs:appinfo>
+      <xs:documentation>Niveau d'assurance associé à l'identification d'un échantillon NRBC.</xs:documentation>
+      <xs:documentation xml:lang="en">Sample identification confidence level.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:integer" />
+  </xs:simpleType>
+  <xs:simpleType name="SampleTypeCode">
+    <xs:annotation>
+      <xs:appinfo>
+        <nc1dico:source xmlns:nc1dico="urn:fra:nc1:dictionnaires">STAT dictionnaire 83
+ADatP-3 BL14 1528/2.</nc1dico:source>
+        <nc1ihm:description>Type d'échantillon NRBC.</nc1ihm:description>
+        <nc1ihm:description xml:lang="en">CBRN sample type.</nc1ihm:description>
+      </xs:appinfo>
+      <xs:documentation>Type d'échantillon NRBC.</xs:documentation>
+      <xs:documentation xml:lang="en">CBRN sample type.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:integer" />
+  </xs:simpleType>
+  <xs:complexType name="SierraType">
+    <xs:annotation>
+      <xs:documentation>Horodatage de lecture ou de détection initiale d'une contamination.</xs:documentation>
+      <xs:documentation xml:lang="en">Timestamp of contamination reading or initial detection.</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:choice>
+        <xs:element name="readingDatetime" type="xs:dateTime">
+          <xs:annotation>
+            <xs:documentation>Horodatage de lecture de la contamination.</xs:documentation>
+            <xs:documentation xml:lang="en">Contamination reading timestamp.</xs:documentation>
+            <xs:appinfo>
+              <nc1ihm:Nom>Horodatage de lecture</nc1ihm:Nom>
+              <nc1ihm:Nom xml:lang="en">Reading time</nc1ihm:Nom>
+            </xs:appinfo>
+          </xs:annotation>
+        </xs:element>
+        <xs:element name="contaminationDatetime" type="xs:dateTime">
+          <xs:annotation>
+            <xs:documentation>Horodatage de détection initiale de la contamination.</xs:documentation>
+            <xs:documentation xml:lang="en">Timestamp of initial detection of contamination.</xs:documentation>
+            <xs:appinfo>
+              <nc1ihm:Nom>Horodatage de détection</nc1ihm:Nom>
+              <nc1ihm:Nom xml:lang="en">Detection time</nc1ihm:Nom>
+            </xs:appinfo>
+          </xs:annotation>
+        </xs:element>
+      </xs:choice>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:simpleType name="SignificantWeatherPhenomenaCode">
+    <xs:annotation>
+      <xs:appinfo>
+        <nc1dico:source xmlns:nc1dico="urn:fra:nc1:dictionnaires">ADatP-3 BL14 1386/6</nc1dico:source>
+        <nc1ihm:description>Phénomène météo significatif.</nc1ihm:description>
+        <nc1ihm:description xml:lang="en">Significant meteorological event.</nc1ihm:description>
+      </xs:appinfo>
+      <xs:documentation>Phénomène météo significatif.</xs:documentation>
+      <xs:documentation xml:lang="en">Significant meteorological event.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:integer" />
+  </xs:simpleType>
+  <xs:simpleType name="SizeOfReleaseCode">
+    <xs:annotation>
+      <xs:appinfo>
+        <nc1dico:source xmlns:nc1dico="urn:fra:nc1:dictionnaires">STAT dictionnaire 368
+ADatP-3 BL14 1743/1</nc1dico:source>
+        <nc1ihm:description>Echelle de diffusion d'un agent NRBC.</nc1ihm:description>
+        <nc1ihm:description xml:lang="en">CBRN agent release scale.</nc1ihm:description>
+      </xs:appinfo>
+      <xs:documentation>Echelle de diffusion d'un agent NRBC.</xs:documentation>
+      <xs:documentation xml:lang="en">CBRN agent release scale.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:integer" />
+  </xs:simpleType>
+  <xs:simpleType name="SubstanceNameCode">
+    <xs:annotation>
+      <xs:appinfo>
+        <nc1dico:source xmlns:nc1dico="urn:fra:nc1:dictionnaires">STAT dictionnaire 85
+ADatP-3 BL14 1022/9</nc1dico:source>
+        <nc1ihm:description>Dénomination d'un agent NRBC.</nc1ihm:description>
+        <nc1ihm:description xml:lang="en">CBRN agent name.</nc1ihm:description>
+      </xs:appinfo>
+      <xs:documentation>Dénomination d'un agent NRBC.</xs:documentation>
+      <xs:documentation xml:lang="en">CBRN agent name.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:integer" />
+  </xs:simpleType>
+  <xs:simpleType name="SubstanceTypeCode">
+    <xs:annotation>
+      <xs:appinfo>
+        <nc1dico:source xmlns:nc1dico="urn:fra:nc1:dictionnaires">STAT dictionnaire 84
+ADatP-3 1531/5</nc1dico:source>
+        <nc1ihm:description>Type d'agent NRBC.</nc1ihm:description>
+        <nc1ihm:description xml:lang="en">CBRN agent type.</nc1ihm:description>
+      </xs:appinfo>
+      <xs:documentation>Type d'agent NRBC.</xs:documentation>
+      <xs:documentation xml:lang="en">CBRN agent type.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:integer" />
+  </xs:simpleType>
+  <xs:complexType name="TangoType">
+    <xs:annotation>
+      <xs:documentation>Description de la topographie du terrain et de la végétation.</xs:documentation>
+      <xs:documentation xml:lang="en">Description of the topography and vegetation.</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="terrainTopographyDescription" type="nc1cbrn:TerrainTopographyDescriptionCode">
+        <xs:annotation>
+          <xs:documentation>Description de la topographie du terrain.</xs:documentation>
+          <xs:documentation xml:lang="en">Topography of the terrain and vegetation.</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Topographie terrain</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">Terrain topography</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="vegetationDescription" type="nc1cbrn:VegetationDescriptionCode">
+        <xs:annotation>
+          <xs:documentation>Description de la végétation.</xs:documentation>
+          <xs:documentation xml:lang="en">Vegetation description.</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Végétation</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">Vegetation</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:simpleType name="TerrainTopographyDescriptionCode">
+    <xs:annotation>
+      <xs:appinfo>
+        <nc1dico:source xmlns:nc1dico="urn:fra:nc1:dictionnaires">ADatP-3 BL14 1289/5</nc1dico:source>
+        <nc1ihm:description>Description de la topographie d'un terrain.</nc1ihm:description>
+        <nc1ihm:description xml:lang="en">Description of the topography of a ground.</nc1ihm:description>
+      </xs:appinfo>
+      <xs:documentation>Description de la topographie d'un terrain.</xs:documentation>
+      <xs:documentation xml:lang="en">Description of the topography of a ground.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:integer" />
+  </xs:simpleType>
+  <xs:simpleType name="VegetationDescriptionCode">
+    <xs:annotation>
+      <xs:appinfo>
+        <nc1dico:source xmlns:nc1dico="urn:fra:nc1:dictionnaires">ADatP-3 BL14 1206/2</nc1dico:source>
+        <nc1ihm:description>Description d'une végétation.</nc1ihm:description>
+        <nc1ihm:description xml:lang="en">Description of a vegetation.</nc1ihm:description>
+      </xs:appinfo>
+      <xs:documentation>Description d'une végétation.</xs:documentation>
+      <xs:documentation xml:lang="en">Description of a vegetation.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:integer" />
+  </xs:simpleType>
+  <xs:complexType name="WhiskeymType">
+    <xs:annotation>
+      <xs:documentation>Météo au sol pour la première période météo de deux heures.</xs:documentation>
+      <xs:documentation xml:lang="en">Ground weather for the 1st 2 hours weather period.</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="downwindDirection" type="nc1common:AngleType">
+        <xs:annotation>
+          <xs:documentation>Direction où va le vent.</xs:documentation>
+          <xs:documentation xml:lang="en">Wind direction.</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Direction</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">Direction</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="windSpeed" type="nc1common:SpeedType">
+        <xs:annotation>
+          <xs:documentation>Vitesse du vent.</xs:documentation>
+          <xs:documentation xml:lang="en">Wind speed.</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Vitesse</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">Speed</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="airStabilityCategory" type="nc1cbrn:AirStabilityCategoryCode">
+        <xs:annotation>
+          <xs:documentation>Catégorie de stabilité de l'air.</xs:documentation>
+          <xs:documentation xml:lang="en">Air stability category.</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Stabilité de l'air</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">Air stability</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="airTemperature" type="nc1common:IntMinus63To63Type">
+        <xs:annotation>
+          <xs:documentation>Température de l'air au sol (degrés Celsius).</xs:documentation>
+          <xs:documentation xml:lang="en">Air temperature at ground level (degrees Celsius).</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Température</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">Temperature</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="relativeHumidity" type="nc1cbrn:RelativeHumidityRangeCode">
+        <xs:annotation>
+          <xs:documentation>Humidité relative.</xs:documentation>
+          <xs:documentation xml:lang="en">Relative humidity.</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Humidité relative</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">Relative humidity</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="significantWeatherPhenomena" type="nc1cbrn:SignificantWeatherPhenomenaCode">
+        <xs:annotation>
+          <xs:documentation>Phénomène météo significatif.</xs:documentation>
+          <xs:documentation xml:lang="en">Significant meteorological event.</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Phénomène météo</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">Meteorological phenomena</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="cloudCoverage" type="nc1cbrn:CloudCoverageCode">
+        <xs:annotation>
+          <xs:documentation>Couverture nuageuse.</xs:documentation>
+          <xs:documentation xml:lang="en">Cloud cover data.</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Couverture nuageuse</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">Cloud cover data</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="WhiskeyType">
+    <xs:annotation>
+      <xs:documentation>Informations capteur.</xs:documentation>
+      <xs:documentation xml:lang="en">Sensor information.</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="genericAlarmResult" type="nc1cbrn:GenericAlarmResultCode">
+        <xs:annotation>
+          <xs:documentation>Résultat d'alerte générique.</xs:documentation>
+          <xs:documentation xml:lang="en">Generical arm result.</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Résultat d'alerte générique</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">Generical arm result</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="nonSpecificPotentialHarmfulResult" type="nc1cbrn:GenericAlarmResultCode">
+        <xs:annotation>
+          <xs:documentation>Résultat de nocivité potentielle non spécifique.</xs:documentation>
+          <xs:documentation xml:lang="en">Non specific potential harmful result.</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Résultat de nocivité</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">Harmful result</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="confirmatoryTest" type="xs:boolean">
+        <xs:annotation>
+          <xs:documentation>Indique si le test de confirmation a été réalisé ou non.</xs:documentation>
+          <xs:documentation xml:lang="en">Specify if the confirmation test has been performed or not.</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Test de confirmation</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">Confirmatory test</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="confidenceLevel" type="nc1cbrn:DetectionConfidenceLevelCode">
+        <xs:annotation>
+          <xs:documentation>Niveau d'assurance dans la détection d'un événement NRBC.</xs:documentation>
+          <xs:documentation xml:lang="en">CBRN event detection confidence level.</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Niveau d'assurance</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">Confidence level</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="XrayaType">
+    <xs:annotation>
+      <xs:documentation>Contour effectif d'une contamination NRBC.</xs:documentation>
+      <xs:documentation xml:lang="en">Current shape of a CBRN contamination.</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" name="contaminationLevel" type="nc1cbrn:RomeoType">
+        <xs:annotation>
+          <xs:documentation>Niveau de la contamination biologique ou chimique correspondant au contour.</xs:documentation>
+          <xs:documentation xml:lang="en">Contamination level for delineated area.</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Niveau de contamination</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">Level of contamination</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="hazardLevel" type="nc1cbrn:HazardLevelType">
+        <xs:annotation>
+          <xs:documentation>Niveau de danger correspondant au contour.</xs:documentation>
+          <xs:documentation xml:lang="en">Hazard level associated to the shape.</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Niveau de danger</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">Hazard level</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element maxOccurs="50" name="hazardAreaPoint" type="nc1location:PointType">
+        <xs:annotation>
+          <xs:documentation>Point de la ligne de contour.</xs:documentation>
+          <xs:documentation xml:lang="en">Edge point.</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Point du contour</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">Edge point</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="XraybType">
+    <xs:annotation>
+      <xs:documentation>Contour calculé d'une contamination NRBC.</xs:documentation>
+      <xs:documentation xml:lang="en">Calculated shape of a CBRN contamination.</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" name="contaminationLevel" type="nc1cbrn:RomeoType">
+        <xs:annotation>
+          <xs:documentation>Niveau de la contamination biologique ou chimique correspondant au contour.</xs:documentation>
+          <xs:documentation xml:lang="en">Contamination level for delineated area.</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Niveau de contamination</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">Level of contamination</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="hazardLevel" type="nc1cbrn:HazardLevelType">
+        <xs:annotation>
+          <xs:documentation>Niveau de danger correspondant au contour.</xs:documentation>
+          <xs:documentation xml:lang="en">Hazard level associated to the shape.</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Niveau de danger</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">Hazard level</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="probability" type="nc1common:RatioType">
+        <xs:annotation>
+          <xs:documentation>Probabilité, associée à la ligne de contour calculée, d'excéder les niveaux de contamination ou de danger.</xs:documentation>
+          <xs:documentation xml:lang="en">Probability in the calculated area outline to exceed contamination or hazard thresholds.</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Probabilité</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">Probability</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element maxOccurs="50" name="hazardAreaPoint" type="nc1location:PointType">
+        <xs:annotation>
+          <xs:documentation>Point de la ligne de contour estimée ou calculée.</xs:documentation>
+          <xs:documentation xml:lang="en">Point of the estimated or calculated outline.</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Point du contour</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">Edge point</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="XraymType">
+    <xs:annotation>
+      <xs:documentation>Météo au sol pour la deuxième période météo de deux heures.</xs:documentation>
+      <xs:documentation xml:lang="en">Ground weather for the 2nd 2 hours weather period.</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="downwindDirection" type="nc1common:AngleType">
+        <xs:annotation>
+          <xs:documentation>Direction où va le vent.</xs:documentation>
+          <xs:documentation xml:lang="en">Wind direction.</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Direction</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">Direction</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="windSpeed" type="nc1common:SpeedType">
+        <xs:annotation>
+          <xs:documentation>Vitesse du vent.</xs:documentation>
+          <xs:documentation xml:lang="en">Wind speed.</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Vitesse</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">Speed</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="airStabilityCategory" type="nc1cbrn:AirStabilityCategoryCode">
+        <xs:annotation>
+          <xs:documentation>Catégorie de stabilité de l'air.</xs:documentation>
+          <xs:documentation xml:lang="en">Air stability category.</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Stabilité de l'air</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">Air stability</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="airTemperature" type="nc1common:IntMinus63To63Type">
+        <xs:annotation>
+          <xs:documentation>Température de l'air au sol (degrés Celsius).</xs:documentation>
+          <xs:documentation xml:lang="en">Air temperature at ground level (degrees Celsius).</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Température</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">Temperature</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="relativeHumidity" type="nc1cbrn:RelativeHumidityRangeCode">
+        <xs:annotation>
+          <xs:documentation>Humidité relative.</xs:documentation>
+          <xs:documentation xml:lang="en">Relative humidity.</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Humidité relative</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">Relative humidity</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="significantWeatherPhenomena" type="nc1cbrn:SignificantWeatherPhenomenaCode">
+        <xs:annotation>
+          <xs:documentation>Phénomène météo significatif.</xs:documentation>
+          <xs:documentation xml:lang="en">Significant meteorological event.</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Phénomène météo</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">Meteorological phenomena</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="cloudCoverage" type="nc1cbrn:CloudCoverageCode">
+        <xs:annotation>
+          <xs:documentation>Couverture nuageuse.</xs:documentation>
+          <xs:documentation xml:lang="en">Cloud cover data.</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Couverture nuageuse</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">Cloud cover data</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="YankeemType">
+    <xs:annotation>
+      <xs:documentation>Météo au sol pour la troisième période météo de deux heures.</xs:documentation>
+      <xs:documentation xml:lang="en">Ground weather for the 3rd 2 hours weather period.</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="downwindDirection" type="nc1common:AngleType">
+        <xs:annotation>
+          <xs:documentation>Direction où va le vent.</xs:documentation>
+          <xs:documentation xml:lang="en">Wind direction.</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Direction</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">Direction</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="windSpeed" type="nc1common:SpeedType">
+        <xs:annotation>
+          <xs:documentation>Vitesse du vent.</xs:documentation>
+          <xs:documentation xml:lang="en">Wind speed.</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Vitesse</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">Speed</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="airStabilityCategory" type="nc1cbrn:AirStabilityCategoryCode">
+        <xs:annotation>
+          <xs:documentation>Catégorie de stabilité de l'air.</xs:documentation>
+          <xs:documentation xml:lang="en">Air stability category.</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Stabilité de l'air</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">Air stability</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="airTemperature" type="nc1common:IntMinus63To63Type">
+        <xs:annotation>
+          <xs:documentation>Température de l'air au sol (degrés Celsius).</xs:documentation>
+          <xs:documentation xml:lang="en">Air temperature at ground level (degrees Celsius).</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Température</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">Temperature</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="relativeHumidity" type="nc1cbrn:RelativeHumidityRangeCode">
+        <xs:annotation>
+          <xs:documentation>Humidité relative.</xs:documentation>
+          <xs:documentation xml:lang="en">Relative humidity.</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Humidité relative</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">Relative humidity</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="significantWeatherPhenomena" type="nc1cbrn:SignificantWeatherPhenomenaCode">
+        <xs:annotation>
+          <xs:documentation>Phénomène météo significatif.</xs:documentation>
+          <xs:documentation xml:lang="en">Significant meteorological event.</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Phénomène météo</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">Meteorological phenomena</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="cloudCoverage" type="nc1cbrn:CloudCoverageCode">
+        <xs:annotation>
+          <xs:documentation>Couverture nuageuse.</xs:documentation>
+          <xs:documentation xml:lang="en">Cloud cover data.</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Couverture nuageuse</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">Cloud cover data</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="YankeeType">
+    <xs:annotation>
+      <xs:documentation>Direction et vitesse du vent.</xs:documentation>
+      <xs:documentation xml:lang="en">Wind direction and speed.</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="downwindDirection" type="nc1common:AngleType">
+        <xs:annotation>
+          <xs:documentation>Direction où va le vent.</xs:documentation>
+          <xs:documentation xml:lang="en">Wind direction.</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Direction</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">Direction</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="windSpeed" type="nc1common:SpeedType">
+        <xs:annotation>
+          <xs:documentation>Vitesse du vent.</xs:documentation>
+          <xs:documentation xml:lang="en">Wind speed.</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Vitesse</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">Speed</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ZulumType">
+    <xs:annotation>
+      <xs:documentation>Horodatage d'observation et période de validité.</xs:documentation>
+      <xs:documentation xml:lang="en">Observation timestamp and period of validity.</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="observationDatetime" type="xs:dateTime">
+        <xs:annotation>
+          <xs:documentation>Horodatage d'observation.</xs:documentation>
+          <xs:documentation xml:lang="en">Sighting time.</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Horodatage d'observation</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">Sighting time</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="validityPeriod" type="nc1common:PeriodType">
+        <xs:annotation>
+          <xs:documentation>Période de validité.</xs:documentation>
+          <xs:documentation xml:lang="en">Validity period.</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Période de validité</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">Validity period</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ZuluType">
+    <xs:annotation>
+      <xs:documentation>Conditions météo mesurées.</xs:documentation>
+      <xs:documentation xml:lang="en">Measured meteorological conditions.</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="airStabilityCategory" type="nc1cbrn:AirStabilityCategoryCode">
+        <xs:annotation>
+          <xs:documentation>Catégorie de stabilité de l'air.</xs:documentation>
+          <xs:documentation xml:lang="en">Air stability category.</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Stabilité de l'air</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">Air stability</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="airTemperature" type="nc1common:IntMinus63To63Type">
+        <xs:annotation>
+          <xs:documentation>Température de l'air au sol (degrés Celsius).</xs:documentation>
+          <xs:documentation xml:lang="en">Air temperature at ground level (degrees Celsius).</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Température</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">Temperature</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="relativeHumidity" type="nc1cbrn:RelativeHumidityRangeCode">
+        <xs:annotation>
+          <xs:documentation>Humidité relative.</xs:documentation>
+          <xs:documentation xml:lang="en">Relative humidity.</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Humidité relative</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">Relative humidity</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="significantWeatherPhenomena" type="nc1cbrn:SignificantWeatherPhenomenaCode">
+        <xs:annotation>
+          <xs:documentation>Phénomène météo significatif.</xs:documentation>
+          <xs:documentation xml:lang="en">Significant meteorological event.</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Phénomène météo</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">Meteorological phenomena</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="cloudCoverage" type="nc1cbrn:CloudCoverageCode">
+        <xs:annotation>
+          <xs:documentation>Couverture nuageuse.</xs:documentation>
+          <xs:documentation xml:lang="en">Cloud cover data.</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Couverture nuageuse</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">Cloud cover data</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

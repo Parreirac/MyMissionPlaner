@@ -1,0 +1,950 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<gc:CodeList xmlns:nc1dico="urn:fra:nc1:dictionnaires" xmlns:gc="http://docs.oasis-open.org/codelist/ns/genericode/1.0/">
+  <Annotation>
+    <Description>
+      <nc1dico:description></nc1dico:description>
+      <nc1dico:description xml:lang="en"></nc1dico:description>
+    </Description>
+    <AppInfo>
+      <nc1dico:source>STAT 295</nc1dico:source>
+      <nc1dico:derogation></nc1dico:derogation>
+    </AppInfo>
+  </Annotation>
+  <Identification>
+    <ShortName>OtherConsumableMaterielTypeSubcategoryCode</ShortName>
+    <Version>9.0.0</Version>
+    <CanonicalUri>urn:fra:nc1:message:helopsum:OtherConsumableMaterielTypeSubcategoryCode</CanonicalUri>
+    <CanonicalVersionUri>urn:fra:nc1:message:helopsum:OtherConsumableMaterielTypeSubcategoryCode:9.0.0</CanonicalVersionUri>
+  </Identification>
+  <ColumnSet DatatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes">
+    <Column Id="code" Use="required">
+      <ShortName>Code</ShortName>
+      <Data Type="int" />
+    </Column>
+    <Column Id="short" Use="required">
+      <ShortName>Short</ShortName>
+      <Data Type="string" />
+    </Column>
+    <Column Id="long" Use="optional">
+      <ShortName>Long</ShortName>
+      <Data Type="string" />
+    </Column>
+    <Column Id="short-en" Use="optional">
+      <ShortName>Short anglais</ShortName>
+      <Data Type="string" />
+    </Column>
+    <Column Id="long-en" Use="optional">
+      <ShortName>Long anglais</ShortName>
+      <Data Type="string" />
+    </Column>
+    <Column Id="parent" Use="optional">
+      <ShortName>Parent</ShortName>
+      <Data Type="int" />
+    </Column>
+    <Column Id="codeSymbole" Use="optional">
+      <ShortName>Code Symbole</ShortName>
+      <Data Type="string" />
+    </Column>
+    <Column Id="codeHierarchique" Use="optional">
+      <ShortName>Code Hierarchique</ShortName>
+      <Data Type="string" />
+    </Column>
+    <Key Id="codeKey">
+      <ShortName>CodeKey</ShortName>
+      <ColumnRef Ref="code" />
+    </Key>
+  </ColumnSet>
+  <SimpleCodeList>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>0</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>BATDWC</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>Battery, dry/wet cell</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>1</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>BLOOD</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>Blood</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>2</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>BNDDR</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>Bandages/dressings</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>3</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>CLTHNG</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>Clothing</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>4</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>COAL</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>Coal</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>5</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>COCANE</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>Cocaine</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>6</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>CRACK</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>Crack</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>7</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>DIESEL</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>Diesel fuel</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>8</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>DOB</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>DOB</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>9</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>ECSMDA</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>Ecstasy - MDA</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>10</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>ECSMDE</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>Ecstasy - MDEA</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>11</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>ECSMDM</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>Ecstasy - MDMA</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>12</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>FULNOS</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>Fuel, not otherwise specified</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>13</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>GHB</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>GHB</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>14</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>HANDBL</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>Handbill</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>15</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>HASHSH</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>Hashish</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>16</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>HASOIL</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>Hashish oil</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>17</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>HEROIN</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>Heroin</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>18</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>KHAT</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>Khat</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>19</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>KTMINE</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>Ketamine</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>20</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>LEAFLT</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>Leaflet</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>21</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>LSD</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>LSD</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>22</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>LTRBMB</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>Letter bomb</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>23</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>LUBRIC</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>Lubricant</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>24</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>MARJUN</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>*</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>25</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>MEDICN</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>Medicine</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>26</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>MORFIN</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>Morphine</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>27</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>MSCLNE</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>Mescaline</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>28</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>MTHAMP</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>Methamphetamine</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>29</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>MURAL</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>Mural</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>30</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>NBCKIT</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>NBC kit</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>31</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>NKN</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>Not known</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>32</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>NWSPPR</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>Newspaper</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>33</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>OIL</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>Oil</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>34</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>OPIUM</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>Opium</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>35</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>PAINT</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>Paint</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>36</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>PAPER</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>Paper</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>37</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>PCP</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>Phencyclidine</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>38</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>PEAT</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>Peat</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>39</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>PETROL</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>Petrol</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>40</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>PMPHLT</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>Pamphlet</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>41</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>RATCO</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>Rations, combat</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>42</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>RATFR</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>Rations, fresh</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>43</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>RATTI</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>Rations, tin</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>44</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>SPRAY</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>Spray (tank)</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>45</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>UNIFRM</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>Uniform</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>46</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>WIRE</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>Wire</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>47</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>WOOD</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>Wood</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>48</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>WTRHUM</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>Water, fit for human consumption</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>49</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>WTRMED</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>Water, fit for medical use</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>50</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>WTROTH</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>Water, neither medical nor human use</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>51</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>AVNFU</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>Aviation fuel</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>52</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>JP4F</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>JP-4 fuel</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>53</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>JP5F</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>JP-5 fuel</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>54</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>JP7F</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>JP-7 fuel</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>55</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>JP8F</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>JP-8 fuel</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>56</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>KEROS</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>Kerosene</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>57</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>NASF18</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>NATO standard fuel code F18</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>58</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>NASF34</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>NATO standard fuel code F34</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>59</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>NASF35</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>NATO standard fuel code F35</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>60</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>NASF40</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>NATO standard fuel code F40</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>61</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>NASF44</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>NATO standard fuel code F44</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>62</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>NASF46</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>NATO standard fuel code F46</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>63</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>NASF54</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>NATO standard fuel code F54</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>64</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>NASF57</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>NATO standard fuel code F57</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>65</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>NASF58</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>NATO standard fuel code F58</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>66</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>NASF62</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>NATO standard fuel code F62</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>67</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>NASF65</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>NATO standard fuel code F65</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>68</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>NASF67</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>NATO standard fuel code F67</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>69</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>BBYTRP</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>Booby trap</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>70</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>BOOK</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>Book</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>71</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>2CB</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>2C-B</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>72</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>AMPHTM</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>Amphetamine</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>73</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>BALNHH</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>Balloon, hand held</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>74</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>LPG</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>Liquefied petroleum gas</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>75</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>MAGZNE</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>Magazine</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>76</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>MATING</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>Matting</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>77</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>PNTBRS</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>Paint brush</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>78</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>POSTER</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>Poster</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>79</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>PSLCYB</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>Psilocybin</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>80</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>REVET</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>Revetting material</SimpleValue>
+      </Value>
+    </Row>
+  </SimpleCodeList>
+</gc:CodeList>

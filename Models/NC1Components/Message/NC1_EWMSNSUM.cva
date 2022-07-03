@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<cva:ContextValueAssociation xmlns:cva="http://docs.oasis-open.org/codelist/ns/ContextValueAssociation/1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="urn:fra:nc1:message:ewmsnsum" queryBinding="xslt2" xmlns:nc1ewmsnsum="urn:fra:nc1:message:ewmsnsum">
+  <!-- NC1 V.9.0.0 -->
+  <ValueLists>
+    <ValueList xml:id="nc1msgcom-ClassificationCode" uri="../Dictionnaires/ClassificationCode.gc" />
+    <ValueList xml:id="nc1msgcom-UrgencyLevelCode" uri="../Dictionnaires/UrgencyLevelCode.gc" />
+    <ValueList xml:id="nc1sicsdicos-L105_2Code" uri="../Dictionnaires/L105_2Code.gc" />
+    <ValueList xml:id="nc1ew-SignalTypeCode" uri="../Dictionnaires/SignalTypeCode.gc" />
+    <ValueList xml:id="nc1ew-RadioRadarFunctionCode" uri="../Dictionnaires/RadioRadarFunctionCode.gc" />
+    <ValueList xml:id="nc1ew-MissionPriorityCode" uri="../Dictionnaires/MissionPriorityCode.gc" />
+    <ValueList xml:id="nc1ew-EcmTypeCode" uri="../Dictionnaires/EcmTypeCode.gc" />
+    <ValueList xml:id="nc1ew-EcmTechniqueCode" uri="../Dictionnaires/EcmTechniqueCode.gc" />
+    <ValueList xml:id="nc1ew-MechanicalJammingTechniqueCode" uri="../Dictionnaires/MechanicalJammingTechniqueCode.gc" />
+  </ValueLists>
+  <Contexts>
+    <Context address="/nc1ewmsnsum:NC1_EWMSNSUM/@classification" values="nc1msgcom-ClassificationCode" />
+    <Context address="/nc1ewmsnsum:NC1_EWMSNSUM/@urgencyLevel" values="nc1msgcom-UrgencyLevelCode" />
+    <Context address="/nc1ewmsnsum:NC1_EWMSNSUM/ewmiss/country" values="nc1sicsdicos-L105_2Code" />
+    <Context address="/nc1ewmsnsum:NC1_EWMSNSUM/_5etginfo/signalType" values="nc1ew-SignalTypeCode" />
+    <Context address="/nc1ewmsnsum:NC1_EWMSNSUM/_5etginfo/radioRadarFunction" values="nc1ew-RadioRadarFunctionCode" />
+    <Context address="/nc1ewmsnsum:NC1_EWMSNSUM/_5ecmact/missionPriority" values="nc1ew-MissionPriorityCode" />
+    <Context address="/nc1ewmsnsum:NC1_EWMSNSUM/_5ecmact/type" values="nc1ew-EcmTypeCode" />
+    <Context address="/nc1ewmsnsum:NC1_EWMSNSUM/_5ecmact/technique" values="nc1ew-EcmTechniqueCode" />
+    <Context address="/nc1ewmsnsum:NC1_EWMSNSUM/_8chaff/mechanicalJammingTechnique" values="nc1ew-MechanicalJammingTechniqueCode" />
+    <Context address="/nc1ewmsnsum:NC1_EWMSNSUM/_8timeloc/country" values="nc1sicsdicos-L105_2Code" />
+  </Contexts>
+</cva:ContextValueAssociation>

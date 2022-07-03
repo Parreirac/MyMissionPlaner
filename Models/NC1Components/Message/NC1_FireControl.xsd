@@ -1,0 +1,108 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema targetNamespace="urn:fra:nc1:message:firecontrol" xmlns:nc1ihm="urn:fra:nc1:IHM" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:nc1firecontrol="urn:fra:nc1:message:firecontrol" xmlns:nc1common="urn:fra:nc1:common:attribute" xmlns:nc1msgcom="urn:fra:nc1:common:message" xmlns:nc1sicsdicos="urn:fra:nc1:common:sicsdicos" xmlns:nc1fire="urn:fra:nc1:objet:fire">
+  <!-- NC1 V.9.0.0 -->
+  <xs:import namespace="urn:fra:nc1:common:attribute" schemaLocation="../Commun/Common.xsd" />
+  <xs:import namespace="urn:fra:nc1:common:message" schemaLocation="../Commun/Message.xsd" />
+  <xs:import namespace="urn:fra:nc1:common:sicsdicos" schemaLocation="../Commun/SICS_Dictionaries.xsd" />
+  <xs:import namespace="urn:fra:nc1:objet:fire" schemaLocation="../Objet/NC1_Fire.xsd" />
+  <xs:element name="NC1_FireControl">
+    <xs:annotation>
+      <xs:documentation>Le message NC1_FireControl est utilisé pour donner une directive de commandement du tir ou donner une directive de contrôle et de fin de tir.</xs:documentation>
+      <xs:documentation xml:lang="en">The NC1_FireControl message is used to give a fire mission command, a fire control command or a end of fire command.</xs:documentation>
+      <xs:appinfo>
+        <nc1:type xmlns:nc1="urn:fra:nc1">Message</nc1:type>
+        <nc1ihm:Nom>Directives de tir</nc1ihm:Nom>
+        <nc1ihm:Nom xml:lang="en">Fire Management / Fire Mission Command</nc1ihm:Nom>
+        <nc1:MessH xmlns:nc1="urn:fra:nc1">N/A</nc1:MessH>
+        <nc1:MessADatP3 xmlns:nc1="urn:fra:nc1">FM.FMC et FM.SUB</nc1:MessADatP3>
+        <nc1:LastNC1ModifyVersion xmlns:nc1="urn:fra:nc1">9.0.0</nc1:LastNC1ModifyVersion>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:complexContent>
+        <xs:extension base="nc1msgcom:BaseMessageType">
+          <xs:sequence>
+            <xs:element name="fireMissionCommand">
+              <xs:annotation>
+                <xs:documentation>Directive de commandement ou de contrôle de tir.</xs:documentation>
+                <xs:documentation xml:lang="en">Fire mission command.</xs:documentation>
+                <xs:appinfo>
+                  <nc1ihm:Nom>Directive</nc1ihm:Nom>
+                  <nc1ihm:Nom xml:lang="en">Directive</nc1ihm:Nom>
+                </xs:appinfo>
+              </xs:annotation>
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="fire" type="nc1fire:FireType">
+                    <xs:annotation>
+                      <xs:documentation>Tir.</xs:documentation>
+                      <xs:documentation xml:lang="en">Fire.</xs:documentation>
+                      <xs:appinfo>
+                        <nc1ihm:Nom>Tir</nc1ihm:Nom>
+                        <nc1ihm:Nom xml:lang="en">Fire</nc1ihm:Nom>
+                      </xs:appinfo>
+                    </xs:annotation>
+                  </xs:element>
+                  <xs:element name="missionCommandType" type="nc1sicsdicos:L114_30Code">
+                    <xs:annotation>
+                      <xs:documentation>Type de directive de tir.</xs:documentation>
+                      <xs:documentation xml:lang="en">Fire command type.</xs:documentation>
+                      <xs:appinfo>
+                        <nc1ihm:Nom>Type de directive</nc1ihm:Nom>
+                        <nc1ihm:Nom xml:lang="en">Mission command type</nc1ihm:Nom>
+                      </xs:appinfo>
+                    </xs:annotation>
+                  </xs:element>
+                  <xs:element minOccurs="0" name="adjustment">
+                    <xs:annotation>
+                      <xs:documentation>Réglage de directive de commandement.</xs:documentation>
+                      <xs:documentation xml:lang="en">Command adjustment.</xs:documentation>
+                      <xs:appinfo>
+                        <nc1ihm:Nom>Réglage</nc1ihm:Nom>
+                        <nc1ihm:Nom xml:lang="en">Adjustment</nc1ihm:Nom>
+                      </xs:appinfo>
+                    </xs:annotation>
+                    <xs:complexType>
+                      <xs:sequence>
+                        <xs:element minOccurs="0" name="NS" type="nc1common:IntMinus999To999Type">
+                          <xs:annotation>
+                            <xs:documentation>Réglage Nord-Sud, par rapport à la dernière directive de commandement (mètres).</xs:documentation>
+                            <xs:documentation xml:lang="en">North-South adjustment with respect to the last command (meters).</xs:documentation>
+                            <xs:appinfo>
+                              <nc1ihm:Nom>Réglage Nord-Sud</nc1ihm:Nom>
+                              <nc1ihm:Nom xml:lang="en">North-South adjustment</nc1ihm:Nom>
+                            </xs:appinfo>
+                          </xs:annotation>
+                        </xs:element>
+                        <xs:element minOccurs="0" name="EW" type="nc1common:IntMinus999To999Type">
+                          <xs:annotation>
+                            <xs:documentation>Réglage Est-Ouest, par rapport à la dernière directive de commandement (mètres).</xs:documentation>
+                            <xs:documentation xml:lang="en">East-West adjustment with respect to the last command (meters).</xs:documentation>
+                            <xs:appinfo>
+                              <nc1ihm:Nom>Réglage Est-Ouest</nc1ihm:Nom>
+                              <nc1ihm:Nom xml:lang="en">East-West adjustment</nc1ihm:Nom>
+                            </xs:appinfo>
+                          </xs:annotation>
+                        </xs:element>
+                        <xs:element minOccurs="0" name="Z" type="nc1common:IntMinus999To999Type">
+                          <xs:annotation>
+                            <xs:documentation>Réglage vertical, par rapport à la dernière directive de commandement (mètres).</xs:documentation>
+                            <xs:documentation xml:lang="en">Vertical adjustment with respect to the last command (meters).</xs:documentation>
+                            <xs:appinfo>
+                              <nc1ihm:Nom>Réglage vertical</nc1ihm:Nom>
+                              <nc1ihm:Nom xml:lang="en">Vertical adjustment</nc1ihm:Nom>
+                            </xs:appinfo>
+                          </xs:annotation>
+                        </xs:element>
+                      </xs:sequence>
+                    </xs:complexType>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+          </xs:sequence>
+        </xs:extension>
+      </xs:complexContent>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

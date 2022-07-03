@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<cva:ContextValueAssociation xmlns:cva="http://docs.oasis-open.org/codelist/ns/ContextValueAssociation/1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="urn:fra:nc1:objet:individual" queryBinding="xslt2" xmlns:nc1individual="urn:fra:nc1:objet:individual">
+  <!-- NC1 V.9.0.0 -->
+  <ValueLists>
+    <ValueList xml:id="nc1objcom-ActivationStatusCode" uri="../Dictionnaires/ActivationStatusCode.gc" />
+    <ValueList xml:id="nc1objcom-IsFullCode" uri="../Dictionnaires/IsFullCode.gc" />
+    <ValueList xml:id="nc1sicsdicos-L112_6Code" uri="../Dictionnaires/L112_6Code.gc" />
+    <ValueList xml:id="nc1sicsdicos-L112_1Code" uri="../Dictionnaires/L112_1Code.gc" />
+    <ValueList xml:id="nc1sicsdicos-L125_1Code" uri="../Dictionnaires/L125_1Code.gc" />
+    <ValueList xml:id="nc1sicsdicos-L104_1Code" uri="../Dictionnaires/L104_1Code.gc" />
+    <ValueList xml:id="nc1sicsdicos-L135_14Code" uri="../Dictionnaires/L135_14Code.gc" />
+    <ValueList xml:id="nc1sicsdicos-L135_15Code" uri="../Dictionnaires/L135_15Code.gc" />
+    <ValueList xml:id="nc1sicsdicos-L112_10Code" uri="../Dictionnaires/L112_10Code.gc" />
+    <ValueList xml:id="nc1sicsdicos-L112_12Code" uri="../Dictionnaires/L112_12Code.gc" />
+    <ValueList xml:id="nc1sicsdicos-L112_17Code" uri="../Dictionnaires/L112_17Code.gc" />
+    <ValueList xml:id="nc1sicsdicos-L112_15Code" uri="../Dictionnaires/L112_15Code.gc" />
+    <ValueList xml:id="nc1sicsdicos-L112_16Code" uri="../Dictionnaires/L112_16Code.gc" />
+    <ValueList xml:id="nc1sicsdicos-L112_13Code" uri="../Dictionnaires/L112_13Code.gc" />
+    <ValueList xml:id="nc1sicsdicos-L112_11Code" uri="../Dictionnaires/L112_11Code.gc" />
+    <ValueList xml:id="nc1sicsdicos-L112_8Code" uri="../Dictionnaires/L112_8Code.gc" />
+    <ValueList xml:id="nc1sicsdicos-L112_3Code" uri="../Dictionnaires/L112_3Code.gc" />
+    <ValueList xml:id="nc1sicsdicos-L121_1Code" uri="../Dictionnaires/L121_1Code.gc" />
+    <ValueList xml:id="nc1sicsdicos-L117_5Code" uri="../Dictionnaires/L117_5Code.gc" />
+  </ValueLists>
+  <Contexts>
+    <Context address="/nc1individual:NC1_Individual/@activationStatus" values="nc1objcom-ActivationStatusCode" />
+    <Context address="/nc1individual:NC1_Individual/@isFull" values="nc1objcom-IsFullCode" />
+    <Context address="/nc1individual:NC1_Individual/tacticalData/attitude" values="nc1sicsdicos-L112_6Code" />
+    <Context address="/nc1individual:NC1_Individual/tacticalData/individualCategory" values="nc1sicsdicos-L112_1Code" />
+    <Context address="/nc1individual:NC1_Individual/tacticalData/operationalStatusIndicator" values="nc1sicsdicos-L125_1Code" />
+    <Context address="/nc1individual:NC1_Individual/tacticalData/membersCount" values="nc1sicsdicos-L104_1Code" />
+    <Context address="/nc1individual:NC1_Individual/tacticalData/reliability" values="nc1sicsdicos-L135_14Code" />
+    <Context address="/nc1individual:NC1_Individual/tacticalData/credibility" values="nc1sicsdicos-L135_15Code" />
+    <Context address="/nc1individual:NC1_Individual/generalData/rank" values="nc1sicsdicos-L112_10Code" />
+    <Context address="/nc1individual:NC1_Individual/generalData/gender" values="nc1sicsdicos-L112_12Code" />
+    <Context address="/nc1individual:NC1_Individual/generalData/religion" values="nc1sicsdicos-L112_17Code" />
+    <Context address="/nc1individual:NC1_Individual/physicalCharacteristics/eyesColour" values="nc1sicsdicos-L112_15Code" />
+    <Context address="/nc1individual:NC1_Individual/physicalCharacteristics/hairColour" values="nc1sicsdicos-L112_16Code" />
+    <Context address="/nc1individual:NC1_Individual/physicalCharacteristics/bloodType" values="nc1sicsdicos-L112_13Code" />
+    <Context address="/nc1individual:NC1_Individual/administrativeProperties/maritalStatus" values="nc1sicsdicos-L112_11Code" />
+    <Context address="/nc1individual:NC1_Individual/administrativeProperties/category" values="nc1sicsdicos-L112_8Code" />
+    <Context address="/nc1individual:NC1_Individual/administrativeProperties/militaryCategory" values="nc1sicsdicos-L112_3Code" />
+    <Context address="/nc1individual:NC1_Individual/location/approximateSpeed" values="nc1sicsdicos-L121_1Code" />
+    <Context address="/nc1individual:NC1_Individual/location/quality" values="nc1sicsdicos-L117_5Code" />
+  </Contexts>
+</cva:ContextValueAssociation>

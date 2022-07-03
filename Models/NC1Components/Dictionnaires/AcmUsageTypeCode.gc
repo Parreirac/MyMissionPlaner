@@ -1,0 +1,1346 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<gc:CodeList xmlns:nc1dico="urn:fra:nc1:dictionnaires" xmlns:gc="http://docs.oasis-open.org/codelist/ns/genericode/1.0/">
+  <Annotation>
+    <Description>
+      <nc1dico:description></nc1dico:description>
+      <nc1dico:description xml:lang="en"></nc1dico:description>
+    </Description>
+    <AppInfo>
+      <nc1dico:source>AdatP-3 BL11 1389/003</nc1dico:source>
+      <nc1dico:derogation></nc1dico:derogation>
+    </AppInfo>
+  </Annotation>
+  <Identification>
+    <ShortName>AcmUsageTypeCode</ShortName>
+    <Version>9.0.0</Version>
+    <CanonicalUri>urn:fra:nc1:objet:acm:AcmUsageTypeCode</CanonicalUri>
+    <CanonicalVersionUri>urn:fra:nc1:objet:acm:AcmUsageTypeCode:9.0.0</CanonicalVersionUri>
+  </Identification>
+  <ColumnSet DatatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes">
+    <Column Id="code" Use="required">
+      <ShortName>Code</ShortName>
+      <Data Type="int" />
+    </Column>
+    <Column Id="short" Use="required">
+      <ShortName>Short</ShortName>
+      <Data Type="string" />
+    </Column>
+    <Column Id="long" Use="optional">
+      <ShortName>Long</ShortName>
+      <Data Type="string" />
+    </Column>
+    <Column Id="short-en" Use="optional">
+      <ShortName>Short anglais</ShortName>
+      <Data Type="string" />
+    </Column>
+    <Column Id="long-en" Use="optional">
+      <ShortName>Long anglais</ShortName>
+      <Data Type="string" />
+    </Column>
+    <Column Id="parent" Use="optional">
+      <ShortName>Parent</ShortName>
+      <Data Type="int" />
+    </Column>
+    <Column Id="codeSymbole" Use="optional">
+      <ShortName>Code Symbole</ShortName>
+      <Data Type="string" />
+    </Column>
+    <Column Id="codeHierarchique" Use="optional">
+      <ShortName>Code Hierarchique</ShortName>
+      <Data Type="string" />
+    </Column>
+    <Key Id="codeKey">
+      <ShortName>CodeKey</ShortName>
+      <ColumnRef Ref="code" />
+    </Key>
+  </ColumnSet>
+  <SimpleCodeList>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>0</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>ARWY</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>AIRWAY</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>1</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>ADVRTE</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>ADVISORY ROUTE</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>2</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>CL</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>COORDINATION LEVEL</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>3</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>SC</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>SPECIAL CORRIDOR</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>4</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>TCA</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>TERMINAL CONTROL AREA</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>5</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>TL</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>TRAVERSE LEVEL</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>6</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>TRNG</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>TRAINING AREA</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>7</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>TRSA</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>TERMINAL RADAR SERVICE AREA</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>8</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>UAV</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>UNMANNED AERIAL VEHICLE</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>9</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>WARN</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>WARNING AREA</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>10</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>WFZ</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>WEAPONS FREE ZONE</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>11</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>TMRR</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>TEMPORARY MINIMUM RISK ROUTE</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>12</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>BDZ</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>BASE DEFENCE ZONE</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>13</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>BNDRY</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>BOUNDARY</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>14</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>BULL</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>BULL'S-EYE</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>15</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>BZ</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>BUFFER ZONE</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>16</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>CADA</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>COORDINATED AIR DEFENCE AREA</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>17</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>CAP</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>COMBAT AIR PATROL</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>18</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>CAS</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>CLOSE AIR SUPPORT HOLDING AREA</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>19</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>CCZONE</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>CARRIER CONTROL ZONE</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>20</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>CFL</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>COORDINATED FIRE LINE</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>21</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>CLSA</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>CLASS-A AIRSPACE</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>22</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>CLSB</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>CLASS-B AIRSPACE</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>23</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>CLSC</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>CLASS-C AIRSPACE</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>24</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>CLSD</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>CLASS-D AIRSPACE</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>25</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>CLSE</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>CLASS-E AIRSPACE</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>26</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>COZ</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>CROSSOVER ZONE</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>27</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>CP</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>CONTACT POINT</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>28</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>DBSL</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>DEEP BATTLE SYNCHRONIZATION LINE</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>29</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>DA</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>DANGER AREA</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>30</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>DZ</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>DROP ZONE</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>31</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>EC</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>ELECTRONIC COMBAT</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>32</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>EG</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>ENTRY/EXIT GATE</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>33</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>FARP</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>FORWARD ARMING AND REFUELLING POINT</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>34</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>FEBA</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>FORWARD EDGE OF THE BATTLE AREA</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>35</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>MFEZ</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>MARITIME FIGHTER ENGAGEMENT ZONE</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>36</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>FFA</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>FREE FIRE AREA</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>37</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>FIR</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>FLIGHT INFORMATION REGION</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>38</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>FIRUB</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>FIRE UMBRELLA</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>39</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>FLOT</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>FORWARD LINE OF OWN TROOPS</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>40</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>FOL</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>FORWARD OPERATING LOCATION</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>41</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>FRAD</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>FALCON RADIALS</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>42</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>FSCL</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>FIRE SUPPORT COORDINATION LINE</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>43</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>FACA</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>FORCE AIR COORDINATION AREA</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>44</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>HG</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>HAND OVER GATE</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>45</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>LFEZ</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>LAND FIGHTER ENGAGEMENT ZONE</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>46</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>HIDACZ</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>HIGH-DENSITY AIRSPACE CONTROL ZONE</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>47</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>HIMEZ</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>HIGH-ALTITUDE MISSILE ENGAGEMENT ZONE</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>48</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>IFFOFF</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>IFF SWITCH OFF LINE</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>49</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>IFFON</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>IFF SWITCH ON LINE</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>50</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>ISP</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>IDENTIFICATION SAFETY POINT</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>51</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>ISR</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>IDENTIFICATION SAFETY RANGE</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>52</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>JEZ</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>JOINT ENGAGEMENT ZONE</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>53</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>JOA</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>JOINT OPERATIONS AREA</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>54</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>LOMEZ</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>LOW-ALTITUDE ENGAGEMENT ZONE</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>55</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>LZ</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>LANDING ZONE</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>56</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>MMEZ</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>MARITIME MISSILE ENGAGEMENT ZONE</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>57</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>MG</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>MARSHALLING GATE</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>58</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>MOA</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>MILITARY OPERATIONS AREA</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>59</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>MRR</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>MINIMUM RISK ROUTE</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>60</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>MISARC</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>MISSILE ARC</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>61</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>NFA</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>NO FIRE AREA</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>62</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>NOFLY</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>NO FLY ZONE</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>63</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>PIRAZ</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>POSITIVE IDENTIFICATION RADAR ADVISORY ZONE</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>64</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>PROHIB</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>PROHIBITED AREA</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>65</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>PZ</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>PICKUP ZONE</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>66</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>RECCE</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>RECONNAISSANCE AREA</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>67</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>RA</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>RESTRICTED AREA</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>68</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>RFA</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>RESTRICTED FIRE AREA</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>69</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>RFL</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>RESTRICTED FIRE LINE</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>70</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>ROA</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>RESTRICTED OPERATIONS AREA</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>71</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>RTF</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>RETURN TO FORCE</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>72</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>SAAFR</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>STANDARD USE ARMY AIRCRAFT FLIGHT ROUTE</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>73</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>SAFE</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>SAFE AREA FOR EVASION</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>74</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>SAFES</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>SAFETY SECTOR</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>75</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>SARDOT</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>SEARCH AND RESCUE POINT</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>76</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>SCZ</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>SHIP CONTROL ZONE</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>77</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>SEMA</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>SPECIAL ELECTRONIC MISSION AREA</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>78</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>SHORAD</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>SHORT RANGE AIR DEFENCE ENGAGEMENT ZONE</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>79</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>SL</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>SAFE LANE</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>80</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>SOF</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>SPECIAL OPERATIONS FORCES</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>81</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>SSMS</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>SURFACE-TO-SURFACE MISSILE SYSTEM</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>82</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>TC</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>TRANSIT CORRIDOR</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>83</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>TR</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>TRANSIT ROUTE</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>84</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>AIRCOR</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>AIR CORRIDOR</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>85</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>AAR</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>AIR-TO-AIR REFUELLING</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>86</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>ABC</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>AIRBORNE COMMAND AND CONTROL</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>87</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>ACA</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>AIRSPACE COORDINATION AREA</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>88</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>ASCA</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>AIRSPACE CONTROL AREA</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>89</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>ACSS</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>AIRSPACE CONTROL SUBAREA/SECTOR</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>90</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>ACP</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>AIR CONTROL POINT</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>91</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>ADAA</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>AIR DEFENCE ACTION AREA</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>92</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>ADIZ</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>AIR DEFENCE IDENTIFICATION ZONE</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>93</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>ADZ</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>AMPHIBIOUS DEFENCE ZONE</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>94</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>AEW</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>AIRBORNE EARLY WARNING</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>95</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>ALERTA</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>ALERT AREA</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>96</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>ALTRV</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>ALTITUDE RESERVATION</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>97</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>AOA</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>AMPHIBIOUS OBJECTIVE AREA</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>98</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>APPCOR</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>APPROACH CORRIDOR</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>99</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>AIRRTE</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>AIR ROUTE</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>100</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>NAVRTE</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>AREA NAVIGATION ROUTE</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>101</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>ATSRTE</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>ATS ROUTE</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>102</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>CLSF</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>CLASS-F AIRSPACE</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>103</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>CLSG</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>CLASS-G AIRSPACE</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>104</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>CDR</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>CONDITIONAL ROUTE</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>105</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>CTA</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>CONTROL AREA</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>106</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>CONTZN</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>CONTROL ZONE</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>107</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>CBA</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>CROSS-BORDER AREA</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>108</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>RCA</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>REDUCED CO-ORDINATION</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>109</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>TSA</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>TEMPORARY SEGREGATED AREA</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>110</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>LMEZ</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>LAND MISSILE ENGAGEMENT ZONE</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>111</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>FEZ</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>FIGHTER ENGAGEMENT ZONE</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>112</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>MEZ</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>MISSILE ENGAGEMENT ZONE</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>113</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>FAOR</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>FIGHTER AREA OF RESPONSIBILITY</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>114</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>SHORADEZ</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>SHORAD ENGAGEMENT ZONE</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>115</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>KILLBOX</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>KILL BOX</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="code">
+        <SimpleValue>116</SimpleValue>
+      </Value>
+      <Value ColumnRef="short">
+        <SimpleValue>MP</SimpleValue>
+      </Value>
+      <Value ColumnRef="long">
+        <SimpleValue>MARSHALL POINT</SimpleValue>
+      </Value>
+    </Row>
+  </SimpleCodeList>
+</gc:CodeList>

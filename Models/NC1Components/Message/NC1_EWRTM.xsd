@@ -1,0 +1,167 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema targetNamespace="urn:fra:nc1:message:ewrtm" xmlns:nc1ihm="urn:fra:nc1:IHM" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:nc1ewrtm="urn:fra:nc1:message:ewrtm" xmlns:nc1ew="urn:fra:nc1:common:ew" xmlns:nc1msgcom="urn:fra:nc1:common:message" xmlns:nc1unit="urn:fra:nc1:objet:unit">
+  <!-- NC1 V.9.0.0 -->
+  <xs:import namespace="urn:fra:nc1:common:ew" schemaLocation="../Commun/Ew.xsd" />
+  <xs:import namespace="urn:fra:nc1:common:message" schemaLocation="../Commun/Message.xsd" />
+  <xs:import namespace="urn:fra:nc1:objet:unit" schemaLocation="../Objet/NC1_Unit.xsd" />
+  <xs:element name="NC1_EWRTM">
+    <xs:annotation>
+      <xs:documentation>Le message NC1_EWRTM est utilisé pour diffuser les activités de contre-mesures électroniques et d'appui de guerre électronique.</xs:documentation>
+      <xs:documentation xml:lang="en">The NC1_EWRTM message is used to provide electronic counter-measures and EW support activities.</xs:documentation>
+      <xs:appinfo>
+        <nc1:type xmlns:nc1="urn:fra:nc1">Message</nc1:type>
+        <nc1ihm:Nom>Activités d'appui de guerre électronique</nc1ihm:Nom>
+        <nc1ihm:Nom xml:lang="en">Electronic warfare requesting tasking message</nc1ihm:Nom>
+        <nc1:MessH xmlns:nc1="urn:fra:nc1">N/A</nc1:MessH>
+        <nc1:MessADatP3 xmlns:nc1="urn:fra:nc1">EWRTM</nc1:MessADatP3>
+        <nc1:LastNC1ModifyVersion xmlns:nc1="urn:fra:nc1">9.0.0</nc1:LastNC1ModifyVersion>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:complexContent>
+        <xs:extension base="nc1msgcom:BaseMessageType">
+          <xs:sequence>
+            <xs:element minOccurs="0" name="taskedUnit" type="nc1unit:UnitType">
+              <xs:annotation>
+                <xs:documentation>Unité désignée pour réaliser la ou les activités d'appui de guerre électronique.</xs:documentation>
+                <xs:documentation xml:lang="en">Tasked unit for EW support.</xs:documentation>
+                <xs:appinfo>
+                  <nc1ihm:Nom>Unité désignée</nc1ihm:Nom>
+                  <nc1ihm:Nom xml:lang="en">Tasked unit</nc1ihm:Nom>
+                </xs:appinfo>
+              </xs:annotation>
+            </xs:element>
+            <xs:element maxOccurs="unbounded" name="ecmTargetInformation">
+              <xs:annotation>
+                <xs:documentation>Cible de contre-mesures électroniques.</xs:documentation>
+                <xs:documentation xml:lang="en">ECM target.</xs:documentation>
+                <xs:appinfo>
+                  <nc1ihm:Nom>Cible de contre-mesures</nc1ihm:Nom>
+                  <nc1ihm:Nom xml:lang="en">ECM target</nc1ihm:Nom>
+                </xs:appinfo>
+              </xs:annotation>
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element maxOccurs="unbounded" name="ecmtgt" type="nc1ew:EcmtgtType">
+                    <xs:annotation>
+                      <xs:documentation>Informations sur la cible de contre-mesures électroniques.</xs:documentation>
+                      <xs:documentation xml:lang="en">ECM target information.</xs:documentation>
+                      <xs:appinfo>
+                        <nc1ihm:Nom>Informations</nc1ihm:Nom>
+                        <nc1ihm:Nom xml:lang="en">Information</nc1ihm:Nom>
+                      </xs:appinfo>
+                    </xs:annotation>
+                  </xs:element>
+                  <xs:element maxOccurs="unbounded" minOccurs="0" name="_5etginfo" type="nc1ew:_5etginfoType">
+                    <xs:annotation>
+                      <xs:documentation>Informations sur la station émettrice cible.</xs:documentation>
+                      <xs:documentation xml:lang="en">Information on the target transmitting station.</xs:documentation>
+                      <xs:appinfo>
+                        <nc1ihm:Nom>Station émettrice</nc1ihm:Nom>
+                        <nc1ihm:Nom xml:lang="en">Emitting station</nc1ihm:Nom>
+                      </xs:appinfo>
+                    </xs:annotation>
+                  </xs:element>
+                  <xs:element maxOccurs="unbounded" minOccurs="0" name="_5ecmact" type="nc1ew:_5ecmactType">
+                    <xs:annotation>
+                      <xs:documentation>Activité de contre-mesures électroniques à mener.</xs:documentation>
+                      <xs:documentation xml:lang="en">ECM activity.</xs:documentation>
+                      <xs:appinfo>
+                        <nc1ihm:Nom>Activité</nc1ihm:Nom>
+                        <nc1ihm:Nom xml:lang="en">Activity</nc1ihm:Nom>
+                      </xs:appinfo>
+                    </xs:annotation>
+                  </xs:element>
+                  <xs:element maxOccurs="unbounded" minOccurs="0" name="_5etgfreq" type="nc1ew:_5etgfreqType">
+                    <xs:annotation>
+                      <xs:documentation>Caractéristiques des fréquences de la cible.</xs:documentation>
+                      <xs:documentation xml:lang="en">Target frequencies characteristics.</xs:documentation>
+                      <xs:appinfo>
+                        <nc1ihm:Nom>Fréquences</nc1ihm:Nom>
+                        <nc1ihm:Nom xml:lang="en">Frequencies</nc1ihm:Nom>
+                      </xs:appinfo>
+                    </xs:annotation>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element maxOccurs="unbounded" name="esmTargetInformation">
+              <xs:annotation>
+                <xs:documentation>Cible d'appui de guerre électronique.</xs:documentation>
+                <xs:documentation xml:lang="en">ESM target.</xs:documentation>
+                <xs:appinfo>
+                  <nc1ihm:Nom>Cible d'appui GE</nc1ihm:Nom>
+                  <nc1ihm:Nom xml:lang="en">ESM target</nc1ihm:Nom>
+                </xs:appinfo>
+              </xs:annotation>
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element maxOccurs="unbounded" name="esmtgt" type="nc1ew:EsmtgtType">
+                    <xs:annotation>
+                      <xs:documentation>Informations sur la cible d'appui de guerre électronique.</xs:documentation>
+                      <xs:documentation xml:lang="en">ESM target information.</xs:documentation>
+                      <xs:appinfo>
+                        <nc1ihm:Nom>Informations</nc1ihm:Nom>
+                        <nc1ihm:Nom xml:lang="en">Information</nc1ihm:Nom>
+                      </xs:appinfo>
+                    </xs:annotation>
+                  </xs:element>
+                  <xs:element maxOccurs="unbounded" minOccurs="0" name="_5etginfo" type="nc1ew:_5etginfoType">
+                    <xs:annotation>
+                      <xs:documentation>Informations sur la station émettrice cible.</xs:documentation>
+                      <xs:documentation xml:lang="en">Information on the target transmitting station.</xs:documentation>
+                      <xs:appinfo>
+                        <nc1ihm:Nom>Station émettrice</nc1ihm:Nom>
+                        <nc1ihm:Nom xml:lang="en">Emitting station</nc1ihm:Nom>
+                      </xs:appinfo>
+                    </xs:annotation>
+                  </xs:element>
+                  <xs:element maxOccurs="unbounded" minOccurs="0" name="_5etgfreq" type="nc1ew:_5etgfreqType">
+                    <xs:annotation>
+                      <xs:documentation>Caractéristiques des fréquences de la cible.</xs:documentation>
+                      <xs:documentation xml:lang="en">Target frequencies characteristics.</xs:documentation>
+                      <xs:appinfo>
+                        <nc1ihm:Nom>Fréquences</nc1ihm:Nom>
+                        <nc1ihm:Nom xml:lang="en">Frequencies</nc1ihm:Nom>
+                      </xs:appinfo>
+                    </xs:annotation>
+                  </xs:element>
+                  <xs:element maxOccurs="unbounded" minOccurs="0" name="_5esmact" type="nc1ew:_5esmactType">
+                    <xs:annotation>
+                      <xs:documentation>Activité d'appui de guerre électronique.</xs:documentation>
+                      <xs:documentation xml:lang="en">EW support activity.</xs:documentation>
+                      <xs:appinfo>
+                        <nc1ihm:Nom>Activité</nc1ihm:Nom>
+                        <nc1ihm:Nom xml:lang="en">Activity</nc1ihm:Nom>
+                      </xs:appinfo>
+                    </xs:annotation>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element maxOccurs="unbounded" minOccurs="0" name="_8chaff" type="nc1ew:_8ChaffType">
+              <xs:annotation>
+                <xs:documentation>Données caractérisant la mission chaff.</xs:documentation>
+                <xs:documentation xml:lang="en">Chaff mission data.</xs:documentation>
+                <xs:appinfo>
+                  <nc1ihm:Nom>Mission chaff</nc1ihm:Nom>
+                  <nc1ihm:Nom xml:lang="en">Chaff jamming mission</nc1ihm:Nom>
+                </xs:appinfo>
+              </xs:annotation>
+            </xs:element>
+            <xs:element maxOccurs="unbounded" minOccurs="0" name="_8timeloc" type="nc1ew:_8timelocType">
+              <xs:annotation>
+                <xs:documentation>Horodatage et localisation de la mission chaff.</xs:documentation>
+                <xs:documentation xml:lang="en">Timestamp and location of the chaff Mission.</xs:documentation>
+                <xs:appinfo>
+                  <nc1ihm:Nom>Horodatage et localisation</nc1ihm:Nom>
+                  <nc1ihm:Nom xml:lang="en">Datetime and location</nc1ihm:Nom>
+                </xs:appinfo>
+              </xs:annotation>
+            </xs:element>
+          </xs:sequence>
+        </xs:extension>
+      </xs:complexContent>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

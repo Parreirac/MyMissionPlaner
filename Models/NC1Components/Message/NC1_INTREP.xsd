@@ -1,0 +1,112 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema targetNamespace="urn:fra:nc1:message:intrep" xmlns:nc1ihm="urn:fra:nc1:IHM" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:nc1intrep="urn:fra:nc1:message:intrep" xmlns:nc1common="urn:fra:nc1:common:attribute" xmlns:nc1msgcom="urn:fra:nc1:common:message">
+  <!-- NC1 V.9.0.0 -->
+  <xs:import namespace="urn:fra:nc1:common:attribute" schemaLocation="../Commun/Common.xsd" />
+  <xs:import namespace="urn:fra:nc1:common:message" schemaLocation="../Commun/Message.xsd" />
+  <xs:element name="NC1_INTREP">
+    <xs:annotation>
+      <xs:documentation>Le message NC1_INTREP est utilisé pour la diffusion immédiate d’une information clé de renseignement qui peut avoir un impact significatif sur les opérations actuelles et futures.</xs:documentation>
+      <xs:documentation xml:lang="en">The NC1_INTREP message is used for the immediate release of a key intelligence information which may have a significant impact on current and future operations.</xs:documentation>
+      <xs:appinfo>
+        <nc1:type xmlns:nc1="urn:fra:nc1">Message</nc1:type>
+        <nc1ihm:Nom>Compte rendu de renseignement</nc1ihm:Nom>
+        <nc1ihm:Nom xml:lang="en">Intelligence Report</nc1ihm:Nom>
+        <nc1:MessH xmlns:nc1="urn:fra:nc1">N/A</nc1:MessH>
+        <nc1:MessADatP3 xmlns:nc1="urn:fra:nc1">INTREP et CIINTREP</nc1:MessADatP3>
+        <nc1:LastNC1ModifyVersion xmlns:nc1="urn:fra:nc1">9.0.0</nc1:LastNC1ModifyVersion>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:complexContent>
+        <xs:extension base="nc1msgcom:BaseMessageType">
+          <xs:sequence>
+            <xs:element name="intelligenceReport">
+              <xs:annotation>
+                <xs:documentation>Compte-rendu de renseignement.</xs:documentation>
+                <xs:documentation xml:lang="en">Intelligence report.</xs:documentation>
+                <xs:appinfo>
+                  <nc1ihm:Nom>CR de renseignement</nc1ihm:Nom>
+                  <nc1ihm:Nom xml:lang="en">Intelligence report</nc1ihm:Nom>
+                </xs:appinfo>
+              </xs:annotation>
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="type" type="nc1intrep:IntrepTypeCode">
+                    <xs:annotation>
+                      <xs:documentation>Compte rendu de renseignement ou de contre-ingérence.</xs:documentation>
+                      <xs:documentation xml:lang="en">Free test description of the type of airspace area.</xs:documentation>
+                      <xs:appinfo>
+                        <nc1ihm:Nom>Type de compte rendu</nc1ihm:Nom>
+                        <nc1ihm:Nom xml:lang="en">Type of report</nc1ihm:Nom>
+                      </xs:appinfo>
+                    </xs:annotation>
+                  </xs:element>
+                  <xs:element minOccurs="0" name="category" type="nc1intrep:IntrepCategoryCode">
+                    <xs:annotation>
+                      <xs:documentation>Catégorie de compte rendu (ex : « ESPIO »).</xs:documentation>
+                      <xs:documentation xml:lang="en">"Type of chemical or biological event (e.g. ""BIOATT"")".</xs:documentation>
+                      <xs:appinfo>
+                        <nc1ihm:Nom>Catégorie de compte rendu</nc1ihm:Nom>
+                        <nc1ihm:Nom xml:lang="en">Category of report</nc1ihm:Nom>
+                      </xs:appinfo>
+                    </xs:annotation>
+                  </xs:element>
+                  <xs:element name="report" type="nc1msgcom:MixedAnyType">
+                    <xs:annotation>
+                      <xs:documentation>Compte rendu.</xs:documentation>
+                      <xs:documentation xml:lang="en">Report.</xs:documentation>
+                      <xs:appinfo>
+                        <nc1ihm:Nom>Compte rendu</nc1ihm:Nom>
+                        <nc1ihm:Nom xml:lang="en">Report</nc1ihm:Nom>
+                      </xs:appinfo>
+                    </xs:annotation>
+                  </xs:element>
+                  <xs:element minOccurs="0" name="assessment" type="nc1common:WideTextType">
+                    <xs:annotation>
+                      <xs:documentation>Avis ou estimation de l’impact du sujet du compte-rendu sur la manoeuvre courante ou planifiée.</xs:documentation>
+                      <xs:documentation xml:lang="en">Opinion or assessment of the impact of the report's subject on the current or planned manoeuvre.</xs:documentation>
+                      <xs:appinfo>
+                        <nc1ihm:Nom>Avis</nc1ihm:Nom>
+                        <nc1ihm:Nom xml:lang="en">Opinion</nc1ihm:Nom>
+                      </xs:appinfo>
+                    </xs:annotation>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element minOccurs="0" name="comment" type="nc1msgcom:CommentSectionType">
+              <xs:annotation>
+                <xs:documentation>Commentaire en texte libre.</xs:documentation>
+                <xs:documentation xml:lang="en">free text comment.</xs:documentation>
+                <xs:appinfo>
+                  <nc1ihm:Nom>Commentaire</nc1ihm:Nom>
+                  <nc1ihm:Nom xml:lang="en">comment</nc1ihm:Nom>
+                </xs:appinfo>
+              </xs:annotation>
+            </xs:element>
+          </xs:sequence>
+        </xs:extension>
+      </xs:complexContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:simpleType name="IntrepCategoryCode">
+    <xs:annotation>
+      <xs:appinfo>
+        <nc1dico:source xmlns:nc1dico="urn:fra:nc1:dictionnaires">ADatP-3 BL14 dictionnaire 1343/7</nc1dico:source>
+      </xs:appinfo>
+      <xs:documentation></xs:documentation>
+      <xs:documentation xml:lang="en"></xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:integer" />
+  </xs:simpleType>
+  <xs:simpleType name="IntrepTypeCode">
+    <xs:annotation>
+      <xs:appinfo>
+        <nc1dico:source xmlns:nc1dico="urn:fra:nc1:dictionnaires">NC1</nc1dico:source>
+      </xs:appinfo>
+      <xs:documentation></xs:documentation>
+      <xs:documentation xml:lang="en"></xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:integer" />
+  </xs:simpleType>
+</xs:schema>

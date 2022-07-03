@@ -1,0 +1,693 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema targetNamespace="urn:fra:nc1:objet:convoy" xmlns:nc1ihm="urn:fra:nc1:IHM" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:nc1convoy="urn:fra:nc1:objet:convoy" xmlns:nc1common="urn:fra:nc1:common:attribute" xmlns:nc1com="urn:fra:nc1:common:communication" xmlns:nc1location="urn:fra:nc1:common:location" xmlns:nc1objcom="urn:fra:nc1:common:object" xmlns:nc1sicsdicos="urn:fra:nc1:common:sicsdicos">
+  <!-- NC1 V.9.0.0 -->
+  <xs:import namespace="urn:fra:nc1:common:attribute" schemaLocation="../Commun/Common.xsd" />
+  <xs:import namespace="urn:fra:nc1:common:communication" schemaLocation="../Commun/Communication.xsd" />
+  <xs:import namespace="urn:fra:nc1:common:location" schemaLocation="../Commun/Location.xsd" />
+  <xs:import namespace="urn:fra:nc1:common:object" schemaLocation="../Commun/Object.xsd" />
+  <xs:import namespace="urn:fra:nc1:common:sicsdicos" schemaLocation="../Commun/SICS_Dictionaries.xsd" />
+  <xs:element name="NC1_Convoy" type="nc1convoy:ConvoyType">
+    <xs:annotation>
+      <xs:documentation>L’objet NC1_Convoy décrit un ensemble de véhicules :
+•	avec ou sans escorte,
+•	sous les ordres d’un même chef,
+•	comportant une ou plusieurs rames,
+•	effectuant un mouvement donné.
+</xs:documentation>
+      <xs:appinfo>
+        <nc1:type xmlns:nc1="urn:fra:nc1">Objet</nc1:type>
+        <nc1ihm:Nom>Convoi</nc1ihm:Nom>
+        <nc1ihm:Nom xml:lang="en">Convoy</nc1ihm:Nom>
+        <nc1:MessH xmlns:nc1="urn:fra:nc1">N/A</nc1:MessH>
+        <nc1:MessADatP3 xmlns:nc1="urn:fra:nc1">MCHDETCR, VEHTECH et RDMOVGEN</nc1:MessADatP3>
+        <nc1:LastNC1ModifyVersion xmlns:nc1="urn:fra:nc1">9.0.0</nc1:LastNC1ModifyVersion>
+      </xs:appinfo>
+    </xs:annotation>
+  </xs:element>
+  <xs:simpleType name="ConvoyStatusCode">
+    <xs:annotation>
+      <xs:appinfo>
+        <nc1dico:source xmlns:nc1dico="urn:fra:nc1:dictionnaires">STAT dictionnaire  111, avec la valeur "HALTE" rajoutée pour le besoin de NC1.</nc1dico:source>
+        <nc1ihm:description>Dictionnaire des états d'avancement d'un convoi.</nc1ihm:description>
+        <nc1ihm:description xml:lang="en">Dictionary of the states of advancement of a convoy.</nc1ihm:description>
+      </xs:appinfo>
+      <xs:documentation>Dictionnaire des états d'avancement d'un convoi.</xs:documentation>
+      <xs:documentation xml:lang="en">Dictionary of the states of advancement of a convoy.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:integer" />
+  </xs:simpleType>
+  <xs:complexType name="ConvoyType">
+    <xs:annotation>
+      <xs:documentation>L’objet NC1_CONVOY décrit un ensemble de véhicules effectuant un mouvement donné.</xs:documentation>
+      <xs:documentation xml:lang="en">The NC1_CONVOY object describes a group of vehicles performing a given movement.</xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="nc1objcom:PhysicalObjectType">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="tacticalData">
+            <xs:annotation>
+              <xs:documentation>Données tactiques du convoi.</xs:documentation>
+              <xs:documentation xml:lang="en">Convoy tactical data.</xs:documentation>
+              <xs:appinfo>
+                <nc1ihm:Nom>Données tactiques</nc1ihm:Nom>
+                <nc1ihm:Nom xml:lang="en">tactical datas</nc1ihm:Nom>
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element minOccurs="0" name="name" type="nc1common:ShortTextObjectType">
+                  <xs:annotation>
+                    <xs:documentation>Nom du convoi affiché sur la cartographie.</xs:documentation>
+                    <xs:documentation xml:lang="en">Convoy displayed name.</xs:documentation>
+                    <xs:appinfo>
+                      <nc1ihm:Nom>Nom</nc1ihm:Nom>
+                      <nc1ihm:Nom xml:lang="en">name</nc1ihm:Nom>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:element>
+                <xs:element name="symbolCode" type="nc1common:SymbolCodeType">
+                  <xs:annotation>
+                    <xs:documentation>Code contenant les informations de symbologie, d'identité (AMI, ENI, etc.), de nationalité, d'état de planification.</xs:documentation>
+                    <xs:documentation xml:lang="en">Code specifying information about symbology, identity (Friend, enemy, …), nationality, planification status.</xs:documentation>
+                    <xs:appinfo>
+                      <nc1ihm:Nom>Code du symbole</nc1ihm:Nom>
+                      <nc1ihm:Nom xml:lang="en">Symbol code</nc1ihm:Nom>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:element>
+                <xs:element minOccurs="0" name="type" type="nc1common:ShortTextObjectType">
+                  <xs:annotation>
+                    <xs:documentation>Description en texte libre du type de convoi (ex : « ROUTE »).</xs:documentation>
+                    <xs:documentation xml:lang="en">"Free text description of the type of convoy (e.g. ""ROUTE"")".</xs:documentation>
+                    <xs:appinfo>
+                      <nc1ihm:Nom>Type de convoi</nc1ihm:Nom>
+                      <nc1ihm:Nom xml:lang="en">Type of convoy</nc1ihm:Nom>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:element>
+                <xs:element minOccurs="0" name="packetsCount" type="nc1common:Int0To999Type">
+                  <xs:annotation>
+                    <xs:documentation>Nombre total de rames.</xs:documentation>
+                    <xs:documentation xml:lang="en">Total number of packets.</xs:documentation>
+                    <xs:appinfo>
+                      <nc1ihm:Nom>Nombre de rames</nc1ihm:Nom>
+                      <nc1ihm:Nom xml:lang="en">Number of packets</nc1ihm:Nom>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:element>
+                <xs:element minOccurs="0" name="packetGapDimension" type="nc1common:Decimal0To99Type">
+                  <xs:annotation>
+                    <xs:documentation>Distance entre deux rames (mètres).</xs:documentation>
+                    <xs:documentation xml:lang="en">Gap between two packets (meters).</xs:documentation>
+                    <xs:appinfo>
+                      <nc1ihm:Nom>Distance entre deux rames</nc1ihm:Nom>
+                      <nc1ihm:Nom xml:lang="en">Gap between two packets</nc1ihm:Nom>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:element>
+                <xs:element minOccurs="0" name="timeBetweenPackets" type="nc1common:Duration1DayType">
+                  <xs:annotation>
+                    <xs:documentation>Durée entre deux rames.</xs:documentation>
+                    <xs:documentation xml:lang="en">Time gap between packets in the convoy.</xs:documentation>
+                    <xs:appinfo>
+                      <nc1ihm:Nom>Durée entre deux rames</nc1ihm:Nom>
+                      <nc1ihm:Nom xml:lang="en">Time gap between packets in the convoy</nc1ihm:Nom>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:element>
+                <xs:element minOccurs="0" name="status" type="nc1convoy:ConvoyStatusCode">
+                  <xs:annotation>
+                    <xs:documentation>Etat d’avancement du convoi.</xs:documentation>
+                    <xs:documentation xml:lang="en">Progress status of the convoy on its route.</xs:documentation>
+                    <xs:appinfo>
+                      <nc1ihm:Nom>Etat d’avancement</nc1ihm:Nom>
+                      <nc1ihm:Nom xml:lang="en">Progress status</nc1ihm:Nom>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:element>
+                <xs:element maxOccurs="unbounded" name="belongingAgentId" type="nc1common:Nc1ObjectRefType">
+                  <xs:annotation>
+                    <xs:documentation>Identifiants uniques des entités composant le convoi.</xs:documentation>
+                    <xs:documentation xml:lang="en">NC1 ID of the agents belonging to the convoy.</xs:documentation>
+                    <xs:appinfo>
+                      <nc1ihm:Nom>Identifiant des entités</nc1ihm:Nom>
+                      <nc1ihm:Nom xml:lang="en">Entities ID</nc1ihm:Nom>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:element>
+                <xs:element minOccurs="0" name="freightDescription" type="nc1common:MediumTextObjectType">
+                  <xs:annotation>
+                    <xs:documentation>Description sommaire du fret.</xs:documentation>
+                    <xs:documentation xml:lang="en">Short description of the freight.</xs:documentation>
+                    <xs:appinfo>
+                      <nc1ihm:Nom>Fret</nc1ihm:Nom>
+                      <nc1ihm:Nom xml:lang="en">Short description of the freight</nc1ihm:Nom>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:element>
+                <xs:element minOccurs="0" name="url" type="nc1common:MediumTextObjectType">
+                  <xs:annotation>
+                    <xs:documentation>Lien vers un fichier associé à l’objet.</xs:documentation>
+                    <xs:documentation xml:lang="en">Link to a file associated with the object.</xs:documentation>
+                    <xs:appinfo>
+                      <nc1ihm:Nom>Url</nc1ihm:Nom>
+                      <nc1ihm:Nom xml:lang="en">url</nc1ihm:Nom>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:element>
+                <xs:element minOccurs="0" name="comment" type="nc1common:LongTextObjectType">
+                  <xs:annotation>
+                    <xs:documentation>Commentaire en texte libre.</xs:documentation>
+                    <xs:documentation xml:lang="en">free text comment.</xs:documentation>
+                    <xs:appinfo>
+                      <nc1ihm:Nom>Commentaire</nc1ihm:Nom>
+                      <nc1ihm:Nom xml:lang="en">comment</nc1ihm:Nom>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:element>
+                <xs:element minOccurs="0" name="extVersion" type="nc1common:ExtVersType">
+                  <xs:annotation>
+                    <xs:documentation>Extension pour versions suivantes compatibles.</xs:documentation>
+                    <xs:documentation xml:lang="en">Extension for following compatible versions.</xs:documentation>
+                    <xs:appinfo>
+                      <nc1ihm:Nom>Extension de version</nc1ihm:Nom>
+                      <nc1ihm:Nom xml:lang="en">version extension</nc1ihm:Nom>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:element>
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+          <xs:element minOccurs="0" name="headCount">
+            <xs:annotation>
+              <xs:documentation>Données sur l’effectif du convoi.</xs:documentation>
+              <xs:documentation xml:lang="en">Convoy head count.</xs:documentation>
+              <xs:appinfo>
+                <nc1ihm:Nom>Effectif du convoi</nc1ihm:Nom>
+                <nc1ihm:Nom xml:lang="en">Convoy head count</nc1ihm:Nom>
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element minOccurs="0" name="totalCiviliansCount" type="nc1common:Int0To9999Type">
+                  <xs:annotation>
+                    <xs:documentation>Nombre total de civils composant le convoi.</xs:documentation>
+                    <xs:documentation xml:lang="en">Total number of civilians part of the convoy.</xs:documentation>
+                    <xs:appinfo>
+                      <nc1ihm:Nom>Nombre de civils</nc1ihm:Nom>
+                      <nc1ihm:Nom xml:lang="en">Number of civilians</nc1ihm:Nom>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:element>
+                <xs:element minOccurs="0" name="totalOffCount" type="nc1common:Int0To9999Type">
+                  <xs:annotation>
+                    <xs:documentation>Nombre total d’officiers composant le convoi.</xs:documentation>
+                    <xs:documentation xml:lang="en">Total number of officers part of the convoy.</xs:documentation>
+                    <xs:appinfo>
+                      <nc1ihm:Nom>Nombre d’officiers</nc1ihm:Nom>
+                      <nc1ihm:Nom xml:lang="en">Number of officers</nc1ihm:Nom>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:element>
+                <xs:element minOccurs="0" name="totalNcoCount" type="nc1common:Int0To9999Type">
+                  <xs:annotation>
+                    <xs:documentation>Nombre total de sous-officiers composant le convoi.</xs:documentation>
+                    <xs:documentation xml:lang="en">Total number of NCOs part of the convoy.</xs:documentation>
+                    <xs:appinfo>
+                      <nc1ihm:Nom>Nombre de sous-officiers</nc1ihm:Nom>
+                      <nc1ihm:Nom xml:lang="en">Number of NCOs</nc1ihm:Nom>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:element>
+                <xs:element minOccurs="0" name="totalTroopsCount" type="nc1common:Int0To9999Type">
+                  <xs:annotation>
+                    <xs:documentation>Nombre total de militaires du rang composant le convoi.</xs:documentation>
+                    <xs:documentation xml:lang="en">Total number of troops part of the convoy.</xs:documentation>
+                    <xs:appinfo>
+                      <nc1ihm:Nom>Nombre de militaires du rang</nc1ihm:Nom>
+                      <nc1ihm:Nom xml:lang="en">Number of privates</nc1ihm:Nom>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:element>
+                <xs:element minOccurs="0" name="extVersion" type="nc1common:ExtVersType">
+                  <xs:annotation>
+                    <xs:documentation>Extension pour versions suivantes compatibles.</xs:documentation>
+                    <xs:documentation xml:lang="en">Extension for following compatible versions.</xs:documentation>
+                    <xs:appinfo>
+                      <nc1ihm:Nom>Extension de version</nc1ihm:Nom>
+                      <nc1ihm:Nom xml:lang="en">version extension</nc1ihm:Nom>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:element>
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+          <xs:element maxOccurs="unbounded" minOccurs="0" name="packet">
+            <xs:annotation>
+              <xs:documentation>Données sur une rame composant le convoi.</xs:documentation>
+              <xs:documentation xml:lang="en">Data related to the packet from the convoy.</xs:documentation>
+              <xs:appinfo>
+                <nc1ihm:Nom>Rame</nc1ihm:Nom>
+                <nc1ihm:Nom xml:lang="en">Packet</nc1ihm:Nom>
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="number" type="nc1common:Int0To999Type">
+                  <xs:annotation>
+                    <xs:documentation>Numéro de la rame.</xs:documentation>
+                    <xs:documentation xml:lang="en">Packet number.</xs:documentation>
+                    <xs:appinfo>
+                      <nc1ihm:Nom>Numéro</nc1ihm:Nom>
+                      <nc1ihm:Nom xml:lang="en">Number</nc1ihm:Nom>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:element>
+                <xs:element minOccurs="0" name="vehiclesCount" type="nc1common:Int0To9999Type">
+                  <xs:annotation>
+                    <xs:documentation>Nombre de véhicules dans la rame.</xs:documentation>
+                    <xs:documentation xml:lang="en">Number of vehicles in the packet.</xs:documentation>
+                    <xs:appinfo>
+                      <nc1ihm:Nom>Nombre de véhicules</nc1ihm:Nom>
+                      <nc1ihm:Nom xml:lang="en">Number of vehicles</nc1ihm:Nom>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:element>
+                <xs:element minOccurs="0" name="description" type="nc1common:MediumTextObjectType">
+                  <xs:annotation>
+                    <xs:documentation>Description en texte libre de rame (composition, informations complémentaires, etc.).</xs:documentation>
+                    <xs:documentation xml:lang="en">Free text description.</xs:documentation>
+                    <xs:appinfo>
+                      <nc1ihm:Nom>Description</nc1ihm:Nom>
+                      <nc1ihm:Nom xml:lang="en">Description</nc1ihm:Nom>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:element>
+                <xs:element minOccurs="0" name="extVersion" type="nc1common:ExtVersType">
+                  <xs:annotation>
+                    <xs:documentation>Extension pour versions suivantes compatibles.</xs:documentation>
+                    <xs:documentation xml:lang="en">Extension for following compatible versions.</xs:documentation>
+                    <xs:appinfo>
+                      <nc1ihm:Nom>Extension de version</nc1ihm:Nom>
+                      <nc1ihm:Nom xml:lang="en">version extension</nc1ihm:Nom>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:element>
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+          <xs:element minOccurs="0" name="vehicles">
+            <xs:annotation>
+              <xs:documentation>Données sur les véhicules composant le convoi.</xs:documentation>
+              <xs:documentation xml:lang="en">Data related to the vehicles from the convoy.</xs:documentation>
+              <xs:appinfo>
+                <nc1ihm:Nom>Véhicules</nc1ihm:Nom>
+                <nc1ihm:Nom xml:lang="en">Vehicles</nc1ihm:Nom>
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element maxOccurs="unbounded" minOccurs="0" name="typeCount" type="nc1convoy:VehiclesTypeCountType">
+                  <xs:annotation>
+                    <xs:documentation>Nombre de véhicules par type.</xs:documentation>
+                    <xs:documentation xml:lang="en">Number of vehicles per type.</xs:documentation>
+                    <xs:appinfo>
+                      <nc1ihm:Nom>Nombre par type</nc1ihm:Nom>
+                      <nc1ihm:Nom xml:lang="en">Number of items per type</nc1ihm:Nom>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:element>
+                <xs:element minOccurs="0" name="distanceBetweenVehicles" type="nc1common:Decimal0To999Type">
+                  <xs:annotation>
+                    <xs:documentation>Distance entre les véhicules (mètres).</xs:documentation>
+                    <xs:documentation xml:lang="en">Distance between vehicles (meters).</xs:documentation>
+                    <xs:appinfo>
+                      <nc1ihm:Nom>Distance entre les véhicules</nc1ihm:Nom>
+                      <nc1ihm:Nom xml:lang="en">Distance between vehicles</nc1ihm:Nom>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:element>
+                <xs:element minOccurs="0" name="extVersion" type="nc1common:ExtVersType">
+                  <xs:annotation>
+                    <xs:documentation>Extension pour versions suivantes compatibles.</xs:documentation>
+                    <xs:documentation xml:lang="en">Extension for following compatible versions.</xs:documentation>
+                    <xs:appinfo>
+                      <nc1ihm:Nom>Extension de version</nc1ihm:Nom>
+                      <nc1ihm:Nom xml:lang="en">version extension</nc1ihm:Nom>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:element>
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+          <xs:element minOccurs="0" name="escort">
+            <xs:annotation>
+              <xs:documentation>Données sur l’effectif et sur les véhicules d’escorte du convoi.</xs:documentation>
+              <xs:documentation xml:lang="en">Data related to the escort.</xs:documentation>
+              <xs:appinfo>
+                <nc1ihm:Nom>Escorte</nc1ihm:Nom>
+                <nc1ihm:Nom xml:lang="en">Escort</nc1ihm:Nom>
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element minOccurs="0" name="offCount" type="nc1common:Int0To9999Type">
+                  <xs:annotation>
+                    <xs:documentation>Nombre total d’officiers composant l’escorte (non comptabilisés dans le convoi).</xs:documentation>
+                    <xs:documentation xml:lang="en">Total number of officers part of the escort (not counted in the convoy).</xs:documentation>
+                    <xs:appinfo>
+                      <nc1ihm:Nom>Nombre d’officiers</nc1ihm:Nom>
+                      <nc1ihm:Nom xml:lang="en">Number of officers</nc1ihm:Nom>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:element>
+                <xs:element minOccurs="0" name="ncoCount" type="nc1common:Int0To9999Type">
+                  <xs:annotation>
+                    <xs:documentation>Nombre total de sous-officiers composant l’escorte (non comptabilisés dans le convoi).</xs:documentation>
+                    <xs:documentation xml:lang="en">Total number of NCOs part of the escort (not counted in the convoy).</xs:documentation>
+                    <xs:appinfo>
+                      <nc1ihm:Nom>Nombre de sous-officiers</nc1ihm:Nom>
+                      <nc1ihm:Nom xml:lang="en">Number of NCOs</nc1ihm:Nom>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:element>
+                <xs:element minOccurs="0" name="troopsCount" type="nc1common:Int0To9999Type">
+                  <xs:annotation>
+                    <xs:documentation>Nombre total de militaires du rang composant l’escorte (non comptabilisés dans le convoi).</xs:documentation>
+                    <xs:documentation xml:lang="en">Total number of troops part of the escort (not counted in the convoy).</xs:documentation>
+                    <xs:appinfo>
+                      <nc1ihm:Nom>Nombre  de militaires du rang</nc1ihm:Nom>
+                      <nc1ihm:Nom xml:lang="en">Number of non-commissioned members</nc1ihm:Nom>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:element>
+                <xs:element minOccurs="0" name="vehiclesCount" type="nc1common:Int0To9999Type">
+                  <xs:annotation>
+                    <xs:documentation>Nombre de véhicules composant l’escorte (non comptabilisés dans le convoi).</xs:documentation>
+                    <xs:documentation xml:lang="en">Total number of vehicles part of the escort (not counted in the convoy).</xs:documentation>
+                    <xs:appinfo>
+                      <nc1ihm:Nom>Nombre de véhicules</nc1ihm:Nom>
+                      <nc1ihm:Nom xml:lang="en">Number of vehicles</nc1ihm:Nom>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:element>
+                <xs:element minOccurs="0" name="extVersion" type="nc1common:ExtVersType">
+                  <xs:annotation>
+                    <xs:documentation>Extension pour versions suivantes compatibles.</xs:documentation>
+                    <xs:documentation xml:lang="en">Extension for following compatible versions.</xs:documentation>
+                    <xs:appinfo>
+                      <nc1ihm:Nom>Extension de version</nc1ihm:Nom>
+                      <nc1ihm:Nom xml:lang="en">version extension</nc1ihm:Nom>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:element>
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+          <xs:element minOccurs="0" name="movementData">
+            <xs:annotation>
+              <xs:documentation>Données sur le mouvement effectué par le convoi.</xs:documentation>
+              <xs:documentation xml:lang="en">Data related to the movement performed by the convoy.</xs:documentation>
+              <xs:appinfo>
+                <nc1ihm:Nom>Mouvement</nc1ihm:Nom>
+                <nc1ihm:Nom xml:lang="en">Movement</nc1ihm:Nom>
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element minOccurs="0" name="name" type="nc1common:ShortTextObjectType">
+                  <xs:annotation>
+                    <xs:documentation>Nom du mouvement.</xs:documentation>
+                    <xs:documentation xml:lang="en">Movement name.</xs:documentation>
+                    <xs:appinfo>
+                      <nc1ihm:Nom>Nom</nc1ihm:Nom>
+                      <nc1ihm:Nom xml:lang="en">name</nc1ihm:Nom>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:element>
+                <xs:element name="identificationNumber" type="nc1common:MediumTextObjectType">
+                  <xs:annotation>
+                    <xs:documentation>Numéro du Crédit de Mouvement, attribué par l'autorité chargée du contrôle des mouvements.</xs:documentation>
+                    <xs:documentation xml:lang="en">Movement of Credit Number, assigned by the authority responsible for movement control.</xs:documentation>
+                    <xs:appinfo>
+                      <nc1ihm:Nom>Numéro du crédit de mouvement</nc1ihm:Nom>
+                      <nc1ihm:Nom xml:lang="en">Movement identification number</nc1ihm:Nom>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:element>
+                <xs:element minOccurs="0" name="priority" type="nc1convoy:MovementPriorityCode">
+                  <xs:annotation>
+                    <xs:documentation>Priorité affectée au mouvement (ex : « ALPHA »).</xs:documentation>
+                    <xs:documentation xml:lang="en">Priority assigned to the movement.</xs:documentation>
+                    <xs:appinfo>
+                      <nc1ihm:Nom>Priorité</nc1ihm:Nom>
+                      <nc1ihm:Nom xml:lang="en">priority</nc1ihm:Nom>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:element>
+                <xs:element name="startAndEndDatetime" type="nc1common:PeriodType">
+                  <xs:annotation>
+                    <xs:documentation>Horodatages de début et de fin du mouvement.</xs:documentation>
+                    <xs:documentation xml:lang="en">Time stamping of the beginning and the end of the movement.</xs:documentation>
+                    <xs:appinfo>
+                      <nc1ihm:Nom>Horodatages</nc1ihm:Nom>
+                      <nc1ihm:Nom xml:lang="en">Time stamping</nc1ihm:Nom>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:element>
+                <xs:element minOccurs="0" name="routeId" type="nc1common:Nc1ObjectRefType">
+                  <xs:annotation>
+                    <xs:documentation>Identifiant unique de l'itinéraire associé au mouvement.</xs:documentation>
+                    <xs:documentation xml:lang="en">NC1 identifier of the route associated to the movement.</xs:documentation>
+                    <xs:appinfo>
+                      <nc1ihm:Nom>Itinéraire</nc1ihm:Nom>
+                      <nc1ihm:Nom xml:lang="en">Route</nc1ihm:Nom>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:element>
+                <xs:element minOccurs="0" name="daySpeed" type="nc1common:SpeedType">
+                  <xs:annotation>
+                    <xs:documentation>Consigne de vitesse jour (km/h).</xs:documentation>
+                    <xs:documentation xml:lang="en">Requested day speed rate (km/h).</xs:documentation>
+                    <xs:appinfo>
+                      <nc1ihm:Nom>Consigne de vitesse jour</nc1ihm:Nom>
+                      <nc1ihm:Nom xml:lang="en">Requested day speed rate, expressed in km/h</nc1ihm:Nom>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:element>
+                <xs:element minOccurs="0" name="nightSpeed" type="nc1common:SpeedType">
+                  <xs:annotation>
+                    <xs:documentation>Consigne de vitesse nuit (km/h).</xs:documentation>
+                    <xs:documentation xml:lang="en">Requested night speed rate (km/h).</xs:documentation>
+                    <xs:appinfo>
+                      <nc1ihm:Nom>Consigne de vitesse nuit</nc1ihm:Nom>
+                      <nc1ihm:Nom xml:lang="en">Requested night speed rate, expressed in km/h</nc1ihm:Nom>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:element>
+                <xs:element minOccurs="0" name="timeBetweenConvoys" type="nc1common:Duration1YearType">
+                  <xs:annotation>
+                    <xs:documentation>Durée entre deux convois successifs.</xs:documentation>
+                    <xs:documentation xml:lang="en">Time gap between 2 convoys.</xs:documentation>
+                    <xs:appinfo>
+                      <nc1ihm:Nom>Durée entre convois</nc1ihm:Nom>
+                      <nc1ihm:Nom xml:lang="en">Time between convoys</nc1ihm:Nom>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:element>
+                <xs:element minOccurs="0" name="primaryConsideration" type="nc1convoy:MovementPrimaryConsiderationCode">
+                  <xs:annotation>
+                    <xs:documentation>Ambiance vitesse ou ambiance sûreté (ex : « SAFETY »).</xs:documentation>
+                    <xs:documentation xml:lang="en">"Primary consideration of the movement (""SPEED"" or ""SAFETY"")."</xs:documentation>
+                    <xs:appinfo>
+                      <nc1ihm:Nom>Ambiance</nc1ihm:Nom>
+                      <nc1ihm:Nom xml:lang="en">"Primary consideration of the movement (""SPEED"" or ""SAFETY"")."</nc1ihm:Nom>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:element>
+                <xs:element minOccurs="0" name="comment" type="nc1common:LongTextObjectType">
+                  <xs:annotation>
+                    <xs:documentation>Commentaire en texte libre.</xs:documentation>
+                    <xs:documentation xml:lang="en">free text comment.</xs:documentation>
+                    <xs:appinfo>
+                      <nc1ihm:Nom>Commentaire</nc1ihm:Nom>
+                      <nc1ihm:Nom xml:lang="en">comment</nc1ihm:Nom>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:element>
+                <xs:element minOccurs="0" name="extVersion" type="nc1common:ExtVersType">
+                  <xs:annotation>
+                    <xs:documentation>Extension pour versions suivantes compatibles.</xs:documentation>
+                    <xs:documentation xml:lang="en">Extension for following compatible versions.</xs:documentation>
+                    <xs:appinfo>
+                      <nc1ihm:Nom>Extension de version</nc1ihm:Nom>
+                      <nc1ihm:Nom xml:lang="en">version extension</nc1ihm:Nom>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:element>
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+          <xs:element minOccurs="0" name="movementComData" type="nc1com:ComDataType">
+            <xs:annotation>
+              <xs:documentation>Données de communication de l'autorité chargée du contrôle du mouvement.</xs:documentation>
+              <xs:documentation xml:lang="en">Communication data of the authority in charge of the control of the movement.</xs:documentation>
+              <xs:appinfo>
+                <nc1ihm:Nom>Données de communication</nc1ihm:Nom>
+                <nc1ihm:Nom xml:lang="en">Communication data</nc1ihm:Nom>
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:element>
+          <xs:element minOccurs="0" name="location">
+            <xs:annotation>
+              <xs:documentation>Localisation du convoi.</xs:documentation>
+              <xs:documentation xml:lang="en">Convoy location.</xs:documentation>
+              <xs:appinfo>
+                <nc1ihm:Nom>Localisation</nc1ihm:Nom>
+                <nc1ihm:Nom xml:lang="en">Location</nc1ihm:Nom>
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element minOccurs="0" name="name" type="nc1common:Text1To30ObjectType">
+                  <xs:annotation>
+                    <xs:documentation>Nom de baptême donné par l'opérateur à la localisation. Par exemple un nom de ville ou de lieu.</xs:documentation>
+                    <xs:documentation xml:lang="en">Name assigned to the location, e.g. city or place name.</xs:documentation>
+                    <xs:appinfo>
+                      <nc1ihm:Nom>Nom</nc1ihm:Nom>
+                      <nc1ihm:Nom xml:lang="en">name</nc1ihm:Nom>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:element>
+                <xs:choice>
+                  <xs:element name="multipoint" type="nc1location:MultipointType">
+                    <xs:annotation>
+                      <xs:documentation>Liste de points.</xs:documentation>
+                      <xs:documentation xml:lang="en">List of points.</xs:documentation>
+                      <xs:appinfo>
+                        <nc1ihm:Nom>Multipoint</nc1ihm:Nom>
+                        <nc1ihm:Nom xml:lang="en">Multipoint</nc1ihm:Nom>
+                      </xs:appinfo>
+                    </xs:annotation>
+                  </xs:element>
+                  <xs:element name="polyline" type="nc1location:PolylineType">
+                    <xs:annotation>
+                      <xs:documentation>Ligne brisée orientée, sans largeur.</xs:documentation>
+                      <xs:documentation xml:lang="en">Width less oriented polyline.</xs:documentation>
+                      <xs:appinfo>
+                        <nc1ihm:Nom>Polyligne</nc1ihm:Nom>
+                        <nc1ihm:Nom xml:lang="en">Polyline</nc1ihm:Nom>
+                      </xs:appinfo>
+                    </xs:annotation>
+                  </xs:element>
+                </xs:choice>
+                <xs:element minOccurs="0" name="speed" type="nc1common:SpeedType">
+                  <xs:annotation>
+                    <xs:documentation>Vitesse au sol de la localisation.</xs:documentation>
+                    <xs:documentation xml:lang="en">Location ground speed.</xs:documentation>
+                    <xs:appinfo>
+                      <nc1ihm:Nom>Vitesse</nc1ihm:Nom>
+                      <nc1ihm:Nom xml:lang="en">Speed</nc1ihm:Nom>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:element>
+                <xs:element minOccurs="0" name="course" type="nc1common:AngleType">
+                  <xs:annotation>
+                    <xs:documentation>Direction du vecteur vitesse.</xs:documentation>
+                    <xs:documentation xml:lang="en">Rotation angle of the speed vector from the geographical North.</xs:documentation>
+                    <xs:appinfo>
+                      <nc1ihm:Nom>Direction</nc1ihm:Nom>
+                      <nc1ihm:Nom xml:lang="en">Direction</nc1ihm:Nom>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:element>
+                <xs:element minOccurs="0" name="datetime" type="xs:dateTime">
+                  <xs:annotation>
+                    <xs:documentation>Horodatage du relevé de position sur le terrain. Par défaut, l'heure de saisie dans le système.</xs:documentation>
+                    <xs:documentation xml:lang="en">Field position report time. By default, time of the input in the system.</xs:documentation>
+                    <xs:appinfo>
+                      <nc1ihm:Nom>Horodatage</nc1ihm:Nom>
+                      <nc1ihm:Nom xml:lang="en">Timestamp</nc1ihm:Nom>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:element>
+                <xs:element maxOccurs="unbounded" minOccurs="0" name="validityPeriod" type="nc1common:PeriodType">
+                  <xs:annotation>
+                    <xs:documentation>Période de validité.</xs:documentation>
+                    <xs:documentation xml:lang="en">Validity period.</xs:documentation>
+                    <xs:appinfo>
+                      <nc1ihm:Nom>Période de validité</nc1ihm:Nom>
+                      <nc1ihm:Nom xml:lang="en">Validity period</nc1ihm:Nom>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:element>
+                <xs:element minOccurs="0" name="quality" type="nc1sicsdicos:L117_5Code">
+                  <xs:annotation>
+                    <xs:documentation>Qualité de la mesure de la localisation.</xs:documentation>
+                    <xs:documentation xml:lang="en">Location measurement quality.</xs:documentation>
+                    <xs:appinfo>
+                      <nc1ihm:Nom>Qualité</nc1ihm:Nom>
+                      <nc1ihm:Nom xml:lang="en">Quality</nc1ihm:Nom>
+                    </xs:appinfo>
+                  </xs:annotation>
+                </xs:element>
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:simpleType name="MovementPrimaryConsiderationCode">
+    <xs:annotation>
+      <xs:appinfo>
+        <nc1dico:source xmlns:nc1dico="urn:fra:nc1:dictionnaires">STAT dictionnaire 251.</nc1dico:source>
+        <nc1ihm:description>Dictionnaire des types d'ambiance (sûreté ou vitesse).</nc1ihm:description>
+        <nc1ihm:description xml:lang="en">Dictionary of the types of atmosphere (safety or speed).</nc1ihm:description>
+      </xs:appinfo>
+      <xs:documentation>Dictionnaire des types d'ambiance (sûreté ou vitesse).</xs:documentation>
+      <xs:documentation xml:lang="en">Dictionary of the types of atmosphere (safety or speed).</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:integer" />
+  </xs:simpleType>
+  <xs:simpleType name="MovementPriorityCode">
+    <xs:annotation>
+      <xs:appinfo>
+        <nc1dico:source xmlns:nc1dico="urn:fra:nc1:dictionnaires">STAT dictionnaire 252.</nc1dico:source>
+        <nc1ihm:description>Dictionnaire des priorités associées à un mouvement.</nc1ihm:description>
+        <nc1ihm:description xml:lang="en">Movement priorities dictionary.</nc1ihm:description>
+      </xs:appinfo>
+      <xs:documentation>Dictionnaire des priorités associées à un mouvement.</xs:documentation>
+      <xs:documentation xml:lang="en">Movement priorities dictionary.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:integer" />
+  </xs:simpleType>
+  <xs:complexType name="VehiclesTypeCountType">
+    <xs:annotation>
+      <xs:documentation>Nombre de véhicules par type.</xs:documentation>
+      <xs:documentation xml:lang="en">Number of vehicles per type.</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="nicCode" type="nc1common:NicCodeType">
+        <xs:annotation>
+          <xs:documentation>Code NIC du type de véhicule.</xs:documentation>
+          <xs:documentation xml:lang="en">NIC code of the vehicle type.</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Code NIC</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">NIC code</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="count" type="nc1common:Int0To999Type">
+        <xs:annotation>
+          <xs:documentation>Quantité de véhicules de ce type.</xs:documentation>
+          <xs:documentation xml:lang="en">Number of vehicles of the relevant type.</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Quantité</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">quantity</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

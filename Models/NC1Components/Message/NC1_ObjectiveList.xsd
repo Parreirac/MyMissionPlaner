@@ -1,0 +1,95 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema targetNamespace="urn:fra:nc1:message:objectivelist" xmlns:nc1ihm="urn:fra:nc1:IHM" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:nc1objectivelist="urn:fra:nc1:message:objectivelist" xmlns:nc1common="urn:fra:nc1:common:attribute" xmlns:nc1msgcom="urn:fra:nc1:common:message" xmlns:nc1fireobjective="urn:fra:nc1:objet:fireobjective">
+  <!-- NC1 V.9.0.0 -->
+  <xs:import namespace="urn:fra:nc1:common:attribute" schemaLocation="../Commun/Common.xsd" />
+  <xs:import namespace="urn:fra:nc1:common:message" schemaLocation="../Commun/Message.xsd" />
+  <xs:import namespace="urn:fra:nc1:objet:fireobjective" schemaLocation="../Objet/NC1_FireObjective.xsd" />
+  <xs:element name="NC1_ObjectiveList">
+    <xs:annotation>
+      <xs:documentation>Le message NC1_ObjectiveList est utilisé pour transmettre un catalogue d’objectifs feux candidats. Ce catalogue est transmis en proposition au niveau supérieur.</xs:documentation>
+      <xs:documentation xml:lang="en">The NC1_ObjectiveList message is used to transmit a catalog of fire objectives. This catalog proposal is submitted  to the superior level.</xs:documentation>
+      <xs:appinfo>
+        <nc1:type xmlns:nc1="urn:fra:nc1">Message</nc1:type>
+        <nc1ihm:Nom>Catalogue des objectifs feux</nc1ihm:Nom>
+        <nc1ihm:Nom xml:lang="en">Objective list</nc1ihm:Nom>
+        <nc1:MessH xmlns:nc1="urn:fra:nc1">N/A</nc1:MessH>
+        <nc1:MessADatP3 xmlns:nc1="urn:fra:nc1">N/A</nc1:MessADatP3>
+        <nc1:LastNC1ModifyVersion xmlns:nc1="urn:fra:nc1">9.0.0</nc1:LastNC1ModifyVersion>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:complexContent>
+        <xs:extension base="nc1msgcom:BaseMessageType">
+          <xs:sequence>
+            <xs:element name="name" type="nc1common:ShortTextType">
+              <xs:annotation>
+                <xs:documentation>Nom de la liste d'objectif feux.</xs:documentation>
+                <xs:documentation xml:lang="en">Fire objective list name.</xs:documentation>
+                <xs:appinfo>
+                  <nc1ihm:Nom>Nom</nc1ihm:Nom>
+                  <nc1ihm:Nom xml:lang="en">name</nc1ihm:Nom>
+                </xs:appinfo>
+              </xs:annotation>
+            </xs:element>
+            <xs:element name="fireObjectives">
+              <xs:annotation>
+                <xs:documentation>Liste des objectifs feux.</xs:documentation>
+                <xs:documentation xml:lang="en">Fire objectives list.</xs:documentation>
+                <xs:appinfo>
+                  <nc1ihm:Nom>Liste d’objectifs feux</nc1ihm:Nom>
+                  <nc1ihm:Nom xml:lang="en">Fire objectives list</nc1ihm:Nom>
+                </xs:appinfo>
+              </xs:annotation>
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="confirmationStatus" type="nc1objectivelist:ObjectiveListConfirmationStatusCode">
+                    <xs:annotation>
+                      <xs:documentation>Etat de la liste des objectifs feux (ex : « APPR »).</xs:documentation>
+                      <xs:documentation xml:lang="en">"Fire objective list status (e.g. ""APPR"")".</xs:documentation>
+                      <xs:appinfo>
+                        <nc1ihm:Nom>Etat de la liste</nc1ihm:Nom>
+                        <nc1ihm:Nom xml:lang="en">List status</nc1ihm:Nom>
+                      </xs:appinfo>
+                    </xs:annotation>
+                  </xs:element>
+                  <xs:element maxOccurs="unbounded" name="fireObjective" type="nc1fireobjective:FireObjectiveType">
+                    <xs:annotation>
+                      <xs:documentation>Objectif feux.</xs:documentation>
+                      <xs:documentation xml:lang="en">Fire objective.</xs:documentation>
+                      <xs:appinfo>
+                        <nc1ihm:Nom>Objectif feux</nc1ihm:Nom>
+                        <nc1ihm:Nom xml:lang="en">Fire objective</nc1ihm:Nom>
+                      </xs:appinfo>
+                    </xs:annotation>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element minOccurs="0" name="comment" type="nc1msgcom:CommentSectionType">
+              <xs:annotation>
+                <xs:documentation>Commentaire en texte libre.</xs:documentation>
+                <xs:documentation xml:lang="en">free text comment.</xs:documentation>
+                <xs:appinfo>
+                  <nc1ihm:Nom>Commentaire</nc1ihm:Nom>
+                  <nc1ihm:Nom xml:lang="en">comment</nc1ihm:Nom>
+                </xs:appinfo>
+              </xs:annotation>
+            </xs:element>
+          </xs:sequence>
+        </xs:extension>
+      </xs:complexContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:simpleType name="ObjectiveListConfirmationStatusCode">
+    <xs:annotation>
+      <xs:appinfo>
+        <nc1dico:source xmlns:nc1dico="urn:fra:nc1:dictionnaires">NC1</nc1dico:source>
+        <nc1ihm:description>Etat d'une liste des objectifs feux.</nc1ihm:description>
+        <nc1ihm:description xml:lang="en">State of a list of the objectives fires.</nc1ihm:description>
+      </xs:appinfo>
+      <xs:documentation>Etat d'une liste des objectifs feux.</xs:documentation>
+      <xs:documentation xml:lang="en">State of a list of the objectives fires.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:integer" />
+  </xs:simpleType>
+</xs:schema>

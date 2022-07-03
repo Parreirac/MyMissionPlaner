@@ -1,0 +1,313 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema targetNamespace="urn:fra:nc1:message:helopsum" xmlns:nc1ihm="urn:fra:nc1:IHM" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:nc1helopsum="urn:fra:nc1:message:helopsum" xmlns:nc1common="urn:fra:nc1:common:attribute" xmlns:nc1location="urn:fra:nc1:common:location" xmlns:nc1msgcom="urn:fra:nc1:common:message">
+  <!-- NC1 V.9.0.0 -->
+  <xs:import namespace="urn:fra:nc1:common:attribute" schemaLocation="../Commun/Common.xsd" />
+  <xs:import namespace="urn:fra:nc1:common:location" schemaLocation="../Commun/Location.xsd" />
+  <xs:import namespace="urn:fra:nc1:common:message" schemaLocation="../Commun/Message.xsd" />
+  <xs:element name="NC1_HELOPSUM">
+    <xs:annotation>
+      <xs:documentation>Le message NC1_HELOPSUM est utilisé pour rendre compte à temps d’une part de la situation logistique et opérationnelle des unités ALAT et d’autre part des activités passées, du jour et du lendemain, à un cycle défini par l’autorité compétente.</xs:documentation>
+      <xs:documentation xml:lang="en">The NC1_HELOPSUM message is used to report both logistic and operational situation of the Army Aviation units on one hand, and other past activities of the day and the next day on the other hand, at a rhythm defined by the competent authority.</xs:documentation>
+      <xs:appinfo>
+        <nc1:type xmlns:nc1="urn:fra:nc1">Message</nc1:type>
+        <nc1ihm:Nom>Compte rendu d’activités des unités dotées d’hélicoptères</nc1ihm:Nom>
+        <nc1ihm:Nom xml:lang="en">Helicopters summary report</nc1ihm:Nom>
+        <nc1:MessH xmlns:nc1="urn:fra:nc1">N/A</nc1:MessH>
+        <nc1:MessADatP3 xmlns:nc1="urn:fra:nc1">HELOPSUM</nc1:MessADatP3>
+        <nc1:LastNC1ModifyVersion xmlns:nc1="urn:fra:nc1">9.0.0</nc1:LastNC1ModifyVersion>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:complexContent>
+        <xs:extension base="nc1msgcom:BaseMessageType">
+          <xs:sequence>
+            <xs:element name="operationalReadiness">
+              <xs:annotation>
+                <xs:documentation>Capacités opérationnelles des unités ALAT.</xs:documentation>
+                <xs:documentation xml:lang="en">Army aviation units operational readiness.</xs:documentation>
+                <xs:appinfo>
+                  <nc1ihm:Nom>Capacités opérationnelles</nc1ihm:Nom>
+                  <nc1ihm:Nom xml:lang="en">Operational capacities</nc1ihm:Nom>
+                </xs:appinfo>
+              </xs:annotation>
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element maxOccurs="unbounded" minOccurs="0" name="fuelingPoint" type="nc1helopsum:FuelingPointType">
+                    <xs:annotation>
+                      <xs:documentation>Point de ravitaillement.</xs:documentation>
+                      <xs:documentation xml:lang="en">Fuelling point.</xs:documentation>
+                      <xs:appinfo>
+                        <nc1ihm:Nom>Point de ravitaillement</nc1ihm:Nom>
+                        <nc1ihm:Nom xml:lang="en">Fuelling point</nc1ihm:Nom>
+                      </xs:appinfo>
+                    </xs:annotation>
+                  </xs:element>
+                  <xs:element maxOccurs="unbounded" name="helicopterStatus" type="nc1helopsum:HelicopterStatusType">
+                    <xs:annotation>
+                      <xs:documentation>Etat opérationnel des hélicoptères de l’unité rendant compte, par type d’hélicoptère.</xs:documentation>
+                      <xs:documentation xml:lang="en">Operational status of the helicopters of the reporting unit, per helicopter type.</xs:documentation>
+                      <xs:appinfo>
+                        <nc1ihm:Nom>Etat opérationnel des hélicoptères</nc1ihm:Nom>
+                        <nc1ihm:Nom xml:lang="en">Operational status of the helicopters</nc1ihm:Nom>
+                      </xs:appinfo>
+                    </xs:annotation>
+                  </xs:element>
+                  <xs:element name="combatReadyPersonnelPercentage" type="nc1common:Int0To100Type">
+                    <xs:annotation>
+                      <xs:documentation>Pourcentage du personnel prêt au combat au sein de l’unité rendant compte.</xs:documentation>
+                      <xs:documentation xml:lang="en">Percentage of combat-ready personnel of the reporting unit.</xs:documentation>
+                      <xs:appinfo>
+                        <nc1ihm:Nom>Pourcentage du personnel</nc1ihm:Nom>
+                        <nc1ihm:Nom xml:lang="en">Percentage of personnel</nc1ihm:Nom>
+                      </xs:appinfo>
+                    </xs:annotation>
+                  </xs:element>
+                  <xs:element name="availableHelicopterAmmunitions" type="nc1helopsum:AvailableHelicopterAmunitionsType">
+                    <xs:annotation>
+                      <xs:documentation>Quantités de munitions disponibles pour les hélicoptères de l’unité rendant compte.</xs:documentation>
+                      <xs:documentation xml:lang="en">Available ammunitions for the helicopters of the reporting unit.</xs:documentation>
+                      <xs:appinfo>
+                        <nc1ihm:Nom>Quantités de munitions disponibles</nc1ihm:Nom>
+                        <nc1ihm:Nom xml:lang="en">Available ammunitions</nc1ihm:Nom>
+                      </xs:appinfo>
+                    </xs:annotation>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="operationSummary">
+              <xs:annotation>
+                <xs:documentation>Synthèse des activités des unités ALAT.</xs:documentation>
+                <xs:documentation xml:lang="en">Summary of the operations of army aviation units.</xs:documentation>
+                <xs:appinfo>
+                  <nc1ihm:Nom>Synthèse des activités</nc1ihm:Nom>
+                  <nc1ihm:Nom xml:lang="en">Summary of the operations</nc1ihm:Nom>
+                </xs:appinfo>
+              </xs:annotation>
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element minOccurs="0" name="last24HoursSignificantEvents" type="nc1common:WideTextType">
+                    <xs:annotation>
+                      <xs:documentation>Evénements significatifs des dernières 24 heures.</xs:documentation>
+                      <xs:documentation xml:lang="en">Significant events within the last 24 hours.</xs:documentation>
+                      <xs:appinfo>
+                        <nc1ihm:Nom>Evénements des dernières 24 heures</nc1ihm:Nom>
+                        <nc1ihm:Nom xml:lang="en">Significant events of the last 24 hours</nc1ihm:Nom>
+                      </xs:appinfo>
+                    </xs:annotation>
+                  </xs:element>
+                  <xs:element minOccurs="0" name="currentOperations" type="nc1common:WideTextType">
+                    <xs:annotation>
+                      <xs:documentation>Activités en cours.</xs:documentation>
+                      <xs:documentation xml:lang="en">Current operations.</xs:documentation>
+                      <xs:appinfo>
+                        <nc1ihm:Nom>Activités en cours</nc1ihm:Nom>
+                        <nc1ihm:Nom xml:lang="en">Current operations</nc1ihm:Nom>
+                      </xs:appinfo>
+                    </xs:annotation>
+                  </xs:element>
+                  <xs:element minOccurs="0" name="next24HoursIntentions" type="nc1common:WideTextType">
+                    <xs:annotation>
+                      <xs:documentation>Activités prévues pour les prochaines 24 heures.</xs:documentation>
+                      <xs:documentation xml:lang="en">Operations planed within the next 24 hours.</xs:documentation>
+                      <xs:appinfo>
+                        <nc1ihm:Nom>Activités pour les prochaines 24 heures</nc1ihm:Nom>
+                        <nc1ihm:Nom xml:lang="en">Activities for the next 24 hours</nc1ihm:Nom>
+                      </xs:appinfo>
+                    </xs:annotation>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element minOccurs="0" name="comment" type="nc1msgcom:CommentSectionType">
+              <xs:annotation>
+                <xs:documentation>Commentaire en texte libre.</xs:documentation>
+                <xs:documentation xml:lang="en">free text comment.</xs:documentation>
+                <xs:appinfo>
+                  <nc1ihm:Nom>Commentaire</nc1ihm:Nom>
+                  <nc1ihm:Nom xml:lang="en">comment</nc1ihm:Nom>
+                </xs:appinfo>
+              </xs:annotation>
+            </xs:element>
+          </xs:sequence>
+        </xs:extension>
+      </xs:complexContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="AvailableHelicopterAmunitionsType">
+    <xs:annotation>
+      <xs:documentation>Quantités de munitions disponibles pour des hélicoptères. </xs:documentation>
+      <xs:documentation xml:lang="en">Quantity of available ammo for helicopters. </xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="_30mmCount" type="nc1common:Int0To99999Type">
+        <xs:annotation>
+          <xs:documentation>Quantité de munitions 30mm disponibles.</xs:documentation>
+          <xs:documentation xml:lang="en">Quantity of 30 mm ammunition available.</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Quantité 30mm</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">Number of 30 mm shells</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="_70mmCount" type="nc1common:Int0To99999Type">
+        <xs:annotation>
+          <xs:documentation>Quantité de munitions 70mm disponibles.</xs:documentation>
+          <xs:documentation xml:lang="en">Quantity of 70 mm ammunition available.</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Quantité 70mm</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">Number of 70 mm shells</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="hellfireMissilesCount" type="nc1common:Int0To99999Type">
+        <xs:annotation>
+          <xs:documentation>Quantité de munitions antichars disponibles.</xs:documentation>
+          <xs:documentation xml:lang="en">Quantity of Hellfire missiles available.</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Quantité antichar</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">Number of hellfire missiles</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="otherAmmunitionCount" type="nc1common:LongTextType">
+        <xs:annotation>
+          <xs:documentation>Quantité d’autres munitions disponibles.</xs:documentation>
+          <xs:documentation xml:lang="en">Quantity of other type ammunition available.</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Quantité autres</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">Number of other ammunition</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="FuelingPointType">
+    <xs:annotation>
+      <xs:documentation>Capacités opérationnelles d’un point de ravitaillement.</xs:documentation>
+      <xs:documentation xml:lang="en">Operational capacities of a fuelling point.</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="type" type="nc1helopsum:FuelingPointTypeCode">
+        <xs:annotation>
+          <xs:documentation>Type du point de ravitaillement (ex : « FOB »).</xs:documentation>
+          <xs:documentation xml:lang="en">"Type of fuelling point (e.g. ""FOB"")".</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Type de point de ravitaillement</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">Fuelling point type</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="aviationFuelType" type="nc1helopsum:OtherConsumableMaterielTypeSubcategoryCode">
+        <xs:annotation>
+          <xs:documentation>Type de carburant (ex : « NASF18 »).</xs:documentation>
+          <xs:documentation xml:lang="en">"Type of fuel (e.g. ""NASF18"")".</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Type de carburant</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">Type of fuel</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="availableAviationFuel" type="nc1common:Int0To999999999999Type">
+        <xs:annotation>
+          <xs:documentation>Quantité de carburant disponible (litres).</xs:documentation>
+          <xs:documentation xml:lang="en">Quantity of fuel available (litres).</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Quantité de carburant</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">Fuel quantity</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="location" type="nc1location:PointType">
+        <xs:annotation>
+          <xs:documentation>Localisation.</xs:documentation>
+          <xs:documentation xml:lang="en">Location.</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Localisation</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">Location</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:simpleType name="FuelingPointTypeCode">
+    <xs:annotation>
+      <xs:appinfo>
+        <nc1dico:source xmlns:nc1dico="urn:fra:nc1:dictionnaires">STAT 470</nc1dico:source>
+      </xs:appinfo>
+      <xs:documentation></xs:documentation>
+      <xs:documentation xml:lang="en"></xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:integer" />
+  </xs:simpleType>
+  <xs:complexType name="HelicopterStatusType">
+    <xs:annotation>
+      <xs:documentation>Etat opérationnel d’hélicoptères, par type d’hélicoptère.</xs:documentation>
+      <xs:documentation xml:lang="en">Operational status of helicopters, per helicopter type.</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="type" type="nc1helopsum:HelicopterTypeCode">
+        <xs:annotation>
+          <xs:documentation>Type d’hélicoptère.</xs:documentation>
+          <xs:documentation xml:lang="en">Helicopter type.</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Type d’hélicoptère</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">Helicopter type</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="combatReadyHelicoptersCount" type="nc1common:Int0To999Type">
+        <xs:annotation>
+          <xs:documentation>Nombre d’hélicoptères de ce type prêts au combat.</xs:documentation>
+          <xs:documentation xml:lang="en">Specifies the corresponding number of combat-ready helicopters for this type.</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Nombre d’hélicoptères prêt au combat</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">Number of combat-ready helicopter</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="availableHelicoptersCount" type="nc1common:Int0To999Type">
+        <xs:annotation>
+          <xs:documentation>Nombre d’hélicoptères de ce type disponibles.</xs:documentation>
+          <xs:documentation xml:lang="en">Specifies the corresponding number of available helicopters for this type.</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Nombre d’hélicoptères disponibles</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">Number of available helicopters</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="unserviceableHelicoptersCount" type="nc1common:Int0To999Type">
+        <xs:annotation>
+          <xs:documentation>Nombre d’hélicoptères de ce type indisponibles.</xs:documentation>
+          <xs:documentation xml:lang="en">Specifies the corresponding number of unserviceable helicopters for this type.</xs:documentation>
+          <xs:appinfo>
+            <nc1ihm:Nom>Nombre d’hélicoptères indisponibles</nc1ihm:Nom>
+            <nc1ihm:Nom xml:lang="en">Number of unserviceable helicopters</nc1ihm:Nom>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:simpleType name="HelicopterTypeCode">
+    <xs:annotation>
+      <xs:appinfo>
+        <nc1dico:source xmlns:nc1dico="urn:fra:nc1:dictionnaires">STAT 187</nc1dico:source>
+        <nc1ihm:description>Dictionnaire des types d'hélicoptères</nc1ihm:description>
+        <nc1ihm:description xml:lang="en">Dictionary of helicopter types</nc1ihm:description>
+      </xs:appinfo>
+      <xs:documentation>Dictionnaire des types d'hélicoptères</xs:documentation>
+      <xs:documentation xml:lang="en">Dictionary of helicopter types</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:integer" />
+  </xs:simpleType>
+  <xs:simpleType name="OtherConsumableMaterielTypeSubcategoryCode">
+    <xs:annotation>
+      <xs:appinfo>
+        <nc1dico:source xmlns:nc1dico="urn:fra:nc1:dictionnaires">STAT 295</nc1dico:source>
+      </xs:appinfo>
+      <xs:documentation></xs:documentation>
+      <xs:documentation xml:lang="en"></xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:integer" />
+  </xs:simpleType>
+</xs:schema>
